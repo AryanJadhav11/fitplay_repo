@@ -49,6 +49,33 @@
         .gallery .col-md-4:hover .image-overlay {
           opacity: 1;
         }
+         /* Styles for the loading screen */
+    #loading-screen {
+      position: fixed;
+      background: #fff;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
       </style>
     <!-- style end -->
   
@@ -69,13 +96,22 @@
   
     <!-- Template Main CSS File -->
     <link href="style.css" rel="stylesheet">
-    
+    <!-- script  -->
+    <script>
+        // Simulating website loading with a delay
+        window.addEventListener('load', function () {
+          const loader = document.getElementById('loading-screen');
+          setTimeout(function () {
+            loader.style.display = 'none';
+          }, 2000); // Change the delay (in milliseconds) as needed
+        });
+      </script>
 </head>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Fit<span style="color: blue;">Play.</span></a></h1>
+      <h1 class="logo"><a href="index.html">Fit<span style="color: rgb(19, 188, 19);">Play.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
@@ -103,7 +139,6 @@
   </header><!-- End Header -->
 <body style="overflow-x: hidden;">
      <!-- Gallery -->
-<!-- <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <img
         src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
@@ -175,9 +210,7 @@
     <div class="col-lg-4">
         <img src="https://goldsgym.in/uploads/events/compress-5-1-580x400.jpg" alt="" class="w-100 shadow-1-strong rounded mb-4 " style="margin-left: 50px; margin-top: 50px;">
     </div>
+    
 </div>
-</body>
-</html>
-
 </body>
 </html>
