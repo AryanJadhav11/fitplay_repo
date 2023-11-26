@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>FITPLAY</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Bootstrap JS and dependencies (jQuery) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- style start -->
+    <style>
+        /* Optional: Custom styles for the gallery */
+        .gallery img {
+          width: 100%;
+          height: auto;
+          transition: transform 0.3s ease-in-out;
+        }
+    
+        .gallery img:hover {
+          transform: scale(1.05);
+        }
+    
+        .gallery .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          opacity: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: opacity 0.3s ease-in-out;
+        }
+    
+        .gallery .image-overlay p {
+          text-align: center;
+        }
+    
+        .gallery .col-md-4:hover .image-overlay {
+          opacity: 1;
+        }
+      </style>
+    <!-- style end -->
+  
+    <!-- Favicons -->
+    <link href="favicon.png" rel="icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="aos.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-icons.css" rel="stylesheet">
+    <link href="boxicons.min.css" rel="stylesheet">
+    <link href="glightbox.min.css" rel="stylesheet">
+    <link href="swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: BizLand
+    * Updated: Sep 18 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Fit<span style="color: blue;">Play.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              
+              <li><a href="#">Turfs</a></li>
+              <li><a href="#">Gyms</a></li>
+              <li><a href="#">Visit Our Shop</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+<body style="overflow-x: hidden;">
+     <!-- Gallery -->
+<!-- <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape"
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Mountains in the Clouds"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Waves at Sea"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Yosemite National Park"
+      />
+    </div>
+  </div> -->
+
+<!-- carosual start -->
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active"  data-bs-interval="2000">
+        <img src="https://goldsgym.in/uploads/slider/Enroll%20Now%20new%201920x710%201.jpg" class="d-block w-100" alt="qwefgbn">
+      </div>
+      <div class="carousel-item"  data-bs-interval="2000">
+        <img src="https://goldsgym.in/uploads/slider/Recovery%20solution%201.jpg" class="d-block w-100" alt="asdfghj">
+      </div>
+      <div class="carousel-item"  data-bs-interval="2000">
+        <img src="https://goldsgym.in/uploads/slider/compress-compress-01%20(1)%20(1).jpg" class="d-block w-100" alt="sefcgvhb">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<!-- carosual end -->
+
+<div class="row">
+    <div class="col-lg-4">
+        <img src="https://goldsgym.in/uploads/events/compress-5-1-580x400.jpg" alt="" class="w-100 shadow-1-strong rounded mb-4 " style="margin-left: 50px; margin-top: 50px;">
+    </div>
+</div>
+</body>
+</html>
+
+</body>
+</html>
