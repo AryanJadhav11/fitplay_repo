@@ -1,3 +1,45 @@
+<?php
+
+
+// Connection
+$conn = new mysqli('localhost', 'root', '', 'fitplay_users');
+if ($conn->connect_error) {
+    die('Connection failure: ' . $conn->connect_error); // Fixed syntax error here
+} 
+
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+	
+	$firstname=$_POST["fname"];
+	$lastname=$_POST["lname"];
+    $username=$_POST["uname"];
+	$email=$_POST["mail"];
+	$password=$_POST["password"];
+	
+	$sql = "INSERT INTO `users` ( `firstname`, `lastname`, `username`, `email`, `password`) VALUES ('$firstname', '$lastname', ' $username', '$email', '$password' );";
+    $result = mysqli_query($conn, $sql); 
+	
+	
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +79,7 @@
                      <h2>Hello!</h2>
                      <p>We are happy to have you with us.</p>
                 </div>
-              <form action="connect_user.php" method="post">
+              <form method="post">
                   <div class="input-group mb-3">
                     <input type="text" id="fname" name="fname" class="form-control form-control-lg bg-light fs-6" placeholder="First Name">
                   </div>
