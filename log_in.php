@@ -1,44 +1,149 @@
 <?php
-// Check if the form is submitted
+$showalert = false;
+$showerr = false;
+$showcharerr = false;
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+function validateUsername($username)
+{
+    return preg_match('/^[a-zA-Z]+$/', $username);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    // Database connection
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "fitplay_users";
+    $err = "";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Fetch user details from the form
     $firstname = $_POST["fname"];
     $lastname = $_POST["lname"];
     $username = $_POST["uname"];
     $email = $_POST["mail"];
     $password = $_POST["password"];
+    $cpassword = $_POST["cpassword"];
+    $exists = false;
 
-    // SQL query to insert data into the users table
-    $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
-            VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+    // Reset error messages
+    $showalert = false;
+    $showerr = false;
+    $showcharerr = false;
 
-    if ($conn->query($sql) === TRUE) {
-        // Redirect to a success page
-        header("Location: index.html");
-        exit();
+    // check existing user
+    $existque = "SELECT * FROM `users` WHERE username='$username';";
+    $result = mysqli_query($conn, $existque);
+    $numrows = mysqli_num_rows($result);
+
+    if ($numrows > 0) {
+        $showerr = "Account already exists";
     } else {
-        // Handle errors
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        if (validateUsername($username)) {
+            if ($password == $cpassword) {
+                $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
+              VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                    // Redirect to index.html
+                    header("Location: index.html");
+                    exit(); // Make sure to exit after the header to prevent further execution
+                } else {
+                    $showerr = "Error: " . $sql . "<br>" . $conn->error;
+                }
+            } else {
+                $showerr = "Passwords do not match";
+            }
+        } else {
+            $showcharerr = "Username invalid! Your username should consist only of letters.";
+        }
     }
-
-    // Close the database connection
-    $conn->close();
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <?php
+// Check if the form is submitted
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+//     // Database connection
+//     $servername = "localhost";
+//     $username = "root";
+//     $password = "";
+//     $dbname = "fitplay_users";
+
+//     $conn = new mysqli($servername, $username, $password, $dbname);
+
+//     // Check connection
+//     if ($conn->connect_error) {
+//         die("Connection failed: " . $conn->connect_error);
+//     }
+
+//     // Fetch user details from the form
+//     $firstname = $_POST["fname"];
+//     $lastname = $_POST["lname"];
+//     $username = $_POST["uname"];
+//     $email = $_POST["mail"];
+//     $password = $_POST["password"];
+
+//     // SQL query to insert data into the users table
+//     $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
+//             VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+
+//     if ($conn->query($sql) === TRUE) {
+//         // Redirect to a success page
+//         header("Location: index.html");
+//         exit();
+//     } else {
+//         // Handle errors
+//         echo "Error: " . $sql . "<br>" . $conn->error;
+//     }
+
+//     // Close the database connection
+//     $conn->close();
+// }
+?> -->
 
 
 
@@ -61,6 +166,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <body>
+
+
+<?php 
+	
+	if($showcharerr)
+	{
+		echo '
+	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+  <strong>Oops!</strong>'.$showcharerr.'
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+  </div>';
+		
+	}
+	
+	
+	elseif($showalert)
+	{
+	echo '
+	<div class="alert alert-success" role="alert">
+  Success ! <a href="user.php" class="alert-link">Now you can log in</a>.
+</div>
+	';
+	}
+	
+	elseif($showerr)
+	{
+	echo '
+	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+  <strong>Went Wrong</strong>'.$showerr.'
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+  </div>';
+	}
+  ?>
+	
 
 
 
@@ -106,6 +249,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   </div>
                   <div class="input-group mb-1">
                   <input type="password" id="password" name="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                  </div>
+                  <div class="input-group mb-1">
+                  <input type="password" id="cpassword" name="cpassword" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password">
                   </div>
                   <div class="input-group mb-5 d-flex justify-content-between">
                     <div class="form-check">
