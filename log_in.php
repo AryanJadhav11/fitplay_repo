@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         // Redirect to a success page
-        header("Location: success.html");
+        header("Location: index.html");
         exit();
     } else {
         // Handle errors
