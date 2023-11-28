@@ -10,8 +10,7 @@ $conn = new mysqli('localhost', 'root', '', 'fitplay_users');
 if ($conn->connect_error) {
     die('Connection failure: ' . $conn->connect_error); // Fixed syntax error here
 } else {
-    $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, username, email, password)
-                            VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`) VALUES (?, ?, ?, ?, ?,);");
 
     // Bind the parameters to the placeholders in the query
     $stmt->bind_param('sssss', $fname, $lname, $uname, $email, $password);
