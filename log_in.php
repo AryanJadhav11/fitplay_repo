@@ -2,10 +2,7 @@
 
 
 // Connection
-$conn = new mysqli('localhost', 'root', '', 'fitplay_users');
-if ($conn->connect_error) {
-    die('Connection failure: ' . $conn->connect_error); // Fixed syntax error here
-} 
+include 'dbconnectuser.php';
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
