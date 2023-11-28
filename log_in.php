@@ -1,6 +1,8 @@
 <?php
 
-
+$showalert=false;
+$showerr=false;
+$showcharerr=false;
 // Connection
 include 'dbconnectuser.php';
 
@@ -16,7 +18,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	
 	$sql = "INSERT INTO `users` ( `firstname`, `lastname`, `username`, `email`, `password`) VALUES ('$firstname', '$lastname', ' $username', '$email', '$password' );";
   $result = mysqli_query($conn, $sql); 
-	
+	if($result)
+  {
+    $showalert=true;
+  }
+  {
+    $showerr="something went wrong";
+  }
 	
 }
 ?>
@@ -39,6 +47,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <title>FitPlay | Sign Up</title>
 </head>
 <body>
+
+<?php 
+	
+	
+	
+	
+	if($showalert)
+	{
+	echo '
+	<div class="alert alert-success" role="alert">
+  Success ! <a href="user.php" class="alert-link">Now you can log in</a>.
+</div>
+	';
+	}
+	
+	elseif($showerr)
+	{
+	echo '
+	<div class="alert alert-success alert-dismissible fade show my-2" role="alert">
+  <strong>hey</strong>'.$showerr.'
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+  </div>';
+	}
+	
+	
+	
+
+	
+  ?>
 
     <!----------------------- Main Container -------------------------->
 
