@@ -1,28 +1,21 @@
 <?php
-// Check if the form is submitted
+$showalert="";
+$showerr="";
+// Check if the form is submitted manually
+if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['google_user_id'])) {
+    // Assuming you have a database connection
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "fitplay_users";
 
-// Assuming you have a database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fitplay_users";
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if (isset($_POST['google_user_id'])) {
-    // Data is coming from Google Sign-In
-    $userId = $_POST['google_user_id'];
-    $userName = $_POST['google_user_name'];
-    $userEmail = $_POST['google_user_email'];
-
-    // Insert Google user details into the database
-    $sql = "INSERT INTO users (username, email) VALUES ('$userName', '$userEmail')";
-} else {
     // Data is coming from manual form submission
     $firstname = isset($_POST["fname"]) ? $_POST["fname"] : "";
     $lastname = isset($_POST["lname"]) ? $_POST["lname"] : "";
@@ -33,16 +26,17 @@ if (isset($_POST['google_user_id'])) {
     // Insert manual sign-up details into the database
     $sql = "INSERT INTO users (firstname, lastname, username, email, password) 
             VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
-}
 
-if ($conn->query($sql) === TRUE) {
-    $showalert="account created";
-} else {
-   $showerr="something went wrong";
-}
+    if ($conn->query($sql) === TRUE) {
+        $showalert = "account created";
+    } else {
+        $showerr = "something went wrong";
+    }
 
-$conn->close();
+    $conn->close();
+}
 ?>
+
 
 
 
