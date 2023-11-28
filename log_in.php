@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                      <h2>Hello!</h2>
                      <p>We are happy to have you with us.</p>
                 </div>
-                <form method="post" action="userdb.php">
+                <form method="post" >
                   <div class="input-group mb-3">
                     <input type="text" id="fname" name="fname" class="form-control form-control-lg bg-light fs-6" placeholder="First Name">
                   </div>
