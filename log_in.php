@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // SQL query to insert data into the users table
-    $sql = "INSERT INTO users (firstname, lastname, username, email, password)
+    $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
             VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
