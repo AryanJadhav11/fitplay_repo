@@ -18,21 +18,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	$password=$_POST["password"];
 	
 	$sql = "INSERT INTO `users` ( `firstname`, `lastname`, `username`, `email`, `password`) VALUES ('$firstname', '$lastname', ' $username', '$email', '$password' );";
-    $result = mysqli_query($conn, $sql); 
+  $result = mysqli_query($conn, $sql); 
 	
 	
 }
 ?>
-
-
-
-
-
-
-
-
-
-
 
 
 
