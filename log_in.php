@@ -1,9 +1,8 @@
 <?php
-$showalert="";
-$showerr="";
-// Check if the form is submitted manually
-if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['google_user_id'])) {
-    // Assuming you have a database connection
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // Database connection
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -16,28 +15,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['google_user_id'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Data is coming from manual form submission
-    $firstname = isset($_POST["fname"]) ? $_POST["fname"] : "";
-    $lastname = isset($_POST["lname"]) ? $_POST["lname"] : "";
-    $username = isset($_POST["uname"]) ? $_POST["uname"] : "";
-    $email = isset($_POST["mail"]) ? $_POST["mail"] : "";
-    $password = isset($_POST["password"]) ? $_POST["password"] : "";
+    // Fetch user details from the form
+    $firstname = $_POST["fname"];
+    $lastname = $_POST["lname"];
+    $username = $_POST["uname"];
+    $email = $_POST["mail"];
+    $password = $_POST["password"];
 
-    // Insert manual sign-up details into the database
-    $sql = "INSERT INTO users (firstname, lastname, username, email, password) 
+    // SQL query to insert data into the users table
+    $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
             VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
-        $showalert = "account created";
+        // Redirect to a success page
+        header("Location: index.html");
+        exit();
     } else {
-        $showerr = "something went wrong";
+        // Handle errors
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
+    // Close the database connection
     $conn->close();
 }
 ?>
-
-
 
 
 
@@ -55,77 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['google_user_id'])) {
     <link rel="stylesheet" href="sign_in.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="893098615674-71fcgd3hrv2tl93hhb7srfu2v4p8pbs9.apps.googleusercontent.com">
     <title>FitPlay | Sign Up</title>
 </head>
 
 
-
-
 <body>
 
-<?php 
-	
-	
-	
-	
-	if($showalert)
-	{
-	echo '
-	<div class="alert alert-success" role="alert">
-  Success ! <a href="user.php" class="alert-link">Now you can log in</a>.
-</div>
-	';
-	}
-	
-	elseif($showerr)
-	{
-	echo '
-	<div class="alert alert-success alert-dismissible fade show my-2" role="alert">
-  <strong>success!</strong>'.$showerr.'
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-  </div>';
-	}
-	
-	
-	
-	
-	
-	
-	
-  ?>
-
-<script>
-        function onSignIn(googleUser) {
-            // Get user details
-            var profile = googleUser.getBasicProfile();
-            var userId = profile.getId();
-            var userName = profile.getName();
-            var userEmail = profile.getEmail();
-
-            // Send user details to the server for database entry
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'process_google_signup.php', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            
-            // Send the user details as form data
-            var formData = 'userId=' + encodeURIComponent(userId) +
-                           '&userName=' + encodeURIComponent(userName) +
-                           '&userEmail=' + encodeURIComponent(userEmail);
-
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Handle the server's response, if needed
-                    console.log(xhr.responseText);
-                }
-            };
-
-            xhr.send(formData);
-        }
-    </script>
 
 
     <!----------------------- Main Container -------------------------->
@@ -180,13 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['google_user_id'])) {
                   <div class="input-group mb-3">
                     <button class="btn btn-lg btn-primary w-100 fs-6" type="submit" value="Submit">Sign Up</button>
                   </div>
-                   <!-- <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-light w-100 fs-6"><img src="google.png" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
-                   </div> -->
-                   <!-- Update the data-redirecturi attribute to match your login page URI -->
-<div class="g-signin2" data-onsuccess="onSignIn" data-redirecturi="http://localhost/fitplay_repo/log_in.php"></div>
-
-
+                   
               </form>
 
 
