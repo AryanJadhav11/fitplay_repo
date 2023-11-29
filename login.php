@@ -171,3 +171,4 @@ if(isset($_POST['sub']))
 </section>
 <!-- Section: Design Block -->
 </body>
+</html>
