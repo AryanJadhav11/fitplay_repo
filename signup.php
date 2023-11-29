@@ -1,4 +1,5 @@
 <?php
+session_start();
 $showalert = false;
 $showerr = false;
 $showcharerr = false;
@@ -51,9 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {
-                    // Redirect to index.html
-                    header("Location: index.html");
-                    exit(); // Make sure to exit after the header to prevent further execution
+                    // Successfully inserted, set session and redirect
+                    $user_data = array($firstname, $lastname, $username, $email);
+                    $_SESSION['user_data'] = $user_data;
+                    header("Location: index.php");
+                    exit();
                 } else {
                     $showerr = "Error: " . $sql . "<br>" . $conn->error;
                 }
@@ -66,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 
 

@@ -117,7 +117,15 @@ session_start();
 
               <div class="d-flex justify-content-center mb-2">
                 <button type="button" class="btn btn-primary">Be a Turf Owner</button>
-                <button type="button" class="btn btn-outline-primary ms-1">Log Out</button>
+                <?php
+                if($_SESSION==true)
+                {
+
+                   echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="logout.php">Log Out</a></button>';
+
+                }
+                
+            ?>
               </div>
             </div>
           </div>

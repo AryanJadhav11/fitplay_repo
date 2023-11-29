@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +70,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          
           <li><a class="nav-link scrollto " href="#portfolio">Shop</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -92,22 +82,28 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li class="dropdown" style="color:blue;"><a href="#"><span><?php
-session_start();
-if(isset($_SESSION['user_data']))
-{
-   echo $_SESSION['user_data']['0']; // display username of logged in user which is stored in index 0 
-}
-
-
-?> </span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              
-              <li><a href="user_profile.php">View Profile</a></li>
-            </ul>
+          <li class="dropdown" style="color:blue;"><span> <?php
+        session_start();
+        if (isset($_SESSION['user_data'])) {
+          // If the user is logged in, display username and "View Profile"
+          echo '<li class="dropdown" style="color: blue;">
+                  <a href="#"><span>' . $_SESSION['user_data']['0'] . '</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="user_profile.php">View Profile</a></li>
+                  </ul>
+                </li>';
+        } else {
+          // If the user is not logged in, display login button
+          
+          echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="signup.php">Sign Up</a></button>';
+          echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="login.php">Log In</a></button>';
+          
+        }
+        ?> </span> 
+            
           </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav><!-- .navbar -->
 
     </div>
