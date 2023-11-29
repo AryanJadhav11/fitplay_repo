@@ -236,22 +236,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <form method="post" >
                   <div class="input-group mb-3">
-                    <input type="text" id="fname" name="fname" class="form-control form-control-lg bg-light fs-6" placeholder="First Name">
+                    <input type="text" id="fname" name="fname" class="form-control form-control-lg bg-light fs-6" placeholder="First Name" required>
                   </div>
                   <div class="input-group mb-3">
-                  <input type="text" id="lname" name="lname" class="form-control form-control-lg bg-light fs-6" placeholder="Last Name">
+                  <input type="text" id="lname" name="lname" class="form-control form-control-lg bg-light fs-6" placeholder="Last Name" required>
                   </div>
                   <div class="input-group mb-3">
-                  <input type="text" id="uname" name="uname" class="form-control form-control-lg bg-light fs-6" placeholder="Select Username">
+                  <input type="text" id="uname" name="uname" class="form-control form-control-lg bg-light fs-6" placeholder="Select Username" required>
                   </div>
                   <div class="input-group mb-3">
-                  <input type="email" id="mail" name="mail" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                  <input type="email" id="mail" name="mail" class="form-control form-control-lg bg-light fs-6" placeholder="Email address" required>
                   </div>
                   <div class="input-group mb-1">
-                  <input type="password" id="password" name="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                  <input type="password" id="password" name="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
                   </div>
                   <div class="input-group mb-1">
-                  <input type="password" id="cpassword" name="cpassword" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password">
+                  <input type="password" id="cpassword" name="cpassword" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password" required>
                   </div>
                   <div class="input-group mb-5 d-flex justify-content-between">
                     <div class="form-check">

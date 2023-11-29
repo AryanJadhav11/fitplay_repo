@@ -19,9 +19,9 @@
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight" style="color:white;">
+          <h1 class="my-5 display-3 fw-bold ls-tight" style="color:white;font-family: 'Courier New', Courier, monospace; font-weight: 600;">
           "Welcome Back to FitPlay<br />
-            <span class="text-primary" style="color:white;">Your Fitness Hub Awaits!"</span>
+            <span class="text-primary" style="color:white;font-family: 'Courier New', Courier, monospace; font-weight: 600;">Your Fitness Hub Awaits!"</span>
           </h1>
           <p style="color:white; font-weight:300; font-family: 'Courier New', Courier, monospace; font-weight: 500;">
           Hello again! We're thrilled to have you back on FitPlay, your dedicated space for fitness and well-being. Log in now to continue your fitness journey with ease. Whether it's booking a turf for a game or reserving your favorite spot in the gym, we've got you covered.
@@ -37,7 +37,7 @@
 
               
                 <div class="form-outline mb-4">
-                  <input type="text" id="uname" name="uname" class="form-control" />
+                  <input type="text" id="uname" name="uname" class="form-control" required/>
                   <label class="form-label" for="form3Example1">User Name</label>
                 </div>
 
@@ -45,7 +45,7 @@
                 
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control" />
+                  <input type="password" id="password" name="password" class="form-control" required/>
                   <label class="form-label" for="form3Example1">Password</label>
                 </div>
                 
