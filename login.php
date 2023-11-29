@@ -31,9 +31,11 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
+                <div class="card-header">
+                    <h1 style="padding-left: 140px; font-size: 50px;">Fit<span style="color: rgb(35, 6, 183);">Play.</span></h1>
+                </div>
               <form>
                 <!-- 2 column grid layout with text inputs for the first and last names -->
-                
 
               
                 <div class="form-outline mb-4">
