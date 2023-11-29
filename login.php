@@ -1,3 +1,56 @@
+<?php
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$showalert=false;
+$login=false;
+$showerr=false;
+include 'dbconetuser.php';
+if(isset($_POST['sub']))
+{ 
+	$err="";
+	$username=$_POST["uname"];
+	//$email=$_POST["nmail"];
+	$password=$_POST["password"];
+	
+	
+	
+		$sql="Select * from `users` where username='$username' AND password='$password';";
+		$result=mysqli_query($conn,$sql);
+		$num=mysqli_num_rows($result);
+		
+		if($num)  
+		{
+			SESSION_START();
+			$_SESSION['username']=$username;
+			$showalert="Welcome Back";
+			header("location: index.html");
+
+		}
+		else
+		{
+			$showerr="Account Doesnt Exits";
+		}
+		
+	
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +65,51 @@
 
 
 <body>
+
+<?php 
+	
+	
+	
+	
+	if($showalert)
+	{
+	echo '
+	<div class="alert alert-success" role="alert">
+   <a href="user.php" class="alert-link">Welcome Back</a>.
+</div>
+	';
+	}
+	
+	elseif($showerr)
+	{
+	echo '
+	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+  <strong>Oops !</strong>'.$showerr.'
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+  </div>';
+	}
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Section: Design Block -->
 <section class="">
   <!-- Jumbotron -->
