@@ -1,3 +1,56 @@
+<?php
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$showalert=false;
+$login=false;
+$showerr=false;
+include 'dbconetuser.php';
+if(isset($_POST['sub']))
+{ 
+	$err="";
+	$username=$_POST["uname"];
+	//$email=$_POST["nmail"];
+	$password=$_POST["password"];
+	
+	
+	
+		$sql="Select * from `users` where username='$username' AND password='$password';";
+		$result=mysqli_query($conn,$sql);
+		$num=mysqli_num_rows($result);
+		
+		if($num)  
+		{
+			SESSION_START();
+			$_SESSION['username']=$username;
+			$showalert="Welcome Back";
+			header("location: index.html");
+
+		}
+		else
+		{
+			$showerr="Account Doesnt Exits";
+		}
+		
+	
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +65,51 @@
 
 
 <body>
+
+<?php 
+	
+	
+	
+	
+	if($showalert)
+	{
+	echo '
+	<div class="alert alert-success" role="alert">
+   <a href="user.php" class="alert-link">Welcome Back</a>.
+</div>
+	';
+	}
+	
+	elseif($showerr)
+	{
+	echo '
+	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+  <strong>Oops !</strong>'.$showerr.'
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+  </div>';
+	}
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Section: Design Block -->
 <section class="">
   <!-- Jumbotron -->
@@ -19,9 +117,9 @@
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight" style="color:white;">
+          <h1 class="my-5 display-3 fw-bold ls-tight" style="color:white;font-family: 'Courier New', Courier, monospace; font-weight: 600;">
           "Welcome Back to FitPlay<br />
-            <span class="text-primary" style="color:white;">Your Fitness Hub Awaits!"</span>
+            <span class="text-primary" style="color:white;font-family: 'Courier New', Courier, monospace; font-weight: 600;">Your Fitness Hub Awaits!"</span>
           </h1>
           <p style="color:white; font-weight:300; font-family: 'Courier New', Courier, monospace; font-weight: 500;">
           Hello again! We're thrilled to have you back on FitPlay, your dedicated space for fitness and well-being. Log in now to continue your fitness journey with ease. Whether it's booking a turf for a game or reserving your favorite spot in the gym, we've got you covered.
@@ -39,7 +137,7 @@
 
               
                 <div class="form-outline mb-4">
-                  <input type="text" id="uname" name="uname" class="form-control" />
+                  <input type="text" id="uname" name="uname" class="form-control" required/>
                   <label class="form-label" for="form3Example1">User Name</label>
                 </div>
 
@@ -47,7 +145,7 @@
                 
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control" />
+                  <input type="password" id="password" name="password" class="form-control" required/>
                   <label class="form-label" for="form3Example1">Password</label>
                 </div>
                 
