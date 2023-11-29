@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
           Hello again! We're thrilled to have you back on FitPlay, your dedicated space for fitness and well-being. Log in now to continue your fitness journey with ease. Whether it's booking a turf for a game or reserving your favorite spot in the gym, we've got you covered.
           </p>
         </div>
-        
+
 
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
