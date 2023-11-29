@@ -1,4 +1,17 @@
+<?php
+function getInitials($name) {
+  $nameParts = explode(' ', $name);
+  $initials = '';
+  
+  foreach ($nameParts as $part) {
+      $initials .= strtoupper(substr($part, 0, 1));
+  }
+  
+  return $initials;
+}
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +49,21 @@
    })();
  </script> 
 
- 
+<style>
+    .avatar {
+        width: 30px;
+        height: 30px;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+  </style>
 
 </head>
 
@@ -82,26 +109,25 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li class="dropdown" style="color:blue;"><span> <?php
-        session_start();
-        if (isset($_SESSION['user_data'])) {
-          // If the user is logged in, display username and "View Profile"
-          echo '<li class="dropdown" style="color: blue;">
-                  <a href="#"><span>' . $_SESSION['user_data']['0'] . '</span> <i class="bi bi-chevron-down"></i></a>
-                  <ul>
-                    <li><a href="user_profile.php">View Profile</a></li>
-                  </ul>
-                </li>';
-        } else {
-          // If the user is not logged in, display login button
-          
-          echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="signup.php">Sign Up</a></button>';
-          echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="login.php">Log In</a></button>';
-          
-        }
-        ?> </span> 
-            
-          </li>
+          <li class="dropdown" style="color: blue;">
+    <?php
+    session_start();
+    if (isset($_SESSION['user_data'])) {
+        // If the user is logged in, display username and "View Profile"
+        $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
+        $userInitials = getInitials($userName); // Replace getInitials with your actual function
+
+        echo '<a href="#"><span>';
+        echo '<div class="avatar">' . $userInitials . '</div>';
+        echo '<ul><li><a href="user_profile.php">View Profile</a></li></ul>';
+    } else {
+        // If the user is not logged in, display login button
+        echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="signup.php">Sign Up</a></button>';
+        echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="login.php">Log In</a></button>';
+    }
+    ?>
+</li>
+
         </ul>
         
       </nav><!-- .navbar -->
