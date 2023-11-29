@@ -15,8 +15,8 @@ if ($conn->connect_error) {
 $showalert=false;
 $login=false;
 $showerr=false;
-include 'dbconetuser.php';
-if(isset($_POST['sub']))
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
 { 
 	$err="";
 	$username=$_POST["uname"];
@@ -31,15 +31,15 @@ if(isset($_POST['sub']))
 		
 		if($num)  
 		{
-			SESSION_START();
-			$_SESSION['username']=$username;
+			// SESSION_START();
+			// $_SESSION['username']=$username;
 			$showalert="Welcome Back";
 			header("location: index.html");
 
 		}
 		else
 		{
-			$showerr="Account Doesnt Exits";
+			$showerr="Account Doesnt Exits ,";
 		}
 		
 	
@@ -71,23 +71,14 @@ if(isset($_POST['sub']))
 	
 	
 	
-	if($showalert)
-	{
-	echo '
-	<div class="alert alert-success" role="alert">
-   <a href="user.php" class="alert-link">Welcome Back</a>.
-</div>
-	';
-	}
 	
-	elseif($showerr)
+	
+ if($showerr)
 	{
 	echo '
 	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
-  <strong>Oops !</strong>'.$showerr.'
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
+  <strong>Oops !</strong>'.$showerr.'  <a href="signup.php" class="alert-link">Create One</a>.
+   
   </div>';
 	}
   ?>
@@ -129,13 +120,13 @@ if(isset($_POST['sub']))
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
-              <form>
+              <form method="post">
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 
 
               
                 <div class="form-outline mb-4">
-                  <input type="text" id="uname" name="uname" class="form-control" required/>
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
                   <label class="form-label" for="form3Example1">User Name</label>
                 </div>
 
@@ -143,7 +134,7 @@ if(isset($_POST['sub']))
                 
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control" required/>
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
                   <label class="form-label" for="form3Example1">Password</label>
                 </div>
                 
