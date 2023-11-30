@@ -103,7 +103,7 @@ function getInitials($name) {
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
-              <li><a href="#">Turfs</a></li>
+              <li><a href="turf.php">Turfs</a></li>
               <li><a href="#">Gyms</a></li>
               <li><a href="#">Visit Our Shop</a></li>
             </ul>
