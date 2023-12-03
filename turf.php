@@ -80,6 +80,7 @@ function getInitials($name) {
 
     body{
       background:#f3f5f8;
+      overflow-x:hidden;
     }
 
  
@@ -115,6 +116,23 @@ function getInitials($name) {
           width:100%;
         }
 
+        .banner-container{
+          background-color:#ffff;
+          padding:10px;
+          margin-bottom:60px;
+          width:100%;
+          height:100%;
+          
+        }
+
+        .banner-containerw{
+          background-color:#ffff;
+          padding:10px;
+          margin-bottom:60px;
+          width:100%;
+          height:80%;
+          
+        }
 
 
 
@@ -248,6 +266,7 @@ function getInitials($name) {
 
 
 <div class="card-container">
+
         <div class="card" style="width: 18rem;">
             <img src="turf1.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -335,10 +354,104 @@ function getInitials($name) {
 <!--card carousel end-->
 
 <div class="banner-container">
-  <img src=".png">
+  <img src="Screenshot 2023-12-03 224356.png" style="width:100%; ">
   </div>
 
 
+  <!--card carousel to show turfs-->
+
+
+<div class="card-container">
+
+<div class="card" style="width: 18rem;">
+    <img src="turf1.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      
+        <h5 class="card-title">Tiger Turf</h5>
+      
+        <p class="card-text">   <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
+        <a href="#" class="btn btn-primary">Book</a>
+        <br>
+        <div class="star-container">
+        <i class="fa-solid fa-star" style="color: gold;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold;"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+</div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="turf2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Juna Budhwar Turf</h5>
+        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
+        <a href="#" class="btn btn-primary">Book</a>
+        <div class="star-container">
+        <i class="fa-solid fa-star" style="color: gold;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+</div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="turf3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Tiki Taka</h5>
+        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
+        <a href="#" class="btn btn-primary">Book</a>
+        <div class="star-container">
+        <i class="fa-solid fa-star" style="color: gold;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-regular fa-star"></i>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="turf4.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Fifa</h5>
+        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
+        <a href="#" class="btn btn-primary">Book</a>
+        <div class="star-container">
+        <i class="fa-solid fa-star" style="color: gold;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img src="turf5.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Crazy Town</h5>
+        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
+        <a href="#" class="btn btn-primary">Book</a>
+        <div class="star-container">
+        <i class="fa-solid fa-star" style="color: gold;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-solid fa-star" style="color:gold ;"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        </div>
+
+    </div>
+</div>
+</div>
+<!--card carousel end-->
+
+<div class="banner-containerw">
+  <img src="Screenshot 2023-12-03 231331.png" style="width:100%; height:240px;">
+  </div>
 
 
   
@@ -347,6 +460,77 @@ function getInitials($name) {
 
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+    <footer id="footer">
+
+    
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>FitPlay.<span>.</span></h3>
+            <p>
+             Kolhapur <br>
+             Maharastra<br>
+             <br><br>
+              <strong>Phone:</strong> +91 9284008321<br>
+              <strong>Email:</strong> thefitplay@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Book Turfs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Shop Products</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
 </body>
 
