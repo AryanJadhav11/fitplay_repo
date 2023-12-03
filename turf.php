@@ -33,7 +33,6 @@ function getInitials($name) {
   <!-- Vendor CSS Files -->
   <link href="aos.css" rel="stylesheet">
   <link href="card_style.css" rel="stylesheet">
-  <link rel="stylesheet" href="card_swipper.min.css" />
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons.css" rel="stylesheet">
   <link href="boxicons.min.css" rel="stylesheet">
@@ -79,32 +78,42 @@ function getInitials($name) {
       filter:brightness(0.6);
     }
 
-    @media screen and(min-width:576px)
-    {
-      .icarousel-inner{
-        display: flex;
-      }
-
-      .icarousel-item{
-        display:block;
-        margin-right:0;
-        flex: 0 0 calc(100%/3);
-      }
-
-      .icarousel-inner{
-        padding:1em;
-      }
-
-      .card{
-        margin: 0 .5em;
-      }
+    body{
+      background:#f3f5f8;
     }
 
+ 
 
-    .img-wrapper{
-      max-width:100%;
-      height:17em;
-    }
+        .star-container {
+            display: flex;
+            align-items: center;
+            margin-top: 15px; /* Adjust margin as needed */
+        }
+
+        .star-container i {
+            margin-right: 2px; /* Adjust margin between stars as needed */
+        }
+
+
+    
+
+    .card-container {
+      background-color:#ffff;
+      padding:20px;
+      border-radius:20px;
+             margin:40px;
+            display: flex;
+            gap: 20px; /* Adjust the margin between cards */
+        }
+
+        .card {
+            width: 18rem;
+        }
+
+        .card-img-top{
+          height :100%;
+          width:100%;
+        }
 
 
 
@@ -238,80 +247,96 @@ function getInitials($name) {
 <!--card carousel to show turfs-->
 
 
-<div class="container swiper">
-      <div class="slide-container">
-        <div class="card-wrapper swiper-wrapper">
-          <div class="card swiper-slide">
-            <div class="image-box">
-              <!--<img src="images/showImg/fullDev.jpg" alt="" />-->
+<div class="card-container">
+        <div class="card" style="width: 18rem;">
+            <img src="turf1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              
+                <h5 class="card-title">Tiger Turf</h5>
+              
+                <p class="card-text">   <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
+                <a href="#" class="btn btn-primary">Book</a>
+                <br>
+                <div class="star-container">
+                <i class="fa-solid fa-star" style="color: gold;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+  </div>
             </div>
-            <div class="profile-details">
-              <!--<img src="images/profile/profile1.jpg" alt="" />-->
-              <div class="name-job">
-                <h3 class="name">David Cardlos</h3>
-                <h4 class="job">Full Stack Developer</h4>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-              <!--<img src="images/showImg/photographer.jpg" alt="" />-->
-            </div>
-            <div class="profile-details">
-              <!--<img src="images/profile/profile2.jpg" alt="" />-->
-              <div class="name-job">
-                <h3 class="name">Siliana Ramis</h3>
-                <h4 class="job">Photographer</h4>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-              <!--<img src="images/showImg/dataAna.jpg" alt="" />-->
-            </div>
-            <div class="profile-details">
-              <!--<img src="images/profile/profile3.jpg" alt="" />-->
-              <div class="name-job">
-                <h3 class="name">Richard Bond</h3>
-                <h4 class="job">Data Analyst</h4>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-              <!--<img src="images/showImg/appDev.jpg" alt="" />-->
-            </div>
-            <div class="profile-details">
-              <!--<img src="images/profile/profile4.jpg" alt="" />-->
-              <div class="name-job">
-                <h3 class="name">Priase</h3>
-                <h4 class="job">App Developer</h4>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-              <!--<img src="images/showImg/blogger.jpg" alt="" />-->
-            </div>
-            <div class="profile-details">
-              <!--<img src="images/profile/profile5.jpg" alt="" />-->
-              <div class="name-job">
-                <h3 class="name">James Laze</h3>
-                <h4 class="job">Blogger</h4>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="swiper-button-next swiper-navBtn"></div>
-      <div class="swiper-button-prev swiper-navBtn"></div>
-      <div class="swiper-pagination"></div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="turf2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Juna Budhwar Turf</h5>
+                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
+                <a href="#" class="btn btn-primary">Book</a>
+                <div class="star-container">
+                <i class="fa-solid fa-star" style="color: gold;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+  </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="turf3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tiki Taka</h5>
+                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
+                <a href="#" class="btn btn-primary">Book</a>
+                <div class="star-container">
+                <i class="fa-solid fa-star" style="color: gold;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="turf4.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fifa</h5>
+                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
+                <a href="#" class="btn btn-primary">Book</a>
+                <div class="star-container">
+                <i class="fa-solid fa-star" style="color: gold;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="turf5.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Crazy Town</h5>
+                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
+                <a href="#" class="btn btn-primary">Book</a>
+                <div class="star-container">
+                <i class="fa-solid fa-star" style="color: gold;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-solid fa-star" style="color:gold ;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                </div>
+
+            </div>
+        </div>
     </div>
-
-    <script src="swiper-bundle.min.js"></script>
-    <script src="card_script.js"></script>
-
 <!--card carousel end-->
+
+<div class="banner-container">
+  <img src=".png">
+  </div>
 
 
 
