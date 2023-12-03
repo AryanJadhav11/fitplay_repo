@@ -65,6 +65,17 @@ function getInitials($name) {
         justify-content: center;
         margin-bottom: 10px;
     }
+    .c-item{
+      height:480px;
+
+    }
+
+    .c-img
+    {
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.6);
+    }
   </style>
 </head>
 
@@ -135,29 +146,123 @@ function getInitials($name) {
     </div>
   </header>
 
-  <div class="container-fluid px-4 py-5 my-5 text-center">
-    <div class="lc-block mb-4">
-        <div editable="rich">
-            <h2 class="display-2 fw-bold">Book Your <span class="text-primary">Turf Online !</span></h2>
-        </div>
-    </div>
-    <div class="lc-block col-lg-6 mx-auto mb-5">
-        <div editable="rich">
-            <p class="lead">Book turfs effortlessly online with FitPlay for your sports events, training sessions, or friendly matches.</p>
-        </div>
+  <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active c-item">
+      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book Now</button>
+      </div>
     </div>
 
-    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search for turfs" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit" style="background-color:#113cbc; color:white">Search</button>
-      </form>
+    <div class="carousel-item c-item">
+      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase"> Experience the joy of hassle-free reservations for your soccer matches.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Kick Off Convenience</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Explore Top Turfs</button>
+      </div>
     </div>
-    
-    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <img class="img-fluid" src="16143655_5700179-removebg-preview.png" width="" height="783" srcset="" sizes="" alt="Illustration of a person going up with a ladder">
+
+    <div class="carousel-item c-item">
+      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase">Our online turf booking platform lets you schedule your games at your convenience.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Game On Anytime</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Kick Now</button>
+      </div>
     </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+
+  </div>
 </div>
+
+
+
+<!--card carousel to show turfs-->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+    </div>
+
+
+    <div class="carousel-item">
+    <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+     <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+     </div>
+    </div>
+    </div>
+
+
+
+    <div class="carousel-item">
+    <div class="card" style="width: 18rem;">
+     <img src="..." class="card-img-top" alt="...">
+     <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+     </div>
+    </div>
+    </div>
+
+
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--card carousel end-->
+
+
+
+
+  
 
 
 
