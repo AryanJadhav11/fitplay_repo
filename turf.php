@@ -20,7 +20,7 @@ function getInitials($name) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Explore Turfs</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
@@ -162,13 +162,13 @@ function getInitials($name) {
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Fit<span style="color: rgb(166, 166, 166);">Play.</span></a></h1>
+      <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.php#hero">Home</a></li>
+          <li><a class="nav-link scrollto " href="index.php#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
           
           <li><a class="nav-link scrollto " href="#portfolio">Shop</a></li>
@@ -176,7 +176,7 @@ function getInitials($name) {
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
-              <li><a href="turf.php">Turfs</a></li>
+              <li class="nav-link scrollto active"><a href="turf.php">Turfs</a></li>
               <li><a href="#">Gyms</a></li>
               <li><a href="#">Visit Our Shop</a></li>
             </ul>
