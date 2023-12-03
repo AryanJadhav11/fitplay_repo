@@ -63,6 +63,14 @@ function getInitials($name) {
         justify-content: center;
         margin-bottom: 10px;
     }
+    html,body{
+      overflow-x:hidden;
+    }
+    .pro
+    {
+      width:4px;
+    }
+
   </style>
 
 </head>
@@ -119,7 +127,7 @@ function getInitials($name) {
 
         echo '<a href="#"><span>';
         echo '<div class="avatar">' . $userInitials . '</div>';
-        echo '<ul><li><a href="user_profile.php">View Profile</a></li></ul>';
+        echo '<ul><li class="pro"><a href="user_profile.php">Profile</a></li></ul>';
     } else {
         // If the user is not logged in, display login button
         echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="signup.php">Sign Up</a></button>';

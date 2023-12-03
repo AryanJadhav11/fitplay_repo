@@ -96,8 +96,8 @@ function getInitials($name) {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto active" href="index.php#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
           
           <li><a class="nav-link scrollto " href="#portfolio">Shop</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
@@ -150,7 +150,7 @@ function getInitials($name) {
     <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
     <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search for turfs" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" type="submit" style="background-color:#113cbc; color:white">Search</button>
       </form>
     </div>
     
