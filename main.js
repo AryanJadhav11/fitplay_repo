@@ -200,7 +200,7 @@
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
+  new swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
     autoplay: {
