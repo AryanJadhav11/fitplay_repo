@@ -910,7 +910,7 @@ function getInitials($name) {
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
+        Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
