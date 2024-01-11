@@ -1,5 +1,63 @@
+
 <?php
-    session_start();
+session_start();
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$showalert=false;
+$login=false;
+$showerr=false;
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{ 
+	$err="";
+	$username=$_POST["uname"];
+	//$email=$_POST["nmail"];
+	$password=$_POST["password"];
+
+    
+	
+	
+	
+		$sql="Select * from `users` where username='$username' AND password='$password';";
+		$result=mysqli_query($conn,$sql);
+		$num=mysqli_num_rows($result);
+		
+		if($num)  
+		{
+           
+			$re=mysqli_fetch_assoc($result); // fetch user details 
+            $user_data=array($re['firstname'],$re['lastname'],$re['username'],$re['email']); // store username and email of logged in user in an array
+            $_SESSION['user_data']=$user_data; // set session for that user 
+			header("location: turf.php");
+
+		}
+		else
+		{
+			$showerr="Invalid Email / Password";
+            $_SESSION['error']="Invalid Email / Password";
+            
+		}
+		
+	
+}
+
+
+
+
+?>
+
+<?php
+   
 
 function getInitials($name) {
   $nameParts = explode(' ', $name);
@@ -18,6 +76,13 @@ function getInitials($name) {
 <html lang="en">
 
 <head>
+  <!-- Bootstrap CSS -->
+<link href="path/to/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+<script src="path/to/popper.min.js"></script>
+<script src="path/to/bootstrap.min.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Explore Turfs</title>
@@ -143,6 +208,23 @@ function getInitials($name) {
 
 <body>
 
+<?php 
+	
+	
+	
+	
+	
+	
+ if($showerr)
+	{
+	echo '
+	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+  <strong>Oops !</strong>'.$showerr.'
+   
+  </div>';
+	}
+  ?>
+
 
 <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
@@ -161,54 +243,73 @@ function getInitials($name) {
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+  <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+    <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          
-          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
-          
-          <li><a class="nav-link scrollto " href="#portfolio">Shop</a></li>
-          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              
-              
-              <li><a href="#">Gyms</a></li>
-              <li><a href="#">Visit Our Shop</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li class="dropdown" style="color: blue;">
-    <?php
-    if (isset($_SESSION['user_data'])) {
-        // If the user is logged in, display username and "View Profile"
-        $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
-        $userInitials = getInitials($userName); // Replace getInitials with your actual function
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#portfolio">Shop</a></li>
+        <li class="dropdown">
+          <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#">Gyms</a></li>
+            <li><a href="#">Visit Our Shop</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li class="dropdown" style="color: blue;">
+          <?php
+          if (isset($_SESSION['user_data'])) {
+            // If the user is logged in, display username and "View Profile"
+            $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
+            $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
-        echo '<a href="#"><span>';
-        echo '<div class="avatar">' . $userInitials . '</div>';
-        echo '<ul><li><a href="user_profile.php">View Profile</a></li></ul>';
-    } else {
-        // If the user is not logged in, display login button
-        echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="signup.php">Sign Up</a></button>';
-        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="login.php">Log In</a></button>';
-    }
-    ?>
-</li>
+            echo '<a href="#"><span>';
+            echo '<div class="avatar">' . $userInitials . '</div>';
+            echo '<ul><li><a href="user_profile.php">View Profile</a></li></ul>';
+          } else {
+            // If the user is not logged in, display login button
+            echo '<button type="button" class="btn btn-outline-primary ms-1 ml-3"><a href="signup.php">Sign Up</a></button>';
+            echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+          }
+          ?>
+        </li>
+      </ul>
+    </nav><!-- .navbar -->
 
-        </ul>
-        
-      </nav><!-- .navbar -->
+  </div>
+</header>
 
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href=""> Sign up for free!</a>
+        </form>
+      </div>
     </div>
-  </header>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  </div>
+</div>
+
+
+
   <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -477,20 +578,19 @@ function getInitials($name) {
             <p>
              Kolhapur <br>
              Maharastra<br>
-             <br><br>
               <strong>Phone:</strong> +91 9284008321<br>
               <strong>Email:</strong> thefitplay@gmail.com<br>
             </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2125.6897847171444!2d74.2143666701516!3d16.693163579668703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1704986406573!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
             </ul>
           </div>
 
@@ -504,6 +604,8 @@ function getInitials($name) {
             </ul>
           </div>
 
+
+
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
@@ -514,7 +616,9 @@ function getInitials($name) {
               <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
+
           </div>
+          
 
         </div>
       </div>
@@ -532,8 +636,6 @@ function getInitials($name) {
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-        </div>
-        </div>
   </footer><!-- End Footer -->
 
 </body>

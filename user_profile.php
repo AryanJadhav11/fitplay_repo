@@ -74,10 +74,9 @@ session_start();
           <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
           <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
           <li><a class="nav-link scrollto " href="index.php#portfolio">Shop</a></li>
-          <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Turfs</a></li>
+              <li><a href="turf.php">Turfs</a></li>
               <li><a href="#">Gyms</a></li>
               <li><a href="#">Visit Our Shop</a></li>
             </ul>
@@ -88,6 +87,21 @@ session_start();
       </nav>
     </div>
   </header>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        Do you want to Log out?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" ><a href="logout.php" style="color:white;">Log Out</a></button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   <section style="background-color: #113cbc;">
     <div class="container py-5">
@@ -120,7 +134,8 @@ session_start();
                 if($_SESSION==true)
                 {
 
-                   echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="logout.php">Log Out</a></button>';
+                   echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                   Log Out</button>';
 
                 }
                 
@@ -201,5 +216,37 @@ session_start();
   </div>
 </div>
 </section>
+<!-- Add this modal code at the end of your HTML body -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="logoutModalLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to log out?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirmLogoutBtn">Yes, Log Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var confirmLogoutBtn = document.getElementById('confirmLogoutBtn');
+
+    if (confirmLogoutBtn) {
+      confirmLogoutBtn.addEventListener('click', function () {
+        // Redirect to logout.php after confirmation
+        window.location.href = 'logout.php';
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
