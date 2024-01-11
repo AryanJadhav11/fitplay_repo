@@ -220,7 +220,7 @@ function getInitials($name) {
       <img src="footc1.jpeg" class="d-block w-100 c-img" alt="...">
       <div class="carousel-caption top-0 mt-4 ">
         <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
+        <h1 class="display-1 fw-bolder text-capitalize">Score Your </h1>
         <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book Now</button>
       </div>
     </div>
