@@ -29,6 +29,7 @@ function getInitials($name) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- Vendor CSS Files -->
   <link href="aos.css" rel="stylesheet">
@@ -172,11 +173,10 @@ function getInitials($name) {
           <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
           
           <li><a class="nav-link scrollto " href="#portfolio">Shop</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
-              <li class="nav-link scrollto active"><a href="turf.php">Turfs</a></li>
+              
               <li><a href="#">Gyms</a></li>
               <li><a href="#">Visit Our Shop</a></li>
             </ul>
@@ -195,7 +195,33 @@ function getInitials($name) {
     } else {
         // If the user is not logged in, display login button
         echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="signup.php">Sign Up</a></button>';
-        echo '<button type="button" class="btn btn-outline-primary ms-1"><a href="login.php">Log In</a></button>';
+        echo '<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+             
+                  <div class="modal-content rounded-4 shadow" >
+                      <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+                      </div>
+                      <div class="modal-body p-5 pt-0">
+                        <form>
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="floatingInput">
+                            <label for="floatingInput">Email address</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password" fdprocessedid="o9e74o">
+                            <label for="floatingPassword">Password</label>
+                          </div>
+                          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+                          <span>Dont have an account?</span> <a href=""> Sign up for free!</a>
+                        </form>
+                      </div>
+                    </div>
+             
+        </div>
+        </div>';
     }
     ?>
 </li>
