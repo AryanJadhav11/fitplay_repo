@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			$re=mysqli_fetch_assoc($result); // fetch user details 
             $user_data=array($re['firstname'],$re['lastname'],$re['username'],$re['email']); // store username and email of logged in user in an array
             $_SESSION['user_data']=$user_data; // set session for that user 
-			header("location: index.php");
+			header("location: turf.php");
 
 		}
 		else
