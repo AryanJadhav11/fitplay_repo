@@ -368,7 +368,7 @@ function getInitials($name) {
 <!--card carousel to show turfs-->
 
 
-<div class="card-container">
+  <div class="card-container"> 
 
         <div class="card" style="width: 18rem;">
             <img src="turf1.jpeg" class="card-img-top" alt="...">
@@ -385,7 +385,7 @@ function getInitials($name) {
                 <i class="fa-solid fa-star" style="color:gold;"></i>
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>
-  </div>
+  </div> 
             </div>
         </div>
 
@@ -454,7 +454,7 @@ function getInitials($name) {
             </div>
         </div>
     </div>
-<!--card carousel end-->
+<!-- card carousel end -->
 
 <div class="banner-container">
   <img src="Screenshot 2023-12-03 224356.png" style="width:100%; ">
