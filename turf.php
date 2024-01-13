@@ -249,7 +249,7 @@ function getInitials($name) {
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto" href="">About</a></li>
+        <li><a class="nav-link scrollto" href="admin.php">Admin</a></li>
         <li><a class="nav-link scrollto" href="index.php">Shop</a></li>
         <li class="dropdown">
           <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -363,193 +363,71 @@ function getInitials($name) {
 
 
 
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "turf";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sql2="SELECT * FROM `grd` ORDER BY grd.pubdate DESC; ";
+$que2=mysqli_query($conn,$sql2);
+$row2=mysqli_num_rows($que2);
+$resimg=mysqli_fetch_assoc($que2);
+
+
+?>
 
 <!--card carousel to show turfs-->
 
 
-  <div class="card-container"> 
-
-        <div class="card" style="width: 18rem;">
-            <img src="turf1.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              
-                <h5 class="card-title">Tiger Turf</h5>
-              
-                <p class="card-text">   <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
-                <a href="#" class="btn btn-primary">Book</a>
-                <br>
-                <div class="star-container">
-                <i class="fa-solid fa-star" style="color: gold;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold;"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-  </div> 
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="turf2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Juna Budhwar Turf</h5>
-                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
-                <a href="#" class="btn btn-primary">Book</a>
-                <div class="star-container">
-                <i class="fa-solid fa-star" style="color: gold;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-  </div>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="turf3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Tiki Taka</h5>
-                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
-                <a href="#" class="btn btn-primary">Book</a>
-                <div class="star-container">
-                <i class="fa-solid fa-star" style="color: gold;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-regular fa-star"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="turf4.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Fifa</h5>
-                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
-                <a href="#" class="btn btn-primary">Book</a>
-                <div class="star-container">
-                <i class="fa-solid fa-star" style="color: gold;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="turf5.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Crazy Town</h5>
-                <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
-                <a href="#" class="btn btn-primary">Book</a>
-                <div class="star-container">
-                <i class="fa-solid fa-star" style="color: gold;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-solid fa-star" style="color:gold ;"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                </div>
-
-            </div>
-        </div>
-    </div>
-<!-- card carousel end -->
-
-<div class="banner-container">
-  <img src="Screenshot 2023-12-03 224356.png" style="width:100%; ">
-  </div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8">
+			<?php 
+			if($row2)
+			{
+				while($res8=mysqli_fetch_assoc($que2))
+				{
 
 
-  <!--card carousel to show turfs-->
+					?>
 
 
-<div class="card-container">
-
-<div class="card" style="width: 18rem;">
-    <img src="turf1.jpeg" class="card-img-top" alt="...">
-    <div class="card-body">
-      
-        <h5 class="card-title">Tiger Turf</h5>
-      
-        <p class="card-text">   <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
-        <a href="#" class="btn btn-primary">Book</a>
-        <br>
-        <div class="star-container">
-        <i class="fa-solid fa-star" style="color: gold;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold;"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-</div>
-    </div>
+			<div class="card shadow">
+				<div class="card-body d-flex blog_flex">
+					<div class="flex-part1">
+						<a href="single_post.php?id=<?=$res8['id']?>">
+							<?php $img=$res8['image']?>
+						 <img src="upload/<?=$img?>"> </a>
+					</div>
+					<div class="flex-grow-1 flex-part2">
+						  <a href="single_post.php?id=<?=$res8['id']?>" id="title"><?=ucfirst($res8['name'])?></a>
+						<p>
+						  <a href="single_post.php?id=<?=$res8['id']?>" id="body">
+						  	<?=strip_tags(substr($res8['details'], 0,900))?>
+						  </a> <span><br>
+                          <a href="single_post.php?id=<?=$res8['id']?>" class="btn btn-primary">Continue Reading
+                          </a></span>
+                        </p>
+						<ul>
+							
+							<li class="me-2">
+								<a href=""> <span><i class="fa fa-calendar-o" aria-hidden="true"></i></span>Published on : <?=$res8['pubdate']?> </a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+			<?php }}?>
+		</div>
+	
+		
+	</div>
 </div>
 
-<div class="card" style="width: 18rem;">
-    <img src="turf2.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Juna Budhwar Turf</h5>
-        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
-        <a href="#" class="btn btn-primary">Book</a>
-        <div class="star-container">
-        <i class="fa-solid fa-star" style="color: gold;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-</div>
-    </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-    <img src="turf3.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Tiki Taka</h5>
-        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Drinks,Washrooms</p>
-        <a href="#" class="btn btn-primary">Book</a>
-        <div class="star-container">
-        <i class="fa-solid fa-star" style="color: gold;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-regular fa-star"></i>
-        </div>
-    </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-    <img src="turf4.jpeg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Fifa</h5>
-        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
-        <a href="#" class="btn btn-primary">Book</a>
-        <div class="star-container">
-        <i class="fa-solid fa-star" style="color: gold;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        </div>
-    </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-    <img src="turf5.jpeg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Crazy Town</h5>
-        <p class="card-text"> <i class="fa-solid fa-thumbs-up" style="color: #4c77c2;"></i> Parking,Changing Room,Washrooms</p>
-        <a href="#" class="btn btn-primary">Book</a>
-        <div class="star-container">
-        <i class="fa-solid fa-star" style="color: gold;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-solid fa-star" style="color:gold ;"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-        </div>
-
-    </div>
-</div>
-</div>
 <!--card carousel end-->
 
 <div class="banner-containerw">

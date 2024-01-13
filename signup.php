@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Successfully inserted, set session and redirect
                     $user_data = array($firstname, $lastname, $username, $email);
                     $_SESSION['user_data'] = $user_data;
-                    header("Location: index.php");
+                    header("Location: signup.php");
                     exit();
                 } else {
                     $showerr = "Error: " . $sql . "<br>" . $conn->error;
