@@ -14,6 +14,8 @@ if(!$coni)
 
 ?>
 
+
+
 <?php
 session_start();
 // Database connection
@@ -228,8 +230,8 @@ function getInitials($name) {
             $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
-            echo '<a href="#"><span>';
-            echo '<div class="avatar"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div>';
+            
+            echo '<div style="display: flex; align-items: center;"><h6>Hello, ' . $userName . '</h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
             
           } else {
             // If the user is not logged in, display login button

@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -13,49 +14,39 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$showalert=false;
-$login=false;
-$showerr=false;
 
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{ 
-	$err="";
-	$username=$_POST["uname"];
-	//$email=$_POST["nmail"];
-	$password=$_POST["password"];
+$showalert = false;
+$login = false;
+$showerr = false;
 
-    
-	
-	
-	
-		$sql="Select * from `users` where username='$username' AND password='$password';";
-		$result=mysqli_query($conn,$sql);
-		$num=mysqli_num_rows($result);
-		
-		if($num)  
-		{
-           
-			$re=mysqli_fetch_assoc($result); // fetch user details 
-            $user_data=array($re['firstname'],$re['lastname'],$re['username'],$re['email']); // store username and email of logged in user in an array
-            $_SESSION['user_data']=$user_data; // set session for that user 
-			header("location: turf.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $err = "";
+  $username = $_POST["uname"];
+  $password = $_POST["password"];
 
-		}
-		else
-		{
-			$showerr="Invalid Email / Password";
-            $_SESSION['error']="Invalid Email / Password";
-            
-		}
-		
-	
+  $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
+  $result = mysqli_query($conn, $sql);
+  $num = mysqli_num_rows($result);
+
+  if ($num) {
+      $re = mysqli_fetch_assoc($result);
+      // Set 'Rolee' to 0 if it's not present in the fetched data
+      $user_data = array(
+          $re['firstname'],
+          $re['lastname'],
+          $re['username'],
+          $re['email'],
+          $re['password'],
+          $re['Rolee']
+      );
+      $_SESSION['user_data'] = $user_data;
+      header("location: turf.php");
+  } else {
+      $showerr = "Invalid Email / Password";
+      $_SESSION['error'] = "Invalid Email / Password";
+  }
 }
-
-
-
-
 ?>
-
 <?php
    
 
@@ -248,43 +239,44 @@ function getInitials($name) {
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
-  <div class="container d-flex align-items-center justify-content-between">
-
-    <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto" href="admin.php">Admin</a></li>
-        <li><a class="nav-link scrollto" href="index.php">Shop</a></li>
-        <li class="dropdown">
-          <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Gyms</a></li>
-            <li><a href="#">Visit Our Shop</a></li>
-          </ul>
-        </li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        <li class="dropdown" style="color: blue;">
-          <?php
-          if (isset($_SESSION['user_data'])) {
-            // If the user is logged in, display username and "View Profile"
-            $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
-            $userInitials = getInitials($userName); // Replace getInitials with your actual function
-
-            echo '<a href="#"><span>';
-            echo '<div class="avatar">' . $userInitials . '</div>';
-            echo '<ul><li><a href="user_profile.php">View Profile</a></li></ul>';
-          } else {
-            // If the user is not logged in, display login button
-            echo '<button type="button" class="btn btn-outline-primary ms-1 ml-3"><a href="signup.php">Sign Up</a></button>';
-            echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-          }
-          ?>
-        </li>
-      </ul>
-    </nav><!-- .navbar -->
-
-  </div>
+    <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.php">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Gyms</a></li>
+                        <li><a href="#">Visit Our Shop</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li class="dropdown" style="color: blue;">
+<?php
+                if (isset($_SESSION['user_data'])) {
+                  $userName = $_SESSION['user_data'][2];
+                  $userInitials = getInitials($userName);
+              
+                  echo '<a href="#"><span>';
+                  echo '<div class="avatar">' . $userInitials . '</div>';
+                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
+              
+                  // Now you can directly access 'Rolee' without additional checks
+                  if ($_SESSION['user_data'][4] == 1) {  // Assuming 'Rolee' is at index 4
+                      echo '<li><a href="admin.php">Admin Panel</a></li>';
+                  }
+              
+                  echo '</ul>';
+              } else {
+                  echo '<button type="button" class="btn btn-outline-primary ms-1 ml-3"><a href="signup.php">Sign Up</a></button>';
+                  echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+              }
+?>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <!-- Login Modal -->
@@ -306,7 +298,7 @@ function getInitials($name) {
                   <label class="form-label" for="form3Example1">Password</label>
                 </div>
           <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
-          <span>Dont have an account?</span> <a href=""> Sign up for free!</a>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
         </form>
       </div>
     </div>
