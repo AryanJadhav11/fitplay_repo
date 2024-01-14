@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cont = $_POST['details'];
     $pri=$_POST['price'];
     $owner=$_POST['owner'];
+    $pla=$_POST['place'];
    // $cid=$_POST['cate_id'];
 
 
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($size<=20000000)
     {
       move_uploaded_file($tmpname, $destination);
-      $sqli = "INSERT INTO `grd`(`name`, `details`, `image`, `price`, `owner`) VALUES ('$stit', '$cont','$filename','$pri','$owner')";
+      $sqli = "INSERT INTO `grd`(`name`, `details`, `image`, `price`, `owner`, `place`) VALUES ('$stit', '$cont','$filename','$pri','$owner','$pla')";
        $res = mysqli_query($con, $sqli);
         if ($res) {
       $showsuc="U just published launched new turf";
@@ -247,6 +248,10 @@ function getInitials($name) {
   <label >Add Turf Photo</label>
    <input type="file" name="image" class="form-control">
 
+  </div>
+  <div class="form-group">
+    <label >Location</label>
+    <input type="text" name="place"  class="form-control" id="cat_name_enter"  placeholder="Location of turf" style="width:220px;" required>
   </div>
   <div class="form-group">
     <label >Price</label>

@@ -108,6 +108,11 @@ function getInitials($name) {
   <!-- Template Main CSS File -->
   <link href="style.css" rel="stylesheet">
 
+  <!-- smaple -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -380,55 +385,77 @@ $resimg=mysqli_fetch_assoc($que2);
 
 <!--card carousel to show turfs-->
 
+<!-- Add Splide CSS -->
+<!-- Add Splide CSS -->
+<!-- Add Splide CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8">
-			<?php 
-			if($row2)
-			{
-				while($res8=mysqli_fetch_assoc($que2))
-				{
+<div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
+    <div class="row">
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
 
+                    <?php 
+                    if($row2) {
+                        // Reset data seek pointer
+                        mysqli_data_seek($que2, 0);
 
-					?>
-
-
-			<div class="card shadow">
-				<div class="card-body d-flex blog_flex">
-					<div class="flex-part1">
-						<a href="single_post.php?id=<?=$res8['id']?>">
-							<?php $img=$res8['image']?>
-						 <img src="upload/<?=$img?>"> </a>
-					</div>
-					<div class="flex-grow-1 flex-part2">
-						  <a href="single_post.php?id=<?=$res8['id']?>" id="title"><?=ucfirst($res8['name'])?></a>
-						<p>
-						  <a href="single_post.php?id=<?=$res8['id']?>" id="body">
-						  	<?=strip_tags(substr($res8['details'], 0,900))?>
-						  </a> <span><br>
-                          <a href="single_post.php?id=<?=$res8['id']?>" class="btn btn-primary">Continue Reading
-                          </a></span>
-                        </p>
-						<ul>
-							
-							<li class="me-2">
-								<a href=""> <span><i class="fa fa-calendar-o" aria-hidden="true"></i></span>Published on : <?=$res8['pubdate']?> </a>
-							</li>
-							
-						</ul>
-					</div>
-				</div>
-			</div>
-			<br>
-			<?php }}?>
-		</div>
-	
-		
-	</div>
+                        while($res8 = mysqli_fetch_assoc($que2)) {
+                    ?>
+                            <li class="splide__slide col-sm-3 m-2">
+                                <div class="card bg-light text-dark imager-fluid">
+                                    <a href="single_post.php?id=<?= $res8['id'] ?>">
+                                        <?php $img = $res8['image'] ?>
+                                        <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                    </a>
+                                    <div class="card-body" style="padding-left:10px;">
+                                        <h5 class="card-title"><a href="single_post.php?id=<?= $res8['id'] ?>" id="title"><?= ucfirst($res8['name']) ?></a></h5>
+                                        <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
+  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+</svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
+                                        <a href="single_turf.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                    </div>
+                                </div>
+                            </li>
+                    <?php
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!--card carousel end-->
+<!-- Add Splide JS -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide', {
+            perPage: 4,
+            breakpoints: {
+                600: {
+                    perPage: 1
+                }
+            }
+        });
+
+        splide.mount();
+    });
+</script>
+
+<div class="banner-containerw">
+  <img src="one.png" style="width:100%; height:240px;">
+  </div>
+
+
+
+        
+
+
+
 
 <div class="banner-containerw">
   <img src="Screenshot 2023-12-03 231331.png" style="width:100%; height:240px;">

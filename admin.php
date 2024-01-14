@@ -274,6 +274,7 @@ function getInitials($name) {
                                     <th>Turf Name</th>                  
                                     <th>Owner</th>
                                     <th>Launch Date</th>
+                                    <th>Location</th>
                                     <th colspan="2">Action</th>
                                  </tr>
                               </thead>
@@ -295,12 +296,14 @@ if ($rowCount > 0) {
         $tname = $row['name'];
         $towner = $row['owner'];
         $pubdate = $row['pubdate'];
+        $pl=$row['place'];
 
         echo '<tr>
                 <td scope="row">' . $tid . '</td>
                 <td>' . $tname . '</td>
                 <td>' . $towner . '</td>
                 <td>' . $pubdate . '</td>
+                <td>' . $pl . '</td>
                 <td>
                     <a href="del_turf.php?deleteid=' . $tid . '" class="text text-light">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
