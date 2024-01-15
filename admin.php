@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
 <?php 
 
 $server='localhost';
@@ -11,65 +28,6 @@ if(!$coni)
 {
  die(mysqli_error($coni));
 }
-
-?>
-
-
-
-<?php
-session_start();
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fitplay_users";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$showalert=false;
-$login=false;
-$showerr=false;
-
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{ 
-	$err="";
-	$username=$_POST["uname"];
-	//$email=$_POST["nmail"];
-	$password=$_POST["password"];
-
-    
-	
-	
-	
-		$sql="Select * from `users` where username='$username' AND password='$password';";
-		$result=mysqli_query($conn,$sql);
-		$num=mysqli_num_rows($result);
-		
-		if($num)  
-		{
-           
-			$re=mysqli_fetch_assoc($result); // fetch user details 
-            $user_data=array($re['firstname'],$re['lastname'],$re['username'],$re['email']); // store username and email of logged in user in an array
-            $_SESSION['user_data']=$user_data; // set session for that user 
-			header("location: turf.php");
-
-		}
-		else
-		{
-			$showerr="Invalid Email / Password";
-            $_SESSION['error']="Invalid Email / Password";
-            
-		}
-		
-	
-}
-
-
-
 
 ?>
 
@@ -87,8 +45,6 @@ function getInitials($name) {
   return $initials;
 }
 ?>
-
-
 <html lang="en">
    <head>
       <meta charset="utf-8">
@@ -97,13 +53,17 @@ function getInitials($name) {
       <meta name="description" content="">
       <meta name="author" content="">
       <title>Turf Admin - Dashboard</title>
+      <!-- admin card -->
+      <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/cards/card-1/assets/css/card-1.css">
       <!-- Custom fonts for this template-->
       <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
       <!-- Custom styles for this template-->
       <link href="vendor/css/sb-admin-2.css" rel="stylesheet">
-   </head>
-   <style>
+
+      <style>
      .avatar {
         width: 30px;
         height: 30px;
@@ -158,22 +118,727 @@ function getInitials($name) {
             gap: 20px; /* Adjust the margin between cards */
         }
 
+        :root {
+  --blue: #5e72e4;
+  --indigo: #5603ad;
+  --purple: #8965e0;
+  --pink: #f3a4b5;
+  --red: #f5365c;
+  --orange: #fb6340;
+  --yellow: #ffd600;
+  --green: #2dce89;
+  --teal: #11cdef;
+  --cyan: #2bffc6;
+  --white: #fff;
+  --gray: #8898aa;
+  --gray-dark: #32325d;
+  --light: #ced4da;
+  --lighter: #e9ecef;
+  --primary: #5e72e4;
+  --secondary: #f7fafc;
+  --success: #2dce89;
+  --info: #11cdef;
+  --warning: #fb6340;
+  --danger: #f5365c;
+  --light: #adb5bd;
+  --dark: #212529;
+  --default: #172b4d;
+  --white: #fff;
+  --neutral: #fff;
+  --darker: black;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: Open Sans, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+figcaption,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  color: #525f7f;
+  background-color: #f8f9fe;
+}
+
+[tabindex='-1']:focus {
+  outline: 0 !important;
+}
+
+h2,
+h5 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dfn {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: #5e72e4;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #233dd2;
+}
+
+a:not([href]):not([tabindex]) {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+caption {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  caption-side: bottom;
+  text-align: left;
+  color: #8898aa;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+}
+
+button,
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+  -webkit-appearance: listbox;
+}
+
+legend {
+  font-size: 1.5rem;
+  line-height: inherit;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: .5rem;
+  padding: 0;
+  white-space: normal;
+  color: inherit;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h2,
+h5,
+.h2,
+.h5 {
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: .5rem;
+  color: #32325d;
+}
+
+h2,
+.h2 {
+  font-size: 1.25rem;
+}
+
+h5,
+.h5 {
+  font-size: .8125rem;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-wrap: wrap;
+}
+
+.col,
+.col-auto,
+.col-lg-6,
+.col-xl-3,
+.col-xl-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.col-auto {
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 992px) {
+  .col-lg-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-3 {
+    max-width: 25%;
+    flex: 0 0 25%;
+  }
+  .col-xl-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 1px solid rgba(0, 0, 0, .05);
+  border-radius: .375rem;
+  background-color: #fff;
+  background-clip: border-box;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex: 1 1 auto;
+}
+
+.card-title {
+  margin-bottom: 1.25rem;
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.bg-info {
+  background-color: #11cdef !important;
+}
+
+a.bg-info:hover,
+a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #0da5c0 !important;
+}
+
+.bg-warning {
+  background-color: #fb6340 !important;
+}
+
+a.bg-warning:hover,
+a.bg-warning:focus,
+button.bg-warning:hover,
+button.bg-warning:focus {
+  background-color: #fa3a0e !important;
+}
+
+.bg-danger {
+  background-color: #f5365c !important;
+}
+
+a.bg-danger:hover,
+a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+  background-color: #ec0c38 !important;
+}
+
+.bg-default {
+  background-color: #172b4d !important;
+}
+
+a.bg-default:hover,
+a.bg-default:focus,
+button.bg-default:hover,
+button.bg-default:focus {
+  background-color: #0b1526 !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+@media (min-width: 1200px) {
+  .justify-content-xl-between {
+    justify-content: space-between !important;
+  }
+}
+
+.shadow {
+  box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mr-2 {
+  margin-right: .5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.pt-5 {
+  padding-top: 3rem !important;
+}
+
+.pb-8 {
+  padding-bottom: 8rem !important;
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+@media (min-width: 768px) {
+  .pt-md-8 {
+    padding-top: 8rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mb-xl-0 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-success {
+  color: #2dce89 !important;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+  color: #24a46d !important;
+}
+
+.text-warning {
+  color: #fb6340 !important;
+}
+
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #fa3a0e !important;
+}
+
+.text-danger {
+  color: #f5365c !important;
+}
+
+a.text-danger:hover,
+a.text-danger:focus {
+  color: #ec0c38 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+a.text-white:hover,
+a.text-white:focus {
+  color: #e6e6e6 !important;
+}
+
+.text-muted {
+  color: #8898aa !important;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+  p,
+  h2 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2 {
+    page-break-after: avoid;
+  }
+  @ page {
+    size: a3;
+  }
+  body {
+    min-width: 992px !important;
+  }
+}
+
+figcaption,
+main {
+  display: block;
+}
+
+main {
+  overflow: hidden;
+}
+
+.bg-yellow {
+  background-color: #ffd600 !important;
+}
+
+a.bg-yellow:hover,
+a.bg-yellow:focus,
+button.bg-yellow:hover,
+button.bg-yellow:focus {
+  background-color: #ccab00 !important;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+@keyframes floating-lg {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floating-sm {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+[class*='shadow'] {
+  transition: all .15s ease;
+}
+
+.text-sm {
+  font-size: .875rem !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+a.text-white:hover,
+a.text-white:focus {
+  color: #e6e6e6 !important;
+}
+
+[class*='btn-outline-'] {
+  border-width: 1px;
+}
+
+.card-stats .card-body {
+  padding: 1rem 1.5rem;
+}
+
+.main-content {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .main-content .container-fluid {
+    padding-right: 39px !important;
+    padding-left: 39px !important;
+  }
+}
+
+.footer {
+  padding: 2.5rem 0;
+  background: #f7fafc;
+}
+
+.footer .copyright {
+  font-size: .875rem;
+}
+
+.header {
+  position: relative;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon i {
+  font-size: 2.25rem;
+}
+
+.icon-shape {
+  display: inline-flex;
+  padding: 12px;
+  text-align: center;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-shape i {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  @ keyframes show-navbar-dropdown {
+    0% {
+      transition: visibility .25s, opacity .25s, transform .25s;
+      transform: translate(0, 10px) perspective(200px) rotateX(-2deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  @keyframes hide-navbar-dropdown {
+    from {
+      opacity: 1;
+    }
+    to {
+      transform: translate(0, 10px);
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes show-navbar-collapse {
+  0% {
+    transform: scale(.95);
+    transform-origin: 100% 0;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hide-navbar-collapse {
+  from {
+    transform: scale(1);
+    transform-origin: 100% 0;
+    opacity: 1;
+  }
+  to {
+    transform: scale(.95);
+    opacity: 0;
+  }
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+}
+
        
 
 
 
 
   </style>
-    </style>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   </head>
+   
+   <body>
    <body id="page-top">
       <!-- Page Wrapper -->
       <div id="wrapper">
          <!-- Sidebar -->
-         <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+         <ul class="navbar-nav sidebar sidebar-dark " id="accordionSidebar" style="background-color:#252525; height:100px;">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-               <div class="sidebar-brand-icon rotate-n-15"> <i class="fa fa-laugh-wink"></i> </div>
+               
                <b><h3 class="logo" style="font-family:Roboto Mono, sans-serif;">Fit<span style="color:grey ;font-family:Roboto Mono,sans-serif;">Play.</span></h3></b>
             </a>
             <!-- Divider -->
@@ -182,8 +847,30 @@ function getInitials($name) {
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Utilities Collapse Menu -->
+           <li class="nav-item">
+    <a class="nav-link" href="admin_turf.php">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,255.99599,255.99599" style="fill:#000000;">
+            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <g transform="scale(10.66667,10.66667)">
+                    <path d="M9.66602,2l-0.49023,2.52344c-0.82417,0.31082 -1.58099,0.74649 -2.24414,1.29102l-2.42383,-0.83594l-2.33594,4.04297l1.94141,1.6875c-0.07463,0.45823 -0.11328,0.88286 -0.11328,1.29102c0,0.40877 0.03981,0.83263 0.11328,1.29102v0.00195l-1.94141,1.6875l2.33594,4.04102l2.42188,-0.83398c0.66321,0.54482 1.42175,0.97807 2.24609,1.28906l0.49023,2.52344h4.66797l0.49024,-2.52344c0.82471,-0.31102 1.58068,-0.74599 2.24414,-1.29102l2.42383,0.83594l2.33398,-4.04102l-1.93945,-1.68945c0.07463,-0.45823 0.11328,-0.88286 0.11328,-1.29102c0,-0.40754 -0.03887,-0.83163 -0.11328,-1.28906v-0.00195l1.94141,-1.68945l-2.33594,-4.04102l-2.42188,0.83398c-0.66321,-0.54482 -1.42175,-0.97807 -2.24609,-1.28906l-0.49024,-2.52344zM11.31445,4h1.37109l0.38867,2l1.04297,0.39453c0.62866,0.23694 1.19348,0.56222 1.68359,0.96484l0.86328,0.70703l1.92188,-0.66016l0.68555,1.18555l-1.53516,1.33594l0.17578,1.09961v0.00195c0.06115,0.37494 0.08789,0.68947 0.08789,0.9707c0,0.28123 -0.02674,0.59572 -0.08789,0.9707l-0.17773,1.09961l1.53516,1.33594l-0.68555,1.1875l-1.91992,-0.66211l-0.86523,0.70898c-0.49011,0.40262 -1.05298,0.7279 -1.68164,0.96484h-0.00195l-1.04297,0.39453l-0.38867,2h-1.36914l-0.38867,-2l-1.04297,-0.39453c-0.62867,-0.23694 -1.19348,-0.56222 -1.68359,-0.96484l-0.86328,-0.70703l-1.92187,0.66016l-0.68555,-1.18555l1.53711,-1.33789l-0.17773,-1.0957v-0.00195c-0.06027,-0.37657 -0.08789,-0.69198 -0.08789,-0.97266c0,-0.28123 0.02674,-0.59572 0.08789,-0.9707l0.17773,-1.09961l-1.53711,-1.33594l0.68555,-1.1875l1.92188,0.66211l0.86328,-0.70898c0.49011,-0.40262 1.05493,-0.7279 1.68359,-0.96484l1.04297,-0.39453zM12,8c-2.19652,0 -4,1.80348 -4,4c0,2.19652 1.80348,4 4,4c2.19652,0 4,-1.80348 4,-4c0,-2.19652 -1.80348,-4 -4,-4zM12,10c1.11148,0 2,0.88852 2,2c0,1.11148 -0.88852,2 -2,2c-1.11148,0 -2,-0.88852 -2,-2c0,-1.11148 0.88852,-2 2,-2z"></path>
+                </g>
+            </g>
+        </svg>
+        <span>Manage Turfs</span>
+    </a>
+</li>
+
             <li class="nav-item">
-               <a class="nav-link" href="Requests.php"> <span>Request</span></a>
+               <a class="nav-link" href="add_turf.php"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVR4nN2VawqCQBSFxaigNfTaQ3967iiKtF1orUyMFtFjF18M3EBsnLmW/agDF2TU841nxjtB8PcCWsASiIGjVCRj4SfGXWAH3KnWDdgCnbrmfSBzGJd1BsZa85HMrK6uwFATi5nNu8qdcUnmLiVSLm1cu8W1oEYTKV9Ur7sLWHle1AKM5jbAvkFAZAMcLA8mBVNTPanimG1NUi0gVQBSLSD+dkSLBgFTGyBU/METBeBS2QSlcbmUVmRe1NpqLoAOcOJ9ZUC7EiCQofyNdXUBBk7zEiSvOfO+yrwU18bzNebe2huLBxSa3iKd9nlkmuvZR0fmz+gBB5XkfNZfrNIAAAAASUVORK5CYII="> <span>Add Turfs</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="Requests.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO2UMQrCQBBFV0E8jI0HSGOnhb138BDaCcGbeAqvYGmnQbS0D+ZJkikEd8PozhaCr1r4n//YJMS5P1qAGVAQT1Fv+QQn7Dj7BJWEvcgn0eALHm1E35MNgC1wBy5yHloKNryTWwpukk2ATM5XM8ErwEh6x08FlVKwk97SXADMpbMP9TSC4GcKHKQz7uh8L9DQJUBxg4bfFWjQvIMFUJLwZ1fGjgPT4NWElbOGlOM1ScddK1gnG0/JE938xWREqlSYAAAAAElFTkSuQmCC"> <span>Request</span></a>
+            </li> 
+            <li class="nav-item">
+            <a class="nav-link" href="turf.php"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+style="fill:#FFFFFF;">
+    <path d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z"></path>
+</svg> <span>Home</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -193,15 +880,11 @@ function getInitials($name) {
             <hr class="sidebar-divider">
             <!-- Nav Item - Tables -->
             
-			 <li class="nav-item">
-               <a class="nav-link" href="turf.php"> <span>Home</span></a>
-            </li>
+			 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-               <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+            
          </ul>
          <!-- End of Sidebar -->
          <!-- Content Wrapper -->
@@ -209,11 +892,11 @@ function getInitials($name) {
             <!-- Main Content -->
             <div id="content">
                <!-- Topbar -->
-               <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+               <nav class="navbar navbar-expand   topbar mb-4 static-top shadow" style="background-color:#252525;">
                   <!-- Sidebar Toggle (Topbar) -->
                   <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
                   <!-- Topbar Navbar -->
-                  <ul class="navbar-nav ml-auto">
+                  <ul class="navbar-nav ml-auto" >
                      <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                      <li class="nav-item dropdown no-arrow d-sm-none">
                         <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-search fa-fw"></i> </a>
@@ -231,11 +914,12 @@ function getInitials($name) {
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
             
-            echo '<div style="display: flex; align-items: center;"><h6>Hello, ' . $userName . '</h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
+            echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;">Hello, ' . $userName . '</h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
             
           } else {
             // If the user is not logged in, display login button
-            echo '<button type="button" class="btn btn-outline-primary ms-1 ml-3"><a href="signup.php">Sign Up</a></button>';
+            echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php"  style="color:white; text-decoration:none;">Sign Up</a></button>';
+            echo '<span>    </span>';
             echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
           }
           ?>
@@ -252,119 +936,123 @@ function getInitials($name) {
                      </li>
                   </ul>
                </nav>
-               <!-- End header -->
-               <!-- Begin Page Content -->
-               <div class="container-fluid">
-                  <!-- Page Heading -->
-                  <h5 class="mb-2 text-gray-800">Your Turfs</h5>
-                  <!-- DataTales Example -->
-                  <div class="card shadow">
-                     <div class="card-header py-3 d-flex justify-content-between">
-                        <div>
-                           <a href="add_turf.php">
-                              <h6 class="font-weight-bold text-primary mt-2">Add New</h6>
-                           </a>
-                        </div>
+<!-- Card 1 - Bootstrap Brain Component -->
+<body class="bg-default">
+  <div class="main-content">
+    <div class="header  pb-8 pt-5 pt-md-8" style="background-color:#106eea;">
+      <div class="container-fluid">
+        <h2 class="mb-5 text-white">Statistics Overview</h2>
+        <div class="header-body">
+          <div class="row">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Users</h5>
+                      <span class="h2 font-weight-bold mb-0"> 
+
+                      <?php
+                      $que="SELECT id from users ORDER BY id" ;
+                      $run=mysqli_query($conn,$que);
+                      $user_row=mysqli_num_rows($run);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
+
+                      ?>
                         
-                     </div>
-                     <div class="card-body">
-                        <div class="table-responsive">
-                           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                              <thead>
-                                 <tr>
-                                    <th>Sr.No</th>
-                                    <th>Turf Name</th>                  
-                                    <th>Owner</th>
-                                    <th>Launch Date</th>
-                                    <th>Location</th>
-                                    <th colspan="2">Action</th>
-                                 </tr>
-                              </thead>
-                              
-                              <tbody>
-                              <?php
-$sql = "SELECT * FROM `grd` ORDER BY grd.id DESC";
-$result = mysqli_query($coni, $sql);
-
-if ($result === false) {
-    die("Query failed: " . mysqli_error($coni));
-}
-
-$rowCount = mysqli_num_rows($result);
-
-if ($rowCount > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $tid = $row['id'];
-        $tname = $row['name'];
-        $towner = $row['owner'];
-        $pubdate = $row['pubdate'];
-        $pl=$row['place'];
-
-        echo '<tr>
-                <td scope="row">' . $tid . '</td>
-                <td>' . $tname . '</td>
-                <td>' . $towner . '</td>
-                <td>' . $pubdate . '</td>
-                <td>' . $pl . '</td>
-                <td>
-                    <a href="del_turf.php?deleteid=' . $tid . '" class="text text-light">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
-                            <path d="M 13 3 L 13 4 L 4 4 L 4 6 L 6 6 L 6 28 L 26 28 L 26 6 L 28 6 L 28 4 L 19 4 L 19 3 L 13 3 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 11 9 L 11 23 L 13 23 L 13 9 L 11 9 z M 19 9 L 19 23 L 21 23 L 21 9 L 19 9 z"></path>
-                        </svg>
-                    </a>
-                </td>
-                <td>
-                    <a href="edit_turf.php?editid=' . $tid . '" class="text text-light">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 64 64">
-                            <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.17,15.426L21.936,41.787c0,0,4.628,2.745,5.777,6.191c5.234-6.383,25.851-29.872,25.851-29.872  c4.117-4.404-5.745-14.362-11.362-8.426c-5.617,6.128-26.011,29.745-26.011,29.745l-3.415,15.83L20.149,52   c0,0-1.197-3.878-7.372-5.17"></path>
-                        </svg>
-                    </a>
-                </td>
-            </tr>';
-    }
-} else {
-    echo "<tr><td colspan='6'>No rows found.</td></tr>";
-}
-?>
-
-
-
-                                 
-                              </tbody>
-                              
-                           </table>
-                        </div>
-                     </div>
+                    </span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                    </div>
                   </div>
-               </div>
-               <!-- /.container-fluid -->
+                 
+                </div>
+              </div>
             </div>
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-               <div class="container my-auto">
-                  <div class="copyright text-center my-auto"> <span>Copyright &copy; FitPlay</span> </div>
-               </div>
-            </footer>
-            <!-- End of Footer -->
-         </div>
-         <!-- End of Content Wrapper -->
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Turfs Listed</h5>
+                      <?php
+                      $queq="SELECT id from grd ORDER BY id" ;
+                      $runt=mysqli_query($coni,$queq);
+                      $turf_row=mysqli_num_rows($runt);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$turf_row.'</span>';
+
+                      ?>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-chart-pie"></i>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Turf Owners</h5>
+                      <?php
+                      $queto="SELECT id from turf_owner ORDER BY id" ;
+                      $runto=mysqli_query($coni,$queto);
+                      $turfo_row=mysqli_num_rows($runto);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$turfo_row.'</span>';
+
+                      ?>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">User Reviews</h5>
+                      <?php
+                      $quer="SELECT id from review ORDER BY id" ;
+                      $runr=mysqli_query($conn,$quer);
+                      $review_row=mysqli_num_rows($runr);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$review_row.'</span>';
+
+                      ?>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-percent"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- End of Page Wrapper -->
-      <!-- Scroll to Top Button-->
-      <a class="scroll-to-top rounded" href="#page-top"> <i class="fas fa-angle-up"></i> </a>
-      <!-- Bootstrap core JavaScript-->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- Core plugin JavaScript-->
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-      <!-- Custom scripts for all pages-->
-      <script src="vendor/js/sb-admin-2.min.js"></script>
-      <!-- Page level plugins -->
-      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-      <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
-      <script>
-         CKEDITOR.replace( 'bl' );
-      </script>
-   </body>
+    </div>
+    <!-- Chart 1 - Bootstrap Brain Component -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" rel="stylesheet">
+  
+</body>
 </html>

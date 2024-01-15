@@ -117,16 +117,14 @@ $res6=mysqli_fetch_assoc($que6);
         </style>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <body id="page-top">
-      
       <!-- Page Wrapper -->
       <div id="wrapper">
-
          <!-- Sidebar -->
-         <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#252525;">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="turf.php">
-               <div class="sidebar-brand-icon rotate-n-15"> <i class="fas fa-laugh-wink"></i> </div>
-               <div class="sidebar-brand-text mx-3">FitPlay</div>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+               
+               <b><h3 class="logo" style="font-family:Roboto Mono, sans-serif;">Fit<span style="color:grey ;font-family:Roboto Mono,sans-serif;">Play.</span></h3></b>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -134,8 +132,30 @@ $res6=mysqli_fetch_assoc($que6);
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Utilities Collapse Menu -->
+           <li class="nav-item">
+    <a class="nav-link" href="admin_turf.php">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,255.99599,255.99599" style="fill:#000000;">
+            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <g transform="scale(10.66667,10.66667)">
+                    <path d="M9.66602,2l-0.49023,2.52344c-0.82417,0.31082 -1.58099,0.74649 -2.24414,1.29102l-2.42383,-0.83594l-2.33594,4.04297l1.94141,1.6875c-0.07463,0.45823 -0.11328,0.88286 -0.11328,1.29102c0,0.40877 0.03981,0.83263 0.11328,1.29102v0.00195l-1.94141,1.6875l2.33594,4.04102l2.42188,-0.83398c0.66321,0.54482 1.42175,0.97807 2.24609,1.28906l0.49023,2.52344h4.66797l0.49024,-2.52344c0.82471,-0.31102 1.58068,-0.74599 2.24414,-1.29102l2.42383,0.83594l2.33398,-4.04102l-1.93945,-1.68945c0.07463,-0.45823 0.11328,-0.88286 0.11328,-1.29102c0,-0.40754 -0.03887,-0.83163 -0.11328,-1.28906v-0.00195l1.94141,-1.68945l-2.33594,-4.04102l-2.42188,0.83398c-0.66321,-0.54482 -1.42175,-0.97807 -2.24609,-1.28906l-0.49024,-2.52344zM11.31445,4h1.37109l0.38867,2l1.04297,0.39453c0.62866,0.23694 1.19348,0.56222 1.68359,0.96484l0.86328,0.70703l1.92188,-0.66016l0.68555,1.18555l-1.53516,1.33594l0.17578,1.09961v0.00195c0.06115,0.37494 0.08789,0.68947 0.08789,0.9707c0,0.28123 -0.02674,0.59572 -0.08789,0.9707l-0.17773,1.09961l1.53516,1.33594l-0.68555,1.1875l-1.91992,-0.66211l-0.86523,0.70898c-0.49011,0.40262 -1.05298,0.7279 -1.68164,0.96484h-0.00195l-1.04297,0.39453l-0.38867,2h-1.36914l-0.38867,-2l-1.04297,-0.39453c-0.62867,-0.23694 -1.19348,-0.56222 -1.68359,-0.96484l-0.86328,-0.70703l-1.92187,0.66016l-0.68555,-1.18555l1.53711,-1.33789l-0.17773,-1.0957v-0.00195c-0.06027,-0.37657 -0.08789,-0.69198 -0.08789,-0.97266c0,-0.28123 0.02674,-0.59572 0.08789,-0.9707l0.17773,-1.09961l-1.53711,-1.33594l0.68555,-1.1875l1.92188,0.66211l0.86328,-0.70898c0.49011,-0.40262 1.05493,-0.7279 1.68359,-0.96484l1.04297,-0.39453zM12,8c-2.19652,0 -4,1.80348 -4,4c0,2.19652 1.80348,4 4,4c2.19652,0 4,-1.80348 4,-4c0,-2.19652 -1.80348,-4 -4,-4zM12,10c1.11148,0 2,0.88852 2,2c0,1.11148 -0.88852,2 -2,2c-1.11148,0 -2,-0.88852 -2,-2c0,-1.11148 0.88852,-2 2,-2z"></path>
+                </g>
+            </g>
+        </svg>
+        <span>Manage Turfs</span>
+    </a>
+</li>
+
             <li class="nav-item">
-               <a class="nav-link" href="admin.php"> <span>Turfs</span></a>
+               <a class="nav-link" href="add_turf.php"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVR4nN2VawqCQBSFxaigNfTaQ3967iiKtF1orUyMFtFjF18M3EBsnLmW/agDF2TU841nxjtB8PcCWsASiIGjVCRj4SfGXWAH3KnWDdgCnbrmfSBzGJd1BsZa85HMrK6uwFATi5nNu8qdcUnmLiVSLm1cu8W1oEYTKV9Ur7sLWHle1AKM5jbAvkFAZAMcLA8mBVNTPanimG1NUi0gVQBSLSD+dkSLBgFTGyBU/METBeBS2QSlcbmUVmRe1NpqLoAOcOJ9ZUC7EiCQofyNdXUBBk7zEiSvOfO+yrwU18bzNebe2huLBxSa3iKd9nlkmuvZR0fmz+gBB5XkfNZfrNIAAAAASUVORK5CYII="> <span>Add Turfs</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="Requests.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO2UMQrCQBBFV0E8jI0HSGOnhb138BDaCcGbeAqvYGmnQbS0D+ZJkikEd8PozhaCr1r4n//YJMS5P1qAGVAQT1Fv+QQn7Dj7BJWEvcgn0eALHm1E35MNgC1wBy5yHloKNryTWwpukk2ATM5XM8ErwEh6x08FlVKwk97SXADMpbMP9TSC4GcKHKQz7uh8L9DQJUBxg4bfFWjQvIMFUJLwZ1fGjgPT4NWElbOGlOM1ScddK1gnG0/JE938xWREqlSYAAAAAElFTkSuQmCC"> <span>Request</span></a>
+            </li> 
+            <li class="nav-item">
+            <a class="nav-link" href="turf.php"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+style="fill:#FFFFFF;">
+    <path d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z"></path>
+</svg> <span>Home</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -145,15 +165,11 @@ $res6=mysqli_fetch_assoc($que6);
             <hr class="sidebar-divider">
             <!-- Nav Item - Tables -->
             
-			 <li class="nav-item">
-               <a class="nav-link" href="turf.php"> <span>Home</span></a>
-            </li>
+			 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-               <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+            
          </ul>
          <!-- End of Sidebar -->
          <!-- Content Wrapper -->
@@ -161,45 +177,48 @@ $res6=mysqli_fetch_assoc($que6);
             <!-- Main Content -->
             <div id="content">
                <!-- Topbar -->
-               <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+               <nav class="navbar navbar-expand   topbar mb-4 static-top shadow" style="background-color:#252525;">
                   <!-- Sidebar Toggle (Topbar) -->
                   <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
                   <!-- Topbar Navbar -->
-                  <ul class="navbar-nav ml-auto">
+                  <ul class="navbar-nav ml-auto" >
                      <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                      <li class="nav-item dropdown no-arrow d-sm-none">
                         <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-search fa-fw"></i> </a>
                         <!-- Dropdown - Messages -->
                         <div class="dropdown-menu dropdown-menu-right p-3 shadow +animated--grow-in" aria-labelledby="searchDropdown">
-                           <form class="form-inline mr-auto w-100 navbar-search">
-                              <div class="input-group">
-                                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                                 <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button"> <i class="fas fa-search fa-sm"></i> </button>
-                                 </div>
-                              </div>
-                           </form>
+                           
                         </div>
                      </li>
                      <!-- Nav Item - User Information -->
                      <li class="nav-item dropdown no-arrow">
-                     <?php
+          <?php
           if (isset($_SESSION['user_data'])) {
             // If the user is logged in, display username and "View Profile"
             $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
-            echo '<a href="#"><span>';
-            echo '<div class="avatar"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div>';
+            
+            echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;">Hello, ' . $userName . '</h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
             
           } else {
             // If the user is not logged in, display login button
-            echo '<button type="button" class="btn btn-outline-primary ms-1 ml-3 style="margin-left:5px;""><a href="signup.php">Sign Up</a></button>';
+            echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php"  style="color:white; text-decoration:none;">Sign Up</a></button>';
+            echo '<span>    </span>';
             echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
           }
           ?>
         </li>
-</span>
+                        </span><!-- <img class="img-profile rounded-circle" src="vendor/img/undraw_profile.svg"> -->
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                           <a class="dropdown-item" href="#"> <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile </a>
+                           <a class="dropdown-item" href="#"> <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings </a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" 
+                              href="logout.php"> <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout </a>
+                        </div>
+                     </li>
                   </ul>
                </nav>
 

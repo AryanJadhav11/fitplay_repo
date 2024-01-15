@@ -5,11 +5,11 @@ $user='root';
 $db='turf';
 $pass='';
 
-$con=mysqli_connect($server,$user,$pass,$db);
+$coni=mysqli_connect($server,$user,$pass,$db);
 
-if(!$con)
+if(!$coni)
 {
- die(mysqli_error($con));
+ die(mysqli_error($coni));
 }
 
 ?>
@@ -18,36 +18,58 @@ if(!$con)
 
 <?php
 session_start();
-$showsuc=false;
-$showerrr=false;
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $stit = $_POST['name'];
-    $cont = $_POST['details'];
-    $pri=$_POST['price'];
-    $owner=$_POST['owner'];
-    $pla=$_POST['place'];
-   // $cid=$_POST['cate_id'];
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    // image upload 
-    $filename=$_FILES['image']['name'];
-    $tmpname=$_FILES['image']['tmp_name'];
-    $size=$_FILES['image']['size'];
-    $destination="upload/".$filename;
-    if($size<=20000000)
-    {
-      move_uploaded_file($tmpname, $destination);
-      $sqli = "INSERT INTO `grd`(`name`, `details`, `image`, `price`, `owner`, `place`) VALUES ('$stit', '$cont','$filename','$pri','$owner','$pla')";
-       $res = mysqli_query($con, $sqli);
-        if ($res) {
-      $showsuc="U just published launched new turf";
-       
-    } else {
-        $showerrr="Something went wrong,sorry buddy";
-    }
-    }
-
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+$showalert=false;
+$login=false;
+$showerr=false;
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{ 
+	$err="";
+	$username=$_POST["uname"];
+	//$email=$_POST["nmail"];
+	$password=$_POST["password"];
+
+    
+	
+	
+	
+		$sql="Select * from `users` where username='$username' AND password='$password';";
+		$result=mysqli_query($conn,$sql);
+		$num=mysqli_num_rows($result);
+		
+		if($num)  
+		{
+           
+			$re=mysqli_fetch_assoc($result); // fetch user details 
+            $user_data=array($re['firstname'],$re['lastname'],$re['username'],$re['email']); // store username and email of logged in user in an array
+            $_SESSION['user_data']=$user_data; // set session for that user 
+			header("location: turf.php");
+
+		}
+		else
+		{
+			$showerr="Invalid Email / Password";
+            $_SESSION['error']="Invalid Email / Password";
+            
+		}
+		
+	
+}
+
+
+
 
 ?>
 
@@ -66,6 +88,7 @@ function getInitials($name) {
 }
 ?>
 
+
 <html lang="en">
    <head>
       <meta charset="utf-8">
@@ -73,18 +96,15 @@ function getInitials($name) {
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <title>Add Turf</title>
+      <title>Turf Admin - Dashboard</title>
       <!-- Custom fonts for this template-->
       <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
       <!-- Custom styles for this template-->
-      <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
-
       <link href="vendor/css/sb-admin-2.css" rel="stylesheet">
    </head>
-
    <style>
-    .avatar {
+     .avatar {
         width: 30px;
         height: 30px;
         background-color: #007bff;
@@ -137,10 +157,14 @@ function getInitials($name) {
             display: flex;
             gap: 20px; /* Adjust the margin between cards */
         }
+
+       
+
+
+
+
+  </style>
     </style>
-
-    
-
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <body id="page-top">
       <!-- Page Wrapper -->
@@ -251,59 +275,115 @@ style="fill:#FFFFFF;">
                <!-- Begin Page Content -->
                <div class="container-fluid">
                   <!-- Page Heading -->
-                  <h5 class="mb-2 text-gray-800">Turfs</h5>
+                  <h5 class="mb-2 text-gray-800">Your Turfs</h5>
                   <!-- DataTales Example -->
-                  <div class="col-xl-6 col-lg-5">
-                  <div class="card">
-                  	<div class="card-header">
-                  <form action=""method="POST" enctype="multipart/form-data">
-  <div class="form-group">
-    <label >Add a new turf</label>
-    <input type="text" name="name"  class="form-control" id="cat_name_enter"  placeholder="Name of turf" style="width:220px;" required>
-  </div>
-  <div class="form-group">
-    <label >Add a Owner Name</label>
-    <input type="text" name="owner"  class="form-control" id="cat_name_enter"  placeholder="Name of Owner" style="width:220px;" required>
-  </div>
-  <div class="mb-3">
-  <label >Add Details & Ammenities</label>
-   <textarea required class="form-control" name="details" id="bl"></textarea>
-   <script>
-         CKEDITOR.replace( 'bl' );
-      </script>
-  </div>
-  <div class="mb-3">
-  <label >Add Turf Photo</label>
-   <input type="file" name="image" class="form-control">
+                  <div class="card shadow">
+                     <div class="card-header py-3 d-flex justify-content-between">
+                        <div>
+                           <a href="add_turf.php">
+                              <h6 class="font-weight-bold text-primary mt-2">Add New</h6>
+                           </a>
+                        </div>
+                        
+                     </div>
+                     <div class="card-body">
+                        <div class="table-responsive">
+                           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                              <thead>
+                                 <tr>
+                                    <th>Sr.No</th>
+                                    <th>Turf Name</th>                  
+                                    <th>Owner</th>
+                                    <th>Launch Date</th>
+                                    <th>Location</th>
+                                    <th colspan="2">Action</th>
+                                 </tr>
+                              </thead>
+                              
+                              <tbody>
+                              <?php
+$sql = "SELECT * FROM `grd` ORDER BY grd.id DESC";
+$result = mysqli_query($coni, $sql);
 
-  </div>
-  <div class="form-group">
-    <label >Location</label>
-    <input type="text" name="place"  class="form-control" id="cat_name_enter"  placeholder="Location of turf" style="width:220px;" required>
-  </div>
-  <div class="form-group">
-    <label >Price</label>
-    <input type="text" name="price"  class="form-control" id="cat_name_enter"  placeholder="Price of turf" style="width:220px;" required>
-  </div>
+if ($result === false) {
+    die("Query failed: " . mysqli_error($coni));
+}
 
-  
+$rowCount = mysqli_num_rows($result);
 
-  
- <input type="submit" name="subm" value="Submit">
-   <a href="admin.php"class="btn btn-secondary">Back</a>
+if ($rowCount > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $tid = $row['id'];
+        $tname = $row['name'];
+        $towner = $row['owner'];
+        $pubdate = $row['pubdate'];
+        $pl=$row['place'];
 
-</form>
-</div>
-</div>
-</div>
-                  
-                     
-                   
+        echo '<tr>
+                <td scope="row">' . $tid . '</td>
+                <td>' . $tname . '</td>
+                <td>' . $towner . '</td>
+                <td>' . $pubdate . '</td>
+                <td>' . $pl . '</td>
+                <td>
+                    <a href="del_turf.php?deleteid=' . $tid . '" class="text text-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+                            <path d="M 13 3 L 13 4 L 4 4 L 4 6 L 6 6 L 6 28 L 26 28 L 26 6 L 28 6 L 28 4 L 19 4 L 19 3 L 13 3 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 11 9 L 11 23 L 13 23 L 13 9 L 11 9 z M 19 9 L 19 23 L 21 23 L 21 9 L 19 9 z"></path>
+                        </svg>
+                    </a>
+                </td>
+                <td>
+                    <a href="edit_turf.php?editid=' . $tid . '" class="text text-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 64 64">
+                            <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.17,15.426L21.936,41.787c0,0,4.628,2.745,5.777,6.191c5.234-6.383,25.851-29.872,25.851-29.872  c4.117-4.404-5.745-14.362-11.362-8.426c-5.617,6.128-26.011,29.745-26.011,29.745l-3.415,15.83L20.149,52   c0,0-1.197-3.878-7.372-5.17"></path>
+                        </svg>
+                    </a>
+                </td>
+            </tr>';
+    }
+} else {
+    echo "<tr><td colspan='6'>No rows found.</td></tr>";
+}
+?>
+
+
+
+                                 
+                              </tbody>
+                              
+                           </table>
+                        </div>
+                     </div>
                   </div>
                </div>
                <!-- /.container-fluid -->
             </div>
-        </div>
-    </div>
-</body>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+               <div class="container my-auto">
+                  <div class="copyright text-center my-auto"> <span>Copyright &copy; FitPlay</span> </div>
+               </div>
+            </footer>
+            <!-- End of Footer -->
+         </div>
+         <!-- End of Content Wrapper -->
+      </div>
+      <!-- End of Page Wrapper -->
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top"> <i class="fas fa-angle-up"></i> </a>
+      <!-- Bootstrap core JavaScript-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+      <!-- Custom scripts for all pages-->
+      <script src="vendor/js/sb-admin-2.min.js"></script>
+      <!-- Page level plugins -->
+      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+      <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+      <script>
+         CKEDITOR.replace( 'bl' );
+      </script>
+   </body>
 </html>

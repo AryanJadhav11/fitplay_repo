@@ -263,14 +263,16 @@ function getInitials($name) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data'][4] == 1) {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data'][2] == "sk") {  // Assuming 'Rolee' is at index 4
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
               
                   echo '</ul>';
               } else {
-                  echo '<button type="button" class="btn btn-outline-primary ms-1 ml-3"><a href="signup.php">Sign Up</a></button>';
-                  echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
+                  echo'<span>  </span>';
+                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+                  
               }
 ?>
                 </li>
