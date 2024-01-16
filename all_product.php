@@ -12,7 +12,7 @@ if (!$conie) {
 
 if (isset($_GET['Order_id'])) {
     $oid = $_GET['Order_id'];
-    $sql9pp = "SELECT * FROM `user_orders` WHERE id='$oid';";
+    $sql9pp = "SELECT * FROM `user_orders` WHERE Order_id='$oid';";
     $res9pp = mysqli_query($conie, $sql9pp);
 
     // Check if the query was successful

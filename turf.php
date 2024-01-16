@@ -20,33 +20,48 @@ $login = false;
 $showerr = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $err = "";
-  $username = $_POST["uname"];
-  $password = $_POST["password"];
+    $err = "";
+    $username = $_POST["uname"];
+    $password = $_POST["password"];
 
-  $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
-  $result = mysqli_query($conn, $sql);
-  $num = mysqli_num_rows($result);
+    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result);
 
-  if ($num) {
-      $re = mysqli_fetch_assoc($result);
-      // Set 'Rolee' to 0 if it's not present in the fetched data
-      $user_data = array(
-          $re['firstname'],
-          $re['lastname'],
-          $re['username'],
-          $re['email'],
-          $re['password'],
-          $re['Rolee']
-      );
-      $_SESSION['user_data'] = $user_data;
-      header("location: turf.php");
-  } else {
-      $showerr = "Invalid Email / Password";
-      $_SESSION['error'] = "Invalid Email / Password";
-  }
+    if ($num) {
+        $re = mysqli_fetch_assoc($result);
+        // Include 'user_id' in the user data
+        $user_data = array(
+            'user_id' => $re['id'],
+            'firstname' => $re['firstname'],
+            'lastname' => $re['lastname'],
+            'username' => $re['username'],
+            'email' => $re['email'],
+            
+        );
+        $_SESSION['user_data'] = $user_data;
+
+        // Output the contents of $_SESSION['user_data'] to the browser console
+        
+
+
+        header("location: turf.php");
+    } else {
+        $showerr = "Invalid Email / Password";
+        $_SESSION['error'] = "Invalid Email / Password";
+    }
 }
+if (isset($_SESSION['user_data'])) {
+  $pri = $_SESSION['user_data'];
+}
+
+// Output the contents of $_SESSION['user_data'] or $pri to the browser console
+echo '<pre>';
+print_r($pri);
+echo '</pre>';
 ?>
+
+
 <?php
    
 
@@ -229,7 +244,8 @@ function getInitials($name) {
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="index.php">Shop</a></li>
+            
+                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -241,7 +257,7 @@ function getInitials($name) {
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data'][2];
+                  $userName = $_SESSION['user_data']['username'];
                   $userInitials = getInitials($userName);
               
                   echo '<a href="#"><span>';
@@ -249,7 +265,7 @@ function getInitials($name) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data'][2] == "sk") {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data']['username'] == "sk") {  // Assuming 'Rolee' is at index 4
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
                   echo '</ul>';

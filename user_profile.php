@@ -10,6 +10,18 @@ function getInitials($name) {
     return $initials;
 }
 
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 session_start();
 ?>
 
@@ -113,7 +125,7 @@ session_start();
               <div class="d-flex justify-content-center align-items-center mb-3" style="height: 70px;">
               <?php
               if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data']['0'];
+                  $userName = $_SESSION['user_data']['username'];
                   $userInitials = getInitials($userName);
                   echo '<div class="avatar">' . $userInitials . '</div>';
               }
@@ -123,7 +135,7 @@ session_start();
               <h5 class="my-3">
                 <?php
                 if (isset($_SESSION['user_data'])) {
-                  echo $_SESSION['user_data']['0'];
+                  echo $_SESSION['user_data']['firstname'];
                 }
                 ?>
               </h5>
@@ -160,7 +172,7 @@ session_start();
           <p class="text-muted mb-0">
             <?php
             if (isset($_SESSION['user_data'])) {
-              echo $_SESSION['user_data']['0'];
+              echo $_SESSION['user_data']['firstname'];
             }
             ?>
           </p>
@@ -175,7 +187,7 @@ session_start();
           <p class="text-muted mb-0">
             <?php
             if (isset($_SESSION['user_data'])) {
-              echo $_SESSION['user_data']['1'];
+              echo $_SESSION['user_data']['lastname'];
             }
             ?>
           </p>
@@ -190,7 +202,7 @@ session_start();
           <p class="text-muted mb-0">
             <?php
             if (isset($_SESSION['user_data'])) {
-              echo $_SESSION['user_data']['2'];
+              echo $_SESSION['user_data']['username'];
             }
             ?>
           </p>
@@ -205,7 +217,7 @@ session_start();
           <p class="text-muted mb-0">
             <?php
             if (isset($_SESSION['user_data'])) {
-              echo $_SESSION['user_data']['3'];
+              echo $_SESSION['user_data']['email'];
             }
             ?>
           </p>

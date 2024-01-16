@@ -1,55 +1,61 @@
 <?php
 
 session_start();
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-    if(isset($_POST['Add_To_Cart']))
-    {
-        if(isset($_SESSION['cart']))
-        {
-            $myitems=array_column($_SESSION['cart'],'Item_Name');
-            if(in_array($_POST['Item_Name'],$myitems))
-            {
-                echo "<script>
-                alert('Item already added');
-                window.location.href='index.php'
-                </script>";
-            
-            }
-            else{
-            $count = count($_SESSION['cart']);
-            $_SESSION['cart'][$count]=array('Item_Name'=>$_POST['Item_Name'],'Price'=>$_POST['Price'],'Quantity'=>1);
-            echo "<script>
-            alert('Item added');
-            window.location.href='index.php'
-            </script>";
-            }
-        }
-        else
-        {
-            $_SESSION['cart'][0]=array('Item_Name'=>$_POST['Item_Name'],'Price'=>$_POST['Price'],'Quantity'=>1);
-            echo "<script>
-            alert('Item added');
-            window.location.href='index.php'
-            </script>";
-        }
-    }
 
-    if(isset($_POST['Remove_Item']))
-    {
-        foreach($_SESSION['cart'] as $key => $value)
-        {   
-            if($value['Item_Name']==$_POST['Item_Name'])
-            {
-            unset($_SESSION['cart'][$key]);
-            $_SESSION['cart']=array_values($_SESSION['cart']);
-            echo "<script>
-                    alert('Item Removed');
-                    window.location.href='mycart.php';
-            </script>";
-            }
-        }
-    }
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+?>
+
+<?php
+// session_start();
+
+// Database connection
+$server = 'localhost';
+$user = 'root';
+$db = 'mg';
+$pass = '';
+
+$conie = mysqli_connect($server, $user, $pass, $db);
+
+if (!$conie) {
+    die(mysqli_error($conie));
 }
 
+// Check if the Add_To_Cart button is clicked
+if (isset($_POST['Add_To_Cart'])) {
+    // Retrieve user_id from the session
+    $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+
+    // Get item details from the form using the correct names
+    $item_name = isset($_POST['item_name']) ? $_POST['item_name'] : '';
+    $price = isset($_POST['Price']) ? $_POST['Price'] : '';
+    $quantity = isset($_POST['quantity']) ? $_POST['quantity'] : '';
+
+    // Insert the item into the order_his table
+    $sql = "INSERT INTO `order_his` (`user_id`, `item_name`, `price`, `quantity`) 
+            VALUES ('$user_id', '$item_name', '$price', '$quantity')";
+
+    $result = mysqli_query($conie, $sql);
+
+    // Check if the query was successful
+   if($result==null)
+   {
+    echo 'something went wrong';
+   }
+   else
+   {
+    // header("Location: product_detail.php");
+    echo '<script> ';
+   }
+}
 ?>

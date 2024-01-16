@@ -1,4 +1,52 @@
-<?php include("header.php"); ?>
+<?php
+$server = 'localhost';
+$user = 'root';
+$db = 'mg';
+$pass = '';
+
+$conie = mysqli_connect($server, $user, $pass, $db);
+
+if (!$conie) {
+    die(mysqli_error($conie));
+}
+
+if (isset($_GET['Order_id'])) {
+    $oid = $_GET['Order_id'];
+    $sql9pp = "SELECT * FROM `user_orders` WHERE Order_id='$oid';";
+    $res9pp = mysqli_query($conie, $sql9pp);
+
+    // Check if the query was successful
+    if (!$res9pp) {
+        die(mysqli_error($conie));
+    }
+
+    // Check if there are results
+    if (mysqli_num_rows($res9pp) > 0) {
+        $row9pp = mysqli_fetch_assoc($res9pp);
+    } else {
+        // Handle the case where no results were found
+        echo "No results found for Order_id: $oid";
+    }
+}
+?>
+
+<?php
+
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,34 +83,51 @@
 
 <body>
 
-    <section>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="assets/img/pro/8p.png" class="img-fluid" alt="Product Image">
-                </div>
-                <div class="col-lg-6">
-                    <form action="manage_cart.php" method="POST">
-                        <h2>Product 1 yash</h2>
-                        <p class="text-muted">Category: Electronics</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p class="font-weight-bold">Price: Rs. 780</p>
-                        <div class="mb-3">
-                            <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1">
-                        </div>
-                        <button type="submit" name="Add_To_Cart" class="btn btn-info">Add To Cart</button>
-                        <input type="hidden" name="Item_Name" value="Product 1">
-                        <input type="hidden" name="Price" value="780">
-                    </form>
-                </div>
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <?php $imgip = $row9pp['pic'] ?>
+                <img src="upload/<?= $imgip ?>">
+            </div>
+            <div class="col-lg-6">
+                <form  method="POST">
+                    <h2><?= ucfirst($row9pp['item_name']) ?></h2>
+
+                    <p><?= $row9pp['about'] ?></p>
+                    <p class="font-weight-bold"><?= ucfirst($row9pp['Price']) ?></p>
+                    <div class="mb-3">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1">
+                    </div>
+                    <!-- Add hidden input fields for Item_name and Price -->
+                    <input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
+                    <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
+                    <button type="submit" name="Add_To_Cart" class="btn btn-info" >Add To Cart</button>
+
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<?php
 
-    
+if (isset($_POST['Add_To_Cart'])) {
+    // Retrieve user_id from the session
+    $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+
+    // Get item details from the form using the correct names
+    $item_name = isset($_POST['item_name']) ? $_POST['item_name'] : '';
+    $price = isset($_POST['Price']) ? $_POST['Price'] : '';
+    $quantity = isset($_POST['quantity']) ? $_POST['quantity'] : '';
+
+    // Insert the item into the order_his table
+    $sql = "INSERT INTO `order_his` (`user_id`, `item_name`, `price`, `quantity`) 
+            VALUES ('$user_id', '$item_name', '$price', '$quantity')";
+
+    $result = mysqli_query($conie, $sql);
+}
+    ?>
 
     <!-- ... (your scripts) ... -->
 

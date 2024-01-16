@@ -3,7 +3,7 @@
 session_start();
 
 //database connectivity testing//
-$con = mysqli_connect("localhost", "root","", "testing");
+$con = mysqli_connect("localhost", "root","", "mg");
 
 if (mysqli_connect_error()) {
     echo "<script>

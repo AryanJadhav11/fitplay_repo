@@ -186,7 +186,7 @@ function getInitials($name) {
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="index.php">Shop</a></li>
+                
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -195,10 +195,23 @@ function getInitials($name) {
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
+                <li>
+                <?php 
+
+                $count=0;
+                if(isset($_SESSION['user_data']))
+      {
+        $count=count($_SESSION['user_data']);
+      }
+                
+                ?>
+                <a href="mycart.php" class="btn btn-light">My Cart</a>
+                </li>
+
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data'][2];
+                  $userName = $_SESSION['user_data']['username'];
                   $userInitials = getInitials($userName);
               
                   echo '<a href="#"><span>';
@@ -206,7 +219,7 @@ function getInitials($name) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data'][2] == "sk") {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data']['username'] == "sk") {  // Assuming 'Rolee' is at index 4
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
                   echo '</ul>';
@@ -242,11 +255,9 @@ function getInitials($name) {
                                         <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
                                     </a>
                                     <div class="card-body" style="padding-left:10px;">
-                                        <h5 class="card-title"><a href="all_product.php?id=<?= $respro['Order_id'] ?>" id="title"><?= ucfirst($respro['item_name']) ?></a></h5>
-                                        <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-</svg><?= strip_tags(substr($respro['Price'], 0, 900)) ?></p>
-                                        <a href="all_product.php?id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                                        <h5 class="card-title"><a href="all_product.php?id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h5>
+                                        <p  class="card-text" id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?></p>
+                                        <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
                                     </div>
                                 </div>
                             </li>
