@@ -88,13 +88,12 @@ function getInitials($name) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- Vendor CSS Files -->
-  <link href="aos.css" rel="stylesheet">
-  <link href="card_style.css" rel="stylesheet">
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons.min.css" rel="stylesheet">
-  <link href="glightbox.min.css" rel="stylesheet">
-  <link href="swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="style.css" rel="stylesheet">
@@ -222,20 +221,7 @@ function getInitials($name) {
   ?>
 
 
-<section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">thefitplay@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9284008321</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -248,10 +234,10 @@ function getInitials($name) {
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Gyms</a></li>
-                        <li><a href="#">Visit Our Shop</a></li>
+                       
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -266,13 +252,12 @@ function getInitials($name) {
                   if ($_SESSION['user_data'][2] == "sk") {  // Assuming 'Rolee' is at index 4
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
-              
                   echo '</ul>';
-              } else {
+              } 
+              else {
                   echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
                   echo'<span>  </span>';
                   echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-                  
               }
 ?>
                 </li>
@@ -480,7 +465,6 @@ $resimg=mysqli_fetch_assoc($que2);
               <strong>Phone:</strong> +91 9284008321<br>
               <strong>Email:</strong> thefitplay@gmail.com<br>
             </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2125.6897847171444!2d74.2143666701516!3d16.693163579668703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1704986406573!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           </div>
 
@@ -488,7 +472,7 @@ $resimg=mysqli_fetch_assoc($que2);
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              
               <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
             </ul>
           </div>
