@@ -104,6 +104,7 @@ if ($conn->connect_error) {
                     <input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
                     <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
                     <button type="submit" name="Add_To_Cart" class="btn btn-info" >Add To Cart</button>
+                    <button   class="btn btn-info" ><a href="mycart.php">View Cart</a></button>
 
                 </form>
             </div>
