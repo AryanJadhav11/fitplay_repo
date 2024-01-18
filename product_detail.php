@@ -111,6 +111,9 @@ if ($conn->connect_error) {
         </div>
     </div>
 </section>
+
+
+
 <?php
 
 if (isset($_POST['Add_To_Cart'])) {
@@ -131,7 +134,5 @@ if (isset($_POST['Add_To_Cart'])) {
     ?>
 
     <!-- ... (your scripts) ... -->
-
 </body>
-
 </html>
