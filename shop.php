@@ -188,6 +188,7 @@ function getInitials($name) {
             <ul>
                 
                 <li class="dropdown">
+                <li><a class="nav-link scrollto" href="turf.php">Home</a></li>
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Gyms</a></li>
@@ -195,6 +196,7 @@ function getInitials($name) {
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
+                
                 <li>
                 <?php 
 

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $showalert = false;
 $showerr = false;
 $showcharerr = false;
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Successfully inserted, set session and redirect
                     $user_data = array($firstname, $lastname, $username, $email);
                     $_SESSION['user_data'] = $user_data;
-                    header("Location: signup.php");
+                    header("Location: turf.php");
                     exit();
                 } else {
                     $showerr = "Error: " . $sql . "<br>" . $conn->error;
@@ -268,7 +268,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
                 <div class="row">
-                    <small>Already have an account? <a href="turf.php">Log In</a></small>
+                    <small>Already have an account? <a href="login.php">Log In</a></small>
                 </div>
              
           </div>

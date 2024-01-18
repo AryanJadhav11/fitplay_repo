@@ -59,6 +59,7 @@ if (isset($_SESSION['user_data'])) {
 // echo '<pre>';
 // print_r($pri);
 // echo '</pre>';
+
 ?>
 
 
@@ -91,7 +92,7 @@ function getInitials($name) {
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explore Turfs</title>
+    <title>Register Your Venue</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
@@ -223,7 +224,7 @@ function getInitials($name) {
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-            
+            <li><a class="nav-link scrollto" href="turf.php">Home</a></li>
                 <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>

@@ -60,6 +60,20 @@ echo '<pre>';
 print_r($pri);
 echo '</pre>';
 ?>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mg";
+
+$conp = new mysqli($servername, $username, $password, $dbname);
+$sqlpro="SELECT * FROM `user_orders` ORDER BY user_orders.pubdate DESC; ";
+$quepro=mysqli_query($conp,$sqlpro);
+$rowpro=mysqli_num_rows($quepro);
+$respic=mysqli_fetch_assoc($quepro);
+
+
+?>
 
 
 <?php
@@ -204,9 +218,9 @@ function getInitials($name) {
         .banner-containerw{
           background-color:#ffff;
           padding:10px;
-          margin-bottom:60px;
+          margin-bottom:6px;
           width:100%;
-          height:80%;
+          height:40%;
           
         }
 
@@ -254,6 +268,7 @@ function getInitials($name) {
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
+                <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -445,10 +460,10 @@ $resimg=mysqli_fetch_assoc($que2);
   <img src="one.png" style="width:100%; height:240px;">
   </div>
 
+  
 
 
         
-
 
 
 
