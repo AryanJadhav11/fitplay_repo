@@ -73,7 +73,6 @@ $quepro=mysqli_query($conp,$sqlpro);
 $rowpro=mysqli_num_rows($quepro);
 $respic=mysqli_fetch_assoc($quepro);
 
-
 ?>
 
 
