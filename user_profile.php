@@ -1,4 +1,5 @@
 <?php
+session_start();
 function getInitials($name) {
     $nameParts = explode(' ', $name);
     $initials = '';
@@ -22,7 +23,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-session_start();
+
 ?>
 
 <!DOCTYPE html>

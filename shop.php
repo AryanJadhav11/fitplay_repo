@@ -19,10 +19,10 @@ if ($conn->connect_error) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "mg";
+$dbname = "fitplay_users";
 
 $conp = new mysqli($servername, $username, $password, $dbname);
-$sqlpro="SELECT * FROM `user_orders` ORDER BY user_orders.pubdate DESC; ";
+$sqlpro="SELECT * FROM `product_cards` ORDER BY product_cards.pubdate DESC; ";
 $quepro=mysqli_query($conp,$sqlpro);
 $rowpro=mysqli_num_rows($quepro);
 $respic=mysqli_fetch_assoc($quepro);
@@ -180,6 +180,92 @@ function getInitials($name) {
 
 
   </style>
+  <style>
+    .avatar {
+        width: 30px;
+        height: 30px;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .c-item{
+      height:480px;
+
+    }
+
+    .c-img
+    {
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.6);
+    }
+
+    body{
+      background:#f3f5f8;
+      overflow-x:hidden;
+    }
+
+ 
+
+        .star-container {
+            display: flex;
+            align-items: center;
+            margin-top: 15px; /* Adjust margin as needed */
+        }
+
+        .star-container i {
+            margin-right: 2px; /* Adjust margin between stars as needed */
+        }
+
+
+    
+
+    .card-container {
+      background-color:#ffff;
+      padding:20px;
+      border-radius:20px;
+             margin:40px;
+            display: flex;
+            gap: 20px; /* Adjust the margin between cards */
+        }
+
+        .card {
+            width: 18rem;
+        }
+
+        .card-img-top{
+          height :100%;
+          width:100%;
+        }
+
+        .banner-container{
+          background-color:#ffff;
+          padding:10px;
+          margin-bottom:60px;
+          width:100%;
+          height:100%;
+          
+        }
+
+        .banner-containerw{
+          background-color:#ffff;
+          padding:10px;
+          margin-bottom:60px;
+          width:100%;
+          height:80%;
+          
+        }
+
+
+
+
+  </style>
 </head>
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -188,7 +274,6 @@ function getInitials($name) {
             <ul>
                 
                 <li class="dropdown">
-                <li><a class="nav-link scrollto" href="turf.php">Home</a></li>
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Gyms</a></li>
@@ -196,7 +281,6 @@ function getInitials($name) {
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                
                 <li>
                 <?php 
 
@@ -237,6 +321,58 @@ function getInitials($name) {
         </nav>
     </div>
 </header>
+
+<div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active c-item">
+      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book Now</button>
+      </div>
+    </div>
+
+    <div class="carousel-item c-item">
+      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase"> Experience the joy of hassle-free reservations for your soccer matches.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Kick Off Convenience</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Explore Top Turfs</button>
+      </div>
+    </div>
+
+    <div class="carousel-item c-item">
+      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase">Our online turf booking platform lets you schedule your games at your convenience.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Game On Anytime</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Kick Now</button>
+      </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+
+  </div>
+</div>
+
 <div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
     <div class="row">
         <div class="splide">
@@ -347,6 +483,7 @@ function getInitials($name) {
         </div>
       </div>
     </div>
+    
 
     <div class="container py-4">
       <div class="copyright">

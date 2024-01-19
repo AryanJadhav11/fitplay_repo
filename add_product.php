@@ -2,7 +2,7 @@
 
 $server='localhost';
 $user='root';
-$db='mg';
+$db='fitplay_users';
 $pass='';
 
 $con=mysqli_connect($server,$user,$pass,$db);
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($size<=20000000)
     {
       move_uploaded_file($tmpname, $destination);
-      $sqlipro = "INSERT INTO `user_orders`(`item_name`, `pic`, `about`, `Price`) VALUES ('$itemname', '$filename','$about','$price')";
+      $sqlipro = "INSERT INTO `product_cards`(`item_name`, `pic`, `about`, `Price`) VALUES ('$itemname', '$filename','$about','$price')";
        $respro = mysqli_query($con, $sqlipro);
         if ($respro) {
       $showsucpro="U just launched product";
@@ -223,7 +223,7 @@ style="fill:#FFFFFF;">
           <?php
           if (isset($_SESSION['user_data'])) {
             // If the user is logged in, display username and "View Profile"
-            $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
+            $userName = $_SESSION['user_data']['lastname']; // Assuming username is at index 2
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
             

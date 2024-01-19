@@ -15,6 +15,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Check if user is already logged in
+if (isset($_SESSION['user_data'])) {
+    header("Location: turf.php");
+    exit();
+}
+
 $showalert = false;
 $login = false;
 $showerr = false;
@@ -30,36 +36,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($num) {
         $re = mysqli_fetch_assoc($result);
-        // Include 'user_id' in the user data
         $user_data = array(
             'user_id' => $re['id'],
             'firstname' => $re['firstname'],
             'lastname' => $re['lastname'],
             'username' => $re['username'],
             'email' => $re['email'],
-            
         );
         $_SESSION['user_data'] = $user_data;
 
-        // Output the contents of $_SESSION['user_data'] to the browser console
-        
-
-
+        // Redirect to turf.php after successful login
         header("location: turf.php");
+        exit();
     } else {
         $showerr = "Invalid Email / Password";
         $_SESSION['error'] = "Invalid Email / Password";
     }
 }
-if (isset($_SESSION['user_data'])) {
-  $pri = $_SESSION['user_data'];
-}
 
-// Output the contents of $_SESSION['user_data'] or $pri to the browser console
-echo '<pre>';
-print_r($pri);
-echo '</pre>';
+// Your remaining code for the login page goes here
 ?>
+
+
+
+
+
 <?php
 $servername = "localhost";
 $username = "root";

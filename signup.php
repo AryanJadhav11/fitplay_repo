@@ -59,6 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     exit();
                 } else {
                     $showerr = "Error: " . $sql . "<br>" . $conn->error;
+                    
                 }
             } else {
                 $showerr = "Passwords do not match";

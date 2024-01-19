@@ -1,7 +1,7 @@
 <?php
 
 //database connectivity testing//
-$con = mysqli_connect("localhost", "root", "", "mg");
+$con = mysqli_connect("localhost", "root", "", "fitplay_users");
 ?>
 <?php
 session_start();
@@ -905,7 +905,7 @@ style="fill:#FFFFFF;">
           <?php
           if (isset($_SESSION['user_data'])) {
             // If the user is logged in, display username and "View Profile"
-            $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
+            $userName = $_SESSION['user_data']['lastname']; // Assuming username is at index 2
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
             
@@ -978,14 +978,14 @@ style="fill:#FFFFFF;">
                                  ";
                             
                                     //Inner table connectivity//
-                                    $order_query = "SELECT * FROM `user_orders` WHERE `Order_id`=$user_fetch[Order_id]";
+                                    $order_query = "SELECT * FROM `order_his` WHERE `user_id`=$user_fetch[user_id]";
                                     $order_result = mysqli_query($con, $order_query);
                                     while ($order_fetch = mysqli_fetch_assoc($order_result)) {
                                         echo "
                                         <tr>
                                             <th>$order_fetch[item_name]</th>
-                                            <td>$order_fetch[Price]</td>
-                                            <td>$order_fetch[Quantity]</td>
+                                            <td>$order_fetch[price]</td>
+                                            <td>$order_fetch[quantity]</td>
                                         </tr>
                                         ";
                                     }
