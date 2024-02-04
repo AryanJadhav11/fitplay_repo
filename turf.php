@@ -15,11 +15,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if user is already logged in
-if (isset($_SESSION['user_data'])) {
-    header("Location: turf.php");
-    exit();
-}
+// // Check if user is already logged in
+// if (isset($_SESSION['user_data'])) {
+//     header("Location: turf.php");
+//     exit();
+// }
 
 $showalert = false;
 $login = false;
@@ -280,7 +280,7 @@ function getInitials($name) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data']['username'] == "sk") {  
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
                   echo '</ul>';
@@ -424,7 +424,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                         <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
 </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
-                                        <a href="single_turf.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                        <a href="turfdetails.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
                                     </div>
                                 </div>
                             </li>

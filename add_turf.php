@@ -23,9 +23,14 @@ $showerrr=false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stit = $_POST['name'];
     $cont = $_POST['details'];
+    $ame=$_POST['amen'];
     $pri=$_POST['price'];
     $owner=$_POST['owner'];
     $pla=$_POST['place'];
+    $li=$_POST['link'];
+    $startt=$_POST['start'];
+    $endt=$_POST['end'];
+
    // $cid=$_POST['cate_id'];
 
 
@@ -37,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($size<=20000000)
     {
       move_uploaded_file($tmpname, $destination);
-      $sqli = "INSERT INTO `grd`(`name`, `details`, `image`, `price`, `owner`, `place`) VALUES ('$stit', '$cont','$filename','$pri','$owner','$pla')";
+      $sqli = "INSERT INTO `grd`(`name`, `details`, `amenitiy`, `image`, `price`, `owner`, `place`, `loc`, `start`, `end`) VALUES ('$stit', '$cont','$ame','$filename','$pri','$owner','$pla','$li','$startt','$endt')";
        $res = mysqli_query($con, $sqli);
         if ($res) {
       $showsuc="U just published launched new turf";
@@ -269,20 +274,33 @@ style="fill:#FFFFFF;">
     <input type="text" name="owner"  class="form-control" id="cat_name_enter"  placeholder="Name of Owner" style="width:220px;" required>
   </div>
   <div class="mb-3">
-  <label >Add Details & Ammenities</label>
+  <label >Add Details</label>
    <textarea required class="form-control" name="details" id="bl"></textarea>
    <script>
          CKEDITOR.replace( 'bl' );
       </script>
   </div>
   <div class="mb-3">
+  <label >Add Amenities</label>
+   <input type="text" name="amen" class="form-control">
+  </div>
+  <div class="mb-3">
   <label >Add Turf Photo</label>
    <input type="file" name="image" class="form-control">
-
   </div>
   <div class="form-group">
     <label >Location</label>
     <input type="text" name="place"  class="form-control" id="cat_name_enter"  placeholder="Location of turf" style="width:220px;" required>
+  </div>
+  <div class="form-group">
+    <label >Your Turf Location Map</label>
+    <input type="text" name="link"  class="form-control" id="cat_name_enter"  placeholder="Map of turf" style="width:220px;" required>
+  </div>
+  <div class="form-group">
+    <label >Timing</label>
+    <input type="time" name="start"  class="form-control" id="cat_name_enter"  placeholder="Enter starting time" style="width:220px;" required>
+    <input type="time" name="end"  class="form-control" id="cat_name_enter"  placeholder="Enter ending time" style="width:220px;" required>
+
   </div>
   <div class="form-group">
     <label >Price</label>
