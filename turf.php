@@ -44,7 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'email' => $re['email'],
         );
         $_SESSION['user_data'] = $user_data;
-
+        
+         
         // Redirect to turf.php after successful login
         header("location: turf.php");
         exit();
@@ -53,7 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['error'] = "Invalid Email / Password";
     }
 }
-
+echo "User data in session:<br>";
+foreach ($_SESSION['user_data'] as $key => $value) {
+    echo "$key: $value<br>";
+}
 // Your remaining code for the login page goes here
 ?>
 

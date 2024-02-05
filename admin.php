@@ -923,7 +923,7 @@ style="fill:#FFFFFF;">
           <?php
           if (isset($_SESSION['user_data'])) {
             // If the user is logged in, display username and "View Profile"
-            $userName = $_SESSION['user_data'][2]; // Assuming username is at index 2
+            $userName = $_SESSION['user_data']['username']; // Assuming username is at index 2
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
             

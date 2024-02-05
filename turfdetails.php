@@ -125,7 +125,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
       <div class="col-lg-4">
         <br>
         <button class="btn w-100 h-50 bg-success text-white">
-          <i class="fas fa-book"></i> BOOK NOW
+        <a href="bookturf.php?id=<?= $row9['id'] ?>" class="btn btn-primary">Book Now</a>
         </button>
       </div>
     </div>
