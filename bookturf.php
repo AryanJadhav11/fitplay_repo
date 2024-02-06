@@ -67,34 +67,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $response['success'] = false;
         $response['error'] = 'The selected turf is already booked on the specified date and time. Please choose a different date and time.';
     } else {
-        // Insert booking into the database
-        $insertSql = "INSERT INTO booking (turfname, date, startTime, endTime, userName, userEmail) VALUES ('$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
+        // Payment success handling (simulated)
+        $paymentSuccess = true; // Change this to your actual payment verification logic
 
-        if ($coni->query($insertSql) === TRUE) {
-            // Send email notification only when the booking is successful
-            $to = 'aryanjadhav686@gmail.com';
-            $subject = 'New Booking';
-            $message = "New booking by $userName on $date from $startTime to $endTime for turf $name.";
-            $result = smtp_mailer($to, $subject, $message);
+        if ($paymentSuccess) {
+            // Insert booking into the database only if payment is successful
+            $insertSql = "INSERT INTO booking (turfname, date, startTime, endTime, userName, userEmail) VALUES ('$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
 
-            if ($result === 'Sent') {
-                // Email sent successfully
-                $response['email_status'] = 'Email sent successfully.';
-                // Booking successful message
-                $response['success_message'] = 'Booking successful!';
+            if ($coni->query($insertSql) === TRUE) {
+                // Send email notification only when the booking is successful
+                $to = 'aryanjadhav686@gmail.com';
+                $subject = 'New Booking';
+                $message = "New booking by $userName on $date from $startTime to $endTime for turf $name.";
+                $result = smtp_mailer($to, $subject, $message);
+
+                if ($result === 'Sent') {
+                    // Email sent successfully
+                    $response['email_status'] = 'Email sent successfully.';
+                    // Booking successful message
+                    $response['success_message'] = 'Booking successful!';
+                } else {
+                    // Email sending failed
+                    $response['email_status'] = 'Email sending failed. ' . $result;
+                    // Booking failed message
+                    $response['error_message'] = 'Booking failed. Please try again later.';
+                }
+
+                // Send success response
+                $response['success'] = true;
             } else {
-                // Email sending failed
-                $response['email_status'] = 'Email sending failed. ' . $result;
-                // Booking failed message
-                $response['error_message'] = 'Booking failed. Please try again later.';
+                // Send error response with details
+                $response['success'] = false;
+                $response['error'] = mysqli_error($coni);
             }
-
-            // Send success response
-            $response['success'] = true;
         } else {
-            // Send error response with details
+            // Payment failed
             $response['success'] = false;
-            $response['error'] = mysqli_error($coni);
+            $response['error'] = 'Payment failed. Please try again.';
         }
     }
 }
@@ -296,7 +305,7 @@ $coni->close();
     <!-- Booking form container -->
     <div class="container booking-container">
         <!-- Booking form -->
-        <form id="bookingForm" method="POST">
+        <form id="bookingForm" method="post">
             <div class="form-group">
                 <label for="turfname">Turf Name:</label>
                 <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['name']) ?> <?= ucfirst($row9['price']) ?>" class="form-control" readonly>
@@ -323,17 +332,30 @@ $coni->close();
                 <label for="userEmail">Your Email:</label>
                 <input type="email" id="userEmail" class="form-control" placeholder="Enter Your Email" name="userEmail" required>
             </div>
-            <button type="button" id="payButton" class="btn btn-primary btn-block">Proceed to Payment</button>
+            <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block">Proceed to Payment</button>
         </form>
     </div>
 
     <script>
-        // Initialize Razorpay checkout
-        var payButton = document.getElementById('payButton');
-        payButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            var options = {
+    document.getElementById('payButton').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Perform form validation
+        var turfname = document.getElementById('turfname').value;
+        var bookingDate = document.getElementById('bookingDate').value;
+        var startTime = document.getElementById('startTime').value;
+        var endTime = document.getElementById('endTime').value;
+        var userName = document.getElementById('userName').value;
+        var userEmail = document.getElementById('userEmail').value;
+
+        if (!turfname || !bookingDate || !startTime || !endTime || !userName || !userEmail) {
+            alert('Please fill out all fields before proceeding to payment.');
+            return;
+        }
+
+        // If form is valid, proceed to Razorpay payment
+        var options = {
+          
                 "key": "rzp_live_z6prMSW9WlOpcp",
                 "amount": "1"*100, // amount in paise (since Razorpay accepts amount in smallest currency unit)
                 "currency": "INR",
@@ -353,31 +375,19 @@ $coni->close();
                 "theme": {
                     "color": "#F37254"
                 }
-            };
+        
+            
+        };
+        var rzp = new Razorpay(options);
+        rzp.open();
+    });
+</script>
 
-            var rzp = new Razorpay(options);
-            rzp.open();
-        });
-    </script>
+    
 </body>
 </html>
 
 
-<!-- <form method="POST">
-    <script 
-    src="https://checkout.razorpay.com/v1/checkout.js"
-    data-key="rzp_live_z6prMSW9WlOpcp"
-    data-amount="<?= ucfirst($row9['price']) ?>"
-    data-currency="INR"
-    data-order_id="<?= ucfirst($row9['id']) ?>"
-    data-buttontext="Pay"
-    data-name="<?= ucfirst($row9['name']) ?>"
-    data-prefill.name="$_SESSION['user_data']['username']"
-    data-prefill.email="$_SESSION[user_data][email]"
-    data-theme.color="#F37254"
-    ></script>
-    <input type="hidden" custom="Hidden Element" name="hidden">
-</form> -->
 
 
 
@@ -385,5 +395,3 @@ $coni->close();
 
 
 
-</body>
-</html>
