@@ -56,6 +56,10 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js'></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -120,6 +124,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
       <div class="col-lg-8">
       <h2><?= ucfirst($row9['name']) ?></h2>
         <p><?= ucfirst($row9['place']) ?></p>
+        <p><?= ucfirst($row9['price']) ?></p>
 
       </div>
       <div class="col-lg-4">
