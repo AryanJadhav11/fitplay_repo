@@ -346,7 +346,7 @@ $coni->close();
         var startTime = document.getElementById('startTime').value;
         var endTime = document.getElementById('endTime').value;
         var userName = document.getElementById('userName').value;
-        var userEmail = document.getElementById('userEmail').value;
+        var userEmail = document.getElementById('userEmail').value;   
 
         if (!turfname || !bookingDate || !startTime || !endTime || !userName || !userEmail) {
             alert('Please fill out all fields before proceeding to payment.');
