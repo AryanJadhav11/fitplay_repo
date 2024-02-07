@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('smtp/PHPMailerAutoload.php');
 
 function smtp_mailer($to, $subject, $message) {
@@ -72,7 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($paymentSuccess) {
             // Insert booking into the database only if payment is successful
-            $insertSql = "INSERT INTO booking (turfname, date, startTime, endTime, userName, userEmail) VALUES ('$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
+            $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+            $insertSql = "INSERT INTO booking (userid, turfname, date, startTime, endTime, userName, userEmail) VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
 
             if ($coni->query($insertSql) === TRUE) {
                 // Send email notification only when the booking is successful
@@ -81,7 +83,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $message = "New booking by $userName on $date from $startTime to $endTime for turf $name.";
                 $result = smtp_mailer($to, $subject, $message);
 
-                if ($result === 'Sent') {
+                $uto = $userEmail;
+                $usubject = 'Booking Done Successfully';
+                $umessage = "Your booking by $userName on $date from $startTime to $endTime for turf $name has been successfully done.";
+                $uresult = smtp_mailer($uto, $usubject, $umessage);
+
+                if ($result === 'Sent' && $uresult === 'Sent') {
                     // Email sent successfully
                     $response['email_status'] = 'Email sent successfully.';
                     // Booking successful message
@@ -111,6 +118,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $coni->close();
 
 // Display the response
+?>
+
+<?php
+   
+
+function getInitials($name) {
+  $nameParts = explode(' ', $name);
+  $initials = '';
+  
+  foreach ($nameParts as $part) {
+      $initials .= strtoupper(substr($part, 0, 1));
+  }
+  
+  return $initials;
+}
 ?>
 
 <!DOCTYPE html>
