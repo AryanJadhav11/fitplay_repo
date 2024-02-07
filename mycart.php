@@ -330,23 +330,6 @@ function getInitials($name) {
 
         </div>
     </div>
-    <script>
-        var iquantity = document.getElementsByClassName('iquantity');
-        var iprice = document.getElementsByClassName('iprice');
-        var itotal = document.getElementsByClassName('itotal');
-        var gtotal = document.getElementById("gtotal");
-        var gt = 0;
-
-        function subTotal() {
-            gt = 0;
-            for (i = 0; i < iprice.length; i++) {
-                itotal[i].innerText = (iprice[i].value) * (iquantity[i].value);
-                gt += (iprice[i].value) * (iquantity[i].value);
-            }
-            gtotal.innerText = gt;
-        }
-        subTotal();
-    </script>
 </body>
 
 </html>
