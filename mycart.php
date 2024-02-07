@@ -254,11 +254,14 @@ function getInitials($name) {
                                 $item_name = $row['item_name'];
                                 $price = $row['price'];
                                 $quantity = $row['quantity'];
+                                $total= $price*$quantity;
+                                $grandTotal += $total;
 
                                 echo '<tr>
                                     <td scope="row">' . $item_name . '</td>
                                     <td>' . $price . '</td>
                                     <td>' . $quantity . '</td>
+                                    <td>' . $total . '</td>
                                     <td>
                     <a href="del_product.php?deleteid=' . $iid . '" class="text text-light">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
@@ -284,8 +287,13 @@ function getInitials($name) {
 
             <div class="col-lg-3">
                 <div class="border bg-light rounded p-4">
+                    
                     <h4>Grand Total:</h4><br>
                     <h5 class="text-right" id="gtotal"></h5><br>
+                    <script>
+                      document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>';
+                    </script>
+                    
                     <?php 
                         if(isset($_SESSION['user_data']) && count($_SESSION['user_data'])>0){
                     ?>
