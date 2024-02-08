@@ -174,6 +174,12 @@ function getInitials($name) {
                <a class="nav-link" href="add_turf.php"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVR4nN2VawqCQBSFxaigNfTaQ3967iiKtF1orUyMFtFjF18M3EBsnLmW/agDF2TU841nxjtB8PcCWsASiIGjVCRj4SfGXWAH3KnWDdgCnbrmfSBzGJd1BsZa85HMrK6uwFATi5nNu8qdcUnmLiVSLm1cu8W1oEYTKV9Ur7sLWHle1AKM5jbAvkFAZAMcLA8mBVNTPanimG1NUi0gVQBSLSD+dkSLBgFTGyBU/METBeBS2QSlcbmUVmRe1NpqLoAOcOJ9ZUC7EiCQofyNdXUBBk7zEiSvOfO+yrwU18bzNebe2huLBxSa3iKd9nlkmuvZR0fmz+gBB5XkfNZfrNIAAAAASUVORK5CYII="> <span>Add Turfs</span></a>
             </li>
             <li class="nav-item">
+               <a class="nav-link" href="add_product.php"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVR4nN2VawqCQBSFxaigNfTaQ3967iiKtF1orUyMFtFjF18M3EBsnLmW/agDF2TU841nxjtB8PcCWsASiIGjVCRj4SfGXWAH3KnWDdgCnbrmfSBzGJd1BsZa85HMrK6uwFATi5nNu8qdcUnmLiVSLm1cu8W1oEYTKV9Ur7sLWHle1AKM5jbAvkFAZAMcLA8mBVNTPanimG1NUi0gVQBSLSD+dkSLBgFTGyBU/METBeBS2QSlcbmUVmRe1NpqLoAOcOJ9ZUC7EiCQofyNdXUBBk7zEiSvOfO+yrwU18bzNebe2huLBxSa3iKd9nlkmuvZR0fmz+gBB5XkfNZfrNIAAAAASUVORK5CYII="> <span>Add Products</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="bookedturf.php"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVR4nN2VawqCQBSFxaigNfTaQ3967iiKtF1orUyMFtFjF18M3EBsnLmW/agDF2TU841nxjtB8PcCWsASiIGjVCRj4SfGXWAH3KnWDdgCnbrmfSBzGJd1BsZa85HMrK6uwFATi5nNu8qdcUnmLiVSLm1cu8W1oEYTKV9Ur7sLWHle1AKM5jbAvkFAZAMcLA8mBVNTPanimG1NUi0gVQBSLSD+dkSLBgFTGyBU/METBeBS2QSlcbmUVmRe1NpqLoAOcOJ9ZUC7EiCQofyNdXUBBk7zEiSvOfO+yrwU18bzNebe2huLBxSa3iKd9nlkmuvZR0fmz+gBB5XkfNZfrNIAAAAASUVORK5CYII="> <span>Booked Turf Record</span></a>
+            </li>
+            <li class="nav-item">
                <a class="nav-link" href="Requests.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO2UMQrCQBBFV0E8jI0HSGOnhb138BDaCcGbeAqvYGmnQbS0D+ZJkikEd8PozhaCr1r4n//YJMS5P1qAGVAQT1Fv+QQn7Dj7BJWEvcgn0eALHm1E35MNgC1wBy5yHloKNryTWwpukk2ATM5XM8ErwEh6x08FlVKwk97SXADMpbMP9TSC4GcKHKQz7uh8L9DQJUBxg4bfFWjQvIMFUJLwZ1fGjgPT4NWElbOGlOM1ScddK1gnG0/JE938xWREqlSYAAAAAElFTkSuQmCC"> <span>Request</span></a>
             </li> 
             <li class="nav-item">
@@ -184,6 +190,12 @@ function getInitials($name) {
 style="fill:#FFFFFF;">
     <path d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z"></path>
 </svg> <span>Home</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="turf.php"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+style="fill:#FFFFFF;">
+    <path d="M 15 2 A 1 1 0 0 0 14.300781 2.2851562 L 3.3925781 11.207031 A 1 1 0 0 0 3.3554688 11.236328 L 3.3183594 11.267578 L 3.3183594 11.269531 A 1 1 0 0 0 3 12 A 1 1 0 0 0 4 13 L 5 13 L 5 24 C 5 25.105 5.895 26 7 26 L 23 26 C 24.105 26 25 25.105 25 24 L 25 13 L 26 13 A 1 1 0 0 0 27 12 A 1 1 0 0 0 26.681641 11.267578 L 26.666016 11.255859 A 1 1 0 0 0 26.597656 11.199219 L 25 9.8925781 L 25 6 C 25 5.448 24.552 5 24 5 L 23 5 C 22.448 5 22 5.448 22 6 L 22 7.4394531 L 15.677734 2.2675781 A 1 1 0 0 0 15 2 z M 18 15 L 22 15 L 22 23 L 18 23 L 18 15 z"></path>
+</svg> <span>Shop</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
