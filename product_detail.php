@@ -760,7 +760,6 @@ ul {
 if (isset($_POST['Add_To_Cart'])) {
     // Retrieve user_id from the session
     $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-
     // Get item details from the form using the correct names
     $item_name = isset($_POST['item_name']) ? $_POST['item_name'] : '';
     $price = isset($_POST['Price']) ? $_POST['Price'] : '';

@@ -3,7 +3,7 @@ session_start();
 
 $server = 'localhost';
 $user = 'root';
-$db = 'fitplay_users';
+$db = 'turf';
 $pass = '';
 
 $conme = mysqli_connect($server, $user, $pass, $db);
@@ -24,7 +24,7 @@ $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['us
 // }
 
 // Fetch items from the order_his table for the specific user
-$sql = "SELECT * FROM `order_his` WHERE `user_id` = '$user_id'";
+$sql = "SELECT * FROM `booking` WHERE `userid` = '$user_id'";
 $result = mysqli_query($conme, $sql);
 
 if ($result === false) {
@@ -38,7 +38,7 @@ $rowCount = mysqli_num_rows($result);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fitplay_users";
+$dbname = "turf";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -65,7 +65,7 @@ function getInitials($name) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mycart</title>
+    <title>My Bookings</title>
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -197,7 +197,7 @@ function getInitials($name) {
       }
                 
                 ?>
-                <a href="mycart.php" class="btn btn-light">My Cart</a>
+               
                 </li>
 
                 <li class="dropdown" style="color: blue;">
@@ -233,50 +233,52 @@ function getInitials($name) {
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center border rounded bg-light my-5">
-                <h1>MY CART</h1>
+                <h1>My Bookings</h1>
             </div>
             <div class="col-lg-9">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                               <thead>
                                  <tr>
-                                    <th>Product Name</th>
-                                    <th>Price</th>                 
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Remove Item</th>
+                                    <th>Turf Name</th>                                                    
+                                    <th>Date</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Booking Name</th>
+                                    <th>Action</th>
                                  </tr>
                               </thead>
                               
                               <tbody>
                               <?php
-                              $grandTotal=0;
                         if ($rowCount > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-
-                                
-                                $id=$row['item_id'];
-                                $item_name = $row['item_name'];
-                                $price = $row['price'];
-                                $quantity = $row['quantity'];
-                                $total= $price*$quantity;
-                                $grandTotal += $total;
+                                $boid=$row['boid'];
+                                $turfname = $row['turfname'];
+                                $datet = $row['date'];
+                                $startTimet = $row['startTime'];
+                                $qendtimet = $row['endTime'];
+                                $bookingname=$row['userName'];
+                               
 
                                 echo '<tr>
-                                    <td scope="row">' . $item_name . '</td>
-                                    <td>' . $price . '</td>
-                                    <td>' . $quantity . '</td>
-                                    <td>' . $total . '</td>
+                                    <td scope="row">' . $turfname . '</td>
+        
+                                    <td>' . $datet. '</td>
+                                    <td>' . $startTimet . '</td>
+                                    <td>' . $qendtimet . '</td>
+                                    <td>' . $bookingname . '</td>
                                     <td>
-                    <a href="del_product.php?deleteid=' . $id . '" class="text text-light">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
-                            <path d="M 13 3 L 13 4 L 4 4 L 4 6 L 6 6 L 6 28 L 26 28 L 26 6 L 28 6 L 28 4 L 19 4 L 19 3 L 13 3 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 11 9 L 11 23 L 13 23 L 13 9 L 11 9 z M 19 9 L 19 23 L 21 23 L 21 9 L 19 9 z"></path>
-                        </svg>
+                                    <button type="button" class="btn btn-primary ms-1 ml-3">        
+                    <a href="delbook.php?deleteid=' . $boid . '" class="text text-light">
+                        Cancel
+                    
                     </a>
+                    </button>
                 </td>
                                 </tr>';
                             } 
                         } else {
-                            echo "<tr><td colspan='3'>No items in the cart.</td></tr>";
+                            echo "<tr><td colspan='3'>You have not booked a turf yet.</td></tr>";
                         }
                         ?>
 
@@ -289,69 +291,7 @@ function getInitials($name) {
                           
             </div>
 
-            <div class="col-lg-3">
-                <div class="border bg-light rounded p-4">
-                    
-                    <h4>Grand Total:</h4><br>
-                    <h5 class="text-right" id="gtotal"></h5><br>
-                    <script>
-                      document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>';
-                    </script>
-                    
-                    <?php 
-                        if(isset($_SESSION['user_data']) && count($_SESSION['user_data'])>0){
-                    ?>
-                    <form action="purchase.php" method="POST">
-
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" name="fullname" class="form-control"placeholder="Full Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Phone No.</label>
-                            <input type="number" name="phone_no" class="form-control"placeholder="Phone No." required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" name="address" class="form-control"placeholder="Address" required>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pay_mode" value="COD" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Cash On Delivery
-                            </label>
-                        </div><br>
-
-                        <button class="btn btn-primary btn-block" name="purchase">Make Purchase</button>
-                    </form>
-                    <?php } ?><?php
-                    if (isset($_GET['deleteid'])) {
-    $id = $_GET['deleteid'];
-    
-    // Sanitize input
-    $id = mysqli_real_escape_string($conn, $id);
-
-    $sql3 = "DELETE FROM order_his WHERE item_id = $id";
-
-    if (mysqli_query($conn, $sql3)) {
-        // Redirect back to mycart.php after deletion
-        header("Location: mycart.php");
-        exit;
-    } else {
-        echo '<div class="alert alert-danger" role="alert">
-                <h4 class="alert-heading">Error!</h4>
-                <p>Failed to delete the product.</p>
-                <hr>
-                <script>
-                window.location.href="mycart.php";
-                </script>
-              </div>';
-    }
-}?>
-                </div>
+            
 
             </div>
 

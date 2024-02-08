@@ -404,7 +404,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <!-- Add Splide CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
-<div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
+<div class="container m-4 p-4" style="background-color:grey; border-radius:10px;" >
     <div class="row">
         <div class="splide">
             <div class="splide__track">
@@ -428,7 +428,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                         <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
 </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
-                                        <a href="turfdetails.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                        <a href="hello.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
                                     </div>
                                 </div>
                             </li>
@@ -474,11 +474,6 @@ $resimg=mysqli_fetch_assoc($que2);
 <div class="banner-containerw">
   <img src="Screenshot 2023-12-03 231331.png" style="width:100%; height:240px;">
   </div>
-
-
-  
-
-
 
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -536,8 +531,6 @@ $resimg=mysqli_fetch_assoc($que2);
             </div>
 
           </div>
-          
-
         </div>
       </div>
     </div>
