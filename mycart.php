@@ -239,6 +239,7 @@ function getInitials($name) {
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                               <thead>
                                  <tr>
+                                    
                                     <th>Product Name</th>
                                     <th>Price</th>                 
                                     <th>Quantity</th>
@@ -253,7 +254,7 @@ function getInitials($name) {
                         if ($rowCount > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
 
-                                
+                        
                                 $id=$row['item_id'];
                                 $item_name = $row['item_name'];
                                 $price = $row['price'];
@@ -290,73 +291,44 @@ function getInitials($name) {
             </div>
 
             <div class="col-lg-3">
-                <div class="border bg-light rounded p-4">
-                    
-                    <h4>Grand Total:</h4><br>
-                    <h5 class="text-right" id="gtotal"></h5><br>
-                    <script>
-                      document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>';
-                    </script>
-                    
-                    <?php 
-                        if(isset($_SESSION['user_data']) && count($_SESSION['user_data'])>0){
-                    ?>
-                    <form action="purchase.php" method="POST">
+    <div class="border bg-light rounded p-4">
+        <h5>Grand Total: <br>
+        <span  id="gtotal_value"> <?php echo $grandTotal; ?> </span> </h5>
+        <form action="purchase.php" method="POST">
+        <input type="hidden" name="gtotal" id="gtotal_input" value="<?php echo $grandTotal; ?>">
 
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" name="fullname" class="form-control"placeholder="Full Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Phone No.</label>
-                            <input type="number" name="phone_no" class="form-control"placeholder="Phone No." required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" name="address" class="form-control"placeholder="Address" required>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pay_mode" value="COD" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Cash On Delivery
-                            </label>
-                        </div><br>
-
-                        <button class="btn btn-primary btn-block" name="purchase">Make Purchase</button>
-                    </form>
-                    <?php } ?><?php
-                    if (isset($_GET['deleteid'])) {
-    $id = $_GET['deleteid'];
-    
-    // Sanitize input
-    $id = mysqli_real_escape_string($conn, $id);
-
-    $sql3 = "DELETE FROM order_his WHERE item_id = $id";
-
-    if (mysqli_query($conn, $sql3)) {
-        // Redirect back to mycart.php after deletion
-        header("Location: mycart.php");
-        exit;
-    } else {
-        echo '<div class="alert alert-danger" role="alert">
-                <h4 class="alert-heading">Error!</h4>
-                <p>Failed to delete the product.</p>
-                <hr>
-                <script>
-                window.location.href="mycart.php";
-                </script>
-              </div>';
-    }
-}?>
-                </div>
-
+        
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name" required>
             </div>
 
-        </div>
+            <div class="form-group">
+                <label for="phone_no">Phone No.</label>
+                <input type="tel" name="phone_no" class="form-control" id="phone_no" placeholder="Phone No." required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="pay_mode" value="COD" id="pay_mode_cod" >
+                <label class="form-check-label" for="pay_mode_cod">
+                    Cash On Delivery
+                </label>
+            </div><br>
+
+            <button class="btn btn-primary btn-block" name="purchase">Make Purchase</button>
+        </form>
     </div>
+</div>
+
+<script>
+    var grandTotalValue = '<?php echo $grandTotal; ?>';
+    document.getElementById("gtotal_input").value = grandTotalValue;
+</script>
 </body>
 
 </html>
