@@ -117,7 +117,6 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 
   <!-- carosal start  -->
 
- 
 
   <div class="container">
     <div class="row">

@@ -70,6 +70,8 @@ function getInitials($name) {
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -697,6 +699,7 @@ ul {
 </head>
 
 <body>
+
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
@@ -752,6 +755,54 @@ ul {
     </div>
 </header>
 
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="loginModalo" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Your login form goes here -->
+                <form id="loginForm" method="POST" action="login.php">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -811,9 +862,19 @@ if (isset($_POST['Add_To_Cart'])) {
                             <div class="col-xs-6"> 
                             <input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
                     <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
-                                <button type="submit"  name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button> <button type="button" class="btn btn-success shop-button">Buy Now</button>
-                            <button   class="btn btn-primary shop-button" ><a href="mycart.php" style=" color:white;text-decoration:none;">View Cart</a></button>
-                              
+                    <?php
+                    if(isset($_SESSION['user_data'])) {
+                        echo '<button type="submit" name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button>'; 
+                        echo '<button type="button" class="btn btn-success shop-button">Buy Now</button>';
+                        echo '<button class="btn btn-primary shop-button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>';
+                    } else {
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Add to Cart</button>'; 
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Buy Now</button>';
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Book Now</button>';
+                    }
+
+?>
+
                             </div>
                         </div>
                     </div>
