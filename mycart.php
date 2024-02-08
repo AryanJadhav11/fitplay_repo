@@ -250,7 +250,8 @@ function getInitials($name) {
                               <?php
                         if ($rowCount > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                $iid=$row['item_id'];
+
+                                $id=$row['item_id'];
                                 $item_name = $row['item_name'];
                                 $price = $row['price'];
                                 $quantity = $row['quantity'];
@@ -260,7 +261,7 @@ function getInitials($name) {
                                     <td>' . $price . '</td>
                                     <td>' . $quantity . '</td>
                                     <td>
-                    <a href="del_product.php?deleteid=' . $iid . '" class="text text-light">
+                    <a href="del_product.php?deleteid=' . $id . '" class="text text-light">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
                             <path d="M 13 3 L 13 4 L 4 4 L 4 6 L 6 6 L 6 28 L 26 28 L 26 6 L 28 6 L 28 4 L 19 4 L 19 3 L 13 3 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 11 9 L 11 23 L 13 23 L 13 9 L 11 9 z M 19 9 L 19 23 L 21 23 L 21 9 L 19 9 z"></path>
                         </svg>
@@ -315,7 +316,30 @@ function getInitials($name) {
 
                         <button class="btn btn-primary btn-block" name="purchase">Make Purchase</button>
                     </form>
-                    <?php } ?>
+                    <?php } ?><?php
+                    if (isset($_GET['deleteid'])) {
+    $id = $_GET['deleteid'];
+    
+    // Sanitize input
+    $id = mysqli_real_escape_string($conn, $id);
+
+    $sql3 = "DELETE FROM order_his WHERE item_id = $id";
+
+    if (mysqli_query($conn, $sql3)) {
+        // Redirect back to mycart.php after deletion
+        header("Location: mycart.php");
+        exit;
+    } else {
+        echo '<div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Error!</h4>
+                <p>Failed to delete the product.</p>
+                <hr>
+                <script>
+                window.location.href="mycart.php";
+                </script>
+              </div>';
+    }
+}?>
                 </div>
 
             </div>
