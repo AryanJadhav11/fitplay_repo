@@ -345,6 +345,12 @@ function getInitials($name) {
               }
 ?>
                 </li>
+                <li>
+                  <p></p>
+                </li>
+                <li>
+                  <p></p>
+                </li>
             </ul>
         </nav>
     </div>

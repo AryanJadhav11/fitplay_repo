@@ -84,7 +84,7 @@ function getInitials($name) {
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    
 </head>
 
 <style>
@@ -168,6 +168,29 @@ function getInitials($name) {
           height:80%;
           
         }
+
+        * Smaller devices (phones) */
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller devices here */
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+    }
+    .card {
+        width: 100%; /* Full width for cards on smaller devices */
+        margin-bottom: 20px; /* Increase margin between cards */
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    /* Adjust styles for medium devices here */
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 993px) {
+    /* Adjust styles for large devices here */
+}
 
 
 
