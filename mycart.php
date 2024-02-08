@@ -242,14 +242,17 @@ function getInitials($name) {
                                     <th>Product Name</th>
                                     <th>Price</th>                 
                                     <th>Quantity</th>
+                                    <th>Total</th>
                                     <th>Remove Item</th>
                                  </tr>
                               </thead>
                               
                               <tbody>
                               <?php
+                              $grandTotal=0;
                         if ($rowCount > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
+                                
                                 $iid=$row['item_id'];
                                 $item_name = $row['item_name'];
                                 $price = $row['price'];
