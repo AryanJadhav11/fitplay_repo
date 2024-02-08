@@ -265,7 +265,7 @@ style="fill:#FFFFFF;">
                <!-- Begin Page Content -->
                <div class="container-fluid">
                   <!-- Page Heading -->
-                  <h5 class="mb-2 text-gray-800">Turfs</h5>
+                  <h5 class="mb-2 text-gray-800">Products</h5>
                   <!-- DataTales Example -->
                   <div class="col-xl-6 col-lg-5">
                   <div class="card">
