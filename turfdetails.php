@@ -40,7 +40,9 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 
   <!-- icon cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
+
+
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -147,10 +149,11 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
               <h6><p style="padding-left: 10px; padding-top:10px">To:<?= $end_time_12hr; ?></p></h6>
             </div>
             <br>
-            <h3><b>Location</b></h3 style="padding:20px">
+            <h3><b>Location</b></h3 style="margin-right:200px">
             <p><?= ucfirst($row9['place']) ?></p>
-            <div class="w-20 h-20">
-            <?= ucfirst($row9['loc']) ?>
+            <div>
+              <img src="<?= ucfirst($row9['loc']) ?>" alt="">
+              
             </div>
             </div>
           </div>
