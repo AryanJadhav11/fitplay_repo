@@ -935,7 +935,7 @@ style="fill:#FFFFFF;">
                   </ul>
                </nav>
 
-
+<!-- THIS IS ADMIN PANEL DONE BY YASH AND ABOVE IS SIDE BAR DONE BY ARYAN -->
 <body>
 
     <div class="container mt-5">
@@ -943,11 +943,12 @@ style="fill:#FFFFFF;">
             <div class="col-lg-12">
                 <table class="table table-bordered" >
                     <thead>
-                        <tr>
-                            <th scope="col">Order Id</th>
+                        <tr>                      
+                            <th scope="col">User Id</th>
                             <th scope="col">Customer Name</th>
                             <th scope="col">Phone No.</th>
                             <th scope="col">Address</th>
+                            <th scope="col">Amount</th>
                             <th scope="col">Pay Mode</th>
                             <th scope="col">Orders</th>
                         </tr>
@@ -955,17 +956,33 @@ style="fill:#FFFFFF;">
                     <tbody>
                         <?php
                         //main table starts from here//
-                        //database connectivity//
+                        //database connectivity//              
+                                
+                        // $users = "SELECT * FROM `users`";
+                        // $user_res = mysqli_query($con, $users);
+                        // while ($users_fetch = mysqli_fetch_assoc($user_res)) {
+                        //   echo "
+                        //         <table>
+                        //         <tr>
+                        //           <th>$users_fetch[username]</th>
+                        //           </tr>
+                        //          </tbody>                          
+                        //          ";
+                                
+
+
                         $query = "SELECT * FROM `order_manager`";
                         $user_result = mysqli_query($con, $query);
                         while ($user_fetch = mysqli_fetch_assoc($user_result)) {
+                          
                             //fetch from database table Row//
                             echo "
                                 <tr>
-                                 <th>$user_fetch[Order_id]</th>
+                                 <th>$user_fetch[user_id]</th>
                                  <td>$user_fetch[Full_Name]</td>
                                  <td>$user_fetch[Phone_No]</td>
                                  <td>$user_fetch[Address]</td>
+                                 <td>$user_fetch[Total]</td>
                                  <td>$user_fetch[Pay_Mod]</td>
                                  <td>
                                  
@@ -975,11 +992,12 @@ style="fill:#FFFFFF;">
                                      <th scope='col'>Item_Name</th>
                                      <th scope='col'>Price</th>
                                      <th scope='col'>Quantity</th>
+                                     <th scope='col'>DateTime</th>
                                    </tr>
                                  </thead>
                                  <tbody>                                
                                  ";
-                            
+                          
                                     //Inner table connectivity//
                                     $order_query = "SELECT * FROM `order_his` WHERE `user_id`=$user_fetch[user_id]";
                                     $order_result = mysqli_query($con, $order_query);
@@ -989,6 +1007,7 @@ style="fill:#FFFFFF;">
                                             <th>$order_fetch[item_name]</th>
                                             <td>$order_fetch[price]</td>
                                             <td>$order_fetch[quantity]</td>
+                                            <td>$order_fetch[date]</td>
                                         </tr>
                                         ";
                                     }
@@ -1002,6 +1021,7 @@ style="fill:#FFFFFF;">
                                 </tr>";
 
                             }
+                          
                         //main table close//
                         ?>
                         
