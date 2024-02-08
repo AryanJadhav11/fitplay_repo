@@ -1,6 +1,5 @@
 
 <?php
-
 session_start();
 
 // Database connection
@@ -16,8 +15,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if user is already logged in
-
+// // Check if user is already logged in
+// if (isset($_SESSION['user_data'])) {
+//     header("Location: turf.php");
+//     exit();
+// }
 
 $showalert = false;
 $login = false;
@@ -260,10 +262,8 @@ function getInitials($name) {
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-           
-                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>';
-                
-                
+            
+                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -326,33 +326,6 @@ function getInitials($name) {
     </div>
   </div>
 </div>
-
-
-<div class="modal fade" id="loginModalee" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-header p-5 pb-4 border-bottom-0">
-        <h1 class="fw-bold mb-0 fs-1">Please Log In</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
-      </div>
-      <div class="modal-body p-5 pt-0">
-        <form  method="post">
-        <div class="form-outline mb-4">
-                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
-                  <label class="form-label" for="form3Example1">User Name</label>
-                </div>
-                <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
-                  <label class="form-label" for="form3Example1">Password</label>
-                </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
-          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 
@@ -431,7 +404,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <!-- Add Splide CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
-<div class="container m-4 p-4" style="background-color:grey; border-radius:10px;" >
+<div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
     <div class="row">
         <div class="splide">
             <div class="splide__track">
@@ -455,15 +428,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                         <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
 </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
-<?php
-    if (isset($_SESSION['user_data'])) {
-        echo '<a href="turfdetails.php?id=' . $res8['id'] . '" class="btn btn-primary">Book Now</a>';
-    } else {
-        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalee">Book Now</button>';
-    }
-?>
-
-                                        
+                                        <a href="hello.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
                                     </div>
                                 </div>
                             </li>
@@ -496,7 +461,7 @@ $resimg=mysqli_fetch_assoc($que2);
 </script>
 
 <div class="banner-containerw">
-  <img src="one.png" style="width:100%; height:240px;"> 
+  <img src="one.png" style="width:100%; height:240px;">
   </div>
 
   
@@ -509,6 +474,11 @@ $resimg=mysqli_fetch_assoc($que2);
 <div class="banner-containerw">
   <img src="Screenshot 2023-12-03 231331.png" style="width:100%; height:240px;">
   </div>
+
+
+  
+
+
 
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -566,6 +536,8 @@ $resimg=mysqli_fetch_assoc($que2);
             </div>
 
           </div>
+          
+
         </div>
       </div>
     </div>
