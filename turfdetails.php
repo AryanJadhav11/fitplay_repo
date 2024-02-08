@@ -151,9 +151,9 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             <br>
             <h3><b>Location</b></h3 style="margin-right:200px">
             <p><?= ucfirst($row9['place']) ?></p>
-            <div>
-              <img src="<?= ucfirst($row9['loc']) ?>" alt="">
-              
+            <div class="border" style="margin-right:100px; ">
+           <?= ucfirst($row9['loc']) ?> 
+             
             </div>
             </div>
           </div>

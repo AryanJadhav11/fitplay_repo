@@ -339,7 +339,7 @@ function getInitials($name) {
   <div class="carousel-inner">
 
     <div class="carousel-item active c-item">
-      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="...">
+      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="..." style="height:100vh">
       <div class="carousel-caption top-0 mt-4 ">
         <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
         <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
@@ -348,7 +348,7 @@ function getInitials($name) {
     </div>
 
     <div class="carousel-item c-item">
-      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="...">
+      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="..." style="height:100vh">
       <div class="carousel-caption top-0 mt-4 ">
         <p class="mt-5 fs-3 text-uppercase"> Experience the joy of hassle-free reservations for your soccer matches.</p>
         <h1 class="display-1 fw-bolder text-capitalize">Kick Off Convenience</h1>
@@ -357,7 +357,7 @@ function getInitials($name) {
     </div>
 
     <div class="carousel-item c-item">
-      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="...">
+      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="..." style="height:100vh">
       <div class="carousel-caption top-0 mt-4 ">
         <p class="mt-5 fs-3 text-uppercase">Our online turf booking platform lets you schedule your games at your convenience.</p>
         <h1 class="display-1 fw-bolder text-capitalize">Game On Anytime</h1>
@@ -460,15 +460,12 @@ $resimg=mysqli_fetch_assoc($que2);
     });
 </script>
 
+<div>
+  
+</div>
 <div class="banner-containerw">
   <img src="one.png" style="width:100%; height:240px;">
   </div>
-
-  
-
-
-        
-
 
 
 <div class="banner-containerw">
