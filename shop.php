@@ -47,6 +47,9 @@ function getInitials($name) {
  <!doctype html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <!-- Bootstrap CSS -->
 <link href="path/to/bootstrap.min.css" rel="stylesheet">
@@ -170,95 +173,9 @@ function getInitials($name) {
         .banner-containerw{
           background-color:#ffff;
           padding:10px;
-          margin-bottom:60px;
+          margin-bottom:6px;
           width:100%;
-          height:80%;
-          
-        }
-
-
-
-
-  </style>
-  <style>
-    .avatar {
-        width: 30px;
-        height: 30px;
-        background-color: #007bff;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .c-item{
-      height:480px;
-
-    }
-
-    .c-img
-    {
-      height:100%;
-      object-fit:cover;
-      filter:brightness(0.6);
-    }
-
-    body{
-      background:#f3f5f8;
-      overflow-x:hidden;
-    }
-
- 
-
-        .star-container {
-            display: flex;
-            align-items: center;
-            margin-top: 15px; /* Adjust margin as needed */
-        }
-
-        .star-container i {
-            margin-right: 2px; /* Adjust margin between stars as needed */
-        }
-
-
-    
-
-    .card-container {
-      background-color:#ffff;
-      padding:20px;
-      border-radius:20px;
-             margin:40px;
-            display: flex;
-            gap: 20px; /* Adjust the margin between cards */
-        }
-
-        .card {
-            width: 18rem;
-        }
-
-        .card-img-top{
-          height :100%;
-          width:100%;
-        }
-
-        .banner-container{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:60px;
-          width:100%;
-          height:100%;
-          
-        }
-
-        .banner-containerw{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:60px;
-          width:100%;
-          height:80%;
+          height:40%;
           
         }
 
@@ -267,33 +184,25 @@ function getInitials($name) {
 
   </style>
 </head>
-<header id="header" class="d-flex align-items-center">
+
+
+  <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-                
+            
+                <li><a class="nav-link scrollto" href="turf.php">Home</a></li>
+                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Gyms</a></li>
-                        <li><a href="turf.php">Turf</a></li>
+                       
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                <li>
-                <?php 
-
-                $count=0;
-                if(isset($_SESSION['user_data']))
-      {
-        $count=count($_SESSION['user_data']);
-      }
-                
-                ?>
-                <a href="mycart.php" class="btn btn-light">My Cart</a>
-                </li>
-
+                <li><a class="nav-link scrollto" href="mycart.php">My Cart</a></li>
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -305,7 +214,7 @@ function getInitials($name) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data']['username'] == "sk") {  
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
                   echo '</ul>';
@@ -321,6 +230,34 @@ function getInitials($name) {
         </nav>
     </div>
 </header>
+
+<body>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
   <div class="carousel-indicators">

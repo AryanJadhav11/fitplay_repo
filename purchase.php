@@ -19,32 +19,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
     $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
     $phone_no = mysqli_real_escape_string($con, $_POST['phone_no']);
     $address = mysqli_real_escape_string($con, $_POST['address']);
+    $gtotal = mysqli_real_escape_string($con, $_POST['gtotal']);
     $pay_mode = mysqli_real_escape_string($con, $_POST['pay_mode']);
 
     // Database connectivity order_manager
-    $query1 = "INSERT INTO `order_manager`(`user_id`, `Full_Name`, `Phone_No`, `Address`, `Pay_Mod`) VALUES ('$user_id', '$fullname', '$phone_no', '$address', '$pay_mode')";
+    $query1 = "INSERT INTO `order_manager`(`user_id`, `Full_Name`, `Phone_No`, `Address`, `Total`, `Pay_Mod`)
+    VALUES ('$user_id', '$fullname', '$phone_no', '$address', '$gtotal', '$pay_mode')";
 
     if (mysqli_query($con, $query1)) {
-        // Database connectivity order_his
         $order_manager_id = mysqli_insert_id($con);
 
         foreach ($_SESSION['user_data'] as $key => $values) {
-            if (is_array($values)) {  // Ensure $values is an array
+            if (is_array($values)) {
                 $item_id = $values['item_id'];
-                $item_name = $values['Item_Name'];
-                $price = $values['Price'];
-                $quantity = $values['Quantity'];
+                $item_name = $values['item_name'];
+                $price = $values['price'];
+                $quantity = $values['quantity'];
 
-                $query2 = "INSERT INTO `order_his`(`user_id`, `order_manager_id`, `item_id`, `item_name`, `price`, `quantity`) VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity')";
+                // Database connectivity order_his
+                $query2 = "INSERT INTO `order_his`(`user_id`, `order_manager_id`, `item_id`, `item_name`, `price`, `quantity`) 
+                           VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity')";
 
                 mysqli_query($con, $query2);
             }
         }
 
-        unset($_SESSION['user_data']);
+        // Unset the session after successful purchase
+        isset($_SESSION['user_data']);
+        
         echo "<script>
             alert('Order placed successfully');
-            window.location.href='shop.php';
+            window.location.href='mycart.php';
             </script>";
     } else {
         echo "<script>
@@ -54,5 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
     }
 
     // Close the database connection
+    mysqli_close($con);
 }
 ?>
