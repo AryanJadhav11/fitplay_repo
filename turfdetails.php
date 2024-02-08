@@ -120,7 +120,6 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 
   <!-- carosal start  -->
 
- 
 
   <div class="container">
     <div class="row">
@@ -132,12 +131,19 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
       </div>
       <div class="col-lg-4">
         <br>
+
       <div class="p-3" style="border-radius: 10px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
         <button class="btn">
         <a href="bookturf.php?id=<?= $row9['id'] ?>">Book Now</a>
         </button>
       </div>  
         </div>
+        <div class="border" style=":red">
+        <button class="btn w-100 h-50 bg-success text-white">
+        <a href="bookturf.php?id=<?= $row9['id'] ?>" class="btn btn-primary">Book Now</a>
+        </button>
+        </div>
+       
       </div>
     </div>
 <h1>hello aryan</h1>

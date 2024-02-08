@@ -142,7 +142,7 @@ if ($conn->connect_error) {
               </h5>
 
               <div class="d-flex justify-content-center mb-2">
-                <button type="button" class="btn btn-primary">Be a Turf Owner</button>
+               <a href="mybookings.php" style="color:white;"> <button type="button" class="btn btn-primary">View Your Bookings</button></a>
                 <?php
                 if($_SESSION==true)
                 {

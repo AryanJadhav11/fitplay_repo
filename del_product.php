@@ -1,45 +1,37 @@
 <?php
 
+$server = 'localhost';
+$user = 'root';
+$db = '';
+$pass = '';
 
-$server='localhost';
-$user='root';
-$db='mg';
-$pass='';
+$conie = mysqli_connect($server, $user, $pass, $db);
 
-$conie=mysqli_connect($server,$user,$pass,$db);
-
-if(!$conie)
-{
- die(mysqli_error($conie));
+if (!$conie) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
+if (isset($_GET['deleteid'])) {
+    $id = $_GET['deleteid'];
+    
+    // Sanitize input
+    $id = mysqli_real_escape_string($conie, $id);
 
+    $sql3 = "DELETE FROM order_his WHERE item_id = $id";
 
-if(isset($_GET['deleteid']))
-{
-   $id=$_GET['deleteid'];
-   $sql3="delete from order_his where item_id='$id';";
-   $result=mysqli_query($conie,$sql3);
-   if($result)
-   {
-      echo '<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Done!</h4>
-  <p>Product has been removed </p>
-  <hr>
- 
-   <a href="mycart.php" class="btn btn-primary" >
-                            Go back
-                           </a>
-  
-</div>';
-
-   }
-   else
-   {
-      die(mysqli_error($conie));
-   }
+    if (mysqli_query($conie, $sql3)) {
+        // Redirect back to mycart.php after deletion
+        header("Location: mycart.php");
+        exit;
+    } else {
+        echo '<div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Error!</h4>
+                <p>Failed to delete the product.</p>
+                <hr>
+                <a href="mycart.php" class="btn btn-primary">Go back</a>
+              </div>';
+    }
 }
-   
 
-
+mysqli_close($conie);
 ?>
