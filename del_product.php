@@ -2,7 +2,7 @@
 
 $server = 'localhost';
 $user = 'root';
-$db = '';
+$db = 'fitplay_users';
 $pass = '';
 
 $conie = mysqli_connect($server, $user, $pass, $db);
@@ -24,12 +24,10 @@ if (isset($_GET['deleteid'])) {
         header("Location: mycart.php");
         exit;
     } else {
-        echo '<div class="alert alert-danger" role="alert">
-                <h4 class="alert-heading">Error!</h4>
-                <p>Failed to delete the product.</p>
-                <hr>
-                <a href="mycart.php" class="btn btn-primary">Go back</a>
-              </div>';
+        echo "<script>
+        alert('Failed to Delete the Product');
+        window.location.href='mycart.php';
+        </script>";
     }
 }
 
