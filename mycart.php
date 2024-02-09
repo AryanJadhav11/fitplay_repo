@@ -52,11 +52,75 @@ function getInitials($name) {
 }
 
 ?>
+
+<?php
+
+
+// Database connectivity testing
+$con = mysqli_connect("localhost", "root", "", "fitplay_users");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ensure user information is available
+    if (!isset($_SESSION['user_data']) || !is_array($_SESSION['user_data'])) {
+        echo "<script>
+            alert('User information not available or not in the expected format');
+            window.location.href='mycart.php';
+            </script>";
+        exit;
+    }
+
+    // Data validation
+    $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : '';
+    $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
+    $phone_no = mysqli_real_escape_string($con, $_POST['phone_no']);
+    $address = mysqli_real_escape_string($con, $_POST['address']);
+    $gtotal = mysqli_real_escape_string($con, $_POST['gtotal']);
+    $pay_mode = mysqli_real_escape_string($con, $_POST['pay_mode']);
+
+    // Database connectivity order_manager
+    $query1 = "INSERT INTO `order_manager`(`user_id`, `Full_Name`, `Phone_No`, `Address`, `Total`, `Pay_Mod`)
+    VALUES ('$user_id', '$fullname', '$phone_no', '$address', '$gtotal', '$pay_mode')";
+
+    if (mysqli_query($con, $query1)) {
+        $order_manager_id = mysqli_insert_id($con);
+
+        foreach ($_SESSION['user_data'] as $key => $values) {
+            if (is_array($values)) {
+                $item_id = $values['item_id'];
+                $item_name = $values['item_name'];
+                $price = $values['price'];
+                $quantity = $values['quantity'];
+
+                // Database connectivity order_his
+                $query2 = "INSERT INTO `order_his`(`user_id`, `order_manager_id`, `item_id`, `item_name`, `price`, `quantity`) 
+                           VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity')";
+
+                mysqli_query($con, $query2);
+            }
+        }
+
+        // Unset the session after successful purchase
+      
+        
+        echo "<script>
+            alert('Order placed successfully');
+            window.location.href='mycart.php';
+            </script>";
+    } else {
+        echo "<script>
+            alert('SQL error: " . mysqli_error($con) . "');
+            window.location.href='mycart.php';
+            </script>";
+    }
+
+    // Close the database connection
+    mysqli_close($con);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Bootstrap CSS -->
 <link href="path/to/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
@@ -96,6 +160,16 @@ function getInitials($name) {
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking Platform</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Razorpay checkout script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
  <script type="text/javascript">
    (function(){
       emailjs.init("NZwPsWRpzzWmVQjwb");
@@ -322,12 +396,21 @@ function getInitials($name) {
                            </table>
                           
             </div>
-
+            <?php
+            if(isset($_GET['item_id']))
+{
+   $blid=$_GET['item_id'];
+   $sql9="SELECT * FROM `order_his` WHERE item_id='$blid';";
+   $res9=mysqli_query($coni,$sql9);
+   $row9=mysqli_fetch_assoc($res9);
+  
+}
+?>
             <div class="col-lg-3">
         <div class="border bg-light rounded p-4">
             <h5>Grand Total: <br>
             <span id="gtotal_value"><?php echo $grandTotal; ?></span></h5>
-            <form action="purchase.php" method="POST">
+            <form  id="makepurchase" method="POST">
                 <input type="hidden" name="gtotal" id="gtotal_input" value="<?php echo $grandTotal; ?>">
 
                 <div class="form-group">
@@ -352,7 +435,7 @@ function getInitials($name) {
                     </label>
                 </div><br>
 
-                <button class="btn btn-primary btn-block" value="Submit" type="submit" name="purchase" id="purchaseButton_id">Make Purchase</button>
+                <button class="btn btn-primary btn-block" value="Submit" type="submit"  id="purchaseButton">Make Purchase</button>
             </form>
         </div>
     </div>
@@ -377,18 +460,18 @@ function getInitials($name) {
           "key": "rzp_live_z6prMSW9WlOpcp",
           "amount": "1"*100, // amount in paise (since Razorpay accepts amount in smallest currency unit)
           "currency": "INR",
-          "name": "Turf Booking",
-          "description": "Booking for <?= ucfirst($row9['name']) ?>",
+          "name": "Grand Total",
+          "description": "Checkout for <?= ucfirst($row9['name']) ?>",
           "image": "your_logo.png", // replace with your logo
           "handler": function(response) {
               // Handle success callback
               console.log(response);
               // Submit the form after successful payment
-              document.getElementById('bookingForm').submit();
+              document.getElementById('makepurchase').submit();
           },
           "prefill": {
-              "name": document.getElementById('userName').value,
-              "email": document.getElementById('userEmail').value
+              "name": document.getElementById('fullname_id').value,
+              "phone": document.getElementById('phone_no_id').value
           },
           "theme": {
               "color": "#F37254"
@@ -399,6 +482,12 @@ function getInitials($name) {
   var rzp = new Razorpay(options);
   rzp.open();
 
+
+
+
+
+  
+
                         
         });
     
@@ -407,5 +496,6 @@ function getInitials($name) {
     document.getElementById("gtotal_input").value = grandTotalValue;
 </script>
 </body>
+
 
 </html>
