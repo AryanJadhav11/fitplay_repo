@@ -15,13 +15,6 @@ if (!$conme) {
 // Assuming you have a user ID stored in the session, adjust this according to your authentication mechanism
 $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : null;
 
-// Check if user is not logged in
-// if ($user_id === null) {
-//     // Handle the case where the user is not logged in, redirect or display a message
-//     // For example, you can redirect to the login page:
-//     header("Location: login.php");
-//     exit;
-// }
 
 // Fetch items from the order_his table for the specific user
 $sql = "SELECT * FROM `order_his` WHERE `user_id` = '$user_id'";
@@ -63,29 +56,57 @@ function getInitials($name) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mycart</title>
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Bootstrap CSS -->
+<link href="path/to/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+<!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+<script src="path/to/popper.min.js"></script>
+<script src="path/to/bootstrap.min.js"></script>
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore Turfs</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link href="favicon.png" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+<<<<<<< HEAD
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
+=======
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- smaple -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+ </script>
+ <script type="text/javascript">
+   (function(){
+      emailjs.init("NZwPsWRpzzWmVQjwb");
+   })();
+ </script> 
+>>>>>>> 223af3a965ecceb8be05a3cbb7526252b621ee61
 
 <style>
     .avatar {
@@ -163,9 +184,9 @@ function getInitials($name) {
         .banner-containerw{
           background-color:#ffff;
           padding:10px;
-          margin-bottom:60px;
+          margin-bottom:6px;
           width:100%;
-          height:80%;
+          height:40%;
           
         }
 
@@ -173,33 +194,26 @@ function getInitials($name) {
 
 
   </style>
-<header id="header" class="d-flex align-items-center">
+</head>
+
+
+  <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-                
+            
+                <li><a class="nav-link scrollto" href="shop.php">Home</a></li>
+                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Gyms</a></li>
-                        <li><a href="turf.php">Turf</a></li>
+                       
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                <li>
-                <?php 
-
-                $count=0;
-                if(isset($_SESSION['user_data']))
-      {
-        $count=count($_SESSION['user_data']);
-      }
-                
-                ?>
-                <a href="mycart.php" class="btn btn-light">My Cart</a>
-                </li>
-
+                <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -211,7 +225,7 @@ function getInitials($name) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data']['username'] == "sk") {  
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
                   echo '</ul>';
@@ -228,6 +242,31 @@ function getInitials($name) {
     </div>
 </header>
 
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <body>
     <div class="container">
@@ -290,6 +329,7 @@ function getInitials($name) {
             </div>
 
             <div class="col-lg-3">
+<<<<<<< HEAD
                 <div class="border bg-light rounded p-4">
                     
                     <h4>Grand Total:</h4><br>
@@ -357,6 +397,90 @@ function getInitials($name) {
 
         </div>
     </div>
+=======
+        <div class="border bg-light rounded p-4">
+            <h5>Grand Total: <br>
+            <span id="gtotal_value"><?php echo $grandTotal; ?></span></h5>
+            <form action="purchase.php" method="POST">
+                <input type="hidden" name="gtotal" id="gtotal_input" value="<?php echo $grandTotal; ?>">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" name="fullname" class="form-control" id="fullname_id" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone_no">Phone No.</label>
+                    <input type="tel" name="phone_no" class="form-control" id="phone_no_id" placeholder="Phone No." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" class="form-control" id="address_id" placeholder="Address" required>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="pay_mode_id" value="COD" id="pay_mode_cod">
+                    <label class="form-check-label" for="pay_mode_cod">
+                        Cash On Delivery
+                    </label>
+                </div><br>
+
+                <button class="btn btn-primary btn-block" value="Submit" type="submit" name="purchase" id="purchaseButton_id">Make Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('purchaseButton').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Perform form validation
+            var fullname = document.getElementById('fullname_id').value;
+            var phone_no = document.getElementById('phone_no_id').value;
+            var address = document.getElementById('address_id').value;
+
+            if (!fullname_id || !phone_no_id || !address_id) {
+                alert('Please fill out all fields before proceeding to payment.');
+                return;
+            }
+
+            // If form is valid, proceed to Razorpay payment
+          var options = {
+          
+          "key": "rzp_live_z6prMSW9WlOpcp",
+          "amount": "1"*100, // amount in paise (since Razorpay accepts amount in smallest currency unit)
+          "currency": "INR",
+          "name": "Turf Booking",
+          "description": "Booking for <?= ucfirst($row9['name']) ?>",
+          "image": "your_logo.png", // replace with your logo
+          "handler": function(response) {
+              // Handle success callback
+              console.log(response);
+              // Submit the form after successful payment
+              document.getElementById('bookingForm').submit();
+          },
+          "prefill": {
+              "name": document.getElementById('userName').value,
+              "email": document.getElementById('userEmail').value
+          },
+          "theme": {
+              "color": "#F37254"
+          }
+  
+      
+  };
+  var rzp = new Razorpay(options);
+  rzp.open();
+
+                        
+        });
+    
+    //gtotal script
+    var grandTotalValue = '<?php echo $grandTotal; ?>';
+    document.getElementById("gtotal_input").value = grandTotalValue;
+</script>
+>>>>>>> 223af3a965ecceb8be05a3cbb7526252b621ee61
 </body>
 
 </html>
