@@ -113,51 +113,69 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <h2 style="font-family:'Protest Strike', sans-serif;";><b><?= ucfirst($row9['name']) ?></b></h2>
-        <h3><b><?= ucfirst($row9['place']) ?></b><h3>
-        <h5><b>₹<?= ucfirst($row9['price']) ?></b></h5>
+        <h1><?= ucfirst($row9['name']) ?></h1>
+        <h3><?= ucfirst($row9['place']) ?></h3>
+        <h5>₹<?= ucfirst($row9['price']) ?></h5>
       </div>
-
+<style>
+  @media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
       <div class="row">
         <div class="col-lg-8">
-          <div class="border">
-          <?php $imgi=$row9['image']?>
-          <img src="upload/<?=$imgi?>" style="height:500px; width:850px ;border-radius:30px;">
+          <div>
+           <?php $imgi=$row9['image']?>
+            <img src="upload/<?=$imgi?>" style="height:500px; width:700px ;border-radius:30px;">
           </div>
-        
         </div>
         <div class="col-lg-4">
           <div class="p-3"
-            style="border-radius: 10px; background-color: rgb(223, 219, 219); justify-content:center">
+            style="border-radius: 10px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+            <div class="text-center">
             <a href="bookturf.php?id=<?= $row9['id'] ?>">
-            <button class="btn h-60 bg-success text-white"
-              style="margin-bottom: 10px; width: 320px; border-radius: 100px; ">
-              Book Now
-            </button>
-            </a>
-
-            <button class="btn w-50 bg-primary text-white"
-              style="margin-left: 80px; margin-top: 10px; border-radius: 100px; ">
+                <button class="btn h-60 bg-success text-white"
+                       style="margin-bottom: 10px; width: 320px; border-radius: 100px;">
+               BOOK NOW
+                  </button>
+            </a>  
+            </div>
+            
+<div class="text-center">
+<button class="btn w-100 bg-primary text-white"
+              style="; margin-top: 10px; border-radius: 100px; ">
               <i class="fas fa-share-alt"></i> SHARE
             </button>
+</div>
+            
             <br>
             <br>
             <div class="border"
-              style="border-radius: 10px; background-color: rgb(223, 219, 219); ">
-              <h3 style="text-size:40px">Timming</h3>
-              <h6 style="padding-top: 10px; padding-left: 10px;">From:<?= $start_time_12hr; ?></h6>
-              <h6><p style="padding-left: 10px; padding-top:10px">To:<?= $end_time_12hr; ?></p></h6>
+              style="border-radius: 10px; background-color: white; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+              <h4 style="padding-top: 10px; padding-left: 10px;"><b>Timing</b></h4>
+              <p style="padding-left: 10px;"><b>From:<?= $start_time_12hr; ?></b></p>
+              <p style="padding-left: 10px;"><b>To:<?= $end_time_12hr; ?></b></p>
             </div>
             <br>
-            <h3><b>Location</b></h3 style="margin-right:200px">
-            <p><?= ucfirst($row9['place']) ?></p>
-            <div class="border" style="margin-right:100px; ">
-           <?= ucfirst($row9['loc']) ?> 
-             
-            </div>
+            <div class="border"
+              style="border-radius: 10px; background-color: white; height: 200px; width: 320px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+             <div class="text-center">
+             <?= ucfirst($row9['loc']) ?>
+             </div>
+              
             </div>
           </div>
         </div>
+</div>
         <div class="row">
           <div class="col-lg-8">
             <div class="border"
@@ -205,12 +223,11 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             <div class="border" style="background-color: white; border-radius: 10px; margin: 10px;">
               <h4 class="p-2" style="font-size: x-large;"><b>Amenities</b></h4>
               <div class="p-2">
-                <div>
-                  <div>
-                   <h6 style=""><b><?= ucfirst($row9['amenitiy']) ?></b></h6> 
-                  </div>
-                <p></p><?= ucfirst($row9['loc']) ?>
+                <div
+                  style="background-color: rgb(12, 208, 12); padding: 5px; display: inline-block; border-radius: 50%;">
+                  <i class="fas fa-check" style="color: white;"></i>
                 </div>
+                <span style="margin-left: 5px;margin-right: 10px;"><?= ucfirst($row9['amenitiy']) ?></span>
             </div>
           </div>
         </div>
@@ -223,6 +240,9 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   </div>
   </section>
   </div>
+
+
+  
   </div>
   <br>
   <br>
