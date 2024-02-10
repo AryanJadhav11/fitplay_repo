@@ -522,7 +522,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                         <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
 </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
-                                        <a href="final.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                        <a href="hello.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
                                     </div>
                                 </div>
                             </li>
