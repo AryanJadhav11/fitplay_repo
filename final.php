@@ -35,7 +35,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="favicon_io/favicon-16x16.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- icon cdn -->
@@ -91,7 +91,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Fit<span style="color: rgb(14, 198, 14);">.play</span></a></h1>
+      <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -137,7 +137,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
            <?php $imgi=$row9['image']?>
             <img src="upload/<?=$imgi?>" style="height:500px; width:700px ;border-radius:30px;">
           </div>
-        </div>
+        </div> 
         <div class="col-lg-4">
           <div class="p-3"
             style="border-radius: 10px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
@@ -172,8 +172,6 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
              <?= ucfirst($row9['loc']) ?>
              <h1>hello sample aahe he aasude </h1>
              </div>
-             
-
             </div>
           </div>
         </div>
@@ -219,21 +217,56 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
         </div>
 
 
-        <div class="row">
-          <div class="col-lg-8 border"
-            style="border-radius: 10px; background-color:rgb(217, 217, 217); margin: 20p;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
-            <div class="border" style="background-color: white; border-radius: 10px; margin: 10px;">
-              <h4 class="p-2" style="font-size: x-large;"><b>Amenities</b></h4>
-              <div class="p-2">
-                <div
-                  style="background-color: rgb(12, 208, 12); padding: 5px; display: inline-block; border-radius: 50%;">
-                  <i class="fas fa-check" style="color: white;"></i>
-                </div>
-                <span style="margin-left: 5px;margin-right: 10px;"><?= ucfirst($row9['amenitiy']) ?></span>
+    <div class="row">
+    <div class="col-lg-8 border" style="border-radius: 10px; background-color:rgb(217, 217, 217); margin: 20px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+        <div class="border" style="background-color: white; border-radius: 10px; margin: 10px;">
+            <h4 class="p-2" style="font-size: x-large;"><b>Amenities</b></h4>
+            <div class="p-2">
+                <?php
+
+                // Define the amenities array with all possible amenities
+                $amenities = array(
+                  $row9['amenitiy1'],
+                  $row9['amenitiy2'],
+                  $row9['amenitiy3'],
+                  $row9['amenitiy4']
+              );
+
+                if (empty($amenity)){
+                  echo '<div style="background-color: red; padding: 5px; display: inline-block; border-radius: 50%;"><i class="fa fa-close" style="color: white;"></i></div>';
+                        echo '<span style="margin-left: 5px; margin-right: 10px;">No Amenity</span>';
+
+                }                              
+
+                // Loop through each amenity
+                else { foreach ($amenities as $amenity) {
+                    // Check if the amenity is present
+                    if (!empty($amenity)) {
+                        // Output the check icon and the amenity
+                        echo '<div style="background-color: rgb(12, 208, 12); padding: 5px; display: inline-block; border-radius: 50%;"><i class="fas fa-check" style="color: white;"></i></div>';
+                        echo '<span style="margin-left: 5px; margin-right: 10px;">' . ucfirst($amenity) . '</span>';
+                    } 
+                }}
+                ?>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
   </div>
