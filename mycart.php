@@ -342,7 +342,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <body>
-    <h1> change</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center border rounded bg-light my-5">
