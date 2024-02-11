@@ -26,6 +26,7 @@ body {
 
 #header .logo a {
   color: #222222;
+  text-decoration: none;
 }
 
 #header .logo a span {
@@ -79,6 +80,7 @@ body {
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
+  text-decoration: none;
 }
 
 .navbar a i,
