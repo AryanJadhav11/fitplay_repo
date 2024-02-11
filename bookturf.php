@@ -323,7 +323,10 @@ function getInitials($name) {
 </header>
 
    
-  
+  <?php 
+  $start_time_12hr = date("h:i A", strtotime($row9['start']));
+  $end_time_12hr = date("h:i A", strtotime($row9['end']));
+  ?>
     <!-- Booking form container -->
     <div class="container booking-container">
         <!-- Booking form -->
@@ -333,13 +336,17 @@ function getInitials($name) {
                 <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['name']) ?> <?= ucfirst($row9['price']) ?>" class="form-control" readonly>
             </div>
             <div class="form-group">
+                <label for="validtime">Valid Time:</label>
+                <input type="text" id="validtime" name="validtime" placeholder="From=<?= $start_time_12hr; ?>   To=<?= $end_time_12hr; ?>" class="form-control" readonly>
+            </div>
+            <div class="form-group">
                 <label for="bookingDate">Select Date:</label>
                 <input type="date" id="bookingDate" name="date" class="form-control" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="startTime">Start Time:</label>
-                    <input type="time" id="startTime" class="form-control" placeholder="Start Time" name="startTime" required>
+                    <input type="time" id="startTime" class="form-control" placeholder="Start Time" name="startTime" required >
                 </div>
                 <div class="form-group col-md-6">
                     <label for="endTime">End Time:</label>
@@ -359,51 +366,77 @@ function getInitials($name) {
     </div>
 
     <script>
-    document.getElementById('payButton').addEventListener('click', function(e) {
-        e.preventDefault();
+document.getElementById('payButton').addEventListener('click', function(e) {
+    e.preventDefault();
 
-        // Perform form validation
-        var turfname = document.getElementById('turfname').value;
-        var bookingDate = document.getElementById('bookingDate').value;
-        var startTime = document.getElementById('startTime').value;
-        var endTime = document.getElementById('endTime').value;
-        var userName = document.getElementById('userName').value;
-        var userEmail = document.getElementById('userEmail').value;   
+    // Perform form validation
+    var turfname = document.getElementById('turfname').value;
+    var bookingDate = document.getElementById('bookingDate').value;
+    var startTime = document.getElementById('startTime').value;
+    var endTime = document.getElementById('endTime').value;
+    var userName = document.getElementById('userName').value;
+    var userEmail = document.getElementById('userEmail').value;  
 
-        if (!turfname || !bookingDate || !startTime || !endTime || !userName || !userEmail) {
-            alert('Please fill out all fields before proceeding to payment.');
-            return;
+    var validStartTime = '<?= $row9['start'] ?>';
+    var validEndTime = '<?= $row9['end'] ?>';
+
+    // Combine date and time for better comparison
+    var selectedStartTime = new Date(bookingDate + ' ' + startTime);
+    var selectedEndTime = new Date(bookingDate + ' ' + endTime);
+
+    // actual open time of turf 
+    var validStartTimeObj = new Date(bookingDate + ' ' + validStartTime);
+    var validEndTimeObj = new Date(bookingDate + ' ' + validEndTime);
+
+    // Check if the selected start time is within the valid range
+    if (selectedStartTime < validStartTimeObj || selectedStartTime > validEndTimeObj) {
+        alert('Sorry, turf is only open from ' + validStartTime + ' to ' + validEndTime);
+        return;
+    }
+
+    // Check if the selected end time is within the valid range
+    if (selectedEndTime < validStartTimeObj || selectedEndTime > validEndTimeObj) {
+        alert('Sorry, turf is only open from ' + validStartTime + ' to ' + validEndTime);
+        return;
+    }
+
+    if (new Date(bookingDate) < new Date()) {
+        alert('Please select a future date.');
+        return;
+    }
+
+    if (!turfname || !bookingDate || !startTime || !endTime || !userName || !userEmail) {
+        alert('Please fill out all fields before proceeding to payment.');
+        return;
+    }
+
+    // If form is valid, proceed to Razorpay payment
+    var options = {
+        "key": "rzp_live_z6prMSW9WlOpcp",
+        "amount": "1" * 100, // amount in paise (since Razorpay accepts amount in the smallest currency unit)
+        "currency": "INR",
+        "name": "Turf Booking",
+        "description": "Booking for <?= ucfirst($row9['name']) ?>",
+        "image": "your_logo.png", // replace with your logo
+        "handler": function(response) {
+            // Handle success callback
+            console.log(response);
+            // Submit the form after successful payment
+            document.getElementById('bookingForm').submit();
+        },
+        "prefill": {
+            "name": document.getElementById('userName').value,
+            "email": document.getElementById('userEmail').value
+        },
+        "theme": {
+            "color": "#F37254"
         }
-
-        // If form is valid, proceed to Razorpay payment
-        var options = {
-          
-                "key": "rzp_live_z6prMSW9WlOpcp",
-                "amount": "1"*100, // amount in paise (since Razorpay accepts amount in smallest currency unit)
-                "currency": "INR",
-                "name": "Turf Booking",
-                "description": "Booking for <?= ucfirst($row9['name']) ?>",
-                "image": "your_logo.png", // replace with your logo
-                "handler": function(response) {
-                    // Handle success callback
-                    console.log(response);
-                    // Submit the form after successful payment
-                    document.getElementById('bookingForm').submit();
-                },
-                "prefill": {
-                    "name": document.getElementById('userName').value,
-                    "email": document.getElementById('userEmail').value
-                },
-                "theme": {
-                    "color": "#F37254"
-                }
-        
-            
-        };
-        var rzp = new Razorpay(options);
-        rzp.open();
-    });
+    };
+    var rzp = new Razorpay(options);
+    rzp.open();
+});
 </script>
+
 
     
 </body>

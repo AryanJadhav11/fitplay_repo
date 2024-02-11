@@ -172,7 +172,7 @@ if ($conn->connect_error) {
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data'][2];
+                  $userName = $_SESSION['user_data']['username'];
                   $userInitials = getInitials($userName);
               
                   echo '<a href="#"><span>';
@@ -180,7 +180,7 @@ if ($conn->connect_error) {
                   echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data'][2] == "sk") {  // Assuming 'Rolee' is at index 4
+                  if ($_SESSION['user_data']['user_id'] == "24") {  // Assuming 'Rolee' is at index 4
                       echo '<li><a href="admin.php">Admin Panel</a></li>';
                   }
               
@@ -410,9 +410,9 @@ if ($conn->connect_error) {
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Book Turfs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="turf.php">Book Turfs</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Shop Products</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="shop.php">Shop Products</a></li>
               
             </ul>
           </div>

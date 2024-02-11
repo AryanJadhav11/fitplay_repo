@@ -22,6 +22,21 @@ if(isset($_GET['id']))
 }
 $start_time_12hr = date("h:i A", strtotime($row9['start']));
 $end_time_12hr = date("h:i A", strtotime($row9['end']));
+
+
+
+
+
+
+function getInitials($name) {
+  $nameParts = explode(' ', $name);
+  $initials = '';
+  
+  foreach ($nameParts as $part) {
+      $initials .= strtoupper(substr($part, 0, 1));
+  }
+
+  return $initials;}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +45,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BizLand Bootstrap Template - Index</title>
+  <title><?= ucfirst($row9['name']) ?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -66,40 +81,71 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    .avatar {
+       width: 30px;
+       height: 30px;
+       background-color: #007bff;
+       color: #ffffff;
+       font-size: 20px;
+       font-weight: bold;
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 10px;
+   }
+    </style>
 </head>
 
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a
-            href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Fit<span style="color: rgb(14, 198, 14);">.play</span></a></h1>
+      <h1 class="logo"><a href="turf.php">Fit<span style="color: rgb(14, 198, 14);">.play</span></a></h1>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Shop</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
-          <button class="btn" style="background-color: rgb(13, 110, 253); margin-left: 30px;">Sign UP</button>
-          <button class="btn" style="background-color: green; margin-left: 30px;">Log In</button>
+          <li><a class="nav-link scrollto active" href="shop.php">Shop</a></li>
+          <li class="dropdown">
+                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Gyms</a></li>
+                       
+                    </ul>
+                </li>
+          <li><a class="nav-link scrollto " href="contactu.php">Contact</a></li>
+          <li class="dropdown" style="color: blue;">
+<?php
+                if (isset($_SESSION['user_data'])) {
+                  $userName = $_SESSION['user_data']['username'];
+                  $userInitials = getInitials($userName);
+              
+                  echo '<a href="#"><span>';
+                  echo '<div class="avatar">' . $userInitials . '</div>';
+                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
+              
+                  // Now you can directly access 'Rolee' without additional checks
+                  if ($_SESSION['user_data']['user_id'] == "24") {  // Assuming 'Rolee' is at index 4
+                      echo '<li><a href="admin.php">Admin Panel</a></li>';
+                  }
+              
+                  echo '</ul>';
+              } else {
+                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
+                  echo'<span>  </span>';
+                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+                  
+              }
+?>
+                </li>
+        
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -136,10 +182,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             </button>
             </a>
 
-            <button class="btn w-50 bg-primary text-white"
-              style="margin-left: 80px; margin-top: 10px; border-radius: 100px; ">
-              <i class="fas fa-share-alt"></i> SHARE
-            </button>
+           
             <br>
             <br>
             <div class="border"
@@ -230,46 +273,48 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <!-- carosal end -->
 
   <footer id="footer">
+
+    
+
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>BizLand<span>.</span></h3>
+            <h3>FitPlay.<span>.</span></h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+             Kolhapur <br>
+             Maharastra<br>
+              <strong>Phone:</strong> +91 9284008321<br>
+              <strong>Email:</strong> thefitplay@gmail.com<br>
             </p>
+
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="turf.php">Book Turfs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="shop.php">Shop Products</a></li>
+              
             </ul>
           </div>
 
+
+
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -277,7 +322,9 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
               <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
+
           </div>
+          
 
         </div>
       </div>
@@ -285,21 +332,13 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -204,7 +204,7 @@ function getInitials($name) {
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data'][2];
+                  $userName = $_SESSION['user_data']['username'];
                   $userInitials = getInitials($userName);
               
                   echo '<a href="#"><span>';
