@@ -207,7 +207,7 @@ function getInitials($name) {
               style="border-radius: 10px; background-color: white; height: 200px; width: 320px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
              <div class="text-center">
              <?= ucfirst($row9['loc']) ?>
-             <h1>hello sample aahe he aasude </h1>
+             <h1>hello sample aahe he bg he </h1>
              </div>
             </div>
           </div>
