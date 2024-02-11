@@ -13,26 +13,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-?>
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fitplay_users";
 
 $conp = new mysqli($servername, $username, $password, $dbname);
 $sqlpro="SELECT * FROM `product_cards` ORDER BY product_cards.pubdate DESC; ";
 $quepro=mysqli_query($conp,$sqlpro);
 $rowpro=mysqli_num_rows($quepro);
 $respic=mysqli_fetch_assoc($quepro);
-
-
 ?>
-
 <?php
-   
-
 function getInitials($name) {
   $nameParts = explode(' ', $name);
   $initials = '';
@@ -86,6 +74,9 @@ function getInitials($name) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  
+  <!-- Template Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
 
 
   <script type="text/javascript"
@@ -310,53 +301,162 @@ function getInitials($name) {
   </div>
 </div>
 
-<div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
-    <div class="row">
-        <div class="splide">
-            <div class="splide__track">
-                <ul class="splide__list">
 
-                    <?php 
-                    if($rowpro) {
-                        // Reset data seek pointer
-                        mysqli_data_seek($quepro, 0);
+<section class="mt-50 d-flex p-2">
+    <div class="container">
+      <div class="row">
 
-                        while($respro = mysqli_fetch_assoc($quepro)) {
-                    ?>
-                            <li class="splide__slide col-sm-3 m-2">
-                                <div class="card bg-light text-dark imager-fluid">
-                                    <a href="all_product.php?id=<?= $respro['Order_id'] ?>">
-                                        <?php $img = $respro['pic'] ?>
-                                        <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
-                                    </a>
-                                    <div class="card-body" style="padding-left:10px;">
-                                        <h5 class="card-title"><a href="all_product.php?id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h5>
-                                        <p  class="card-text" id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?></p>
-                                        <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
-                                    </div>
-                                </div>
-                            </li>
-                    <?php
-                        }
-                    }
-                    ?>
-                </ul>
-            </div>
-        </div>
+        <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+         <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+         <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+         <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+      </div>
     </div>
-</div>
+</section>  
+
+<section class="mt-50 d-flex p-2">
+    <div class="container">
+      <div class="row">
+
+        <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+         <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+         <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+         <div class="card" style="width: 18rem; margin: 15px;">
+            <a href="product_detail.php?Order_id=2">
+              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+            </a>    
+                <div class="card-body">
+                 <h5 class="card-title">item name</h5>
+                 <p class="card-text">100</p>
+                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
+                </div>
+         </div>
+
+      </div>
+    </div>
+</section> 
+
+  <section class="m-100">
+    <div class="container ">
+              <div class="row">
+                <div id="splideCarousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list ">
+
+                            <?php 
+                            if($rowpro) {
+                                // Reset data seek pointer
+                                mysqli_data_seek($quepro, 0);
+
+                                while($respro = mysqli_fetch_assoc($quepro)) {
+                            ?>
+                                    <li class="splide__slide col-sm-3 m-0.1 d-flex p-2 ">
+                                        <div class="card bg-light text-dark imager-fluid">
+                                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
+                                                <?php $img = $respro['pic'] ?>
+                                                <img src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                            </a>
+                                            <div class="card-body" style="padding-left:10px;">
+                                                <h5 class="card-title"><a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h5>
+                                                <p  class="card-text" id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?></p>
+                                                <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.splide', {
+        var splide = new Splide('#splideCarousel', {
             perPage: 4,
             breakpoints: {
                 600: {
                     perPage: 1
                 }
-            }
+            },
+            pagination: false, // Hide pagination
+            arrows: true, // Show arrows for navigation
         });
 
         splide.mount();
