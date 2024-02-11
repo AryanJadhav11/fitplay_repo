@@ -109,12 +109,19 @@ function getInitials($name) {
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explore Turfs</title>
+    
+    <title>FitPlay -Home</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
-    <link href="favicon.png" rel="icon">
-  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -308,7 +315,7 @@ function getInitials($name) {
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             
@@ -498,9 +505,12 @@ $resimg=mysqli_fetch_assoc($que2);
 <!-- Add Splide CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
-<div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
-    <div class="row">
-        <div class="splide">
+
+<section class="m-100">
+    <div class="container ">
+              <div class="row">
+<!-- <div class="container m-4 p-4" style="background-color:white; border-radius:10px;" > -->
+       <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
 
@@ -520,8 +530,8 @@ $resimg=mysqli_fetch_assoc($que2);
                                     <div class="card-body" style="padding-left:10px;">
                                         <h5 class="card-title"><a href="single_post.php?id=<?= $res8['id'] ?>" id="title"><?= ucfirst($res8['name']) ?></a></h5>
                                         <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-</svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
+                                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                  </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
                                         <a href="final.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
                                     </div>
                                 </div>
@@ -534,7 +544,9 @@ $resimg=mysqli_fetch_assoc($que2);
             </div>
         </div>
     </div>
+  </div>
 </div>
+</section>
 
 <!-- Add Splide JS -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
