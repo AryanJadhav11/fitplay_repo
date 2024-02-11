@@ -23,6 +23,21 @@ if(isset($_GET['id']))
 $start_time_12hr = date("h:i A", strtotime($row9['start']));
 $end_time_12hr = date("h:i A", strtotime($row9['end']));
 ?>
+<?php
+   
+
+function getInitials($name) {
+  $nameParts = explode(' ', $name);
+  $initials = '';
+  
+  foreach ($nameParts as $part) {
+      $initials .= strtoupper(substr($part, 0, 1));
+  }
+  
+  return $initials;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,26 +81,27 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+<style>
+  .avatar {
+        width: 30px;
+        height: 30px;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    </style>
 </head>
 
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a
-            href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -96,10 +112,36 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Shop</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li class="dropdown">
+                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Gyms</a></li>
+                       
+                    </ul>
+                </li>
           <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
-          <button class="btn" style="background-color: rgb(13, 110, 253); margin-left: 30px;">Sign UP</button>
-          <button class="btn" style="background-color: green; margin-left: 30px;">Log In</button>
+          <li class="dropdown" style="color: blue;">
+<?php
+                if (isset($_SESSION['user_data'])) {
+                  $userName = $_SESSION['user_data']['username'];
+                  $userInitials = getInitials($userName);
+              
+                  echo '<a href="#"><span>';
+                  echo '<div class="avatar">' . $userInitials . '</div>';
+                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
+              
+                  // Now you can directly access 'Rolee' without additional checks
+                  if ($_SESSION['user_data']['username'] == "sk") {  
+                      echo '<li><a href="admin.php">Admin Panel</a></li>';
+                  }
+                  echo '</ul>';
+              } 
+              else {
+                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
+                  echo'<span>  </span>';
+                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+              }
+?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -150,12 +192,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             </a>  
             </div>
             
-<div class="text-center">
-<button class="btn w-100 bg-primary text-white"
-              style="; margin-top: 10px; border-radius: 100px; ">
-              <i class="fas fa-share-alt"></i> SHARE
-            </button>
-</div>
+
             
             <br>
             <br>
@@ -205,12 +242,8 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             <div class="border"
               style="background-color:rgb(217, 217, 217) ;border-radius: 10px; margin: 30px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
               <div class="border" style="background-color: white; border-radius: 10px; margin: 20px;">
-                <h4 style="padding: 10px; padding-bottom: 0px;"><b>SOME STUFF OF FOOTBAL</b></h4>
-                <p style="padding: 10px;">My Favorite Game (Football) ! Football is my favorite game because it is quite
-                  challenging and
-                  interesting game. I began to play football while I was 6 years old. Since then it has become my
-                  passion.
-                  It is also called “king sport” and is the most famous sport in the entire world.</p>
+                <h4 style="padding: 10px; padding-bottom: 0px;"><b>Description</b></h4>
+                <p style="padding: 10px;"><?= ucfirst($row9['details']) ?></p>
               </div>
             </div>
           </div>
