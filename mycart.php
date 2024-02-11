@@ -140,6 +140,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -346,7 +351,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                               <thead>
                                  <tr>
-                                    
                                     <th>Product Name</th>
                                     <th>Price</th>                 
                                     <th>Quantity</th>
@@ -361,7 +365,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if ($rowCount > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
 
-                        
+                                
                                 $id=$row['item_id'];
                                 $item_name = $row['item_name'];
                                 $price = $row['price'];
@@ -407,6 +411,75 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
             <div class="col-lg-3">
+<<<<<<< HEAD
+                <div class="border bg-light rounded p-4">
+                    
+                    <h4>Grand Total:</h4><br>
+                    <h5 class="text-right" id="gtotal"></h5><br>
+                    <script>
+                      document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>';
+                    </script>
+                    
+                    <?php 
+                        if(isset($_SESSION['user_data']) && count($_SESSION['user_data'])>0){
+                    ?>
+                    <form action="purchase.php" method="POST">
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="fullname" class="form-control"placeholder="Full Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone No.</label>
+                            <input type="number" name="phone_no" class="form-control"placeholder="Phone No." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" name="address" class="form-control"placeholder="Address" required>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pay_mode" value="COD" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Cash On Delivery
+                            </label>
+                        </div><br>
+
+                        <button class="btn btn-primary btn-block" name="purchase">Make Purchase</button>
+                    </form>
+                    <?php } ?><?php
+                    if (isset($_GET['deleteid'])) {
+    $id = $_GET['deleteid'];
+    
+    // Sanitize input
+    $id = mysqli_real_escape_string($conn, $id);
+
+    $sql3 = "DELETE FROM order_his WHERE item_id = $id";
+
+    if (mysqli_query($conn, $sql3)) {
+        // Redirect back to mycart.php after deletion
+        header("Location: mycart.php");
+        exit;
+    } else {
+        echo '<div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Error!</h4>
+                <p>Failed to delete the product.</p>
+                <hr>
+                <script>
+                window.location.href="mycart.php";
+                </script>
+              </div>';
+    }
+}?>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+=======
         <div class="border bg-light rounded p-4">
             <h5>Grand Total: <br>
             <span id="gtotal_value"><?php echo $grandTotal; ?></span></h5>
@@ -495,6 +568,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     var grandTotalValue = '<?php echo $grandTotal; ?>';
     document.getElementById("gtotal_input").value = grandTotalValue;
 </script>
+>>>>>>> 223af3a965ecceb8be05a3cbb7526252b621ee61
 </body>
 
 
