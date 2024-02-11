@@ -280,7 +280,7 @@ function getInitials($name) {
 <body>
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <h1 class="logo"><a href="turf.php">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             
@@ -333,7 +333,11 @@ function getInitials($name) {
         <form id="bookingForm" method="post">
             <div class="form-group">
                 <label for="turfname">Turf Name:</label>
-                <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['name']) ?> <?= ucfirst($row9['price']) ?>" class="form-control" readonly>
+                <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['name']) ?> " class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label for="turfname">Price:</label>
+                <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
             </div>
             <div class="form-group">
                 <label for="validtime">Valid Time:</label>
@@ -415,9 +419,9 @@ document.getElementById('payButton').addEventListener('click', function(e) {
         "key": "rzp_live_z6prMSW9WlOpcp",
         "amount": "1" * 100, // amount in paise (since Razorpay accepts amount in the smallest currency unit)
         "currency": "INR",
-        "name": "Turf Booking",
+        "name": "<?= ucfirst($row9['name']) ?>",
         "description": "Booking for <?= ucfirst($row9['name']) ?>",
-        "image": "your_logo.png", // replace with your logo
+        "image": "logo.png", // replace with your logo
         "handler": function(response) {
             // Handle success callback
             console.log(response);
@@ -429,7 +433,7 @@ document.getElementById('payButton').addEventListener('click', function(e) {
             "email": document.getElementById('userEmail').value
         },
         "theme": {
-            "color": "#F37254"
+            "color": "#198754"
         }
     };
     var rzp = new Razorpay(options);
