@@ -23,7 +23,10 @@ $showerrr=false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stit = $_POST['name'];
     $cont = $_POST['details'];
-    $ame=$_POST['amen'];
+    $ame1=$_POST['amen1'];
+    $ame2=$_POST['amen2'];
+    $ame3=$_POST['amen3'];
+    $ame4=$_POST['amen4'];
     $pri=$_POST['price'];
     $owner=$_POST['owner'];
     $pla=$_POST['place'];
@@ -42,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($size<=20000000)
     {
       move_uploaded_file($tmpname, $destination);
-      $sqli = "INSERT INTO `grd`(`name`, `details`, `amenitiy`, `image`, `price`, `owner`, `place`, `loc`, `start`, `end`) VALUES ('$stit', '$cont','$ame','$filename','$pri','$owner','$pla','$li','$startt','$endt')";
+      $sqli = "INSERT INTO `grd`(`name`, `details`, `amenitiy1`, `amenitiy2` , `amenitiy3` , `amenitiy4` , `image`, `price`, `owner`, `place`, `loc`, `start`, `end`) VALUES ('$stit', '$cont','$ame1','$ame2','$ame3','$ame4','$filename','$pri','$owner','$pla','$li','$startt','$endt')";
        $res = mysqli_query($con, $sqli);
         if ($res) {
       $showsuc="U just published launched new turf";
@@ -292,10 +295,29 @@ style="fill:#FFFFFF;">
          CKEDITOR.replace( 'bl' );
       </script>
   </div>
+  
+  <div class="container">
+  <div class="mb-6">
+  <label >Add Amenities</label>
+   <input type="text" name="amen1" class="form-control">
+  </div>
+
   <div class="mb-3">
   <label >Add Amenities</label>
-   <input type="text" name="amen" class="form-control">
+   <input type="text" name="amen2" class="form-control">
   </div>
+
+  <div class="mb-3">
+  <label >Add Amenities</label>
+   <input type="text" name="amen3" class="form-control">
+  </div>
+
+  <div class="mb-3">
+  <label >Add Amenities</label>
+   <input type="text" name="amen4" class="form-control">
+  </div>
+  </div>
+
   <div class="mb-3">
   <label >Add Turf Photo</label>
    <input type="file" name="image" class="form-control">
