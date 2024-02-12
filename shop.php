@@ -301,8 +301,131 @@ function getInitials($name) {
   </div>
 </div>
 
+<style>
+  .product-wrapper, .product-img{overflow: hidden;position: relative}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
+</style>
 
-<section class="mt-50 d-flex p-2">
+<section class="m-100 p-4">
+<div class="container d-flex justify-content-center mt-100">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg" alt=""> </a>
+            <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> <a href="#"> <i
+                    class="fa fa-heart"></i> </a> <a href="#"> <i class="fa fa-shopping-cart"></i> </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
+            <span><i class="fa fa-rupee"></i> 41,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
+                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
+                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/HxEEu5g.jpg" alt=""> </a>
+            <span><i class="fa fa-rupee"></i> 33,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
+                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
+                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
+            <span><i class="fa fa-rupee"></i> 23,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
+                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
+                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="m-100 p-4">
+<div class="container d-flex justify-content-center mt-100">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg" alt=""> </a>
+            <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> <a href="#"> <i
+                    class="fa fa-heart"></i> </a> <a href="#"> <i class="fa fa-shopping-cart"></i> </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
+            <span><i class="fa fa-rupee"></i> 41,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
+                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
+                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/HxEEu5g.jpg" alt=""> </a>
+            <span><i class="fa fa-rupee"></i> 33,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
+                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
+                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-wrapper mb-45 text-center">
+          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
+            <span><i class="fa fa-rupee"></i> 23,000</span>
+            <div class="product-action">
+              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
+                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
+                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
+                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
+                </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- <section class="mt-50 d-flex p-2">
     <div class="container">
       <div class="row">
 
@@ -404,10 +527,12 @@ function getInitials($name) {
 
       </div>
     </div>
-</section> 
+</section>  -->
 
-  <section class="m-100">
+
+<section class="m-100" style="background-color:#e7e7e7; border-radius:10px;">
     <div class="container ">
+    <h2 class="text-center m-3" style="background-color:#e7e7e7; "><b>WATCH SOME PRODUCTS</b></h2>
               <div class="row">
                 <div id="splideCarousel" class="splide">
                     <div class="splide__track">
