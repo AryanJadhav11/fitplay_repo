@@ -1,5 +1,5 @@
+<?php include("header.php");?>
 <?php
-session_start();
 $server='localhost';
 $user='root';
 $db='turf';
@@ -23,282 +23,161 @@ if(isset($_GET['id']))
 $start_time_12hr = date("h:i A", strtotime($row9['start']));
 $end_time_12hr = date("h:i A", strtotime($row9['end']));
 ?>
-<?php
-   
-
-function getInitials($name) {
-  $nameParts = explode(' ', $name);
-  $initials = '';
-  
-  foreach ($nameParts as $part) {
-      $initials .= strtoupper(substr($part, 0, 1));
-  }
-  
-  return $initials;
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>BizLand Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="favicon_io/favicon-16x16.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- icon cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: BizLand
-  * Updated: Jan 09 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-<style>
-  .avatar {
-        width: 30px;
-        height: 30px;
-        background-color: #007bff;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    </style>
-</head>
 
 <body>
-
-  <!-- ======= Top Bar ======= -->
-  
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Shop</a></li>
-          <li class="dropdown">
-                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">Gyms</a></li>
-                       
-                    </ul>
-                </li>
-          <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
-          <li class="dropdown" style="color: blue;">
-<?php
-                if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data']['username'];
-                  $userInitials = getInitials($userName);
-              
-                  echo '<a href="#"><span>';
-                  echo '<div class="avatar">' . $userInitials . '</div>';
-                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
-              
-                  // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  
-                      echo '<li><a href="admin.php">Admin Panel</a></li>';
-                  }
-                  echo '</ul>';
-              } 
-              else {
-                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
-                  echo'<span>  </span>';
-                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-              }
-?>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
-
-
-
-  
   <!-- carosal start  -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <h1><?= ucfirst($row9['name']) ?></h1>
-        <h3><?= ucfirst($row9['place']) ?></h3>
-        <h5>₹<?= ucfirst($row9['price']) ?></h5>
+        <h1>
+          <?= ucfirst($row9['name']) ?>
+        </h1>
+        <h3>
+          <?= ucfirst($row9['place']) ?>
+        </h3>
+        <h5>₹
+          <?= ucfirst($row9['price']) ?>
+        </h5>
       </div>
-<style>
-  @media (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 576px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-</style>
+      <style>
+        @media (max-width: 768px) {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        @media (max-width: 576px) {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      </style>
       <div class="row">
         <div class="col-lg-8">
           <div>
-           <?php $imgi=$row9['image']?>
+            <?php $imgi=$row9['image']?>
             <img src="upload/<?=$imgi?>" style="height:500px; width:700px ;border-radius:30px;">
           </div>
-        </div> 
+        </div>
         <div class="col-lg-4">
           <div class="p-3"
             style="border-radius: 10px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
             <div class="text-center">
-            <a href="bookturf.php?id=<?= $row9['id'] ?>">
+              <a href="bookturf.php?id=<?= $row9['id'] ?>">
                 <button class="btn h-60 bg-success text-white"
-                       style="margin-bottom: 10px; width: 320px; border-radius: 100px;">
-               BOOK NOW
-                  </button>
-            </a>  
+                  style="margin-bottom: 10px; width: 320px; border-radius: 100px;">
+                  BOOK NOW
+                </button>
+              </a>
             </div>
-            
 
-            
+
+
             <br>
             <br>
             <div class="border"
               style="border-radius: 10px; background-color: white; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
               <h4 style="padding-top: 10px; padding-left: 10px;"><b>Timing</b></h4>
-              <p style="padding-left: 10px;"><b>From:<?= $start_time_12hr; ?></b></p>
-              <p style="padding-left: 10px;"><b>To:<?= $end_time_12hr; ?></b></p>
+              <p style="padding-left: 10px;"><b>From:
+                  <?= $start_time_12hr; ?>
+                </b></p>
+              <p style="padding-left: 10px;"><b>To:
+                  <?= $end_time_12hr; ?>
+                </b></p>
             </div>
             <br>
             <div class="border"
               style="border-radius: 10px; background-color: white; height: 200px; width: 320px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
-             <div class="text-center">
-             <?= ucfirst($row9['loc']) ?>
-             <h1>hello sample aahe he bg he </h1>
-             </div>
+              <div class="text-center">
+                <?= ucfirst($row9['loc']) ?>
+                <h1>hello sample aahe he bg he </h1>
+              </div>
             </div>
           </div>
         </div>
-</div>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="border"
-              style="border-radius: 10px; margin-top: 20px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
-              <div class="" style="margin-top: 10px; border-radius: 10px;margin-bottom: 10px;">
-                <div class="align-items-center justify-content-center">
-                  <button class=" btn btn-danger mt-3"
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="border"
+            style="border-radius: 10px; margin-top: 20px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+            <div class="" style="margin-top: 10px; border-radius: 10px;margin-bottom: 10px;">
+              <div class="align-items-center justify-content-center">
+                <button class=" btn btn-danger mt-3"
                   style="margin-left: 60px; margin-bottom: 10px; border-radius: 50px; width: 150px; height: 50px;">
                   <i class="fas fa-futbol" style="size: 50px;"></i>
                   Football
-                  </button>
-                  <button class="btn btn-danger mt-3"
-                    style="margin-left: 60px; margin-bottom:10px; border-radius: 50px; width: 150px; height: 50px;">
-                    <i class="fas fa-baseball-ball"></i> Cricket
-                  </button>
-                  <button class="btn btn-danger mt-3"
-                    style="margin-left: 60px; margin-bottom:10px; border-radius: 50px; width: 150px; height: 50px;">
-                    <i class="fas fa-baseball-ball"></i> Tennis
-                  </button>
-                </div>
+                </button>
+                <button class="btn btn-danger mt-3"
+                  style="margin-left: 60px; margin-bottom:10px; border-radius: 50px; width: 150px; height: 50px;">
+                  <i class="fas fa-baseball-ball"></i> Cricket
+                </button>
+                <button class="btn btn-danger mt-3"
+                  style="margin-left: 60px; margin-bottom:10px; border-radius: 50px; width: 150px; height: 50px;">
+                  <i class="fas fa-baseball-ball"></i> Tennis
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="border"
-              style="background-color:rgb(217, 217, 217) ;border-radius: 10px; margin: 30px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
-              <div class="border" style="background-color: white; border-radius: 10px; margin: 20px;">
-                <h4 style="padding: 10px; padding-bottom: 0px;"><b>Description</b></h4>
-                <p style="padding: 10px;"><?= ucfirst($row9['details']) ?></p>
-              </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="border"
+            style="background-color:rgb(217, 217, 217) ;border-radius: 10px; margin: 30px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+            <div class="border" style="background-color: white; border-radius: 10px; margin: 20px;">
+              <h4 style="padding: 10px; padding-bottom: 0px;"><b>Description</b></h4>
+              <p style="padding: 10px;">
+                <?= ucfirst($row9['details']) ?>
+              </p>
             </div>
           </div>
         </div>
+      </div>
 
 
-    <div class="row">
-    <div class="col-lg-8 border" style="border-radius: 10px; background-color:rgb(217, 217, 217); margin: 20px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
-        <div class="border" style="background-color: white; border-radius: 10px; margin: 10px;">
+      <div class="row">
+        <div class="col-lg-8 border"
+          style="border-radius: 10px; background-color:rgb(217, 217, 217); margin: 20px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
+          <div class="border" style="background-color: white; border-radius: 10px; margin: 10px;">
             <h4 class="p-2" style="font-size: x-large;"><b>Amenities</b></h4>
             <div class="p-2">
-                <?php
+              <?php
 
                 // Define the amenities array with all possible amenities
-                $amenities = array(
-                  $row9['amenitiy1'],
-                  $row9['amenitiy2'],
-                  $row9['amenitiy3'],
-                  $row9['amenitiy4']
-              );
+                  $amenities = array(
+                    $row9['amenitiy1'],
+                    $row9['amenitiy2'],
+                    $row9['amenitiy3'],
+                    $row9['amenitiy4']
+                   );
+                   $amenityPresent=false;
+                                           
 
-                if (empty($amenity)){
-                  echo '<div style="background-color: red; padding: 5px; display: inline-block; border-radius: 50%;"><i class="fa fa-close" style="color: white;"></i></div>';
-                        echo '<span style="margin-left: 5px; margin-right: 10px;">No Amenity</span>';
-
-                }                              
-
-                // Loop through each amenity
-                else { foreach ($amenities as $amenity) {
+                  // Loop through each amenity
+                  foreach ($amenities as $amenity) {
                     // Check if the amenity is present
                     if (!empty($amenity)) {
                         // Output the check icon and the amenity
                         echo '<div style="background-color: rgb(12, 208, 12); padding: 5px; display: inline-block; border-radius: 50%;"><i class="fas fa-check" style="color: white;"></i></div>';
                         echo '<span style="margin-left: 5px; margin-right: 10px;">' . ucfirst($amenity) . '</span>';
-                    } 
-                }}
+                        $amenityPresent=true;
+                    }
+                  }
+                    
+                  // Check if no amenity is present
+                   if (!$amenityPresent) {
+                      echo '<div style="background-color: red; padding: 5px; display: inline-block; border-radius: 50%;"><i class="fa fa-close" style="color: white;"></i></div>';
+                      echo '<span style="margin-left: 5px; margin-right: 10px;">No Amenity</span>';
+                    }
                 ?>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
+      </div>
 
     </div>
   </div>
@@ -310,7 +189,7 @@ function getInitials($name) {
   </div>
 
 
-  
+
   </div>
   <br>
   <br>
