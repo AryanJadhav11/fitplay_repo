@@ -69,7 +69,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             <div class="text-center">
            <?php 
           if (isset($_SESSION['user_data'])) {
-            echo '<a href="bookturf.php?id=' . $row9['id'] . '"><button class="btn h-60 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;"> BOOK NOW </button></a>';
+            echo '<a href="bookturf.php?id=' . $row9['id'] . '"><button class="btn h-10 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;"> BOOK NOW </button></a>';
         } else {
             echo '<button class="btn h-60 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;" data-bs-toggle="modal" data-bs-target="#chloginModal">Book Now</button>';
         }
@@ -98,7 +98,6 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
               style="border-radius: 10px; background-color: white; height: 200px; width: 320px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
               <div class="text-center">
                 <?= ucfirst($row9['loc']) ?>
-                <h1>hello sample aahe he bg he </h1>
               </div>
             </div>
           </div>
