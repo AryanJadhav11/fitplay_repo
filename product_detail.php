@@ -1,6 +1,5 @@
-
+<?php include("header.php");?>
 <?php
-session_start();
 
 // Database connection
 $servername = "localhost";
