@@ -345,6 +345,30 @@ function getInitials($name) {
   </div>
  </div>
 
+ <div class="modal fade" id="chloginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
  <!-- Login Modal End -->
 
