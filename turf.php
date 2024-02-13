@@ -308,7 +308,7 @@ function getInitials($name) {
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <h1 class="logo"><a style="text-decoration:none;">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             
@@ -322,6 +322,7 @@ function getInitials($name) {
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
                 <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
+      
                 <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -381,45 +382,7 @@ function getInitials($name) {
     </div>
   </div>
 </div>
-<!-- parallax start -->
-<div>
-<div id="parallax-world-of-ugg">
-  
-  <section>
-    <div class="title">
-      <h3>FIT</h3>
-      <h1 style="color:green">PLAY</h1>
-    </div>
-  </section>
-  
-  <section>
-      <div class="parallax-one">
-        <h2>TURFS</h2>
-      </div>
-  </section>
-  
-  <section>
-    <div class="block">
-      <p><span class="first-character sc">I</span>n 1978, Brian Smith landed in Southern California with a bag of sheepskin boots and hope. He fell in love with the sheepskin experience and was convinced the world would one day share this love. The beaches of Southern California had long been an epicenter of a relaxed, casual lifestyle, a lifestyle that Brian felt was a perfect fit for his brand. So he founded the UGG brand, began selling his sheepskin boots and they were an immediate sensation. By the mid 1980's, the UGG brand became a symbol of relaxed southern California culture, gaining momentum through surf shops and other shops up and down the coast of California, from San Diego to Santa Cruz. UGG boots reached beyond the beach, popping up in big cities and small towns all over, and in every level of society.</p>
-      <p class="line-break margin-top-10"></p>
-    </div>
-  </section>
-  
-  <section>
-    <div class="parallax-two">
-      <h2>GYMS</h2>
-    </div>
-  </section>
-  
-  <section>
-    <div class="block">
-      <p><span class="first-character ny">B</span>reaking into the New York fashion world is no easy task. But by the early 2000's, UGG Australia began to take it by storm. The evolution of UGG from a brand that made sheepskin boots, slippers, clogs and sandals for an active, outdoor lifestyle to a brand that was now being touted as a symbol of a stylish, casual and luxurious lifestyle was swift. Much of this was due to a brand repositioning effort that transformed UGG into a high-end luxury footwear maker. As a fashion brand, UGG advertisements now graced the pages of Vogue Magazine as well as other fashion books. In the mid 2000's, the desire for premium casual fashion was popping up all over the world and UGG was now perfectly aligned with this movement.</p>
-      <p class="line-break margin-top-10"></p>
-    </div>
-  </section>
-    
-  </div>
-</div>
+
 <!-- prallex end -->
 
 

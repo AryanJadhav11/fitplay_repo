@@ -299,7 +299,7 @@ if (isset($_GET['deleteid'])) {
 <body>
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <h1 class="logo"><a href="turf.php" style="text-decoration:none;">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             

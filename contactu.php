@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FitPlay-Shopping-Site</title>
+  <title>Contact Us</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,6 +25,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <script type="text/javascript"
@@ -35,6 +37,67 @@
      emailjs.init("NZwPsWRpzzWmVQjwb");
   })();
 </script> 
+
+<?php
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// // Check if user is already logged in
+// if (isset($_SESSION['user_data'])) {
+//     header("Location: turf.php");
+//     exit();
+// }
+
+$showalert = false;
+$login = false;
+$showerr = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $err = "";
+    $username = $_POST["uname"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result);
+
+    if ($num) {
+        $re = mysqli_fetch_assoc($result);
+        $user_data = array(
+            'user_id' => $re['id'],
+            'firstname' => $re['firstname'],
+            'lastname' => $re['lastname'],
+            'username' => $re['username'],
+            'email' => $re['email'],
+        );
+        $_SESSION['user_data'] = $user_data;
+        
+         
+        // Redirect to turf.php after successful login
+        
+    } else {
+        $showerr = "Invalid Email / Password";
+        $_SESSION['error'] = "Invalid Email / Password";
+    }
+}
+echo "User data in session:<br>";
+foreach ($_SESSION['user_data'] as $key => $value) {
+    echo "$key: $value<br>";
+}
+// Your remaining code for the login page goes here
+?>
 
 <?php
    
@@ -138,7 +201,7 @@ function getInitials($name) {
 
  </style>
 <?php
-session_start();
+//session_start();
 
 // Database connection
 $servername = "localhost";
@@ -156,11 +219,11 @@ if ($conn->connect_error) {
 <body>
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <h1 class="logo"><a href="turf.php">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto" href="turf.php">Home</a></li>
-                <li><a class="nav-link scrollto" href="turf.php">Shop</a></li>
+                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -198,6 +261,30 @@ if ($conn->connect_error) {
     </div>
 </header>
 
+<div class="modal fade" id="chloginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Please Log In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
   
 
     <!-- ======= Contact Section ======= -->
@@ -330,7 +417,15 @@ if ($conn->connect_error) {
                 <textarea class="form-control" name="message" rows="5" placeholder="message" id="message" required></textarea>
               </div>
               <br>
-              <div class="text-center"><button type="submit" onclick="SendMail()" style="background-color: cornflowerblue;">Send Message</button></div>
+              <?php
+              if(isset($_SESSION['user_data'])){
+              echo '<div class="text-center"><button type="submit" onclick="SendMail()" style="background-color: cornflowerblue;">Send Message</button></div>';
+              }
+              else{
+                echo '<div class="text-center"><button type="submit" data-bs-toggle="modal" data-bs-target="#chloginModal" style="background-color: cornflowerblue;">Send Message</button></div>';
+
+              }
+            ?>
             </form>
           </div>
 

@@ -58,7 +58,7 @@ function getInitials($name) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="view Productport">
 
-  <title>FitPlay-Shopping-Site</title>
+  <title><?= ucfirst($row9pp['item_name']) ?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -702,7 +702,7 @@ ul {
 
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
+        <h1 class="logo"><a href="turf.php">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
                 
@@ -870,7 +870,7 @@ if (isset($_POST['Add_To_Cart'])) {
                     } else {
                         echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Add to Cart</button>'; 
                         echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Buy Now</button>';
-                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Book Now</button>';
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">View Cart</button>';
                     }
 
 ?>

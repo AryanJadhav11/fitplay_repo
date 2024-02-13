@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $server='localhost';
 $user='root';
 $db='turf';
@@ -38,6 +38,67 @@ function getInitials($name) {
 }
 ?>
 
+<?php
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// // Check if user is already logged in
+// if (isset($_SESSION['user_data'])) {
+//     header("Location: turf.php");
+//     exit();
+// }
+
+$showalert = false;
+$login = false;
+$showerr = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $err = "";
+    $username = $_POST["uname"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result);
+
+    if ($num) {
+        $re = mysqli_fetch_assoc($result);
+        $user_data = array(
+            'user_id' => $re['id'],
+            'firstname' => $re['firstname'],
+            'lastname' => $re['lastname'],
+            'username' => $re['username'],
+            'email' => $re['email'],
+        );
+        $_SESSION['user_data'] = $user_data;
+        
+         
+        // Redirect to turf.php after successful login
+        
+    } else {
+        $showerr = "Invalid Email / Password";
+        $_SESSION['error'] = "Invalid Email / Password";
+    }
+}
+echo "User data in session:<br>";
+foreach ($_SESSION['user_data'] as $key => $value) {
+    echo "$key: $value<br>";
+}
+// Your remaining code for the login page goes here
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +106,7 @@ function getInitials($name) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BizLand Bootstrap Template - Index</title>
+  <title><?= ucfirst($row9['name']) ?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -73,6 +134,7 @@ function getInitials($name) {
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: BizLand
@@ -107,19 +169,21 @@ function getInitials($name) {
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
+      <h1 class="logo"><a href="turf.php" style="text-decoration:none;"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Shop</a></li>
+          <li><a class="nav-link scrollto active" href="shop.php">Shop</a></li>
           <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Gyms</a></li>
                        
                     </ul>
-                </li>
-          <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
+            </li>
+
+          <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
+
           <li class="dropdown" style="color: blue;">
 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -148,6 +212,55 @@ function getInitials($name) {
     </div>
   </header><!-- End Header -->
 
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back To Fitplay</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="chloginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Please Log In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   
@@ -184,12 +297,15 @@ function getInitials($name) {
           <div class="p-3"
             style="border-radius: 10px; background-color: rgb(217, 217, 217); box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">
             <div class="text-center">
-            <a href="bookturf.php?id=<?= $row9['id'] ?>">
-                <button class="btn h-60 bg-success text-white"
-                       style="margin-bottom: 10px; width: 320px; border-radius: 100px;">
-               BOOK NOW
-                  </button>
-            </a>  
+           <?php 
+          if (isset($_SESSION['user_data'])) {
+            echo '<a href="bookturf.php?id=' . $row9['id'] . '"><button class="btn h-60 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;"> BOOK NOW </button></a>';
+        } else {
+            echo '<button class="btn h-60 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;" data-bs-toggle="modal" data-bs-target="#chloginModal">Book Now</button>';
+        }
+        
+
+            ?>
             </div>
             
 
@@ -385,9 +501,7 @@ function getInitials($name) {
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
