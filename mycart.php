@@ -6,10 +6,10 @@ $user = 'root';
 $db = 'fitplay_users';
 $pass = '';
 
-$conme = mysqli_connect($server, $user, $pass, $db);
+$conmeme = mysqli_connect($server, $user, $pass, $db);
 
-if (!$conme) {
-    die(mysqli_error($conme));
+if (!$conmeme) {
+    die(mysqli_error($conmeme));
 }
 
 // Assuming you have a user ID stored in the session, adjust this according to your authentication mechanism
@@ -18,13 +18,23 @@ $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['us
 
 // Fetch items from the order_his table for the specific user
 $sql = "SELECT * FROM `order_his` WHERE `user_id` = '$user_id'";
-$result = mysqli_query($conme, $sql);
+$result = mysqli_query($conmeme, $sql);
 
 if ($result === false) {
-    die("Query failed: " . mysqli_error($conme));
+    die("Query failed: " . mysqli_error($conmeme));
 }
 
 $rowCount = mysqli_num_rows($result);
+?>
+<?php
+if(isset($_GET['item_id']))
+{
+   $blid=$_GET['item_id'];
+   $sql9="SELECT * FROM `order_his` WHERE item_id='$blid';";
+   $res9=mysqli_query($conmeme,$sql9);
+   $row9=mysqli_fetch_assoc($res9);
+  
+}
 ?>
 <?php 
 // Database connection
@@ -33,11 +43,11 @@ $username = "root";
 $password = "";
 $dbname = "fitplay_users";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conmen = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($conmen->connect_error) {
+    die("Connection failed: " . $conmen->connect_error);
 }
 
 function getInitials($name) {
@@ -57,7 +67,7 @@ function getInitials($name) {
 
 
 // Database connectivity testing
-$con = mysqli_connect("localhost", "root", "", "fitplay_users");
+$conme = mysqli_connect("localhost", "root", "", "fitplay_users");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ensure user information is available
@@ -71,18 +81,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Data validation
     $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : '';
-    $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
-    $phone_no = mysqli_real_escape_string($con, $_POST['phone_no']);
-    $address = mysqli_real_escape_string($con, $_POST['address']);
-    $gtotal = mysqli_real_escape_string($con, $_POST['gtotal']);
-    $pay_mode = mysqli_real_escape_string($con, $_POST['pay_mode']);
+    $fullname = mysqli_real_escape_string($conme, $_POST['fullname']);
+    $phone_no = mysqli_real_escape_string($conme, $_POST['phone_no']);
+    $address = mysqli_real_escape_string($conme, $_POST['address']);
+    $gtotal = mysqli_real_escape_string($conme, $_POST['gtotal']);
+    $pay_mode = mysqli_real_escape_string($conme, $_POST['pay_mode']);
 
     // Database connectivity order_manager
     $query1 = "INSERT INTO `order_manager`(`user_id`, `Full_Name`, `Phone_No`, `Address`, `Total`, `Pay_Mod`)
     VALUES ('$user_id', '$fullname', '$phone_no', '$address', '$gtotal', '$pay_mode')";
 
-    if (mysqli_query($con, $query1)) {
-        $order_manager_id = mysqli_insert_id($con);
+    if (mysqli_query($conme, $query1)) {
+        $order_manager_id = mysqli_insert_id($conme);
 
         foreach ($_SESSION['user_data'] as $key => $values) {
             if (is_array($values)) {
@@ -95,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query2 = "INSERT INTO `order_his`(`user_id`, `order_manager_id`, `item_id`, `item_name`, `price`, `quantity`) 
                            VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity')";
 
-                mysqli_query($con, $query2);
+                mysqli_query($conme, $query2);
             }
         }
 
@@ -108,13 +118,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </script>";
     } else {
         echo "<script>
-            alert('SQL error: " . mysqli_error($con) . "');
+            alert('SQL error: " . mysqli_error($conme) . "');
             window.location.href='mycart.php';
             </script>";
     }
 
     // Close the database connection
-    mysqli_close($con);
+    mysqli_close($conme);
 }
 ?>
 
@@ -153,12 +163,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="style.css" rel="stylesheet">
 
   <!-- smaple -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 
@@ -400,17 +412,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                            </table>
                           
             </div>
-            <?php
-            if(isset($_GET['item_id']))
-{
-   $blid=$_GET['item_id'];
-   $sql9="SELECT * FROM `order_his` WHERE item_id='$blid';";
-   $res9=mysqli_query($coni,$sql9);
-   $row9=mysqli_fetch_assoc($res9);
-  
-}
-?>
-            <div class="col-lg-3">
+
+
+            <!-- <div class="col-lg-3">
 <<<<<<< HEAD
                 <div class="border bg-light rounded p-4">
                     
@@ -454,11 +458,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_GET['deleteid'];
     
     // Sanitize input
-    $id = mysqli_real_escape_string($conn, $id);
+    $id = mysqli_real_escape_string($conmeme, $id);
 
     $sql3 = "DELETE FROM order_his WHERE item_id = $id";
 
-    if (mysqli_query($conn, $sql3)) {
+    if (mysqli_query($conmeme, $sql3)) {
         // Redirect back to mycart.php after deletion
         header("Location: mycart.php");
         exit;
@@ -478,7 +482,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
         </div>
-    </div>
+    </div> -->
 =======
         <div class="border bg-light rounded p-4">
             <h5>Grand Total: <br>
@@ -514,59 +518,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <script>
-        document.getElementById('purchaseButton').addEventListener('click', function(e) {
-            e.preventDefault();
+    document.getElementById('purchaseButton').addEventListener('click', function(e) {
+        e.preventDefault();
 
-            // Perform form validation
-            var fullname = document.getElementById('fullname_id').value;
-            var phone_no = document.getElementById('phone_no_id').value;
-            var address = document.getElementById('address_id').value;
+        // Perform form validation
+        var fullname = document.getElementById('fullname_id').value;
+        var phone_no = document.getElementById('phone_no_id').value;
+        var address = document.getElementById('address_id').value;
 
-            if (!fullname_id || !phone_no_id || !address_id) {
-                alert('Please fill out all fields before proceeding to payment.');
-                return;
+        if (!fullname || !phone_no || !address) {
+            alert('Please fill out all fields before proceeding to payment.');
+            return;
+        }
+
+        // If form is valid, proceed to Razorpay payment
+        var options = {
+            "key": "rzp_live_z6prMSW9WlOpcp",
+            "amount": "<?= $grandTotal ?>" * 100, // amount in paise (since Razorpay accepts amount in smallest currency unit)
+            "currency": "INR",
+            "name": "<?= ucfirst($row9['item_name']) ?>",
+            "description": "Checkout for <?= ucfirst($row9['item_name']) ?>",
+            "image": "your_logo.png", // replace with your logo
+            "handler": function(response) {
+                // Handle success callback
+                console.log(response);
+                // Submit the form after successful payment
+                document.getElementById('makepurchase').submit();
+            },
+            "prefill": {
+                "name": document.getElementById('fullname_id').value,
+                "phone": document.getElementById('phone_no_id').value
+            },
+            "theme": {
+                "color": "#F37254"
             }
+        };
 
-            // If form is valid, proceed to Razorpay payment
-          var options = {
-          
-          "key": "rzp_live_z6prMSW9WlOpcp",
-          "amount": "1"*100, // amount in paise (since Razorpay accepts amount in smallest currency unit)
-          "currency": "INR",
-          "name": "Grand Total",
-          "description": "Checkout for <?= ucfirst($row9['name']) ?>",
-          "image": "your_logo.png", // replace with your logo
-          "handler": function(response) {
-              // Handle success callback
-              console.log(response);
-              // Submit the form after successful payment
-              document.getElementById('makepurchase').submit();
-          },
-          "prefill": {
-              "name": document.getElementById('fullname_id').value,
-              "phone": document.getElementById('phone_no_id').value
-          },
-          "theme": {
-              "color": "#F37254"
-          }
-  
-      
-  };
-  var rzp = new Razorpay(options);
-  rzp.open();
-
-
-
-
-
-  
-
-                        
-        });
-    
-    //gtotal script
-    var grandTotalValue = '<?php echo $grandTotal; ?>';
-    document.getElementById("gtotal_input").value = grandTotalValue;
+        var rzp = new Razorpay(options);
+        rzp.open();
+    });
 </script>
 >>>>>>> 223af3a965ecceb8be05a3cbb7526252b621ee61
 </body>
