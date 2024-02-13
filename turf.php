@@ -1,388 +1,49 @@
-
-<?php
-session_start();
-
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fitplay_users";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// // Check if user is already logged in
-// if (isset($_SESSION['user_data'])) {
-//     header("Location: turf.php");
-//     exit();
-// }
-
-$showalert = false;
-$login = false;
-$showerr = false;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $err = "";
-    $username = $_POST["uname"];
-    $password = $_POST["password"];
-
-    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
-    $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
-
-    if ($num) {
-        $re = mysqli_fetch_assoc($result);
-        $user_data = array(
-            'user_id' => $re['id'],
-            'firstname' => $re['firstname'],
-            'lastname' => $re['lastname'],
-            'username' => $re['username'],
-            'email' => $re['email'],
-        );
-        $_SESSION['user_data'] = $user_data;
-        
-         
-        // Redirect to turf.php after successful login
-        header("location: turf.php");
-        exit();
-    } else {
-        $showerr = "Invalid Email / Password";
-        $_SESSION['error'] = "Invalid Email / Password";
-    }
-}
-echo "User data in session:<br>";
-foreach ($_SESSION['user_data'] as $key => $value) {
-    echo "$key: $value<br>";
-}
-// Your remaining code for the login page goes here
-?>
+<?php include("header.php");?>
 
 
 
-
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mg";
-
-$conp = new mysqli($servername, $username, $password, $dbname);
-$sqlpro="SELECT * FROM `user_orders` ORDER BY user_orders.pubdate DESC; ";
-$quepro=mysqli_query($conp,$sqlpro);
-$rowpro=mysqli_num_rows($quepro);
-$respic=mysqli_fetch_assoc($quepro);
-
-?>
-
-
-<?php
-   
-
-function getInitials($name) {
-  $nameParts = explode(' ', $name);
-  $initials = '';
-  
-  foreach ($nameParts as $part) {
-      $initials .= strtoupper(substr($part, 0, 1));
-  }
-  
-  return $initials;
-}
-?>
-
-
-<!doctype html>
-<html lang="en">
-
-<head>
-  <!-- Bootstrap CSS -->
-<link href="path/to/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
-<script src="path/to/popper.min.js"></script>
-<script src="path/to/bootstrap.min.js"></script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explore Turfs</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
-    <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
-    <link href="favicon.png" rel="icon">
-  <link href="apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="style.css" rel="stylesheet">
-
-  <!-- smaple -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <style>
-    /* Typography */
-/**************************/
-#parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
-#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:white; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
-#parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
-#parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:400; font-size:14px; line-height:24px;}
-.first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
-
-.sc {color: #3b8595;}
-.ny {color: #3d3c3a;}
-.atw {color: #c48660;}
-
-/* Section - Title */
-/**************************/
-#parallax-world-of-ugg .title {background: white; padding:10px; margin:0 auto; text-align:center;}
-#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
-
-/* Section - Block */
-/**************************/
-#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
-#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
-#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
-
-/* Section - Parallax */
-/**************************/
-#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2013/08/05/128479/7dcfba828f21ff03a7ac12daf63d6abe.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230527/pngtree-gym-is-reflected-in-an-odd-light-image_2675068.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://th.bing.com/th/id/R.ae120d27c9edd5524193b709336c8c25?rik=K1nTQEniyptD7Q&riu=http%3a%2f%2fwww.hdcarwallpapers.com%2fwalls%2fhonda_f1_racing_car-wide.jpg&ehk=4v%2fReKKyhgUflpCDe8xPytG%2b%2bxNMTc8oZYOIIuIYkSw%3d&risl=&pid=ImgRaw&r=0); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-
-/* Extras */
-/**************************/
-#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
-
-/* Media Queries */
-/**************************/
-@media screen and (max-width: 959px) and (min-width: 768px) {
-  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
-}
-@media screen and (max-width: 767px) {
-  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
-  #parallax-world-of-ugg h2 {font-size:30px;}
-  #parallax-world-of-ugg .block {padding: 30px;}
-  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
-}
-@media screen and (max-width: 479px) {
-  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
-}
-  </style>
-
-
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
- </script>
- <script type="text/javascript">
-   (function(){
-      emailjs.init("NZwPsWRpzzWmVQjwb");
-   })();
- </script> 
-
-<style>
-    .avatar {
-        width: 30px;
-        height: 30px;
-        background-color: #007bff;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .c-item{
-      height:480px;
-
-    }
-
-    .c-img
-    {
-      height:100%;
-      object-fit:cover;
-      filter:brightness(0.6);
-    }
-
-    body{
-      background:#f3f5f8;
-      overflow-x:hidden;
-    }
-
- 
-
-        .star-container {
-            display: flex;
-            align-items: center;
-            margin-top: 15px; /* Adjust margin as needed */
-        }
-
-        .star-container i {
-            margin-right: 2px; /* Adjust margin between stars as needed */
-        }
-
-
-    
-
-    .card-container {
-      background-color:#ffff;
-      padding:20px;
-      border-radius:20px;
-             margin:40px;
-            display: flex;
-            gap: 20px; /* Adjust the margin between cards */
-        }
-
-        .card {
-            width: 18rem;
-        }
-
-        .card-img-top{
-          height :100%;
-          width:100%;
-        }
-
-        .banner-container{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:60px;
-          width:100%;
-          height:100%;
-          
-        }
-
-        .banner-containerw{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:6px;
-          width:100%;
-          height:40%;
-          
-        }
-
-
-
-
-  </style>
-</head>
 
 <body>
 
-<?php 
-	
-	
-	
-	
-	
-	
- if($showerr)
-	{
-	echo '
-	<div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
-  <strong>Oops !</strong>'.$showerr.'
-   
-  </div>';
-	}
-  ?>
-
-
-
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a style="text-decoration:none;">Fit<span style="color: green">Play.</span></a></h1>
-        <nav id="navbar" class="navbar">
-            <ul>
-            
-                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">Gyms</a></li>
-                       
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
-      
-                <li class="dropdown" style="color: blue;">
-<?php
-                if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data']['username'];
-                  $userInitials = getInitials($userName);
-              
-                  echo '<a href="#"><span>';
-                  echo '<div class="avatar">' . $userInitials . '</div>';
-                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
-              
-                  // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  
-                      echo '<li><a href="admin.php">Admin Panel</a></li>';
-                  }
-                  echo '</ul>';
-              } 
-              else {
-                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
-                  echo'<span>  </span>';
-                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-              }
-?>
-                </li>
-                <li>
-                  <p></p>
-                </li>
-                <li>
-                  <p></p>
-                </li>
-            </ul>
-        </nav>
+<!-- parallax start -->
+<div>
+ <div id="parallax-world-of-ugg">
+  
+  <section>
+    <div class="title">
+      <h3>FIT</h3>
+      <h1 style="color:green">PLAY</h1>
     </div>
-</header>
-
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-header p-5 pb-4 border-bottom-0">
-        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+  </section>
+  
+  <section>
+      <div class="parallax-one">
+        <h2>TURFS</h2>
       </div>
-      <div class="modal-body p-5 pt-0">
-        <form  method="post">
-        <div class="form-outline mb-4">
-                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
-                  <label class="form-label" for="form3Example1">User Name</label>
-                </div>
-                <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
-                  <label class="form-label" for="form3Example1">Password</label>
-                </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
-          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
-        </form>
-      </div>
+  </section>
+  
+  <section>
+    <div class="block">
+      <p><span class="first-character sc">I</span>n 1978, Brian Smith landed in Southern California with a bag of sheepskin boots and hope. He fell in love with the sheepskin experience and was convinced the world would one day share this love. The beaches of Southern California had long been an epicenter of a relaxed, casual lifestyle, a lifestyle that Brian felt was a perfect fit for his brand. So he founded the UGG brand, began selling his sheepskin boots and they were an immediate sensation. By the mid 1980's, the UGG brand became a symbol of relaxed southern California culture, gaining momentum through surf shops and other shops up and down the coast of California, from San Diego to Santa Cruz. UGG boots reached beyond the beach, popping up in big cities and small towns all over, and in every level of society.</p>
+      <p class="line-break margin-top-10"></p>
     </div>
+  </section>
+  
+  <section>
+    <div class="parallax-two">
+      <h2>GYMS</h2>
+    </div>
+  </section>
+  
+  <section>
+    <div class="block">
+      <p><span class="first-character ny">B</span>reaking into the New York fashion world is no easy task. But by the early 2000's, UGG Australia began to take it by storm. The evolution of UGG from a brand that made sheepskin boots, slippers, clogs and sandals for an active, outdoor lifestyle to a brand that was now being touted as a symbol of a stylish, casual and luxurious lifestyle was swift. Much of this was due to a brand repositioning effort that transformed UGG into a high-end luxury footwear maker. As a fashion brand, UGG advertisements now graced the pages of Vogue Magazine as well as other fashion books. In the mid 2000's, the desire for premium casual fashion was popping up all over the world and UGG was now perfectly aligned with this movement.</p>
+      <p class="line-break margin-top-10"></p>
+    </div>
+  </section>
+    
   </div>
 </div>
-
 <!-- prallex end -->
 
 
@@ -461,9 +122,12 @@ $resimg=mysqli_fetch_assoc($que2);
 <!-- Add Splide CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
-<div class="container m-4 p-4" style="background-color:white; border-radius:10px;" >
-    <div class="row">
-        <div class="splide">
+
+<section class="m-100">
+    <div class="container ">
+              <div class="row">
+<!-- <div class="container m-4 p-4" style="background-color:white; border-radius:10px;" > -->
+       <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
 
@@ -483,8 +147,8 @@ $resimg=mysqli_fetch_assoc($que2);
                                     <div class="card-body" style="padding-left:10px;">
                                         <h5 class="card-title"><a href="single_post.php?id=<?= $res8['id'] ?>" id="title"><?= ucfirst($res8['name']) ?></a></h5>
                                         <p  class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-</svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
+                                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                  </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
                                         <a href="final.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
                                     </div>
                                 </div>
@@ -497,7 +161,9 @@ $resimg=mysqli_fetch_assoc($que2);
             </div>
         </div>
     </div>
+  </div>
 </div>
+</section>
 
 <!-- Add Splide JS -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
@@ -585,7 +251,7 @@ $resimg=mysqli_fetch_assoc($que2);
 
           </div>
           
-
+          
         </div>
       </div>
     </div>
