@@ -255,31 +255,34 @@ function getInitials($name) {
         <div class="border" style="background-color: white; border-radius: 10px; margin: 10px;">
             <h4 class="p-2" style="font-size: x-large;"><b>Amenities</b></h4>
             <div class="p-2">
-                <?php
+              <?php
 
                 // Define the amenities array with all possible amenities
-                $amenities = array(
-                  $row9['amenitiy1'],
-                  $row9['amenitiy2'],
-                  $row9['amenitiy3'],
-                  $row9['amenitiy4']
-              );
+                  $amenities = array(
+                    $row9['amenitiy1'],
+                    $row9['amenitiy2'],
+                    $row9['amenitiy3'],
+                    $row9['amenitiy4']
+                   );
+                   $amenityPresent=false;
+                                           
 
-                if (empty($amenity)){
-                  echo '<div style="background-color: red; padding: 5px; display: inline-block; border-radius: 50%;"><i class="fa fa-close" style="color: white;"></i></div>';
-                        echo '<span style="margin-left: 5px; margin-right: 10px;">No Amenity</span>';
-
-                }                              
-
-                // Loop through each amenity
-                else { foreach ($amenities as $amenity) {
+                  // Loop through each amenity
+                  foreach ($amenities as $amenity) {
                     // Check if the amenity is present
                     if (!empty($amenity)) {
                         // Output the check icon and the amenity
                         echo '<div style="background-color: rgb(12, 208, 12); padding: 5px; display: inline-block; border-radius: 50%;"><i class="fas fa-check" style="color: white;"></i></div>';
                         echo '<span style="margin-left: 5px; margin-right: 10px;">' . ucfirst($amenity) . '</span>';
-                    } 
-                }}
+                        $amenityPresent=true;
+                    }
+                  }
+                    
+                  // Check if no amenity is present
+                   if (!$amenityPresent) {
+                      echo '<div style="background-color: red; padding: 5px; display: inline-block; border-radius: 50%;"><i class="fa fa-close" style="color: white;"></i></div>';
+                      echo '<span style="margin-left: 5px; margin-right: 10px;">No Amenity</span>';
+                    }
                 ?>
             </div>
         </div>
