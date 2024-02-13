@@ -76,12 +76,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
         
 
             ?>
-              <a href="bookturf.php?id=<?= $row9['id'] ?>">
-                <button class="btn h-60 bg-success text-white"
-                  style="margin-bottom: 10px; width: 320px; border-radius: 100px;">
-                  BOOK NOW
-                </button>
-              </a>
+              
             </div>
 
 
