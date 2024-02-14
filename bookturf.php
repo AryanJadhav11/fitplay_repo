@@ -182,7 +182,9 @@ $coni->close();
                 <label for="userEmail">Your Email:</label>
                 <input type="email" id="userEmail" class="form-control" placeholder="Enter Your Email" name="userEmail" required>
             </div>
-            <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block">Proceed to Payment</button>
+            <div class="pt-3">
+            <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button>
+            </div>
         </form>
     </div>
 
