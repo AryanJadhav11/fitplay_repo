@@ -99,31 +99,31 @@
 <h3>TOP DETAILS</h3>
             <div class="row">
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="https://contents.mediadecathlon.com/p2314499/f1c060d2d60eabe474fb5eae1949a144/p2314499.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/stud1-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="https://contents.mediadecathlon.com/p2407364/k$c5318a11a9f71ea9e8ad340acc1dc47b/plastic-cricket-stump-set-turquoise.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/stump-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="https://contents.mediadecathlon.com/p2579294/k$a5be54d00ab5e50c33dfbdba1f770007/men-s-mountaineering-down-jacket-mountaineering-light-grey.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/kneepad1-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-6">
-                    <img src="https://contents.mediadecathlon.com/p1827551/k$682935e4f07fe2b685749090943120d4/hex-dumbbell-225-kg-black.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-6">
-                    <img src="https://contents.mediadecathlon.com/p2071959/k$aa5b68c80c590ba1db35c3294975f0db/women-s-trackpant-for-gym-cotton-rich-500-black.jpg?format=auto&quality=70&f=1500x600" class="img-fluid" alt="image">
+                    <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2412797/k$4d737e8e6056941e8c44b5edc595a202/kids-cricket-tennis-ball-cricket-bat-t100-easy-blue.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product1-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2239229/k$eebfc19ce3ad5a218eaa97f06fdcfa1d/all-weather-ultralight-plastic-cricket-set-cst-500.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product2-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2606718/k$eccde2c55be4eeae078f19b0f920fca1/football-club-ball-size-5-fifa-basic-f500-white-yellow.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product3-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2606820/k$2ac06f4bf3b9ef1dc625da121c9af29f/kids-football-goalkeeper-gloves-f100-black-yellow.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product4-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
 
             </div>
@@ -138,7 +138,7 @@
 <div class="container whats-new">
   <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6 sofa-float text-center">
-		<img src="https://th.bing.com/th/id/OIP.cOZL6tqhZXslkRe66O3-YwHaJz?pid=ImgDet&w=190&h=252&c=7&dpr=1.1" class="img-responsive">
+		<img src="proimg/ronaldodada.png" class="img-responsive">
 	</div>
 	<div class="col-sm-6 col-md-6 text-center whats-new-text">
 		<h1>Check out our Turf Platform</h1>
