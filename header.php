@@ -88,27 +88,21 @@ function getInitials($name) {
 
 
 <head>
-  <!-- Bootstrap CSS -->
-  <link href="path/to/bootstrap.min.css" rel="stylesheet">
+   
 
-  <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
-  <script src="path/to/popper.min.js"></script>
-  <script src="path/to/bootstrap.min.js"></script>
+<link href="path/to/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+<script src="path/to/popper.min.js"></script>
+<script src="path/to/bootstrap.min.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>FitPlay -Home</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+    <link href="favicon.ico" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -125,11 +119,16 @@ function getInitials($name) {
   <!-- Template Main CSS File -->
   <link href="style.css" rel="stylesheet">
 
-
   <!-- smaple -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+ </script>
+  
   <style>
        /* Typography */
      #parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}

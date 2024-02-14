@@ -2,11 +2,10 @@
 
 
 
-
+<head>
+  <title>FitPlay-Turfs</title>
+</head>
 <body>
-
-
-
 
   <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
   <div class="carousel-indicators">

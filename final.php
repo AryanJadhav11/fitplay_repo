@@ -25,7 +25,9 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 ?>
 
 
-
+<head>
+  <title>FitPlay-Book_Turf</title>
+</head>
 <body>
   <!-- carosal start  -->
   <div class="container">
