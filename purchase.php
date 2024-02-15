@@ -47,9 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
         // Unset the session after successful purchase
         isset($_SESSION['user_data']);
         
-        echo "<script>
-            alert('Order placed successfully');
-            window.location.href='mycart.php';
+        echo "<script>s
+            window.location.href='shopcheckout.php';
             </script>";
     } else {
         echo "<script>
