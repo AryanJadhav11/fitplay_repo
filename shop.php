@@ -20,291 +20,142 @@ $rowpro=mysqli_num_rows($quepro);
 $respic=mysqli_fetch_assoc($quepro);
 ?>
 
+<head>
+<title>FitPlay - Shop</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+
+</head>
 <body>
 
-<div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-
+<!-- carosal start -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-
-    <div class="carousel-item active c-item">
-      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="...">
-      <div class="carousel-caption top-0 mt-4 ">
-        <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book Now</button>
-      </div>
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
     </div>
-
-    <div class="carousel-item c-item">
-      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="...">
-      <div class="carousel-caption top-0 mt-4 ">
-        <p class="mt-5 fs-3 text-uppercase"> Experience the joy of hassle-free reservations for your soccer matches.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Kick Off Convenience</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Explore Top Turfs</button>
-      </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://contents.mediadecathlon.com/s1051803/k$24a0285566a6d9ea9d53a2bde53a3b02/Sale%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
     </div>
-
-    <div class="carousel-item c-item">
-      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="...">
-      <div class="carousel-caption top-0 mt-4 ">
-        <p class="mt-5 fs-3 text-uppercase">Our online turf booking platform lets you schedule your games at your convenience.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Game On Anytime</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Kick Now</button>
-      </div>
+    <div class="carousel-item">
+      <img src="https://contents.mediadecathlon.com/s1061445/k$b0d33a4289de7edac9953bdbd35d99cc/Frame%20427321401.png?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
     </div>
-
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
-    </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
+<!-- carosal end -->
+<br>
+<br>
+<br>
+<br>
 
-
-
-  </div>
+<!-- facilities start -->
+<section class="pt-3">
+<div class="container">
+	<div class="row  text-center">
+		<div class="col-sm-4 col-md-4 facility-cod">
+			<h3> Cash On Delivery </h3>
+			<p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
+		</div>
+		<div class="col-sm-4 col-md-4 facility-shipping">
+			<h3> Free Shipping</h3>
+			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
+		</div>
+		<div class="col-sm-4 col-md-4 facility-returns">
+			<h3>Easy Returns </h3>
+			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
+		</div>
+	</div>
 </div>
 
 <style>
-  .product-wrapper, .product-img{overflow: hidden;position: relative}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
+  .facility-cod
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07Wallet_zpsswjtv8dx.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-cod:hover
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07_zpspz41uc4k.png") no-repeat top;
+}
+
+.facility-shipping
+{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024355_ic_local_shipping_48px_zpslmejbm3l.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-shipping:hover
+{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920793_ic_local_shipping_48px_zpsijbwmkjd.png") no-repeat top;
+}
+
+.facility-returns
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024335_return_zps5wptjjcf.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-returns:hover
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
+}
+/*end of facilities*/
 </style>
-
-<section class="m-100 p-4">
-<div class="container d-flex justify-content-center mt-100">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg" alt=""> </a>
-            <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> <a href="#"> <i
-                    class="fa fa-heart"></i> </a> <a href="#"> <i class="fa fa-shopping-cart"></i> </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
-            <span><i class="fa fa-rupee"></i> 41,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
-                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
-                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
-                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/HxEEu5g.jpg" alt=""> </a>
-            <span><i class="fa fa-rupee"></i> 33,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
-                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
-                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
-                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
-            <span><i class="fa fa-rupee"></i> 23,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
-                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
-                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
-                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
+<!-- facilities end -->
 
-<section class="m-100 p-4">
-<div class="container d-flex justify-content-center mt-100">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/tL7ZE46.jpg" alt=""> </a>
-            <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> <a href="#"> <i
-                    class="fa fa-heart"></i> </a> <a href="#"> <i class="fa fa-shopping-cart"></i> </a> </div>
+<!-- image gallary start -->
+<section class="pt-4 p-0">
+<div class="container">
+<h2 class="text-center m-3"><b>WATCH SOME PRODUCTS</b></h2>
+            <div class="row">
+                <div class="col-md-4 mt-3 col-lg-4">
+                    <img src="proimg/stud1-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-4">
+                    <img src="proimg/stump-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-4">
+                    <img src="proimg/kneepad1-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-6">
+                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-6">
+                    <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                    <img src="proimg/product1-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                    <img src="proimg/product2-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                    <img src="proimg/product3-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                    <img src="proimg/product4-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+
             </div>
-          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
-            <span><i class="fa fa-rupee"></i> 41,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
-                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
-                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
-                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/HxEEu5g.jpg" alt=""> </a>
-            <span><i class="fa fa-rupee"></i> 33,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
-                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
-                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
-                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="product-wrapper mb-45 text-center">
-          <div class="product-img"> <a href="#" data-abc="true"> <img src="https://i.imgur.com/lAQxXCK.jpg" alt=""> </a>
-            <span><i class="fa fa-rupee"></i> 23,000</span>
-            <div class="product-action">
-              <div class="product-action-style"> <a class="action-plus" title="Quick View" data-toggle="modal"
-                  data-target="#exampleModal" href="#" data-abc="true"> <i class="fa fa-plus"></i> </a> <a
-                  class="action-heart" title="Wishlist" href="#" data-abc="true"> <i class="fa fa-heart"></i> </a> <a
-                  class="action-cart" title="Add To Cart" href="#" data-abc="true"> <i class="fa fa-shopping-cart"></i>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
-
-  <!-- <section class="mt-50 d-flex p-2">
-    <div class="container">
-      <div class="row">
-
-        <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-         <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-         <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-         <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-      </div>
-    </div>
-</section>  
-
-<section class="mt-50 d-flex p-2">
-    <div class="container">
-      <div class="row">
-
-        <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-         <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-         <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-         <div class="card" style="width: 18rem; margin: 15px;">
-            <a href="product_detail.php?Order_id=2">
-              <img class="mt-3" src="turf1.jpg" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-            </a>    
-                <div class="card-body">
-                 <h5 class="card-title">item name</h5>
-                 <p class="card-text">100</p>
-                 <a href="product_detail.php?Order_id=2" class="btn btn-primary">Go somewhere</a>
-                </div>
-         </div>
-
-      </div>
-    </div>
-</section>  -->
-
-
-<section class="m-100" style="background-color:#e7e7e7; border-radius:10px;">
+<!-- image gallary end -->
+<br>
+<br>
+<br>
+<br>
+<!-- whats new start -->
+<section class="p-0">
     <div class="container ">
-    <h2 class="text-center m-3" style="background-color:#e7e7e7; "><b>WATCH SOME PRODUCTS</b></h2>
+    <h2 class="text-center mb-4"><b>WATCH SOME PRODUCTS</b></h2>
               <div class="row">
                 <div id="splideCarousel" class="splide">
                     <div class="splide__track">
@@ -359,67 +210,118 @@ $respic=mysqli_fetch_assoc($quepro);
         splide.mount();
     });
 </script>
+<!--new product-->
+<section class="pt-5">
+<div class="container whats-new">
+  <div class="row">
+  <div class="col-sm-6 col-md-6 col-lg-6 sofa-float text-center">
+		<img src="proimg/ronaldodada.png" class="img-responsive">
+	</div>
+	<div class="col-sm-6 col-md-6 text-center whats-new-text">
+		<h1>Check out our Turf Platform</h1>
+		<p class="paragraphs"> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. Eam et mazim doctusLorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne.     </p>
+	</div>
+  </div>
+	
+</div>
+<!--new product-->
+<style>
+.whats-new
+{
+	margin-top:40px;
+}
 
+.sofa-float
+{
+	position: relative;
+	display:block;
+	max-width:400px;
+	margin:0px auto;
+	animation:animatedsofa 3s infinite;
+}
+
+@keyframes animatedsofa
+{
+	0%{transform:translateY(10px);}
+	50%{transform:translateY(-20px);}
+	100%{transform:translateY(10px);}
+}
+
+.paragraphs
+{
+	max-width:400px;
+	max-height:400px;
+	margin:0px auto;
+	display: block;
+}
+
+.whats-new-text
+{
+	padding-top:3%;
+	padding-bottom:3%;
+}
+</style>
+<!-- whats new end -->
+</section>
+
+<section>
+<!-- footer start -->
 <footer id="footer">
+<div class="footer-top">
+  <div class="container">
+    <div class="row">
 
-    
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3>FitPlay.<span>.</span></h3>
+        <p>
+         Kolhapur <br>
+         Maharastra<br>
+          <strong>Phone:</strong> +91 9284008321<br>
+          <strong>Email:</strong> thefitplay@gmail.com<br>
+        </p>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>FitPlay.<span>.</span></h3>
-            <p>
-             Kolhapur <br>
-             Maharastra<br>
-              <strong>Phone:</strong> +91 9284008321<br>
-              <strong>Email:</strong> thefitplay@gmail.com<br>
-            </p>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Book Turfs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Shop Products</a></li>
-              
-            </ul>
-          </div>
-
-
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-
-          </div>
-          
-
-        </div>
       </div>
-    </div>
-    
 
-    <div class="container py-4">
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="turf.php">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="shop.php">Shop Products</a></li>
+          
+        </ul>
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Social Networks</h4>
+        <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+<div class="container py-3">
       <div class="copyright">
         &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
       </div>
@@ -431,8 +333,11 @@ $respic=mysqli_fetch_assoc($quepro);
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+ 
+</footer>
+</section>
+<!-- End Footer -->
 
+<!-- footer end -->
 </body>
-
 </html>

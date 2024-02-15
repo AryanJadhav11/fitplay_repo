@@ -25,9 +25,12 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 ?>
 
 
-
+<head>
+  <title>FitPlay - Book Turf</title>
+</head>
 <body>
   <!-- carosal start  -->
+<section class="m-2">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
@@ -188,12 +191,12 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   </div>
   </div>
   </div>
-  </section>
-  </div>
-
-
 
   </div>
+
+
+
+  </div>  </section>
   <br>
   <br>
   <br>
@@ -280,7 +283,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/main.js"></script> -->
 
 </body>
 

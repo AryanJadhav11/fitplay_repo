@@ -35,23 +35,12 @@ if (isset($_GET['Order_id'])) {
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="view Productport">
-
-  <title><?= ucfirst($row9pp['item_name']) ?></title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <title>FitPlay-Product_Detail</title>
+</head>
   <style>
 .breadcrumb {
     display: -ms-flexbox;
@@ -580,8 +569,6 @@ ul {
 </head>
 
 <body>
-
-
 
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

@@ -1,16 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include("header.php");?>
+<?php
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$conp = new mysqli($servername, $username, $password, $dbname);
+$sqlpro="SELECT * FROM `product_cards` ORDER BY product_cards.pubdate DESC; ";
+$quepro=mysqli_query($conp,$sqlpro);
+$rowpro=mysqli_num_rows($quepro);
+$respic=mysqli_fetch_assoc($quepro);
+?>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- cdn links -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<title>FitPlay - Shop</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 
 </head>
 <body>
-<?php include("header.php");?>
+
 <!-- carosal start -->
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -38,7 +55,9 @@
 <br>
 <br>
 <br>
+
 <!-- facilities start -->
+<section class="pt-3">
 <div class="container">
 	<div class="row  text-center">
 		<div class="col-sm-4 col-md-4 facility-cod">
@@ -87,58 +106,116 @@
 {
 	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
 }
-
 /*end of facilities*/
 </style>
+</section>
 <!-- facilities end -->
-<br>
-<br>
-<br>
+
 <!-- image gallary start -->
+<section class="pt-4 p-0">
 <div class="container">
-<h3>TOP DETAILS</h3>
+<h2 class="text-center m-3"><b>WATCH SOME PRODUCTS</b></h2>
             <div class="row">
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="https://contents.mediadecathlon.com/p2314499/f1c060d2d60eabe474fb5eae1949a144/p2314499.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/stud1-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="https://contents.mediadecathlon.com/p2407364/k$c5318a11a9f71ea9e8ad340acc1dc47b/plastic-cricket-stump-set-turquoise.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/stump-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="https://contents.mediadecathlon.com/p2579294/k$a5be54d00ab5e50c33dfbdba1f770007/men-s-mountaineering-down-jacket-mountaineering-light-grey.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/kneepad1-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-6">
-                    <img src="https://contents.mediadecathlon.com/p1827551/k$682935e4f07fe2b685749090943120d4/hex-dumbbell-225-kg-black.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-6">
-                    <img src="https://contents.mediadecathlon.com/p2071959/k$aa5b68c80c590ba1db35c3294975f0db/women-s-trackpant-for-gym-cotton-rich-500-black.jpg?format=auto&quality=70&f=1500x600" class="img-fluid" alt="image">
+                    <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2412797/k$4d737e8e6056941e8c44b5edc595a202/kids-cricket-tennis-ball-cricket-bat-t100-easy-blue.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product1-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2239229/k$eebfc19ce3ad5a218eaa97f06fdcfa1d/all-weather-ultralight-plastic-cricket-set-cst-500.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product2-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2606718/k$eccde2c55be4eeae078f19b0f920fca1/football-club-ball-size-5-fifa-basic-f500-white-yellow.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product3-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="https://contents.mediadecathlon.com/p2606820/k$2ac06f4bf3b9ef1dc625da121c9af29f/kids-football-goalkeeper-gloves-f100-black-yellow.jpg?format=auto&quality=70&f=1500x900" class="img-fluid" alt="image">
+                    <img src="proimg/product4-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
 
             </div>
         </div>
+</section>
 <!-- image gallary end -->
 <br>
 <br>
 <br>
 <br>
 <!-- whats new start -->
+<section class="p-0">
+    <div class="container ">
+    <h2 class="text-center mb-4"><b>WATCH SOME PRODUCTS</b></h2>
+              <div class="row">
+                <div id="splideCarousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list ">
+
+                            <?php 
+                            if($rowpro) {
+                                // Reset data seek pointer
+                                mysqli_data_seek($quepro, 0);
+
+                                while($respro = mysqli_fetch_assoc($quepro)) {
+                            ?>
+                                    <li class="splide__slide col-sm-3 m-0.1 d-flex p-2 ">
+                                        <div class="card bg-light text-dark imager-fluid">
+                                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
+                                                <?php $img = $respro['pic'] ?>
+                                                <img src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                            </a>
+                                            <div class="card-body" style="padding-left:10px;">
+                                                <h5 class="card-title"><a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h5>
+                                                <p  class="card-text" id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?></p>
+                                                <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('#splideCarousel', {
+            perPage: 4,
+            breakpoints: {
+                600: {
+                    perPage: 1
+                }
+            },
+            pagination: false, // Hide pagination
+            arrows: true, // Show arrows for navigation
+        });
+
+        splide.mount();
+    });
+</script>
 <!--new product-->
+<section class="pt-5">
 <div class="container whats-new">
   <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6 sofa-float text-center">
-		<img src="https://th.bing.com/th/id/OIP.cOZL6tqhZXslkRe66O3-YwHaJz?pid=ImgDet&w=190&h=252&c=7&dpr=1.1" class="img-responsive">
+		<img src="proimg/ronaldodada.png" class="img-responsive">
 	</div>
 	<div class="col-sm-6 col-md-6 text-center whats-new-text">
 		<h1>Check out our Turf Platform</h1>
@@ -185,12 +262,10 @@
 }
 </style>
 <!-- whats new end -->
-<br>
-<br>
-<br>
-<br>
-<!-- footer start -->
+</section>
 
+<section>
+<!-- footer start -->
 <footer id="footer">
 <div class="footer-top">
   <div class="container">
@@ -252,7 +327,9 @@
   </div>
   
 </div>
-</footer><!-- End Footer -->
+</footer>
+</section>
+<!-- End Footer -->
 
 <!-- footer end -->
 </body>
