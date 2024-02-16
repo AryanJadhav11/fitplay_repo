@@ -132,16 +132,16 @@ $respic=mysqli_fetch_assoc($quepro);
                     <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product1-removebg-preview.png" class="img-fluid" alt="image">
+                    <img src="proimg/product1-removebg-preview.png" class="img-fluid sofa-float" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product2-removebg-preview.png" class="img-fluid" alt="image">
+                    <img src="proimg/product2-removebg-preview.png" class="img-fluid sofa-float" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product3-removebg-preview.png" class="img-fluid" alt="image">
+                    <img src="proimg/product3-removebg-preview.png" class="img-fluid sofa-float" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product4-removebg-preview.png" class="img-fluid" alt="image">
+                    <img src="proimg/product4-removebg-preview.png" class="img-fluid sofa-float" alt="image">
                 </div>
 
             </div>
@@ -264,7 +264,7 @@ $respic=mysqli_fetch_assoc($quepro);
 <!-- whats new end -->
 </section>
 
-<section>
+<section class="pb-0">
 <!-- footer start -->
 <footer id="footer">
 <div class="footer-top">
@@ -274,7 +274,7 @@ $respic=mysqli_fetch_assoc($quepro);
       <div class="col-lg-3 col-md-6 footer-contact">
         <h3>FitPlay.<span>.</span></h3>
         <p>
-         Kolhapur <br>
+         sofa-float Kolhapur <br>
          Maharastra<br>
           <strong>Phone:</strong> +91 9284008321<br>
           <strong>Email:</strong> thefitplay@gmail.com<br>
@@ -285,7 +285,7 @@ $respic=mysqli_fetch_assoc($quepro);
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Useful Links</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+          <li><i  sofa-floatclass="bx bx-chevron-right"></i> <a href="#">About us</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy.html">Privacy policy</a></li>
         </ul>
@@ -294,7 +294,7 @@ $respic=mysqli_fetch_assoc($quepro);
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Our Services</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="turf.php">Book Turfs</a></li>
+          <li><i  sofa-floatclass="bx bx-chevron-right"></i> <a href="turf.php">Book Turfs</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="shop.php">Shop Products</a></li>
           
@@ -305,7 +305,7 @@ $respic=mysqli_fetch_assoc($quepro);
 
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Our Social Networks</h4>
-        <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+        <p>Welcome to t sofa-floathe heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
         <div class="social-links mt-3">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

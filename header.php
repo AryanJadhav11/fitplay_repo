@@ -54,10 +54,10 @@
         $_SESSION['error'] = "Invalid Email / Password";
     }
  }
- echo "User data in session:<br>";
- foreach ($_SESSION['user_data'] as $key => $value) {
-    echo "$key: $value<br>";
-  }
+//  echo "User data in session:<br>";
+//  foreach ($_SESSION['user_data'] as $key => $value) {
+//     echo "$key: $value<br>";
+//   }
   // Your remaining code for the login page goes here
  
 ?>
@@ -124,7 +124,6 @@ function getInitials($name) {
   <!-- smaple -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 
 
   <script type="text/javascript"
@@ -262,10 +261,149 @@ function getInitials($name) {
   </script> 
 
 
+<!-- ________________________________________________________GYM_________________________________________________________________________________ -->
+
+
+
+
+
+  <!-- Google Fonts -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Protest+Revolution&family=Russo+One&family=Vina+Sans&display=swap"
+    rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body{
+      background:#F7F7F7;
+      overflow-x:hidden;
+    }
+    .intro {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 75vh;
+      width: 100%;
+      background-image: url(./assets/img/weights.avif);
+      background-size: 100% auto;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .text-container {
+      text-align: center;
+      margin-right: 5%;
+      /* Adjust this value according to your preference */
+    }
+
+    .text-container h1,
+    .text-container h4 {
+
+      margin: 0;
+    }
+
+    .abt {
+      height: 350px;
+      width: 100%;
+
+      background-color: rgb(19, 20, 21);
+    }
+
+    .abt .abtus {
+      position: relative;
+      width: 100%;
+      /* Ensure full width */
+      height: 100%;
+      /* Ensure full height */
+    }
+
+    .abt .abtus h1 {
+      font-size: 100px;
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
+      color: rgb(19, 20, 21);
+      font-family: 'Russo One', sans-serif;
+
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      opacity: .3;
+    }
+
+    .abt .abtus p {
+      position: absolute;
+      font-size: 15px;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .slogan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 100%;
+
+      background-image: url(./assets/img/—Pngtree—an\ old\ gym\ setting\ with_2667256.jpg);
+      background-size: 100% auto;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .slogan-content {
+      font-family: 'Protest Revolution', sans-serif;
+      font-size: 60px;
+      color: rgb(255, 132, 0);
+    }
+    .explpore-gyms{
+      background-color: rgb(19,20,21);
+      padding: 20px; 
+      text-align: center;
+    }
+    .gym-cards {
+      background-color: rgb(19,20,21);
+      height: 500px;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Protest+Revolution&family=Vina+Sans&display=swap"
+    rel="stylesheet">
+
+
+
+
+
+<!-- ________________________________________________________________GYM_________________________________________________________________________ -->
+
+
 
 
  <!-- ======= Header - NavBar ======= -->
-  <header id="header" class="d-flex align-items-center">
+
+  <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
         <nav id="navbar" class="navbar">
@@ -318,6 +456,7 @@ function getInitials($name) {
         </nav>
     </div>
  </header>
+
  <!-- ======= Header - NavBar End ======= -->
 
 
@@ -375,3 +514,5 @@ function getInitials($name) {
  <!-- Login Modal End -->
 
 </head>
+  <!-- script for fixed navbar -->
+  <script src="assets/js/main.js"></script>
