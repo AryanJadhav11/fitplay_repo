@@ -25,7 +25,7 @@
 
 <head>
     <title>FitPlay - Product Booking Platform</title>
-</head>
+ </head>
 
 <body>
     <div class="container">
