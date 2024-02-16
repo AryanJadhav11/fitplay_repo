@@ -1,4 +1,6 @@
 <?php include('header.php') ?>
+
+
 <?php
 include('smtp/PHPMailerAutoload.php');
 
@@ -11,7 +13,7 @@ function smtp_mailer($to, $subject, $message) {
     $mail->Port = 587;
     $mail->IsHTML(true);
     $mail->CharSet = 'UTF-8';
-    $mail->Username = "jadhavaryan467@gmail.com";
+    $mail->address = "jadhavaryan467@gmail.com";
     $mail->Password = "oozzyqfwnpufjuqi";
     $mail->SetFrom("jadhavaryan467@gmail.com");
     $mail->Subject = $subject;
@@ -32,7 +34,7 @@ function smtp_mailer($to, $subject, $message) {
 // Database connection
 $server = 'localhost';
 $user = 'root';
-$db = 'turf';
+$db = 'fitplay_users';
 $pass = '';
 
 $coni = mysqli_connect($server, $user, $pass, $db);
@@ -40,10 +42,10 @@ $coni = mysqli_connect($server, $user, $pass, $db);
 if (!$coni) {
     die(mysqli_error($coni));
 }
-if(isset($_GET['id']))
+if(isset($_GET['user_id']))
 {
-   $blid=$_GET['id'];
-   $sql9="SELECT * FROM `grd` WHERE id='$blid';";
+   $blid=$_GET['user_id'];
+   $sql9="SELECT * FROM `order_manager` WHERE user_id='$blid';";
    $res9=mysqli_query($coni,$sql9);
    $row9=mysqli_fetch_assoc($res9);
   
@@ -52,16 +54,13 @@ $response = array();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get booking information from the form
-    $name = isset($_POST['turfname']) ? $_POST['turfname'] : ''; // Ensure $name is defined and not null
-    $date = isset($_POST['date']) ? $_POST['date'] : '';
-    $startTime = isset($_POST['startTime']) ? $_POST['startTime'] : '';
-    $endTime = isset($_POST['endTime']) ? $_POST['endTime'] : '';
-    $userName = isset($_POST['userName']) ? $_POST['userName'] : '';
-    $userEmail = isset($_POST['userEmail']) ? $_POST['userEmail'] : '';
+    $name = isset($_POST['fname']) ? $_POST['fname'] : ''; // Ensure $name is defined and not null
+    $address = isset($_POST['address']) ? $_POST['address'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
 
     // Check if the chosen date and time slot is already booked for the specific turf
-    $checkSql = "SELECT * FROM booking WHERE turfname = '$name' AND date = '$date' AND ((startTime <= '$startTime' AND endTime > '$startTime') OR (startTime < '$endTime' AND endTime >= '$endTime'))";
-    $result = $coni->query($checkSql);
+ //   $checkSql = "SELECT * FROM booking WHERE fname = '$name' AND date = '$date' AND ((startTime <= '$startTime' AND endTime > '$startTime') OR (startTime < '$endTime' AND endTime >= '$endTime'))";
+ //   $result = $coni->query($checkSql);
 
     if ($result && $result->num_rows > 0) {
         // Turf is already booked for the selected date and time
@@ -74,39 +73,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($paymentSuccess) {
             // Insert booking into the database only if payment is successful
             $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-            $insertSql = "INSERT INTO booking (userid, turfname, date, startTime, endTime, userName, userEmail) VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
+            $insertSql = "INSERT INTO booking (userid, fname, date, startTime, endTime, address, email) VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$address', '$email')";
 
-            if ($coni->query($insertSql) === TRUE) {
-                // Send email notification only when the booking is successful
-                $to = 'aryanjadhav686@gmail.com';
-                $subject = 'New Booking';
-                $message = "New booking by $userName on $date from $startTime to $endTime for turf $name.";
-                $result = smtp_mailer($to, $subject, $message);
+            // if ($coni->query($insertSql) === TRUE) {
+            //     // Send email notification only when the booking is successful
+            //     $to = 'aryanjadhav686@gmail.com';
+            //     $subject = 'New Booking';
+            //     $message = "New booking by $address on $date from $startTime to $endTime for turf $name.";
+            //     $result = smtp_mailer($to, $subject, $message);
 
-                $uto = $userEmail;
-                $usubject = 'Booking Done Successfully';
-                $umessage = "Your booking by $userName on $date from $startTime to $endTime for turf $name has been successfully done.";
-                $uresult = smtp_mailer($uto, $usubject, $umessage);
+            //     $uto = $email;
+            //     $usubject = 'Booking Done Successfully';
+            //     $umessage = "Your booking by $address on $date from $startTime to $endTime for turf $name has been successfully done.";
+            //     $uresult = smtp_mailer($uto, $usubject, $umessage);
 
-                if ($result === 'Sent' && $uresult === 'Sent') {
-                    // Email sent successfully
-                    $response['email_status'] = 'Email sent successfully.';
-                    // Booking successful message
-                    $response['success_message'] = 'Booking successful!';
-                } else {
-                    // Email sending failed
-                    $response['email_status'] = 'Email sending failed. ' . $result;
-                    // Booking failed message
-                    $response['error_message'] = 'Booking failed. Please try again later.';
-                }
+            //     if ($result === 'Sent' && $uresult === 'Sent') {
+            //         // Email sent successfully
+            //         $response['email_status'] = 'Email sent successfully.';
+            //         // Booking successful message
+            //         $response['success_message'] = 'Booking successful!';
+            //     } else {
+            //         // Email sending failed
+            //         $response['email_status'] = 'Email sending failed. ' . $result;
+            //         // Booking failed message
+            //         $response['error_message'] = 'Booking failed. Please try again later.';
+            //     }
 
-                // Send success response
-                $response['success'] = true;
-            } else {
-                // Send error response with details
-                $response['success'] = false;
-                $response['error'] = mysqli_error($coni);
-            }
+            //     // Send success response
+            //     $response['success'] = true;
+            // } else {
+            //     // Send error response with details
+            //     $response['success'] = false;
+            //     $response['error'] = mysqli_error($coni);
+            // }
         } else {
             // Payment failed
             $response['success'] = false;
@@ -141,46 +140,37 @@ $coni->close();
     
 
   <?php 
-  $start_time_12hr = date("h:i A", strtotime($row9['start']));
-  $end_time_12hr = date("h:i A", strtotime($row9['end']));
+//   $start_time_12hr = date("h:i A", strtotime($row9['start']));
+//   $end_time_12hr = date("h:i A", strtotime($row9['end']));
   ?>
     <!-- Booking form container -->
     <div class="container booking-container">
         <!-- Booking form -->
-        <form id="bookingForm" method="post">
+        <form action="shoppurchase.php" id="purchaseForm" method="post">
+
             <div class="form-group">
-                <label for="turfname">Turf Name:</label>
-                <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['name']) ?> " class="form-control" readonly>
+                <label for="fname">Turf Name:</label>
+                <input type="text" id="fname" name="fname" value="<?= ucfirst($row9['name']) ?> " class="form-control" readonly>
             </div>
+
             <div class="form-group">
-                <label for="turfname">Price:</label>
-                <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
+                <label for="fname">Price:</label>
+                <input type="text" id="fname" name="fname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
             </div>
-            <div class="form-group">
-                <label for="validtime">Valid Time:</label>
-                <input type="text" id="validtime" name="validtime" placeholder="From=<?= $start_time_12hr; ?>   To=<?= $end_time_12hr; ?>" class="form-control" readonly>
-            </div>
-            <div class="form-group">
+
+            <!-- <div class="form-group">
                 <label for="bookingDate">Select Date:</label>
                 <input type="date" id="bookingDate" name="date" class="form-control" required>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="startTime">Start Time:</label>
-                    <input type="time" id="startTime" class="form-control" placeholder="Start Time" name="startTime" required >
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="endTime">End Time:</label>
-                    <input type="time" id="endTime" class="form-control" placeholder="End Time" name="endTime" required>
-                </div>
-            </div>
+            </div> -->
+
             <div class="form-group">
-                <label for="userName">Your Name:</label>
-                <input type="text" id="userName" class="form-control" placeholder="Enter Your Name" name="userName" required>
+                <label for="address">Your Address:</label>
+                <input type="address" id="address" class="form-control" placeholder="Enter Your Address" name="address" required>
             </div>
+
             <div class="form-group">
-                <label for="userEmail">Your Email:</label>
-                <input type="email" id="userEmail" class="form-control" placeholder="Enter Your Email" name="userEmail" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter Your Email" name="email" required>
             </div>
             <div class="pt-3">
             <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button>
@@ -193,12 +183,12 @@ document.getElementById('payButton').addEventListener('click', function(e) {
     e.preventDefault();
 
     // Perform form validation
-    var turfname = document.getElementById('turfname').value;
+    var fname = document.getElementById('fname').value;
     var bookingDate = document.getElementById('bookingDate').value;
     var startTime = document.getElementById('startTime').value;
     var endTime = document.getElementById('endTime').value;
-    var userName = document.getElementById('userName').value;
-    var userEmail = document.getElementById('userEmail').value;  
+    var address = document.getElementById('address').value;
+    var email = document.getElementById('email').value;  
 
     var validStartTime = '<?= $row9['start'] ?>';
     var validEndTime = '<?= $row9['end'] ?>';
@@ -228,7 +218,7 @@ document.getElementById('payButton').addEventListener('click', function(e) {
         return;
     }
 
-    if (!turfname || !bookingDate || !startTime || !endTime || !userName || !userEmail) {
+    if (!fname || !bookingDate || !startTime || !endTime || !address || !email) {
         alert('Please fill out all fields before proceeding to payment.');
         return;
     }
@@ -245,11 +235,11 @@ document.getElementById('payButton').addEventListener('click', function(e) {
             // Handle success callback
             console.log(response);
             // Submit the form after successful payment
-            document.getElementById('bookingForm').submit();
+            document.getElementById('purchaseForm').submit();
         },
         "prefill": {
-            "name": document.getElementById('userName').value,
-            "email": document.getElementById('userEmail').value
+            "name": document.getElementById('address').value,
+            "email": document.getElementById('email').value
         },
         "theme": {
             "color": "#198754"

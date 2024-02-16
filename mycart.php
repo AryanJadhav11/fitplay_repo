@@ -97,7 +97,8 @@
                     <?php 
                         if(isset($_SESSION['user_data']) && count($_SESSION['user_data'])>0){
                     ?>
-                    <form action="purchase.php" method="POST">
+                    <form  action="purchase.php" method="POST">
+                       <input type="hidden" name="gtotal" value="<?php echo $grandTotal; ?>">
 
                         <div class="form-group">
                             <label>Full Name</label>
@@ -121,8 +122,9 @@
 
                         
                         <button class="btn btn-primary btn-block" name="purchase">Checkout</button>
-                    </form>
-                    <?php } ?>
+                    </form>                            
+                                        
+                   <?php } ?>
                 </div>
 
             </div>
