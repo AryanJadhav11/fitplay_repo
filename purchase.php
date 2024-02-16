@@ -44,12 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
         }
 
         // Unset the session after successful purchase
-        unset($_SESSION['user_data']);
+        isset($_SESSION['user_data']);
         
         echo "<script>
             window.location.href='shopcheckout.php';
             </script>";
-        exit; // Add an exit to prevent further execution
+         // Add an exit to prevent further execution
     } else {
         echo "<script>
             alert('SQL error: " . mysqli_error($con) . "');
