@@ -567,6 +567,7 @@ ul {
 
 <body>
 
+<section class="p-9">
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4 shadow">
@@ -641,7 +642,7 @@ if (isset($_POST['Add_To_Cart'])) {
     <form  method="POST">
     <div class="super_container">
    
-    <div class="single_product">
+    <div class="single_product p-0">
         <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
             <div class="row">
                 
@@ -699,7 +700,7 @@ if (isset($_POST['Add_To_Cart'])) {
     </div>
 </div>
 </form>
-
+</section>
 
 
 
