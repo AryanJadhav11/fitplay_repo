@@ -285,11 +285,10 @@ function getInitials($name) {
   <link href="GYm/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="GYm/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="GYm/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
-  <!-- <link href="GYm/assets/css/style.css" rel="stylesheet"> -->
+  <link href="GYm/assets/css/style.css" rel="stylesheet">
   <style>
     body{
-      background:#F7F7F7;
-      overflow-x:hidden;
+      background-color: rgb(19,20,21);
     }
     .intro {
       display: flex;
@@ -411,7 +410,7 @@ function getInitials($name) {
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="gym.php">Gyms</a></li>
+                        <li><a href="#">Gyms</a></li>
                         <li><a href="turf.php">Turfs</a></li>
                        
                     </ul>

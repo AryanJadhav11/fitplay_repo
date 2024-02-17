@@ -1,4 +1,4 @@
-<?php include('header.php') ?> 
+<?php include('gymheader.php') ?> 
 
 <head>
   <title>FitPlay-Gym</title>
@@ -24,7 +24,7 @@
           <h1>About Us</h1>
         </b>
         <p style="text-align: center;">At FitPlay, we're revolutionizing the way you discover gyms. Say goodbye to the inconvenience of visiting
-          multiple gyms in person – our platform saves you time by providing an extensive directory of gyms, each with
+          multiple gyms in person - our platform saves you time by providing an extensive directory of gyms, each with
           comprehensive information. Whether you're searching for the perfect workout spot or seeking new fitness
           experiences, we're here to streamline your journey to finding the ideal gym. Start exploring today and take
           the first step towards your fitness goals, all from the convenience of your device</p>
@@ -47,7 +47,7 @@
       <div class="d-flex gym-row">
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/muscletree-image-1.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/muscletree-image-1.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Muscle tree</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Nagala park,kolhapur</p>
@@ -58,7 +58,7 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/ruggedian.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/ruggedian.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Ruggedian Fitness Multiplex</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
@@ -69,7 +69,7 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/goldsgym.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/goldsgym.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Gold's Gym</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
@@ -81,7 +81,7 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/absgym.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/absgym.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">ABS Gym</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Sayaji Hotel, Kolhapur</p>
@@ -94,7 +94,7 @@
       <div class="d-flex gym-row">
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/muscletree-image-1.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/muscletree-image-1.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Muscle tree</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Nagala park,kolhapur</p>
@@ -105,7 +105,7 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/ruggedian.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/ruggedian.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Ruggedian Fitness Multiplex</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
@@ -116,7 +116,7 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/goldsgym.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/goldsgym.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Gold's Gym</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
@@ -128,7 +128,7 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="./assets/img/absgym.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/absgym.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">ABS Gym</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Sayaji Hotel, Kolhapur</p>
