@@ -402,7 +402,7 @@ function getInitials($name) {
 
   <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
-    <h1 class="logo"><a href="index.html"><span style="color: rgb(190, 190, 190)">Fit</span><span style="color: rgb(0, 0, 255)">Play.</span></a></h1>
+    <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png"><span style="color: #cfcfcf"> Fit</span><span style="color: #27952E">Play</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             
