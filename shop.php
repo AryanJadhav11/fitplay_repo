@@ -32,7 +32,7 @@ $respic=mysqli_fetch_assoc($quepro);
 <br>
 
 <!-- carosal start -->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
       <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
@@ -176,7 +176,7 @@ $respic=mysqli_fetch_assoc($quepro);
                             <div class="container page-wrapper">
                                 <div class="page-inner">
                                     <div class="row">
-                                        <div class="el-wrapper" >
+                                        <div class="el-wrapper"style="height:400px; background-color:#f7f7f7;" >
                                             <div class="box-up">
                                             <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
                                             <?php $img = $respro['pic'] ?>
