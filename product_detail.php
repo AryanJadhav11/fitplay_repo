@@ -632,8 +632,21 @@ if (isset($_POST['Add_To_Cart'])) {
     // Insert the item into the order_his table
     $sql = "INSERT INTO `order_his` (`user_id`, `item_name`, `price`, `quantity`) 
             VALUES ('$user_id', '$item_name', '$price', '$quantity')";
-
+            
     $result = mysqli_query($conn, $sql);
+
+    // Insert the item into the buy_items table
+    $sql2 = "INSERT INTO `buy_items` (`user_ids`, `item_names`, `prices`, `quantitys`) 
+            VALUES ('$user_id', '$item_name', '$price', '$quantity')";
+
+    $result2 = mysqli_query($conn, $sql2);
+
+    if ($result && $result2) {
+        echo "Item added to cart successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
 }
     ?>
 

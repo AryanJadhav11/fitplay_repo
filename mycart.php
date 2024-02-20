@@ -37,6 +37,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                               <thead>
                                  <tr>
+                                    <th>Sr No.</th>
                                     <th>Product Name</th>
                                     <th>Price</th>                 
                                     <th>Quantity</th>
@@ -48,6 +49,7 @@
                               <tbody>
                               <?php
                               $grandTotal=0;
+                              $sr=0;
                         if ($rowCount > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $iid=$row['item_id'];
@@ -56,8 +58,10 @@
                                 $quantity = $row['quantity'];
                                 $total= $price*$quantity;
                                 $grandTotal = $grandTotal + $total;
+                                $sr++;
 
                                 echo '<tr>
+                                    <td>' . $sr . '</td>
                                     <td scope="row">' . $item_name . '</td>
                                     <td>' . $price . '</td>
                                     <td>' . $quantity . '</td>

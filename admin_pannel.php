@@ -959,7 +959,7 @@ style="fill:#FFFFFF;">
                             <th scope="col">Address</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Pay Mode</th>
-                            <th scope="col">Orders</th>
+                            <th scope="col">Buy Orders</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -987,21 +987,24 @@ style="fill:#FFFFFF;">
                                      <th scope='col'>Price</th>
                                      <th scope='col'>Quantity</th>
                                      <th scope='col'>DateTime</th>
+                                     <th scope='col'>Payment Status</th>
                                    </tr>
                                  </thead>
                                  <tbody>                                
                                  ";
                           
                                     //Inner table connectivity//
-                                    $order_query = "SELECT * FROM `order_his` WHERE `user_id`=$user_fetch[user_id]";
+                                    $order_query = "SELECT * FROM `buy_items` WHERE `user_ids`=$user_fetch[user_id]";
                                     $order_result = mysqli_query($con, $order_query);
                                     while ($order_fetch = mysqli_fetch_assoc($order_result)) {
                                         echo "
                                         <tr>
-                                            <th>$order_fetch[item_name]</th>
-                                            <td>$order_fetch[price]</td>
-                                            <td>$order_fetch[quantity]</td>
-                                            <td>$order_fetch[date]</td>
+                                            <th>$order_fetch[item_names]</th>
+                                            <td>$order_fetch[prices]</td>
+                                            <td>$order_fetch[quantitys]</td>
+                                            <td>$order_fetch[dates]</td>
+                                            <td>$order_fetch[pay_stats]</td>
+
                                         </tr>
                                         ";
                                     }

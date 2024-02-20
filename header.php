@@ -24,11 +24,7 @@
   $showalert = false;
   $login = false;
     $showerr = false;
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $err = "";
-    $username = $_POST["uname"];
-    $password = $_POST["password"];
+    if (isset($_POST["uname"]) && isset($_POST["password"])) {
 
     $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
     $result = mysqli_query($conn, $sql);
