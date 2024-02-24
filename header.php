@@ -24,7 +24,10 @@
   $showalert = false;
   $login = false;
     $showerr = false;
-    if (isset($_POST["uname"]) && isset($_POST["password"])) {
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $err = "";
+    $username = $_POST["uname"];
+    $password = $_POST["password"];
 
     $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
     $result = mysqli_query($conn, $sql);
@@ -50,11 +53,11 @@
         $_SESSION['error'] = "Invalid Email / Password";
     }
  }
-//  echo "User data in session:<br>";
-//  foreach ($_SESSION['user_data'] as $key => $value) {
-//     echo "$key: $value<br>";
-//   }
-  // Your remaining code for the login page goes here
+ echo "User data in session:<br>";
+ foreach ($_SESSION['user_data'] as $key => $value) {
+    echo "$key: $value<br>";
+  }
+  //Your remaining code for the login page goes here
  
 ?>
 <?php

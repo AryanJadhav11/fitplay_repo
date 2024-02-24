@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
     $phone_no = mysqli_real_escape_string($con, $_POST['phone_no']);
     $address = mysqli_real_escape_string($con, $_POST['address']);
     $gtotal = mysqli_real_escape_string($con, $_POST['gtotal']);
+    $pay_stats = 'PAID'; // Note: Fixed the missing semicolon
 
     // Database connectivity to insert order_manager
     $query1 = "INSERT INTO `order_manager`(`user_id`, `Full_Name`, `Phone_No`, `Address`, `Total`)
@@ -37,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
                 $quantity = $values['quantity'];
 
                 // Database connectivity to insert order_his
-                $query2 = "INSERT INTO `order_his`(`user_id`, `order_manager_id`, `item_id`, `item_name`, `price`, `quantity`) 
-                           VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity')";
+                $query2 = "INSERT INTO `buy_items`(`user_ids`, `order_manager_id`, `item_ids`, `item_names`, `prices`, `quantitys`,`pay_stats`) 
+                           VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity', '$pay_stats')";
 
                 mysqli_query($con, $query2);
             }
@@ -52,12 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
             "name" => "FitPlay - Turf Booking Platform",
             "description" => "Order Payment",
             "image" => "favicon.png", // Replace with your logo URL
-            "handler" => "function(response) {
-                // Handle Razorpay success response
-                console.log(response);
-                // You can perform additional actions here, such as displaying a confirmation message
-                // or redirecting the user to a confirmation page.
-            }",
             "prefill" => [
                 "name" => $fullname,
                 "email" => "customer@example.com", // Replace with the customer's email
@@ -79,6 +74,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
 <script>
     var options = <?php echo $razorpay_options_json; ?>;
     var rzp = new Razorpay(options);
+    rzp.on('payment.success', function(response) {
+        // Handle successful payment response
+        console.log(response);
+        // Redirect the user to a confirmation page or perform other actions
+        window.location.href = 'payment_success.php';
+    });
     rzp.open();
 </script>
 
