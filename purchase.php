@@ -38,21 +38,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
                 $quantity = $values['quantity'];
 
                 // Database connectivity to insert order_his
-                $query2 = "INSERT INTO `buy_items`(`user_ids`, `order_manager_id`, `item_ids`, `item_names`, `prices`, `quantitys`,`pay_stats`) 
-                           VALUES ('$user_id', '$order_manager_id', '$item_id', '$item_name', '$price', '$quantity', '$pay_stats')";
+                $query2 = "INSERT INTO `buy_items`(`user_ids`, `item_names`, `prices`, `quantitys`,`pay_stats`) 
+                           VALUES ('$user_id', '$item_name', '$price', '$quantity', '$pay_stats')";
 
                 mysqli_query($con, $query2);
             }
         }
 
-        // Initialize Razorpay payment options
+        // Razorpay Integration
         $razorpay_options = [
-            "key" => "rzp_live_z6prMSW9WlOpcp", // Replace with your Razorpay API key
+            "key" => "rzp_live_z6prMSW9WlOpcp",
             "amount" => $gtotal * 100, // Amount in smallest currency unit (e.g., paise in INR)
             "currency" => "INR",
-            "name" => "FitPlay - Turf Booking Platform",
-            "description" => "Order Payment",
-            "image" => "favicon.png", // Replace with your logo URL
+            "name" => "SHOP", // Retrieve dynamically from your database
+            "description" => "Buying Product", // Retrieve dynamically from your database
+            "image" => "logo.png", // Replace with your logo URL
+            "handler" => "function(response) {
+                // Handle success callback
+                console.log(response);
+                
+                // Execute insertion queries after successful payment
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // Redirect user or show confirmation message after successful insertion
+                        window.location.href = 'payment_success.php';
+                    }
+                };
+                xhttp.open('POST', 'this_page.php', true);
+                xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhttp.send('insert_order_manager=1&insert_buy_items=1&user_id=$user_id);
+            }",
             "prefill" => [
                 "name" => $fullname,
                 "email" => "customer@example.com", // Replace with the customer's email
@@ -74,12 +90,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['purchase'])) {
 <script>
     var options = <?php echo $razorpay_options_json; ?>;
     var rzp = new Razorpay(options);
-    rzp.on('payment.success', function(response) {
-        // Handle successful payment response
-        console.log(response);
-        // Redirect the user to a confirmation page or perform other actions
-        window.location.href = 'payment_success.php';
-    });
     rzp.open();
 </script>
 

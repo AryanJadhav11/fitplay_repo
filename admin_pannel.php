@@ -958,7 +958,7 @@ style="fill:#FFFFFF;">
                             <th scope="col">Phone No.</th>
                             <th scope="col">Address</th>
                             <th scope="col">Amount</th>
-                            <th scope="col">Pay Mode</th>
+                            <th scope="col">Date</th>
                             <th scope="col">Buy Orders</th>
                         </tr>
                     </thead>
@@ -977,12 +977,13 @@ style="fill:#FFFFFF;">
                                  <td>$user_fetch[Phone_No]</td>
                                  <td>$user_fetch[Address]</td>
                                  <td>$user_fetch[Total]</td>
-                                 <td>$user_fetch[Pay_Mod]</td>
+                                 <td>$user_fetch[date]</td>
                                  <td>
                                  
                                  <table class='table'>
                                  <thead>
                                    <tr> 
+                                     <th scope='col'>Item_ID</th>
                                      <th scope='col'>Item_Name</th>
                                      <th scope='col'>Price</th>
                                      <th scope='col'>Quantity</th>
@@ -999,6 +1000,7 @@ style="fill:#FFFFFF;">
                                     while ($order_fetch = mysqli_fetch_assoc($order_result)) {
                                         echo "
                                         <tr>
+                                            <th>$order_fetch[item_ids]</th>
                                             <th>$order_fetch[item_names]</th>
                                             <td>$order_fetch[prices]</td>
                                             <td>$order_fetch[quantitys]</td>
