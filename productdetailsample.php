@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- cdn links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
+<?php include("header.php");?>
+
     <!-- start -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
@@ -25,11 +32,6 @@
       <div class="desc">
         From its humble origins as a surfwear brand, Stussy has gone on to become one of the biggest streetwear labels in the industry. Mixing various influences ranging from surf to music and everything in between, Stussy and it’s iconic signature graphic has grown to encapsulate a full range of apparel, home goods and limited-edition collaborations. 100% premium cotton raglan tee with 3/4 -length contrasting sleeves and graphic print on chest.
       </div>
-      <ul class="sizing-list">
-        <li class="size">S</li>
-        <li class="size active">M</li>
-        <li class="size">L</li>
-      </ul>
       <a href="" class="button">Add to Cart</a>
     </div>
     
