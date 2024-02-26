@@ -143,450 +143,6 @@ header .text .arrow .left:after, header .text .arrow .right:after, header .text 
 }
 /*End Dots*/
 
-/*Start Loader*/
-.loader-wrap, .loader {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-.loader-wrap {
-    background-color: #a96700;
-    z-index: 30;
-}
-.loader-wrap.remove {
-    display: none;
-}
-.loader {
-    margin: auto;
-    height: 40px;
-    width: 80px;
-    box-sizing: border-box;
-}
-.loader .loader-item {
-    position: relative;
-    float: left;
-    height: 40px;
-    width: 4px;
-    margin: 0 2px;
-    background-color: #fff;
-}
-.loader .loader-item:nth-child(1) {
-    -webkit-animation: loader-item-1 2s linear infinite;
-    animation: loader-item-1 2s linear infinite;
-}
-.loader .loader-item:nth-child(2) {
-    -webkit-animation: loader-item-2 2s linear infinite;
-    animation: loader-item-2 2s linear infinite;
-}
-.loader .loader-item:nth-child(3) {
-    -webkit-animation: loader-item-3 2s linear infinite;
-    animation: loader-item-3 2s linear infinite;
-}
-.loader .loader-item:nth-child(4) {
-    -webkit-animation: loader-item-4 2s linear infinite;
-    animation: loader-item-4 2s linear infinite;
-}
-.loader .loader-item:nth-child(5) {
-    -webkit-animation: loader-item-5 2s linear infinite;
-    animation: loader-item-5 2s linear infinite;
-}
-.loader .loader-item:nth-child(6) {
-    -webkit-animation: loader-item-6 2s linear infinite;
-    animation: loader-item-6 2s linear infinite;
-}
-.loader .loader-item:nth-child(7) {
-    -webkit-animation: loader-item-7 2s linear infinite;
-    animation: loader-item-7 2s linear infinite;
-}
-.loader .loader-item:nth-child(8) {
-    -webkit-animation: loader-item-8 2s linear infinite;
-    animation: loader-item-8 2s linear infinite;
-}
-.loader .loader-item:nth-child(9) {
-    -webkit-animation: loader-item-9 2s linear infinite;
-    animation: loader-item-9 2s linear infinite;
-}
-.loader .loader-item:nth-child(10) {
-    -webkit-animation: loader-item-10 2s linear infinite;
-    animation: loader-item-10 2s linear infinite;
-}
-.loader:after {
-    content: 'Loading...';
-    font-size: 16px;
-    font-family: Arial, serif;
-    color: #fff;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -32px;
-    margin: auto;
-}
-@-webkit-keyframes loader-item-1 {
-    1% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    11% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    21% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-1 {
-    1% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    11% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    21% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-2 {
-    7% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    17% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    27% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-2 {
-    7% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    17% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    27% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-3 {
-    13% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    23% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    33% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-3 {
-    13% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    23% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    33% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-4 {
-    19% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    29% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    39% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-4 {
-    19% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    29% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    39% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-5 {
-    25% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    35% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    45% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-5 {
-    25% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    35% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    45% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-6 {
-    31% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    41% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    51% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-6 {
-    31% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    41% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    51% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-7 {
-    37% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    47% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    57% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-7 {
-    37% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    47% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    57% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-8 {
-    43% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    53% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    63% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-8 {
-    43% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    53% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    63% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-9 {
-    49% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    59% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    69% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-9 {
-    49% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    59% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    69% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@-webkit-keyframes loader-item-10 {
-    55% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    65% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    75% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-@keyframes loader-item-10 {
-    55% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    65% {
-        -webkit-transform: scaleY(1.4);
-        transform: scaleY(1.4);
-    }
-    75% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-    }
-}
-/*End Loader*/
-
 /*Start Home Page*/
 
 /*Start Header*/
@@ -1393,46 +949,109 @@ if (pageTitle.text === "ROSA- Restaurant") {
   </div>
   <!--End Dots-->
 
- <!--Start Header-->
-  <header>
-      <nav>
-          <div class="logo">
-              <a href="index.html"><img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/logo-rosa-white.png" alt="Rosa Logo"></a>
-          </div>
-          <div class="toggle">
-              <span class="first"></span>
-              <span class="middle"></span>
-              <span class="last"></span>
-          </div>
-          <div class="navigation-bar">
-              <ul>
-                  <li class="active"><a href="index.html">Home<span class="underline"></span></a></li>
-                  <li><a href="#">Reservations<span class="underline"></span></a></li>
-                  <li><a href="#">Menu<span class="underline"></span></a></li>
-                  <li><a href="#">Blog<span class="underline"></span></a></li>
-                  <li><a href="#">Features<span class="underline"></span></a></li>
-                  <li><a href="#">Shop<span class="underline"></span></a></li>
-                  <li><a href="#">Contact<span class="underline"></span></a></li>
-              </ul>
-          </div>
-      </nav>
-      <div class="text">
-          <h2>Welcome</h2>
-          <h1>THE ROSA</h1>
-          <div class="arrow">
-              <span class="left"></span>
-              <i class="fas fa-asterisk"></i>
-              <span class="right"></span>
-          </div>
-          <span>Ready To Be Opened</span>
-          <div class="button"><button>Explore</button></div>
-      </div>
-      <svg class="svg-down" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="currentColor" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
-      <div class="arrow-down">
-      </div>
-  </header>
-  <!--End Header-->
+ <!-- nav start -->
 
+<!-- nav end -->
+<!-- start main -->
+<div class="centeri">
+<div class="card">
+  
+
+  <img src="https://i.pinimg.com/originals/10/f7/41/10f7414c0d4984194f5e1316bd61ca0d.png" class="foto" style="width:100%">
+   <header>
+     <h1>NIKE AM90id</h1>
+  </div>
+</div>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+    		@import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
+        		@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap');
+
+img{
+    position: fixed;
+  top: -8%;
+  left: 0%;
+  border-radius: 50px;
+  opacity:0.9;
+  transition: 0.5s;
+
+   
+}
+h1{
+  	   transition: transform 2s;
+    font-size: 60px;
+color: white;
+ font-family: 'Big Shoulders Display', cursive;
+}
+.card:hover > p{
+    opacity:1;
+       transform: scale(1.5)
+    top:80%;
+ 
+}
+img:hover .card{
+        
+  
+}
+img, #parent {
+    cursor: pointer;
+    
+}
+.card:hover > img{
+    opacity:1;
+       transform: scale(1.4);
+             
+}
+.card header {
+    position:absolute;
+ 
+  top: 120%;
+  left: 0%;
+    padding: 1px;
+    border-radius:  25px;
+   width: 450px;
+         height: 90px;
+     transition: all .5s;
+    opacity:0;
+}
+.card:hover > header{
+  
+    opacity:1;
+         width: 450px;
+         height: 90px;
+             transform: translateY(-120px);
+}
+
+ .card {
+
+    	   transition: transform .7s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: white;
+    width: 450px;
+  height: 450px;
+}
+.card:hover{
+
+   transform: scale(1.08)
+}
+  .centeri{ 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  }
+  span{
+    
+    position: relative;
+  }
+  
+</style>
+<!-- main end -->
   <!--start About Us-->
   <div class="about-us">
       <div class="text">

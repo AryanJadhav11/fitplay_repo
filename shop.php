@@ -192,7 +192,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                                 <div class="h-bg">
                                                     <div class="h-bg-inner"></div>
                                                 </div>
-                                                <a class="cart" href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
+                                                <a class="cart" href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
                                                     <span class="price"id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</span>
                                                     <span class="add-to-cart">
                                                         <span class="txt">View Product</span>
