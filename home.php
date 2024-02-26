@@ -23,8 +23,8 @@
   .content {
     position: relative;
     z-index: 1;
-    color: #fff;
     text-align: center;
+    margin-top:100px; 
     padding: 20px;
   }
 </style>
@@ -33,13 +33,11 @@
 
 <div class="video-container" >
   <video autoplay muted loop>
-    <source src="https://media.istockphoto.com/id/1426877619/video/football-championship-ball-hits-net-in-slow-motion-goalkeeper-jumps-and-fails-to-protect.mp4?s=mp4-640x640-is&k=20&c=BAuUaeRKUeI0UJ7bIrx6kt5LLkyIhSS1mB1aICSTjpY=" type="video/mp4">
+    <source src="" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="content">
-    <!-- Your content here -->
-    <h1>Welcome to My Website</h1>
-    <p>This is some content overlaid on top of the video background.</p>
+   <img src="logo.png" alt="">
   </div>
 </div>
 
