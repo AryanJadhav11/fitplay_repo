@@ -48,7 +48,20 @@ if(isset($_GET['user_id']))
    $sql9="SELECT * FROM `order_manager` WHERE user_id='$blid';";
    $res9=mysqli_query($coni,$sql9);
    $row9=mysqli_fetch_assoc($res9);
-  
+
+//  ///////////////////////////////////////////
+   $blidd=$_GET['user_id'];
+   $sql91="SELECT * FROM `order_his` WHERE user_id='$blidd';";
+   $res91=mysqli_query($coni,$sql91);
+   $row91=mysqli_fetch_assoc($res91);
+
+   if ($res91) {
+        while ($row = mysqli_fetch_assoc($res91)) {
+            $item_name = mysqli_real_escape_string($con, $row['item_name']);
+            $price = mysqli_real_escape_string($con, $row['price']);
+            $quantity = mysqli_real_escape_string($con, $row['quantity']);
+       }  
+     }
 }
 $response = array();
 
@@ -73,7 +86,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($paymentSuccess) {
             // Insert booking into the database only if payment is successful
             $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-            $insertSql = "INSERT INTO booking (userid, fname, date, startTime, endTime, address, email) VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$address', '$email')";
+            $insertSql = "INSERT INTO booking (userid, fname, date, startTime, endTime, address, email) VALUES ('$user_id', '$name', '$address', '$email')";
+
+            $query2 = "INSERT INTO `buy_items`(`user_ids`, `item_names`, `prices`, `quantitys`,) VALUES ('$user_id', '$item_name', '$price', '$quantity')";
+
 
             // if ($coni->query($insertSql) === TRUE) {
             //     // Send email notification only when the booking is successful
@@ -138,30 +154,20 @@ $coni->close();
 </head>
 <body>
     
-
-  <?php 
-//   $start_time_12hr = date("h:i A", strtotime($row9['start']));
-//   $end_time_12hr = date("h:i A", strtotime($row9['end']));
-  ?>
     <!-- Booking form container -->
     <div class="container booking-container">
         <!-- Booking form -->
         <form action="shoppurchase.php" id="purchaseForm" method="post">
 
             <div class="form-group">
-                <label for="fname">Turf Name:</label>
-                <input type="text" id="fname" name="fname" value="<?= ucfirst($row9['name']) ?> " class="form-control" readonly>
+                <label for="amount">Payable Amount:</label>
+                <input type="text" id="amount" name="amount" value="<?= ucfirst($row9['Total']) ?> " class="form-control" readonly>
             </div>
 
             <div class="form-group">
-                <label for="fname">Price:</label>
-                <input type="text" id="fname" name="fname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
+                <label for="fname">Your Name:</label>
+                <input type="text" id="fname" name="fname" class="form-control" required>
             </div>
-
-            <!-- <div class="form-group">
-                <label for="bookingDate">Select Date:</label>
-                <input type="date" id="bookingDate" name="date" class="form-control" required>
-            </div> -->
 
             <div class="form-group">
                 <label for="address">Your Address:</label>
@@ -184,41 +190,11 @@ document.getElementById('payButton').addEventListener('click', function(e) {
 
     // Perform form validation
     var fname = document.getElementById('fname').value;
-    var bookingDate = document.getElementById('bookingDate').value;
-    var startTime = document.getElementById('startTime').value;
-    var endTime = document.getElementById('endTime').value;
     var address = document.getElementById('address').value;
     var email = document.getElementById('email').value;  
 
-    var validStartTime = '<?= $row9['start'] ?>';
-    var validEndTime = '<?= $row9['end'] ?>';
 
-    // Combine date and time for better comparison
-    var selectedStartTime = new Date(bookingDate + ' ' + startTime);
-    var selectedEndTime = new Date(bookingDate + ' ' + endTime);
-
-    // actual open time of turf 
-    var validStartTimeObj = new Date(bookingDate + ' ' + validStartTime);
-    var validEndTimeObj = new Date(bookingDate + ' ' + validEndTime);
-
-    // Check if the selected start time is within the valid range
-    if (selectedStartTime < validStartTimeObj || selectedStartTime > validEndTimeObj) {
-        alert('Sorry, turf is only open from ' + validStartTime + ' to ' + validEndTime);
-        return;
-    }
-
-    // Check if the selected end time is within the valid range
-    if (selectedEndTime < validStartTimeObj || selectedEndTime > validEndTimeObj) {
-        alert('Sorry, turf is only open from ' + validStartTime + ' to ' + validEndTime);
-        return;
-    }
-
-    if (new Date(bookingDate) < new Date()) {
-        alert('Please select a future date.');
-        return;
-    }
-
-    if (!fname || !bookingDate || !startTime || !endTime || !address || !email) {
+    if (!fname  || !address || !email) {
         alert('Please fill out all fields before proceeding to payment.');
         return;
     }

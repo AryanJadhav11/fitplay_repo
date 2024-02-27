@@ -127,7 +127,7 @@
                         
                         <button class="btn btn-primary btn-block" name="purchase">Checkout</button>
                     </form>                            
-                                        
+                    <a href = 'shopcheckout.php' ><button class="btn btn-primary btn-block" name="">Checkout</button></a>
                    <?php } ?>
                 </div>
 
