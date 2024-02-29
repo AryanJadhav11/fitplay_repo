@@ -511,5 +511,7 @@ function getInitials($name) {
  <!-- Login Modal End -->
 
 </head>
+
+
   <!-- script for fixed navbar -->
   <script src="GYm/assets/js/main.js"></script>
