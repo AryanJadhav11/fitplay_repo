@@ -42,6 +42,25 @@ $coni = mysqli_connect($server, $user, $pass, $db);
 if (!$coni) {
     die(mysqli_error($coni));
 }
+
+// Retrive Data from mycart to display order details
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sub'])) {
+
+    // Data validation
+    $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : '';
+    $gtotal = isset($_POST['payableAmount']) ? mysqli_real_escape_string($coni, $_POST['payableAmount']) : '';
+   // $itemid = isset($_POST['itemid']) ? mysqli_real_escape_string($coni, $_POST['itemid']) : '';
+
+
+    // Ensure the 'gtotal' value is received
+    if (empty($gtotal)) {
+        // Handle the case when 'gtotal' is not received
+        echo "Payable amount is missing.";
+        exit; // Stop further execution
+    }
+}
+
+
 if(isset($_GET['user_id']))
 {
    $blid=$_GET['user_id'];
@@ -49,19 +68,6 @@ if(isset($_GET['user_id']))
    $res9=mysqli_query($coni,$sql9);
    $row9=mysqli_fetch_assoc($res9);
 
-//  ///////////////////////////////////////////
-   $blidd=$_GET['user_id'];
-   $sql91="SELECT * FROM `order_his` WHERE user_id='$blidd';";
-   $res91=mysqli_query($coni,$sql91);
-   $row91=mysqli_fetch_assoc($res91);
-
-   if ($res91) {
-        while ($row = mysqli_fetch_assoc($res91)) {
-            $item_name = mysqli_real_escape_string($con, $row['item_name']);
-            $price = mysqli_real_escape_string($con, $row['price']);
-            $quantity = mysqli_real_escape_string($con, $row['quantity']);
-       }  
-     }
 }
 $response = array();
 
@@ -88,8 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
             $insertSql = "INSERT INTO booking (userid, fname, date, startTime, endTime, address, email) VALUES ('$user_id', '$name', '$address', '$email')";
 
-            $query2 = "INSERT INTO `buy_items`(`user_ids`, `item_names`, `prices`, `quantitys`,) VALUES ('$user_id', '$item_name', '$price', '$quantity')";
-
+            
 
             // if ($coni->query($insertSql) === TRUE) {
             //     // Send email notification only when the booking is successful
@@ -135,6 +140,7 @@ $coni->close();
 // Display the response
 ?>
 
+
 <head>
 
     <title>FitPlay - Turf Booking Platform</title>
@@ -157,16 +163,16 @@ $coni->close();
     <!-- Booking form container -->
     <div class="container booking-container">
         <!-- Booking form -->
-        <form action="shoppurchase.php" id="purchaseForm" method="post">
+        <form id="purchaseForm" method="post">
 
             <div class="form-group">
                 <label for="amount">Payable Amount:</label>
-                <input type="text" id="amount" name="amount" value="<?= ucfirst($row9['Total']) ?> " class="form-control" readonly>
+                <input type="text" id="amount" name="amount" value="<?=$gtotal?> " class="form-control" readonly>
             </div>
 
             <div class="form-group">
                 <label for="fname">Your Name:</label>
-                <input type="text" id="fname" name="fname" class="form-control" required>
+                <input type="text" id="fname" name="fname" class="form-control" value="<?=$itemid?>" required>
             </div>
 
             <div class="form-group">

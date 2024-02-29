@@ -37,6 +37,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                               <thead>
                                  <tr>
+                                    <th>s</th>
                                     <th>Sr No.</th>
                                     <th>Product Name</th>
                                     <th>Price</th>                 
@@ -61,6 +62,7 @@
                                 $sr++;
 
                                 echo '<tr>
+                                <td>' . $iid . '</td>
                                     <td>' . $sr . '</td>
                                     <td scope="row">' . $item_name . '</td>
                                     <td>' . $price . '</td>
@@ -96,13 +98,14 @@
                     <h5 class="text-right" id="gtotal" name="gtotal_name"></h5><br>
                     <script>
                       document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>.00';
+                      
                     </script>
                     
                     <?php 
                         if(isset($_SESSION['user_data']) && count($_SESSION['user_data'])>0){
                     ?>
-                    <form  action="purchase.php" method="POST">
-                       <input type="hidden" name="gtotal" value="<?php echo $grandTotal; ?>">
+                    <!-- <form  action="purchase.php" method="POST">
+                       <input type="hidden" name="gtotal" value="<?php echo $iid; ?>">
 
                         <div class="form-group">
                             <label>Full Name</label>
@@ -126,9 +129,29 @@
 
                         
                         <button class="btn btn-primary btn-block" name="purchase">Checkout</button>
-                    </form>                            
-                    <a href = 'shopcheckout.php' ><button class="btn btn-primary btn-block" name="">Checkout</button></a>
-                   <?php } ?>
+                    </form>   -->
+                    <form action="shopcheckout.php" method="POST">
+    <div class="form-group">
+        <label>Payable Amount</label>
+        <label class="text-right" id="payableAmount"><br><b><h6><?php echo $grandTotal; ?> INR</h6></b></label>
+        <input type="hidden" name="payableAmount" value="<?php echo $grandTotal; ?>">
+        
+        <!-- Loop to include item IDs in the form -->
+        <?php 
+        if ($rowCount > 0) {
+            mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
+            while ($row = mysqli_fetch_assoc($result)) {
+                $iid = $row['item_id'];
+                echo '<input type="text" id="itemid" name="itemid[]" value="' . $iid . '">';
+            }
+        }
+        ?>
+    </div>
+    <br>
+    <button class="btn btn-primary btn-block" name="sub" type="submit">Checkout</button>
+</form>
+
+        <?php } ?>
                 </div>
 
             </div>
