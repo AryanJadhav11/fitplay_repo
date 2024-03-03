@@ -36,9 +36,9 @@
     <source src="https://media.istockphoto.com/id/1473665322/video/aesthetic-shot-of-athletic-hispanic-soccer-football-player-doing-an-overhead-kick-on-black.mp4?s=mp4-640x640-is&k=20&c=5pLu6iV89IKji_vLL8oPc5VvphXFv_uL43nMv1app2g=" type="video/mp4">
    
   </video>
-  <div class="content">
-   <img src="logo.png" alt="">
-  </div>
+  <!-- text start -->
+F
+  <!-- text end -->
 </div>
 <!-- paralax start -->
 <div id="parallax-world-of-ugg">
