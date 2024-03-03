@@ -20,11 +20,11 @@
   //     header("Location: turf.php");
   //     exit();
   // }
-  
 
   $showalert = false;
   $login = false;
     $showerr = false;
+
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $err = "";
     $username = $_POST["uname"];
@@ -54,11 +54,11 @@
         $_SESSION['error'] = "Invalid Email / Password";
     }
  }
- echo "User data in session:<br>";
- foreach ($_SESSION['user_data'] as $key => $value) {
-    echo "$key: $value<br>";
-  }
-  //Your remaining code for the login page goes here
+//  echo "User data in session:<br>";
+//  foreach ($_SESSION['user_data'] as $key => $value) {
+//     echo "$key: $value<br>";
+//   }
+  // Your remaining code for the login page goes here
  
 ?>
 <?php
@@ -260,11 +260,149 @@ function getInitials($name) {
         })();
   </script> 
 
+
+<!-- ________________________________________________________GYM_________________________________________________________________________________ -->
+
+
+
+
+
+  <!-- Google Fonts -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Protest+Revolution&family=Russo+One&family=Vina+Sans&display=swap"
+    rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <!-- <link href="GYm/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="GYm/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="GYm/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="GYm/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="GYm/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="GYm/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+  <link href="GYm/assets/css/style.css" rel="stylesheet">
+  <style>
+    body{
+      background-color: rgb(19,20,21);
+    }
+    .intro {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 75vh;
+      width: 100%;
+      background-image: url(GYm/assets/img/weights.avif);
+      background-size: 100% auto;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .text-container {
+      text-align: center;
+      margin-right: 5%;
+      /* Adjust this value according to your preference */
+    }
+
+    .text-container h1,
+    .text-container h4 {
+
+      margin: 0;
+    }
+
+    .abt {
+      height: 350px;
+      width: 100%;
+
+      background-color: rgb(19, 20, 21);
+    }
+
+    .abt .abtus {
+      position: relative;
+      width: 100%;
+      /* Ensure full width */
+      height: 100%;
+      /* Ensure full height */
+    }
+
+    .abt .abtus h1 {
+      font-size: 100px;
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
+      color: rgb(19, 20, 21);
+      font-family: 'Russo One', sans-serif;
+
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      opacity: .3;
+    }
+
+    .abt .abtus p {
+      position: absolute;
+      font-size: 15px;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .slogan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 100%;
+
+      background-image: url(GYm/assets/img/—Pngtree—an\ old\ gym\ setting\ with_2667256.jpg);
+      background-size: 100% auto;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .slogan-content {
+      font-family: 'Protest Revolution', sans-serif;
+      font-size: 60px;
+      color: rgb(255, 132, 0);
+    }
+    .explpore-gyms{
+      background-color: rgb(19,20,21);
+      padding: 20px; 
+      text-align: center;
+    }
+    .gym-cards {
+      background-color: rgb(19,20,21);
+      height: 500px;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Protest+Revolution&family=Vina+Sans&display=swap"
+    rel="stylesheet">
+
+
+
+
+
+<!-- ________________________________________________________________GYM_________________________________________________________________________ -->
+
+
  <!-- ======= Header - NavBar ======= -->
 
   <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
+    <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png"><span style="color: #cfcfcf"> Fit</span><span style="color: #27952E">Play</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             
@@ -272,7 +410,7 @@ function getInitials($name) {
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="gym.php">Gyms</a></li>
+                        <li><a href="#">Gyms</a></li>
                         <li><a href="turf.php">Turfs</a></li>
                        
                     </ul>
@@ -324,7 +462,7 @@ function getInitials($name) {
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4 shadow">
       <div class="modal-header p-5 pb-4 border-bottom-0">
-        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <h1 class="fw-bold mb-0 fs-1" style="color: #4f4f4f;">Welcome Back to Fitplay.</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
       </div>
       <div class="modal-body p-5 pt-0">
@@ -373,7 +511,5 @@ function getInitials($name) {
  <!-- Login Modal End -->
 
 </head>
-
-
   <!-- script for fixed navbar -->
   <script src="GYm/assets/js/main.js"></script>

@@ -570,6 +570,7 @@ ul {
 
 <body>
 
+<section class="p-9">
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4 shadow">
@@ -634,8 +635,17 @@ if (isset($_POST['Add_To_Cart'])) {
     // Insert the item into the order_his table
     $sql = "INSERT INTO `order_his` (`user_id`, `item_name`, `price`, `quantity`) 
             VALUES ('$user_id', '$item_name', '$price', '$quantity')";
-
+            
     $result = mysqli_query($conn, $sql);
+
+    // Insert the item into the buy_items table
+   
+    if ($result) {
+        echo "Item added to cart successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
 }
     ?>
 
@@ -644,7 +654,7 @@ if (isset($_POST['Add_To_Cart'])) {
     <form  method="POST">
     <div class="super_container">
    
-    <div class="single_product">
+    <div class="single_product p-0">
         <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
             <div class="row">
                 
@@ -702,7 +712,7 @@ if (isset($_POST['Add_To_Cart'])) {
     </div>
 </div>
 </form>
-
+</section>
 
 
 
