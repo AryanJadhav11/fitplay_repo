@@ -233,29 +233,60 @@ style="fill:#FFFFFF;">
                   <div class="card">
                   	<div class="card-header">
                       <form action=""method="POST" enctype="multipart/form-data">
-  <div class="form-group">
-    <label >Edit turf details</label>
-    <input type="text" name="name"  class="form-control" id="cat_name_enter"  placeholder="Name of turf" style="width:220px;" required>
+                      <div class="form-group">
+    <label >Edit turf Name</label>
+    <input type="text" name="name"  class="form-control" id="cat_name_enter"  placeholder="<?= ucfirst($res6['name']) ?> " style="width:220px;" required>
   </div>
   <div class="form-group">
     <label >Edit Owner Name</label>
-    <input type="text" name="owner"  class="form-control" id="cat_name_enter"  placeholder="Name of Owner" style="width:220px;" required>
+    <input type="text" name="owner"  class="form-control" id="cat_name_enter"  placeholder="<?= ucfirst($res6['owner']) ?> " style="width:220px;" required>
   </div>
+  
   <div class="mb-3">
-  <label >Details Details & Ammenities</label>
-   <textarea required class="form-control" name="details" id="bl"></textarea>
+  <label >Edit Details</label>
+   <textarea required class="form-control" placeholder="<?= ucfirst($res6['details']) ?> " name="detail" id="bl"></textarea>
    <script>
          CKEDITOR.replace( 'bl' );
       </script>
   </div>
+  
+  <div class="mb-6">
+  <label >edit Amenities</label>
+   <input type="text" name="amen1" placeholder="<?= ucfirst($res6['amenitiy1']) ?> "class="form-control">
+  </div>
+  <div class="mb-6">
+  <label >edit Amenities</label>
+   <input type="text" name="amen2" placeholder="<?= ucfirst($res6['amenitiy2']) ?>"class="form-control">
+  </div>
+  <div class="mb-6">
+  <label >edit Amenities</label>
+   <input type="text" name="amen3" placeholder="<?= ucfirst($res6['amenitiy3']) ?>"class="form-control">
+  </div>
+  <div class="mb-6">
+  <label >edit Amenities</label>
+   <input type="text" name="amen4"placeholder="<?= ucfirst($res6['amenitiy4']) ?> "class="form-control">
+  </div>
+
   <div class="mb-3">
   <label >Edit Turf Photo</label>
-   <input type="file" name="image" class="form-control">
+   <input type="file" name="image" placeholder="<?= ucfirst($res6['image']) ?>"class="form-control">
 
   </div>
   <div class="form-group">
+    <label >Start Time</label>
+    <input type="time" name="start" placeholder="<?= ucfirst($res6['start']) ?> "class="form-control" id="cat_name_enter"  placeholder="Price of turf" style="width:220px;" required>
+  </div>
+  <div class="form-group">
+    <label >End Time</label>
+    <input type="time" name="end" placeholder="<?= ucfirst($res6['end']) ?> "class="form-control" id="cat_name_enter"  placeholder="Price of turf" style="width:220px;" required>
+  </div>
+  <div class="form-group">
+    <label >Edit Location</label>
+    <input type="text" name="loc" placeholder="<?= ucfirst($res6['place']) ?> "class="form-control" id="cat_name_enter"  placeholder="Price of turf" style="width:220px;" required>
+  </div>
+  <div class="form-group">
     <label >Edit Price</label>
-    <input type="text" name="price"  class="form-control" id="cat_name_enter"  placeholder="Price of turf" style="width:220px;" required>
+    <input type="text" name="price"  placeholder="<?= ucfirst($res6['price']) ?>"class="form-control" id="cat_name_enter"  placeholder="Price of turf" style="width:220px;" required>
   </div>
 
  <input type="submit" name="edit_blog" value="update" >
@@ -284,9 +315,16 @@ $showsuci=false;
 $showerrri=false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stitu = $_POST['name'];
-    $contu = $_POST['details'];
+    $contu = $_POST['detail'];
+    $ame1=$_POST['amen1'];
+    $ame2=$_POST['amen2'];
+    $ame3=$_POST['amen3'];
+    $ame4=$_POST['amen4'];
     $pc=$_POST['price'];
+    $pla=$_POST['loc'];
     $ow=$_POST['owner'];
+    $startt=$_POST['start'];
+    $endt=$_POST['end'];
 
     $filenamee=$_FILES['image']['name'];
     $tmpnamee=$_FILES['image']['tmp_name'];
@@ -295,7 +333,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($sizee<=20000000)
     {
       move_uploaded_file($tmpnamee, $destinatione);
-      $sql0= "UPDATE `grd` SET `name` = '$stitu', `details` = '$contu', `image` = '$filenamee', `price` = '$pc', `owner` = '$ow' WHERE `grd`.`id` = '$id';" ;
+      $sql0= "UPDATE `grd` SET `name` = '$stitu', `details` = '$contu', `image` = '$filenamee', `price` = '$pc', `owner` = '$ow', `amenitiy1`='$ame1', `amenitiy2`='$ame2', `amenitiy3`='$ame3', `amenitiy4`='$ame4', `start`='$startt', `end`='$endt', `place`='$pla'  WHERE `grd`.`id` = '$id';" ;
       $res0= mysqli_query($con, $sql0);
       if ($res0) 
       {

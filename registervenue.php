@@ -40,6 +40,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
         $_SESSION['user_data'] = $user_data;
 
+        $googleFormData = $_POST;  // Assuming your Google Form uses the POST method
+
+    // Adjust the following SQL query based on your "turf_req" table structure
+    $insertQuery = "INSERT INTO turf_req (field1, field2, field3) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($insertQuery);
+
+    // Bind parameters (adjust these based on your form fields)
+    $stmt->bind_param("sss", $googleFormData['field1'], $googleFormData['field2'], $googleFormData['field3']);
+
+    // Execute the query
+    if ($stmt->execute()) {
+        // Data inserted successfully
+        echo "Data inserted into turf_req successfully.";
+    } else {
+        // Error inserting data
+        echo "Error: " . $stmt->error;
+    }
+
         // Output the contents of $_SESSION['user_data'] to the browser console
         
 

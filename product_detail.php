@@ -35,6 +35,9 @@ if (isset($_GET['Order_id'])) {
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <title>FitPlay-Product_Detail</title>
 </head>
