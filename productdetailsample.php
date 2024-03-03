@@ -49,7 +49,9 @@ if (isset($_GET['Order_id'])) {
 <?php include("header.php");?>
 
 <?php
+// Start the session if it's not started already
 
+// Check if the Add_To_Cart button is clicked
 if (isset($_POST['Add_To_Cart'])) {
     // Retrieve user_id from the session
     $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
@@ -64,21 +66,21 @@ if (isset($_POST['Add_To_Cart'])) {
             
     $result = mysqli_query($conn, $sql);
 
-    // Insert the item into the buy_items table
-   
+    // Check if the insertion was successful
     if ($result) {
         echo "Item added to cart successfully!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
 }
-    ?>
+?>
+
 
 
     <!-- start -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
+<form  method="POST">
 <div class="wrapper">
   
   <div class="col-1-2">
@@ -91,21 +93,39 @@ if (isset($_POST['Add_To_Cart'])) {
   
   <div class="col-1-2">
     <div class="product-info">
-      <h2><?= ucfirst($row9pp['item_name']) ?></h2>
+    <div class="product_name"><h2><?= ucfirst($row9pp['item_name']) ?></h2></div>
       <div> <span class="product_price">₹ <?= ucfirst($row9pp['Price']) ?></span>  </div>
       <div class="desc">
         From its humble origins as a surfwear brand, Stussy has gone on to become one of the biggest streetwear labels in the industry. Mixing various influences ranging from surf to music and everything in between, Stussy and it’s iconic signature graphic has grown to encapsulate a full range of apparel, home goods and limited-edition collaborations. 100% premium cotton raglan tee with 3/4 -length contrasting sleeves and graphic print on chest.
       </div>
-      
-      <button type="submit" name="Add_To_Cart" class="button">Add to Cart</button>';
-      <a href="" class="button" type="submit" name="dd_To_Cart">Add to Cart</a>
-      <a href="mycart.php" class="button">View Cart</a>
+
+      <div class="col-xs-6"> 
+        <input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
+        <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
+        <div class="product_quantity"> <span>QTY: </span> <input id="quantity" name="quantity" type="text" pattern="[0-9]*" value="1">
+              <div class="quantity_buttons">
+                  <div  id="quantity" name="quantity" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                  <div  id="quantity" name="quantity" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+              </div>
+          </div>
+      </div>
+      <button type="submit" name="Add_To_Cart" class="button">Add to Cart</button>
+      <button class="button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>
       <!-- <a href="" class="button">Add to Cart</a> -->
     </div>
-    
+
+    <img src = "ONE.png">
   </div>
+
 </div>
- 
+
+</div>
+</form>
+      <!-- Footer start -->
+      <section>
+<?php include('footer.php') ?>
+</section>
+<!-- Footer end -->
 
 <style>
     html{ font-family: 'Lato', sans-serif; }
@@ -183,6 +203,88 @@ img{ max-width: 100%; }
 .button:hover{
   background-color: #323232;
 }
+
+
+.product_quantity {
+    width: 182px;
+    height: 50px;
+    border: solid 1px #e5e5e5;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-left: 25px;
+    float: left;
+    margin-right: 30px
+}
+
+.product_quantity span {
+    display: block;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 50px;
+    float: left
+}
+
+.product_quantity input {
+    display: block;
+    width: 30px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    padding-left: 9px;
+    line-height: 50px;
+    float: left
+}
+
+.quantity_buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 29px;
+    border-left: solid 1px #e5e5e5
+}
+
+.quantity_inc,
+.quantity_dec {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    cursor: pointer
+}
+
+.quantity_control i {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.3);
+    pointer-events: none
+}
+
+.quantity_control:active {
+    border: solid 1px rgba(14, 140, 228, 0.2)
+}
+
+.quantity_inc {
+    padding-bottom: 2px;
+    justify-content: flex-end;
+    border-top-right-radius: 5px
+}
+
+.quantity_dec {
+    padding-top: 2px;
+    justify-content: flex-start;
+    border-bottom-right-radius: 5px
+}
 </style>
 
 <script>
@@ -191,5 +293,7 @@ img{ max-width: 100%; }
 });
 </script>
     <!-- end -->
+
+
 </body>
 </html>
