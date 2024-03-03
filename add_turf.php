@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($size<=20000000)
     {
       move_uploaded_file($tmpname, $destination);
-      $sqli = "INSERT INTO `grd`(`name`, `details`, `amenitiy1`, `amenitiy2` , `amenitiy3` , `amenitiy4` , `image`, `price`, `owner`, `place`, `loc`, `start`, `end`) VALUES ('$stit', '$cont','$ame1','$ame2','$ame3','$ame4','$filename','$pri','$owner','$pla','$li','$startt','$endt')";
+      $sqli = "INSERT INTO `grd`(`name`, `details`, `image`, `price`, `owner`, `place`, `loc`, `start`, `end`, `amenitiy1`, `amenitiy2` , `amenitiy3` , `amenitiy4`) VALUES ('$stit', '$cont','$filename','$pri','$owner','$pla','$li','$startt','$endt','$ame1','$ame2','$ame3','$ame4')";
        $res = mysqli_query($con, $sqli);
         if ($res) {
       $showsuc="U just published launched new turf";
