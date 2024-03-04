@@ -113,8 +113,6 @@ if (isset($_POST['Add_To_Cart'])) {
       <button class="button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>
       <!-- <a href="" class="button">Add to Cart</a> -->
     </div>
-
-    <img src = "ONE.png">
   </div>
 
 </div>
@@ -123,7 +121,6 @@ if (isset($_POST['Add_To_Cart'])) {
 </form>
       <!-- Footer start -->
       <section>
-<?php include('footer.php') ?>
 </section>
 <!-- Footer end -->
 

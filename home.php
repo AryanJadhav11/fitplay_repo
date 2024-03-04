@@ -55,6 +55,7 @@
   </video>
   <!-- text start -->
   <h1 class="content">FITPLAY</h1>
+  <span class="content" style="font-size:20px;margin-left:500px;color:green"><b>HEALTHY LIFE STYLE</b></span>
   <!-- text end -->
 </div>
 <!-- paralax start -->
@@ -175,6 +176,7 @@ h1{
 <section>
     <div class="parallax-one">
       <h2>TURFS</h2>
+      
     </div>
 </section>
 
