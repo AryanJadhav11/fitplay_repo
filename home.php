@@ -27,27 +27,150 @@
     margin-top:100px; 
     padding: 20px;
   }
+  .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent screen (adjust opacity as needed) */
+  z-index: 0; /* Place the overlay behind the video */
+}
 </style>
 </head>
 <body>
 
-<div class="video-container" >
+<div class="video-container overlay" >
   <video autoplay muted loop>
-    <source src="" type="video/mp4">
-   
+    <source src="video111.mp4" type="video/mp4" style="">
   </video>
   <!-- text start -->
-
+  <div class="main text-center" style="margin-top:300px;">
+  <h1 style="font-size:60px;letter-spacing: 20px;"><b>FIT</b><span style="color:green;"><b>PLAY</b></span> <div class="roller">
+    <span id="rolltext">TURFS<br/>
+    GYMS<br/>
+    SHOPS<br/>
+    <span id="spare-time">and much more..</span><br/>
+    </div>
+    </h1>
+    
+  </div>
   <!-- text end -->
 </div>
 <!-- paralax start -->
 <div id="parallax-world-of-ugg">
   
 <section>
-  <div class="title">
-    <h3>Let's do some</h3>
-    <h1>PARALLAX</h1>
+  
+  <div class="main">
+  <h1 style="font-size:60px;letter-spacing: 20px;"><b>FIT</b><span style="color:green;"><b>PLAY</b></span> <div class="roller">
+    <span id="rolltext">TURFS<br/>
+    GYMS<br/>
+    SHOPS<br/>
+    <span id="spare-time">and much more..</span><br/>
+    </div>
+    </h1>
+    
   </div>
+  <style>
+
+    .main{
+  margin-top:30px;
+  height:25vh;
+  width:100%;  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 10px;
+}
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: #1D3557;
+}
+
+
+#spare-time{
+  font-size: 20px;
+  letter-spacing: 10px;
+  margin-top: 0;
+  color: blue;
+  
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;  
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -4rem;    
+  }
+  50%{
+    top: -8rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 2.125rem;
+}
+  
+  .roller{
+  height: 2.6rem; 
+  line-height: 2.125rem;  
+  }
+  
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .roller #rolltext {  
+  animation: slide-mob 5s infinite;  
+}
+  
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;    
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
+}
+  </style>
 </section>
 
 <section>
