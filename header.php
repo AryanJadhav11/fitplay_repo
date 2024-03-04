@@ -27,10 +27,10 @@
     $showerr = false;
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $err = "";
-    $username = $_POST["uname"];
-    $password = $_POST["password"];
+    $form_username = $_POST["uname"];
+    $form_password = $_POST["password"];
 
-    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
+    $sql = "SELECT * FROM `users` WHERE username='$form_username' AND password='$form_password';";
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
 
@@ -45,11 +45,13 @@
         );
         $_SESSION['user_data'] = $user_data;
         
-         
         // Redirect to turf.php after successful login
-        header("location: turf.php");
-        exit();
-    } else {
+
+       header('Location:turf.php');
+       
+    } 
+
+    else {
         $showerr = "Invalid Email / Password";
         $_SESSION['error'] = "Invalid Email / Password";
     }
@@ -371,7 +373,6 @@ function getInitials($name) {
  </div>
  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
  <!-- Login Modal End -->
-
 </head>
 
 

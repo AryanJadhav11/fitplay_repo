@@ -178,12 +178,12 @@ $respic=mysqli_fetch_assoc($quepro);
                                     <div class="row">
                                         <div class="el-wrapper"style="height:400px; background-color:#f7f7f7;" >
                                             <div class="box-up">
-                                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
+                                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
                                             <?php $img = $respro['pic'] ?>
                                                 <img class="img" src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
                                                 <div class="img-info">
                                                     <div class="info-inner">
-                                                        <span class="p-name"><h3><a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h3></span>
+                                                        <span class="p-name"><h3><a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h3></span>
                                                         <span class="p-company">FitPlay</span>
                                                     </div>
                                                 </div>
@@ -192,7 +192,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                                 <div class="h-bg">
                                                     <div class="h-bg-inner"></div>
                                                 </div>
-                                                <a class="cart" href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
+                                                <a class="cart" href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
                                                     <span class="price"id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</span>
                                                     <span class="add-to-cart">
                                                         <span class="txt">View Product</span>
