@@ -37,7 +37,7 @@
    
   </video>
   <!-- text start -->
-F
+
   <!-- text end -->
 </div>
 <!-- paralax start -->
