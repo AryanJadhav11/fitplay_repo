@@ -571,7 +571,7 @@ ul {
 <body>
 
 <section class="p-9">
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4 shadow">
       <div class="modal-header p-5 pb-4 border-bottom-0">
@@ -594,7 +594,7 @@ ul {
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="modal fade" id="loginModalo" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -604,7 +604,7 @@ ul {
             </div>
             <div class="modal-body">
                 <!-- Your login form goes here -->
-                <form id="loginForm" method="POST" action="login.php">
+                <form id="loginForm" method="POST" >
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="username" required>
@@ -689,13 +689,13 @@ if (isset($_POST['Add_To_Cart'])) {
                             <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
                     <?php
                     if(isset($_SESSION['user_data'])) {
-                        echo '<button type="submit" name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button>'; 
+                        echo '<button type="button" name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button>'; 
                         echo '<button type="button" class="btn btn-success shop-button">Buy Now</button>';
-                        echo '<button class="btn btn-primary shop-button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>';
+                        echo '<button class="btn btn-primary shop-button" type="button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>';
                     } else {
-                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Add to Cart</button>'; 
-                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">Buy Now</button>';
-                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalo">View Cart</button>';
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Add to Cart</button>'; 
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Buy Now</button>';
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">View Cart</button>';
                     }
 
 ?>
