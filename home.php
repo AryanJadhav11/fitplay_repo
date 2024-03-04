@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(3px);
+    filter: blur(7px);
   }
   .content {
     position: relative;
@@ -28,10 +28,10 @@
     padding: 20px;
     font-size:7rem;
     margin-top:290px;
-    letter-spacing: 30px;
+    letter-spacing: 10px;
     margin-left:50px;
-    font-family: "Arvo";
-  font-weight: 300;
+    font-family: "Arvo",sans-serif;
+  font-weight: 800;
   font-style: normal;
   }
   .overlay {
@@ -64,9 +64,9 @@
   
   <div class="main">
   <h1 style="font-size:60px;letter-spacing: 20px;font-family:'Rowdies','serif';"><b>WE PROVIDE</b> <div class="roller">
-    <span id="rolltext">TURFS<br/>
-    GYMS<br/>
-    SHOP<br/>
+    <span id="rolltext" style="color:green;">TURFS<br/>
+     <span style="color:blue;">GYMS</span><br/>
+    <span style="color:grey;">SHOP</span><br/>
    <br/>
     </div>
     </h1>
@@ -82,7 +82,7 @@
   align-items:center;
   justify-content:center;
   text-align:center;
-  font-family: 'Arvo'
+  font-family: 'Arvo';
 }
 h1{
   text-align:center;
@@ -129,9 +129,7 @@ h1{
   50%{
     top: -8rem;
   }
-  72.5%{
-    top: -12.25rem;
-  }
+ 
 }
 
 @media screen and (max-width: 600px){
@@ -176,7 +174,7 @@ h1{
 
 <section>
     <div class="parallax-one">
-      <h2>SOUTHERN CALIFORNIA</h2>
+      <h2>TURFS</h2>
     </div>
 </section>
 
