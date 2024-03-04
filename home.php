@@ -19,13 +19,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: blur(3px);
   }
   .content {
     position: relative;
     z-index: 1;
-    text-align: center;
-    margin-top:100px; 
+    text-align: center; 
     padding: 20px;
+    font-size:7rem;
+    margin-top:290px;
+    letter-spacing: 30px;
+    margin-left:50px;
+    font-family: "Arvo";
+  font-weight: 300;
+  font-style: normal;
   }
   .overlay {
   position: relative;
@@ -33,9 +40,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent screen (adjust opacity as needed) */
-  z-index: 0; /* Place the overlay behind the video */
+  z-index: 1;
+  background-color: #000; /* Dark transparent overlay */
+  
 }
+  
 </style>
 </head>
 <body>
@@ -45,16 +54,7 @@
     <source src="video111.mp4" type="video/mp4" style="">
   </video>
   <!-- text start -->
-  <div class="main text-center" style="margin-top:300px;">
-  <h1 style="font-size:60px;letter-spacing: 20px;"><b>FIT</b><span style="color:green;"><b>PLAY</b></span> <div class="roller">
-    <span id="rolltext">TURFS<br/>
-    GYMS<br/>
-    SHOPS<br/>
-    <span id="spare-time">and much more..</span><br/>
-    </div>
-    </h1>
-    
-  </div>
+  <h1 class="content">FITPLAY</h1>
   <!-- text end -->
 </div>
 <!-- paralax start -->
@@ -63,11 +63,11 @@
 <section>
   
   <div class="main">
-  <h1 style="font-size:60px;letter-spacing: 20px;"><b>FIT</b><span style="color:green;"><b>PLAY</b></span> <div class="roller">
+  <h1 style="font-size:60px;letter-spacing: 20px;font-family:'Rowdies','serif';"><b>WE PROVIDE</b> <div class="roller">
     <span id="rolltext">TURFS<br/>
     GYMS<br/>
-    SHOPS<br/>
-    <span id="spare-time">and much more..</span><br/>
+    SHOP<br/>
+   <br/>
     </div>
     </h1>
     
@@ -82,6 +82,7 @@
   align-items:center;
   justify-content:center;
   text-align:center;
+  font-family: 'Arvo'
 }
 h1{
   text-align:center;
