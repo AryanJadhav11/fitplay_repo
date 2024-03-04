@@ -686,7 +686,7 @@ if (isset($_POST['Add_To_Cart'])) {
                             </div>
                             <div class="col-xs-6"> 
                             <input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
-                    <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
+                            <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
                     <?php
                     if(isset($_SESSION['user_data'])) {
                         echo '<button type="submit" name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button>'; 
