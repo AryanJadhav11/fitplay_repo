@@ -52,7 +52,7 @@ $response = array();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get booking information from the form
-    $name = isset($_POST['turfname']) ? $_POST['turfname'] : ''; // Ensure $name is defined and not null
+    $name = isset($_POST['turfname']) ? $_POST['turfname'] : ''; 
     $date = isset($_POST['date']) ? $_POST['date'] : '';
     $startTime = isset($_POST['startTime']) ? $_POST['startTime'] : '';
     $endTime = isset($_POST['endTime']) ? $_POST['endTime'] : '';
@@ -60,7 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userEmail = isset($_POST['userEmail']) ? $_POST['userEmail'] : '';
 
     // Check if the chosen date and time slot is already booked for the specific turf
-    $checkSql = "SELECT * FROM booking WHERE turfname = '$name' AND date = '$date' AND ((startTime <= '$startTime' AND endTime > '$startTime') OR (startTime < '$endTime' AND endTime >= '$endTime'))";
+    $checkSql = "SELECT * FROM booking WHERE turfname = '$name' AND date = '$date' AND 
+                ((startTime <= '$startTime' AND endTime >= '$startTime') OR (startTime <= '$endTime' AND endTime >= '$endTime'))";
     $result = $coni->query($checkSql);
 
     if ($result && $result->num_rows > 0) {
@@ -74,7 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($paymentSuccess) {
             // Insert booking into the database only if payment is successful
             $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-            $insertSql = "INSERT INTO booking (userid, turfname, date, startTime, endTime, userName, userEmail) VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
+            $insertSql = "INSERT INTO booking (userid, turfname, date, startTime, endTime, userName, userEmail) 
+                            VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
 
             if ($coni->query($insertSql) === TRUE) {
                 // Send email notification only when the booking is successful
@@ -154,7 +156,7 @@ $coni->close();
             </div>
             <div class="form-group">
                 <label for="turfname">Price:</label>
-                <input type="text" id="turfname" name="turfname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
+                <input type="text" id="price" name="turfname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
             </div>
             <div class="form-group">
                 <label for="validtime">Valid Time:</label>
