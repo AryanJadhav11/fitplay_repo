@@ -94,11 +94,11 @@
       <div class="d-flex gym-row">
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="GYm/assets/img/muscletree-image-1.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/forge_display_pic.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Muscle tree</h5>
-              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Nagala park,kolhapur</p>
-              <p class="card-text">Providing a diverse selection of health and wellness options for individuals seeking a vibrant lifestyle.</p>
+              <h5 class="card-title">Forge Fitness Club</h5>
+              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Kasaba Bawada Main Road</p>
+              <p class="card-text">stocked with world-class premium equipment. We are focused on giving our members the best value for their money.</p>
               <a href="#" class="btn btn-primary">View More</a>
             </div>
           </div>

@@ -384,6 +384,9 @@ function getInitials($name) {
       background-color: rgb(19,20,21);
       height: 500px;
     }
+    .card-img-top{
+      height:20vh;
+    }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
