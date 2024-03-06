@@ -209,7 +209,46 @@ h1{
     </div>
     <div class="col-lg-6">
       <h2>FOOTBALL</h2>
-      <p><span class=" first-character ny">L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus et reiciendis dolores qui dignissimos earum. Quaerat sint consequatur tenetur harum esse aperiam omnis eveniet perspiciatis non porro dolor ratione, voluptatibus repellat voluptate. Minima incidunt placeat soluta eius est explicabo eum harum maiores vel repellat? Iure ab consequatur possimus, laudantium hic magnam accusantium ipsa blanditiis? Necessitatibus dicta officiis suscipit? Eligendi ipsa incidunt eius nulla aut facilis est odio. Omnis, saepe. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolor mollitia dolore in quod? Eaque soluta aut nostrum in fugiat voluptatibus sint hic quaerat sunt quis est voluptatum, aliquid nulla! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur illo molestiae et qui ratione. Omnis optio repellendus dolores quasi iusto! lore</p>
+      <div class="center">
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto repudiandae atque distinctio ipsum ea voluptates veritatis omnis, dolor recusandae? Omnis consequatur accusantium dolorum, tempore incidunt, in sequi officiis quasi repudiandae labore unde quae error tenetur qui veniam asperiores nihil, cumque dolore quis facere odio. Delectus qui perferendis illo commodi quo. Eveniet commodi quod quo nihil voluptatem fugit blanditiis, repellat impedit necessitatibus consectetur pariatur asperiores molestias dolorem quibusdam natus culpa dolorum non! Repellendus aperiam dolorem consequuntur suscipit, dolore, fugiat explicabo cupiditate quas ducimus et quisquam, inventore fugit molestias unde autem nam neque nihil? Minima, excepturi! Nihil officiis at rerum esse.</p>
+    </div>
+
+    <style>
+       .char{
+
+            animation: an 1s ease-out 1 both;
+            display: inline-block;
+        }
+        @keyframes an{
+            from{
+                opacity: 0;
+                transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+            }
+            to{
+                opacity: 1;
+                transform: perspective(500px) translate3d(0, 0, 0);
+            }
+        }
+    </style>
+    <script>
+              var text = document.getElementById('text');
+        var newDom = '';
+        var animationDelay = 6;
+
+        for(let i = 0; i < text.innerText.length; i++)
+        {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+        }
+
+        text.innerHTML = newDom;
+        var length = text.children.length;
+
+        for(let i = 0; i < length; i++)
+        {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+    
+    </script>
 
       </div>
   </div>
