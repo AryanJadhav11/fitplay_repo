@@ -98,7 +98,7 @@
             <div class="card-body">
               <h5 class="card-title">Forge Fitness Club</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Kasaba Bawada Main Road</p>
-              <p class="card-text">stocked with world-class premium equipment. We are focused on giving our members the best value for their money.</p>
+              <p class="card-text">Stocked with world-class premium equipment. We are focused on giving our members the best value for their money.</p>
               <a href="#" class="btn btn-primary">View More</a>
             </div>
           </div>
@@ -141,7 +141,7 @@
     </div>
   </main><!-- End #main -->
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
   <!-- ======= Footer ======= -->
   
   <!-- End Footer -->
@@ -150,18 +150,77 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <!-- <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script> -->
+      <section class="pb-0">
+<footer id="footer" style="background-color:rgb(0,0,0);">
+<div class="footer-top" style="background-color:rgb(17,18,19);">
+  <div class="container">
+    <div class="row">
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3 style="color:white;">FitPlay<span>.</span></h3>
+        <p style="color:white;">
+         Kolhapur <br>
+         Maharastra<br>
+          <strong>Phone:</strong> +91 9284008321<br>
+          <strong>Email:</strong> thefitplay@gmail.com<br>
+        </p>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 style="color:white;">Useful Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">About us</a></li>
+          
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="privacy_policy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 style="color:white;">Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Explore Gym</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Shop Products</a></li>
+          
+        </ul>
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Social Networks</h4>
+        <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="copyright">
+    &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
+  </div>
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+</div>
+</footer>
+</section>
+      <script src="assets/js/main.js"></script>
 
 </body>
 

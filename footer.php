@@ -8,7 +8,7 @@
     <div class="row">
 
       <div class="col-lg-3 col-md-6 footer-contact">
-        <h3>FitPlay.<span>.</span></h3>
+        <h3>FitPlay<span>.</span></h3>
         <p>
          Kolhapur <br>
          Maharastra<br>
