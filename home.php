@@ -55,7 +55,7 @@
   </video>
   <!-- text start -->
   <h1 class="content">FITPLAY</h1>
-  <span class="content" style="font-size:20px;margin-left:500px;color:green"><b>HEALTHY LIFE STYLE</b></span>
+  <span class="content" style="font-size:20px;margin-left:500px;color:#1BFC02"><b>HEALTHY LIFE STYLE</b></span>
   <!-- text end -->
 </div>
 <!-- paralax start -->
@@ -73,6 +73,7 @@
     </h1>
     
   </div>
+  
   <style>
 
     .main{
@@ -181,16 +182,98 @@ h1{
 </section>
 
 <section>
-  <div class="block">
-    <p><span class="first-character sc">I</span>n 1978, Brian Smith landed in Southern California with a bag of sheepskin boots and hope. He fell in love with the sheepskin experience and was convinced the world would one day share this love. The beaches of Southern California had long been an epicenter of a relaxed, casual lifestyle, a lifestyle that Brian felt was a perfect fit for his brand. So he founded the UGG brand, began selling his sheepskin boots and they were an immediate sensation. By the mid 1980's, the UGG brand became a symbol of relaxed southern California culture, gaining momentum through surf shops and other shops up and down the coast of California, from San Diego to Santa Cruz. UGG boots reached beyond the beach, popping up in big cities and small towns all over, and in every level of society. Girls wore their surfer boyfriend's pair of UGG boots like a letterman jacket. When winter came along, UGG boots were in ski shops and were seen in lodges from Mammoth to Aspen.</p>
-    <p class="line-break margin-top-10"></p>
-    <p class="margin-top-10">The UGG brand began to symbolize those who embraced sport and a relaxed, active lifestyle. More than that, an emotional connection and a true feeling of love began to grow for UGG boots, just as Brian had envisioned. People didn't just like wearing UGG boots, they fell in love with them and literally could not take them off. By the end of the 90's, celebrities and those in the fashion world took notice of the UGG brand. A cultural shift occurred as well - people were embracing, and feeling empowered, by living a more casual lifestyle and UGG became one of the symbols of this lifestyle. By 2000, a love that began on the beaches had become an icon of casual style. It was at this time that the love for UGG grew in the east, over the Rockies and in Chicago. In 2000, UGG Sheepskin boots were first featured on Oprah's Favorite Things® and Oprah emphatically declared that she "LOOOOOVES her UGG boots." From that point on, the world began to notice.</p>
+  <div class="row block">
+    <div class="col-lg-6">
+      <img src="https://wallpaperaccess.com/full/8096028.jpg" alt="" class="img-fluid">
+    </div>
+    <div class="col-lg-6">
+      <h2>FOOTBALL</h2>
+      <p><span class=" first-character ny">L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus et reiciendis dolores qui dignissimos earum. Quaerat sint consequatur tenetur harum esse aperiam omnis eveniet perspiciatis non porro dolor ratione, voluptatibus repellat voluptate. Minima incidunt placeat soluta eius est explicabo eum harum maiores vel repellat? Iure ab consequatur possimus, laudantium hic magnam accusantium ipsa blanditiis? Necessitatibus dicta officiis suscipit? Eligendi ipsa incidunt eius nulla aut facilis est odio. Omnis, saepe. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolor mollitia dolore in quod? Eaque soluta aut nostrum in fugiat voluptatibus sint hic quaerat sunt quis est voluptatum, aliquid nulla! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur illo molestiae et qui ratione. Omnis optio repellendus dolores quasi iusto! lore</p>
+
+      </div>
   </div>
+  
+  <!-- counter start -->
+  <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container">
+                <div class="row">
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                        <i class="fa fa-beer medium-icon"></i>
+                        <span id="anim-number-pizza" class="counter-number"></span>
+                        <span class="timer counter alt-font appear" data-to="0" data-speed="7000">120</span>
+                        <p class="counter-title">TURFS</p>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                        <i class="fa fa-heart medium-icon"></i>
+                         <span class="timer counter alt-font appear" data-to="980" data-speed="1000">980</span>
+                        <span class="counter-title">Happy Clients</span>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                        <i class="fa fa-anchor medium-icon"></i>
+                         <span class="timer counter alt-font appear" data-to="810" data-speed="7000">98</span>
+                        <span class="counter-title">GYMS</span>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
+                        <i class="fa fa-user medium-icon"></i>
+                         <span class="timer counter alt-font appear" data-to="600" data-speed="7000">600</span>
+                        <span class="counter-title">Clients Served</span>
+                    </div>
+                    <!-- end counter -->
+                </div>
+            </div>
+        </section>
+        <style>
+                  .counter-section i { display:block; margin:0 0 10px}
+.counter-section span.counter { font-size:40px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
+.counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
+.counter-icon {top:25px; position:relative}
+.counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+.counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+.counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+.counter-subheadline span {float: right;}  
+
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
+} 
+
+        </style>
+        <script>
+          $(document).ready(function() {
+
+        $('.counter').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 9000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+}); 
+ 
+});  
+        </script>
+
+  <!-- counter end -->
+
+  
 </section>
+
+
+
 
 <section>
   <div class="parallax-two">
-    <h2>NEW YORK</h2>
+    <h2>GYM</h2>
   </div>
 </section>
 
@@ -201,6 +284,7 @@ h1{
     <p class="margin-top-10">Fueled by celebrities from coast to coast wearing UGG boots and slippers on their downtime, an entirely new era of fashion was carved out. As a result, the desire and love for UGG increased as people wanted to go deeper into this relaxed UGG experience. UGG began offering numerous color and style variations on their sheepskin boots and slippers. Cold weather boots for women and men and leather casuals were added with great success. What started as a niche item, UGG sheepskin boots were now a must-have staple in everyone's wardrobe. More UGG collections followed, showcasing everything from knit boots to sneakers to wedges, all the while maintaining that luxurious feel UGG is known for all over the world. UGG products were now seen on runways and in fashion shoots from coast to coast. Before long, the love spread even further.</p>
   </div>
 </section>
+
 
 <section>
   <div class="parallax-three">
@@ -235,10 +319,10 @@ h1{
 /* Typography */
 /**************************/
 #parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
-#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:white; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
+#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:#1BFC02; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
 #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
-#parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:400; font-size:14px; line-height:24px;}
-.first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+#parallax-world-of-ugg p {font-family:'Oswald', sans-serif; font-weight:500; font-size:18px; line-height:24px;}
+.first-character {font-weight:300; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
 
 .sc {color: #3b8595;}
 .ny {color: #3d3c3a;}
@@ -251,14 +335,14 @@ h1{
 
 /* Section - Block */
 /**************************/
-#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#parallax-world-of-ugg .block {background: white; width:1300px; margin:0 auto; text-align:justify;}
 #parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
 #parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
 
 /* Section - Parallax */
 /**************************/
-#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1415018255745-0ec3f7aee47b?dpr=1&auto=format&fit=crop&w=1500&h=938&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1432163230927-a32e4fd5a326?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://wallpaperaccess.com/full/871906.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://wallpaperaccess.com/full/834264.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 
 /* Extras */
