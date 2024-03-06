@@ -54,7 +54,28 @@
     <source src="video111.mp4" type="video/mp4" style="">
   </video>
   <!-- text start -->
-  <h1 class="content">FITPLAY</h1>
+  <style>
+    .hello,.anime{
+  transition: .5s linear
+}
+.hello:hover .anime:nth-child(1){
+  margin-right: 5px
+}
+.hello:hover .anime:nth-child(1):after{
+  content: "";
+}
+.hello:hover .anime:nth-child(2){
+  margin-left: 30px
+}
+.hello:hover .anime{
+  color: #1BFC02;
+  text-shadow: 0 0 5px #1BFC02,
+               0 0 10px #1BFC02, 
+               0 0 15px #1BFC02;
+}
+  </style>
+  <h1 class=" content hello"><span class="anime"></span>FIT<span class="anime">PLAY</span></h1>
+  <!-- <h1 class="content hello">FITPLAY</h1> -->
   <span class="content" style="font-size:20px;margin-left:500px;color:#1BFC02"><b>HEALTHY LIFE STYLE</b></span>
   <!-- text end -->
 </div>
@@ -342,7 +363,7 @@ h1{
 /* Section - Parallax */
 /**************************/
 #parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://wallpaperaccess.com/full/871906.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://wallpaperaccess.com/full/834264.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://wallpaperaccess.com/full/6375353.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 
 /* Extras */
