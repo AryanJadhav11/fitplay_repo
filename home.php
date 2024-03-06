@@ -71,7 +71,7 @@
   color: #1BFC02;
   text-shadow: 0 0 5px #1BFC02,
                0 0 10px #1BFC02, 
-               0 0 15px #1BFC02;
+               0 0 12px #1BFC02;
 }
   </style>
   <h1 class=" content hello"><span class="anime"></span>FIT<span class="anime">PLAY</span></h1>
