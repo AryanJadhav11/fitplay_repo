@@ -28,7 +28,7 @@
     padding: 20px;
     font-size:7rem;
     margin-top:290px;
-    letter-spacing: 10px;
+    letter-spacing: 14px;
     margin-left:50px;
     font-family: "Arvo",sans-serif;
   font-weight: 800;
@@ -69,14 +69,20 @@
 }
 .hello:hover .anime{
   color: #1BFC02;
-  text-shadow: 0 0 5px #1BFC02,
-               0 0 10px #1BFC02, 
-               0 0 12px #1BFC02;
+  text-shadow: 0 0 2px #1BFC02,
+               0 0 3px #1BFC02, 
+               0 0 4px #1BFC02;
+}
+.hello:hover .anime2{
+  color: #EAEAEA;
+  text-shadow: 0 0 2px #EAEAEA,
+               0 0 3px #EAEAEA, 
+               0 0 4px #EAEAEA;
 }
   </style>
-  <h1 class=" content hello"><span class="anime"></span>FIT<span class="anime">PLAY</span></h1>
+  <a href="home.php"><h1 class=" content hello"><span class="anime2">FIT</span><span class="anime">PLAY</span></h1>
   <!-- <h1 class="content hello">FITPLAY</h1> -->
-  <span class="content" style="font-size:20px;margin-left:500px;color:#1BFC02"><b>HEALTHY LIFE STYLE</b></span>
+  <p class="text-center"><span class="content" style="font-size:20px;color:#1BFC02">HEALTHY LIFESTYLE</span></p></a>
   <!-- text end -->
 </div>
 <!-- paralax start -->
@@ -86,9 +92,9 @@
   
   <div class="main">
   <h1 style="font-size:60px;letter-spacing: 20px;font-family:'Rowdies','serif';"><b>WE PROVIDE</b> <div class="roller">
-    <span id="rolltext" style="color:green;">TURFS<br/>
-     <span style="color:blue;">GYMS</span><br/>
-    <span style="color:grey;">SHOP</span><br/>
+    <span id="rolltext"><a href="turf.php"style="color:green;">TURFS</a><br/>
+    <span ><a href="gym.php"style="color:blue;">GYMS</a></span><br/>
+    <span ><a href="shop.php"style="color:grey;">SHOP</a></span><br/>
    <br/>
     </div>
     </h1>
@@ -162,7 +168,6 @@ h1{
   color: #F1FAEE; 
   font-size: 2.125rem;
 }
-  
   .roller{
   height: 2.6rem; 
   line-height: 2.125rem;  
@@ -197,7 +202,7 @@ h1{
 
 <section>
     <div class="parallax-one">
-      <h2>TURFS</h2>
+    <h2 style="color: white;">TURFS</h2>
       
     </div>
 </section>
@@ -208,7 +213,7 @@ h1{
       <img src="https://wallpaperaccess.com/full/8096028.jpg" alt="" class="img-fluid">
     </div>
     <div class="col-lg-6">
-      <h2>FOOTBALL</h2>
+      <h2 style="color: black;">FOOTBALL</h2>
       <div class="center">
         <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt praesentium, rerum voluptatem in reiciendis officia harum repudiandae tempore suscipit ex ea, adipisci ab porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto repudiandae atque distinctio ipsum ea voluptates veritatis omnis, dolor recusandae? Omnis consequatur accusantium dolorum, tempore incidunt, in sequi officiis quasi repudiandae labore unde quae error tenetur qui veniam asperiores nihil, cumque dolore quis facere odio. Delectus qui perferendis illo commodi quo. Eveniet commodi quod quo nihil voluptatem fugit blanditiis, repellat impedit necessitatibus consectetur pariatur asperiores molestias dolorem quibusdam natus culpa dolorum non! Repellendus aperiam dolorem consequuntur suscipit, dolore, fugiat explicabo cupiditate quas ducimus et quisquam, inventore fugit molestias unde autem nam neque nihil? Minima, excepturi! Nihil officiis at rerum esse.</p>
     </div>
@@ -333,7 +338,7 @@ h1{
 
 <section>
   <div class="parallax-two">
-    <h2>GYM</h2>
+    <h2 style="color: white;">GYM</h2>
   </div>
 </section>
 
@@ -348,7 +353,7 @@ h1{
 
 <section>
   <div class="parallax-three">
-    <h2>ENCHANTED FOREST</h2>
+    <h2 style="color: white;">SHOP</h2>
   </div>
 </section>
 
@@ -425,5 +430,10 @@ h1{
 }
 </style>
 <!-- paralax end -->
+
+   <!-- footer start -->
+   <?php include('footer.php') ?>
+<!-- End Footer -->
+
 </body>
 </html>

@@ -26,13 +26,56 @@ $respic=mysqli_fetch_assoc($quepro);
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 
 </head>
+
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(7px);
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center; 
+    padding: 20px;
+    font-size:7rem;
+    margin-top:290px;
+    letter-spacing: 14px;
+    margin-left:50px;
+    font-family: "Arvo",sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  }
+  .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000; /* Dark transparent overlay */
+  
+}
+  
+</style>
+
 <body>
+<!-- <br>
 <br>
-<br>
-<br>
+<br> -->
 
 <!-- carosal start -->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+<!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
       <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
@@ -52,9 +95,47 @@ $respic=mysqli_fetch_assoc($quepro);
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div> -->
+
+<div class="video-container overlay" >
+  <video autoplay muted loop>
+    <source src="video111.mp4" type="video/mp4" style="">
+  </video>
+  <!-- text start -->
+  <style>
+    .hello,.anime{
+  transition: .5s linear
+}
+.hello:hover .anime:nth-child(1){
+  margin-right: 5px
+}
+.hello:hover .anime:nth-child(1):after{
+  content: "";
+}
+.hello:hover .anime:nth-child(2){
+  margin-left: 30px
+}
+.hello:hover .anime{
+  color: #1BFC02;
+  text-shadow: 0 0 2px #1BFC02,
+               0 0 3px #1BFC02, 
+               0 0 4px #1BFC02;
+}
+.hello:hover .anime2{
+  color: #EAEAEA;
+  text-shadow: 0 0 2px #EAEAEA,
+               0 0 3px #EAEAEA, 
+               0 0 4px #EAEAEA;
+}
+  </style>
+  <a href="home.php"><h1 class=" content hello"><span class="anime2" style="color: #EAEAEA;">FIT</span><span class="anime"style="color: #1BFC02;">PLAY</span></h1>
+  <!-- <h1 class="content hello">FITPLAY</h1> -->
+  <p class="text-center"><span class="content" style="font-size:20px;color:#1BFC02">HEALTHY LIFESTYLE</span></p></a>
+  <!-- text end -->
 </div>
+
 <!-- carosal end -->
-<br>
+
 <br>
 <br>
 <br>
