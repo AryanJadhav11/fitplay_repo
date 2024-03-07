@@ -27,6 +27,35 @@ $respic=mysqli_fetch_assoc($quepro);
 
 </head>
 
+<body>
+<!-- <br>
+<br>
+<br> -->
+
+<!-- carosal start -->
+<!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://contents.mediadecathlon.com/s1051803/k$24a0285566a6d9ea9d53a2bde53a3b02/Sale%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://contents.mediadecathlon.com/s1061445/k$b0d33a4289de7edac9953bdbd35d99cc/Frame%20427321401.png?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+<!-- video css -->
 <style>
   .video-container {
     position: relative;
@@ -66,37 +95,8 @@ $respic=mysqli_fetch_assoc($quepro);
   background-color: #000; /* Dark transparent overlay */
   
 }
-  
 </style>
-
-<body>
-<!-- <br>
-<br>
-<br> -->
-
-<!-- carosal start -->
-<!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://contents.mediadecathlon.com/s1051803/k$24a0285566a6d9ea9d53a2bde53a3b02/Sale%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://contents.mediadecathlon.com/s1061445/k$b0d33a4289de7edac9953bdbd35d99cc/Frame%20427321401.png?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> -->
-
+<!-- video start -->
 <div class="video-container overlay" >
   <video autoplay muted loop>
     <source src="video111.mp4" type="video/mp4" style="">
@@ -133,7 +133,7 @@ $respic=mysqli_fetch_assoc($quepro);
   <p class="text-center"><span class="content" style="font-size:20px;color:white">HEALTHY LIFESTYLE</span></p></a>
   <!-- text end -->
 </div>
-
+<!-- video end -->
 <!-- carosal end -->
 
 <br>
