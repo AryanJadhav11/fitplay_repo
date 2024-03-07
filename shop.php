@@ -140,77 +140,99 @@ $respic=mysqli_fetch_assoc($quepro);
 <br>
 <br>
 
-<!-- facilities start -->
-<section class="pt-3">
-<div class="container">
-	<div class="row  text-center">
-		<div class="col-sm-4 col-md-4 facility-cod">
-			<h3> Cash On Delivery </h3>
-			<p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
-		</div>
-		<div class="col-sm-4 col-md-4 facility-shipping">
-			<h3> Free Shipping</h3>
-			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
-		</div>
-		<div class="col-sm-4 col-md-4 facility-returns">
-			<h3>Easy Returns </h3>
-			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
-		</div>
-	</div>
-</div>
-
 <style>
-  .facility-cod
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07Wallet_zpsswjtv8dx.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-cod:hover
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07_zpspz41uc4k.png") no-repeat top;
-}
-
-.facility-shipping
-{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024355_ic_local_shipping_48px_zpslmejbm3l.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-shipping:hover
-{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920793_ic_local_shipping_48px_zpsijbwmkjd.png") no-repeat top;
-}
-
-.facility-returns
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024335_return_zps5wptjjcf.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-returns:hover
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
-}
-/*end of facilities*/
+  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
 </style>
-</section>
-<!-- facilities end -->
+<h2 class="text-center"><b>WATCH SOME PRODUCTS</b></h2>
+<div class="container d-flex justify-content-center mt-100">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="productdetailsample.php?Order_id=14>" data-abc="true"> <img src="proimg/product2-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"> cricket set</i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/waterbottle-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 41,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 33,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/cr7jersey-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product3-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product4-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/kneepad1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/stud1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- image gallary start -->
 <section class="pt-4 p-0 hoverable">
 <div class="container">
-<h2 class="text-center m-3"><b>WATCH SOME PRODUCTS</b></h2>
-            <div class="row hover14">
-                
-                
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
+<div class="row hover14">        
                 <div class="col-md-4 mt-3 col-lg-3">
                     <img src="proimg/product1-removebg-preview.png" class="img-fluid sofa-float" alt="image">
                 </div>
@@ -257,7 +279,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                             <div class="box-up">
                                             <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
                                             <?php $img = $respro['pic'] ?>
-                                                <img class="img" src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                                <img class="img" src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;mix-blend-mode: multiply;">
                                                 <div class="img-info">
                                                     <div class="info-inner">
                                                         <span class="p-name"><h3><a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h3></span>
@@ -593,8 +615,67 @@ $respic=mysqli_fetch_assoc($quepro);
         splide.mount();
     });
 </script>
+
+
+<!-- facilities start -->
+
+<section class="pt-6">
+<div class="container">
+	<div class="row  text-center">
+		<div class="col-sm-3 col-md-4 facility-cod">
+			<h5> Cash On Delivery </h5>
+			<!-- <p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
+		</div>
+		<div class="col-sm-3 col-md-4 facility-shipping">
+			<h5> Free Shipping</h5>
+			<!-- <p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
+		</div>
+		<div class="col-sm-3 col-md-4 facility-returns">
+			<h5>Easy Returns </h5>
+			<!-- <p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
+		</div>
+	</div>
+</div>
+
+<style>
+  .facility-cod
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07Wallet_zpsswjtv8dx.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-cod:hover
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07_zpspz41uc4k.png") no-repeat top;
+}
+
+.facility-shipping
+{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024355_ic_local_shipping_48px_zpslmejbm3l.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-shipping:hover
+{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920793_ic_local_shipping_48px_zpsijbwmkjd.png") no-repeat top;
+}
+
+.facility-returns
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024335_return_zps5wptjjcf.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-returns:hover
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
+}
+/*end of facilities*/
+</style>
+</section>
+<!-- facilities end -->
+
+
 <!-- our section -->
-<section class="pt-5">
+<section class="pt-2">
 <div class="container whats-new">
   <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6 sofa-float text-center">
