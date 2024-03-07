@@ -30,9 +30,9 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Our Services</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Book Turfs</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Explore Gym</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Shop Products</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="turf.php">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="gym.php">Explore Gym</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="shop.php">Shop Products</a></li>
           
         </ul>
       </div>

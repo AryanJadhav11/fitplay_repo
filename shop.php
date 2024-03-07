@@ -128,9 +128,9 @@ $respic=mysqli_fetch_assoc($quepro);
                0 0 4px #EAEAEA;
 }
   </style>
-  <a href="home.php"><h1 class=" content hello"><span class="anime2" style="color: #EAEAEA;">FIT</span><span class="anime"style="color: #1BFC02;">PLAY</span></h1>
+  <a href="home.php"><h1 class=" content hello"style="color: white;"><span class="anime2" style="color: #EAEAEA;">FIT</span><span class="anime">PLAY</span></h1>
   <!-- <h1 class="content hello">FITPLAY</h1> -->
-  <p class="text-center"><span class="content" style="font-size:20px;color:#1BFC02">HEALTHY LIFESTYLE</span></p></a>
+  <p class="text-center"><span class="content" style="font-size:20px;color:white">HEALTHY LIFESTYLE</span></p></a>
   <!-- text end -->
 </div>
 

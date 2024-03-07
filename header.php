@@ -269,13 +269,14 @@ function getInitials($name) {
         <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-            
-                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
+              
+                <li><a class="nav-link scrollto" href="home.php">Home</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="gym.php">Gyms</a></li>
                         <li><a href="turf.php">Turfs</a></li>
+                        <li><a href="gym.php">Gyms</a></li>
+                        <li><a href="shop.php">Shop</a></li>
                        
                     </ul>
                 </li>
