@@ -200,20 +200,16 @@ $respic=mysqli_fetch_assoc($quepro);
 <div class="container">
 <h2 class="text-center m-3"><b>WATCH SOME PRODUCTS</b></h2>
             <div class="row hover14">
+                
+                
                 <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/stud1-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/stump-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/kneepad1-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-6">
                     <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
-                <div class="col-md-4 mt-3 col-lg-6">
+                <div class="col-md-4 mt-3 col-lg-4">
                     <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
+                </div>
+                <div class="col-md-4 mt-3 col-lg-4">
+                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
                     <img src="proimg/product1-removebg-preview.png" class="img-fluid sofa-float" alt="image">
