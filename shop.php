@@ -228,6 +228,28 @@ $respic=mysqli_fetch_assoc($quepro);
     </div>
   </div>
 </div>
+<!-- offers start -->
+<div class="container-fluid bg-warning  pb-5 px-0" id="special">
+    <h3 class="m-0 pt-2 text-center text-dark">Special Offers</h3>
+    <div class="container-fluid b25 my-2 p-2" style="background-color: black;">
+        <div class="container">
+          <a href="#" class="d-block my-2">
+             <img src="https://ucarecdn.com/2b4e43ec-0480-4cca-b252-6db53c47a5d8/-/format/auto/-/preview/3000x3000/-/quality/lighter/Badminton%20Racquet1.jpg" class="img-fluid" alt="Responsive image">
+          </a>
+
+          <a href="#" class="d-block my-2">
+             <img src="https://ucarecdn.com/0d2efa6a-0a55-437d-91fa-6a7fd723155c/-/format/auto/-/preview/3000x3000/-/quality/lighter/SS%20English%20Willow%20Bat%20Banner%20_1_.jpg" class="img-fluid" alt="Responsive image">
+          </a>
+           <a href="#" class="d-block my-2">
+             <img src="https://ucarecdn.com/e325e520-0fc9-4272-8e13-b94b003dbd72/-/format/auto/-/preview/3000x3000/-/quality/lighter/2nd%20Product%20Page%20Banner%20_1_.jpg" class="img-fluid" alt="Responsive image">
+          </a>
+        </div>
+    </div>
+</div>
+<style>
+
+</style>
+<!-- offer end -->
 
 <!-- image gallary start -->
 <section class="pt-4 p-0 hoverable">
