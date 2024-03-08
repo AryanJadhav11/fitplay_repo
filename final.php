@@ -72,7 +72,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
             <div class="text-center">
            <?php 
           if (isset($_SESSION['user_data'])) {
-            echo '<a href="bookturf.php?id=' . $row9['id'] . '"><button class="btn h-10 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;"> BOOK NOW </button></a>';
+            echo '<a href="detail_turf.php?id=' . $row9['id'] . '"><button class="btn h-10 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;"> BOOK NOW </button></a>';
         } else {
             echo '<button class="btn h-10 bg-success text-white" style="margin-bottom: 10px; width: 320px; border-radius: 100px;" data-bs-toggle="modal" data-bs-target="#chloginModal">Book Now</button>';
         }
