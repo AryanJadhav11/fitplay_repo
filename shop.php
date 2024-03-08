@@ -28,32 +28,6 @@ $respic=mysqli_fetch_assoc($quepro);
 </head>
 
 <body>
-<!-- <br>
-<br>
-<br> -->
-
-<!-- carosal start -->
-<!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://contents.mediadecathlon.com/s1051803/k$24a0285566a6d9ea9d53a2bde53a3b02/Sale%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://contents.mediadecathlon.com/s1061445/k$b0d33a4289de7edac9953bdbd35d99cc/Frame%20427321401.png?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> -->
 
 <!-- just new design start -->
 <section class="block"> 
@@ -161,11 +135,454 @@ $respic=mysqli_fetch_assoc($quepro);
 </style>
 
 <!-- just new design end -->
-<!-- carosal end -->
+<br>
+<br>
+<br>
+<!-- best sellig satrt -->
+   <!-- trying new slider start -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<div class="bbb_viewed">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <div class="bbb_main_container">
+                <div class="bbb_viewed_title_container">
+                    <h3 class="bbb_viewed_title">Best selling products</h3>
+                    <div class="bbb_viewed_nav_container">
+                        <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
+                        <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                </div>
+                <div class="bbb_viewed_slider_container">
+                    <div class="owl-carousel owl-theme bbb_viewed_slider">
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924153/alcatel-smartphones-einsteiger-mittelklasse-neu-3m.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹12225<span>₹13300</span></div>
+                                    <div class="bbb_viewed_name"><a href="#">Alkatel Phone</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924221/51_be7qfhil.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹30079</div>
+                                    <div class="bbb_viewed_name"><a href="#">Samsung LED</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹22250</div>
+                                    <div class="bbb_viewed_name"><a href="#">Samsung Mobile</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924275/images.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹1379</div>
+                                    <div class="bbb_viewed_name"><a href="#">Huawei Power</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924361/21HmjI5eVcL.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹225<span>₹300</span></div>
+                                    <div class="bbb_viewed_name"><a href="#">Sony Power</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹13275</div>
+                                    <div class="bbb_viewed_name"><a href="#">Speedlink Mobile</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div> 
+            </div>
+        </div>
+    </div>
+</div>
 
-<br>
-<br>
-<br>
+<style>
+  .bbb_viewed {
+     padding-top: 51px;
+     padding-bottom: 60px;
+     background: #eff6fa
+ }
+
+ .bbb_main_container{
+         background-color: #fff;
+    padding: 11px;
+ }
+
+ .bbb_viewed_title_container {
+     border-bottom: solid 1px #dadada
+ }
+
+ .bbb_viewed_title {
+         margin-bottom: 16px;
+    margin-top: 8px;
+
+ }
+
+ .bbb_viewed_nav_container {
+     position: absolute;
+     right: -5px;
+     bottom: 14px
+ }
+
+ .bbb_viewed_nav {
+     display: inline-block;
+     cursor: pointer
+ }
+
+ .bbb_viewed_nav i {
+     color: #dadada;
+     font-size: 18px;
+     padding: 5px;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease
+ }
+
+ .bbb_viewed_nav:hover i {
+     color: #606264
+ }
+
+ .bbb_viewed_prev {
+     margin-right: 15px
+ }
+
+ .bbb_viewed_slider_container {
+     padding-top: 13px;
+ }
+
+ .bbb_viewed_item {
+     width: 100%;
+     background: #FFFFFF;
+     border-radius: 2px;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     padding-left: 30px;
+     padding-right: 30px
+ }
+
+ .bbb_viewed_image {
+         width: 150px;
+    height: 150px;
+ }
+
+ .bbb_viewed_image img {
+     display: block;
+     max-width: 100%
+ }
+
+ .bbb_viewed_content {
+     width: 100%;
+     margin-top: 25px
+ }
+
+ .bbb_viewed_price {
+     font-size: 16px;
+     color: #000000;
+     font-weight: 500
+ }
+
+ .bbb_viewed_item.discount .bbb_viewed_price {
+     color: #df3b3b
+ }
+
+ .bbb_viewed_price span {
+     position: relative;
+     font-size: 12px;
+     font-weight: 400;
+     color: rgba(0, 0, 0, 0.6);
+     margin-left: 8px
+ }
+
+ .bbb_viewed_price span::after {
+     display: block;
+     position: absolute;
+     top: 6px;
+     left: -2px;
+     width: calc(100% + 4px);
+     height: 1px;
+     background: #8d8d8d;
+     content: ''
+ }
+
+ .bbb_viewed_name {
+     margin-top: 3px
+ }
+
+ .bbb_viewed_name a {
+     font-size: 14px;
+     color: #000000;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease
+ }
+
+ .bbb_viewed_name a:hover {
+     color: #0e8ce4
+ }
+
+ .item_marks {
+     position: absolute;
+     top: 18px;
+     left: 18px
+ }
+
+ .item_mark {
+     display: none;
+     width: 36px;
+     height: 36px;
+     border-radius: 50%;
+     color: #FFFFFF;
+     font-size: 10px;
+     font-weight: 500;
+     line-height: 36px;
+     text-align: center
+ }
+
+ .item_discount { 
+     background: #df3b3b;
+     margin-right: 5px
+ }
+
+ .item_new {
+     background: #0e8ce4
+ }
+
+ .bbb_viewed_item.discount .item_discount {
+     display: inline-block
+ }
+
+ .bbb_viewed_item.is_new .item_new {
+     display: inline-block
+ }
+</style>
+
+<script>
+  $(document).ready(function()
+{
+
+   
+        if($('.bbb_viewed_slider').length)
+        {
+            var viewedSlider = $('.bbb_viewed_slider');
+
+            viewedSlider.owlCarousel(
+            {
+                loop:true,
+                margin:30,
+                autoplay:true,
+                autoplayTimeout:6000,
+                nav:false,
+                dots:false,
+                responsive:
+                {
+                    0:{items:1},
+                    575:{items:2},
+                    768:{items:3},
+                    991:{items:4},
+                    1199:{items:6}
+                }
+            });
+
+            if($('.bbb_viewed_prev').length)
+            {
+                var prev = $('.bbb_viewed_prev');
+                prev.on('click', function()
+                {
+                    viewedSlider.trigger('prev.owl.carousel');
+                });
+            }
+
+            if($('.bbb_viewed_next').length)
+            {
+                var next = $('.bbb_viewed_next');
+                next.on('click', function()
+                {
+                    viewedSlider.trigger('next.owl.carousel');
+                });
+            }
+        }
+
+
+    });
+</script>
+    <!-- trying new slider end -->
+
+<!-- best selling end -->
+
+<!--product display start -->
+
+<div class="container">
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="lc-block text-center">
+                    <img class="img-fluid " src="https://soccerarmor.com/wp-content/uploads/2023/08/Ronaldo-Al-Nassr-FC-2324-Home-Jersey.png" width="400" height="400" loading="lazy">
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold">Boost your Creativity</h2>
+
+                        <p class="lead"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus.</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Aenean vel nisi in ipsum congue</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
+                <div class="lc-block text-center"><img class="img-fluid" src="https://freepngimg.com/thumb/shoes/28530-3-nike-shoes-transparent.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold">Increase your Sales</h2>
+
+                        <p class="lead"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus.</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Aenean vel nisi in ipsum congue</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+
+    </div>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- product display end -->
 
 <style>
   .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
@@ -255,54 +672,6 @@ $respic=mysqli_fetch_assoc($quepro);
     </div>
   </div>
 </div>
-<!-- offers start -->
-<div class="container-fluid bg-warning  pb-5 px-0" id="special">
-    <h3 class="m-0 pt-2 text-center text-dark">Special Offers</h3>
-    <div class="container-fluid b25 my-2 p-2" style="background-color: black;">
-        <div class="container">
-          <a href="#" class="d-block my-2">
-             <img src="https://ucarecdn.com/2b4e43ec-0480-4cca-b252-6db53c47a5d8/-/format/auto/-/preview/3000x3000/-/quality/lighter/Badminton%20Racquet1.jpg" class="img-fluid" alt="Responsive image">
-          </a>
-
-          <a href="#" class="d-block my-2">
-             <img src="https://ucarecdn.com/0d2efa6a-0a55-437d-91fa-6a7fd723155c/-/format/auto/-/preview/3000x3000/-/quality/lighter/SS%20English%20Willow%20Bat%20Banner%20_1_.jpg" class="img-fluid" alt="Responsive image">
-          </a>
-           <a href="#" class="d-block my-2">
-             <img src="https://ucarecdn.com/e325e520-0fc9-4272-8e13-b94b003dbd72/-/format/auto/-/preview/3000x3000/-/quality/lighter/2nd%20Product%20Page%20Banner%20_1_.jpg" class="img-fluid" alt="Responsive image">
-          </a>
-        </div>
-    </div>
-</div>
-<style>
-
-</style>
-<!-- offer end -->
-
-<!-- image gallary start -->
-<section class="pt-4 p-0 hoverable">
-<div class="container">
-<div class="row hover14">        
-                <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product1-removebg-preview.png" class="img-fluid sofa-float" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product2-removebg-preview.png" class="img-fluid sofa-float" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product3-removebg-preview.png" class="img-fluid sofa-float" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
-                    <img src="proimg/product4-removebg-preview.png" class="img-fluid sofa-float" alt="image">
-                </div>
-            </div>
-        </div>
-</section>
-<!-- image gallary end -->
-<br>
-<br>
-<br>
-<br>
-
 
 <!-- Product Slider -->
 <section class="p-0">
@@ -646,325 +1015,7 @@ $respic=mysqli_fetch_assoc($quepro);
 </section>
     <!-- product slider over -->
 
-    <!-- trying new slider start -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-<div class="bbb_viewed">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-               <div class="bbb_main_container">
-                <div class="bbb_viewed_title_container">
-                    <h3 class="bbb_viewed_title">Best selling products</h3>
-                    <div class="bbb_viewed_nav_container">
-                        <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
-                        <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
-                    </div>
-                </div>
-                <div class="bbb_viewed_slider_container">
-                    <div class="owl-carousel owl-theme bbb_viewed_slider">
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924153/alcatel-smartphones-einsteiger-mittelklasse-neu-3m.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹12225<span>₹13300</span></div>
-                                    <div class="bbb_viewed_name"><a href="#">Alkatel Phone</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924221/51_be7qfhil.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹30079</div>
-                                    <div class="bbb_viewed_name"><a href="#">Samsung LED</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹22250</div>
-                                    <div class="bbb_viewed_name"><a href="#">Samsung Mobile</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924275/images.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹1379</div>
-                                    <div class="bbb_viewed_name"><a href="#">Huawei Power</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924361/21HmjI5eVcL.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹225<span>₹300</span></div>
-                                    <div class="bbb_viewed_name"><a href="#">Sony Power</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹13275</div>
-                                    <div class="bbb_viewed_name"><a href="#">Speedlink Mobile</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               </div> 
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-  .bbb_viewed {
-     padding-top: 51px;
-     padding-bottom: 60px;
-     background: #eff6fa
- }
-
- .bbb_main_container{
-         background-color: #fff;
-    padding: 11px;
- }
-
- .bbb_viewed_title_container {
-     border-bottom: solid 1px #dadada
- }
-
- .bbb_viewed_title {
-         margin-bottom: 16px;
-    margin-top: 8px;
-
- }
-
- .bbb_viewed_nav_container {
-     position: absolute;
-     right: -5px;
-     bottom: 14px
- }
-
- .bbb_viewed_nav {
-     display: inline-block;
-     cursor: pointer
- }
-
- .bbb_viewed_nav i {
-     color: #dadada;
-     font-size: 18px;
-     padding: 5px;
-     -webkit-transition: all 200ms ease;
-     -moz-transition: all 200ms ease;
-     -ms-transition: all 200ms ease;
-     -o-transition: all 200ms ease;
-     transition: all 200ms ease
- }
-
- .bbb_viewed_nav:hover i {
-     color: #606264
- }
-
- .bbb_viewed_prev {
-     margin-right: 15px
- }
-
- .bbb_viewed_slider_container {
-     padding-top: 13px;
- }
-
- .bbb_viewed_item {
-     width: 100%;
-     background: #FFFFFF;
-     border-radius: 2px;
-     padding-top: 25px;
-     padding-bottom: 25px;
-     padding-left: 30px;
-     padding-right: 30px
- }
-
- .bbb_viewed_image {
-         width: 150px;
-    height: 150px;
- }
-
- .bbb_viewed_image img {
-     display: block;
-     max-width: 100%
- }
-
- .bbb_viewed_content {
-     width: 100%;
-     margin-top: 25px
- }
-
- .bbb_viewed_price {
-     font-size: 16px;
-     color: #000000;
-     font-weight: 500
- }
-
- .bbb_viewed_item.discount .bbb_viewed_price {
-     color: #df3b3b
- }
-
- .bbb_viewed_price span {
-     position: relative;
-     font-size: 12px;
-     font-weight: 400;
-     color: rgba(0, 0, 0, 0.6);
-     margin-left: 8px
- }
-
- .bbb_viewed_price span::after {
-     display: block;
-     position: absolute;
-     top: 6px;
-     left: -2px;
-     width: calc(100% + 4px);
-     height: 1px;
-     background: #8d8d8d;
-     content: ''
- }
-
- .bbb_viewed_name {
-     margin-top: 3px
- }
-
- .bbb_viewed_name a {
-     font-size: 14px;
-     color: #000000;
-     -webkit-transition: all 200ms ease;
-     -moz-transition: all 200ms ease;
-     -ms-transition: all 200ms ease;
-     -o-transition: all 200ms ease;
-     transition: all 200ms ease
- }
-
- .bbb_viewed_name a:hover {
-     color: #0e8ce4
- }
-
- .item_marks {
-     position: absolute;
-     top: 18px;
-     left: 18px
- }
-
- .item_mark {
-     display: none;
-     width: 36px;
-     height: 36px;
-     border-radius: 50%;
-     color: #FFFFFF;
-     font-size: 10px;
-     font-weight: 500;
-     line-height: 36px;
-     text-align: center
- }
-
- .item_discount { 
-     background: #df3b3b;
-     margin-right: 5px
- }
-
- .item_new {
-     background: #0e8ce4
- }
-
- .bbb_viewed_item.discount .item_discount {
-     display: inline-block
- }
-
- .bbb_viewed_item.is_new .item_new {
-     display: inline-block
- }
-</style>
-
-<script>
-  $(document).ready(function()
-{
-
-   
-        if($('.bbb_viewed_slider').length)
-        {
-            var viewedSlider = $('.bbb_viewed_slider');
-
-            viewedSlider.owlCarousel(
-            {
-                loop:true,
-                margin:30,
-                autoplay:true,
-                autoplayTimeout:6000,
-                nav:false,
-                dots:false,
-                responsive:
-                {
-                    0:{items:1},
-                    575:{items:2},
-                    768:{items:3},
-                    991:{items:4},
-                    1199:{items:6}
-                }
-            });
-
-            if($('.bbb_viewed_prev').length)
-            {
-                var prev = $('.bbb_viewed_prev');
-                prev.on('click', function()
-                {
-                    viewedSlider.trigger('prev.owl.carousel');
-                });
-            }
-
-            if($('.bbb_viewed_next').length)
-            {
-                var next = $('.bbb_viewed_next');
-                next.on('click', function()
-                {
-                    viewedSlider.trigger('next.owl.carousel');
-                });
-            }
-        }
-
-
-    });
-</script>
-    <!-- trying new slider end -->
-
+ 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 <script>
@@ -985,116 +1036,6 @@ $respic=mysqli_fetch_assoc($quepro);
 </script>
 
 
-<!-- facilities start -->
-
-<section class="pt-6">
-<div class="container">
-	<div class="row  text-center">
-		<div class="col-sm-3 col-md-4 facility-cod">
-			<h5> Cash On Delivery </h5>
-			<!-- <p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
-		</div>
-		<div class="col-sm-3 col-md-4 facility-shipping">
-			<h5> Free Shipping</h5>
-			<!-- <p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
-		</div>
-		<div class="col-sm-3 col-md-4 facility-returns">
-			<h5>Easy Returns </h5>
-			<!-- <p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
-		</div>
-	</div>
-</div>
-
-<style>
-  .facility-cod
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07Wallet_zpsswjtv8dx.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-cod:hover
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07_zpspz41uc4k.png") no-repeat top;
-}
-
-.facility-shipping
-{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024355_ic_local_shipping_48px_zpslmejbm3l.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-shipping:hover
-{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920793_ic_local_shipping_48px_zpsijbwmkjd.png") no-repeat top;
-}
-
-.facility-returns
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024335_return_zps5wptjjcf.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-returns:hover
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
-}
-/*end of facilities*/
-</style>
-</section>
-<!-- facilities end -->
-
-
-<!-- our section -->
-<section class="pt-2">
-<div class="container whats-new">
-  <div class="row">
-  <div class="col-sm-6 col-md-6 col-lg-6 sofa-float text-center">
-		<img src="proimg/ronaldodada.png" class="img-responsive">
-	</div>
-	<div class="col-sm-6 col-md-6 text-center whats-new-text">
-		<h1>Check out our Turf Platform</h1>
-		<p class="paragraphs"> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. Eam et mazim doctusLorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne.     </p>
-	</div>
-  </div>
-	
-</div>
-
- <style>
-    .whats-new
-    {
-    	margin-top:40px;
-    }
-    
-    .sofa-float
-    {
-    	position: relative;
-    	display:block;
-    	max-width:400px;
-    	margin:0px auto;
-    	animation:animatedsofa 3s infinite;
-    }
-    
-    @keyframes animatedsofa
-    {
-    	0%{transform:translateY(10px);}
-    	50%{transform:translateY(-20px);}
-    	100%{transform:translateY(10px);}
-    }
-    
-    .paragraphs
-    {
-    	max-width:400px;
-    	max-height:400px;
-    	margin:0px auto;
-    	display: block;
-    }
-    
-    .whats-new-text
-    {
-    	padding-top:3%;
-    	padding-bottom:3%;
-    }
- </style>
-</section>
-<!-- our section -->
 
 <!-- footer start -->
 <?php include('footer.php') ?>
