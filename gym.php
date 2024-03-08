@@ -99,7 +99,7 @@
               <h5 class="card-title">Forge Fitness Club</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Kasaba Bawada Main Road</p>
               <p class="card-text">Stocked with world-class premium equipment. We are focused on giving our members the best value for their money.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <a href="forge.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>

@@ -23,5 +23,17 @@
 .icon-hover:hover i {
   color: #3b71ca !important;
 }
+.gymdese{
+  width:100%;
+  height:20vh;
+}
+.gymname{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:10vh;
+  background-color:rgb(19,20,21);
+}
   </style>
   </head>
