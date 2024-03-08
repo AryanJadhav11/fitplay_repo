@@ -55,85 +55,112 @@ $respic=mysqli_fetch_assoc($quepro);
   </button>
 </div> -->
 
-<!-- video css -->
-<style>
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Adjust the height as needed */
-    overflow: hidden;
-  }
-  .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(7px);
-  }
-  .content {
-    position: relative;
-    z-index: 1;
-    text-align: center; 
-    padding: 20px;
-    font-size:7rem;
-    margin-top:290px;
-    letter-spacing: 14px;
-    margin-left:50px;
-    font-family: "Arvo",sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  }
-  .overlay {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: #000; /* Dark transparent overlay */
-  
-}
-</style>
-<!-- video start -->
-<div class="video-container overlay" >
-  <video autoplay muted loop>
-    <source src="shop_video.mp4" type="video/mp4" style="">
-  </video>
-  <!-- text start -->
-  <style>
-    .hello,.anime{
-  transition: .5s linear
-}
-.hello:hover .anime:nth-child(1){
-  margin-right: 5px
-}
-.hello:hover .anime:nth-child(1):after{
-  content: "";
-}
-.hello:hover .anime:nth-child(2){
-  margin-left: 30px
-}
-.hello:hover .anime{
-  color: #1BFC02;
-  text-shadow: 0 0 2px #1BFC02,
-               0 0 3px #1BFC02, 
-               0 0 4px #1BFC02;
-}
-.hello:hover .anime2{
-  color: #EAEAEA;
-  text-shadow: 0 0 2px #EAEAEA,
-               0 0 3px #EAEAEA, 
-               0 0 4px #EAEAEA;
-}
-  </style>
-  <a href="home.php"><h1 class=" content hello"style="color: white;"><span class="anime2" style="color: #EAEAEA;">FIT</span><span class="anime">PLAY</span></h1>
-  <!-- <h1 class="content hello">FITPLAY</h1> -->
-  <p class="text-center"><span class="content" style="font-size:20px;color:white">HEALTHY LIFESTYLE</span></p></a>
-  <!-- text end -->
+<!-- just new design start -->
+<section class="block"> 
+<div class="container">
+<div class="row">
+  <div class="col-lg-6">
+    <h1 class="hello"><b>Best In Style Colloction For You</b></h1>
+    <span style="font-family: 'Oswald', sans-serif; color: black;text-decoration-line: underline; text-decoration-color: yellow;  text-decoration-thickness: 3px;text-underline-offset: 6px; font-size:20px;">We craft the,we wont say the best <br>But through 70 years of experience in the industry</span>
+    <br>
+    <br>
+    <button class="btn" style="border-radius:50px;color:white;background-color:black;width:200px;">ORDER NOW</button>
+    <br>
+    <br>
+<br>
+    <h4 style="color:black;"><b>Toe Comfort</b></h4>
+    <h2 style="color:black;"><b>FAST RUNNING</b></h2>
+  </div>
+  <div class="col-lg-6">
+    <img src="https://www.pinclipart.com/picdir/big/338-3385006_download-shoe-png-hd-clipart.png" alt="" class="imgcss img-fluid">
+    <br>
+    <br>
+    <br>
+    <h3 style="font-size: 6rem;font-weight: boldtext-shadow: 0 0 0.2em yellow;color: white;position:absolute;left:1150px;top:500px; -webkit-text-stroke: 1px yellow;-webkit-text-fill-color: transparent;font-weight:400;">₹899</>
+  </div>
 </div>
-<!-- video end -->
+</div>
+
+</section>
+
+<style>
+
+
+.hello{
+    font-size: 3rem;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+  }
+  .block{
+    height:110%;
+    width:100%;
+    background: linear-gradient(to right,#988181,#585151,#281F1F,#000000);
+    background-size:200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    position: relative;
+    }
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%; /* Start position of the animation */
+        }
+        100% {
+            background-position: 100% 50%; /* End position of the animation */
+        }
+    }
+  .imgcss{
+    position: relative;
+    max-width: 100%;
+    filter:drop-shadow(20px 20px 20px rgba(0,0,0,0.9));
+  }
+  .circle{
+    position: absolute;
+    top: -120px;
+    right: 0;
+    z-index:1;
+    height: auto;
+    max-width: 100%;
+    opacity: 10%;
+  }
+
+  @media (min-width: 576px) {
+    .hello {
+      font-size: 4rem;
+    }
+    .circle {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hello {
+      font-size: 5rem;
+    }
+    .circle {
+      height: 600px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .hello {
+      font-size: 6rem;
+    }
+    .circle {
+      height: 800px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hello {
+      font-size: 6rem;
+    }
+    .circle {
+      height: 1000px;
+    }
+  }
+</style>
+
+<!-- just new design end -->
 <!-- carosal end -->
 
 <br>
@@ -618,6 +645,325 @@ $respic=mysqli_fetch_assoc($quepro);
 
 </section>
     <!-- product slider over -->
+
+    <!-- trying new slider start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<div class="bbb_viewed">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <div class="bbb_main_container">
+                <div class="bbb_viewed_title_container">
+                    <h3 class="bbb_viewed_title">Best selling products</h3>
+                    <div class="bbb_viewed_nav_container">
+                        <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
+                        <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                </div>
+                <div class="bbb_viewed_slider_container">
+                    <div class="owl-carousel owl-theme bbb_viewed_slider">
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924153/alcatel-smartphones-einsteiger-mittelklasse-neu-3m.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹12225<span>₹13300</span></div>
+                                    <div class="bbb_viewed_name"><a href="#">Alkatel Phone</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924221/51_be7qfhil.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹30079</div>
+                                    <div class="bbb_viewed_name"><a href="#">Samsung LED</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹22250</div>
+                                    <div class="bbb_viewed_name"><a href="#">Samsung Mobile</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924275/images.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹1379</div>
+                                    <div class="bbb_viewed_name"><a href="#">Huawei Power</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924361/21HmjI5eVcL.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹225<span>₹300</span></div>
+                                    <div class="bbb_viewed_name"><a href="#">Sony Power</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
+                                <div class="bbb_viewed_content text-center">
+                                    <div class="bbb_viewed_price">₹13275</div>
+                                    <div class="bbb_viewed_name"><a href="#">Speedlink Mobile</a></div>
+                                </div>
+                                <ul class="item_marks">
+                                    <li class="item_mark item_discount">-25%</li>
+                                    <li class="item_mark item_new">new</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .bbb_viewed {
+     padding-top: 51px;
+     padding-bottom: 60px;
+     background: #eff6fa
+ }
+
+ .bbb_main_container{
+         background-color: #fff;
+    padding: 11px;
+ }
+
+ .bbb_viewed_title_container {
+     border-bottom: solid 1px #dadada
+ }
+
+ .bbb_viewed_title {
+         margin-bottom: 16px;
+    margin-top: 8px;
+
+ }
+
+ .bbb_viewed_nav_container {
+     position: absolute;
+     right: -5px;
+     bottom: 14px
+ }
+
+ .bbb_viewed_nav {
+     display: inline-block;
+     cursor: pointer
+ }
+
+ .bbb_viewed_nav i {
+     color: #dadada;
+     font-size: 18px;
+     padding: 5px;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease
+ }
+
+ .bbb_viewed_nav:hover i {
+     color: #606264
+ }
+
+ .bbb_viewed_prev {
+     margin-right: 15px
+ }
+
+ .bbb_viewed_slider_container {
+     padding-top: 13px;
+ }
+
+ .bbb_viewed_item {
+     width: 100%;
+     background: #FFFFFF;
+     border-radius: 2px;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     padding-left: 30px;
+     padding-right: 30px
+ }
+
+ .bbb_viewed_image {
+         width: 150px;
+    height: 150px;
+ }
+
+ .bbb_viewed_image img {
+     display: block;
+     max-width: 100%
+ }
+
+ .bbb_viewed_content {
+     width: 100%;
+     margin-top: 25px
+ }
+
+ .bbb_viewed_price {
+     font-size: 16px;
+     color: #000000;
+     font-weight: 500
+ }
+
+ .bbb_viewed_item.discount .bbb_viewed_price {
+     color: #df3b3b
+ }
+
+ .bbb_viewed_price span {
+     position: relative;
+     font-size: 12px;
+     font-weight: 400;
+     color: rgba(0, 0, 0, 0.6);
+     margin-left: 8px
+ }
+
+ .bbb_viewed_price span::after {
+     display: block;
+     position: absolute;
+     top: 6px;
+     left: -2px;
+     width: calc(100% + 4px);
+     height: 1px;
+     background: #8d8d8d;
+     content: ''
+ }
+
+ .bbb_viewed_name {
+     margin-top: 3px
+ }
+
+ .bbb_viewed_name a {
+     font-size: 14px;
+     color: #000000;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease
+ }
+
+ .bbb_viewed_name a:hover {
+     color: #0e8ce4
+ }
+
+ .item_marks {
+     position: absolute;
+     top: 18px;
+     left: 18px
+ }
+
+ .item_mark {
+     display: none;
+     width: 36px;
+     height: 36px;
+     border-radius: 50%;
+     color: #FFFFFF;
+     font-size: 10px;
+     font-weight: 500;
+     line-height: 36px;
+     text-align: center
+ }
+
+ .item_discount { 
+     background: #df3b3b;
+     margin-right: 5px
+ }
+
+ .item_new {
+     background: #0e8ce4
+ }
+
+ .bbb_viewed_item.discount .item_discount {
+     display: inline-block
+ }
+
+ .bbb_viewed_item.is_new .item_new {
+     display: inline-block
+ }
+</style>
+
+<script>
+  $(document).ready(function()
+{
+
+   
+        if($('.bbb_viewed_slider').length)
+        {
+            var viewedSlider = $('.bbb_viewed_slider');
+
+            viewedSlider.owlCarousel(
+            {
+                loop:true,
+                margin:30,
+                autoplay:true,
+                autoplayTimeout:6000,
+                nav:false,
+                dots:false,
+                responsive:
+                {
+                    0:{items:1},
+                    575:{items:2},
+                    768:{items:3},
+                    991:{items:4},
+                    1199:{items:6}
+                }
+            });
+
+            if($('.bbb_viewed_prev').length)
+            {
+                var prev = $('.bbb_viewed_prev');
+                prev.on('click', function()
+                {
+                    viewedSlider.trigger('prev.owl.carousel');
+                });
+            }
+
+            if($('.bbb_viewed_next').length)
+            {
+                var next = $('.bbb_viewed_next');
+                next.on('click', function()
+                {
+                    viewedSlider.trigger('next.owl.carousel');
+                });
+            }
+        }
+
+
+    });
+</script>
+    <!-- trying new slider end -->
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
