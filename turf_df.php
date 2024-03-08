@@ -68,7 +68,7 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
         }
 
         .turf-image {
-            max-width: 100%;
+            max-width: 600;
             border-radius: 10px;
             margin-bottom: 20px;
         }
@@ -248,15 +248,29 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 
                 <div class="buttons-container">
                     
-        <?php
-                    if (isset($_SESSION['user_data'])) {
-            echo '<a href="detail_turf.php?id=' . $row9['id'] . '"><button class="btn btn-book-slot">Book Your Slot</button></a>';
-            echo'<button class="btn btn-share">Share</button>';
-        } else {
-            echo '<button class="btn btn-book-slot"  data-bs-toggle="modal" data-bs-target="#chloginModal">Book Your Slot</button>';
-           echo' <button class="btn btn-share">Share</button>';
-        }
-        ?>
+                <?php
+    if (isset($_SESSION['user_data'])) {
+        echo '<a href="detail_turf.php?id=' . $row9['id'] . '"><button class="btn btn-book-slot">Book Your Slot</button></a>';
+        echo '<button class="btn btn-share" onclick="shareOnWhatsApp()">Share</button>';
+    } else {
+        echo '<button class="btn btn-book-slot"  data-bs-toggle="modal" data-bs-target="#chloginModal">Book Your Slot</button>';
+        echo ' <button class="btn btn-share" onclick="shareOnWhatsApp()">Share</button>';
+    }
+?>
+
+<script>
+    function shareOnWhatsApp() {
+        // Get the current page URL
+        var currentUrl = window.location.href;
+
+        // Create a WhatsApp share link
+        var whatsappLink = 'whatsapp://send?text=' + encodeURIComponent('Check out this page: ' + currentUrl + '\n');
+
+        // Open the WhatsApp app
+        window.location.href = whatsappLink;
+    }
+</script>
+
                 </div>
             </div>
 
@@ -300,6 +314,8 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
 <div id="map-container" style="height: 400px; margin-top: 20px; width: 100%;">
     <?= ucfirst($row9['loc']) ?>
 </div>
+
+
 </body>
 
 </html>
