@@ -466,7 +466,7 @@ $respic=mysqli_fetch_assoc($quepro);
         <div class="row mb-4 align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="lc-block text-center">
-                    <img class="img-fluid " src="https://soccerarmor.com/wp-content/uploads/2023/08/Ronaldo-Al-Nassr-FC-2324-Home-Jersey.png" width="400" height="400" loading="lazy">
+                    <img class="img-fluid " src="https://img.freepik.com/free-vector/no-time-concept-illustration_114360-4209.jpg?w=740&t=st=1709932533~exp=1709933133~hmac=d799041cc79f1faee2b329406e29a76a8845a76248623fded4d1b136d322e216" width="400" height="400" loading="lazy">
                 </div><!-- /lc-block -->
             </div><!-- /col -->
             <div class="col-lg-6 p-lg-6">
@@ -522,7 +522,7 @@ $respic=mysqli_fetch_assoc($quepro);
         </div>
         <div class="row mb-4 align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
-                <div class="lc-block text-center"><img class="img-fluid" src="https://freepngimg.com/thumb/shoes/28530-3-nike-shoes-transparent.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+                <div class="lc-block text-center"><img class="img-fluid" src="https://img.freepik.com/free-vector/discount-concept-illustration_114360-2301.jpg?w=740&t=st=1709932568~exp=1709933168~hmac=fe4ab8965b27cd051463b32e51628ba04ccd59378a6f3a60d418f33a234002c5" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
             </div><!-- /col -->
             <div class="col-lg-6 p-lg-6">
                 <div class="lc-block mb-5">
@@ -1035,8 +1035,81 @@ $respic=mysqli_fetch_assoc($quepro);
     });
 </script>
 
+image start
+<section>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="block1">
+            <img src="https://www.pngplay.com/wp-content/uploads/7/Cristiano-Ronaldo-Transparent-Images.png" alt="" class="img-fluid img1">
+            <div class="text-left">
+              <span>Feel Like A Player</span>
+              <h1 style="font-size:40px; font-weight:200px;">PROBALL 2019</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+         <div class="block2">
+            <img src="https://www.pngplay.com/wp-content/uploads/7/Cristiano-Ronaldo-Transparent-Images.png" alt="" class="img-fluid img2">
+            <div class="text-right">
+              <span>Feel Like A Player</span>
+              <h1 style="font-size:40px; font-weight:200px;">PROBALL 2019</h1>
+              <button class="btn "></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .block1 {
+    background-color: grey;
+    position: relative; /* Added position relative */
+    color:black;
+    font-weight:200;
+    font-family: 'Oswald', sans-serif;
+
+  }
+
+  .img1 {
+    height: 500px;
+    width: 400px;
+    padding: 10px;
+  }
+
+  .text-left {
+    position: absolute; /* Added position absolute */
+    top: 40%; /* Align to the top 50% of the parent */
+    left: 80%; /* Align to the left 50% of the parent */
+    transform: translate(-50%, -50%); /* Move the element back by 50% of its own dimensions */
+  }
+  .block2{
+    background-color: black;
+    position: relative; /* Added position relative */
+    color:white;
+    font-weight:200;
+    font-family: 'Oswald', sans-serif;
+
+  }
+  .text-right {
+    position: absolute; /* Added position absolute */
+    top: 40%; /* Align to the top 50% of the parent */
+    left: 30%; /* Align to the left 50% of the parent */
+    transform: translate(-50%, -50%); /* Move the element back by 50% of its own dimensions */
+  }
+
+  .img2{
+    height: 500px;
+    width: 400px;
+    padding: 10px;
+  }
+</style>
 
 
+
+<!-- image end -->
 <!-- footer start -->
 <?php include('footer.php') ?>
 <!-- End Footer -->
