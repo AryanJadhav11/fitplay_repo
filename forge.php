@@ -44,12 +44,14 @@
 </script>
       <main class="col-lg-6">
         <div class="ps-lg-3">
+        <div>
         <div class="gymname">  
             <h2 class="title ">
                <b>Forge Fitness Club Kolhapur</b>
             </h2> 
             
-        </div><br>
+        </div><button type="button" class="btn btn-primary">Enquire</button></div>
+        <br>
         <div class="gymdese"> <p style="font-size:19px; font-family:'Arial';">
               The Forge Fitness Club, Kolhapur is stocked with world-class equipment from leading manufacturers such as Life Fitness and Hammer Strength. We are focused on giving our members the best value for their money. That means equipment and workout space that is clean, safe, comfortable, and close to home.. 
                We provides the top quality cardio, free weight, and strength training that need to get the shape at an affordable price.
