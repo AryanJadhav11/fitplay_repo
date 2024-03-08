@@ -1,41 +1,41 @@
 <!-- Php for login modal and database -->
 <?php
- session_start();
 
- // Database connection
- $servername = "localhost";
- $username = "root";
- $password = "";
- $dbname = "fitplay_users"; 
+session_start();
 
- $conn = new mysqli($servername, $username, $password, $dbname);
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
 
- // Check connection
- if ($conn->connect_error) {
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
- }
+}
 
-  // // Check if user is already logged in
-  // if (isset($_SESSION['user_data'])) {
-  //     header("Location: turf.php");
-  //     exit();
-  // }
-  
+$showerr = false;
 
-  $showalert = false;
-  $login = false;
-    $showerr = false;
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $err = "";
-    $form_username = $_POST["uname"];
-    $form_password = $_POST["password"];
 
-    $sql = "SELECT * FROM `users` WHERE username='$form_username' AND password='$form_password';";
-    $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
+    // Check if the keys are set before using them
+    $form_username = isset($_POST["uname"]) ? $_POST["uname"] : "";
+    $form_password = isset($_POST["password"]) ? $_POST["password"] : "";
+
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM `users` WHERE username=? AND password=?");
+    $stmt->bind_param("ss", $form_username, $form_password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+
+    $num = $result->num_rows;
 
     if ($num) {
-        $re = mysqli_fetch_assoc($result);
+        $re = $result->fetch_assoc();
         $user_data = array(
             'user_id' => $re['id'],
             'firstname' => $re['firstname'],
@@ -44,24 +44,16 @@
             'email' => $re['email'],
         );
         $_SESSION['user_data'] = $user_data;
-        
+
         // Redirect to turf.php after successful login
-
-       header('Location:turf.php');
-       
-    } 
-
-    else {
+        header('Location:turf.php');
+        exit();
+    } else {
         $showerr = "Invalid Email / Password";
         $_SESSION['error'] = "Invalid Email / Password";
+       
     }
- }
- echo "User data in session:<br>";
- foreach ($_SESSION['user_data'] as $key => $value) {
-    echo "$key: $value<br>";
-  }
-  //Your remaining code for the login page goes here
- 
+}
 ?>
 <?php
 function getInitials($name) {
@@ -74,17 +66,14 @@ function getInitials($name) {
     return $initials;
 }
 ?>
-<?php
-  if($showerr)
- { 
-    echo '
-    <div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
-    <strong>Oops !</strong>'.$showerr.'
- 
-    </div>';
- }
-
-?>
+.  <?php
+// if ($showerr) {
+//     echo '
+//     <div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+//     <strong>Oops !</strong>' . $showerr . '
+//     </div>';
+// }
+// ?>
 <!-- Php for login modal and database end -->
 
 
@@ -269,13 +258,14 @@ function getInitials($name) {
         <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-            
-                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
+              
+                <li><a class="nav-link scrollto" href="home.php">Home</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="gym.php">Gyms</a></li>
                         <li><a href="turf.php">Turfs</a></li>
+                        <li><a href="gym.php">Gyms</a></li>
+                        <li><a href="shop.php">Shop</a></li>
                        
                     </ul>
                 </li>

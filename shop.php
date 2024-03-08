@@ -26,13 +26,14 @@ $respic=mysqli_fetch_assoc($quepro);
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 
 </head>
+
 <body>
+<!-- <br>
 <br>
-<br>
-<br>
+<br> -->
 
 <!-- carosal start -->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+<!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
       <img src="https://contents.mediadecathlon.com/s1060328/k$551476c484457458609a90f62a1988c2/99%20under%20999%20%20web.jpg?format=auto&quality=70&f=1480x0" class="d-block w-100" alt="...">
@@ -52,88 +53,208 @@ $respic=mysqli_fetch_assoc($quepro);
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-<!-- carosal end -->
-<br>
-<br>
-<br>
-<br>
+</div> -->
 
-<!-- facilities start -->
-<section class="pt-3">
-<div class="container">
-	<div class="row  text-center">
-		<div class="col-sm-4 col-md-4 facility-cod">
-			<h3> Cash On Delivery </h3>
-			<p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
-		</div>
-		<div class="col-sm-4 col-md-4 facility-shipping">
-			<h3> Free Shipping</h3>
-			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
-		</div>
-		<div class="col-sm-4 col-md-4 facility-returns">
-			<h3>Easy Returns </h3>
-			<p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p>
-		</div>
-	</div>
+<!-- video css -->
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(7px);
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center; 
+    padding: 20px;
+    font-size:7rem;
+    margin-top:290px;
+    letter-spacing: 14px;
+    margin-left:50px;
+    font-family: "Arvo",sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  }
+  .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000; /* Dark transparent overlay */
+  
+}
+</style>
+<!-- video start -->
+<div class="video-container overlay" >
+  <video autoplay muted loop>
+    <source src="shop_video.mp4" type="video/mp4" style="">
+  </video>
+  <!-- text start -->
+  <style>
+    .hello,.anime{
+  transition: .5s linear
+}
+.hello:hover .anime:nth-child(1){
+  margin-right: 5px
+}
+.hello:hover .anime:nth-child(1):after{
+  content: "";
+}
+.hello:hover .anime:nth-child(2){
+  margin-left: 30px
+}
+.hello:hover .anime{
+  color: #1BFC02;
+  text-shadow: 0 0 2px #1BFC02,
+               0 0 3px #1BFC02, 
+               0 0 4px #1BFC02;
+}
+.hello:hover .anime2{
+  color: #EAEAEA;
+  text-shadow: 0 0 2px #EAEAEA,
+               0 0 3px #EAEAEA, 
+               0 0 4px #EAEAEA;
+}
+  </style>
+  <a href="home.php"><h1 class=" content hello"style="color: white;"><span class="anime2" style="color: #EAEAEA;">FIT</span><span class="anime">PLAY</span></h1>
+  <!-- <h1 class="content hello">FITPLAY</h1> -->
+  <p class="text-center"><span class="content" style="font-size:20px;color:white">HEALTHY LIFESTYLE</span></p></a>
+  <!-- text end -->
 </div>
+<!-- video end -->
+<!-- carosal end -->
+
+<br>
+<br>
+<br>
 
 <style>
-  .facility-cod
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07Wallet_zpsswjtv8dx.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-cod:hover
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07_zpspz41uc4k.png") no-repeat top;
-}
-
-.facility-shipping
-{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024355_ic_local_shipping_48px_zpslmejbm3l.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-shipping:hover
-{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920793_ic_local_shipping_48px_zpsijbwmkjd.png") no-repeat top;
-}
-
-.facility-returns
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024335_return_zps5wptjjcf.png") no-repeat top;
-	padding-top:70px;
-}
-
-.facility-returns:hover
-{
-	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
-}
-/*end of facilities*/
+  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
 </style>
-</section>
-<!-- facilities end -->
+<h2 class="text-center"><b>WATCH SOME PRODUCTS</b></h2>
+<div class="container d-flex justify-content-center mt-100">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="productdetailsample.php?Order_id=14>" data-abc="true"> <img src="proimg/product2-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"> cricket set</i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/waterbottle-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 41,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 33,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/cr7jersey-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product3-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product4-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/kneepad1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="product-wrapper mb-45 text-center">
+        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/stud1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
+          <span><i class="fa fa-rupee"></i> 23,000</span>
+          <div class="product-action">
+            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- offers start -->
+<div class="container-fluid bg-warning  pb-5 px-0" id="special">
+    <h3 class="m-0 pt-2 text-center text-dark">Special Offers</h3>
+    <div class="container-fluid b25 my-2 p-2" style="background-color: black;">
+        <div class="container">
+          <a href="#" class="d-block my-2">
+             <img src="https://ucarecdn.com/2b4e43ec-0480-4cca-b252-6db53c47a5d8/-/format/auto/-/preview/3000x3000/-/quality/lighter/Badminton%20Racquet1.jpg" class="img-fluid" alt="Responsive image">
+          </a>
+
+          <a href="#" class="d-block my-2">
+             <img src="https://ucarecdn.com/0d2efa6a-0a55-437d-91fa-6a7fd723155c/-/format/auto/-/preview/3000x3000/-/quality/lighter/SS%20English%20Willow%20Bat%20Banner%20_1_.jpg" class="img-fluid" alt="Responsive image">
+          </a>
+           <a href="#" class="d-block my-2">
+             <img src="https://ucarecdn.com/e325e520-0fc9-4272-8e13-b94b003dbd72/-/format/auto/-/preview/3000x3000/-/quality/lighter/2nd%20Product%20Page%20Banner%20_1_.jpg" class="img-fluid" alt="Responsive image">
+          </a>
+        </div>
+    </div>
+</div>
+<style>
+
+</style>
+<!-- offer end -->
 
 <!-- image gallary start -->
 <section class="pt-4 p-0 hoverable">
 <div class="container">
-<h2 class="text-center m-3"><b>WATCH SOME PRODUCTS</b></h2>
-            <div class="row hover14">
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/stud1-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/stump-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-4">
-                    <img src="proimg/kneepad1-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-6">
-                    <img src="proimg/cr7jersey-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
-                <div class="col-md-4 mt-3 col-lg-6">
-                    <img src="proimg/waterbottle-removebg-preview.png" class="img-fluid" alt="image">
-                </div>
+<div class="row hover14">        
                 <div class="col-md-4 mt-3 col-lg-3">
                     <img src="proimg/product1-removebg-preview.png" class="img-fluid sofa-float" alt="image">
                 </div>
@@ -178,12 +299,12 @@ $respic=mysqli_fetch_assoc($quepro);
                                     <div class="row">
                                         <div class="el-wrapper"style="height:400px; background-color:#f7f7f7;" >
                                             <div class="box-up">
-                                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
+                                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
                                             <?php $img = $respro['pic'] ?>
-                                                <img class="img" src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                                <img class="img" src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;mix-blend-mode: multiply;">
                                                 <div class="img-info">
                                                     <div class="info-inner">
-                                                        <span class="p-name"><h3><a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h3></span>
+                                                        <span class="p-name"><h3><a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h3></span>
                                                         <span class="p-company">FitPlay</span>
                                                     </div>
                                                 </div>
@@ -192,7 +313,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                                 <div class="h-bg">
                                                     <div class="h-bg-inner"></div>
                                                 </div>
-                                                <a class="cart" href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>">
+                                                <a class="cart" href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
                                                     <span class="price"id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</span>
                                                     <span class="add-to-cart">
                                                         <span class="txt">View Product</span>
@@ -516,8 +637,67 @@ $respic=mysqli_fetch_assoc($quepro);
         splide.mount();
     });
 </script>
+
+
+<!-- facilities start -->
+
+<section class="pt-6">
+<div class="container">
+	<div class="row  text-center">
+		<div class="col-sm-3 col-md-4 facility-cod">
+			<h5> Cash On Delivery </h5>
+			<!-- <p> Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
+		</div>
+		<div class="col-sm-3 col-md-4 facility-shipping">
+			<h5> Free Shipping</h5>
+			<!-- <p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
+		</div>
+		<div class="col-sm-3 col-md-4 facility-returns">
+			<h5>Easy Returns </h5>
+			<!-- <p>Lorem ipsum dolor sit amet, novum paulo principes ut eam, omnium graecis inimicus cum ne. Pro nusquam suscipiantur ei, ad vel dolorem consetetur, impetus lucilius vulputate vim te. Saperet ancillae officiis no est, wisi intellegat id eam, has omnes expetendis theophrastus eu. </p> -->
+		</div>
+	</div>
+</div>
+
+<style>
+  .facility-cod
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07Wallet_zpsswjtv8dx.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-cod:hover
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920870_07_zpspz41uc4k.png") no-repeat top;
+}
+
+.facility-shipping
+{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024355_ic_local_shipping_48px_zpslmejbm3l.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-shipping:hover
+{	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920793_ic_local_shipping_48px_zpsijbwmkjd.png") no-repeat top;
+}
+
+.facility-returns
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1471024335_return_zps5wptjjcf.png") no-repeat top;
+	padding-top:70px;
+}
+
+.facility-returns:hover
+{
+	background:url("http://i345.photobucket.com/albums/p396/ruchi122/1470920778_return_zpswu9lrlui.png") no-repeat top;
+}
+/*end of facilities*/
+</style>
+</section>
+<!-- facilities end -->
+
+
 <!-- our section -->
-<section class="pt-5">
+<section class="pt-2">
 <div class="container whats-new">
   <div class="row">
   <div class="col-sm-6 col-md-6 col-lg-6 sofa-float text-center">

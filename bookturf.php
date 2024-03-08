@@ -1,7 +1,10 @@
-<?php include('header.php') ?>
+
+
+
+  <!-- script for fixed navbar -->
 <?php
 include('smtp/PHPMailerAutoload.php');
-
+include('header.php');
 function smtp_mailer($to, $subject, $message) {
     $mail = new PHPMailer();
     $mail->IsSMTP();
@@ -49,82 +52,116 @@ if(isset($_GET['id']))
   
 }
 $response = array();
+require_once 'vendor/razorpay/Razorpay.php';
+
+// Function to verify Razorpay payment
+function verifyPayment($paymentId) {
+    $razorpayKeyId = 'rzp_live_GL8N1VxLpxd9SM';
+    $razorpayKeySecret = 'S2mFXcKOSKiXHMNTczJNcFyQ';
+
+    $razorpay = new Razorpay\Razorpay([
+        'key_id'     => $razorpayKeyId,
+        'key_secret' => $razorpayKeySecret,
+    ]);
+
+    try {
+        $attributes = array(
+            'razorpay_order_id' => $_POST['razorpay_order_id'],
+            'razorpay_payment_id' => $paymentId,
+            'razorpay_signature' => $_POST['razorpay_signature'],
+        );
+
+        $razorpay->utility->verifyPaymentSignature($attributes);
+        return true; // Payment is successfully verified
+    } catch (Exception $e) {
+        // Handle verification failure
+        return false;
+    }
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get booking information from the form
     $name = isset($_POST['turfname']) ? $_POST['turfname'] : ''; 
     $date = isset($_POST['date']) ? $_POST['date'] : '';
-    $startTime = isset($_POST['startTime']) ? $_POST['startTime'] : '';
-    $endTime = isset($_POST['endTime']) ? $_POST['endTime'] : '';
+    $time = isset($_POST['timeSlot']) ? $_POST['timeSlot'] : '';
     $userName = isset($_POST['userName']) ? $_POST['userName'] : '';
     $userEmail = isset($_POST['userEmail']) ? $_POST['userEmail'] : '';
 
+    if (strtotime($date) < strtotime(date('Y-m-d'))) {
+        echo "<script>alert('Please select a valid future date.')</script>";
+        // Handle the error as needed
+        // You might want to redirect or display an error message
+        exit;
+    }
+
     // Check if the chosen date and time slot is already booked for the specific turf
-    $checkSql = "SELECT * FROM booking WHERE turfname = '$name' AND date = '$date' AND 
-                ((startTime <= '$startTime' AND endTime >= '$startTime') OR (startTime <= '$endTime' AND endTime >= '$endTime'))";
+    $checkSql = "SELECT * FROM booking WHERE turfname = '$name' AND date = '$date' AND time = '$time'";
     $result = $coni->query($checkSql);
 
     if ($result && $result->num_rows > 0) {
         // Turf is already booked for the selected date and time
+        echo"<script>alert('This slot is already booked')</script>";
         $response['success'] = false;
         $response['error'] = 'The selected turf is already booked on the specified date and time. Please choose a different date and time.';
     } else {
-        // Payment success handling (simulated)
-        $paymentSuccess = true; // Change this to your actual payment verification logic
+        if (isset($_POST['razorpay_payment_id']) && !empty($_POST['razorpay_payment_id'])) {
+            $razorpayPaymentId = $_POST['razorpay_payment_id'];
+            $paymentSuccess = verifyPayment($razorpayPaymentId);
 
-        if ($paymentSuccess) {
-            // Insert booking into the database only if payment is successful
-            $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-            $insertSql = "INSERT INTO booking (userid, turfname, date, startTime, endTime, userName, userEmail) 
-                            VALUES ('$user_id', '$name', '$date', '$startTime', '$endTime', '$userName', '$userEmail')";
+            if ($paymentSuccess) {
+                // Insert booking into the database only if payment is successful
+                $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+                $insertSql = "INSERT INTO booking (userid, turfname, date, time, userName, userEmail) 
+                                VALUES ('$user_id', '$name', '$date', '$time', '$userName', '$userEmail')";
 
-            if ($coni->query($insertSql) === TRUE) {
-                // Send email notification only when the booking is successful
-                $to = 'aryanjadhav686@gmail.com';
-                $subject = 'New Booking';
-                $message = "New booking by $userName on $date from $startTime to $endTime for turf $name.";
-                $result = smtp_mailer($to, $subject, $message);
+                if ($coni->query($insertSql) === TRUE) {
+                    // Send email notification only when the booking is successful
+                    $to = 'aryanjadhav686@gmail.com';
+                    $subject = 'New Booking';
+                    $message = "New booking by $userName on $date on $time for turf $name.";
+                    $result = smtp_mailer($to, $subject, $message);
 
-                $uto = $userEmail;
-                $usubject = 'Booking Done Successfully';
-                $umessage = "Your booking by $userName on $date from $startTime to $endTime for turf $name has been successfully done.";
-                $uresult = smtp_mailer($uto, $usubject, $umessage);
+                    $uto = $userEmail;
+                    $usubject = 'Booking Done Successfully';
+                    $umessage = "Your booking by $userName on $date on $time for turf $name has been successfully done.";
+                    $uresult = smtp_mailer($uto, $usubject, $umessage);
 
-                if ($result === 'Sent' && $uresult === 'Sent') {
-                    // Email sent successfully
-                    $response['email_status'] = 'Email sent successfully.';
-                    // Booking successful message
-                    $response['success_message'] = 'Booking successful!';
+                    if ($result === 'Sent' && $uresult === 'Sent') {
+                        // Email sent successfully
+                        $response['email_status'] = 'Email sent successfully.';
+                        // Booking successful message
+                        $response['success_message'] = 'Booking successful!';
+                    } else {
+                        // Email sending failed
+                        $response['email_status'] = 'Email sending failed. ' . $result;
+                        // Booking failed message
+                        $response['error_message'] = 'Booking failed. Please try again later.';
+                    }
+                    echo "<script>alert('Your booking has been done')</script>";
+                    // Send success response
+                    $response['success'] = true;
                 } else {
-                    // Email sending failed
-                    $response['email_status'] = 'Email sending failed. ' . $result;
-                    // Booking failed message
-                    $response['error_message'] = 'Booking failed. Please try again later.';
+                    // Send error response with details
+                    $response['success'] = false;
+                    $response['error'] = mysqli_error($coni);
                 }
-
-                // Send success response
-                $response['success'] = true;
             } else {
-                // Send error response with details
+                // Payment failed
                 $response['success'] = false;
-                $response['error'] = mysqli_error($coni);
+                echo "<script>alert('Payment not done')</script>";
+                $response['error'] = 'Payment failed. Please try again.';
             }
-        } else {
-            // Payment failed
-            $response['success'] = false;
-            $response['error'] = 'Payment failed. Please try again.';
         }
     }
 }
 
 $coni->close();
-
-// Display the response
 ?>
 
 <head>
 
     <title>FitPlay - Turf Booking Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Razorpay checkout script -->
@@ -156,7 +193,7 @@ $coni->close();
             </div>
             <div class="form-group">
                 <label for="turfname">Price:</label>
-                <input type="text" id="price" name="turfname" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
+                <input type="text" id="price" name="price" value="<?= ucfirst($row9['price']) ?> " class="form-control" readonly>
             </div>
             <div class="form-group">
                 <label for="validtime">Valid Time:</label>
@@ -166,16 +203,12 @@ $coni->close();
                 <label for="bookingDate">Select Date:</label>
                 <input type="date" id="bookingDate" name="date" class="form-control" required>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="startTime">Start Time:</label>
-                    <input type="time" id="startTime" class="form-control" placeholder="Start Time" name="startTime" required >
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="endTime">End Time:</label>
-                    <input type="time" id="endTime" class="form-control" placeholder="End Time" name="endTime" required>
-                </div>
-            </div>
+            <label for="bookingDate">Select Time:</label>
+        <!-- ... (previous form elements) ... -->
+        <input type="hidden" id="timeSlot" name="timeSlot" value="">
+<div class="form-group" id="timeSlotButtons" style="margin:10px;">
+    </div>
+   
             <div class="form-group">
                 <label for="userName">Your Name:</label>
                 <input type="text" id="userName" class="form-control" placeholder="Enter Your Name" name="userName" required>
@@ -184,6 +217,7 @@ $coni->close();
                 <label for="userEmail">Your Email:</label>
                 <input type="email" id="userEmail" class="form-control" placeholder="Enter Your Email" name="userEmail" required>
             </div>
+            <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
             <div class="pt-3">
             <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button>
             </div>
@@ -191,81 +225,126 @@ $coni->close();
     </div>
 
     <script>
-document.getElementById('payButton').addEventListener('click', function(e) {
+    // Get the start and end times from your backend or define them here
+    var startTime = "<?= date('H:i', strtotime($row9['start'])) ?>";
+    var endTime = "<?= date('H:i', strtotime($row9['end'])) ?>";
+
+    // Function to generate time slots based on start and end times
+    function generateTimeSlots() {
+        var timeSlotButtonsContainer = document.getElementById("timeSlotButtons");
+
+        // Clear existing buttons
+        timeSlotButtonsContainer.innerHTML = "";
+
+        // Convert start and end times to Date objects
+        var startDate = new Date("2024-03-07 " + startTime);
+        var endDate = new Date("2024-03-07 " + endTime);
+
+        // Time interval (in minutes) for slots
+        var interval = 60; // 60 minutes
+
+        // Generate time slots and add buttons
+        while (startDate < endDate) {
+            var slotStartTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            startDate.setMinutes(startDate.getMinutes() + interval);
+            var slotEndTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "btn btn-success mr-2 mb-2"; // Green color and adjusted margin
+            button.value = slotStartTime + " - " + slotEndTime;
+            button.style="margin:10px;";
+            button.textContent = slotStartTime + " - " + slotEndTime;
+            button.addEventListener("click", function () {
+                document.getElementById("timeSlot").value = this.value;
+            });
+
+            timeSlotButtonsContainer.appendChild(button);
+        }
+    }
+
+    // Call the function initially to populate time slots
+    generateTimeSlots();
+
+    // Attach the function to the date change event (you may need to adjust this based on your requirements)
+    document.getElementById("bookingDate").addEventListener("change", generateTimeSlots);
+</script>
+
+
+
+
+
+<!-- Add the following script to handle the payment process -->
+<script>
+
+document.getElementById('payButton').addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Perform form validation
     var turfname = document.getElementById('turfname').value;
     var bookingDate = document.getElementById('bookingDate').value;
-    var startTime = document.getElementById('startTime').value;
-    var endTime = document.getElementById('endTime').value;
+    var time = document.getElementById('timeSlot').value;
     var userName = document.getElementById('userName').value;
-    var userEmail = document.getElementById('userEmail').value;  
+    var userEmail = document.getElementById('userEmail').value;
 
-    var validStartTime = '<?= $row9['start'] ?>';
-    var validEndTime = '<?= $row9['end'] ?>';
+    // Perform form validation (same code as before)
 
     // Combine date and time for better comparison
-    var selectedStartTime = new Date(bookingDate + ' ' + startTime);
-    var selectedEndTime = new Date(bookingDate + ' ' + endTime);
+    var selectedStartTime = new Date(bookingDate + ' ' + time.split(' - ')[0]);
+    var selectedEndTime = new Date(bookingDate + ' ' + time.split(' - ')[1]);
 
-    // actual open time of turf 
+    // actual open time of turf
     var validStartTimeObj = new Date(bookingDate + ' ' + validStartTime);
     var validEndTimeObj = new Date(bookingDate + ' ' + validEndTime);
 
-    // Check if the selected start time is within the valid range
-    if (selectedStartTime < validStartTimeObj || selectedStartTime > validEndTimeObj) {
-        alert('Sorry, turf is only open from ' + validStartTime + ' to ' + validEndTime);
-        return;
-    }
+    // Check if the selected date is in the past
+    
 
-    // Check if the selected end time is within the valid range
-    if (selectedEndTime < validStartTimeObj || selectedEndTime > validEndTimeObj) {
-        alert('Sorry, turf is only open from ' + validStartTime + ' to ' + validEndTime);
-        return;
-    }
-
-    if (new Date(bookingDate) < new Date()) {
-        alert('Please select a future date.');
-        return;
-    }
-
-    if (!turfname || !bookingDate || !startTime || !endTime || !userName || !userEmail) {
+    if (!turfname || !bookingDate || !time || !userName || !userEmail) {
         alert('Please fill out all fields before proceeding to payment.');
         return;
     }
 
-    // If form is valid, proceed to Razorpay payment
+    // Create a new payment object
     var options = {
-        "key": "rzp_live_z6prMSW9WlOpcp",
+        "key": "rzp_live_GL8N1VxLpxd9SM",
         "amount": "1" * 100, // amount in paise (since Razorpay accepts amount in the smallest currency unit)
         "currency": "INR",
         "name": "<?= ucfirst($row9['name']) ?>",
         "description": "Booking for <?= ucfirst($row9['name']) ?>",
         "image": "logo.png", // replace with your logo
-        "handler": function(response) {
+        "handler": function (response) {
             // Handle success callback
             console.log(response);
             // Submit the form after successful payment
+            var razorpayPaymentId = response.razorpay_payment_id;
+            document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
             document.getElementById('bookingForm').submit();
         },
         "prefill": {
             "name": document.getElementById('userName').value,
-            "email": document.getElementById('userEmail').value
+            "email": document.getElementById('userEmail').value,
+
         },
         "theme": {
             "color": "#198754"
         }
     };
+
     var rzp = new Razorpay(options);
     rzp.open();
 });
 </script>
 
 
-    
+
 </body>
 </html>
+
+
+
+
+
+
 
 
 
