@@ -6,11 +6,89 @@
   <title>FitPlay-Turfs</title>
 </head>
 <body>
+<!-- video start -->
 
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(7px);
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center; 
+    padding: 20px;
+    font-size:7rem;
+    margin-top:290px;
+    letter-spacing: 14px;
+    margin-left:50px;
+    font-family: "Arvo",sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  }
+  .overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000; /* Dark transparent overlay */
+  
+}
+</style>
 
+<div class="video-container overlay" >
+  <video autoplay muted loop>
+    <source src="video111.mp4" type="video/mp4" style="">
+  </video>
+  <!-- text start -->
+  <style>
+    .hello,.anime{
+  transition: .5s linear
+}
+.hello:hover .anime:nth-child(1){
+  margin-right: 5px
+}
+.hello:hover .anime:nth-child(1):after{
+  content: "";
+}
+.hello:hover .anime:nth-child(2){
+  margin-left: 30px
+}
+.hello:hover .anime{
+  color: #1BFC02;
+  text-shadow: 0 0 2px #1BFC02,
+               0 0 3px #1BFC02, 
+               0 0 4px #1BFC02;
+}
+.hello:hover .anime2{
+  color: #EAEAEA;
+  text-shadow: 0 0 2px #EAEAEA,
+               0 0 3px #EAEAEA, 
+               0 0 4px #EAEAEA;
+}
+  </style>
+  <a href="home.php"><h1 class=" content hello"style="color: white;"><span class="anime2" style="color: #EAEAEA;">FIT</span><span class="anime">PLAY</span></h1>
+  <!-- <h1 class="content hello">FITPLAY</h1> -->
+  <p class="text-center"><span class="content" style="font-size:20px;color:white">HEALTHY LIFESTYLE</span></p></a>
+  <!-- text end -->
+</div>
+<!-- video end -->
 
-
-  <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
+<!-- carousel start -->
+  <!-- <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -59,8 +137,8 @@
 
 
   </div>
-</div>
-
+</div> -->
+<!-- carousel end  -->
 
 
 <?php

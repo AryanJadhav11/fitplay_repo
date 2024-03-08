@@ -112,6 +112,7 @@ if (isset($_POST['Add_To_Cart'])) {
       <button type="submit" name="Add_To_Cart" class="button">Add to Cart</button>
       <button class="button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>
       <!-- <a href="" class="button">Add to Cart</a> -->
+
     </div>
   </div>
 
