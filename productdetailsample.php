@@ -102,12 +102,64 @@ if (isset($_POST['Add_To_Cart'])) {
       <div class="col-xs-6"> 
         <input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
         <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
-        <div class="product_quantity"> <span>QTY: </span> <input id="quantity" name="quantity" type="text" pattern="[0-9]*" value="1">
+        <!-- <div class="product_quantity"> <span>QTY: </span> <input id="quantity" name="quantity" type="text" pattern="[0-9]*" value="1">
               <div class="quantity_buttons">
                   <div  id="quantity" name="quantity" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
                   <div  id="quantity" name="quantity" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
               </div>
-          </div>
+          </div> -->
+          <div class="counter">
+  <span class="down" onClick='decreaseCount(event, this)'>-</span>
+  <input type="text" value="1">
+  <span class="up" onClick='increaseCount(event, this)'>+</span>
+</div>
+<style>
+  .counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.counter input {
+    width: 50px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background:grey;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+.counter span {
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #0052cc;
+    user-select: none;
+}
+</style>
+<script>
+  function increaseCount(a, b) {
+  var input = b.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+}
+
+function decreaseCount(a, b) {
+  var input = b.nextElementSibling;
+  var value = parseInt(input.value, 10);
+  if (value > 1) {
+    value = isNaN(value) ? 0 : value;
+    value--;
+    input.value = value;
+  }
+}
+
+</script>
       </div>
       <button type="submit" name="Add_To_Cart" class="button">Add to Cart</button>
       <button class="button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>
