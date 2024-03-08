@@ -66,7 +66,7 @@ function getInitials($name) {
     return $initials;
 }
 ?>
-//  <?php
+.  <?php
 // if ($showerr) {
 //     echo '
 //     <div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
