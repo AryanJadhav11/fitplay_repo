@@ -80,14 +80,10 @@
                         } else {
                             echo "<tr><td colspan='3'>No items in the cart.</td></tr>";
                         }
-                        ?>
-
-
-
-                                 
-                              </tbody>
+                        ?>    
                               
-                           </table>
+                        </tbody>  
+                        </table>
                           
             </div>
 
@@ -169,11 +165,11 @@
             }
         }
         ?>
-            <div class="pt-3">
-            <button  id="payButton" type="submit" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button>
-            
-            </div>
+
         </form>
+        <div class="pt-3">
+            <a href="shopcheckout.php"><button type="" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button></a>
+            </div>
     </div>
 
       
