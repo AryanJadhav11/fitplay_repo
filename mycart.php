@@ -93,7 +93,7 @@
                     <h4>Grand Total:</h4><br>
                     <h5 class="text-right" id="gtotal" name="gtotal_name"></h5>
                     <script>
-                      document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>.00';
+                      document.getElementById("gtotal").innerHTML = '<?php echo $grandTotal; ?>.00 INR';
                     </script>
                     
                     <?php 
@@ -129,7 +129,7 @@
                             <!-- Booking form container -->
     <div class="container booking-container">
         <!-- Booking form -->
-        <form id="purchaseForm" method="post">
+        <!-- <form id="purchaseForm" method="post">
 
             <div class="form-group">
                 <label for="amount">Payable Amount:</label>
@@ -164,193 +164,17 @@
                 echo '<input type="text" id="itemid" name="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">' ;
             }
         }
-        ?>
+        ?></form> -->
 
-        </form>
-        <div class="pt-3">
-            <a href="shopcheckout.php"><button type="" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button></a>
+            <div class="pt-2">
+                 <a href="shopcheckout.php"><button type="" class="btn btn-primary btn-block " style="width: 100%;">Checkout</button></a>
             </div>
-    </div>
-
-      
+                    
+                    </div>     
                 </div>
-
             </div>
-
         </div>
     </div>
-<!-- _______________________________________________________________________________________________________________________________________ -->
-
-
-
-<?php
-include('smtp/PHPMailerAutoload.php');
-
-function smtp_mailer($to, $subject, $message) {
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'tls';
-    $mail->Host = "smtp.gmail.com";
-    $mail->Port = 587;
-    $mail->IsHTML(true);
-    $mail->CharSet = 'UTF-8';
-    $mail->address = "jadhavaryan467@gmail.com";
-    $mail->Password = "oozzyqfwnpufjuqi";
-    $mail->SetFrom("jadhavaryan467@gmail.com");
-    $mail->Subject = $subject;
-    $mail->Body = $message;
-    $mail->AddAddress($to);
-    $mail->SMTPOptions = array('ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => false
-    ));
-    if (!$mail->Send()) {
-        return $mail->ErrorInfo;
-    } else {
-        return 'Sent';
-    }
-}
-
-
-
-if (!$coni) {
-    die(mysqli_error($coni));
-}
-
-
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])){
-    // Get booking information from the form
-    $name = isset($_POST['fname']) ? $_POST['fname'] : ''; // Ensure $name is defined and not null
-    $address = isset($_POST['address']) ? $_POST['address'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-
-    
-
-    if ($result && $result->num_rows > 0) {
-        // Turf is already booked for the selected date and time
-        $response['success'] = false;
-    } else {
-        // Payment success handling (simulated)
-        $paymentSuccess = true; // Change this to your actual payment verification logic
-
-        if ($paymentSuccess) {
-            // Insert booking into the database only if payment is successful
-            $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-            $insertSql = "INSERT INTO `buy_his` (`user_ids`, `item_ids`, `item_names`, `prices`, `quantitys`, `dates`, `pay_stats`)
-            VALUES ('$user_id', '$iid', '$item_name', '$price', '$quantity', 'PAID')";
-
-        } else {
-            // Payment failed
-            $response['success'] = false;
-            $response['error'] = 'Payment failed. Please try again.';
-        }
-    }
-}
-
-$coni->close();
-
-// Display the response
-?>
-
-
-<head>
-
-    <title>FitPlay - Turf Booking Platform</title>
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Razorpay checkout script -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <style>
-        /* Style for the container */
-        .booking-container {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-        }      
-    </style>
-</head>
-<body>
-    
-    <!-- Booking form container -->
-    <div class="container booking-container">
-        <!-- Booking form -->
-        <!-- <form id="purchaseForm" method="post">
-
-            <div class="form-group">
-                <label for="amount">Payable Amount:</label>
-                <input type="text" id="amount" name="amount" value="<?php echo $grandTotal; ?> " class="form-control" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="fname">Your Name:</label>
-                <input type="text" id="fname" name="fname" class="form-control" value="<?=$itemid?>" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Your Address:</label>
-                <input type="address" id="address" class="form-control" placeholder="Enter Your Address" name="address" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter Your Email" name="email" required>
-            </div>
-            <div class="pt-3">
-            <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button>
-            </div>
-        </form> -->
-    </div>
-
-    <script>
-document.getElementById('payButton').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    // Perform form validation
-    var fname = document.getElementById('fname').value;
-    var address = document.getElementById('address').value;
-    var email = document.getElementById('email').value;  
-
-
-    if (!fname  || !address || !email) {
-        alert('Please fill out all fields before proceeding to payment.');
-        return;
-    }
-
-    // If form is valid, proceed to Razorpay payment
-    var options = {
-        "key": "rzp_live_z6prMSW9WlOpcp",
-        "amount": $grandTotal * 100, // amount in paise (since Razorpay accepts amount in the smallest currency unit)
-        "currency": "INR",
-        "name": "<?= ucfirst($row9['name']) ?>",
-        "description": "Checkout for <?= ucfirst($row9['name']) ?>",
-        "image": "logo.png", // replace with your logo
-        "handler": function(response) {
-            // Handle success callback
-            console.log(response);
-            // Submit the form after successful payment
-            document.getElementById('purchaseForm').submit();
-        },
-        "prefill": {
-            "name": document.getElementById('address').value,
-            "email": document.getElementById('email').value
-        },
-        "theme": {
-            "color": "#198754"
-        }
-    };
-    var rzp = new Razorpay(options);
-    rzp.open();
-});
-</script>
-
-
-
 
 </body>
-
 </html>
