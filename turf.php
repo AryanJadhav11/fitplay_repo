@@ -142,7 +142,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
 
-<body class="py-5">
+<body class="py-5 pb-0">
 <section class="pb-0">
     <div class="outer-container">
         <section class="m-100">

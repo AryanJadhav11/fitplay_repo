@@ -1,3 +1,10 @@
+<style>
+body
+{
+  background:white;
+}
+  
+</style>
 <body>
 <section class="pb-0">
 <footer id="footer">

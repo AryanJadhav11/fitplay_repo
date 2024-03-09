@@ -1598,18 +1598,12 @@ image start -->
   }
 </style>
 
-</body>
-
-</body>
-</html>
-
-
-
-<!-- image end -->
 <!-- footer start -->
 <?php include('footer.php') ?>
 <!-- End Footer -->
 
-<!-- footer end -->
 </body>
 </html>
+
+
+
