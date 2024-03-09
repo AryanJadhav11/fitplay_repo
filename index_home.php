@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
     }
 }
-?>'
+?>
 <?php
 function getInitials($name) {
     $nameParts = explode(' ', $name);
