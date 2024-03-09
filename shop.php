@@ -62,7 +62,7 @@ $respic=mysqli_fetch_assoc($quepro);
     <br>
     <br>
     <br>
-    <h3 style="font-size: 6rem;font-weight: boldtext-shadow: 0 0 0.2em yellow;color: white;position:absolute;left:1150px;top:500px; -webkit-text-stroke: 1px yellow;-webkit-text-fill-color: transparent;font-weight:400;">₹899</h3>
+    <h3 style="font-size: 6rem;font-weight: boldtext-shadow: 0 0 0.2em yellow;color: white;position:absolute;left:300px;top:400px; -webkit-text-stroke: 1px yellow;-webkit-text-fill-color: transparent;font-weight:400;">₹899</h3>
   </div>
 </div>
 </div>
@@ -1516,24 +1516,32 @@ $(document).ready(function(){
 </script>
 <!-- 
 image start -->
-<!-- <section>
-  <div class="container">
+<section>
+  <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6">
           <div class="block1">
             <img src="https://www.pngplay.com/wp-content/uploads/7/Cristiano-Ronaldo-Transparent-Images.png" alt="" class="img-fluid img1">
             <div class="text-left">
-              <span>Feel Like A Player</span>
+              <span >Feel Like A Player</span>
               <h1 style="font-size:40px; font-weight:200px;">PROBALL 2019</h1>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-         <div class="block2">
-            <img src="https://www.pngplay.com/wp-content/uploads/7/Cristiano-Ronaldo-Transparent-Images.png" alt="" class="img-fluid img2">
-            <div class="text-right">
-              <span>Feel Like A Player</span>
-              <h1 style="font-size:40px; font-weight:200px;">PROBALL 2019</h1>
+        <div class="col-lg-6 d-lg-flex">
+          <div class="d-lg-flex">
+          <div class=" block2">
+              <span style=" padding-top:100
+              px; padding-left:20px;">Feel Like A Player</span>
+              <h1 style="font-size:40px; padding-top:135px; padding-left:20px;">PROBALL 2019</h1>
+          </div>
+          <div class="block2">
+          <img src="https://www.pngplay.com/wp-content/uploads/7/Cristiano-Ronaldo-Transparent-Images.png" alt="" class="img-fluid img2">
+          </div>
+          </div>
+        </div>
+        
+
               <button class="btn "></button>
             </div>
           </div>
@@ -1576,7 +1584,7 @@ image start -->
   .text-right {
     position: absolute; /* Added position absolute */
     top: 40%; /* Align to the top 50% of the parent */
-    left: 30%; /* Align to the left 50% of the parent */
+    left: 60%; /* Align to the left 50% of the parent */
     transform: translate(-50%, -50%); /* Move the element back by 50% of its own dimensions */
   }
 
@@ -1584,8 +1592,11 @@ image start -->
     height: 500px;
     width: 400px;
     padding: 10px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
   }
-</style> -->
+</style>
 
 </body>
 
