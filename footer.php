@@ -1,14 +1,12 @@
-
-
 <body>
 <section class="pb-0">
 <footer id="footer">
-<div class="footer-top" style="background:black; color:white;">
+<div class="footer-top" >
   <div class="container">
     <div class="row">
 
       <div class="col-lg-3 col-md-6 footer-contact">
-        <h3>FitPlay<span>.</span></h3>
+        <h2 style="color:black;">Fit<span style="color:#0d6efd;">Play.</span></h2>
         <p>
          Kolhapur <br>
          Maharastra<br>
@@ -56,7 +54,6 @@
     </div>
   </div>
 </div>
-
 
 </footer>
 </section>
