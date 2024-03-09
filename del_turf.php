@@ -22,16 +22,7 @@ if(isset($_GET['deleteid']))
    $result=mysqli_query($coni,$sql3);
    if($result)
    {
-      echo '<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Done!</h4>
-  <p>Turf has been unlisted successfully</p>
-  <hr>
- 
-   <a href="admin.php" class="btn btn-primary" >
-                            Go back
-                           </a>
-  
-</div>';
+     header("Location:admin_turf.php");
 
    }
    else

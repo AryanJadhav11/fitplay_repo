@@ -259,7 +259,7 @@ function getInitials($name) {
         <nav id="navbar" class="navbar">
             <ul>
               
-                <li><a class="nav-link scrollto" href="home.php">Home</a></li>
+                <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
