@@ -39,7 +39,9 @@
 
       <div class="col-lg-3 col-md-6 footer-contact">
         <h4 style="color:white;">Our Social Networks</h4>
-        <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+        <p>"Welcome to FitPlay, the heart of our vibrant fitness community! 🏋️‍♂️💪</p>
+        <p>Stay connected for the latest fitness trends, and events. Join us as we provides turfs booking, shoping for gear, and discover top gyms.</p>
+        <p>Follow us for your fitness journey! #FitPlay #FitnessCommunity #HealthyLiving #WorkoutMotivation"</p>
         <div class="social-links mt-3">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -54,6 +56,19 @@
     </div>
   </div>
 </div>
+
+        <div class="container py-4">
+         <div class="copyright">
+           &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
+         </div>
+         <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+           <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+           Designed by <a href="https://fitplay.com/">FitPlay</a>
+         </div>
+        </div>
 
 </footer>
 </section>
