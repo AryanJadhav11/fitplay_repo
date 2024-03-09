@@ -153,27 +153,6 @@ function getInitials($name) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section class="overflow-hidden">
         <div class="container-fluid position-relative px-0">
             <div class="row g-0">
@@ -194,7 +173,7 @@ function getInitials($name) {
 
                     </div>
                     <div class="lc-block">
-                        <img class="img-fluid" src="https://cdn.livecanvas.com/media/logos/ipsum/logoipsum-logo-16.svg" width="128">
+                        <img class="img-fluid" src="favicon_io/fitplay_bgr.png" width="158px">
                     </div>
                     <div class="lc-block mb-5">
                         <div editable="rich">
@@ -238,8 +217,8 @@ function getInitials($name) {
             </div>
         </div>
     </section>
-    <section class="bg-light py-5">
-        <div class="container py-5">
+    <section class="bg-light mt-4">
+        <div class="container py-6">
             <div class="row mb-4">
                 <div class="lc-block text-center">
                     <div editable="rich">
@@ -317,8 +296,8 @@ function getInitials($name) {
         </div>
     </section>
 
-    <section class="pt-lg-6">
-        <div class="container py-6">
+    <section>
+        <div class="container py-6 mt-4 mb-4" >
             <div class="row row-cols-1 g-3 row-cols-lg-3">
                 <div class="col">
                     <div class="lc-block card flex-column border-primary h-100">
@@ -610,8 +589,8 @@ function getInitials($name) {
     </section>
     <section>
         
-        <div class="container-fluid" style="margin-top: 100px;margin-bottom: 100px;">
-            <div class="row row-cols-1 row-cols-md-3 gap-3 row-cols-xxl-4 justify-content-center">
+        <div class="container-fluid mt-8 mb-6" >
+            <div class="row row-cols-1 row-cols-md-3 gap-3 row-cols-xxl-5 justify-content-center">
                 <div class="col">
                     <div class="lc-block card border-0 flex-column h-100">
                         <div class="lc-block card-body">
@@ -621,7 +600,7 @@ function getInitials($name) {
                                 </div>
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
-                                        <h3 class="fw-bold h1">20+ Listed Turfs</h3>
+                                        <h3 class="fw-bold h1">20+ <br>Listed Turfs</h3>
                                         <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
 
                                     </div>
@@ -639,7 +618,7 @@ function getInitials($name) {
                                 </div>
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
-                                        <h3 class="fw-bold h1">50+ Transactions done</h3>
+                                        <h3 class="fw-bold h1">50+ <br>Transactions done</h3>
                                         <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
 
                                     </div>
@@ -659,7 +638,25 @@ function getInitials($name) {
                                 </div>
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
-                                        <h3 class="fw-bold h1">30+ Users</h3>
+                                        <h3 class="fw-bold h1">30+ <br>Users</h3>
+                                        <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /col -->
+                <div class="col">
+                    <div class="lc-block card border-0 flex-column h-100">
+                        <div class="lc-block card-body">
+                            <div class="d-lg-flex text-center text-lg-start">
+                                <div>
+                                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACHElEQVR4nO1YPWsUYRDeCCHivpPlRNIpIYVNGiE/ICiCpVVaSXUo3szGNJZpbVOmEtLFXxAICf4AwcbGQoIpgiCKZXDndeQ9syGYXLzd9+Jd9p4HHg5uYHbm2flikwQAAAAAAKAGWm3LnPhNEm/90rHu9/IXbFV8Efs30y/sZjIMpJ3iAbEeVAo4CCD+dS+fwVbVX4gh5eL+/8ucbYrEvyJWXznYwI4u93IdbLV8iv5y4tdDbJeae7pi88T6vl6Qf5jlNtvLf7DF+CbWDzdyu3cJqdsEieYkehQT4EX9X3sOnK2GI8f6MlmzawNJ/fqq3Sbxe3FB/bv/o+bA+dwNsUcl73JdcqzfBhTQhf0fPwfOE1x/UK5PokQAxhkk+tOJfj8h62fH+qlL0Y9O9F1JEn1L4ncCHfvtcKSUPO7rjX6f60TboRW6LXjM6bx4lHaKh4GObTETWyhJz+1utmJzgS2xO9kza5VM2jYZIYC3QXLUn3sGEEBQAYYWEMwAwxAUbAHDGpR4EbpHi/gNYj0MvyeHzF//NfYOoCERAtQFjcDbQwUIWsAwAwRD0LAFBGvQcAfIeB9CW91vjNVtDRCA9Wv61Gbcqt0i1i9925oigMt1qYzJcfG4X1tjBKBTSVS1QQBBBRhaoC5oBHofM0AwBG1Q1XOlW4AggB/fCkgiY4YAdUEj8PYxAwRD0LAFBGvQhnIHAAAAAACQNBm/AYoDmb49X4zKAAAAAElFTkSuQmCC" width="92px" height="92px">                                
+                                </div>
+                                <div class="lc-block ps-4">
+                                    <div editable="rich">
+                                        <h3 class="fw-bold h1">20+ <br>Products</h3>
                                         <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
 
                                     </div>
@@ -747,12 +744,12 @@ function getInitials($name) {
         </div>
     </section>
     
-    <section class="bg-light" style="margin-top:120px;">
+    <section class="bg-light mt-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="lc-block mb-4">
-                        <div class="ratio ratio-4x3 min-vh-50" lc-helper="gmap-embed">
+                        <div class="ratio ratio-4x3 min-vh-50 m-4" lc-helper="gmap-embed">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d973481.0914490608!2d73.48309592063669!3d17.61884860089008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d18.5246164!2d73.8629674!4m5!1s0x3bc101b42288ef73%3A0xa3a0f0995523d6f1!2sbsiet%20kolhapur!3m2!1d16.7138951!2d74.2383921!5e0!3m2!1sen!2sin!4v1709933237359!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        </div>
                     </div><!-- /lc-block -->
                 </div><!-- /col -->
@@ -786,7 +783,7 @@ function getInitials($name) {
     
    
 
-    <p class="py-5 small text-center text-muted"> Developed By Team FitPlay</a>
+    <p class="m-4 small text-center text-muted"> Developed By Team FitPlay</a>
     </p>
 
 
