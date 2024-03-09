@@ -350,7 +350,7 @@ $(document).ready(function(){
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background:#f8f9fa;">
     <div class="container-fluid">
 
-    <a href="index_home.html"> <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <a href="index_home.php"> <button type="button" id="sidebarCollapse" class="btn btn-info">
             
             <span>Back to home</span>
         </button></a>
