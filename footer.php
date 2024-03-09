@@ -39,7 +39,7 @@
 
       <div class="col-lg-3 col-md-6 footer-contact">
         <h4 style="color:white;">Our Social Networks</h4>
-        <p>"Welcome to FitPlay, the heart of our vibrant fitness community! 🏋️‍♂️💪</p>
+        <p>"Welcome to FitPlay, the heart of our vibrant fitness community! 🏋️‍♂️💪</p><br>
         <p>Stay connected for the latest fitness trends, and events. Join us as we provides turfs booking, shoping for gear, and discover top gyms.</p>
         <p>Follow us for your fitness journey! #FitPlay #FitnessCommunity #HealthyLiving #WorkoutMotivation"</p>
         <div class="social-links mt-3">
