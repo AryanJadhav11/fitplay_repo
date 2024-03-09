@@ -1154,7 +1154,7 @@ $(document).ready(function(){
 </script>
 
 <!-- Product Slider -->
-<section class="p-0">
+ <section class="p-0">
     <div class="container">
         <h2 class="text-center mb-4"><b>WATCH SOME PRODUCTS</b></h2>
         <div class="row">
@@ -1211,8 +1211,8 @@ $(document).ready(function(){
         </div>
     </div>
 
-    <!-- product slider css -->
-  <style>
+    <-- product slider css -->
+   <style>
     body,
     html {
       height: 100%;
@@ -1492,11 +1492,11 @@ $(document).ready(function(){
     }
   </style>
 
-</section>
+</section> 
     <!-- product slider over -->
 
  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1513,7 +1513,7 @@ $(document).ready(function(){
 
         splide.mount();
     });
-</script>
+</script> -->
 <!-- 
 image start -->
 <section>
@@ -1597,7 +1597,253 @@ image start -->
   margin-right: auto;
   }
 </style>
+<!-- user review start -->
+<div class="container py-6">
+        <div class="row align-items-center py-2">
+            <div class="col-xl-4 mb-5 text-center text-xl-start">
 
+                <div class="lc-block mb-3">
+                    <div editable="rich">
+                        <h2 class="fw-bold display-6">Our Clients say...</h2>
+                    </div>
+                </div>
+                <div class="lc-block mb-4">
+                    <div editable="rich">
+                        <p class="fw-light rfs-10">Customers are Awesome. Check what our clients are saying about us.</p>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+            <div class="col-xl-8 position-relative">
+
+                <img src="https://livecanvas.com/media/svg/fffuel/svg-shape-11.svg" width="256" height="256" srcset="" sizes="" alt="Made by fffuel.com" class="d-none d-xl-block position-absolute top-100 start-0 translate-middle mt-n5 wp-image-2412" loading="lazy">
+
+
+                <div id="carouselTestimonialCards" class="carousel slide py-xl-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+
+                            <div class="row row-cols-1 row-cols-lg-2 g-4">
+                                <div class="col">
+                                    <div class="card p-3">
+                                        <div class="card-body">
+                                            <div class="lc-block mb-4">
+                                                <div editable="rich">
+                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block d-inline-flex">
+                                                <div class="lc-block me-3" style="min-width:72px">
+                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=5" width="72" height="72">
+                                                </div>
+                                                <div class="lc-block">
+                                                    <div editable="rich">
+
+                                                        <p class="h5">Leah H. Middaugh</p>
+
+                                                        <p class="text-muted">Patient educator&nbsp;</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card p-3">
+                                        <div class="card-body">
+                                            <div class="lc-block mb-4">
+                                                <div editable="rich">
+                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block d-inline-flex">
+                                                <div class="lc-block me-3" style="min-width:72px">
+                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=7" width="72" height="72">
+                                                </div>
+                                                <div class="lc-block">
+                                                    <div editable="rich">
+
+                                                        <p class="h5">James M. Collinsworth</p>
+
+                                                        <p class="text-muted">Street Artist</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="row row-cols-1 row-cols-lg-2 g-4">
+                                <div class="col">
+                                    <div class="card p-3">
+                                        <div class="card-body">
+                                            <div class="lc-block mb-4">
+                                                <div editable="rich">
+                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block d-inline-flex">
+                                                <div class="lc-block me-3" style="min-width:72px">
+                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=26" width="72" height="72">
+                                                </div>
+                                                <div class="lc-block">
+                                                    <div editable="rich">
+
+                                                        <p class="h5">Amber E. Smith</p>
+
+                                                        <p class="text-muted">Patient educator&nbsp;</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card p-3">
+                                        <div class="card-body">
+                                            <div class="lc-block mb-4">
+                                                <div editable="rich">
+                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block d-inline-flex">
+                                                <div class="lc-block me-3" style="min-width:72px">
+                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=3" width="72" height="72">
+                                                </div>
+                                                <div class="lc-block">
+                                                    <div editable="rich">
+
+                                                        <p class="h5">Matthew N. Graham</p>
+
+                                                        <p class="text-muted">Street Artist</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="row row-cols-1 row-cols-lg-2 g-4">
+                                <div class="col">
+                                    <div class="card p-3">
+                                        <div class="card-body">
+                                            <div class="lc-block mb-4">
+                                                <div editable="rich">
+                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block d-inline-flex">
+                                                <div class="lc-block me-3" style="min-width:72px">
+                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=23" width="72" height="72">
+                                                </div>
+                                                <div class="lc-block">
+                                                    <div editable="rich">
+
+                                                        <p class="h5">Leslie R. Oleary</p>
+
+                                                        <p class="text-muted">Fashion designer</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card p-3">
+                                        <div class="card-body">
+                                            <div class="lc-block mb-4">
+                                                <div editable="rich">
+                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block d-inline-flex">
+                                                <div class="lc-block me-3" style="min-width:72px">
+                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=6" width="72" height="72">
+                                                </div>
+                                                <div class="lc-block">
+                                                    <div editable="rich">
+
+                                                        <p class="h5">James C. Call</p>
+
+                                                        <p class="text-muted">Street Artist</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="w-100 px-3 text-center mt-4">
+                        <a class="carousel-control-prev position-relative d-inline me-4" href="#carouselTestimonialCards" data-bs-slide="prev">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M11.354 1.726a.5.5 0 0 1 0 .708L5.707 8l5.727 5.726a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                            </svg>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next position-relative d-inline" href="#carouselTestimonialCards" data-bs-slide="next">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4.726 1.726a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.726 2.354a.5.5 0 0 1 0-.708z"></path>
+                            </svg>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+</body>
+
+
+<!-- Add Splide JS -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide', {
+            perPage: 4,
+            breakpoints: {
+                600: {
+                    perPage: 1
+                }
+            }
+        });
+
+        splide.mount();
+    });
+</script>
+<!-- user review end -->
 </body>
 
 </body>
