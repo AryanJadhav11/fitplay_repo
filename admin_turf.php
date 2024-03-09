@@ -388,7 +388,7 @@ a:focus {
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light " style="background:#d8ebfe;">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -417,7 +417,7 @@ a:focus {
             $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
 
-            echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;">' . $userName . '</h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
+            echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;"></h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
             
           } else {
             // If the user is not logged in, display login button

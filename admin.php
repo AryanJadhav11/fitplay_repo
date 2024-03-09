@@ -845,7 +845,7 @@ p {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #133474;
     color: #fff;
     transition: all 0.3s;
 }
@@ -856,7 +856,7 @@ p {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #133474;
 }
 
 #sidebar ul.components {
@@ -871,7 +871,7 @@ p {
 
 .navbar {
     padding: 15px 10px;
-    background: #f8f9fa;
+    background: #d8ebfe;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -887,6 +887,7 @@ p {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+
 }
 
 #sidebar ul li a:hover {
@@ -897,7 +898,7 @@ p {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #133474;
 }
 
 a[data-toggle="collapse"] {
@@ -1021,10 +1022,10 @@ $(document).ready(function () {
                <!-- Topbar -->
                <div id="content">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light " style="background:#d8ebfe;">
     <div class="container-fluid">
 
-    <a href="index_home.html"> <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <a href="index_home.php"> <button type="button" id="sidebarCollapse" class="btn btn-info">
             
             <span>Back to home</span>
         </button></a>
@@ -1050,7 +1051,7 @@ $userName = $_SESSION['user_data']['username']; // Assuming username is at index
 $userInitials = getInitials($userName); // Replace getInitials with your actual function
 
 
-echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;">' . $userName . '</h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
+echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;"></h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
 
 } else {
 // If the user is not logged in, display login button
@@ -1159,12 +1160,12 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Turf Owners</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Users</h5>
                       <?php
-                      $queto="SELECT id from turf_owner ORDER BY id" ;
-                      $runto=mysqli_query($coni,$queto);
-                      $turfo_row=mysqli_num_rows($runto);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$turfo_row.'</span>';
+                      $queu="SELECT id from users ORDER BY id" ;
+                      $runtu=mysqli_query($conn,$queu);
+                      $user_row=mysqli_num_rows($runtu);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
 
                       ?>
                     </div>

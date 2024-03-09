@@ -8,7 +8,7 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #133474;
     color: #fff;
     transition: all 0.3s;
 }
@@ -19,7 +19,7 @@
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #133474;
 }
 
 #sidebar ul.components {
@@ -36,17 +36,18 @@
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    
 }
 
 #sidebar ul li a:hover {
     color: #7386D5;
-    background: #fff;
+    background: #133474;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background:#133474;
 }
 
 a[data-toggle="collapse"] {
@@ -170,10 +171,10 @@ $(document).ready(function(){
                     <a href="#pageSubmenu"style="text-decoration:none; color:white;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bookings</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li >
-                            <a href="bookedturf.php" style="text-decoration:none; color:white;">View Booking</a>
+                            <a href="bookedturf.php" style="text-decoration:none; background:#133474;color:white;">View Booking</a>
                         </li>
                         <li>
-                            <a href="" style="text-decoration:none; color:white;">Enter Booking manually</a>
+                            <a href="" style="text-decoration:none; background:#133474; color:white;">Enter Booking manually</a>
                         </li>
                        
                     </ul>

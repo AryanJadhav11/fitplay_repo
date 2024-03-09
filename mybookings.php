@@ -101,73 +101,110 @@ function getInitials($name) {
         justify-content: center;
         margin-bottom: 10px;
     }
-    .c-item{
-      height:480px;
-
-    }
-
-    .c-img
-    {
-      height:100%;
-      object-fit:cover;
-      filter:brightness(0.6);
-    }
-
-    body{
-      background:#f3f5f8;
-      overflow-x:hidden;
-    }
-
- 
-
-        .star-container {
-            display: flex;
-            align-items: center;
-            margin-top: 15px; /* Adjust margin as needed */
-        }
-
-        .star-container i {
-            margin-right: 2px; /* Adjust margin between stars as needed */
-        }
-
-
     
+        .table-responsive {
+    margin: 30px 0;
+}
+.table-wrapper {
+	background: #fff;
+	padding: 43px 132px;
+	border-radius: 3px;
+	min-width: 1000px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {        
+	padding-bottom: 15px;
+	background: #435d7d;
+	color: #fff;
+	padding: 16px 30px;
+	min-width: 100%;
+	margin: -20px -25px 10px;
+	border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+	margin: 5px 0 0;
+	font-size: 24px;
+}
+.table-title .btn-group {
+	float: right;
+}
+.table-title .btn {
+	color: #fff;
+	float: right;
+	font-size: 13px;
+	border: none;
+	min-width: 50px;
+	border-radius: 2px;
+	border: none;
+	outline: none !important;
+	margin-left: 10px;
+}
+.table-title .btn i {
+	float: left;
+	font-size: 21px;
+	margin-right: 5px;
+}
+.table-title .btn span {
+	float: left;
+	margin-top: 2px;
+}
+table.table tr th, table.table tr td {
+	border-color: #e9e9e9;
+	padding: 12px 15px;
+	vertical-align: middle;
+}
+table.table tr th:first-child {
+	width: 60px;
+}
+table.table tr th:last-child {
+	width: 100px;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+	background-color: #fcfcfc;
+}
+table.table-striped.table-hover tbody tr:hover {
+	background: #f5f5f5;
+}
+table.table th i {
+	font-size: 13px;
+	margin: 0 5px;
+	cursor: pointer;
+}	
+table.table td:last-child i {
+	opacity: 0.9;
+	font-size: 22px;
+	margin: 0 5px;
+}
+table.table td a {
+	font-weight: bold;
+	color: #566787;
+	display: inline-block;
+	text-decoration: none;
+	outline: none !important;
+}
+table.table td a:hover {
+	color: #2196F3;
+}
+table.table td a.edit {
+	color: #FFC107;
+}
+table.table td a.delete {
+	color: #F44336;
+}
+table.table td i {
+	font-size: 19px;
+}
+table.table .avatar {
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 10px;
+}
 
-    .card-container {
-      background-color:#ffff;
-      padding:20px;
-      border-radius:20px;
-             margin:40px;
-            display: flex;
-            gap: 20px; /* Adjust the margin between cards */
-        }
-
-        .card {
-            width: 18rem;
-        }
-
-        .card-img-top{
-          height :100%;
-          width:100%;
-        }
-
-        .banner-container{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:60px;
-          width:100%;
-          height:100%;
-          
-        }
-
-        .banner-containerw{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:60px;
-          width:100%;
-          height:80%;
-          
-        }
+.hint-text {
+	float: left;
+	margin-top: 10px;
+	font-size: 13px;
+}
 
 
 
@@ -230,70 +267,75 @@ function getInitials($name) {
 
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center border rounded bg-light my-5">
-                <h1>My Bookings</h1>
+<div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Your <b>Bookings</b></h2>
+                    </div>
+                   
+                </div>
             </div>
-            <div class="col-lg-9">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                              <thead>
-                                 <tr>
-                                    <th>Turf Name</th>                                                    
-                                    <th>Date</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>
-                                    <th>Booking Name</th>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                    <th>Sr.No</th>
+                                    <th>Turf Name</th>                  
+                                    <th>Booked Date</th>
+                                    <th>Time</th>
+                                    <th >User Name</th>
+                                    <th >User Mail</th>
                                     <th>Action</th>
-                                 </tr>
-                              </thead>
-                              
-                              <tbody>
-                              <?php
-                        if ($rowCount > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $boid=$row['boid'];
-                                $turfname = $row['turfname'];
-                                $datet = $row['date'];
-                                $startTimet = $row['startTime'];
-                                $qendtimet = $row['endTime'];
-                                $bookingname=$row['userName'];
-                               
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+$sql = "SELECT * FROM `booking` ORDER BY boid DESC";
+$result = mysqli_query($conn, $sql);
 
-                                echo '<tr>
-                                    <td scope="row">' . $turfname . '</td>
-        
-                                    <td>' . $datet. '</td>
-                                    <td>' . $startTimet . '</td>
-                                    <td>' . $qendtimet . '</td>
-                                    <td>' . $bookingname . '</td>
-                                    <td>
-                                    <button type="button" class="btn btn-primary ms-1 ml-3">        
-                    <a href="delbook.php?deleteid=' . $boid . '" class="text text-light">
-                        Cancel
-                    
-                    </a>
-                    </button>
+if ($result === false) {
+    die("Query failed: " . mysqli_error($conn));
+}
+
+$rowCount = mysqli_num_rows($result);
+
+if ($rowCount > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $tid = $row['boid'];
+        $tname = $row['turfname'];
+        $tdate = $row['date'];
+       $time=$row['time'];
+        $usermail=$row['userEmail'];
+        $username=$row['userName'];
+
+
+        echo '<tr>
+                <td scope="row">' . $tid . '</td>
+                <td>' . $tname . '</td>
+                <td>' . $tdate . '</td>
+                <td>' . $time . '</td>
+               
+                <td>' . $usermail . '</td>
+                <td>' . $username . '</td>
+                <td>
+               
+                    <a href="delbook.php?deleteid=' . $tid . '" class="btn btn-primary" > <span style="color:white;">Cancel Booking</span></a>                      
+
                 </td>
-                                </tr>';
-                            } 
-                        } else {
-                            echo "<tr><td colspan='3'>You have not booked a turf yet.</td></tr>";
-                        }
-                        ?>
-
-
-
-                                 
-                              </tbody>
-                              
-                           </table>
-                          
-            </div>
-
-            
-
-            </div>
+                <td>
+                   
+            </tr>';
+    }
+} else {
+    echo "<tr><td colspan='6'>No rows found.</td></tr>";
+}
+?>
+                </tbody>
+            </table>
+        </div>
+    </div>        
+</div>
 
         </div>
     </div>

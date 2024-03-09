@@ -776,6 +776,8 @@ function getInitials($name) {
                         <div editable="rich">
                             <p>"Energize Your Life, Play Your Way to Health!"</p>
                         </div>
+                        <a href="contactu.php"><button class="btn btn-primary btn-lg me-md-3" type="button">Contact Us</button></a>
+
                     </div><!-- /lc-block -->
                 </div><!-- /col -->
             </div>
