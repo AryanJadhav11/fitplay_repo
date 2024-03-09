@@ -467,6 +467,7 @@ if (isset($_GET['deleteid'])) {
       
   }
 }
+
 $sql = "SELECT * FROM `booking` ORDER BY boid DESC";
 $result = mysqli_query($conn, $sql);
 
@@ -560,47 +561,7 @@ if ($rowCount > 0) {
 </div>
 
                 
-<script>
 
-function generateTimeSlots() {
-    var timeSlotButtonsContainer = document.getElementById("timeSlotButtons");
-
-    // Clear existing buttons
-    timeSlotButtonsContainer.innerHTML = "";
-
-    // Convert start and end times to Date objects
-    var startDate = new Date("2024-03-07 " + startTime);
-    var endDate = new Date("2024-03-07 " + endTime);
-
-    // Time interval (in minutes) for slots
-    var interval = 60; // 60 minutes
-
-    // Generate time slots and add buttons
-    while (startDate < endDate) {
-        var slotStartTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        startDate.setMinutes(startDate.getMinutes() + interval);
-        var slotEndTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-        var button = document.createElement("button");
-        button.type = "button";
-        button.className = "btn btn-success mr-2 mb-2"; // Green color and adjusted margin
-        button.value = slotStartTime + " - " + slotEndTime;
-        button.style = "margin:10px;";
-        button.textContent = slotStartTime + " - " + slotEndTime;
-        button.addEventListener("click", function () {
-            document.getElementById("timeSlot").value = this.value;
-        });
-
-        timeSlotButtonsContainer.appendChild(button);
-    }
-}
-
-// Call the function initially to populate time slots
-generateTimeSlots();
-
-// Attach the function to the date change event (you may need to adjust this based on your requirements)
-document.getElementById("bookingDate").addEventListener("change", generateTimeSlots);
-</script>
 
 
 
