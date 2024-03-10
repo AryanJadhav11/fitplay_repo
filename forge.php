@@ -5,7 +5,7 @@
 <section class="pt-7 pb-0">
   <div class="container">
     <div class="row gx-5">
-    <aside class="col-lg-6">
+    <aside class="col-lg-6 py-0">
     <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:650px; position: relative;">
         <!-- Main Image -->
         <a id="mainImageLink" data-fslightbox="mygallery" class="rounded-4"  data-type="image">
@@ -39,6 +39,32 @@
     <div class="container m-0 p-0" style="background-color:rgb(30,34,38); height:200px; width:100%;">
       <div class="features_head m-0 p-0 d-flex justify-content-center align-items-center" style="background-color:rgb(19,20,21); height: 50px; width:100%;">
           <h3>Features</h3>
+      </div>
+      <div class="features-body">
+        <div class="row" style="gap:1pxpx;">
+          <div class="col-lg-6">
+            <h5>1) World class premium equipments</h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>2) Personalized Fitness <br> Guidence</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>3) Personal Lockers</h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>4) Certified Trainers</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>5) Batch wise Training</h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>6) Special Women's Batches</h5>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -108,7 +134,7 @@
  
 </section>
 
-<hr class="">
+<hr>
  <!-- form -->
 <section>
 <form action="" id="packageForm">
@@ -122,11 +148,11 @@
 <!-- form head end -->
   <!-- form body -->
     <div class="form_body" style="border:5px solid rgb(19,20,21);">
-      <div class="packages" style="height: 400px;;">
+      <div class="packages" style="height: auto;">
         <div class="selectpackage d-flex justify-content-center align-items-center pt-5"  >
             <h4>Select Package :</h4>
         </div>
-        <div class="packs">
+        <div class="packs pt-5">
           <div class="card text-center mb-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title" style="color:white;">1 Month Plan</h5>
@@ -161,16 +187,33 @@
           </div>
         </div>
       </div>
-      <div class="form-info" style="width:100%; height:70vh; background-color:rgb(33,37,41);">
-        
+      <div class="form-info container" style="width:100%; height:30vh; background-color:rgb(33,37,41);">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="userMail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="userMail">
+          </div>
+          <div class="col-md-6">
+            <label for="userNum" class="form-label">Phone No.</label>
+            <input type="tel" class="form-control" id="userNum">
+          </div>
+          <div class="col-md-6">
+            <label for="userFirstName" class="form-label">First Name.</label>
+            <input type="text" class="form-control" id="userFirstName">
+          </div>
+          <div class="col-md-6">
+            <label for="userLastname" class="form-label">Last Name.</label>
+            <input type="text" class="form-control" id="userLastname">
+          </div>
+          
+          <div class="col-12 d-flex justify-content-center pt-4">
+            <button type="submit" class="btn btn-primary">Send Mail</button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- form body end -->
-
-
   </div>
-   
-<button type="submit">Submit</button>
 </form>
 </section>
 
@@ -203,7 +246,76 @@
 
 
 <!-- end form -->
-<br><br><br><br><br><br><br><br>
+<section class="pb-0">
+<footer id="footer" style="background-color:rgb(0,0,0);">
+<div class="footer-top" style="background-color:rgb(17,18,19);">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3 style="color:white;">FitPlay<span>.</span></h3>
+        <p style="color:white;">
+         Kolhapur <br>
+         Maharastra<br>
+          <strong>Phone:</strong> +91 9284008321<br>
+          <strong>Email:</strong> thefitplay@gmail.com<br>
+        </p>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 style="color:white;">Useful Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">About us</a></li>
+          
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="privacy_policy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 style="color:white;">Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Explore Gym</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Shop Products</a></li>
+          
+        </ul>
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Social Networks</h4>
+        <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="copyright">
+    &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
+  </div>
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+</div>
+</footer>
+</section>
 
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
