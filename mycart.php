@@ -31,8 +31,8 @@
 <body class="py-6">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center border rounded bg-light my-5">
-                <h1>MY CART</h1>
+            <div class="col-lg-12 text-center border rounded bg-light my-5" style="background-color: #F8F9FA;">
+                <h1 class="py-2 pb-0">MY CART</h1>
             </div>
             <div class="col-lg-9">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -126,7 +126,7 @@
                           
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-3 mt-5">
                 <div class="border bg-light rounded p-4">
 
                     <h4 class="p-2"style="background-color: #54AAF2; border-radius: 5px; color:#252525;">Grand Total:</h4><br>
@@ -142,7 +142,7 @@
                     }
                     </style>
             <div class="pt-2">
-                 <a href="shopcheckout.php"><button type="" class="btn btn-primary btn-block " style="width: 100%; color: #000000; background-color: #54AAF2; text-transform: uppercase;font-weight: bold;">Checkout</button></a>
+                 <a href="shoppurchase.php"><button type="" class="btn btn-primary btn-block " style="width: 100%; color: #000000; background-color: #54AAF2; text-transform: uppercase;font-weight: bold;">Checkout</button></a>
             </div>
                     
                     </div>     

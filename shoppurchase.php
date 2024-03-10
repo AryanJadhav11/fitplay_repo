@@ -1,6 +1,6 @@
+<?php include("header.php");?>
+<?php include('floating_icon.php'); ?>
 <?php
-// Include header
-include('header.php');
 
 // Include Razorpay SDK
 require_once 'vendor/razorpay/Razorpay.php';

@@ -1,5 +1,6 @@
 
-<body>
+<?php include('floating_icon.php'); ?>
+<body class="py-6">
     <style>
         
     </style>
