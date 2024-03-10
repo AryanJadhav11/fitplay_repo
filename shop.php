@@ -686,7 +686,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                 </ul>
                             </div>
                             <p class="item-price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</p>
-                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
                         </div>
                     </div>
                 </div>
