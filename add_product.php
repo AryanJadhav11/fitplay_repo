@@ -329,6 +329,9 @@ $(document).ready(function(){
                 <li class="active">
                     <a href="bookedturf.php" style="text-decoration:none;">Booking</a>
                 </li>
+                <li class="active">
+                    <a href="requests.php" style="text-decoration:none;">Requests</a>
+                </li>
                 
                 <li class="active">
                     <a href="admin.php" style="text-decoration:none;">Overview</a>

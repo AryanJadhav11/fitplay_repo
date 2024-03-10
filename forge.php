@@ -2,85 +2,322 @@
 <?php include("gympageheader.php")?>
 <body>
 <!-- content -->
-<section class="pt-10">
+<section class="pt-7 pb-0">
   <div class="container">
     <div class="row gx-5">
-    <aside class="col-lg-6">
-    <!-- Main Image -->
-    <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:650px;">
-        <!-- Main Image Link -->
-        <a id="mainImageLink" data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-            <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 fit" src="./GYm/assets/img/forge1.jpeg" />
+    <aside class="col-lg-6 py-0">
+    <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:650px; position: relative;">
+        <!-- Main Image -->
+        <a id="mainImageLink" data-fslightbox="mygallery" class="rounded-4"  data-type="image">
+            <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 fit" src="./GYm/assets/img/forgelogo.jpeg" alt="Main Image" />
         </a>
+        <!-- Previous Button -->
+        <a id="prevButton" class="prev" onclick="changeImage(-1)" style="position: absolute; color:white; text-decoration:none; top: 50%; left: 10px; transform: translateY(-50%); z-index: 1;">&#10094;</a>
+        <!-- Next Button -->
+        <a id="nextButton" class="next" onclick="changeImage(1)" style="position: absolute; color:white; text-decoration:none; top: 50%; right: 10px; transform: translateY(-50%); z-index: 1;">&#10095;</a>
     </div>
 
     <!-- Thumbnail Images -->
     <div class="d-flex justify-content-center mb-3">
-        <!-- Thumbnail Image Links -->
+        <!-- Thumbnail Links -->
+        <a onclick="changeMainImage('./GYm/assets/img/forgelogo.jpeg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forgelogo.jpeg" alt="Thumbnail 1" />
+        </a>
         <a onclick="changeMainImage('./GYm/assets/img/forge1.jpeg'); return false;">
-            <img width="60" height="60" class="rounded-2" src="./GYm/assets/img/forge1.jpeg" />
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge1.jpeg" alt="Thumbnail 2" />
         </a>
         <a onclick="changeMainImage('./GYm/assets/img/forge2.jpeg'); return false;">
-            <img width="60" height="60" class="rounded-2" src="./GYm/assets/img/forge2.jpeg" />
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge2.jpeg" alt="Thumbnail 2" />
         </a>
-        <a onclick="changeMainImage('./GYm/assets/img/forge3.jpeg'); return false;">
-            <img width="60" height="60" class="rounded-2" src="./GYm/assets/img/forge3.jpeg" />
-        </a onclick=>
-        <a onclick="changeMainImage('./GYm/assets/img/forge4.jpeg'); return false;">
-            <img width="60" height="60" class="rounded-2" src="./GYm/assets/img/forge4.jpeg" />
+        <a  onclick="changeMainImage('./GYm/assets/img/forge3.jpeg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge3.jpeg" alt="Thumbnail 2" />
         </a>
-        <!-- Add more thumbnail links as needed -->
+        <a  onclick="changeMainImage('./GYm/assets/img/forge4.jpeg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge4.jpeg" alt="Thumbnail 2" />
+        </a>
     </div>
-    <!-- thumbs-wrap.// -->
-    <!-- gallery-wrap .end// -->
-</aside>
+    <div class="container m-0 p-0" style="background-color:rgb(30,34,38); height:200px; width:100%;">
+      <div class="features_head m-0 p-0 d-flex justify-content-center align-items-center" style="background-color:rgb(19,20,21); height: 50px; width:100%;">
+          <h3>Features</h3>
+      </div>
+      <div class="features-body">
+        <div class="row" style="gap:1pxpx;">
+          <div class="col-lg-6">
+            <h5>1) World class premium equipments</h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>2) Personalized Fitness <br> Guidence</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>3) Personal Lockers</h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>4) Certified Trainers</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h5>5) Batch wise Training</h5>
+          </div>
+          <div class="col-lg-6">
+            <h5>6) Special Women's Batches</h5>
+          </div>
+        </div>
+      </div>
 
+    </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</aside>
 <script>
-    // JavaScript function to change the main image
+    var currentImageIndex = 0;
+    var images = ['./GYm/assets/img/forgelogo.jpeg', './GYm/assets/img/forge1.jpeg', './GYm/assets/img/forge2.jpeg', './GYm/assets/img/forge3.jpeg', './GYm/assets/img/forge4.jpeg'];
+
     function changeMainImage(imageSrc) {
         document.getElementById('mainImage').src = imageSrc;
-        document.getElementById('mainImageLink').href = imageSrc; // Update the href as well
+        // document.getElementById('mainImageLink').href = imageSrc;
+        currentImageIndex = images.indexOf(imageSrc);
+        updateButtons();
+    }
+
+    function changeImage(step) {
+        currentImageIndex += step;
+        if (currentImageIndex < 0) {
+            currentImageIndex = images.length - 1;
+        } else if (currentImageIndex >= images.length) {
+            currentImageIndex = 0;
+        }
+        document.getElementById('mainImage').src = images[currentImageIndex];
+        // document.getElementById('mainImageLink').href = images[currentImageIndex];
+        updateButtons();
+    }
+
+    function updateButtons() {
+        document.getElementById('prevButton').style.display = currentImageIndex === 0 ? 'none' : 'block';
+        document.getElementById('nextButton').style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
     }
 </script>
-      <main class="col-lg-6">
+
+
+    
+    <main class="col-lg-6">
         <div class="ps-lg-3">
-        <div>
-        <div class="gymname">  
-            <h2 class="title ">
-               <b>Forge Fitness Club Kolhapur</b>
-            </h2> 
+            <div>
+                <div class="gymname">  
+                    <h2 class="title ">
+                    <b>Forge Fitness Club Kolhapur</b>
+                    </h2> 
             
-        </div><button type="button" class="btn btn-primary">Enquire</button></div>
-        <br>
-        <div class="gymdese"> <p style="font-size:19px; font-family:'Arial';">
+                </div>
+            </div>
+                <br>
+            <div class="gymdese"> <p style="font-size:19px; font-family:'Arial';">
               The Forge Fitness Club, Kolhapur is stocked with world-class equipment from leading manufacturers such as Life Fitness and Hammer Strength. We are focused on giving our members the best value for their money. That means equipment and workout space that is clean, safe, comfortable, and close to home.. 
                We provides the top quality cardio, free weight, and strength training that need to get the shape at an affordable price.
-            </p>
-        </div>
+                </p>
+            </div>
          
           <hr />
-          <form action="">
-          <label>name</label>
-          <label>email</label>
-          <label>phone number</label>
-          </form>
+         
           
-          <br><br>
+        </div>
+          <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.943762714696!2d74.2431299!3d16.7296576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10122281fb59f%3A0x617ecc9e50dfdeb2!2sThe%20Forge%20Fitness%20Club%2C%20Kolhapur%20%7C%20Best%20Gym%20in%20Kolhapur%20%7C%20Fitness%20centre%20in%20Kolhapur!5e0!3m2!1sen!2sin!4v1709967587601!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-      </main>
+    </main>
     </div>
   </div>
+
+ 
 </section>
-<!-- content -->
 
-<!-- Footer -->
+<hr>
+ <!-- form -->
+<section>
+<form action="" id="packageForm">
+  <div class="container">
+    <!-- form head -->
+    <div class="form_head">
+      <div class="d-flex justify-content-center align-items-center" style="background-color:rgb(19,20,21); height:70px; width:100%;">
+        <h3>Book Now!</h3>
+      </div>
+    </div>
+<!-- form head end -->
+  <!-- form body -->
+    <div class="form_body" style="border:5px solid rgb(19,20,21);">
+      <div class="packages" style="height: auto;">
+        <div class="selectpackage d-flex justify-content-center align-items-center pt-5"  >
+            <h4>Select Package :</h4>
+        </div>
+        <div class="packs pt-5">
+          <div class="card text-center mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title" style="color:white;">1 Month Plan</h5>
+                <p class="card-text" style="color:white;">1500/Mo</p>
+                <label for="package1">SELECT</label>
+                <input id="package1" type="radio" name="package" value="1 Month Plan">
+            </div>
+          </div>
+          <div class="card text-center mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title" style="color:white;">3 Months Plan</h5>
+                <p class="card-text" style="color:white;">4500/3 Mo</p>
+                <label for="package2">SELECT</label>
+                <input id="package2" type="radio" name="package" value="3 Month Plan">            
+            </div>
+          </div>
+          <div class="card text-center mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title" style="color:white;">6 Months Plan</h5>
+                <p class="card-text" style="color:white;">7000/6 Mo</p>
+                <label for="package3">SELECT</label>
+                <input id="package3" type="radio" name="package" value="6 Month Plan">            
+             </div>
+          </div>
+          <div class="card text-center mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title" style="color:white;">1 Year Plan</h5>
+                <p class="card-text" style="color:white;">12,000/Year</p>
+                <label for="package4">SELECT</label>
+                <input id="package4" type="radio" name="package" value="1 Year Plan">            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-info container" style="width:100%; height:30vh; background-color:rgb(33,37,41);">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="userMail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="userMail">
+          </div>
+          <div class="col-md-6">
+            <label for="userNum" class="form-label">Phone No.</label>
+            <input type="tel" class="form-control" id="userNum">
+          </div>
+          <div class="col-md-6">
+            <label for="userFirstName" class="form-label">First Name.</label>
+            <input type="text" class="form-control" id="userFirstName">
+          </div>
+          <div class="col-md-6">
+            <label for="userLastname" class="form-label">Last Name.</label>
+            <input type="text" class="form-control" id="userLastname">
+          </div>
+          
+          <div class="col-12 d-flex justify-content-center pt-4">
+            <button type="submit" class="btn btn-primary">Send Mail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- form body end -->
+  </div>
+</form>
+</section>
 
-<!-- Footer -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var radioButtons = document.querySelectorAll('input[type="radio"]');
+
+        radioButtons.forEach(function(radioButton) {
+            radioButton.addEventListener('change', function() {
+                document.querySelectorAll('.card').forEach(function(card) {
+                    card.classList.remove('selected-package');
+                });
+
+                // Add teh border to the selected class
+                if (this.checked) {
+                    this.closest('.card').classList.add('selected-package');
+                }
+            });
+        });
+
+        document.getElementById('packageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            var selectedPackage = document.querySelector('input[name="package"]:checked').value;
+
+            // Do something with the selected package
+            console.log("Selected package:", selectedPackage);
+        });
+    });
+</script>
 
 
-    <!-- MDB -->
+<!-- end form -->
+<section class="pb-0">
+<footer id="footer" style="background-color:rgb(0,0,0);">
+<div class="footer-top" style="background-color:rgb(17,18,19);">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 footer-contact">
+        <h3 style="color:white;">FitPlay<span>.</span></h3>
+        <p style="color:white;">
+         Kolhapur <br>
+         Maharastra<br>
+          <strong>Phone:</strong> +91 9284008321<br>
+          <strong>Email:</strong> thefitplay@gmail.com<br>
+        </p>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 style="color:white;">Useful Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">About us</a></li>
+          
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="privacy_policy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4 style="color:white;">Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Explore Gym</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Shop Products</a></li>
+          
+        </ul>
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Social Networks</h4>
+        <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="copyright">
+    &copy; Copyright <strong><span>FitPlay</span></strong>. All Rights Reserved
+  </div>
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+</div>
+</footer>
+</section>
+
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Custom scripts -->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -165,8 +165,10 @@ $(document).ready(function(){
             <ul class="list-unstyled components">
                 <p>My Panel</p>
                 <li class="active">
-                    <a href="admin.php" style="text-decoration:none;">OverView</a>
-                    
+                    <a href="owner_overview.php" style="text-decoration:none;">OverView</a>
+                </li>
+                <li class="active">
+                    <a href="owner_panel.php" style="text-decoration:none;">Bookings</a>
                 </li>
             
                 

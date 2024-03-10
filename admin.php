@@ -1004,6 +1004,9 @@ $(document).ready(function () {
                 <li class="active">
                     <a href="bookedturf.php" style="text-decoration:none;">Booking</a>
                 </li>
+                <li class="active">
+                    <a href="requests.php" style="text-decoration:none;">Requests</a>
+                </li>
                 
                 <li class="active">
                     <a href="add_product.php" style="text-decoration:none;">Add Product</a>
@@ -1160,6 +1163,30 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Turf Owners</h5>
+                      <?php
+                      $queqto="SELECT id from turf_owner ORDER BY id" ;
+                      $runtto=mysqli_query($coni,$queqto);
+                      $turf_row_ow=mysqli_num_rows($runtto);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$turf_row_ow.'</span>';
+
+                      ?>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-chart-pie"></i>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Users</h5>
                       <?php
                       $queu="SELECT id from users ORDER BY id" ;
@@ -1179,7 +1206,7 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6">
+            <div class="col-xl-3 col-lg-6" style="margin-left:423px;margin-top:23px;">
               <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                   <div class="row">

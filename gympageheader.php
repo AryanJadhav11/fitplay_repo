@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>Fitplay Gyms</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -35,5 +35,23 @@
   height:10vh;
   background-color:rgb(19,20,21);
 }
+.packs{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding-top:5rem;
+}
+.card{
+  background-color:rgb(19,20,21);
+
+}
+/* Hide the default radio button */
+input[type="radio"] {
+        display: none;
+    }
+    .selected-package {
+            border-color: blue !important;
+        }
   </style>
   </head>

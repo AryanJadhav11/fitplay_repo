@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 $server='localhost';
 $user='root';
 $db='turf';
@@ -11,8 +11,20 @@ if(!$coni)
 {
  die(mysqli_error($coni));
 }
+echo '<pre>';
+print_r($_SESSION['owner_data']);
+echo '</pre>';
+if (!isset($_SESSION['owner_data']) || !isset($_SESSION['owner_data']['turf'])) {
+    header('Location: login.php'); // Redirect to the login page if not logged in or if venue_name is not set
+    exit();
+}
 
+$turf_owner_data = $_SESSION['owner_data'];
+$turfn = $turf_owner_data['turf'];
 
+// Fetch data from the database based on the current turf owner
+$sql = "SELECT * FROM `booking` WHERE turfname='$turfn' ORDER BY booking.boid DESC";
+$result = mysqli_query($coni, $sql);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get booking information from the form
@@ -66,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <title>Turf Admin - Dashboard</title>
+      <title>Turf owner - Dashboard</title>
 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -378,9 +390,14 @@ a:focus {
   }
 }
 ?>
-<?php
-$turfn="Bsietturf";
-?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- ... (your HTML content) ... -->
+</html>
+
+
                <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
@@ -390,7 +407,7 @@ $turfn="Bsietturf";
 </div>
 
                     <div class="col-sm-6">
-                        <a href="#addbooking" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add new turf</span></a>                      
+                        <a href="#addbooking" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Booking</span></a>                      
                     </div>
                 </div>
             </div>
