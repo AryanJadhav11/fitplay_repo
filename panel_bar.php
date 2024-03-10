@@ -167,17 +167,16 @@ $(document).ready(function(){
                     <a href="admin.php" style="text-decoration:none;">OverView</a>
                     
                 </li>
-                <li>
-                    <a href="#pageSubmenu"style="text-decoration:none; color:white;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bookings</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li >
-                            <a href="bookedturf.php" style="text-decoration:none; background:#133474;color:white;">View Booking</a>
-                        </li>
-                        <li>
-                            <a href="" style="text-decoration:none; background:#133474; color:white;">Enter Booking manually</a>
-                        </li>
-                       
-                    </ul>
+                <li class="active">
+                    <a href="bookedturf.php" style="text-decoration:none;">Bookings</a>
+                    
+                </li>
+                <li class="active">
+                    <a href="admin_turf.php" style="text-decoration:none;">Manage Turfs</a>
+                    
+                </li>
+                <li class="active">
+                    <a href="requests.php" style="text-decoration:none;">Requests</a>
                 </li>
                 
                 <li class="active">
