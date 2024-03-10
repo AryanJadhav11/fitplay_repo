@@ -1,5 +1,9 @@
 <?php include("header.php");?>
-<?php include('floating_icon.php'); ?>
+<?php
+if (isset($_SESSION['user_data'])) {
+    include('floating_icon.php');
+}
+?>
 <?php
 
 // Database connection
