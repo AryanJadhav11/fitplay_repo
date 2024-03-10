@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="mycart_css.scss">
   </head>
   <body>
     <style>
@@ -98,16 +98,8 @@
              align-items: center;
              justify-content: center;
              margin-bottom: 10px;
-         }
-        
-     
+         }   
             
-             body {
-       color: #566787;
-       background: #f5f5f5;
-       
-       font-size: 13px;
-     }
      .table-responsive {
          margin: 30px 0;
      }
@@ -214,87 +206,8 @@
      
      
      
-     /* Modal styles */
-     .modal .modal-dialog {
-       max-width: 400px;
-     }
-     .modal .modal-header, .modal .modal-body, .modal .modal-footer {
-       padding: 20px 30px;
-     }
-     .modal .modal-content {
-       border-radius: 3px;
-       font-size: 14px;
-     }
-     .modal .modal-footer {
-       background: #ecf0f1;
-       border-radius: 0 0 3px 3px;
-     }
-     .modal .modal-title {
-       display: inline-block;
-     }
-     .modal .form-control {
-       border-radius: 2px;
-       box-shadow: none;
-       border-color: #dddddd;
-     }
-     .modal textarea.form-control {
-       resize: vertical;
-     }
-     .modal .btn {
-       border-radius: 2px;
-       min-width: 100px;
-     }	
-     .modal form label {
-       font-weight: normal;
-     }	
-     /*
-         DEMO STYLE
-     */
-     
-     @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-     body {
-         font-family: 'Poppins', sans-serif;
-         background: #fafafa;
-     }
-     
-     p {
-         font-family: 'Poppins', sans-serif;
-         font-size: 1.1em;
-         font-weight: 300;
-         line-height: 1.7em;
-         color: #999;
-     }
-     
-     a,
-     a:hover,
-     a:focus {
-         color: inherit;
-         text-decoration: none;
-         transition: all 0.3s;
-     }
-     
-     .navbar {
-         padding: 15px 10px;
-         background: #f8f9fa;
-         border: none;
-         border-radius: 0;
-         margin-bottom: 40px;
-         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-     }
-     
-     .navbar-btn {
-         box-shadow: none;
-         outline: none !important;
-         border: none;
-     }
-     
-     .line {
-         width: 100%;
-         height: 1px;
-         border-bottom: 1px dashed #ddd;
-         margin: 40px 0;
-     }
-     
+    	
+    
      /* ---------------------------------------------------
          SIDEBAR STYLE
      ----------------------------------------------------- */
@@ -309,7 +222,6 @@
               <div class="wrapper">
              <!-- Sidebar  -->
             
-     <?php include('panel_bar.php'); ?>
              <!-- Page Content  -->
              <div id="content">
      
