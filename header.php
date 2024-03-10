@@ -252,7 +252,6 @@ function getInitials($name) {
   </script> 
 
  <!-- ======= Header - NavBar ======= -->
-
   <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
@@ -364,7 +363,6 @@ function getInitials($name) {
  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
  <!-- Login Modal End -->
 </head>
-
 
   <!-- script for fixed navbar -->
   <script src="GYm/assets/js/main.js"></script>
