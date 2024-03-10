@@ -11,431 +11,206 @@
 </head>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-<div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="ibox">
-                <div class="ibox-title">
-                    <span class="pull-right">(<strong>5</strong>) items</span>
-                    <h5>Items in your cart</h5>
-                </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table shoping-cart-table">
-                            <tbody>
-                            <tr>
-                                <td width="90">
-                                    <div class="cart-product-imitation">
-                                    </div>
-                                </td>
-                                <td class="desc">
-                                    <h3>
-                                    <a href="#" class="text-navy">
-                                        Desktop publishing software
-                                    </a>
-                                    </h3>
-                                    <p class="small">
-                                        It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                    </p>
-                                    <dl class="small m-b-none">
-                                        <dt>Description lists</dt>
-                                        <dd>A description list is perfect for defining terms.</dd>
-                                    </dl>
+<section class="h-100 h-custom">
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
 
-                                    <div class="m-t-sm">
-                                        <a href="#" class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
-                                        |
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    $180,00
-                                    <s class="small text-muted">$230,00</s>
-                                </td>
-                                <td width="65">
-                                    <input type="text" class="form-control" placeholder="1">
-                                </td>
-                                <td>
-                                    <h4>
-                                        $180,00
-                                    </h4>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="h5">Shopping Bag</th>
+                <th scope="col">Format</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <div class="d-flex align-items-center">
+                    <img src="https://i.imgur.com/2DsA49b.webp" class="img-fluid rounded-3"
+                      style="width: 120px;" alt="Book">
+                    <div class="flex-column ms-4">
+                      <p class="mb-2">Thinking, Fast and Slow</p>
+                      <p class="mb-0">Daniel Kahneman</p>
                     </div>
+                  </div>
+                </th>
+                <td class="align-middle">
+                  <p class="mb-0" style="font-weight: 500;">Digital</p>
+                </td>
+                <td class="align-middle">
+                  <div class="d-flex flex-row">
+                    <button class="btn btn-link px-2"
+                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                      <i class="fas fa-minus"></i>
+                    </button>
 
-                </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table shoping-cart-table">
+                    <input id="form1" min="0" name="quantity" value="2" type="number"
+                      class="form-control form-control-sm" style="width: 50px;" />
 
-                            <tbody>
-                            <tr>
-                                <td width="90">
-                                    <div class="cart-product-imitation">
-                                    </div>
-                                </td>
-                                <td class="desc">
-                                    <h3>
-                                        <a href="#" class="text-navy">
-                                            Text editor
-                                        </a>
-                                    </h3>
-                                    <p class="small">
-                                        There are many variations of passages of Lorem Ipsum available
-                                    </p>
-                                    <dl class="small m-b-none">
-                                        <dt>Description lists</dt>
-                                        <dd>List is perfect for defining terms.</dd>
-                                    </dl>
-
-                                    <div class="m-t-sm">
-                                        <a href="#" class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
-                                        |
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    $50,00
-                                    <s class="small text-muted">$63,00</s>
-                                </td>
-                                <td width="65">
-                                    <input type="text" class="form-control" placeholder="2">
-                                </td>
-                                <td>
-                                    <h4>
-                                        $100,00
-                                    </h4>
-                                </td>
-
-                            </tr>
-                            </tbody>
-                        </table>
+                    <button class="btn btn-link px-2"
+                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </td>
+                <td class="align-middle">
+                  <p class="mb-0" style="font-weight: 500;">$9.99</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="border-bottom-0">
+                  <div class="d-flex align-items-center">
+                    <img src="https://i.imgur.com/Oj1iQUX.webp" class="img-fluid rounded-3"
+                      style="width: 120px;" alt="Book">
+                    <div class="flex-column ms-4">
+                      <p class="mb-2">Homo Deus: A Brief History of Tomorrow</p>
+                      <p class="mb-0">Yuval Noah Harari</p>
                     </div>
+                  </div>
+                </th>
+                <td class="align-middle border-bottom-0">
+                  <p class="mb-0" style="font-weight: 500;">Paperback</p>
+                </td>
+                <td class="align-middle border-bottom-0">
+                  <div class="d-flex flex-row">
+                    <button class="btn btn-link px-2"
+                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                      <i class="fas fa-minus"></i>
+                    </button>
 
-                </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table shoping-cart-table">
+                    <input id="form1" min="0" name="quantity" value="1" type="number"
+                      class="form-control form-control-sm" style="width: 50px;" />
 
-                            <tbody>
-                            <tr>
-                                <td width="90">
-                                    <div class="cart-product-imitation">
-                                    </div>
-                                </td>
-                                <td class="desc">
-                                    <h3>
-                                        <a href="#" class="text-navy">
-                                            CRM software
-                                        </a>
-                                    </h3>
-                                    <p class="small">
-                                        Distracted by the readable
-                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                    </p>
-                                    <dl class="small m-b-none">
-                                        <dt>Description lists</dt>
-                                        <dd>A description list is perfect for defining terms.</dd>
-                                    </dl>
-
-                                    <div class="m-t-sm">
-                                        <a href="#" class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
-                                        |
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    $110,00
-                                </td>
-                                <td width="65">
-                                    <input type="text" class="form-control" placeholder="1">
-                                </td>
-                                <td>
-                                    <h4>
-                                        $110,00
-                                    </h4>
-                                </td>
-
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table shoping-cart-table">
-
-                            <tbody>
-                            <tr>
-                                <td width="90">
-                                    <div class="cart-product-imitation">
-                                    </div>
-                                </td>
-                                <td class="desc">
-                                    <h3>
-                                        <a href="#" class="text-navy">
-                                            PM software
-                                        </a>
-                                    </h3>
-                                    <p class="small">
-                                        Readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                    </p>
-                                    <dl class="small m-b-none">
-                                        <dt>Description lists</dt>
-                                        <dd>A description list is perfect for defining terms.</dd>
-                                    </dl>
-
-                                    <div class="m-t-sm">
-                                        <a href="#" class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
-                                        |
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    $130,00
-                                </td>
-                                <td width="65">
-                                    <input type="text" class="form-control" placeholder="1">
-                                </td>
-                                <td>
-                                    <h4>
-                                        $130,00
-                                    </h4>
-                                </td>
-
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table shoping-cart-table">
-
-                            <tbody>
-                            <tr>
-                                <td width="90">
-                                    <div class="cart-product-imitation">
-                                    </div>
-                                </td>
-                                <td class="desc">
-                                    <h3>
-                                        <a href="#" class="text-navy">
-                                            Photo editor
-                                        </a>
-                                    </h3>
-                                    <p class="small">
-                                        Page when looking at its layout. The point of using Lorem Ipsum is
-                                    </p>
-                                    <dl class="small m-b-none">
-                                        <dt>Description lists</dt>
-                                        <dd>A description list is perfect for defining terms.</dd>
-                                    </dl>
-                                    <div class="m-t-sm">
-                                        <a href="#" class="text-muted"><i class="fa fa-gift"></i> Add gift package</a>
-                                        |
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                                    </div>
-                                </td>
-                                <td>
-                                    $700,00
-                                </td>
-                                <td width="65">
-                                    <input type="text" class="form-control" placeholder="1">
-                                </td>
-                                <td>
-                                    <h4>
-                                        $70,00
-                                    </h4>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="ibox-content">
-                    <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
-                    <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continue shopping</button>
-
-                </div>
-            </div>
-
+                    <button class="btn btn-link px-2"
+                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </td>
+                <td class="align-middle border-bottom-0">
+                  <p class="mb-0" style="font-weight: 500;">$13.50</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-title">
-                    <h5>Cart Summary</h5>
-                </div>
-                <div class="ibox-content">
-                    <span>
-                        Total
-                    </span>
-                    <h2 class="font-bold">
-                        $390,00
-                    </h2>
 
-                    <hr>
-                    <span class="text-muted small">
-                        *For United States, France and Germany applicable sales tax will be applied
-                    </span>
-                    <div class="m-t-sm">
-                        <div class="btn-group">
-                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Checkout</a>
-                        <a href="#" class="btn btn-white btn-sm"> Cancel</a>
-                        </div>
+        <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+          <div class="card-body p-4">
+
+            <div class="row">
+              <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                <form>
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v"
+                        value="" aria-label="..." checked />
                     </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Credit
+                        Card
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v"
+                        value="" aria-label="..." />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                        value="" aria-label="..." />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>PayPal
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xl-6">
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                        placeholder="John Smith" />
+                      <label class="form-label" for="typeName">Name on card</label>
+                    </div>
+
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY"
+                        size="7" id="exp" minlength="7" maxlength="7" />
+                      <label class="form-label" for="typeExp">Expiration</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                        placeholder="1111 2222 3333 4444" minlength="19" maxlength="19" />
+                      <label class="form-label" for="typeText">Card Number</label>
+                    </div>
+
+                    <div class="form-outline mb-4 mb-xl-5">
+                      <input type="password" id="typeText" class="form-control form-control-lg"
+                        placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                      <label class="form-label" for="typeText">Cvv</label>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-lg-4 col-xl-3">
+                <div class="d-flex justify-content-between" style="font-weight: 500;">
+                  <p class="mb-2">Subtotal</p>
+                  <p class="mb-2">$23.49</p>
+                </div>
+
+                <div class="d-flex justify-content-between" style="font-weight: 500;">
+                  <p class="mb-0">Shipping</p>
+                  <p class="mb-0">$2.99</p>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                  <p class="mb-2">Total (tax included)</p>
+                  <p class="mb-2">$26.48</p>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block btn-lg">
+                  <div class="d-flex justify-content-between">
+                    <span>Checkout</span>
+                    <span>$26.48</span>
+                  </div>
+                </button>
+
+              </div>
             </div>
 
-            <div class="ibox">
-                <div class="ibox-title">
-                    <h5>Support</h5>
-                </div>
-                <div class="ibox-content text-center">
-                    <h3><i class="fa fa-phone"></i> +43 100 783 001</h3>
-                    <span class="small">
-                        Please contact with us if you have any questions. We are avalible 24h.
-                    </span>
-                </div>
-            </div>
-
-            <div class="ibox">
-                <div class="ibox-content">
-
-                    <p class="font-bold">
-                    Other products you may be interested
-                    </p>
-                    <hr>
-                    <div>
-                        <a href="#" class="product-name"> Product 1</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                    <hr>
-                    <div>
-                        <a href="#" class="product-name"> Product 2</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+      </div>
     </div>
-</div>
-</div>
+  </div>
+</section>
 <style>
-    body{margin-top:20px;
-    background:#eee;
+    @media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
 }
-h3 {
-    font-size: 16px;
-}
-.text-navy {
-    color: #1ab394;
-}
-.cart-product-imitation {
-  text-align: center;
-  padding-top: 30px;
-  height: 80px;
-  width: 80px;
-  background-color: #f8f8f9;
-}
-.product-imitation.xl {
-  padding: 120px 0;
-}
-.product-desc {
-  padding: 20px;
-  position: relative;
-}
-.ecommerce .tag-list {
-  padding: 0;
-}
-.ecommerce .fa-star {
-  color: #d1dade;
-}
-.ecommerce .fa-star.active {
-  color: #f8ac59;
-}
-.ecommerce .note-editor {
-  border: 1px solid #e7eaec;
-}
-table.shoping-cart-table {
-  margin-bottom: 0;
-}
-table.shoping-cart-table tr td {
-  border: none;
-  text-align: right;
-}
-table.shoping-cart-table tr td.desc,
-table.shoping-cart-table tr td:first-child {
-  text-align: left;
-}
-table.shoping-cart-table tr td:last-child {
-  width: 80px;
-}
-.ibox {
-  clear: both;
-  margin-bottom: 25px;
-  margin-top: 0;
-  padding: 0;
-}
-.ibox.collapsed .ibox-content {
-  display: none;
-}
-.ibox:after,
-.ibox:before {
-  display: table;
-}
-.ibox-title {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-color: #ffffff;
-  border-color: #e7eaec;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 3px 0 0;
-  color: inherit;
-  margin-bottom: 0;
-  padding: 14px 15px 7px;
-  min-height: 48px;
-}
-.ibox-content {
-  background-color: #ffffff;
-  color: inherit;
-  padding: 15px 20px 20px 20px;
-  border-color: #e7eaec;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 1px 0;
-}
-.ibox-footer {
-  color: inherit;
-  border-top: 1px solid #e7eaec;
-  font-size: 90%;
-  background: #ffffff;
-  padding: 10px 15px;
 }
 </style>
 </body>
