@@ -1,5 +1,10 @@
 <?php include("header.php");?>
 <?php
+if (isset($_SESSION['user_data'])) {
+    include('floating_icon.php');
+}
+?>
+<?php
 
 // Database connection
 $servername = "localhost";
@@ -156,328 +161,222 @@ $respic=mysqli_fetch_assoc($quepro);
 </style>
 
 <!-- just new design end -->
-<br>
-<br>
-<br>
-<!-- best sellig satrt -->
-   <!-- trying new slider start
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-<div class="bbb_viewed">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-               <div class="bbb_main_container">
-                <div class="bbb_viewed_title_container">
-                    <h3 class="bbb_viewed_title">Best selling products</h3>
-                    <div class="bbb_viewed_nav_container">
-                        <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
-                        <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
-                    </div>
-                </div>
-                <div class="bbb_viewed_slider_container">
-                    <div class="owl-carousel owl-theme bbb_viewed_slider">
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924153/alcatel-smartphones-einsteiger-mittelklasse-neu-3m.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹12225<span>₹13300</span></div>
-                                    <div class="bbb_viewed_name"><a href="#">Alkatel Phone</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924221/51_be7qfhil.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹30079</div>
-                                    <div class="bbb_viewed_name"><a href="#">Samsung LED</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹22250</div>
-                                    <div class="bbb_viewed_name"><a href="#">Samsung Mobile</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924275/images.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹1379</div>
-                                    <div class="bbb_viewed_name"><a href="#">Huawei Power</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924361/21HmjI5eVcL.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹225<span>₹300</span></div>
-                                    <div class="bbb_viewed_name"><a href="#">Sony Power</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹13275</div>
-                                    <div class="bbb_viewed_name"><a href="#">Speedlink Mobile</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               </div> 
-            </div>
-        </div>
+
+<!-- effect start -->
+<main class="boot-container">
+  <div class="row">
+    <div class="col-lg-4">
+    <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
     </div>
-</div>
-
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+    </div>
+    <div class="col-lg-4">
+    <section class="boot-card boot-card-blue">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
+      <div class="boot-price">$1599</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+    </div>
+    <div class="col-lg-4">
+    <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+    </div>
+  </div>
+ 
+  
+ 
+  
+</main>
 <style>
-  .bbb_viewed {
-     padding-top: 51px;
-     padding-bottom: 60px;
-     background: #eff6fa
- }
+  /*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
- .bbb_main_container{
-         background-color: #fff;
-    padding: 11px;
- }
+/*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --red-card: #a62121;
+  --blue-card: #4bb7e6;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
 
- .bbb_viewed_title_container {
-     border-bottom: solid 1px #dadada
- }
+/*===== RESET =====*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- .bbb_viewed_title {
-         margin-bottom: 16px;
-    margin-top: 8px;
+button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--text);
+  cursor: pointer;
+}
 
- }
+a {
+  text-decoration: none;
+}
 
- .bbb_viewed_nav_container {
-     position: absolute;
-     right: -5px;
-     bottom: 14px
- }
+img {
+  max-width: 100%;
+  height: 100%;
+  user-select: none;
+}
 
- .bbb_viewed_nav {
-     display: inline-block;
-     cursor: pointer
- }
+/*===== CARD =====*/
+.boot-container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.boot-card {
+  position: relative;
+  padding: 1rem;
+  width: 350px;
+  height: 450px;
+  box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+  border-radius: 0.9rem;
+  background-color: var(--red-card);
+  color: var(--text);
+  cursor: pointer;
+}
 
- .bbb_viewed_nav i {
-     color: #dadada;
-     font-size: 18px;
-     padding: 5px;
-     -webkit-transition: all 200ms ease;
-     -moz-transition: all 200ms ease;
-     -ms-transition: all 200ms ease;
-     -o-transition: all 200ms ease;
-     transition: all 200ms ease
- }
+.boot-card-blue {
+  background: var(--blue-card);
+}
 
- .bbb_viewed_nav:hover i {
-     color: #606264
- }
+.boot-product-image {
+  height: 230px;
+  width: 100%;
+  transform: translate(0, -1.5rem);
+  transition: transform 500ms ease-in-out;
+  filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+.boot-product-info {
+  text-align: center;
+}
 
- .bbb_viewed_prev {
-     margin-right: 15px
- }
+.boot-card:hover .boot-product-image {
+  transform: translate(-0.5rem, -3rem) rotate(-10deg);
+}
 
- .bbb_viewed_slider_container {
-     padding-top: 13px;
- }
+.boot-product-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.boot-product-info p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.boot-price {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.boot-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.boot-buy-btn {
+  background-color: var(--btn);
+  padding: 0.6rem 3.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 300ms ease;
+}
+.boot-buy-btn:hover {
+  background-color: var(--btn-hover);
+}
+.boot-fav {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid#000;
+  display: grid;
+  place-items: center;
+}
 
- .bbb_viewed_item {
-     width: 100%;
-     background: #FFFFFF;
-     border-radius: 2px;
-     padding-top: 25px;
-     padding-bottom: 25px;
-     padding-left: 30px;
-     padding-right: 30px
- }
+.boot-svg {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  transition: all 500ms ease;
+}
 
- .bbb_viewed_image {
-         width: 150px;
-    height: 150px;
- }
+.boot-fav:hover .boot-svg {
+  fill: #000;
+}
 
- .bbb_viewed_image img {
-     display: block;
-     max-width: 100%
- }
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .boot-container {
+    padding: 2rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 
- .bbb_viewed_content {
-     width: 100%;
-     margin-top: 25px
- }
-
- .bbb_viewed_price {
-     font-size: 16px;
-     color: #000000;
-     font-weight: 500
- }
-
- .bbb_viewed_item.discount .bbb_viewed_price {
-     color: #df3b3b
- }
-
- .bbb_viewed_price span {
-     position: relative;
-     font-size: 12px;
-     font-weight: 400;
-     color: rgba(0, 0, 0, 0.6);
-     margin-left: 8px
- }
-
- .bbb_viewed_price span::after {
-     display: block;
-     position: absolute;
-     top: 6px;
-     left: -2px;
-     width: calc(100% + 4px);
-     height: 1px;
-     background: #8d8d8d;
-     content: ''
- }
-
- .bbb_viewed_name {
-     margin-top: 3px
- }
-
- .bbb_viewed_name a {
-     font-size: 14px;
-     color: #000000;
-     -webkit-transition: all 200ms ease;
-     -moz-transition: all 200ms ease;
-     -ms-transition: all 200ms ease;
-     -o-transition: all 200ms ease;
-     transition: all 200ms ease
- }
-
- .bbb_viewed_name a:hover {
-     color: #0e8ce4
- }
-
- .item_marks {
-     position: absolute;
-     top: 18px;
-     left: 18px
- }
-
- .item_mark {
-     display: none;
-     width: 36px;
-     height: 36px;
-     border-radius: 50%;
-     color: #FFFFFF;
-     font-size: 10px;
-     font-weight: 500;
-     line-height: 36px;
-     text-align: center
- }
-
- .item_discount { 
-     background: #df3b3b;
-     margin-right: 5px
- }
-
- .item_new {
-     background: #0e8ce4
- }
-
- .bbb_viewed_item.discount .item_discount {
-     display: inline-block
- }
-
- .bbb_viewed_item.is_new .item_new {
-     display: inline-block
- }
 </style>
-
-<script>
-  $(document).ready(function()
-{
-
-   
-        if($('.bbb_viewed_slider').length)
-        {
-            var viewedSlider = $('.bbb_viewed_slider');
-
-            viewedSlider.owlCarousel(
-            {
-                loop:true,
-                margin:30,
-                autoplay:true,
-                autoplayTimeout:6000,
-                nav:false,
-                dots:false,
-                responsive:
-                {
-                    0:{items:1},
-                    575:{items:2},
-                    768:{items:3},
-                    991:{items:4},
-                    1199:{items:6}
-                }
-            });
-
-            if($('.bbb_viewed_prev').length)
-            {
-                var prev = $('.bbb_viewed_prev');
-                prev.on('click', function()
-                {
-                    viewedSlider.trigger('prev.owl.carousel');
-                });
-            }
-
-            if($('.bbb_viewed_next').length)
-            {
-                var next = $('.bbb_viewed_next');
-                next.on('click', function()
-                {
-                    viewedSlider.trigger('next.owl.carousel');
-                });
-            }
-        }
-
-
-    });
-</script> -->
-
+<!-- effect end -->
 <!-- PRODUCT CARDS START -->
 <style>
   .fea {
@@ -496,7 +395,7 @@ $respic=mysqli_fetch_assoc($quepro);
 	margin: 0 auto;
 	height: 4px;
 	border-radius: 1px;
-	background: #7ac400;
+	background: #106eea;
 	left: 0;
 	right: 0;
 	bottom: -20px;
@@ -542,12 +441,12 @@ $respic=mysqli_fetch_assoc($quepro);
 	margin-bottom: 5px;
 }
 .carousel .thumb-content .btn {
-	color: #7ac400;
+	color: #106eea;
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: bold;
 	background: none;
-	border: 1px solid #7ac400;
+	border: 1px solid #106eea;
 	padding: 6px 14px;
 	margin-top: 5px;
 	line-height: 16px;
@@ -555,7 +454,7 @@ $respic=mysqli_fetch_assoc($quepro);
 }
 .carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
 	color: #fff;
-	background: #7ac400;
+	background: #106eea;
 	box-shadow: none;
 }
 .carousel .thumb-content .btn i {
@@ -574,13 +473,13 @@ $respic=mysqli_fetch_assoc($quepro);
 .carousel-control-prev, .carousel-control-next {
 	height: 44px;
 	width: 40px;
-	background: #7ac400;	
+	background: #106eea;	
 	margin: auto 0;
 	border-radius: 4px;
 	opacity: 0.8;
 }
 .carousel-control-prev:hover, .carousel-control-next:hover {
-	background: #78bf00;
+	background: #106eea;
 	opacity: 1;
 }
 .carousel-control-prev i, .carousel-control-next i {
@@ -669,8 +568,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         <div class="img-box">
                             <?php 
                             $imgSrc = "upload/{$respro['pic']}";
-                            list($width, $height) = getimagesize($imgSrc);
-                            $aspectRatio = $width / $height;
+                            
                             ?>
                             <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
                         </div>
@@ -686,7 +584,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                 </ul>
                             </div>
                             <p class="item-price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</p>
-                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
                         </div>
                     </div>
                 </div>
@@ -733,16 +631,16 @@ $respic=mysqli_fetch_assoc($quepro);
         <div class="row mb-4 align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="lc-block text-center">
-                    <img class="img-fluid " src="https://img.freepik.com/free-vector/no-time-concept-illustration_114360-4209.jpg?w=740&t=st=1709932533~exp=1709933133~hmac=d799041cc79f1faee2b329406e29a76a8845a76248623fded4d1b136d322e216" width="400" height="400" loading="lazy">
+                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
                 </div><!-- /lc-block -->
             </div><!-- /col -->
             <div class="col-lg-6 p-lg-6">
                 <div class="lc-block mb-5">
                     <div editable="rich">
 
-                        <h2 class="display-6 fw-bold">Boost your Creativity</h2>
+                        <h2 class="display-6 fw-bold">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
 
-                        <p class="lead"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus.</p>
+                        <p class="lead"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
                     </div>
                 </div><!-- /lc-block -->
                 <!-- /lc-block -->
@@ -755,7 +653,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Convenient Shopping.</p>
                         </div>
                     </div>
                 </div>
@@ -768,7 +666,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Consectetur adipiscing elit.</p>
+                            <p>Competitive Pricing.</p>
                         </div>
                     </div>
                 </div>
@@ -781,7 +679,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Aenean vel nisi in ipsum congue</p>
+                            <p>Latest Trends.</p>
                         </div>
                     </div>
                 </div><!-- /lc-block -->
@@ -789,15 +687,15 @@ $respic=mysqli_fetch_assoc($quepro);
         </div>
         <div class="row mb-4 align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
-                <div class="lc-block text-center"><img class="img-fluid" src="https://img.freepik.com/free-vector/discount-concept-illustration_114360-2301.jpg?w=740&t=st=1709932568~exp=1709933168~hmac=fe4ab8965b27cd051463b32e51628ba04ccd59378a6f3a60d418f33a234002c5" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
             </div><!-- /col -->
             <div class="col-lg-6 p-lg-6">
                 <div class="lc-block mb-5">
                     <div editable="rich">
 
-                        <h2 class="display-6 fw-bold">Increase your Sales</h2>
+                        <h2 class="display-6 fw-bold">Gear Up for Greatness: Your Ultimate Sports Store</h2>
 
-                        <p class="lead"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus.</p>
+                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
                     </div>
                 </div><!-- /lc-block -->
                 <!-- /lc-block -->
@@ -810,7 +708,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Quality Assurance.</p>
                         </div>
                     </div>
                 </div>
@@ -823,7 +721,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Consectetur adipiscing elit.</p>
+                            <p>Return Policy.</p>
                         </div>
                     </div>
                 </div>
@@ -836,7 +734,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Aenean vel nisi in ipsum congue</p>
+                            <p>Customer Support.</p>
                         </div>
                     </div>
                 </div><!-- /lc-block -->
@@ -948,7 +846,7 @@ $(document).ready(function(){
 </script>
 
 <!-- Product Slider -->
-<!-- <section class="p-0">
+<section class="p-0">
     <div class="container">
         <h2 class="text-center mb-4"><b>WATCH SOME PRODUCTS</b></h2>
         <div class="row">
@@ -1005,8 +903,8 @@ $(document).ready(function(){
         </div>
     </div> -->
 
-    <!-- product slider css -->
-  <style>
+    <-- product slider css -->
+   <style>
     body,
     html {
       height: 100%;
@@ -1286,11 +1184,11 @@ $(document).ready(function(){
     }
   </style>
 
-</section>
+</section> 
     <!-- product slider over -->
 
  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1308,6 +1206,273 @@ $(document).ready(function(){
         splide.mount();
     });
 </script>
+
+<!-- boots  start  -->
+<section class="product-section">
+  <div class="product-grid">
+    <div class="card">
+      <div class="card-pill">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/fxfibkkiiiky07goauq6/sb-nyjah-free-skate-shoe-oKwn7N.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">Nyjah Free 2</h1>
+      <div class="flex-row">
+        <p class="price strike">$<span>94.95</span></p>
+        <p class="price">$<span>79.95</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-pill hide">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c15bdccf-e742-4ad2-9110-e50940765f66/sb-charge-canvas-skate-shoe-80KN54.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">Charge Canvas</h1>
+      <div class="flex-row">
+        <p class="price strike hide">$<span>94.95</span></p>
+        <p class="price">$<span>65</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-pill hide">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8968297e-7aa4-447b-88e9-d79ba90b6fc3/sb-shane-skate-shoe-m56jq0.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">Shane O'Neill</h1>
+      <div class="flex-row">
+        <p class="price strike hide">$<span>94.95</span></p>
+        <p class="price">$<span>80</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-pill hide">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3db0b166-c4c0-4321-9ef4-800314582af3/sb-blzr-court-skate-shoe-R6bVLk.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">BLZR Court</h1>
+      <div class="flex-row">
+        <p class="price strike hide">$<span>94.95</span></p>
+        <p class="price">$<span>65</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+.product-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 4%;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+  padding: 24px;
+  background: #fff;
+  border-radius: 0;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-pill {
+  position: absolute;
+  padding: 6px 12px;
+  border-radius: 0;
+  color: #fff;
+  background: #000;
+  right: 0;
+  top: 0;
+  margin-right: 32px;
+  margin-top: 32px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.product-brand {
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #646464;
+}
+
+.product-cat {
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #646464;
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 0;
+}
+
+.product-name {
+  font-size: 1.7rem;
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-top: 0;
+  color: #000;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mb-sm {
+  margin-bottom: 8px;
+}
+
+.price {
+  margin-right: 12px;
+}
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.btn-col {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  background: #000;
+  padding: 1.4em 0;
+  border-radius: 0;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.rubicons {
+  width: 24px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+  background: #333;
+}
+
+.icon-link:hover > .rubicons {
+  transform: translate(3px, -3px);
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+</style>
+<!-- boots end -->
+
+
+
+
+
 <!-- 
 image start -->
 <section>
@@ -1392,12 +1557,17 @@ image start -->
   }
 </style>
 
-<!-- footer start -->
-<?php include('footer.php') ?>
-<!-- End Footer -->
+</body>
 
 </body>
 </html>
 
 
 
+<!-- image end -->
+<!-- footer start -->
+<?php include('footer.php') ?>
+<!-- End Footer -->
+
+</body>
+</html>

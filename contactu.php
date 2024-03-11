@@ -40,9 +40,10 @@
   })();
 </script> 
 
+=======
+<?php include("header.php");?>
+>>>>>>> 9a4d8bf531ec2192711791dcba76066d6d528a1c
 <?php
-session_start();
-
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -62,146 +63,8 @@ if ($conn->connect_error) {
 //     exit();
 // }
 
-$showalert = false;
-$login = false;
-$showerr = false;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $err = "";
-    $username = $_POST["uname"];
-    $password = $_POST["password"];
-
-    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
-    $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
-
-    if ($num) {
-        $re = mysqli_fetch_assoc($result);
-        $user_data = array(
-            'user_id' => $re['id'],
-            'firstname' => $re['firstname'],
-            'lastname' => $re['lastname'],
-            'username' => $re['username'],
-            'email' => $re['email'],
-        );
-        $_SESSION['user_data'] = $user_data;
-        
-         
-        // Redirect to turf.php after successful login
-        
-    } else {
-        $showerr = "Invalid Email / Password";
-        $_SESSION['error'] = "Invalid Email / Password";
-    }
-}
-echo "User data in session:<br>";
-foreach ($_SESSION['user_data'] as $key => $value) {
-    echo "$key: $value<br>";
-}
-// Your remaining code for the login page goes here
 ?>
 
-<?php
-   
-
-function getInitials($name) {
-  $nameParts = explode(' ', $name);
-  $initials = '';
-  
-  foreach ($nameParts as $part) {
-      $initials .= strtoupper(substr($part, 0, 1));
-  }
-  
-  return $initials;
-}
-?>
-
-<style>
-   .avatar {
-       width: 30px;
-       height: 30px;
-       background-color: #007bff;
-       color: #ffffff;
-       font-size: 20px;
-       font-weight: bold;
-       border-radius: 50%;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       margin-bottom: 10px;
-   }
-   .c-item{
-     height:480px;
-
-   }
-
-   .c-img
-   {
-     height:100%;
-     object-fit:cover;
-     filter:brightness(0.6);
-   }
-
-   body{
-     background:#f3f5f8;
-     overflow-x:hidden;
-   }
-
-
-
-       .star-container {
-           display: flex;
-           align-items: center;
-           margin-top: 15px; /* Adjust margin as needed */
-       }
-
-       .star-container i {
-           margin-right: 2px; /* Adjust margin between stars as needed */
-       }
-
-
-   
-
-   .card-container {
-     background-color:#ffff;
-     padding:20px;
-     border-radius:20px;
-            margin:40px;
-           display: flex;
-           gap: 20px; /* Adjust the margin between cards */
-       }
-
-       .card {
-           width: 18rem;
-       }
-
-       .card-img-top{
-         height :100%;
-         width:100%;
-       }
-
-       .banner-container{
-         background-color:#ffff;
-         padding:10px;
-         margin-bottom:60px;
-         width:100%;
-         height:100%;
-         
-       }
-
-       .banner-containerw{
-         background-color:#ffff;
-         padding:10px;
-         margin-bottom:60px;
-         width:100%;
-         height:80%;
-         
-       }
-
-
-
-
- </style>
 <?php
 //session_start();
 
