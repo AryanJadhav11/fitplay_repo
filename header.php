@@ -270,7 +270,7 @@ function getInitials($name) {
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
+                <li><a class="nav-link scrollto" href="register_venue.php">Register Your Venue</a></li>
                 <li><a class="nav-link scrollto" href="mycart.php">My Cart</a></li>
                 <li class="dropdown" style="color: blue;">
                 <?php
