@@ -163,8 +163,10 @@ $respic=mysqli_fetch_assoc($quepro);
 <!-- just new design end -->
 
 <!-- effect start -->
-<main class="boot-container">
-  <div class="row">
+<div class="container">
+
+  <main class="boot-container">
+    <div class="row">
     <div class="col-lg-4">
     <section class="boot-card">
     <div class="boot-product-image">
@@ -184,9 +186,9 @@ $respic=mysqli_fetch_assoc($quepro);
       </button>
     </div>
   </section>
-    </div>
-    <div class="col-lg-4">
-    <section class="boot-card boot-card-blue">
+</div>
+<div class="col-lg-4">
+  <section class="boot-card boot-card-blue">
     <div class="boot-product-image">
       <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
     </div>
@@ -204,9 +206,9 @@ $respic=mysqli_fetch_assoc($quepro);
       </button>
     </div>
   </section>
-    </div>
-    <div class="col-lg-4">
-    <section class="boot-card">
+</div>
+<div class="col-lg-4">
+  <section class="boot-card">
     <div class="boot-product-image">
       <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
     </div>
@@ -225,12 +227,74 @@ $respic=mysqli_fetch_assoc($quepro);
     </div>
   </section>
     </div>
+    
+</div>
+
+
+<div class="row">
+<div class="col-lg-4">
+    <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+</div>
+<div class="col-lg-4">
+  <section class="boot-card boot-card-blue">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
+      <div class="boot-price">$1599</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
   </div>
- 
-  
- 
-  
-</main>
+  <div class="col-lg-4">
+  <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+    </section>
+  </div>
+</div>
+
+</main></div>
 <style>
   /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
@@ -286,7 +350,7 @@ img {
 .boot-card {
   position: relative;
   padding: 1rem;
-  width: 350px;
+  width: 300px;
   height: 450px;
   box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
   border-radius: 0.9rem;
@@ -377,6 +441,134 @@ img {
 
 </style>
 <!-- effect end -->
+
+
+<!--product display start -->
+<div class="container">
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="lc-block text-center">
+                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
+
+                        <p class="lead"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Convenient Shopping.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Competitive Pricing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Latest Trends.</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
+                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold">Gear Up for Greatness: Your Ultimate Sports Store</h2>
+
+                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Quality Assurance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Return Policy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Customer Support.</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+
+    </div>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- product display end -->
+
+<style>
+  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
+</style>
 <!-- PRODUCT CARDS START -->
 <style>
   .fea {
@@ -625,133 +817,6 @@ img {
 </script>
 <!-- PRODUCT CARDS END -->
 
-
-<!--product display start -->
-<div class="container">
-        <div class="row mb-4 align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="lc-block text-center">
-                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-            <div class="col-lg-6 p-lg-6">
-                <div class="lc-block mb-5">
-                    <div editable="rich">
-
-                        <h2 class="display-6 fw-bold">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
-
-                        <p class="lead"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
-                    </div>
-                </div><!-- /lc-block -->
-                <!-- /lc-block -->
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Convenient Shopping.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Competitive Pricing.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Latest Trends.</p>
-                        </div>
-                    </div>
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-        </div>
-        <div class="row mb-4 align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
-                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
-            </div><!-- /col -->
-            <div class="col-lg-6 p-lg-6">
-                <div class="lc-block mb-5">
-                    <div editable="rich">
-
-                        <h2 class="display-6 fw-bold">Gear Up for Greatness: Your Ultimate Sports Store</h2>
-
-                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
-                    </div>
-                </div><!-- /lc-block -->
-                <!-- /lc-block -->
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Quality Assurance.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Return Policy.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Customer Support.</p>
-                        </div>
-                    </div>
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-        </div>
-
-    </div>
-
-
-
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-<!-- product display end -->
-
-<style>
-  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
-</style>
 <h2 class="text-center"><b>WATCH SOME PRODUCTS</b></h2>
 <div class="container d-flex justify-content-center mt-100">
   <div class="row">
@@ -1206,270 +1271,6 @@ $(document).ready(function(){
         splide.mount();
     });
 </script>
-
-<!-- boots  start  -->
-<section class="product-section">
-  <div class="product-grid">
-    <div class="card">
-      <div class="card-pill">
-        Sale
-      </div>
-      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/fxfibkkiiiky07goauq6/sb-nyjah-free-skate-shoe-oKwn7N.jpg" alt="product-image">
-      <div class="flex-row space-between w-full mb-sm">
-        <p class="product-brand">Nike SB</p>
-        <p class="product-cat hide">Skateboarding</p>
-      </div>
-      <h1 class="product-name">Nyjah Free 2</h1>
-      <div class="flex-row">
-        <p class="price strike">$<span>94.95</span></p>
-        <p class="price">$<span>79.95</span></p>
-      </div>
-      <div class="btn-col">
-        <a href="#" class="icon-link">
-          Purchase
-          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
-            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-pill hide">
-        Sale
-      </div>
-      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c15bdccf-e742-4ad2-9110-e50940765f66/sb-charge-canvas-skate-shoe-80KN54.jpg" alt="product-image">
-      <div class="flex-row space-between w-full mb-sm">
-        <p class="product-brand">Nike SB</p>
-        <p class="product-cat hide">Skateboarding</p>
-      </div>
-      <h1 class="product-name">Charge Canvas</h1>
-      <div class="flex-row">
-        <p class="price strike hide">$<span>94.95</span></p>
-        <p class="price">$<span>65</span></p>
-      </div>
-      <div class="btn-col">
-        <a href="#" class="icon-link">
-          Purchase
-          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
-            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-pill hide">
-        Sale
-      </div>
-      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8968297e-7aa4-447b-88e9-d79ba90b6fc3/sb-shane-skate-shoe-m56jq0.jpg" alt="product-image">
-      <div class="flex-row space-between w-full mb-sm">
-        <p class="product-brand">Nike SB</p>
-        <p class="product-cat hide">Skateboarding</p>
-      </div>
-      <h1 class="product-name">Shane O'Neill</h1>
-      <div class="flex-row">
-        <p class="price strike hide">$<span>94.95</span></p>
-        <p class="price">$<span>80</span></p>
-      </div>
-      <div class="btn-col">
-        <a href="#" class="icon-link">
-          Purchase
-          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
-            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-pill hide">
-        Sale
-      </div>
-      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3db0b166-c4c0-4321-9ef4-800314582af3/sb-blzr-court-skate-shoe-R6bVLk.jpg" alt="product-image">
-      <div class="flex-row space-between w-full mb-sm">
-        <p class="product-brand">Nike SB</p>
-        <p class="product-cat hide">Skateboarding</p>
-      </div>
-      <h1 class="product-name">BLZR Court</h1>
-      <div class="flex-row">
-        <p class="price strike hide">$<span>94.95</span></p>
-        <p class="price">$<span>65</span></p>
-      </div>
-      <div class="btn-col">
-        <a href="#" class="icon-link">
-          Purchase
-          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
-            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-
-.product-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 120px 4%;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  width: 100%;
-  max-width: 840px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  position: relative;
-  padding: 24px;
-  background: #fff;
-  border-radius: 0;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.card-pill {
-  position: absolute;
-  padding: 6px 12px;
-  border-radius: 0;
-  color: #fff;
-  background: #000;
-  right: 0;
-  top: 0;
-  margin-right: 32px;
-  margin-top: 32px;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.card-img {
-  display: block;
-  width: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  margin-bottom: 16px;
-}
-
-.product-brand {
-  font-size: 12px;
-  line-height: 1;
-  margin-top: 12px;
-  margin-bottom: 0;
-  color: #646464;
-}
-
-.product-cat {
-  font-size: 12px;
-  line-height: 1;
-  margin-top: 12px;
-  margin-bottom: 0;
-  color: #646464;
-  background: #f5f5f5;
-  padding: 6px 12px;
-  border-radius: 0;
-}
-
-.product-name {
-  font-size: 1.7rem;
-  line-height: 1;
-  margin-bottom: 6px;
-  margin-top: 0;
-  color: #000;
-}
-
-.flex-row {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.mb-sm {
-  margin-bottom: 8px;
-}
-
-.price {
-  margin-right: 12px;
-}
-
-.strike {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
-
-.btn-col {
-  width: 100%;
-  margin-top: 24px;
-}
-
-.icon-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  color: #fff;
-  background: #000;
-  padding: 1.4em 0;
-  border-radius: 0;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.rubicons {
-  width: 24px;
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.icon-link:hover {
-  background: #333;
-}
-
-.icon-link:hover > .rubicons {
-  transform: translate(3px, -3px);
-}
-
-.hide {
-  display: none;
-}
-
-@media screen and (min-width: 640px) {
-  .product-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-</style>
-<!-- boots end -->
-
-
 
 
 
