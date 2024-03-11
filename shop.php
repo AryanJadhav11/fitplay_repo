@@ -478,6 +478,156 @@ $respic=mysqli_fetch_assoc($quepro);
     });
 </script> -->
 
+<!-- var jatay te  start -->
+<main class="container">
+  <section class="card">
+    <div class="product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="price">$999</div>
+    </div>
+    <div class="btn">
+      <button class="buy-btn">Buy Now</button>
+      <button class="fav">
+        <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section class="card card-blue">
+    <div class="product-image">
+      <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
+    </div>
+    <div class="product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
+      <div class="price">$1599</div>
+    </div>
+    <div class="btn">
+      <button class="buy-btn">Buy Now</button>
+      <button class="fav">
+        <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+</main>
+<style>
+  /*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+
+
+/*===== CARD =====*/
+.container {
+  height: 100%;
+  width: 850px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card {
+  position: relative;
+  padding: 1rem;
+  width: 350px;
+  height: 450px;
+  box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+  border-radius: 0.9rem;
+  background-color: var(--red-card);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.card-blue {
+  background: var(--blue-card);
+}
+
+.product-image {
+  height: 230px;
+  width: 100%;
+  transform: translate(0, -1.5rem);
+  transition: transform 500ms ease-in-out;
+  filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+.product-info {
+  text-align: center;
+}
+
+.card:hover .product-image {
+  transform: translate(-1.5rem, -7rem) rotate(-20deg);
+}
+
+.product-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.product-info p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.price {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.buy-btn {
+  background-color: var(--btn);
+  padding: 0.6rem 3.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 300ms ease;
+}
+.buy-btn:hover {
+  background-color: var(--btn-hover);
+}
+.fav {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid#000;
+  display: grid;
+  place-items: center;
+}
+
+.svg {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  transition: all 500ms ease;
+}
+
+.fav:hover .svg {
+  fill: #000;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .container {
+    padding: 2rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+</style>
+<!-- var jatay te end -->
+
 <!-- PRODUCT CARDS START -->
 <style>
   .fea {
@@ -669,8 +819,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         <div class="img-box">
                             <?php 
                             $imgSrc = "upload/{$respro['pic']}";
-                            list($width, $height) = getimagesize($imgSrc);
-                            $aspectRatio = $width / $height;
+                            
                             ?>
                             <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
                         </div>
@@ -1307,7 +1456,274 @@ $(document).ready(function(){
 
         splide.mount();
     });
-</script> -->
+</script>
+
+<!-- boots  start  -->
+<section class="product-section">
+  <div class="product-grid">
+    <div class="card">
+      <div class="card-pill">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/fxfibkkiiiky07goauq6/sb-nyjah-free-skate-shoe-oKwn7N.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">Nyjah Free 2</h1>
+      <div class="flex-row">
+        <p class="price strike">$<span>94.95</span></p>
+        <p class="price">$<span>79.95</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-pill hide">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c15bdccf-e742-4ad2-9110-e50940765f66/sb-charge-canvas-skate-shoe-80KN54.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">Charge Canvas</h1>
+      <div class="flex-row">
+        <p class="price strike hide">$<span>94.95</span></p>
+        <p class="price">$<span>65</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-pill hide">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/8968297e-7aa4-447b-88e9-d79ba90b6fc3/sb-shane-skate-shoe-m56jq0.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">Shane O'Neill</h1>
+      <div class="flex-row">
+        <p class="price strike hide">$<span>94.95</span></p>
+        <p class="price">$<span>80</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-pill hide">
+        Sale
+      </div>
+      <img class="card-img" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3db0b166-c4c0-4321-9ef4-800314582af3/sb-blzr-court-skate-shoe-R6bVLk.jpg" alt="product-image">
+      <div class="flex-row space-between w-full mb-sm">
+        <p class="product-brand">Nike SB</p>
+        <p class="product-cat hide">Skateboarding</p>
+      </div>
+      <h1 class="product-name">BLZR Court</h1>
+      <div class="flex-row">
+        <p class="price strike hide">$<span>94.95</span></p>
+        <p class="price">$<span>65</span></p>
+      </div>
+      <div class="btn-col">
+        <a href="#" class="icon-link">
+          Purchase
+          <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+            <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+.product-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 4%;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+  padding: 24px;
+  background: #fff;
+  border-radius: 0;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-pill {
+  position: absolute;
+  padding: 6px 12px;
+  border-radius: 0;
+  color: #fff;
+  background: #000;
+  right: 0;
+  top: 0;
+  margin-right: 32px;
+  margin-top: 32px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.product-brand {
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #646464;
+}
+
+.product-cat {
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #646464;
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 0;
+}
+
+.product-name {
+  font-size: 1.7rem;
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-top: 0;
+  color: #000;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mb-sm {
+  margin-bottom: 8px;
+}
+
+.price {
+  margin-right: 12px;
+}
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.btn-col {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  background: #000;
+  padding: 1.4em 0;
+  border-radius: 0;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.rubicons {
+  width: 24px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+  background: #333;
+}
+
+.icon-link:hover > .rubicons {
+  transform: translate(3px, -3px);
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+</style>
+<!-- boots end -->
+
+
+
+
+
 <!-- 
 image start -->
 <section>
@@ -1406,6 +1822,3 @@ image start -->
 
 </body>
 </html>
-
-
-
