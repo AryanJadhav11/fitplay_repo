@@ -163,7 +163,7 @@ $respic=mysqli_fetch_assoc($quepro);
 <!-- just new design end -->
 
 <!-- effect start -->
-<div class="container">
+
 
   <main class="boot-container">
     <div class="row">
@@ -179,11 +179,6 @@ $respic=mysqli_fetch_assoc($quepro);
     </div>
     <div class="boot-btn boot-button">
       <button class="boot-buy-btn">Buy Now</button>
-      <button class="boot-fav">
-        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
-        </svg>
-      </button>
     </div>
   </section>
 </div>
@@ -199,11 +194,6 @@ $respic=mysqli_fetch_assoc($quepro);
     </div>
     <div class="boot-btn boot-button">
       <button class="boot-buy-btn">Buy Now</button>
-      <button class="boot-fav">
-        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
-        </svg>
-      </button>
     </div>
   </section>
 </div>
@@ -219,82 +209,11 @@ $respic=mysqli_fetch_assoc($quepro);
     </div>
     <div class="boot-btn boot-button">
       <button class="boot-buy-btn">Buy Now</button>
-      <button class="boot-fav">
-        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
-        </svg>
-      </button>
     </div>
   </section>
     </div>
-    
 </div>
-
-
-<div class="row">
-<div class="col-lg-4">
-    <section class="boot-card">
-    <div class="boot-product-image">
-      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
-    </div>
-    <div class="boot-product-info">
-      <h2>Nike X OFF-white</h2>
-      <p>The 10: Air Jordan 1 off-white - Chicago</p>
-      <div class="boot-price">$999</div>
-    </div>
-    <div class="boot-btn boot-button">
-      <button class="boot-buy-btn">Buy Now</button>
-      <button class="boot-fav">
-        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
-        </svg>
-      </button>
-    </div>
-  </section>
-</div>
-<div class="col-lg-4">
-  <section class="boot-card boot-card-blue">
-    <div class="boot-product-image">
-      <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
-    </div>
-    <div class="boot-product-info">
-      <h2>Nike X OFF-white</h2>
-      <p>Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
-      <div class="boot-price">$1599</div>
-    </div>
-    <div class="boot-btn boot-button">
-      <button class="boot-buy-btn">Buy Now</button>
-      <button class="boot-fav">
-        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
-        </svg>
-      </button>
-    </div>
-  </section>
-  </div>
-  <div class="col-lg-4">
-  <section class="boot-card">
-    <div class="boot-product-image">
-      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
-    </div>
-    <div class="boot-product-info">
-      <h2>Nike X OFF-white</h2>
-      <p>The 10: Air Jordan 1 off-white - Chicago</p>
-      <div class="boot-price">$999</div>
-    </div>
-    <div class="boot-btn boot-button">
-      <button class="boot-buy-btn">Buy Now</button>
-      <button class="boot-fav">
-        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
-        </svg>
-      </button>
-    </div>
-    </section>
-  </div>
-</div>
-
-</main></div>
+</main>
 <style>
   /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
