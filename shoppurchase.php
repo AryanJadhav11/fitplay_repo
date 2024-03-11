@@ -146,10 +146,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['razorpay_payment_id']
 
             // If form is valid, proceed to Razorpay payment
             var options = {
-                "key": "<?php echo $api_key; ?>",
+                "key": $api_key,
                 "amount": "<?php echo $grandTotal * 100; ?>", // amount in paise
                 "currency": "INR",
-                "name": "Your Company Name",
+                "name": "FitPlay",
                 "description": "Purchase for <?php echo $grandTotal; ?>",
                 "image": "logo.png", // replace with your logo
                 "handler": function(response) {
