@@ -1,4 +1,5 @@
 <?php include("header.php");?>
+<?php include('floating_icon.php'); ?>
 <?php
 
 // Database connection

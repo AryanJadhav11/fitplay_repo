@@ -1,4 +1,9 @@
-
+<?php include("header.php");?>
+<?php
+if (isset($_SESSION['user_data'])) {
+    include('floating_icon.php');
+}
+?>
 <?php
 
 // Database connection
@@ -44,13 +49,12 @@ if (isset($_GET['Order_id'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body>
-
-<?php include("header.php");?>
+<body class="py-6">
 
 <?php
 // Start the session if it's not started already
 
+// Check if the Add_To_Cart button is clicked
 // Check if the Add_To_Cart button is clicked
 if (isset($_POST['Add_To_Cart'])) {
     // Retrieve user_id from the session
@@ -59,10 +63,11 @@ if (isset($_POST['Add_To_Cart'])) {
     $item_name = isset($_POST['item_name']) ? $_POST['item_name'] : '';
     $price = isset($_POST['Price']) ? $_POST['Price'] : '';
     $quantity = isset($_POST['quantity']) ? $_POST['quantity'] : '';
+    $img = isset($_POST['img']) ? $_POST['img'] : ''; // New addition: Retrieve image path
 
-    // Insert the item into the order_his table
-    $sql = "INSERT INTO `order_his` (`user_id`, `item_name`, `price`, `quantity`) 
-            VALUES ('$user_id', '$item_name', '$price', '$quantity')";
+    // Insert the item into the order_his table, including the image path
+    $sql = "INSERT INTO `order_his` (`user_id`, `item_name`, `price`, `quantity`, `img`) 
+            VALUES ('$user_id', '$item_name', '$price', '$quantity', '$img')";
             
     $result = mysqli_query($conn, $sql);
 
@@ -88,63 +93,24 @@ if (isset($_POST['Add_To_Cart'])) {
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"><div class="pd-wrap">
-		<div class="container">
+		
+	<form method="POST">
+	<div class="container">
 	        <div class="heading-section">
 	            <h2>Product Details</h2>
 	        </div>
 	        <div class="row">
 	        	<div class="col-md-6">
 	        		<div id="slider" class="owl-carousel product-slider">
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/61-8unBrR8L._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/61XX2D42vDL._SY741_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/41tE84qy9LL._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/41iBMLgigdL._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/51ZnZQ7BEKL._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/51j1b1VRiZL._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/51j1b1VRiZL._SX679_.jpg" />
-						</div>
-					</div>
-					<div id="thumb" class="owl-carousel product-thumb">
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/61-8unBrR8L._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/61XX2D42vDL._SY741_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/41iBMLgigdL._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/41iBMLgigdL._SX679_.jpg" />
-						</div>
-						<div class="item">
-						  	<img src="https://m.media-amazon.com/images/I/41iBMLgigdL._SX679_.jpg" />
+						<div class="item"><?php $imgip = $row9pp['pic'] ?>
+						<img src="upload/<?= $imgip ?>" width="350px" height="450px">
 						</div>
 					</div>
 	        	</div>
 	        	<div class="col-md-6">
 	        		<div class="product-dtl">
         				<div class="product-info">
-		        			<div class="product-name">Variable Product</div>
+		        			<div class="product-name"><?= ucfirst($row9pp['item_name']) ?></div>
 		        			<div class="reviews-counter">
 								<div class="rate">
 								    <input type="radio" id="star5" name="rate" value="5" checked />
@@ -160,10 +126,12 @@ if (isset($_POST['Add_To_Cart'])) {
 								  </div>
 								<span>3 Reviews</span>
 							</div>
-		        			<div class="product-price-discount"><span>$39.00</span><span class="line-through">$29.00</span></div>
+		        			<div class="product-price-discount"><span>₹ <?= ucfirst($row9pp['Price']) ?></span><span class="line-through">₹1999</span></div>
 		        		</div>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	        			<div class="row">
+	        			<p><?= $row9pp['about'] ?></p>
+				
+						<!-- size and color -->
+						<!-- <div class="row">
 	        				<div class="col-md-6">
 	        					<label for="size">Size</label>
 								<select id="size" name="size" class="form-control">
@@ -181,19 +149,36 @@ if (isset($_POST['Add_To_Cart'])) {
 									<option>Red</option>
 								</select>
 	        				</div>
-	        			</div>
-	        			<div class="product-count">
+	        			</div> -->
+						<!-- size and color -->
+	        			
+						<div class="product-count">
 	        				<label for="size">Quantity</label>
-	        				<form action="#" class="display-flex">
-							    <div class="qtyminus">-</div>
-							    <input type="text" name="quantity" value="1" class="qty">
+	        				<form  class="display-flex">
 							    <div class="qtyplus">+</div>
+							    <input type="text" id="quantity" name="quantity" value="1" class="qty">
+							    <div class="qtyminus">-</div>
+
+								<input type="hidden" name="item_name" value="<?= $row9pp['item_name'] ?>">
+                      		    <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
+								  <input type="hidden" name="img" value="<?= $row9pp['pic'] ?>">
 							</form>
-							<a href="#" class="round-black-btn">Add to Cart</a>
-	        			</div>
+	        				<?php
+                  				  if(isset($_SESSION['user_data'])) {
+                   				     echo '<button type="submit" name="Add_To_Cart" class="round-black-btn shop-button">Add to Cart</button>'; 
+                  				      echo '<a type="button" class="round-black-btn shop-button" href="mycart.php" style="text-decoration:none;">View Cart</a>';
+                  				  } else {
+                  				      echo '<button type="button" class="round-black-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Add to Cart</button>'; 
+                   				     echo '<button type="button" class="round-black-btn" data-bs-toggle="modal" data-bs-target="#loginModal">View Cart</button>';
+                  				  }
+							?>
+
+						</div>
 	        		</div>
 	        	</div>
 	        </div>
+		</form>
+
 	        <div class="product-info-tabs">
 		        <ul class="nav nav-tabs" id="myTab" role="tablist">
 				  	<li class="nav-item">
@@ -356,7 +341,7 @@ if (isset($_POST['Add_To_Cart'])) {
 	align-items: center;
 }
 .product-info {
-	width: 100%;
+	width: 100%; 
 }
 .reviews-counter {
     font-size: 13px;
@@ -421,8 +406,8 @@ if (isset($_POST['Add_To_Cart'])) {
 }
 .product-count .qtyminus,
 .product-count .qtyplus {
-	width: 34px;
-    height: 34px;
+	width: 60px;
+    height: 30px;
     background: #212529;
     text-align: center;
     font-size: 19px;
@@ -447,6 +432,7 @@ if (isset($_POST['Add_To_Cart'])) {
     padding: 7px 45px;
     display: inline-block;
     margin-top: 20px;
+	margin-right: 10px;
     border: solid 2px #212529; 
     transition: all 0.5s ease-in-out 0s;
 }

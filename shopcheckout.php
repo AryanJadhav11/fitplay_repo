@@ -1,5 +1,6 @@
+<?php include('header.php'); ?>
+<?php include('floating_icon.php'); ?>
 <?php
-include('header.php');
 include('smtp/PHPMailerAutoload.php');
 
 // Function to send email using SMTP
@@ -161,7 +162,7 @@ $coni->close();
         }      
     </style>
 </head>
-<body>
+<body class="py-6">
     
     <!-- Purchase form container -->
     <div class="container Purchase-container">

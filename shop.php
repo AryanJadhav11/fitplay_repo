@@ -1,5 +1,10 @@
 <?php include("header.php");?>
 <?php
+if (isset($_SESSION['user_data'])) {
+    include('floating_icon.php');
+}
+?>
+<?php
 
 // Database connection
 $servername = "localhost";
@@ -159,324 +164,6 @@ $respic=mysqli_fetch_assoc($quepro);
 <br>
 <br>
 <br>
-<!-- best sellig satrt -->
-   <!-- trying new slider start
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-<div class="bbb_viewed">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-               <div class="bbb_main_container">
-                <div class="bbb_viewed_title_container">
-                    <h3 class="bbb_viewed_title">Best selling products</h3>
-                    <div class="bbb_viewed_nav_container">
-                        <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
-                        <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
-                    </div>
-                </div>
-                <div class="bbb_viewed_slider_container">
-                    <div class="owl-carousel owl-theme bbb_viewed_slider">
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924153/alcatel-smartphones-einsteiger-mittelklasse-neu-3m.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹12225<span>₹13300</span></div>
-                                    <div class="bbb_viewed_name"><a href="#">Alkatel Phone</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924221/51_be7qfhil.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹30079</div>
-                                    <div class="bbb_viewed_name"><a href="#">Samsung LED</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹22250</div>
-                                    <div class="bbb_viewed_name"><a href="#">Samsung Mobile</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924275/images.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹1379</div>
-                                    <div class="bbb_viewed_name"><a href="#">Huawei Power</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924361/21HmjI5eVcL.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹225<span>₹300</span></div>
-                                    <div class="bbb_viewed_name"><a href="#">Sony Power</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                <div class="bbb_viewed_content text-center">
-                                    <div class="bbb_viewed_price">₹13275</div>
-                                    <div class="bbb_viewed_name"><a href="#">Speedlink Mobile</a></div>
-                                </div>
-                                <ul class="item_marks">
-                                    <li class="item_mark item_discount">-25%</li>
-                                    <li class="item_mark item_new">new</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               </div> 
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-  .bbb_viewed {
-     padding-top: 51px;
-     padding-bottom: 60px;
-     background: #eff6fa
- }
-
- .bbb_main_container{
-         background-color: #fff;
-    padding: 11px;
- }
-
- .bbb_viewed_title_container {
-     border-bottom: solid 1px #dadada
- }
-
- .bbb_viewed_title {
-         margin-bottom: 16px;
-    margin-top: 8px;
-
- }
-
- .bbb_viewed_nav_container {
-     position: absolute;
-     right: -5px;
-     bottom: 14px
- }
-
- .bbb_viewed_nav {
-     display: inline-block;
-     cursor: pointer
- }
-
- .bbb_viewed_nav i {
-     color: #dadada;
-     font-size: 18px;
-     padding: 5px;
-     -webkit-transition: all 200ms ease;
-     -moz-transition: all 200ms ease;
-     -ms-transition: all 200ms ease;
-     -o-transition: all 200ms ease;
-     transition: all 200ms ease
- }
-
- .bbb_viewed_nav:hover i {
-     color: #606264
- }
-
- .bbb_viewed_prev {
-     margin-right: 15px
- }
-
- .bbb_viewed_slider_container {
-     padding-top: 13px;
- }
-
- .bbb_viewed_item {
-     width: 100%;
-     background: #FFFFFF;
-     border-radius: 2px;
-     padding-top: 25px;
-     padding-bottom: 25px;
-     padding-left: 30px;
-     padding-right: 30px
- }
-
- .bbb_viewed_image {
-         width: 150px;
-    height: 150px;
- }
-
- .bbb_viewed_image img {
-     display: block;
-     max-width: 100%
- }
-
- .bbb_viewed_content {
-     width: 100%;
-     margin-top: 25px
- }
-
- .bbb_viewed_price {
-     font-size: 16px;
-     color: #000000;
-     font-weight: 500
- }
-
- .bbb_viewed_item.discount .bbb_viewed_price {
-     color: #df3b3b
- }
-
- .bbb_viewed_price span {
-     position: relative;
-     font-size: 12px;
-     font-weight: 400;
-     color: rgba(0, 0, 0, 0.6);
-     margin-left: 8px
- }
-
- .bbb_viewed_price span::after {
-     display: block;
-     position: absolute;
-     top: 6px;
-     left: -2px;
-     width: calc(100% + 4px);
-     height: 1px;
-     background: #8d8d8d;
-     content: ''
- }
-
- .bbb_viewed_name {
-     margin-top: 3px
- }
-
- .bbb_viewed_name a {
-     font-size: 14px;
-     color: #000000;
-     -webkit-transition: all 200ms ease;
-     -moz-transition: all 200ms ease;
-     -ms-transition: all 200ms ease;
-     -o-transition: all 200ms ease;
-     transition: all 200ms ease
- }
-
- .bbb_viewed_name a:hover {
-     color: #0e8ce4
- }
-
- .item_marks {
-     position: absolute;
-     top: 18px;
-     left: 18px
- }
-
- .item_mark {
-     display: none;
-     width: 36px;
-     height: 36px;
-     border-radius: 50%;
-     color: #FFFFFF;
-     font-size: 10px;
-     font-weight: 500;
-     line-height: 36px;
-     text-align: center
- }
-
- .item_discount { 
-     background: #df3b3b;
-     margin-right: 5px
- }
-
- .item_new {
-     background: #0e8ce4
- }
-
- .bbb_viewed_item.discount .item_discount {
-     display: inline-block
- }
-
- .bbb_viewed_item.is_new .item_new {
-     display: inline-block
- }
-</style>
-
-<script>
-  $(document).ready(function()
-{
-
-   
-        if($('.bbb_viewed_slider').length)
-        {
-            var viewedSlider = $('.bbb_viewed_slider');
-
-            viewedSlider.owlCarousel(
-            {
-                loop:true,
-                margin:30,
-                autoplay:true,
-                autoplayTimeout:6000,
-                nav:false,
-                dots:false,
-                responsive:
-                {
-                    0:{items:1},
-                    575:{items:2},
-                    768:{items:3},
-                    991:{items:4},
-                    1199:{items:6}
-                }
-            });
-
-            if($('.bbb_viewed_prev').length)
-            {
-                var prev = $('.bbb_viewed_prev');
-                prev.on('click', function()
-                {
-                    viewedSlider.trigger('prev.owl.carousel');
-                });
-            }
-
-            if($('.bbb_viewed_next').length)
-            {
-                var next = $('.bbb_viewed_next');
-                next.on('click', function()
-                {
-                    viewedSlider.trigger('next.owl.carousel');
-                });
-            }
-        }
-
-
-    });
-</script> -->
 
 <!-- var jatay te  start -->
 <main class="container">
@@ -646,7 +333,7 @@ $respic=mysqli_fetch_assoc($quepro);
 	margin: 0 auto;
 	height: 4px;
 	border-radius: 1px;
-	background: #7ac400;
+	background: #106eea;
 	left: 0;
 	right: 0;
 	bottom: -20px;
@@ -692,12 +379,12 @@ $respic=mysqli_fetch_assoc($quepro);
 	margin-bottom: 5px;
 }
 .carousel .thumb-content .btn {
-	color: #7ac400;
+	color: #106eea;
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: bold;
 	background: none;
-	border: 1px solid #7ac400;
+	border: 1px solid #106eea;
 	padding: 6px 14px;
 	margin-top: 5px;
 	line-height: 16px;
@@ -705,7 +392,7 @@ $respic=mysqli_fetch_assoc($quepro);
 }
 .carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
 	color: #fff;
-	background: #7ac400;
+	background: #106eea;
 	box-shadow: none;
 }
 .carousel .thumb-content .btn i {
@@ -724,13 +411,13 @@ $respic=mysqli_fetch_assoc($quepro);
 .carousel-control-prev, .carousel-control-next {
 	height: 44px;
 	width: 40px;
-	background: #7ac400;	
+	background: #106eea;	
 	margin: auto 0;
 	border-radius: 4px;
 	opacity: 0.8;
 }
 .carousel-control-prev:hover, .carousel-control-next:hover {
-	background: #78bf00;
+	background: #106eea;
 	opacity: 1;
 }
 .carousel-control-prev i, .carousel-control-next i {
@@ -835,7 +522,7 @@ $respic=mysqli_fetch_assoc($quepro);
                                 </ul>
                             </div>
                             <p class="item-price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</p>
-                            <a href="product_detail.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
                         </div>
                     </div>
                 </div>
@@ -882,16 +569,16 @@ $respic=mysqli_fetch_assoc($quepro);
         <div class="row mb-4 align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="lc-block text-center">
-                    <img class="img-fluid " src="https://img.freepik.com/free-vector/no-time-concept-illustration_114360-4209.jpg?w=740&t=st=1709932533~exp=1709933133~hmac=d799041cc79f1faee2b329406e29a76a8845a76248623fded4d1b136d322e216" width="400" height="400" loading="lazy">
+                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
                 </div><!-- /lc-block -->
             </div><!-- /col -->
             <div class="col-lg-6 p-lg-6">
                 <div class="lc-block mb-5">
                     <div editable="rich">
 
-                        <h2 class="display-6 fw-bold">Boost your Creativity</h2>
+                        <h2 class="display-6 fw-bold">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
 
-                        <p class="lead"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus.</p>
+                        <p class="lead"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
                     </div>
                 </div><!-- /lc-block -->
                 <!-- /lc-block -->
@@ -904,7 +591,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Convenient Shopping.</p>
                         </div>
                     </div>
                 </div>
@@ -917,7 +604,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Consectetur adipiscing elit.</p>
+                            <p>Competitive Pricing.</p>
                         </div>
                     </div>
                 </div>
@@ -930,7 +617,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Aenean vel nisi in ipsum congue</p>
+                            <p>Latest Trends.</p>
                         </div>
                     </div>
                 </div><!-- /lc-block -->
@@ -938,15 +625,15 @@ $respic=mysqli_fetch_assoc($quepro);
         </div>
         <div class="row mb-4 align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
-                <div class="lc-block text-center"><img class="img-fluid" src="https://img.freepik.com/free-vector/discount-concept-illustration_114360-2301.jpg?w=740&t=st=1709932568~exp=1709933168~hmac=fe4ab8965b27cd051463b32e51628ba04ccd59378a6f3a60d418f33a234002c5" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
             </div><!-- /col -->
             <div class="col-lg-6 p-lg-6">
                 <div class="lc-block mb-5">
                     <div editable="rich">
 
-                        <h2 class="display-6 fw-bold">Increase your Sales</h2>
+                        <h2 class="display-6 fw-bold">Gear Up for Greatness: Your Ultimate Sports Store</h2>
 
-                        <p class="lead"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus.</p>
+                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
                     </div>
                 </div><!-- /lc-block -->
                 <!-- /lc-block -->
@@ -959,7 +646,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>Quality Assurance.</p>
                         </div>
                     </div>
                 </div>
@@ -972,7 +659,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Consectetur adipiscing elit.</p>
+                            <p>Return Policy.</p>
                         </div>
                     </div>
                 </div>
@@ -985,7 +672,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         </div>
 
                         <div class="ms-3 align-self-center" editable="rich">
-                            <p>Aenean vel nisi in ipsum congue</p>
+                            <p>Customer Support.</p>
                         </div>
                     </div>
                 </div><!-- /lc-block -->
