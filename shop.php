@@ -161,66 +161,129 @@ $respic=mysqli_fetch_assoc($quepro);
 </style>
 
 <!-- just new design end -->
-<br>
-<br>
-<br>
 
-<!-- var jatay te  start -->
-<main class="container">
-  <section class="card">
-    <div class="product-image">
+<!-- effect start -->
+<main class="boot-container">
+  <div class="row">
+    <div class="col-lg-4">
+    <section class="boot-card">
+    <div class="boot-product-image">
       <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
     </div>
-    <div class="product-info">
+    <div class="boot-product-info">
       <h2>Nike X OFF-white</h2>
       <p>The 10: Air Jordan 1 off-white - Chicago</p>
-      <div class="price">$999</div>
+      <div class="boot-price">$999</div>
     </div>
-    <div class="btn">
-      <button class="buy-btn">Buy Now</button>
-      <button class="fav">
-        <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
           <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
         </svg>
       </button>
     </div>
   </section>
-  <section class="card card-blue">
-    <div class="product-image">
+    </div>
+    <div class="col-lg-4">
+    <section class="boot-card boot-card-blue">
+    <div class="boot-product-image">
       <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
     </div>
-    <div class="product-info">
+    <div class="boot-product-info">
       <h2>Nike X OFF-white</h2>
       <p>Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
-      <div class="price">$1599</div>
+      <div class="boot-price">$1599</div>
     </div>
-    <div class="btn">
-      <button class="buy-btn">Buy Now</button>
-      <button class="fav">
-        <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
           <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
         </svg>
       </button>
     </div>
   </section>
+    </div>
+    <div class="col-lg-4">
+    <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+      <button class="boot-fav">
+        <svg class="boot-svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+    </div>
+  </div>
+ 
+  
+ 
+  
 </main>
 <style>
   /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 /*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --red-card: #a62121;
+  --blue-card: #4bb7e6;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
 
+/*===== RESET =====*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  user-select: none;
+}
 
 /*===== CARD =====*/
-.container {
+.boot-container {
   height: 100%;
-  width: 850px;
+  width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.card {
+.boot-card {
   position: relative;
   padding: 1rem;
   width: 350px;
@@ -232,55 +295,55 @@ $respic=mysqli_fetch_assoc($quepro);
   cursor: pointer;
 }
 
-.card-blue {
+.boot-card-blue {
   background: var(--blue-card);
 }
 
-.product-image {
+.boot-product-image {
   height: 230px;
   width: 100%;
   transform: translate(0, -1.5rem);
   transition: transform 500ms ease-in-out;
   filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
 }
-.product-info {
+.boot-product-info {
   text-align: center;
 }
 
-.card:hover .product-image {
-  transform: translate(-1.5rem, -7rem) rotate(-20deg);
+.boot-card:hover .boot-product-image {
+  transform: translate(-0.5rem, -3rem) rotate(-10deg);
 }
 
-.product-info h2 {
+.boot-product-info h2 {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.product-info p {
+.boot-product-info p {
   margin: 0.4rem;
   font-size: 0.8rem;
   font-weight: 600;
 }
-.price {
+.boot-price {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.btn {
+.boot-btn {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 0.8rem;
 }
-.buy-btn {
+.boot-buy-btn {
   background-color: var(--btn);
   padding: 0.6rem 3.5rem;
   font-weight: 600;
   font-size: 1rem;
   transition: 300ms ease;
 }
-.buy-btn:hover {
+.boot-buy-btn:hover {
   background-color: var(--btn-hover);
 }
-.fav {
+.boot-fav {
   box-sizing: border-box;
   background: #fff;
   padding: 0.5rem 0.5rem;
@@ -289,14 +352,14 @@ $respic=mysqli_fetch_assoc($quepro);
   place-items: center;
 }
 
-.svg {
+.boot-svg {
   height: 25px;
   width: 25px;
   fill: #fff;
   transition: all 500ms ease;
 }
 
-.fav:hover .svg {
+.boot-fav:hover .boot-svg {
   fill: #000;
 }
 
@@ -304,7 +367,7 @@ $respic=mysqli_fetch_assoc($quepro);
   body {
     height: auto;
   }
-  .container {
+  .boot-container {
     padding: 2rem 0;
     width: 100%;
     flex-direction: column;
@@ -313,8 +376,7 @@ $respic=mysqli_fetch_assoc($quepro);
 }
 
 </style>
-<!-- var jatay te end -->
-
+<!-- effect end -->
 <!-- PRODUCT CARDS START -->
 <style>
   .fea {

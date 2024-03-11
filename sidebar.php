@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,11 +34,6 @@
           </li>
         </ul>
 
-        <div class="footer">
-        	<p>
-					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-					</p>
-        </div>
     	</nav>
 
         <!-- Page Content  -->
@@ -73,13 +69,13 @@
           </div>
         </nav>
 
-        <h2 class="mb-4"></h2>
+       
        </div>
 		</div>
 
-    <script src="jquery.min.js"></script>
-    <script src="popper.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script src="sidebar_js/bootstrap.min.js"></script>
+    <script src="sidebar_js/popper.js"></script>
+    <script src="sidebar_js/jquery.min.js"></script>
+    <script src="sidebar_js/main.js"></script>
   </body>
 </html>
