@@ -77,8 +77,8 @@ if (isset($_SESSION['user_data'])) {
 // print_r($pri);
 // echo '</pre>';
 
-?>  
+?> 
+<div class="py-6"> 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeK4x3yeg2dkUnAv7THkhBOfltfu6y_qS0euJ3WC877kNThDA/viewform?embedded=true" width="640" height="1473" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-</body>
-</html>
+</div>

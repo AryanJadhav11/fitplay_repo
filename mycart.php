@@ -31,7 +31,7 @@
 <body class="py-6">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center border rounded bg-light my-5" style="background-color: #F8F9FA;">
+            <div class="col-lg-12 text-center border rounded bg-light my-5">
                 <h1 class="py-2 pb-0">MY CART</h1>
             </div>
             <div class="col-lg-9">
