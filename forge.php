@@ -1,5 +1,60 @@
 <?php include("gymheader.php")?>
-<?php include("gympageheader.php")?>
+<?php include("gympageheader.php");
+
+?>
+
+<?php
+include('smtp/PHPMailerAutoload.php');
+
+function smtp_mailer($to, $subject, $message) {
+  $mail = new PHPMailer();
+  $mail->IsSMTP();
+  $mail->SMTPAuth = true;
+  $mail->SMTPSecure = 'tls';
+  $mail->Host = "smtp.gmail.com";
+  $mail->Port = 587;
+  $mail->IsHTML(true);
+  $mail->CharSet = 'UTF-8';
+  $mail->Username = "jadhavaryan467@gmail.com";
+  $mail->Password = "oozzyqfwnpufjuqi";
+  $mail->SetFrom("jadhavaryan467@gmail.com");
+  $mail->Subject = $subject;
+  $mail->Body = $message;
+  $mail->AddAddress($to);
+  $mail->SMTPOptions = array('ssl' => array(
+      'verify_peer' => false,
+      'verify_peer_name' => false,
+      'allow_self_signed' => false
+  ));
+  if (!$mail->Send()) {
+      return $mail->ErrorInfo;
+  } else {
+      return 'Sent';
+  }
+}
+
+?>
+
+<?php
+  if (isset($_POST['submit'])){
+$name=$_POST['userFirstname'];
+$phone=$_POST['userNum'];
+
+ $to = 'aryanjadhav686@gmail.com';
+ $subject = 'New Gym enquiry';
+ $message = "New gym enquiry by $name about $plan contact them $phone";
+ $result = smtp_mailer($to, $subject, $message);
+  }
+  if($result)
+  {
+    echo'<script>console.log("sucess")</script>';
+  }
+  else{
+    echo'<script>console.log("sucess no")</script>';
+
+  }
+?>
+
 <body>
 <!-- content -->
 <section class="pt-7 pb-0">
@@ -137,7 +192,7 @@
 <hr>
  <!-- form -->
 <section>
-<form action="" id="packageForm">
+<form method="post" id="packageForm">
   <div class="container">
     <!-- form head -->
     <div class="form_head">
@@ -158,7 +213,7 @@
                 <h5 class="card-title" style="color:white;">1 Month Plan</h5>
                 <p class="card-text" style="color:white;">1500/Mo</p>
                 <label for="package1">SELECT</label>
-                <input id="package1" type="radio" name="package" value="1 Month Plan">
+                <input id="package1" type="radio" id="plan1" name="package" value="1 Month Plan">
             </div>
           </div>
           <div class="card text-center mb-3" style="width: 18rem;">
@@ -166,7 +221,7 @@
                 <h5 class="card-title" style="color:white;">3 Months Plan</h5>
                 <p class="card-text" style="color:white;">4500/3 Mo</p>
                 <label for="package2">SELECT</label>
-                <input id="package2" type="radio" name="package" value="3 Month Plan">            
+                <input id="package2" type="radio" id="plan2" name="package" value="3 Month Plan">            
             </div>
           </div>
           <div class="card text-center mb-3" style="width: 18rem;">
@@ -174,7 +229,7 @@
                 <h5 class="card-title" style="color:white;">6 Months Plan</h5>
                 <p class="card-text" style="color:white;">7000/6 Mo</p>
                 <label for="package3">SELECT</label>
-                <input id="package3" type="radio" name="package" value="6 Month Plan">            
+                <input id="package3" type="radio" id="plan3" name="package" value="6 Month Plan">            
              </div>
           </div>
           <div class="card text-center mb-3" style="width: 18rem;">
@@ -182,7 +237,7 @@
                 <h5 class="card-title" style="color:white;">1 Year Plan</h5>
                 <p class="card-text" style="color:white;">12,000/Year</p>
                 <label for="package4">SELECT</label>
-                <input id="package4" type="radio" name="package" value="1 Year Plan">            
+                <input id="package4" type="radio" id="plan4" name="package" value="1 Year Plan">            
             </div>
           </div>
         </div>
@@ -191,23 +246,23 @@
         <div class="row g-3">
           <div class="col-md-6">
             <label for="userMail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="userMail">
+            <input type="email" class="form-control" id="userMail"  name="userMail">
           </div>
           <div class="col-md-6">
             <label for="userNum" class="form-label">Phone No.</label>
-            <input type="tel" class="form-control" id="userNum">
+            <input type="tel" class="form-control" id="userNum" name="userNum">
           </div>
           <div class="col-md-6">
             <label for="userFirstName" class="form-label">First Name.</label>
-            <input type="text" class="form-control" id="userFirstName">
+            <input type="text" class="form-control" name="userFirstName" id="userFirstName">
           </div>
           <div class="col-md-6">
             <label for="userLastname" class="form-label">Last Name.</label>
-            <input type="text" class="form-control" id="userLastname">
+            <input type="text" class="form-control" name="userLastname" id="userLastname">
           </div>
           
           <div class="col-12 d-flex justify-content-center pt-4">
-            <button type="submit" class="btn btn-primary">Send Mail</button>
+            <button type="submit" name="submit" class="btn btn-primary">Send Mail</button>
           </div>
         </div>
       </div>
@@ -217,31 +272,38 @@
 </form>
 </section>
 
+
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var radioButtons = document.querySelectorAll('input[type="radio"]');
+document.addEventListener('DOMContentLoaded', function() {
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
 
-        radioButtons.forEach(function(radioButton) {
-            radioButton.addEventListener('change', function() {
-                document.querySelectorAll('.card').forEach(function(card) {
-                    card.classList.remove('selected-package');
-                });
-
-                // Add teh border to the selected class
-                if (this.checked) {
-                    this.closest('.card').classList.add('selected-package');
-                }
+    radioButtons.forEach(function(radioButton) {
+        radioButton.addEventListener('change', function() {
+            document.querySelectorAll('.card').forEach(function(card) {
+                card.classList.remove('selected-package');
             });
-        });
 
-        document.getElementById('packageForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            var selectedPackage = document.querySelector('input[name="package"]:checked').value;
-
-            // Do something with the selected package
-            console.log("Selected package:", selectedPackage);
+            // Add the border to the selected class
+            if (this.checked) {
+                this.closest('.card').classList.add('selected-package');
+            }
         });
     });
+
+    document.getElementById('packageForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the selected package
+        var selectedPackage = document.querySelector('input[name="package"]:checked');
+        if (!selectedPackage) {
+            alert("Please select a package.");
+            return;
+        }
+
+    });
+});
+
 </script>
 
 
@@ -319,6 +381,7 @@
 
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    
 </body>
 </html>
 
