@@ -94,8 +94,8 @@ function getInitials($name) {
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
-    <link href="favicon.ico" rel="icon">
-  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="favicon_io/favicon.ico" rel="icon">
+  <link href="favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -252,7 +252,6 @@ function getInitials($name) {
   </script> 
 
  <!-- ======= Header - NavBar ======= -->
-
   <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
@@ -364,7 +363,6 @@ function getInitials($name) {
  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
  <!-- Login Modal End -->
 </head>
-
 
   <!-- script for fixed navbar -->
   <script src="GYm/assets/js/main.js"></script>

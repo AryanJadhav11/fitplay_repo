@@ -1,4 +1,5 @@
 <?php include("header.php");?>
+<?php include('floating_icon.php'); ?>
 <?php
 
 // Database connection
@@ -689,9 +690,9 @@ if (isset($_POST['Add_To_Cart'])) {
                             <input type="hidden" name="Price" value="<?= $row9pp['Price'] ?>">
                     <?php
                     if(isset($_SESSION['user_data'])) {
-                        echo '<button type="button" name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button>'; 
+                        echo '<button type="submit" name="Add_To_Cart" class="btn btn-primary shop-button">Add to Cart</button>'; 
                         echo '<button type="button" class="btn btn-success shop-button">Buy Now</button>';
-                        echo '<button class="btn btn-primary shop-button" type="button"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>';
+                        echo '<button class="btn btn-primary shop-button" type="submit"><a href="mycart.php" style="color:white;text-decoration:none;">View Cart</a></button>';
                     } else {
                         echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Add to Cart</button>'; 
                         echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Buy Now</button>';

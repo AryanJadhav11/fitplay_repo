@@ -1,9 +1,9 @@
-<?php include('header.php') ?>
-
-
+<?php include('header.php'); ?>
+<?php include('floating_icon.php'); ?>
 <?php
 include('smtp/PHPMailerAutoload.php');
 
+// Function to send email using SMTP
 function smtp_mailer($to, $subject, $message) {
     $mail = new PHPMailer();
     $mail->IsSMTP();
@@ -13,8 +13,8 @@ function smtp_mailer($to, $subject, $message) {
     $mail->Port = 587;
     $mail->IsHTML(true);
     $mail->CharSet = 'UTF-8';
-    $mail->address = "jadhavaryan467@gmail.com";
-    $mail->Password = "oozzyqfwnpufjuqi";
+    $mail->Username = "jadhavaryan467@gmail.com"; // Your Gmail username
+    $mail->Password = "oozzyqfwnpufjuqi"; // Your Gmail password
     $mail->SetFrom("jadhavaryan467@gmail.com");
     $mail->Subject = $subject;
     $mail->Body = $message;
@@ -42,16 +42,6 @@ $coni = mysqli_connect($server, $user, $pass, $db);
 if (!$coni) {
     die(mysqli_error($coni));
 }
-if(isset($_GET['user_id']))
-{
-   $blid=$_GET['user_id'];
-   $sql9="SELECT * FROM `order_manager` WHERE user_id='$blid';";
-   $res9=mysqli_query($coni,$sql9);
-   $row9=mysqli_fetch_assoc($res9);
-
-}
-$response = array();
-require_once 'vendor/razorpay/Razorpay.php';
 
 // Function to verify Razorpay payment
 function verifyPayment($paymentId) {
@@ -80,97 +70,78 @@ function verifyPayment($paymentId) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get Purchase information from the form
-    $name = isset($_POST['fname']) ? $_POST['fname'] : ''; // Ensure $name is defined and not null
+    $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : '';
+    $name = isset($_POST['fname']) ? $_POST['fname'] : '';
     $address = isset($_POST['address']) ? $_POST['address'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-  
-    // Check if the chosen date and time slot is already booked for the specific turf
-    $checkSql = "SELECT * FROM Purchase WHERE turfname = '$name' AND date = '$date' AND time = '$time'";
-    $result = $coni->query($checkSql);
+    $userEmail = isset($_POST['email']) ? $_POST['email'] : '';
+    $gtotal = isset($_POST['amount']) ? $_POST['amount'] : '';
 
-    if ($result && $result->num_rows > 0) {
-        // Turf is already booked for the selected date and time
-        echo"<script>alert('This slot is already booked')</script>";
-        $response['success'] = false;
-        $response['error'] = 'The selected turf is already booked on the specified date and time. Please choose a different date and time.';
-    } else {
-        if (isset($_POST['razorpay_payment_id']) && !empty($_POST['razorpay_payment_id'])) {
-            $razorpayPaymentId = $_POST['razorpay_payment_id'];
-            $paymentSuccess = verifyPayment($razorpayPaymentId);
 
-            if ($paymentSuccess) {
-                // Insert Purchase into the database only if payment is successful
-                $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-                $insertSql = "INSERT INTO `buy_items`(`user_ids`, `item_names`, `prices`, `quantitys`, `pay_stats`) 
-                VALUES ('$user_id', '$item_name', '$price', '$quantity', 'PAID')";
+    if (isset($_POST['razorpay_payment_id']) && !empty($_POST['razorpay_payment_id'])) {
+        $razorpayPaymentId = $_POST['razorpay_payment_id'];
+        $paymentSuccess = verifyPayment($razorpayPaymentId);
 
-                if ($coni->query($insertSql) === TRUE) {
-                    // Send email notification only when the Purchase is successful
-                    $to = 'yashnikam5635@gmail.com';
-                    $subject = 'New Purchase';
-                    $message = "New Purchase by $userName on $date on $time for turf $name.";
-                    $result = smtp_mailer($to, $subject, $message);
+        if ($paymentSuccess) {
+            // Insert Purchase into the database only if payment is successful
+            $insertSql = "INSERT INTO `order_manager`(`user_id`, `Full_Name`, `Phone_No`, `Address`, `Total`)
+            VALUES ('$user_id', '$name', '$address', '$gtotal')";
 
-                    $uto = $userEmail;
-                    $usubject = 'Purchase Done Successfully';
-                    $umessage = "Your Purchase by $userName on $date on $time for turf $name has been successfully done.";
-                    $uresult = smtp_mailer($uto, $usubject, $umessage);
+            if ($coni->query($insertSql) === TRUE) {
+                // Send email notification only when the Purchase is successful
+                $to = 'yashnikam5635@gmail.com';
+                $subject = 'New Purchase';
+                $message = "New Purchase by $user_id customer name $name address $address email $userEmail.";
+                $result = smtp_mailer($to, $subject, $message);
 
-                    if ($result === 'Sent' && $uresult === 'Sent') {
-                        // Email sent successfully
-                        $response['email_status'] = 'Email sent successfully.';
-                        // Purchase successful message
-                        $response['success_message'] = 'Purchase successful!';
-                    } else {
-                        // Email sending failed
-                        $response['email_status'] = 'Email sending failed. ' . $result;
-                        // Purchase failed message
-                        $response['error_message'] = 'Purchase failed. Please try again later.';
-                    }
+                $uto = $userEmail;
+                $usubject = 'Purchase Done Successfully';
+                $umessage = "Your Purchase by $user_id by name $name has been successfully done.";
+                $uresult = smtp_mailer($uto, $usubject, $umessage);
+
+                if ($result === 'Sent' && $uresult === 'Sent') {
+                    // Email sent successfully
                     echo "<script>alert('Your Purchase has been done')</script>";
-                    // Send success response
-                    $response['success'] = true;
                 } else {
-                    // Send error response with details
-                    $response['success'] = false;
-                    $response['error'] = mysqli_error($coni);
+                    // Email sending failed
+                    echo "<script>alert('Email sending failed.')</script>";
                 }
             } else {
-                // Payment failed
-                $response['success'] = false;
-                echo "<script>alert('Payment not done')</script>";
-                $response['error'] = 'Payment failed. Please try again.';
+                // Insertion failed
+                echo "<script>alert('Failed to insert Purchase data into database.')</script>";
             }
+        } else {
+            // Payment failed
+            echo "<script>alert('Payment not done')</script>";
         }
     }
 }
 
-// fetch user products
-        	// Assuming you have a user ID stored in the session, adjust this according to your authentication mechanism
-	$user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : null;
+// Fetch user products
+$user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : null;
 
-	// Fetch items from the order_his table for the specific user
-	$sql = "SELECT * FROM `order_his` WHERE `user_id` = '$user_id'";
-	$result = mysqli_query($coni, $sql);
+// Fetch items from the order_his table for the specific user
+$sql = "SELECT * FROM `order_his` WHERE `user_id` = '$user_id'";
+$result = mysqli_query($coni, $sql);
 
-	if ($result === false) {
-		die('Query failed: ' . mysqli_error($coni));
-	}
-	$rowCount = mysqli_num_rows($result);
-    $grandTotal = 0;
-    if ($rowCount > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $iid=$row['item_id'];
-            $item_name = $row['item_name'];
-            $price = $row['price'];
-            $quantity = $row['quantity'];
-            $total= $price*$quantity;
-            $grandTotal = $grandTotal + $total;
-        }}
+if ($result === false) {
+    die('Query failed: ' . mysqli_error($coni));
+}
+
+$rowCount = mysqli_num_rows($result);
+$grandTotal = 0;
+
+if ($rowCount > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $item_id = $row['item_id'];
+        $item_name = $row['item_name'];
+        $price = $row['price'];
+        $quantity = $row['quantity'];
+        $total = $price * $quantity;
+        $grandTotal = $grandTotal + $total;
+    }
+}
 
 $coni->close();
-
-// Display the response
 ?>
 
 
@@ -191,7 +162,7 @@ $coni->close();
         }      
     </style>
 </head>
-<body>
+<body class="py-6">
     
     <!-- Purchase form container -->
     <div class="container Purchase-container">
@@ -217,7 +188,7 @@ $coni->close();
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" class="form-control" placeholder="Enter Your Email" name="email" required>
             </div>
-
+            <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
             <div>
             <?php 
                  if ($rowCount > 0) {
@@ -232,7 +203,21 @@ $coni->close();
                      }
              ?>
            </div>
+<!-- Iterate through the submitted item details and display -->
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $itemIds = isset($_POST['itemid']) ? $_POST['itemid'] : array();
 
+            foreach ($itemIds as $itemId) {
+                // Split the value of each item id to get individual values
+                list($iid, $item_name, $price, $quantity) = explode(' - ', $itemId);
+
+                // Display the item details
+                $dis =  "<input type='text' value='$iid - $item_name - $price - $quantity'><br>";
+            }
+        }
+        ?>
+<input type='text' value='<? echo $dis;?>'><br>
             <div class="pt-3">
             <button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block " style="width: 100%;">Proceed to Payment</button>
             </div>
@@ -256,7 +241,7 @@ document.getElementById('payButton').addEventListener('click', function(e) {
 
     // If form is valid, proceed to Razorpay payment
     var options = {
-        "key": "rzp_live_z6prMSW9WlOpcp",
+        "key": "rzp_live_GL8N1VxLpxd9SM",
         "amount": "1" * 100, // amount in paise (since Razorpay accepts amount in the smallest currency unit)
         "currency": "INR",
         "name": "<?php echo $grandTotal; ?>",
@@ -266,10 +251,12 @@ document.getElementById('payButton').addEventListener('click', function(e) {
             // Handle success callback
             console.log(response);
             // Submit the form after successful payment
+            var razorpayPaymentId = response.razorpay_payment_id;
+            document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
             document.getElementById('purchaseForm').submit();
         },
         "prefill": {
-            "name": document.getElementById('address').value,
+            "name": document.getElementById('fname').value,
             "email": document.getElementById('email').value
         },
         "theme": {
