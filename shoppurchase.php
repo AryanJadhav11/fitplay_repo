@@ -5,12 +5,10 @@
 // Include Razorpay SDK
 require_once 'vendor/razorpay/Razorpay.php';
 
-use Razorpay\Api\Api;
-
 // Initialize Razorpay with your API key and secret
 $api_key = 'rzp_live_GL8N1VxLpxd9SM';
 $api_secret = 'S2mFXcKOSKiXHMNTczJNcFyQ';
-$api = new Api($api_key, $api_secret);
+
 
 // Database connection
 $server = 'localhost';
@@ -48,38 +46,142 @@ if ($rowCount > 0) {
     }
 }
 
-// Handle Razorpay payment response
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['razorpay_payment_id'])) {
-    // Fetch the payment details from the Razorpay response
-    $payment_id = $_POST['razorpay_payment_id'];
-    $amount = $_POST['amount'];
-    
-    try {
-        // Verify the payment
-        $api->utility->verifyPaymentSignature($_POST);
+?>
+<?php
+include('smtp/PHPMailerAutoload.php');
 
-        // Insert data into the buy_items table
-        mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
-        while ($row = mysqli_fetch_assoc($result)) {
-            $item_id = $row['item_id'];
-            $item_name = $row['item_name'];
-            $price = $row['price'];
-            $quantity = $row['quantity'];
-            
-            // Insert into the database
-            $sql = "INSERT INTO `buy_items` (`user_ids`, `item_ids`, `item_names`, `prices`, `quantitys`, `dates`, `pay_stats`) 
-                    VALUES ('$user_id', '$item_id', '$item_name', '$price', '$quantity', NOW(), 'PAID')";
-            mysqli_query($coni, $sql);
-        }
-
-        // Payment successful, show alert
-        echo '<script>alert("Payment successful!");</script>';
-    } catch (Exception $e) {
-        // Handle payment verification failure
-        echo "Payment failed: " . $e->getMessage();
+function smtp_mailer($to, $subject, $message) {
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 587;
+    $mail->IsHTML(true);
+    $mail->CharSet = 'UTF-8';
+    $mail->Username = "jadhavaryan467@gmail.com";
+    $mail->Password = "oozzyqfwnpufjuqi";
+    $mail->SetFrom("jadhavaryan467@gmail.com");
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    $mail->AddAddress($to);
+    $mail->SMTPOptions = array('ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => false
+    ));
+    if (!$mail->Send()) {
+        return $mail->ErrorInfo;
+    } else {
+        return 'Sent';
     }
 }
+
+// Database connection
+
+
+
+
+require_once 'vendor/razorpay/Razorpay.php';
+
+// Function to verify Razorpay payment
+function verifyPayment($paymentId) {
+    $razorpayKeyId = 'rzp_live_GL8N1VxLpxd9SM';
+    $razorpayKeySecret = 'S2mFXcKOSKiXHMNTczJNcFyQ';
+
+    $razorpay = new Razorpay\Razorpay([
+        'key_id'     => $razorpayKeyId,
+        'key_secret' => $razorpayKeySecret,
+    ]);
+
+    try {
+        $attributes = array(
+            'razorpay_order_id' => $_POST['razorpay_order_id'],
+            'razorpay_payment_id' => $paymentId,
+            'razorpay_signature' => $_POST['razorpay_signature'],
+        );
+
+        $razorpay->utility->verifyPaymentSignature($attributes);
+        return true; // Payment is successfully verified
+    } catch (Exception $e) {
+        // Handle verification failure
+        return false;
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get booking information from the form
+    $fname = isset($_POST['fname']) ? $_POST['fname'] : ''; 
+    $mail = isset($_POST['email']) ? $_POST['email'] : '';
+    $address = isset($_POST['address']) ? $_POST['address'] : '';
+    $itemname = isset($_POST['itemid']) ? $_POST['itemid'] : array();
+
+   
+
+    // Check if the chosen date and time slot is already booked for the specific turf
+  
+
+        if (isset($_POST['razorpay_payment_id']) && !empty($_POST['razorpay_payment_id'])) {
+            $razorpayPaymentId = $_POST['razorpay_payment_id'];
+            $paymentSuccess = verifyPayment($razorpayPaymentId);
+
+            if ($paymentSuccess) {
+                // Insert booking into the database only if payment is successful
+                $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+                $insertSql = "INSERT INTO  buy_items (user_id, dates, pay_stats, item, name, email, address) VALUES ('$user_id', 'CURRENT_TIMESTAMP', 'PAID', '$itemname', '$fname', '$mail', '$address')";
+
+                if ($coni->query($insertSql) === TRUE) {
+                    // Send email notification only when the booking is successful
+                    $to = 'aryanjadhav686@gmail.com';
+                    $subject = 'New Booking';
+                    $message = "New booking by $userName on $date on $time for turf $name.";
+                    $result = smtp_mailer($to, $subject, $message);
+
+                    $uto = $userEmail;
+                    $usubject = 'Booking Done Successfully';
+                    $umessage = "Your booking by $userName on $date on $time for turf $name has been successfully done.";
+                    $uresult = smtp_mailer($uto, $usubject, $umessage);
+
+                    if ($result === 'Sent' && $uresult === 'Sent') {
+                        // Email sent successfully
+                        $response['email_status'] = 'Email sent successfully.';
+                        // Booking successful message
+                        $response['success_message'] = 'Booking successful!';
+                    } else {
+                        // Email sending failed
+                        $response['email_status'] = 'Email sending failed. ' . $result;
+                        // Booking failed message
+                        $response['error_message'] = 'Booking failed. Please try again later.';
+                    }
+                    echo "<script>alert('Your booking has been done')</script>";
+                    // Send success response
+                    $response['success'] = true;
+                } else {
+                    // Send error response with details
+                    $response['success'] = false;
+                    $response['error'] = mysqli_error($coni);
+                }
+            } else {
+                // Payment failed
+                $response['success'] = false;
+                echo "<script>alert('Payment not done')</script>";
+                $response['error'] = 'Payment failed. Please try again.';
+            }
+        }
+        else {
+            // Log the error
+            error_log("Error in SQL query: " . mysqli_error($coni));
+            // Send error response with details
+            $response['success'] = false;
+            $response['error'] = mysqli_error($coni);
+        }
+    }
+
+
+$coni->close();
 ?>
+
+
 
 <html>
 <body class='py-8'>
@@ -87,6 +189,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['razorpay_payment_id']
     <div class="container Purchase-container">
         <!-- Purchase form -->
         <form id="purchaseForm" method="post">
+        <input type="hidden" id="razorpay_order_id" name="razorpay_order_id">
+<input type="hidden" id="razorpay_signature" name="razorpay_signature">
             <div class="form-group">
                 <label for="amount">Payable Amount:</label>
                 <input type="text" id="amount" name="amount" value="<?php echo $grandTotal; ?>" class="form-control" readonly>
@@ -109,7 +213,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['razorpay_payment_id']
                 <input type="email" id="email" class="form-control" placeholder="Enter Your Email" name="email" required>
             </div>
 
-            <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
             
             <?php
             if ($rowCount > 0) {
@@ -119,58 +222,64 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['razorpay_payment_id']
                     $item_name = $row['item_name'];
                     $price = $row['price'];
                     $quantity = $row['quantity'];
-                    echo '<input type="text" name="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">';
+                    echo '<input type="text" name="itemid[]" id="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">';
                 }
             }
             ?>
+            
             <div class="pt-3">
-                <button id="payButton" type="button" class="btn btn-primary btn-block" style="width: 100%;">Proceed to Payment</button>
+                <button id="payeButton" type="submit" value="Submit" class="btn btn-primary btn-block" style="width: 100%;">Proceed to Payment</button>
             </div>
         </form>
     </div>
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
     <script>
-        document.getElementById('payButton').addEventListener('click', function(e) {
-            e.preventDefault();
+document.getElementById('payeButton').addEventListener('click', function (e) {
+    e.preventDefault();
 
-            // Perform form validation
-            var fname = document.getElementById('fname').value;
-            var address = document.getElementById('address').value;
-            var email = document.getElementById('email').value;
+    var name = document.getElementById('fname').value;
+    var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
 
-            if (!fname || !address || !email) {
-                alert('Please fill out all fields before proceeding to payment.');
-                return;
-            }
+    // Check if the selected date is in the past
+    if (!name || !email || !address) {
+        alert('Please fill out all fields before proceeding to payment.');
+        return;
+    }
 
-            // If form is valid, proceed to Razorpay payment
-            var options = {
-                "key": $api_key,
-                "amount": "<?php echo $grandTotal * 100; ?>", // amount in paise
-                "currency": "INR",
-                "name": "FitPlay",
-                "description": "Purchase for <?php echo $grandTotal; ?>",
-                "image": "logo.png", // replace with your logo
-                "handler": function(response) {
-                    // Handle success callback
-                    console.log(response);
-                    // Submit the form after successful payment
-                    var razorpayPaymentId = response.razorpay_payment_id;
-                    document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
-                    document.getElementById('purchaseForm').submit();
-                },
-                "prefill": {
-                    "name": fname,
-                    "email": email
-                },
-                "theme": {
-                    "color": "#198754"
-                }
-            };
-            var rzp = new Razorpay(options);
-            rzp.open();
-        });
-    </script>
+    // Create a new payment object
+    var options = {
+        "key": "rzp_live_GL8N1VxLpxd9SM",
+        "amount": 100, // amount in paise (since Razorpay accepts amount in the smallest currency unit)
+        "currency": "INR",
+        "name": "fitplay",
+        "description": "order for product",
+        "image": "logo.png", // replace with your logo
+        "handler": function (response) {
+            // Set the values of razorpay_order_id and razorpay_signature
+            document.getElementById('razorpay_order_id').value = response.razorpay_order_id;
+            document.getElementById('razorpay_signature').value = response.razorpay_signature;
+
+            // Submit the form after successful payment
+            document.getElementById('purchaseForm').submit();
+        },
+        "prefill": {
+            "name": document.getElementById('fname').value,
+            "email": document.getElementById('email').value,
+        },
+        "theme": {
+            "color": "#198754"
+        }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+});
+</script>
+
+
 </body>
 </html>

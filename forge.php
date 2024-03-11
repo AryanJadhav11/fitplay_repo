@@ -64,7 +64,7 @@ $phone=$_POST['userNum'];
     <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:650px; position: relative;">
         <!-- Main Image -->
         <a id="mainImageLink" data-fslightbox="mygallery" class="rounded-4"  data-type="image">
-            <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 fit" src="./GYm/assets/img/forgelogo.jpeg" alt="Main Image" />
+            <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 img-fluid fit" src="./GYm/assets/img/forgelogo.jpeg" alt="Main Image" />
         </a>
         <!-- Previous Button -->
         <a id="prevButton" class="prev" onclick="changeImage(-1)" style="position: absolute; color:white; text-decoration:none; top: 50%; left: 10px; transform: translateY(-50%); z-index: 1;">&#10094;</a>
