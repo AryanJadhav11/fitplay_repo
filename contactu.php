@@ -1,5 +1,46 @@
-<?php include("header.php");?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Contact Us</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon_io/favicon.ico" rel="icon">
+  <link href="favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+ </script>
+<script type="text/javascript">
+  (function(){
+     emailjs.init("NZwPsWRpzzWmVQjwb");
+  })();
+</script> 
+
 <?php
+session_start();
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -19,8 +60,146 @@ if ($conn->connect_error) {
 //     exit();
 // }
 
+$showalert = false;
+$login = false;
+$showerr = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $err = "";
+    $username = $_POST["uname"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT * FROM `users` WHERE username='$username' AND password='$password';";
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result);
+
+    if ($num) {
+        $re = mysqli_fetch_assoc($result);
+        $user_data = array(
+            'user_id' => $re['id'],
+            'firstname' => $re['firstname'],
+            'lastname' => $re['lastname'],
+            'username' => $re['username'],
+            'email' => $re['email'],
+        );
+        $_SESSION['user_data'] = $user_data;
+        
+         
+        // Redirect to turf.php after successful login
+        
+    } else {
+        $showerr = "Invalid Email / Password";
+        $_SESSION['error'] = "Invalid Email / Password";
+    }
+}
+// echo "User data in session:<br>";
+// foreach ($_SESSION['user_data'] as $key => $value) {
+//     echo "$key: $value<br>";
+// }
+// Your remaining code for the login page goes here
 ?>
 
+<?php
+   
+
+function getInitials($name) {
+  $nameParts = explode(' ', $name);
+  $initials = '';
+  
+  foreach ($nameParts as $part) {
+      $initials .= strtoupper(substr($part, 0, 1));
+  }
+  
+  return $initials;
+}
+?>
+
+<style>
+   .avatar {
+       width: 30px;
+       height: 30px;
+       background-color: #007bff;
+       color: #ffffff;
+       font-size: 20px;
+       font-weight: bold;
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 10px;
+   }
+   .c-item{
+     height:480px;
+
+   }
+
+   .c-img
+   {
+     height:100%;
+     object-fit:cover;
+     filter:brightness(0.6);
+   }
+
+   body{
+     background:#f3f5f8;
+     overflow-x:hidden;
+   }
+
+
+
+       .star-container {
+           display: flex;
+           align-items: center;
+           margin-top: 15px; /* Adjust margin as needed */
+       }
+
+       .star-container i {
+           margin-right: 2px; /* Adjust margin between stars as needed */
+       }
+
+
+   
+
+   .card-container {
+     background-color:#ffff;
+     padding:20px;
+     border-radius:20px;
+            margin:40px;
+           display: flex;
+           gap: 20px; /* Adjust the margin between cards */
+       }
+
+       .card {
+           width: 18rem;
+       }
+
+       .card-img-top{
+         height :100%;
+         width:100%;
+       }
+
+       .banner-container{
+         background-color:#ffff;
+         padding:10px;
+         margin-bottom:60px;
+         width:100%;
+         height:100%;
+         
+       }
+
+       .banner-containerw{
+         background-color:#ffff;
+         padding:10px;
+         margin-bottom:60px;
+         width:100%;
+         height:80%;
+         
+       }
+
+
+
+
+ </style>
 <?php
 //session_start();
 
@@ -43,15 +222,17 @@ if ($conn->connect_error) {
         <h1 class="logo"><a href="turf.php">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="turf.php">Home</a></li>
-                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
+                <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Gyms</a></li>
+                        <li><a href="turf.php">Turf</a></li>
+                        <li><a href="shop.php">Shop</a></li>
+                        <li><a href="gym.php">Gyms</a></li>
                        
                     </ul>
                 </li>
+                <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
                 
                 <li class="dropdown" style="color: blue;">
 <?php
@@ -181,7 +362,7 @@ if ($conn->connect_error) {
       </div>
     </section>End Contact Section -->
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact mt-5">
       <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -257,7 +438,7 @@ if ($conn->connect_error) {
 
     <div class="toast " role="alert" id="success" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" style="position: fixed; top: 105px; right: 40px;">
   <div class="toast-header">
-    <img src="..." class="rounded me-2" alt="...">
+    <img src="favicon_io/favicon.ico" class="rounded me-2" alt="...">
     <strong class="me-auto">FitPlay</strong>
     <small>Just Now</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
