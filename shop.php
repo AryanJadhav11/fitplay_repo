@@ -48,7 +48,7 @@ $respic=mysqli_fetch_assoc($quepro);
 
 </head>
 
-<body style="background-color:#F9F9F9">
+<body style="background-color:;color:#034f84;">
 
 <!-- just new design start -->
 <!-- <section class="block mt-5"> 
@@ -161,10 +161,333 @@ $respic=mysqli_fetch_assoc($quepro);
 </style>
 
 <!-- just new design end -->
-<br>
-<br>
-<br>
 
+<!-- effect start -->
+
+
+  <main class="boot-container">
+    <div class="row">
+    <div class="col-lg-4">
+    <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+    </div>
+  </section>
+</div>
+<div class="col-lg-4">
+  <section class="boot-card boot-card-blue">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/0JKpmgd/blue.png" alt="OFF-white Blue Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>Air Jordan 1 Retro High "Off-White - UNC" sneakers</p>
+      <div class="boot-price">$1599</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+    </div>
+  </section>
+</div>
+<div class="col-lg-4">
+  <section class="boot-card">
+    <div class="boot-product-image">
+      <img src="https://i.ibb.co/cNWqxGx/red.png" alt="OFF-white Red Edition" draggable="false" />
+    </div>
+    <div class="boot-product-info">
+      <h2>Nike X OFF-white</h2>
+      <p>The 10: Air Jordan 1 off-white - Chicago</p>
+      <div class="boot-price">$999</div>
+    </div>
+    <div class="boot-btn boot-button">
+      <button class="boot-buy-btn">Buy Now</button>
+    </div>
+  </section>
+    </div>
+</div>
+</main>
+<style>
+  /*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --red-card: #a62121;
+  --blue-card: #4bb7e6;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
+
+/*===== RESET =====*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+/*===== CARD =====*/
+.boot-container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.boot-card {
+  position: relative;
+  padding: 1rem;
+  width: 300px;
+  height: 450px;
+  box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+  border-radius: 0.9rem;
+  background-color: var(--red-card);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.boot-card-blue {
+  background: var(--blue-card);
+}
+
+.boot-product-image {
+  height: 230px;
+  width: 100%;
+  transform: translate(0, -1.5rem);
+  transition: transform 500ms ease-in-out;
+  filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+.boot-product-info {
+  text-align: center;
+}
+
+.boot-card:hover .boot-product-image {
+  transform: translate(-0.5rem, -3rem) rotate(-10deg);
+}
+
+.boot-product-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.boot-product-info p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.boot-price {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.boot-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.boot-buy-btn {
+  background-color: var(--btn);
+  padding: 0.6rem 3.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 300ms ease;
+}
+.boot-buy-btn:hover {
+  background-color: var(--btn-hover);
+}
+.boot-fav {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid#000;
+  display: grid;
+  place-items: center;
+}
+
+.boot-svg {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  transition: all 500ms ease;
+}
+
+.boot-fav:hover .boot-svg {
+  fill: #000;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .boot-container {
+    padding: 2rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+</style>
+<!-- effect end -->
+
+
+<!--product display start -->
+<div class="container">
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="lc-block text-center">
+                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
+
+                        <p class="lead"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Convenient Shopping.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Competitive Pricing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Latest Trends.</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
+                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold">Gear Up for Greatness: Your Ultimate Sports Store</h2>
+
+                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Quality Assurance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Return Policy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Customer Support.</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+
+    </div>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- product display end -->
+
+<style>
+  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
+</style>
 <!-- PRODUCT CARDS START -->
 <style>
   .fea {
@@ -356,8 +679,7 @@ $respic=mysqli_fetch_assoc($quepro);
                         <div class="img-box">
                             <?php 
                             $imgSrc = "upload/{$respro['pic']}";
-                            list($width, $height) = getimagesize($imgSrc);
-                            $aspectRatio = $width / $height;
+                            
                             ?>
                             <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
                         </div>
@@ -415,566 +737,6 @@ $respic=mysqli_fetch_assoc($quepro);
 <!-- PRODUCT CARDS END -->
 
 
-<!--product display start -->
-<div class="container">
-        <div class="row mb-4 align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="lc-block text-center">
-                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-            <div class="col-lg-6 p-lg-6">
-                <div class="lc-block mb-5">
-                    <div editable="rich">
-
-                        <h2 class="display-6 fw-bold">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
-
-                        <p class="lead"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
-                    </div>
-                </div><!-- /lc-block -->
-                <!-- /lc-block -->
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Convenient Shopping.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Competitive Pricing.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Latest Trends.</p>
-                        </div>
-                    </div>
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-        </div>
-        <div class="row mb-4 align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
-                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
-            </div><!-- /col -->
-            <div class="col-lg-6 p-lg-6">
-                <div class="lc-block mb-5">
-                    <div editable="rich">
-
-                        <h2 class="display-6 fw-bold">Gear Up for Greatness: Your Ultimate Sports Store</h2>
-
-                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
-                    </div>
-                </div><!-- /lc-block -->
-                <!-- /lc-block -->
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Quality Assurance.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Return Policy.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lc-block">
-                    <div class="d-inline-flex">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                            </svg>
-                        </div>
-
-                        <div class="ms-3 align-self-center" editable="rich">
-                            <p>Customer Support.</p>
-                        </div>
-                    </div>
-                </div><!-- /lc-block -->
-            </div><!-- /col -->
-        </div>
-
-    </div>
-
-
-
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-<!-- product display end -->
-
-<style>
-  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
-</style>
-<h2 class="text-center"><b>WATCH SOME PRODUCTS</b></h2>
-<div class="container d-flex justify-content-center mt-100">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="productdetailsample.php?Order_id=14>" data-abc="true"> <img src="proimg/product2-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span class="text-center"><i class="fa fa-rupee"></i> 43,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"> cricket set</i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/waterbottle-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 41,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 33,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/cr7jersey-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 23,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product3-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 23,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/product4-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 23,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/kneepad1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 23,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="product-wrapper mb-45 text-center">
-        <div class="product-img"> <a href="#" data-abc="true"> <img src="proimg/stud1-removebg-preview.png" alt="" style="width:310px;height:318px;"> </a>
-          <span><i class="fa fa-rupee"></i> 23,000</span>
-          <div class="product-action">
-            <div class="product-action-style"> <a href="#"> <i class="fa fa-plus"></i> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-$(document).ready(function(){
-	$(".wish-icon i").click(function(){
-		$(this).toggleClass("fa-heart fa-heart-o");
-	});
-});	
-</script>
-
-<!-- Product Slider -->
-<section class="p-0">
-    <div class="container">
-        <h2 class="text-center mb-4"><b>WATCH SOME PRODUCTS</b></h2>
-        <div class="row">
-            <div id="splideCarousel" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-
-                        <?php 
-                        if($rowpro) {
-                            // Reset data seek pointer
-                            mysqli_data_seek($quepro, 0);
-
-                            while($respro = mysqli_fetch_assoc($quepro)) {
-                        ?>
-                        <li class="splide__slide col-sm-3 m-0.1 d-flex p-2">
-                            <div class="container page-wrapper">
-                                <div class="page-inner">
-                                    <div class="row">
-                                        <div class="el-wrapper"style="height:400px; background-color:#f7f7f7;" >
-                                            <div class="box-up">
-                                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
-                                            <?php $img = $respro['pic'] ?>
-                                                <img class="img" src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;mix-blend-mode: multiply;">
-                                                <div class="img-info">
-                                                    <div class="info-inner">
-                                                        <span class="p-name"><h3><a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" name="title"><?= ucfirst($respro['item_name']) ?></a></h3></span>
-                                                        <span class="p-company">FitPlay</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="box-down">
-                                                <div class="h-bg">
-                                                    <div class="h-bg-inner"></div>
-                                                </div>
-                                                <a class="cart" href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>">
-                                                    <span class="price"id="Price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</span>
-                                                    <span class="add-to-cart">
-                                                        <span class="txt">View Product</span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <-- product slider css -->
-   <style>
-    body,
-    html {
-      height: 100%;
-    }
-
-    .d-flex {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-    .align-center {
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-    }
-
-    .flex-centerY-centerX {
-      justify-content: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-    }
-
-    body {
-      background-color: #f7f7f7;
-    }
-
-    .page-wrapper {
-      height: 100%;
-      display: table;
-    }
-
-    .page-wrapper .page-inner {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    .el-wrapper {
-      width: 360px;
-      padding: 15px;
-      margin: 15px auto;
-      background-color: #fff;
-    }
-
-    @media (max-width: 991px) {
-      .el-wrapper {
-        width: 345px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .el-wrapper {
-        width: 290px;
-        margin: 30px auto;
-      }
-    }
-
-    .el-wrapper:hover .h-bg {
-      left: 0px;
-    }
-
-    .el-wrapper:hover .price {
-      left: 20px;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      transform: translateY(-50%);
-      color: #818181;
-    }
-
-    .el-wrapper:hover .add-to-cart {
-      left: 50%;
-    }
-
-    .el-wrapper:hover .img {
-      webkit-filter: blur(7px);
-      -o-filter: blur(7px);
-      -ms-filter: blur(7px);
-      filter: blur(7px);
-      filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
-      opacity: 0.4;
-    }
-
-    .el-wrapper:hover .info-inner {
-      bottom: 155px;
-    }
-
-    .el-wrapper:hover .a-size {
-      -webkit-transition-delay: 300ms;
-      -o-transition-delay: 300ms;
-      transition-delay: 300ms;
-      bottom: 50px;
-      opacity: 1;
-    }
-
-    .el-wrapper .box-down {
-      width: 100%;
-      height: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .el-wrapper .box-up {
-      width: 100%;
-      height: 300px;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .el-wrapper .img {
-      padding: 20px 0;
-      -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-    }
-
-    .h-bg {
-      -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      width: 660px;
-      height: 100%;
-      background-color: #3f96cd;
-      position: absolute;
-      left: -659px;
-    }
-
-    .h-bg .h-bg-inner {
-      width: 50%;
-      height: 100%;
-      background-color: #464646;
-    }
-
-    .info-inner {
-      -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-      -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-      transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      position: absolute;
-      width: 100%;
-      bottom: 25px;
-    }
-
-    .info-inner .p-name,
-    .info-inner .p-company {
-      display: block;
-    }
-
-    .info-inner .p-name {
-      font-family: 'PT Sans', sans-serif;
-      font-size: 18px;
-      color: #252525;
-    }
-
-    .info-inner .p-company {
-      font-family: 'Lato', sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      color: #8c8c8c;
-    }
-
-    .a-size {
-      -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-      -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-      transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      position: absolute;
-      width: 100%;
-      bottom: -20px;
-      font-family: 'PT Sans', sans-serif;
-      color: #828282;
-      opacity: 0;
-    }
-
-    .a-size .size {
-      color: #252525;
-    }
-
-    .cart {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      font-family: 'Lato', sans-serif;
-      font-weight: 700;
-    }
-
-    .cart .price {
-      -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-delay: 100ms;
-      -o-transition-delay: 100ms;
-      transition-delay: 100ms;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      font-size: 16px;
-      color: #252525;
-    }
-
-    .cart .add-to-cart {
-      -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-      /* ease-out */
-      -webkit-transition-delay: 100ms;
-      -o-transition-delay: 100ms;
-      transition-delay: 100ms;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 110%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .cart .add-to-cart .txt {
-      font-size: 12px;
-      color: #fff;
-      letter-spacing: 0.045em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-  </style>
-
-</section> 
-    <!-- product slider over -->
 
  
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
@@ -994,7 +756,10 @@ $(document).ready(function(){
 
         splide.mount();
     });
-</script> -->
+</script>
+
+
+
 <!-- 
 image start -->
 <section>
@@ -1093,6 +858,3 @@ image start -->
 
 </body>
 </html>
-
-
-
