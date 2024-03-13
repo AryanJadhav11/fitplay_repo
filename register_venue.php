@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div class="page-content">
 		<div class="form-v6-content">
 			<div class="form-left">
-				<img src="https://img.freepik.com/free-photo/portrait-young-man-playing-football_23-2148867381.jpg?t=st=1710019327~exp=1710022927~hmac=bfab0c51917e8af705343c43c003d78ad7c6829d04ed1cc1e201e74c7c4d0aa9&w=360" alt="form">
+				<img src="https://img.freepik.com/free-photo/portrait-young-man-playing-football_23-2148867381.jpg?t=st=1710019327~exp=1710022927~hmac=bfab0c51917e8af705343c43c003d78ad7c6829d04ed1cc1e201e74c7c4d0aa9&w=360" alt="form" height="590px">
 			</div>
 			<form class="form-detail"  method="post">
 				<h2>Register Your Venue</h2>
