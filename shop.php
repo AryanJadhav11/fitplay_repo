@@ -56,15 +56,15 @@ $respic=mysqli_fetch_assoc($quepro);
 <div class="row">
   <div class="col-lg-6">
     <h1 class="hello"><b>Best In Style Colloction For You</b></h1>
-    <span style="font-family: 'Oswald', sans-serif; color: black;text-decoration-line: underline; text-decoration-color: yellow;  text-decoration-thickness: 3px;text-underline-offset: 6px; font-size:20px;">We craft the,we wont say the best <br>But through 70 years of experience in the industry</span>
+    <span style="font-family: 'Oswald', sans-serif; color: #91C8E4;text-decoration-line: underline; text-decoration-color: yellow;  text-decoration-thickness: 3px;text-underline-offset: 6px; font-size:20px;">We craft the,we wont say the best <br>But through 70 years of experience in the industry</span>
     <br>
     <br>
     <button class="btn" style="border-radius:50px;color:white;background-color:black;width:200px;">ORDER NOW</button>
     <br>
     <br>
 <br>
-    <h4 style="color:black;"><b>Toe Comfort</b></h4>
-    <h2 style="color:black;"><b>FAST RUNNING</b></h2>
+    <h4 style="color:#146C94;"><b>Toe Comfort</b></h4>
+    <h2 style="color:#146C94;"><b>FAST RUNNING</b></h2>
   </div>
   <div class="col-lg-6">
     <img src="proimg/stud1-removebg-preview.png" alt="" class="imgcss img-fluid">
@@ -76,12 +76,7 @@ $respic=mysqli_fetch_assoc($quepro);
 </div>
 </div>
 
-</section> -->
-
-
-
-
-
+</section>
 
 <style>
 
@@ -91,6 +86,7 @@ $respic=mysqli_fetch_assoc($quepro);
     color: black;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
+    color:#034f84;
   }
   .block{
     height:110%;
@@ -158,7 +154,7 @@ $respic=mysqli_fetch_assoc($quepro);
       height: 1000px;
     }
   }
-</style>
+</style> -->
 
 <!-- just new design end -->
 
@@ -357,9 +353,40 @@ img {
     gap: 3rem;
   }
 }
+@media screen and (max-width: 1200px) {
+        .boot-card {
+            width: 250px;
+            height: 400px;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .boot-container {
+            flex-direction: column;
+        }
+
+        .boot-card {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+    .boot-card {
+        width: 100%;
+        margin: 0 10px; /* Adjust the horizontal margin as needed */
+        margin-bottom: 40px; /* Adjust the bottom margin as needed */
+    }
+}
 
 </style>
 <!-- effect end -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 <!--product display start -->
