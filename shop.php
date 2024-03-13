@@ -48,7 +48,7 @@ $respic=mysqli_fetch_assoc($quepro);
 
 </head>
 
-<body style="background-color:;color:#034f84;">
+<body style="background-color:#;color:#034f84;">
 
 <!-- just new design start -->
 <!-- <section class="block mt-5"> 
@@ -218,7 +218,7 @@ $respic=mysqli_fetch_assoc($quepro);
 :root {
   --dark-color-lighten: #f2f5ff;
   --red-card: #a62121;
-  --blue-card: #4bb7e6;
+  --blue-card: #041562;
   --btn: #141414;
   --btn-hover: #3a3a3a;
   --text: #fbf7f7;
@@ -284,6 +284,7 @@ img {
   transform: translate(0, -1.5rem);
   transition: transform 500ms ease-in-out;
   filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+  justify-content:center;
 }
 .boot-product-info {
   text-align: center;
