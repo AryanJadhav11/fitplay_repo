@@ -254,7 +254,7 @@ function getInitials($name) {
  <!-- ======= Header - NavBar ======= -->
   <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="turf.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
+        <h1 class="logo"><a href="index_home.php"><img src="favicon_io/favicon-32x32.png" > Fit<span style="color: #050;">Play</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
               

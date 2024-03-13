@@ -48,41 +48,40 @@ if ($rowCount > 0) {
 
 ?>
 <?php
-include('smtp/PHPMailerAutoload.php');
+// include('smtp/PHPMailerAutoload.php');
 
-function smtp_mailer($to, $subject, $message) {
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'tls';
-    $mail->Host = "smtp.gmail.com";
-    $mail->Port = 587;
-    $mail->IsHTML(true);
-    $mail->CharSet = 'UTF-8';
-    $mail->Username = "jadhavaryan467@gmail.com";
-    $mail->Password = "oozzyqfwnpufjuqi";
-    $mail->SetFrom("jadhavaryan467@gmail.com");
-    $mail->Subject = $subject;
-    $mail->Body = $message;
-    $mail->AddAddress($to);
-    $mail->SMTPOptions = array('ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => false
-    ));
-    if (!$mail->Send()) {
-        return $mail->ErrorInfo;
-    } else {
-        return 'Sent';
-    }
-}
+// function smtp_mailer($to, $subject, $message) {
+//     $mail = new PHPMailer();
+//     $mail->IsSMTP();
+//     $mail->SMTPAuth = true;
+//     $mail->SMTPSecure = 'tls';
+//     $mail->Host = "smtp.gmail.com";
+//     $mail->Port = 587;
+//     $mail->IsHTML(true);
+//     $mail->CharSet = 'UTF-8';
+//     $mail->Username = "jadhavaryan467@gmail.com";
+//     $mail->Password = "oozzyqfwnpufjuqi";
+//     $mail->SetFrom("jadhavaryan467@gmail.com");
+//     $mail->Subject = $subject;
+//     $mail->Body = $message;
+//     $mail->AddAddress($to);
+//     $mail->SMTPOptions = array('ssl' => array(
+//         'verify_peer' => false,
+//         'verify_peer_name' => false,
+//         'allow_self_signed' => false
+//     ));
+//     if (!$mail->Send()) {
+//         return $mail->ErrorInfo;
+//     } else {
+//         return 'Sent';
+//     }
+// }
 
 // Database connection
 
 
 
 
-require_once 'vendor/razorpay/Razorpay.php';
 
 // Function to verify Razorpay payment
 function verifyPayment($paymentId) {
@@ -114,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = isset($_POST['fname']) ? $_POST['fname'] : ''; 
     $mail = isset($_POST['email']) ? $_POST['email'] : '';
     $address = isset($_POST['address']) ? $_POST['address'] : '';
-    $itemname = isset($_POST['itemid']) ? $_POST['itemid'] : array();
+    // $itemname = isset($_POST['itemid']) ? $_POST['itemid'] : array();
 
    
 
@@ -128,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($paymentSuccess) {
                 // Insert booking into the database only if payment is successful
                 $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-                $insertSql = "INSERT INTO  buy_items (user_id, dates, pay_stats, item, name, email, address) VALUES ('$user_id', 'CURRENT_TIMESTAMP', 'PAID', '$itemname', '$fname', '$mail', '$address')";
+                $insertSql = "INSERT INTO `shopp`(`user_id`, `name`, `email`, `address`) VALUES ('$user_id','$fname','$mail','$address')";
 
                 if ($coni->query($insertSql) === TRUE) {
                     // Send email notification only when the booking is successful
@@ -153,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         // Booking failed message
                         $response['error_message'] = 'Booking failed. Please try again later.';
                     }
-                    echo "<script>alert('Your booking has been done')</script>";
+                    echo "<script>alert('purchase done')</script>";
                     // Send success response
                     $response['success'] = true;
                 } else {
@@ -161,22 +160,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $response['success'] = false;
                     $response['error'] = mysqli_error($coni);
                 }
-            } else {
-                // Payment failed
-                $response['success'] = false;
-                echo "<script>alert('Payment not done')</script>";
-                $response['error'] = 'Payment failed. Please try again.';
-            }
+            } 
         }
-        else {
-            // Log the error
-            error_log("Error in SQL query: " . mysqli_error($coni));
-            // Send error response with details
-            $response['success'] = false;
-            $response['error'] = mysqli_error($coni);
-        }
-    }
-
+}
+    
 
 $coni->close();
 ?>
@@ -188,9 +175,10 @@ $coni->close();
     <!-- Purchase form container -->
     <div class="container Purchase-container">
         <!-- Purchase form -->
-        <form id="purchaseForm" method="post">
+        <form id="purchaseForm" method="POST">
         <input type="hidden" id="razorpay_order_id" name="razorpay_order_id">
-<input type="hidden" id="razorpay_signature" name="razorpay_signature">
+        <input type="hidden" id="razorpay_signature" name="razorpay_signature">
+            
             <div class="form-group">
                 <label for="amount">Payable Amount:</label>
                 <input type="text" id="amount" name="amount" value="<?php echo $grandTotal; ?>" class="form-control" readonly>
@@ -215,16 +203,16 @@ $coni->close();
 
             
             <?php
-            if ($rowCount > 0) {
-                mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $iid = $row['item_id'];
-                    $item_name = $row['item_name'];
-                    $price = $row['price'];
-                    $quantity = $row['quantity'];
-                    echo '<input type="text" name="itemid[]" id="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">';
-                }
-            }
+            // if ($rowCount > 0) {
+            //     mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
+            //     while ($row = mysqli_fetch_assoc($result)) {
+            //         $iid = $row['item_id'];
+            //         $item_name = $row['item_name'];
+            //         $price = $row['price'];
+            //         $quantity = $row['quantity'];
+            //         echo '<input type="text" name="itemid[]" id="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">';
+            //     }
+            // }
             ?>
             
             <div class="pt-3">

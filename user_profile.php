@@ -1,16 +1,5 @@
+<?php include('header.php') ?>
 <?php
-session_start();
-function getInitials($name) {
-    $nameParts = explode(' ', $name);
-    $initials = '';
-    
-    foreach ($nameParts as $part) {
-        $initials .= strtoupper(substr($part, 0, 1));
-    }
-    
-    return $initials;
-}
-
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -26,60 +15,16 @@ if ($conn->connect_error) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ 
   <title>FITPLAY</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="favicon.png" rel="icon">
-  <link href="apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="aos.css" rel="stylesheet">
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons.min.css" rel="stylesheet">
-  <link href="glightbox.min.css" rel="stylesheet">
-  <link href="swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="style.css" rel="stylesheet">
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-      emailjs.init("NZwPsWRpzzWmVQjwb");
-    })();
-  </script>
-  
-  <!-- Add the avatar styles -->
-  <style>
-    .avatar {
-        width: 50px;
-        height: 50px;
-        background-color: #007bff;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-  </style>
 </head>
 
 <body>
-  <header id="header" class="d-flex align-items-center">
+  <!-- <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo"><a href="index.html">Fit<span style="color: rgb(166, 166, 166);">Play.</span></a></h1>
       <nav id="navbar" class="navbar">
@@ -99,7 +44,9 @@ if ($conn->connect_error) {
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
-  </header>
+  </header> -->
+ 
+  <!-- logout model -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -142,12 +89,12 @@ if ($conn->connect_error) {
               </h5>
 
               <div class="d-flex justify-content-center mb-2">
-               <a href="mybookings.php" style="color:white;"> <button type="button" class="btn btn-primary">View Your Bookings</button></a>
+               <a href="mybookings.php" style="color:white;"> <button type="button" class="btn btn-primary m-2">View Your Bookings</button></a><br>
                 <?php
                 if($_SESSION==true)
                 {
 
-                   echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                   echo '<button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                    Log Out</button>';
 
                 }
