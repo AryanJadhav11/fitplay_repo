@@ -79,45 +79,60 @@ function getInitials($name) {
 </head>
 
 <style>
-     .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #007bff;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
+   .avatar {
+       width: 30px;
+       height: 30px;
+       background-color: #007bff;
+       color: #ffffff;
+       font-size: 20px;
+       font-weight: bold;
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 10px;
+   }
+   .c-item{
+     height:480px;
 
-    .avatar:hover ul {
-        display: block;
-    }
+   }
 
-    .avatar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 12;
-    }
+   .c-img
+   {
+     height:100%;
+     object-fit:cover;
+     filter:brightness(0.6);
+   }
 
-    .avatar ul li {
-        padding: 10px;
-        white-space: nowrap;
-    }
+       .star-container {
+           display: flex;
+           align-items: center;
+           margin-top: 15px; /* Adjust margin as needed */
+       }
 
-    .avatar ul li:hover {
-        background-color: #f8f9fa;
-    }
-    </style>
+       .star-container i {
+           margin-right: 2px; /* Adjust margin between stars as needed */
+       }
+
+
+       .banner-container{
+         background-color:#ffff;
+         padding:10px;
+         margin-bottom:60px;
+         width:100%;
+         height:100%;
+         
+       }
+
+       .banner-containerw{
+         background-color:#ffff;
+         padding:10px;
+         margin-bottom:60px;
+         width:100%;
+         height:80%;
+         
+       }
+ </style>
 
 <body>
 
