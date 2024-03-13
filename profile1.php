@@ -301,6 +301,27 @@ function getInitials($name) {
                                         </div>
                                       </div>
                                     </div>
+
+                                    <div class="modal fade " id="FirstnameModal" tabindex="-1" aria-labelledby="FirstnameModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content rounded-4 shadow">
+                                          <div class="modal-header p-5 pb-4 border-bottom-0">
+                                            <h1 class="fw-bold mb-0 fs-2">Edit Firstname</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="xooqu"></button>
+                                          </div>
+                                    
+                                          <div class="modal-body p-5 pt-0">
+                                            <form class="">
+                                              <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-3" id="floatingInput" fdprocessedid="t1u6ar" required>
+                                                <label for="floatingInput">Firstname</label>
+                                              </div>
+                                              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="j2nmr">Done</button>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                     <!-- end pop up -->
 
 
@@ -313,7 +334,7 @@ function getInitials($name) {
                             <div class="d-block text-cent mt-5 mb-2">
 
                                 <div>
-                                    <p class="mb-2 h5">First Name</p>
+                                    <p class="mb-2 h5">First Name <button class="btn btn-sm rounded-0 mb-2" data-bs-toggle="modal" data-bs-target="#FirstnameModal" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pencil-square"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"><path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" /><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" /></svg></i></button></p>
                                     <p class="text-muted mb-0" id="firstname-display">
                                         <?php
                                                 if (isset($_SESSION['user_data'])) {
@@ -324,7 +345,7 @@ function getInitials($name) {
                                 <hr class="col-6">
                                 
                                 <div>
-                                    <p class="mb-2 h5">Last Name</p>
+                                    <p class="mb-2 h5">Last Name <button class="btn btn-sm rounded-0 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pencil-square"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"><path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" /><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" /></svg></i></button></p>
                                     <p class="text-muted mb-0" id="lastname-display">
                                         <?php
                                              if (isset($_SESSION['user_data'])) {
@@ -335,7 +356,7 @@ function getInitials($name) {
                                 <hr class="col-6">
 
                                 <div>
-                                    <p class="mb-2 h5">Username</p>
+                                    <p class="mb-2 h5">Username <button class="btn btn-sm rounded-0 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pencil-square"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"><path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" /><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" /></svg></i></button></p>
                                      
                                     <p class="text-muted mb-0" id="username-display">
                                         <?php
@@ -348,7 +369,7 @@ function getInitials($name) {
 
 
                                 <div>
-                                    <p class="mb-2 h5">Email</p>
+                                    <p class="mb-2 h5">Email <button class="btn btn-sm rounded-0 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="bi bi-pencil-square"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"><path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" /><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" /></svg></i></button></p>
                                     <p class="text-muted mb-0" id="email-display">
                                         <?php
                                              if (isset($_SESSION['user_data'])) {
@@ -379,8 +400,8 @@ function getInitials($name) {
                                           Do you want to Log out?
                                         </div>
                                         <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Log Out</button>
-                                          <button type="button" class="btn btn-primary">Cancel</button>
+                                        <a href="logout.php" style="color:white;"><button type="button" class="btn btn-secondary" >Log Out</button></a>
+                                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                         </div>
                                       </div>
                                     </div>

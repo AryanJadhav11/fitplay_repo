@@ -275,12 +275,12 @@ function getInitials($name) {
                 <li>
                 <?php
                 if (isset($_SESSION['user_data'])) {
-                  echo '<ul><li><a class="nav-link scrollto" href="mycart.php"><img src="data:image/png;base64,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" width="38px" height="38px"></a></li>';
+                  echo '<ul><li><a class="nav-link scrollto" href="mycart.php"><img src="proimg/cart_button.png" width="30px" height="30px"></a></li>';
                   echo '</ul>';
                   } 
                   ?>                         
                 </li>
-                                
+
                 <li class="dropdown pb-0" style="color: blue;">
                 <?php
                 if (isset($_SESSION['user_data'])) {
@@ -290,7 +290,7 @@ function getInitials($name) {
                   
                   echo '<a href="#"><span>';
                   echo '<div class="avatar">' . $userInitials . '</div>';
-                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
+                  echo '<ul><li><a href="profile1.php">View Profile</a></li>';
               
                   // Now you can directly access 'Rolee' without additional checks
                   if ($_SESSION['user_data']['username'] == "sk") {  

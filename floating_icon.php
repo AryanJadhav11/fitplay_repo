@@ -55,7 +55,7 @@
   z-index: 99999;
   bottom: 15px;
   right: 15px;
-  background-color: #d1cf39;
+  background-color: #144ecc;
   width: 50px;
   height: 50px;
   border-radius: 25px;

@@ -127,39 +127,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($paymentSuccess) {
                 // Insert booking into the database only if payment is successful
                 $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
-                $insertSql = "INSERT INTO `shopp`(`user_id`, `name`, `email`, `address`) VALUES ('$user_id','$fname','$mail','$address')";
+                $insertSql = "INSERT INTO `shopp`(`user_id`, `name`, `email`, `address` VALUES ('$user_id','$fname','$mail','$address')";
+                echo "<script>alert('purchase done')</script>";
 
-                if ($coni->query($insertSql) === TRUE) {
-                    // Send email notification only when the booking is successful
-                    $to = 'aryanjadhav686@gmail.com';
-                    $subject = 'New Booking';
-                    $message = "New booking by $userName on $date on $time for turf $name.";
-                    $result = smtp_mailer($to, $subject, $message);
+                // if ($coni->query($insertSql) === TRUE) {
+                //     // Send email notification only when the booking is successful
+                //     $to = 'aryanjadhav686@gmail.com';
+                //     $subject = 'New Booking';
+                //     $message = "New booking by $userName on $date on $time for turf $name.";
+                //     $result = smtp_mailer($to, $subject, $message);
 
-                    $uto = $userEmail;
-                    $usubject = 'Booking Done Successfully';
-                    $umessage = "Your booking by $userName on $date on $time for turf $name has been successfully done.";
-                    $uresult = smtp_mailer($uto, $usubject, $umessage);
+                //     $uto = $userEmail;
+                //     $usubject = 'Booking Done Successfully';
+                //     $umessage = "Your booking by $userName on $date on $time for turf $name has been successfully done.";
+                //     $uresult = smtp_mailer($uto, $usubject, $umessage);
 
-                    if ($result === 'Sent' && $uresult === 'Sent') {
-                        // Email sent successfully
-                        $response['email_status'] = 'Email sent successfully.';
-                        // Booking successful message
-                        $response['success_message'] = 'Booking successful!';
-                    } else {
-                        // Email sending failed
-                        $response['email_status'] = 'Email sending failed. ' . $result;
-                        // Booking failed message
-                        $response['error_message'] = 'Booking failed. Please try again later.';
-                    }
-                    echo "<script>alert('purchase done')</script>";
-                    // Send success response
-                    $response['success'] = true;
-                } else {
-                    // Send error response with details
-                    $response['success'] = false;
-                    $response['error'] = mysqli_error($coni);
-                }
+                //     if ($result === 'Sent' && $uresult === 'Sent') {
+                //         // Email sent successfully
+                //         $response['email_status'] = 'Email sent successfully.';
+                //         // Booking successful message
+                //         $response['success_message'] = 'Booking successful!';
+                //     } else {
+                //         // Email sending failed
+                //         $response['email_status'] = 'Email sending failed. ' . $result;
+                //         // Booking failed message
+                //         $response['error_message'] = 'Booking failed. Please try again later.';
+                //     }
+                //     echo "<script>alert('purchase done')</script>";
+                //     // Send success response
+                //     $response['success'] = true;
+                // } else {
+                //     // Send error response with details
+                //     $response['success'] = false;
+                //     $response['error'] = mysqli_error($coni);
+                // }
             } 
         }
 }
@@ -202,18 +203,7 @@ $coni->close();
             </div>
 
             
-            <?php
-            // if ($rowCount > 0) {
-            //     mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
-            //     while ($row = mysqli_fetch_assoc($result)) {
-            //         $iid = $row['item_id'];
-            //         $item_name = $row['item_name'];
-            //         $price = $row['price'];
-            //         $quantity = $row['quantity'];
-            //         echo '<input type="text" name="itemid[]" id="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">';
-            //     }
-            // }
-            ?>
+
             
             <div class="pt-3">
                 <button id="payeButton" type="submit" value="Submit" class="btn btn-primary btn-block" style="width: 100%;">Proceed to Payment</button>
