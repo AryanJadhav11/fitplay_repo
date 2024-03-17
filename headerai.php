@@ -81,6 +81,7 @@ function getInitials($name) {
         justify-content: center;
         margin-bottom: 10px;
     }
+
 </style>
 
   <script type="text/javascript"
@@ -258,7 +259,7 @@ function getInitials($name) {
   <script src="abtus/assets/masonry/masonry.pkgd.min.js"></script>
   <script src="abtus/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="abtus/assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
-  <script src="abtus/assets/smoothscroll/smooth-scroll.js"></script>
+
   <script src="abtus/assets/ytplayer/index.js"></script>
   <script src="abtus/assets/theme/js/script.js"></script>
   <script src="abtus/assets/formoid/formoid.min.js"></script>
