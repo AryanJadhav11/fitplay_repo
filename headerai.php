@@ -91,53 +91,7 @@ function getInitials($name) {
       filter:brightness(0.6);
     }
 
-    body{
-      background:#f3f5f8;
-      overflow-x:hidden;
-    }
-        .star-container {
-            display: flex;
-            align-items: center;
-            margin-top: 15px; /* Adjust margin as needed */
-        }
-
-        .star-container i {
-            margin-right: 2px; /* Adjust margin between stars as needed */
-        }
-    .card-container {
-      background-color:#ffff;
-      padding:20px;
-      border-radius:20px;
-             margin:40px;
-            display: flex;
-            gap: 20px; /* Adjust the margin between cards */
-        }
-
-        .card {
-            width: 18rem;
-        }
-
-        .card-img-top{
-          height :100%;
-          width:100%;
-        }
-
-        .banner-container{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:60px;
-          width:100%;
-          height:100%;
-          
-        }
-        .banner-containerw{
-          background-color:#ffff;
-          padding:10px;
-          margin-bottom:6px;
-          width:100%;
-          height:40%;
-          
-        }
+ 
 </style>
 
   <script type="text/javascript"

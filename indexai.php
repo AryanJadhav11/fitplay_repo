@@ -953,7 +953,7 @@
             <div class="col-12 mt-4">
                 <p class="mbr-fonts-style copyright display-7">
                     © 2024 FitPlay. All Rights Reserved
-                </p>noscroll
+                </p>
             </div>
         </div>
     </div>
