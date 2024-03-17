@@ -427,4 +427,5 @@ function getInitials($name) {
         crossorigin="anonymous"></script>
 </body>
 
-</html>z
+</html>
+
