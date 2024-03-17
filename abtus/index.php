@@ -35,7 +35,7 @@
       <div class="navbar-brand">
         <span class="navbar-logo">
 					<a href="https://mobiri.se">
-						<img src="assets/images/photo-1552674605-db6ffd4facb5.jpeg" style="height: 4.3rem;">
+						<img src="favicon_io/favicon.ioc" style="height: 4.3rem;">
 					</a>
 				</span>
 				<span class="navbar-caption-wrap">
