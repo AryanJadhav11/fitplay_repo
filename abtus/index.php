@@ -34,12 +34,10 @@
     <div class="container">
       <div class="navbar-brand">
         <span class="navbar-logo">
-					<a href="https://mobiri.se">
-						<img src="assets/images/photo-1552674605-db6ffd4facb5.jpeg" style="height: 4.3rem;">
-					</a>
+						<img src="../favicon_io/android-chrome-512x512.png" style="height: 4.3rem;">
 				</span>
 				<span class="navbar-caption-wrap">
-          <a class="navbar-caption text-black display-4" href="https://mobiri.se">FitPlay</a>
+          <a class="navbar-caption text-black display-4" >FitPlay.</a>
         </span>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -111,7 +109,7 @@
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style display-5">
-							<strong>Max</strong></h6>
+							<strong>Aryan</strong></h6>
 						<p class="mbr-text mbr-fonts-style display-7">Chief Turf Booker</p>
 					</div>
 				</div>
@@ -123,7 +121,7 @@
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style display-5">
-							<strong>Luna</strong></h6>
+							<strong>Om</strong></h6>
 						<p class="mbr-text mbr-fonts-style display-7">Gym Explorer</p>
 					</div>
 				</div>
@@ -135,7 +133,7 @@
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style display-5">
-							<strong>Leo</strong></h6>
+							<strong>Yash</strong></h6>
 						<p class="mbr-text mbr-fonts-style display-7">Equipment Guru</p>
 					</div>
 				</div>
@@ -147,7 +145,7 @@
           </div>
           <div class="item-content align-left">
             <h6 class="item-subtitle mbr-fonts-style display-5">
-              <strong>Aria</strong>
+              <strong>Amit</strong>
             </h6>
             <p class="mbr-text mbr-fonts-style display-7">Fitness Fashionista</p>
           </div>
@@ -176,8 +174,6 @@
     </div>
   </div>
 </section>
-    <style>
-</style>
 <section class="features03 cid-u7irD0gKYG" id="features-7-u7irD0gKYG">
     <div class="container-fluid">
         <div class="row">
@@ -930,9 +926,9 @@
                 <div class="card-wrapper">
                     <div class="text-wrapper">
                         <ul class="list mbr-fonts-style display-7">
-                          <li class="mbr-text item-wrap">Phone: <a href="tel:123-456-7890" class="text-black">123-456-7890</a></li>
-                          <li class="mbr-text item-wrap">WhatsApp: <a href="tel:123-456-7890" class="text-black">123-456-7890</a></li>
-                          <li class="mbr-text item-wrap">Email: <a href="mailto:info@fitplay.com" class="text-black">info@fitplay.com</a></li>
+                          <li class="mbr-text item-wrap">Phone: <a href="tel:123-456-7890" class="text-black">+91 7822894486</a></li>
+                          <li class="mbr-text item-wrap">WhatsApp: <a href="tel:123-456-7890" class="text-black">+91 7822894486</a></li>
+                          <li class="mbr-text item-wrap">Email: <a href="mailto:info@fitplay.com" class="text-black">thefitplay@gmail.com</a></li>
                           <li class="mbr-text item-wrap">Address:  India</li>
                           <li class="mbr-text item-wrap">Working Hours: Mon-Fri: 9am-6pm</li>
                         </ul>
