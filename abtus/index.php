@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Site made with Mobirise AI Website Builder v0.01, https://ai.mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise AI v0.01, ai.mobirise.com">
@@ -34,13 +33,7 @@
     <div class="container">
       <div class="navbar-brand">
         <span class="navbar-logo">
-<<<<<<< HEAD
-					<a href="https://mobiri.se">
-						<img src="favicon_io/favicon.ioc" style="height: 4.3rem;">
-					</a>
-=======
 						<img src="../favicon_io/android-chrome-512x512.png" style="height: 4.3rem;">
->>>>>>> 1839b0353f1983e1f9064ee1a5857a0249d32309
 				</span>
 				<span class="navbar-caption-wrap">
           <a class="navbar-caption text-black display-4" >FitPlay.</a>
