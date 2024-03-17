@@ -103,7 +103,6 @@
   </div>
 </section>
 <section class="features03 cid-u7irD0gKYG" id="features-7-u7irD0gKYG">
-    <div class="container">
     <div class="container-fluid">
         <div class="row">
             <div class="item features-image col-12 col-md-6 col-lg-4 active">
@@ -167,7 +166,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 <section class="pricing02 cid-u7irD0gQxZ" id="product-list-8-u7irD0gQxZ">
@@ -897,7 +895,6 @@
         </div>
     </div>
 </section>
-
 
   
 </body>
