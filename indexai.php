@@ -8,20 +8,20 @@
   <meta name="description" content="FitPlay is the ultimate online platform for booking turfs, exploring gyms, and purchasing sports equipment. Say goodbye to manual turf bookings and hello to convenience!">
 
   <title>FitPlay Turf &amp; Gym</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/parallax/jarallax.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="abtus/assets/web/abtus/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="abtus/assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="abtus/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="abtus/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="abtus/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="abtus/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="abtus/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="abtus/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="abtus/assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/additional.css"><link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
+  <link rel="preload" as="style" href="abtus/assets/mobirise/css/additional.css"><link rel="stylesheet" href="abtus/assets/mobirise/css/additional.css" type="text/css">
   
-  <link rel="stylesheet" href="assets/index.css">
+  <link rel="stylesheet" href="abtus/assets/index.css">
 
   <style>:root{ --background: #FFF8E6; --dominant-color: #FFB703; --primary-color: #219EBC; --secondary-color: #ED8D39; --success-color: #20AC6B; --danger-color: #AE1E2C; --warning-color: #CC9900; --info-color: #0AA3C2; --background-text: #000000; --dominant-text: #000000; --primary-text: #FFFFFF; --secondary-text: #000000; --success-text: #FFFFFF; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #FFFFFF;}</style>
 </head>
@@ -104,7 +104,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1509098681029-b45e9c845022.jpeg">
+						<img src="abtus/assets/images/photo-1509098681029-b45e9c845022.jpeg">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style display-5">
@@ -116,7 +116,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1676385901160-31e1b9e1c0c7.jpeg">
+						<img src="abtus/assets/images/photo-1676385901160-31e1b9e1c0c7.jpeg">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style display-5">
@@ -128,7 +128,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1629114112651-a8c8c27fb851.jpeg">
+						<img src="abtus/assets/images/photo-1629114112651-a8c8c27fb851.jpeg">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style display-5">
@@ -140,7 +140,7 @@
       <div class="item features-image col-12 col-md-6 col-lg-3">
         <div class="item-wrapper">
           <div class="item-img mb-3">
-            <img src="assets/images/photo-1529139574466-a303027c1d8b.jpeg">
+            <img src="abtus/assets/images/photo-1529139574466-a303027c1d8b.jpeg">
           </div>
           <div class="item-content align-left">
             <h6 class="item-subtitle mbr-fonts-style display-5">
@@ -158,16 +158,16 @@
     <div class="grid-container">
       <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
         <div class="grid-item">
-          <img src="assets/images/photo-1486218119243-13883505764c.jpeg">
+          <img src="abtus/assets/images/photo-1486218119243-13883505764c.jpeg">
         </div>
         <div class="grid-item">
-          <img src="assets/images/photo-1579126038374-6064e9370f0f.jpeg">
+          <img src="abtus/assets/images/photo-1579126038374-6064e9370f0f.jpeg">
         </div>
         <div class="grid-item">
-          <img src="assets/images/photo-1571902943202-507ec2618e8f.jpeg">
+          <img src="abtus/assets/images/photo-1571902943202-507ec2618e8f.jpeg">
         </div>
         <div class="grid-item">
-          <img src="assets/images/photo-1546483875-ad9014c88eba.jpeg">
+          <img src="abtus/assets/images/photo-1546483875-ad9014c88eba.jpeg">
         </div>
       </div>
     </div>
@@ -179,7 +179,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1605296867304-46d5465a13f1.jpeg">
+                        <img src="abtus/assets/images/photo-1605296867304-46d5465a13f1.jpeg">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5">
@@ -199,7 +199,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1603503363848-6952525df449.jpeg" data-slide-to="1" data-bs-slide-to="1">
+                        <img src="abtus/assets/images/photo-1603503363848-6952525df449.jpeg" data-slide-to="1" data-bs-slide-to="1">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
@@ -219,7 +219,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-4">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1696446700088-3e800f748407.jpeg" data-slide-to="2" data-bs-slide-to="2">
+                        <img src="abtus/assets/images/photo-1696446700088-3e800f748407.jpeg" data-slide-to="2" data-bs-slide-to="2">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
@@ -254,7 +254,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1534258936925-c58bed479fcb.jpeg" >
+                        <img src="abtus/assets/images/photo-1534258936925-c58bed479fcb.jpeg" >
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5">
@@ -275,7 +275,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1552196563-55cd4e45efb3.jpeg">
+                        <img src="abtus/assets/images/photo-1552196563-55cd4e45efb3.jpeg">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5">
@@ -295,7 +295,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1507398941214-572c25f4b1dc.jpeg" alt="">
+                        <img src="abtus/assets/images/photo-1507398941214-572c25f4b1dc.jpeg" alt="">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5">
@@ -315,7 +315,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1571019613454-1cb2f99b2d8b.jpeg">
+                        <img src="abtus/assets/images/photo-1571019613454-1cb2f99b2d8b.jpeg">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5">
@@ -448,7 +448,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1627483297886-49710ae1fc22.jpeg">
+                        <img src="abtus/assets/images/photo-1627483297886-49710ae1fc22.jpeg">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mt-0 mb-3 display-7">
@@ -469,7 +469,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1534438327276-14e5300c3a48.jpeg" data-slide-to="1" data-bs-slide-to="1">
+                        <img src="abtus/assets/images/photo-1534438327276-14e5300c3a48.jpeg" data-slide-to="1" data-bs-slide-to="1">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
@@ -489,7 +489,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1584735935682-2f2b69dff9d2.jpeg" data-slide-to="2" data-bs-slide-to="2">
+                        <img src="abtus/assets/images/photo-1584735935682-2f2b69dff9d2.jpeg" data-slide-to="2" data-bs-slide-to="2">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
@@ -509,7 +509,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1579758629938-03607ccdbaba.jpeg" data-slide-to="3" data-bs-slide-to="4">
+                        <img src="abtus/assets/images/photo-1579758629938-03607ccdbaba.jpeg" data-slide-to="3" data-bs-slide-to="4">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
@@ -554,7 +554,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3 active">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1594882645126-14020914d58d.jpeg">
+						<img src="abtus/assets/images/photo-1594882645126-14020914d58d.jpeg">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
@@ -569,7 +569,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1477332552946-cfb384aeaf1c.jpeg" data-slide-to="1" data-bs-slide-to="1">
+						<img src="abtus/assets/images/photo-1477332552946-cfb384aeaf1c.jpeg" data-slide-to="1" data-bs-slide-to="1">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
@@ -584,7 +584,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1574680096145-d05b474e2155.jpeg" data-slide-to="2" data-bs-slide-to="2">
+						<img src="abtus/assets/images/photo-1574680096145-d05b474e2155.jpeg" data-slide-to="2" data-bs-slide-to="2">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
@@ -599,7 +599,7 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="assets/images/photo-1594737625785-a6cbdabd333c.jpeg" data-slide-to="3" data-bs-slide-to="3">
+						<img src="abtus/assets/images/photo-1594737625785-a6cbdabd333c.jpeg" data-slide-to="3" data-bs-slide-to="3">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
@@ -731,42 +731,42 @@
             <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2 active">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1651044450619-5ce74d316987.jpeg" data-slide-to="1" data-bs-slide-to="1">
+                        <img src="abtus/assets/images/photo-1651044450619-5ce74d316987.jpeg" data-slide-to="1" data-bs-slide-to="1">
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1617727553252-65863c156eb0.jpeg" data-slide-to="2" data-bs-slide-to="2">
+                        <img src="abtus/assets/images/photo-1617727553252-65863c156eb0.jpeg" data-slide-to="2" data-bs-slide-to="2">
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1554463529-e27854014799.jpeg" data-slide-to="3" data-bs-slide-to="3">
+                        <img src="abtus/assets/images/photo-1554463529-e27854014799.jpeg" data-slide-to="3" data-bs-slide-to="3">
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1646825461394-ebd1800141d1.jpeg" data-slide-to="4" data-bs-slide-to="4">
+                        <img src="abtus/assets/images/photo-1646825461394-ebd1800141d1.jpeg" data-slide-to="4" data-bs-slide-to="4">
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1606136968306-ab2868cc1f21.jpeg" data-slide-to="5" data-bs-slide-to="5">
+                        <img src="abtus/assets/images/photo-1606136968306-ab2868cc1f21.jpeg" data-slide-to="5" data-bs-slide-to="5">
                     </div>
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" data-slide-to="6" data-bs-slide-to="6">
+                        <img src="abtus/assets/images/photo-1681415851723-dca11d0ec9a6.jpeg" data-slide-to="6" data-bs-slide-to="6">
                     </div>
                 </div>
             </div>
@@ -967,17 +967,17 @@
     </div>
 </section>
 
-<script src="assets/parallax/jarallax.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/scrollgallery/scroll-gallery.js"></script>
-  <script src="assets/masonry/masonry.pkgd.min.js"></script>
-  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/ytplayer/index.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
+<script src="abtus/assets/parallax/jarallax.js"></script>
+  <script src="abtus/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="abtus/assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="abtus/assets/scrollgallery/scroll-gallery.js"></script>
+  <script src="abtus/assets/masonry/masonry.pkgd.min.js"></script>
+  <script src="abtus/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="abtus/assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+  <script src="abtus/assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="abtus/assets/ytplayer/index.js"></script>
+  <script src="abtus/assets/theme/js/script.js"></script>
+  <script src="abtus/assets/formoid/formoid.min.js"></script>
   
   <script>
 
