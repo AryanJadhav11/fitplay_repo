@@ -81,17 +81,6 @@ function getInitials($name) {
         justify-content: center;
         margin-bottom: 10px;
     }
-    .c-item{
-      height:480px;
-    }
-    .c-img
-    {
-      height:100%;
-      object-fit:cover;
-      filter:brightness(0.6);
-    }
-
- 
 </style>
 
   <script type="text/javascript"
