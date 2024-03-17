@@ -156,7 +156,7 @@
 <section class="gallery07 cid-u7irD0gIs5" id="gallery-14-u7irD0gIs5">
   <div class="container-fluid gallery-wrapper">
     <div class="grid-container">
-      <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
+      <div class="grid-container-3" style="transform: translate3d(-300px, 0px, 0px);">
         <div class="grid-item">
           <img src="abtus/assets/images/photo-1486218119243-13883505764c.jpeg">
         </div>
@@ -927,15 +927,15 @@
                         <ul class="list mbr-fonts-style display-7">
                           <li class="mbr-text item-wrap">Phone: <a href="tel:123-456-7890" class="text-black">+91 7822894486</a></li>
                           <li class="mbr-text item-wrap">WhatsApp: <a href="tel:123-456-7890" class="text-black">+91 7822894486</a></li>
-                          <li class="mbr-text item-wrap">Email: <a href="mailto:info@fitplay.com" class="text-black">thefitplay@gmail.com</a></li>
-                          <li class="mbr-text item-wrap">Address:  India</li>
+                          <li class="mbr-text item-wrap">Email: <a href="mailto:thefitplay@gmail.com" class="text-black">thefitplay@gmail.com</a></li>
+                          <li class="mbr-text item-wrap">Address: Kolhapur, Maharashtra</li>
                           <li class="mbr-text item-wrap">Working Hours: Mon-Fri: 9am-6pm</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="map-wrapper col-md-12 col-lg-6">
-                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;%20India" allowfullscreen=""></iframe></div>
+                <div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d826.8607093049397!2d74.23844584208696!3d16.71375039412697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc101b42288ef73%3A0xa3a0f0995523d6f1!2sDr.%20Bapuji%20Salunke%20Institute%20Of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1710705397944!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
             </div>
         </div>
     </div>
