@@ -567,7 +567,8 @@
 
 
 
-    <!-- <section class="list1 cid-u7irD0iPU1" id="faq-1-u7irD0iPU1">
+    <!-- 
+<section class="list1 cid-u7irD0iPU1" id="faq-1-u7irD0iPU1">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-12 col-lg-10 m-auto">
