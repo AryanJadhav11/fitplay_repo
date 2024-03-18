@@ -155,15 +155,25 @@ function getInitials($name) {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="indexai.php">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link link text-black display-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Nested Dropdown Menu -->
+                <li><a class="dropdown-item" href="turf.php">TURF</a></li>
+                <li><a class="dropdown-item" href="gym.php">GYM</a></li>
+                <li><a class="dropdown-item" href="shop.php">SHOP</a></li>
+             </ul>
+           </li>
+           </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#">Turfs</a>
-                    </li>
+            <a class="nav-link link text-black display-4" href="#">About</a>
+          </li>
+          </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#" aria-expanded="false">Gyms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#">Shop</a>
-                    </li>
+            <a class="nav-link link text-black display-4" href="contactu.php">Contact</a>
+          </li>
                     <li>
                         <?php
                             if (isset($_SESSION['user_data'])) {

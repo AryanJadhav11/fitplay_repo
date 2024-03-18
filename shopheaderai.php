@@ -126,8 +126,6 @@ function getInitials($name) {
   <style>:root{ --background: #EAF9E7; --dominant-color: #29BF12; --primary-color: #ABFF4F; --secondary-color: #F21B3F; --success-color: #3FDC93; --danger-color: #DD3E4D; --warning-color: #FFC61C; --info-color: #28D1F3; --background-text: #000000; --dominant-text: #FFFFFF; --primary-text: #000000; --secondary-text: #FFFFFF; --success-text: #000000; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #000000;}</style>
 </head>
 
-
-
 <body>
 
 <section class="menu menu2 cid-u7iHraKbjA" once="menu" id="menu-5-u7iHraKbjA">
@@ -158,14 +156,23 @@ function getInitials($name) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
           <li class="nav-item">
-            <a class="nav-link link text-black display-4" href="#">Equipment</a>
+            <a class="nav-link link text-black display-4" href="indexai.php">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link link text-black display-4" href="#"
-              aria-expanded="false">Deals</a>
-          </li>
-          <li class="nav-item">
+          <li class="nav-item dropdown">
+              <a class="nav-link link text-black display-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Nested Dropdown Menu -->
+                <li><a class="dropdown-item" href="turf.php">TURF</a></li>
+                <li><a class="dropdown-item" href="gym.php">GYM</a></li>
+                <li><a class="dropdown-item" href="shop.php">SHOP</a></li>
+             </ul>
+           </li>
+           </li>
+                    <li class="nav-item">
             <a class="nav-link link text-black display-4" href="#">About</a>
+          </li>
+          </li>
+                    <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="contactu.php">Contact</a>
           </li>
           <li>
                         <?php
