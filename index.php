@@ -339,11 +339,7 @@ $respic=mysqli_fetch_assoc($quepro);
          </div>
       </div>
       <!-- end project section -->
-      <!-- fashion section -->
-      <div class="fashion pb-5 pt-5" style="height:300px;">
-         <img src="shoppnew/images/fashion.jpg" alt="#" height="300px"/>
-      </div>
-      <!-- end fashion section -->
+
       <!-- PRODUCT CARDS START -->
 <style>
   .fea {
