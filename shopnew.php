@@ -59,9 +59,9 @@ $respic=mysqli_fetch_assoc($quepro);
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
+
       <script src="shoppnew/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="shoppnew/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script src="shoppnew/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -177,19 +177,19 @@ $respic=mysqli_fetch_assoc($quepro);
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <section class="banner_main">
+      <section class="banner_main" style= "background-image: url('proimg/sport2_blur.png') ; ">
          <div class="container">
             <div class="row">
                <div class="col-md-8">
                   <div class="text-bg">
-                     <h1> <span class="blodark"> Romofyi </span> <br>Trands 2019</h1>
+                     <h1> <span class="blodark"> FitPlay Shop </span> <br>Gear Up To Fitness</h1>
                      <p>A huge fashion collection for ever </p>
                      <a class="read_more" href="#">Shop now</a>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="ban_img">
-                     <figure><img src="shoppnew/images/ban_img.png" alt="innerbanner"/></figure>
+                  <div class="ban_img pt-6">
+                     <figure><img src="proimg/banner.png" alt="innerbanner" width="750px" height="750px"/></figure>
                   </div>
                </div>
             </div>
@@ -339,7 +339,11 @@ $respic=mysqli_fetch_assoc($quepro);
          </div>
       </div>
       <!-- end project section -->
-
+   <section>
+      <div>
+         <img src="ONE.png" width="100%">
+      </div>
+</section>   
       <!-- PRODUCT CARDS START -->
 <style>
   .fea {
@@ -612,49 +616,12 @@ $respic=mysqli_fetch_assoc($quepro);
             </div>
          </div>
       </div>
+   </div>
       <!-- end three_box section -->
 
       <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="inror_box">
-                        <h3>INFORMATION </h3>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="inror_box">
-                        <h3>MY ACCOUNT </h3>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="inror_box">
-                        <h3>ABOUT  </h3>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="inror_box">
-                        <h3>CONTACTS  </h3>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+      <footer style="width:100%;">
+      <?php include('footer.php') ?>
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
