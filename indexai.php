@@ -195,7 +195,7 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 <!-- <section class="pricing02 cid-u7irD0gQxZ" id="product-list-8-u7irD0gQxZ">
     <div class="container-fluid">
         <div class="row justify-content-center">
