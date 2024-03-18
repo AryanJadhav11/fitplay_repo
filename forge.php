@@ -3,37 +3,6 @@
 
 ?>
 
-<?php
-include('smtp/PHPMailerAutoload.php');
-
-function smtp_mailer($to, $subject, $message) {
-  $mail = new PHPMailer();
-  $mail->IsSMTP();
-  $mail->SMTPAuth = true;
-  $mail->SMTPSecure = 'tls';
-  $mail->Host = "smtp.gmail.com";
-  $mail->Port = 587;
-  $mail->IsHTML(true);
-  $mail->CharSet = 'UTF-8';
-  $mail->Username = "jadhavaryan467@gmail.com";
-  $mail->Password = "oozzyqfwnpufjuqi";
-  $mail->SetFrom("jadhavaryan467@gmail.com");
-  $mail->Subject = $subject;
-  $mail->Body = $message;
-  $mail->AddAddress($to);
-  $mail->SMTPOptions = array('ssl' => array(
-      'verify_peer' => false,
-      'verify_peer_name' => false,
-      'allow_self_signed' => false
-  ));
-  if (!$mail->Send()) {
-      return $mail->ErrorInfo;
-  } else {
-      return 'Sent';
-  }
-}
-
-?>
 
 <?php
   if (isset($_POST['submit'])){
@@ -57,15 +26,13 @@ $phone=$_POST['userNum'];
 
 <body>
 <!-- content -->
-<section class="pt-7 pb-0">
-  <div class="container">
+<section class="pt-5 pb-0">
+  <div class="mx-5 px-5">
     <div class="row gx-5">
     <aside class="col-lg-6 py-0">
-    <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:650px; position: relative;">
+    <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:100%; position: relative;">
         <!-- Main Image -->
-        <a id="mainImageLink" data-fslightbox="mygallery" class="rounded-4"  data-type="image">
             <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 img-fluid fit" src="./GYm/assets/img/forgelogo.jpeg" alt="Main Image" />
-        </a>
         <!-- Previous Button -->
         <a id="prevButton" class="prev" onclick="changeImage(-1)" style="position: absolute; color:white; text-decoration:none; top: 50%; left: 10px; transform: translateY(-50%); z-index: 1;">&#10094;</a>
         <!-- Next Button -->
@@ -180,7 +147,7 @@ $phone=$_POST['userNum'];
           
         </div>
           <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.943762714696!2d74.2431299!3d16.7296576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10122281fb59f%3A0x617ecc9e50dfdeb2!2sThe%20Forge%20Fitness%20Club%2C%20Kolhapur%20%7C%20Best%20Gym%20in%20Kolhapur%20%7C%20Fitness%20centre%20in%20Kolhapur!5e0!3m2!1sen!2sin!4v1709967587601!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.943762714696!2d74.2431299!3d16.7296576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10122281fb59f%3A0x617ecc9e50dfdeb2!2sThe%20Forge%20Fitness%20Club%2C%20Kolhapur%20%7C%20Best%20Gym%20in%20Kolhapur%20%7C%20Fitness%20centre%20in%20Kolhapur!5e0!3m2!1sen!2sin!4v1709967587601!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
     </main>
     </div>

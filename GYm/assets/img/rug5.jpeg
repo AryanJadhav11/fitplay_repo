@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://ruggedian.in/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>RUGGEDIAN FITNESS MULTIPLEX</title>
+<!-- Stylesheets -->
+<link rel="shortcut icon" href="https://ruggedian.in/images/png/favicon.png">
+<link href="./rug5_files/bootstrap.css" rel="stylesheet">
+<link href="./rug5_files/revolution-slider.css" rel="stylesheet">
+<link href="./rug5_files/style.css" rel="stylesheet">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="./rug5_files/bootstrap-margin-padding.css" rel="stylesheet">
+<link href="./rug5_files/responsive.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style><link type="text/css" rel="stylesheet" href="./rug5_files/css2"></head>
+
+<body>
+<div class="page-wrapper fixed-header">
+ 	
+    <!-- Preloader -->
+    <div class="preloader" style="display: none;"></div>
+
+  
+    <!-- header -->
+    <header class="construct header-curvy">
+        <div class="search-box">
+            <div class="container">
+                <div class="pull-right search  col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                    <form action="https://ruggedian.in/#">
+                        <input type="text" placeholder="Search Here"> <button type="submit"><i class="icon icon-Search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="cart-box">
+            <div class="container">
+                <div class="pull-right cart col-lg-6 col-xs-12">
+                    <!--<p><i class="icon icon-FullShoppingCart"></i> You Have <span>1 Item</span> in your Cart. Price is <span>$199</span></p>-->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="clearfix">
+                <div class="pull-left logo">
+                    <a href="https://ruggedian.in/index.html">
+                        <img src="./rug5_files/logo1.png" alt="FitClub">
+                    </a>
+                </div>
+                <nav class="pull-right mainmenu-container clearfix">
+                   
+                    <button class="mainmenu-toggler">
+                        
+                    </button>
+                    <ul class="mainmenu pull-right">
+                        <li class="">
+                            <a href="https://ruggedian.in/index.html">Home</a>
+                        
+                        </li>
+                        <li class=""><a href="https://ruggedian.in/about.html">About</a>
+                           <!-- <ul class="submenu">
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>-->
+                        </li>
+						
+						
+                      <!--  <li class=""><a href="#">Classes</a> </li>-->
+                           
+                        <!--<li class="">
+                        	<a href="populer.html">Our Popular</a> </li>-->
+                      
+                        
+                        <!--<li class="">
+                            <a href="#">Gallery</a>
+                            
+                          
+                        </li>-->
+						
+                        <li class="">
+                            <a href="https://ruggedian.in/event.html">Event</a>
+                       <!--   <ul class="submenu">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-two-column.html">Blog Two Column</a></li>
+                                <li><a href="blog-three-column.html">Blog Three Column</a></li>
+                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                <li><a href="blog-detail.html">Blog Details</a></li>
+                            </ul>-->
+                        </li>
+                        <!-- <li><a href="offer.html">Offers</a></li>
+                        <li><a href="Travel Pass.html">Travel Pass</a></li> -->
+                        <li><a href="https://ruggedian.in/Blog.html">Blog</a></li>
+                        <li><a href="https://ruggedian.in/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--End Main Header -->  
+    
+    <!--Main Slider-->
+    <section class="main-slider">
+        <div style="position:relative;width:100%;height:auto;margin-top:0px;margin-bottom:0px" class="forcefullwidth_wrapper_tp_banner"><div class="tp-banner-container" style="left: 0px; position: absolute; width: 1903px; overflow: visible;">
+            <div class="tp-banner revslider-initialised tp-simpleresponsive hovered" id="revslider-869" style="max-height: 820px; background-color: rgba(0, 0, 0, 0); background-image: none; height: 820px;">
+                <ul class="tp-revslider-mainul" style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
+                    
+                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/1.jpg" data-saveperformance="off" data-title="RUGGEDIAN FITNESS MULTIPLEX" class="tp-revslider-slidesli active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+                    <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center center" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/main-slider/1.jpg" data-src="images/main-slider/1.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/main-slider/1.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 0; visibility: hidden;"></div></div>
+                   
+                    
+                <div class="tp-caption lfb tp-resizeme start" data-x="center" data-hoffset="-15" data-y="center" data-voffset="0" data-speed="1500" data-start="1000" data-easing="easeOutExpo" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-endeasing="Power4.easeIn" style="z-index: 4; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 25px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 14px; left: 936.5px; top: 410px; visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 845, 0, 1);">
+                    <!--<div class="slider-title2 curvy-bg curvy-white text-center"><h2 class="title">Maharashtra’s BIGGEST</br>FITNESS HUB</h2></div></div>-->
+                  
+                    </div></li>
+					
+					
+                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/2.jpg" data-saveperformance="off" data-title="RUGGEDIAN FITNESS MULTIPLEX" class="tp-revslider-slidesli active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+                    <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center center" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/main-slider/2.jpg" data-src="images/main-slider/2.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/main-slider/2.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 0; visibility: hidden;"></div></div> 
+                   </li>
+                    
+                    <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/3.jpg" data-saveperformance="off" data-title="RUGGEDIAN FITNESS MULTIPLEX" class="tp-revslider-slidesli active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+                    <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center center" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/main-slider/3.jpg" data-src="images/main-slider/3.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/main-slider/3.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 0; visibility: hidden;"></div></div>
+
+                    </li><li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/4.jpg" data-saveperformance="off" data-title="RUGGEDIAN FITNESS MULTIPLEX" class="tp-revslider-slidesli active-revslide current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1;">
+                    <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center center" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/main-slider/4.jpg" data-src="images/main-slider/4.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/main-slider/4.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;"></div></div> 
+                     
+                    </li><li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/5.jpg" data-saveperformance="off" data-title="RUGGEDIAN FITNESS MULTIPLEX" class="tp-revslider-slidesli active-revslide" style="width: 100%; height: 100%; overflow: hidden; visibility: hidden; opacity: 0; z-index: 18;">
+                    <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center center" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="images/main-slider/5.jpg" data-src="images/main-slider/5.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;images/main-slider/5.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; visibility: hidden; opacity: 0;"></div></div>
+
+                    <!-- <li data-transition="slideup" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/6.jpg"  data-saveperformance="off"  data-title="RUGGEDIAN FITNESS MULTIPLEX">
+                    <img src="images/main-slider/6.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
+
+
+                    
+                 
+                    </li>
+                    
+                </ul>
+                
+            	<div class="tp-bannertimer" style="width: 47.7%; visibility: visible; transform: translate3d(0px, 0px, 0px);"></div>
+            <div class="tp-loader spinner4" style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
+        <div class="tp-bullets simplebullets preview4" style="bottom: 20px; left: 50%; margin-left: -45px;"><div class="bullet first"></div><div class="bullet"></div><div class="bullet"></div><div class="bullet selected"></div><div class="bullet last"></div><div class="tpclear"></div></div><div style="position: absolute; top: 410px; margin-top: -55px; left: 0px;" class="tp-leftarrow tparrows default preview4"><div class="tp-arr-allwrapper" style="visibility: hidden; opacity: 0;"><div class="tp-arr-iwrapper" style="transform: matrix(1, 0, 0, 1, -180, 0);"><div class="tp-arr-imgholder" style="transform: matrix(1, 0, 0, 1, 0, 0); background-image: url(&quot;images/main-slider/3.jpg&quot;);"></div><div class="tp-arr-imgholder2" style="background-image: url(&quot;images/main-slider/3.jpg&quot;); transform: matrix(1, 0, 0, 1, 0, 0);"></div><div class="tp-arr-titleholder">RUGGEDIAN FITNESS MULTIPLEX</div><div class="tp-arr-subtitleholder"></div></div></div></div><div style="position: absolute; top: 410px; margin-top: -55px; right: 0px;" class="tp-rightarrow tparrows default preview4 hashoveralready"><div class="tp-arr-allwrapper" style="visibility: hidden; opacity: 0;"><div class="tp-arr-iwrapper" style="transform: matrix(1, 0, 0, 1, 180, 0);"><div class="tp-arr-imgholder" style="transform: matrix(1, 0, 0, 1, 0, 0); background-image: url(&quot;images/main-slider/5.jpg&quot;);"></div><div class="tp-arr-imgholder2" style="background-image: url(&quot;images/main-slider/5.jpg&quot;); transform: matrix(1, 0, 0, 1, 0, 0);"></div><div class="tp-arr-titleholder">RUGGEDIAN FITNESS MULTIPLEX</div><div class="tp-arr-subtitleholder"></div></div></div></div></div><div class="tp-fullwidth-forcer" style="width:100%;height:820px"></div></div>
+    </section>
+
+    <!--Popular Classes-->
+    <section class="pt-80 pb-60">
+    	<div class="container">
+            <div class="row">
+               <!-- <div class="col-md-12 text-center">
+                    <h1 class="text-uppercase">Our Popular </h1>
+                    <p class="color-theme mb-50">''Lorem ipsum dolor sit amet''</p>
+                </div>-->
+            </div>
+        	<div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="practise-area">
+                        <div class="thumb">
+                            <img src="./rug5_files/1.jpg" alt="">
+                            <div class="round-style"></div>
+                        </div>
+                        <div class="practise-details">
+                            <i class="icon flaticon-silhouette"></i>
+                            <h4 class="title">RUGGEDIAN FITNESS MULTIPLEX       </h4>
+                            <p class="details">City’s biggest fitness hub with personalised group batches ,certified staff and various zones.</p>
+                            <a class="btn-thm btn-xs" href="https://ruggedian.in/RuggedianCatlog.pdf" target="_blank">Read more <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="practise-area">
+                        <div class="thumb">
+                            <img src="./rug5_files/2.jpg" alt="">
+                            <div class="round-style"></div>
+                        </div>
+                        <div class="practise-details">
+                            <i class="icon flaticon-silhouette-3"></i>
+                            <h4 class="title"> RUGGED CUB FITNESS </h4>
+                            <p class="details">Kids fitness academy ,holistic training program for children ,3 years to 16 years.</p>
+                            <a class="btn-thm btn-xs" href="http://ruggedcub.com/" target="_blank">Visit Us <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="practise-area">
+                        <div class="thumb">
+                            <img src="./rug5_files/3.jpg" alt="">
+                            <div class="round-style"></div>
+                        </div>
+                        <div class="practise-details">
+                            <i class="icon flaticon-silhouette-1"></i>
+                            <h4 class="title">KOLHAPUR RUN</h4>
+                            <p class="details">8th edition-11th Feb 2024,<br> India’s Only City Ultra Marathon</p>
+                            <a class="btn-thm btn-xs" href="https://kolhapurrun.com/" target="_blank">Visit Us <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+              <!--  <div class="col-sm-6 col-md-4">
+                    <div class="practise-area">
+                        <div class="thumb">
+                            <img src="images/photos/4.jpg" alt="">
+                            <div class="round-style"></div>
+                        </div>
+                        <div class="practise-details">
+                            <i class="icon flaticon-gym-1"></i>
+                            <h4 class="title">Gymnastic</h4>
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing. Odit qui minima praesentium illo obcaecati...</p>
+                            <a class="btn-thm btn-xs" href="#">Read more <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="col-sm-6 col-md-4">
+                    <div class="practise-area">
+                        <div class="thumb">
+                            <img src="images/photos/5.jpg" alt="">
+                            <div class="round-style"></div>
+                        </div>
+                        <div class="practise-details">
+                            <i class="icon flaticon-person"></i>
+                            <h4 class="title">Yoga</h4>
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing. Odit qui minima praesentium illo obcaecati...</p>
+                            <a class="btn-thm btn-xs" href="#">Read more <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="col-sm-6 col-md-4">
+                    <div class="practise-area">
+                        <div class="thumb">
+                            <img src="images/photos/6.jpg" alt="">
+                            <div class="round-style"></div>
+                        </div>
+                        <div class="practise-details">
+                            <i class="icon flaticon-tool"></i>
+                            <h4 class="title">Zumba</h4>
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing. Odit qui minima praesentium illo obcaecati...</p>
+                            <a class="btn-thm btn-xs" href="#">Read more <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+    
+    <!--Parallax Section-->
+    <!-- <section class="parallax-section welcome-section theme-overlay overlay-deep-white pt-90 pb-70" style="background-image:url(images/paralax/image-3.jpg);" data-border-top="5px solid #fdc034">
+
+        <div class="container" align="sm-width5-center" >
+            <div class="pb-200" > -->
+                <!-- <div class="row"> 
+                   <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="img-box text-center">
+                            <a class="thumb" href="#"><img src="images/Zone/Z1.png" alt=""></a>
+                            <h4><a href="#" class="title"><span class="color-theme"></span>SPINNING ZONE </a></h4>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-md-12 text-center">
+                    	<h1 class="text-uppercase">COMING SOON...</h1>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="img-box text-center">
+                            <a class="thumb" href="images/Zone/Z2.png"><img src="images/Zone/Z2.png" alt=""></a>
+                            <h4><a href="#" class="title">MARTIAL ARTS/KUNG FU</br>CLASS <span class="color-theme"></span></a></h4>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="img-box text-center">
+                            <a class="thumb" href="images/Zone/Z3.png"><img src="images/Zone/Z3.png" alt=""></a>
+                            <h4><a href="#" class="title">YOGA</br>CLASS<span class="color-theme"></span></a></h4>
+                        </div>
+                    </div> -->
+                    <!-- div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="img-box text-center">
+                            <a class="thumb" href="images/Zone/Z4.png"><img src="images/Zone/Z4.png" alt=""></a>
+                            <h4><a href="#" class="title">SPINNING</br>CLASS<span class="color-theme"></span></a></h4>
+                        </div>
+                    </div> -->
+	                <!-- </div>
+	                    
+	                </div>
+	    </section> -->
+    
+	
+   
+	<!--Parallax Section-->
+    <!--<section class="parallax-section theme-overlay overlay-white p-0" style="background-image:url(images/parallax/image-1.jpg);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 col-lg-6 col-md-offset-0 col-lg-offset-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="mt-80 mt-md-50 mb-sm-50">
+                        <h2 class="title-bottom lg mb-20 pb-10">Holistic Training Program</h2>
+                        
+                        <div class="fs-18 fw-b mt-20">3 Months Program- <a class="color-theme text-uppercas" href="#"><span class="fa fa-caret-right"></span></a></div> 
+						
+						<p class="color-black fs-16">Program includes Functional Training , Strength Training , Athletics , Gymnastic, Yoga, Zumba, Adventure Etc</p>
+						
+						<p class="color-black fs-16"><strong>Grades :</strong> Under 6 / Under 9 / Under 12 / Under 16
+						
+						                         Batch limited to <strong>14 students</strong> and handled by <strong>2 coaches</strong>.<br/>
+
+                            <strong>Timings : </strong><br/>
+							<strong>Morning :</strong> 6 AM to 7 AM / 7 AM to 8 AM / 8 AM to 9 AM<br/>
+
+                            <strong>Evening :</strong> 4 PM to 5 PM / 5 PM to 6 PM/ 6 to 7 PM/ 7 PM to 8 PM<br/>
+
+                             Daily 1 hour session / 5 session per week / One Sunday per month <br/>
+
+                             <strong>Other Support :</strong> Dietician / Visits by inspirational fitness personalities / Mental health fitness / etc
+						
+						
+						</p>
+					
+						
+                    </div>                    
+                </div>
+                <div class="col-md-5 col-lg-5 pr-0 bg-half-d1">                    
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!--<section class="parallax-section theme-overlay overlay-white p-0" style="background-image:url(images/parallax/image-1.jpg);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 col-lg-6 col-md-offset-0 col-lg-offset-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="">--> <!--mt-80 mt-md-50 mb-sm-50-->
+                        <!--<h2 class="title-bottom lg mb-20 pb-10">ABOUT RUGGEDIAN FITNESS MULTIPLEX</h2>
+                        
+                        <p class="color-black fs-16"> In the day and age where our life goes from classroom learning, playing video games to obtaining a good desk job. ‘Rugged Fitness Multiplex’ is bringing to you a vast arena for fitness activities. Which consists of 25ooo sq.ft. of area used for various activities from indoor weight, cardio sections to outdoor lawn exercises and Yoga too. <br/><br/>
+
+                        We are calling it a Multiplex and not just a gym because we are offering everything like a multiplex. As multiplex contain various screens, we also have various zones like Dance Studio, Spinning Zone, Functional Studio. You will be able to customize your sessions just like booking a ticket online. And on top of this, we have our own ‘Ruggedians App’ to do that too. This is how we fulfil the definition of a multiplex completely.<br/><br/>
+
+                        Before ‘Rugged Fitness Multiplex’, we started with ‘Rugged Cubs’. Where we completely focused on fitness of kids between the age 4 to 16. This shows our intent of focusing on each section in detail. With expansion to ‘Rugged Fitness Multiplex’ we will take our experience and expertise to various other groups like ladies and old age people too.
+
+                        </p> <br/>
+                        
+                        
+                        
+                    </div>                    
+                </div>
+                <div class="col-md-5 col-lg-5 pr-0 bg-half-d1">                    
+                </div>
+            </div>
+        </div>
+    </section>-->
+   
+	
+	
+    
+    
+	
+	
+    <!--Class Time Table Section-->
+    
+
+	
+	
+    <!--Upcoming Courses Section-->
+     <section class="bg-image theme-overlay pt-80 pb-90" style="background-image:url(images/parallax/image-1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="text-uppercase">Upcoming <span class="color-white">Events</span></h1><br>
+                    <!-- <h3 class="text-uppercase mb-50">''December 2022''</h3> -->
+                </div>
+            </div>          
+                <!-- <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E1.png" alt=""> </a>
+                        </div>
+ -->
+                        </div>
+            <!-- </div>           -->
+                <!-- <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E2.png" alt=""> </a>
+                        </div>
+
+                        </div>
+            </div>          
+                <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E3.png" alt=""> </a>
+                        </div>
+
+                        </div> -->
+            <!-- </div>          
+                <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E4.png" alt=""> </a>
+                        </div>
+
+                        </div>
+            </div>          
+                <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E5.png" alt=""> </a>
+                        </div>
+
+                        </div>
+            </div>          
+                <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E6.png" alt=""> </a>
+                        </div>
+ -->
+                       <!--  </div>
+            </div>         -->  
+                <div class="col-md-4">
+                    <div class="event">
+                        <div class="thumb">
+                            <a href="https://ruggedian.in/event.html"><img src="./rug5_files/E7.jpeg" alt=""> </a>
+                        </div>
+
+                        </div>
+            </div>          
+                <div class="col-md-4">
+                    <div class="event">
+                        <div class="thumb">
+                            <a href="https://ruggedian.in/event.html"><img src="./rug5_files/E8.jpeg" alt=""> </a>
+                        </div>
+
+                        </div>
+            </div>          
+                <!-- <div class="col-md-4">
+                    <div  class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E50.png" alt=""> </a> -->
+                        <!-- </div> -->
+                        <!--<div class="caption">-->
+                            <!--<h4 class="courses-price">$59/M</h4>-->
+                            <!--<h3 class="title">Weight Loose Class</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit delectus, adipisci at!</p>-->
+                            <!--<a href="#" class="btn-thm btn-xs">View Details <i class="fa fa-arrow-circle-right"></i></a>-->
+                        <!--</div>-->
+                    <!-- </div>
+                </div>
+                 
+                <div class="col-md-4">
+                    <div class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E2.png" alt=""></a>
+                        </div>
+                        </div>
+                </div>
+                 
+                <div class="col-md-4">
+                    <div class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E3.png" alt=""></a>
+                        </div>
+                        </div>              
+                 </div> 
+                <div class="col-md-4">
+                    <div class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E4.png" alt=""></a>
+                        </div> -->
+
+
+                        <!--<div class="caption">-->
+                            <!--<h4 class="courses-price">$59/M</h4>-->
+                            <!--<h3 class="title">Weight Loose Class</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit delectus, adipisci at!</p>-->
+                            <!--<a href="#" class="btn-thm btn-xs">View Details <i class="fa fa-arrow-circle-right"></i></a>-->
+                        <!--</div>-->
+                   <!--  </div>
+                </div> 
+                <div class="col-md-4">
+                    <div class="event">
+                        <div class="thumb">
+                            <a href="event.html"><img src="images/Event/E50.png" alt=""></a>
+                        </div> -->
+                        <div class="caption">
+                            <!-- <h4 class="courses-price">$59/M</h4>
+                            <h3 class="title">Weight Loose Class</h3> -->
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit delectus, adipisci at!</p> -->
+                            <!--<a href="#" class="btn-thm btn-xs">View Details <i class="fa fa-arrow-circle-right"></i></a>-->
+                        <!--</div>-->
+                    </div>
+                </section></div> 
+    
+
+     <section>
+   <br>
+    </section>
+
+     <!-- <section class="parallax-section theme-overlay overlay-white p-0" style="background-image:url(images/parallax/image-1.jpg);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 col-lg-6 col-md-offset-0 col-lg-offset-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="mt-80 mt-md-50 mb-sm-50">
+                        <h2 class="title-bottom lg mb-20 pb-10">ABOUT RUGGEDIAN FITNESS MULTIPLE</h2>
+                       
+                        <p class="color-black fs-16">In the day and age where our life goes from classroom learning, playing video games to obtaining a good desk job. ‘Rugged Fitness Multiplex’ is bringing to you a vast arena for fitness activities. Which consists of 25,ooo sq.ft. of area used for various activities from indoor weight, cardio sections to outdoor lawn exercises and Yoga too. <br/><br/>
+
+                        We are calling it a Multiplex and not just a gym because we are offering everything like a multiplex. As multiplex contain various screens, we also have various zones like Dance Studio, Spinning Zone, Functional Studio. You will be able to customize your sessions just like booking a ticket online. And on top of this, we have our own ‘Ruggedians App’ to do that too. This is how we fulfil the definition of a multiplex completely.<br/><br/>
+                        
+                        <a class="btn-thm btn-lg btn-black mt-20" href="#">Read More...<i class="fa fa-arrow-circle-right"></i></a>
+                        <br/><br/>
+                        
+                        </p>
+                    
+                        
+                    </div>                    
+                </div>
+                <div div class="col-md-5 col-lg-5 pr-0 bg-half-d4">                   
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section>
+   <br>
+    </section>
+
+    
+    <!--Team Members Section-->
+   <!-- <section class="team-section pt-80 pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="text-uppercase">Our Expert <span class="color-theme">Trainers</span></h1>
+                    <p class="color-theme mb-50">''Lorem ipsum dolor sit amet''</p>
+                </div>
+            </div>
+            <div class="row clearfix team-area-hvr">-->
+                
+                <!--Column-->
+                <!--<div class="col-md-6 col-sm-6 col-xs-12">
+                    <article class="team-area">
+                        <div class="row clearfix">
+                            <figure class="col-lg-6 col-md-12"><div class="image"><a href="#"><img src="images/team/team-1.jpg" alt=""></a></div></figure>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="content">
+                                    <div class="title-box">
+                                        <h4>Muhibbur  Rashid</h4>
+                                        <p>Female body trainer</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Etiam dignissim sit amet felis ac sagittis. Sed libero arcu, pharetra et ante opos pil, elementum scelerisque arcu. Curabitur sagittis non justo at ultricies odio ac.</p>
+                                    </div>
+                                    <a href="#" class="btn-thm btn-xs">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>-->
+                
+                <!--Column-->
+                <!--<div class="col-md-6 col-sm-6 col-xs-12">
+                    <article class="team-area">
+                        <div class="row clearfix">
+                            <figure class="col-lg-6 col-md-12"><div class="image"><a href="#"><img src="images/team/team-2.jpg" alt=""></a></div></figure>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="content">
+                                    <div class="title-box">
+                                        <h4>Marisa Goldberg</h4>
+                                        <p>Female body trainer</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Etiam dignissim sit amet felis ac sagittis. Sed libero arcu, pharetra et ante opos pil, elementum scelerisque arcu. Curabitur sagittis non justo at ultricies odio ac.</p>
+                                    </div>
+                                    <a href="#" class="btn-thm btn-xs">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>-->
+                
+                <!--Column-->
+                <!--<div class="col-md-6 col-sm-6 col-xs-12">
+                    <article class="team-area">
+                        <div class="row clearfix">
+                            <figure class="col-lg-6 col-md-12"><div class="image"><a href="#"><img src="images/team/team-3.jpg" alt=""></a></div></figure>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="content">
+                                    <div class="title-box">
+                                        <h4>Murglin Stiller</h4>
+                                        <p>Female body trainer</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Etiam dignissim sit amet felis ac sagittis. Sed libero arcu, pharetra et ante opos pil, elementum scelerisque arcu. Curabitur sagittis non justo at ultricies odio ac.</p>
+                                    </div>
+                                    <a href="#" class="btn-thm btn-xs">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>-->
+                
+                <!--Column-->
+                <!--<div class="col-md-6 col-sm-6 col-xs-12">
+                    <article class="team-area">
+                        <div class="row clearfix">
+                            <figure class="col-lg-6 col-md-12"><div class="image"><a href="#"><img src="images/team/team-4.jpg" alt=""></a></div></figure>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="content">
+                                    <div class="title-box">
+                                        <h4>Murglin Vanessa</h4>
+                                        <p>Female body trainer</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Etiam dignissim sit amet felis ac sagittis. Sed libero arcu, pharetra et ante opos pil, elementum scelerisque arcu. Curabitur sagittis non justo at ultricies odio ac.</p>
+                                    </div>
+                                    <a href="#" class="btn-thm btn-xs">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>-->
+    
+    <!--Fact Counter-->
+    <!--<section class="fact-counter theme-overlay pb-10 pt-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 fact-dialogue sm-text-center">
+                    <h1 class="our-dialogue roboto-sans-serif color-white">We are served since <b>3 years</b> <br>to our clients with trust and <br>we are happy</h1>
+                    <a href="#" class="btn-thm btn-white mt-20">Learn more <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="col-md-6">
+                    <div class="row clearfix mt-sm-40">-->
+                        
+                        <!--Column-->
+                        <!--<article class="col-md-4 col-sm-4 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                            <div class="icon-style text-center">
+                                <a href="#"><i class="icon icon-bg icon-gray icon-lg style-round style-border white fa fa-trophy"></i></a>
+                                <div class="count-outer"><span class="count-text" data-speed="2000" data-stop="1000">0</span></div>
+                                <h4><a class="title" href="#">Award Winning</a></h4>
+                            </div>
+                        </article>-->
+                        
+                        <!--Column-->
+                        <!--<article class="col-md-4 col-sm-4 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                            <div class="icon-style text-center">
+                                <a href="#"><i class="icon icon-bg icon-gray icon-lg style-round style-border white fa fa-users"></i></a>
+                                <div class="count-outer"><span class="count-text" data-speed="2000" data-stop="25">0</span></div>
+                                <h4><a class="title" href="#">Fitness Coach</a></h4>
+                            </div>
+                        </article>-->
+                        
+						
+                        <!--Column-->
+                        <!--<article class="col-md-4 col-sm-4 col-xs-12 column wow fadeIn" data-wow-duration="0ms">
+                            <div class="icon-style text-center">
+                                <a href="#"><i class="icon icon-bg icon-gray icon-lg style-round style-border white fa fa-users"></i></a>
+                                <div class="count-outer"><span class="count-text" data-speed="2000" data-stop="1000">0</span></div>
+                                <h4><a class="title" href="#">Fitness Coach</a></h4>
+                            </div>
+                        </article>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+   
+    <!-- Pricing Section -->
+    <!--<section class="pt-80 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="text-uppercase">Our Packages <span class="color-theme">Price</span></h1>
+                    <p class="color-theme mb-50">''Lorem ipsum dolor sit amet''</p>
+                </div>
+            </div>
+            <div class="row sm-width5-center">
+                <div class="col-md-4">
+                    <div class="pricing-table hvr-float-shadow mt-60">
+                        <div class="pricing-header">
+                            <div class="thumb">
+                                <img src="images/photos/pricing-1.jpg" alt="">
+                            </div>
+                            <div class="package-price">
+                                $28 <br> <span>month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-title">Standard</div>
+                        <div class="pricing-feature">
+                            <ul>
+                                <li>6 Days a Week</li>
+                                <li>Dedicated Trainer Alocated</li>
+                                <li>Diet Plan Included</li>
+                                <li>Dedicated Trainer Alocated</li>
+                                <li>Morning & Evening Batches</li>
+                                <li>Free Consultation</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-btn"><a class="btn btn-thm btn-xs" href="#">Sign Up Now</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-table active hvr-float-shadow mt-60">
+                        <div class="pricing-header">
+                            <div class="thumb">
+                                <img src="images/photos/pricing-2.jpg" alt="">
+                            </div>
+                            <div class="package-price">
+                                $28 <br> <span>month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-title">Standard</div>
+                        <div class="pricing-feature">
+                            <ul>
+                                <li>6 Days a Week</li>
+                                <li>Dedicated Trainer Alocated</li>
+                                <li>Diet Plan Included</li>
+                                <li>Dedicated Trainer Alocated</li>
+                                <li>Morning & Evening Batches</li>
+                                <li>Free Consultation</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-btn"><a class="btn btn-thm btn-xs" href="#">Sign Up Now</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-table hvr-float-shadow mt-60">
+                        <div class="pricing-header">
+                            <div class="thumb">
+                                <img src="images/photos/pricing-3.jpg" alt="">
+                            </div>
+                            <div class="package-price">
+                                $28 <br> <span>month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-title">Standard</div>
+                        <div class="pricing-feature">
+                            <ul>
+                                <li>6 Days a Week</li>
+                                <li>Dedicated Trainer Alocated</li>
+                                <li>Diet Plan Included</li>
+                                <li>Dedicated Trainer Alocated</li>
+                                <li>Morning & Evening Batches</li>
+                                <li>Free Consultation</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-btn"><a class="btn btn-thm btn-xs" href="#">Sign Up Now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- Pricing Section -->
+    
+    
+   
+    <!--Main Footer-->
+    <footer class="main-footer bg-image theme-overlay overlay-deep-black" data-img-bg="images/parallax/image-2.jpg" style="background-image: url(&quot;images/parallax/image-2.jpg&quot;);">
+    	
+        <!--Footer Upper-->
+    	<div class="footer-upper xs-width4-center">
+        	<div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-widget about-widget">
+                            <a href="https://ruggedian.in/#">
+                                <img src="./rug5_files/logo-white.png" alt="Awesome Image">
+                            </a>
+                                <p class="mt-15"> Ruggedian Fitness Multiplex Wilder memorial Church, Near Sasane Ground, New Shahupuri, Kolhapur.- 416 003 </p>
+                                <ul class="contact">
+                              
+                                <li><i class="fa fa-phone"></i> <span> +917722067477; +919834950166</span></li>
+									
+                                <li><i class="fa fa-envelope-o"></i> <span> info@ruggedian.in </span></li>
+
+                                <li><a href="https://ruggedian.in/#" target="_blank"><i class="fa fa-map-marker"></i><img src="./rug5_files/face.png"> </a>
+                                    
+                                    <a href="https://ruggedian.in/#" target="_blank"><i class="fa fa-map-marker"></i>  <img src="./rug5_files/insta.png"> </a>
+                                    
+                                    <a href="https://ruggedian.in/#" target="_blank"><i class="fa fa-envelope"></i> <img src="./rug5_files/youtube.png"></a>
+
+                                </li>
+
+                            </ul>
+                           
+                        </div>
+						
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                    	<div class="footer-widget links-widget">
+                        	<div class="widget-title"><h3>Quick Links</h3></div>
+                        	<ul>
+                            	<li><a href="https://ruggedian.in/index.html">Home</a></li>
+                                <li><a href="https://ruggedian.in/about.html">About</a></li>
+                                <li><a href="https://ruggedian.in/event.html">Event</a></li>
+                                <!-- <li><a href="#">Offers</a></li>
+                                <li><a href="#">Travel Pass</a></li> -->
+                                <li><a href="https://ruggedian.in/#">Blog</a></li>
+                                <li><a href="https://ruggedian.in/contact.html">Contact</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>                
+                    
+					
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-widget contact-widget">
+                            <div class="widget-title"><h3>Contact Form</h3></div>
+                               <form action="https://ruggedian.in/sendemail.php" method="POST"> 
+                                <input type="text" name="name" id="conname" placeholder="Full Name" required="" fdprocessedid="g15y8c">
+                                <input type="text" name="email" id="conemail" placeholder="Email Address" required="" fdprocessedid="pqftm">
+                                <!-- <input type="text" name="mobile" id="conmobile" placeholder="Mobile No" required=""> -->
+                                <textarea name="msg" id="conmessage" placeholder="Your Message" required=""></textarea>
+                                <button type="submit" name="sub2" fdprocessedid="fmnkwk">Send</button>
+                                <!--<input type="submit" value="Submit"><br>-->
+                                <div class="result"></div><!-- /.result -->
+                            </form>
+                        </div>
+                    </div>
+               
+
+                    </div>
+                </div>
+            </div>
+        
+        
+		
+		
+		
+        <!--Footer bootom-->
+        <div class="footer-bottom">
+        	<div class="auto-container text-center fs-13">
+            <p>Copyright © 2023 <a target="_blank" title="Free CSS Themes" href="https://ruggedian.in/#">Ruggedian</a> |  All Right Reserved</p>
+
+            </div>
+        </div>
+        
+    </footer>
+    
+
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top" style="display: block;"><span class="fa fa-arrow-up"></span></div>
+
+<script src="./rug5_files/jquery.js.download"></script>
+<script src="./rug5_files/bootstrap.min.js.download"></script>
+<script src="./rug5_files/revolution.min.js.download"></script>
+<!-- MixIt UP JS -->
+<script src="./rug5_files/jquery.mixitup.min.js.download"></script> 
+
+<!-- FancyBox -->
+<script src="./rug5_files/jquery.fancybox.pack.js.download"></script>
+<script src="./rug5_files/owl.carousel.min.js.download"></script>
+<script src="./rug5_files/jquery.plugin.min.js.download"></script>
+<script src="./rug5_files/jquery.datepick.min.js.download"></script>
+<script src="./rug5_files/wow.js.download"></script>
+
+<script src="./rug5_files/validate.js.download"></script>
+<script src="./rug5_files/script.js.download"></script>
+
+
+
+
+
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span><span id="PING_CONTENT_DLS_POPUP" style="display: none;"></span><div style="background-color: transparent; border: none; bottom: 15px; display: block; margin: 0px; opacity: 1; padding: 0px; position: fixed; right: 15px; z-index: 2147483646;"><template shadowrootmode="closed"><style>/*!
+ * 
+ *     MCAFEE RESTRICTED CONFIDENTIAL
+ *     Copyright (c) 2024 McAfee, LLC
+ *
+ *     The source code contained or described herein and all documents related
+ *     to the source code ("Material") are owned by McAfee or its
+ *     suppliers or licensors. Title to the Material remains with McAfee
+ *     or its suppliers and licensors. The Material contains trade
+ *     secrets and proprietary and confidential information of McAfee or its
+ *     suppliers and licensors. The Material is protected by worldwide copyright
+ *     and trade secret laws and treaty provisions. No part of the Material may
+ *     be used, copied, reproduced, modified, published, uploaded, posted,
+ *     transmitted, distributed, or disclosed in any way without McAfee's prior
+ *     express written permission.
+ *
+ *     No license under any patent, copyright, trade secret or other intellectual
+ *     property right is granted to or conferred upon you by disclosure or
+ *     delivery of the Materials, either expressly, by implication, inducement,
+ *     estoppel or otherwise. Any license under such intellectual property rights
+ *     must be expressed and approved by McAfee in writing.
+ *
+ */
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&display=swap);
+*{border:0;box-sizing:border-box;font:inherit;font-family:"mcafeeOpenSans","Open Sans",Arial,Helvetica,sans-serif;font-size:100%;margin:0;padding:0;vertical-align:baseline;outline:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html,body{background-color:#f5f6fa;font-family:"Open Sans","mcafeeOpenSans",Arial,Helvetica,sans-serif;line-height:1;height:100%;width:100%}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}b{font-weight:bold}img{display:block}.dls__container{align-items:center;display:flex;margin:0 auto;margin-top:50px;position:relative}.dls__popup__expanded{align-items:center;overflow:hidden;border-radius:100px;cursor:pointer;display:flex;left:0;padding:15px;position:absolute;height:95px;width:383px;background-color:#fff;transition:all .3s ease-in-out}.dls__popup__expanded .dls__icon{height:65px;width:73px}.content{margin-left:12px}.content .content__images{display:flex;align-items:center;width:250px}.content .content__images .seperator__line{margin-left:5px;margin-right:10px}.content .content__images #dls_close_icon{cursor:pointer;margin-left:auto;margin-right:0px}.content p{font-family:"Poppins",Arial,Helvetica,sans-serif;font-weight:"400";font-size:14px;line-height:20px;margin-top:8px;color:#4258ff;width:250px;cursor:pointer}.shield{overflow:hidden;box-shadow:0px 2px 4px 0px rgba(33,41,52,.12),0px -1px 2px 0px rgba(0,0,0,.08);align-items:center;border-radius:100px;bottom:0;display:flex;height:95px;justify-content:center;position:absolute;right:0;width:383px;transition:all .3s ease-in-out}.shield__circle{display:flex;justify-content:center;align-items:center;width:55px;height:55px;background-color:#c01818;transition:all .6s ease-in-out .2s;z-index:1;opacity:0}
+
+/*# sourceMappingURL=../sourceMap/chrome/css/download_scan_popup.css.map*/</style><div class="dls__container">
+  <div class="shield" style="background: transparent; opacity: 0.1; display: none;">
+    <div class="shield__circle" style="opacity: 1;">
+      <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/mcafee_logo_white.svg?secret=k7zj9n" x-mcsrc="" id="dls_ballon_icon" x-mcsrcparsed="true">
+    </div>
+    <div class="dls__popup__expanded" style="opacity: 0;">
+      <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/download_scan_icon.svg?secret=k7zj9n" x-mcsrc="" class="dls__icon" x-mcsrcparsed="true">
+      <div class="content">
+        <div class="content__images">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/mcafee_logo_red.svg?secret=k7zj9n" x-mcsrc="" id="dls_mcafee_logo" x-mcsrcparsed="true">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/seperator_line.svg?secret=k7zj9n" x-mcsrc="" class="seperator__line" x-mcsrcparsed="true">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/webadvisor.svg?secret=k7zj9n" x-mcsrc="" x-mcsrcparsed="true">
+          <img src="chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/images/download_scan/close-outline.svg?secret=k7zj9n" x-mcsrc="" id="dls_close_icon" x-mcsrcparsed="true">
+        </div>
+        <p id="download_scan_popup_expanded_descriptions">Your download's being scanned. We'll let you know if there's an issue.</p>
+      </div>
+    </div>
+  </div>
+</div><style>/*!
+ * 
+ *     MCAFEE RESTRICTED CONFIDENTIAL
+ *     Copyright (c) 2024 McAfee, LLC
+ *
+ *     The source code contained or described herein and all documents related
+ *     to the source code ("Material") are owned by McAfee or its
+ *     suppliers or licensors. Title to the Material remains with McAfee
+ *     or its suppliers and licensors. The Material contains trade
+ *     secrets and proprietary and confidential information of McAfee or its
+ *     suppliers and licensors. The Material is protected by worldwide copyright
+ *     and trade secret laws and treaty provisions. No part of the Material may
+ *     be used, copied, reproduced, modified, published, uploaded, posted,
+ *     transmitted, distributed, or disclosed in any way without McAfee's prior
+ *     express written permission.
+ *
+ *     No license under any patent, copyright, trade secret or other intellectual
+ *     property right is granted to or conferred upon you by disclosure or
+ *     delivery of the Materials, either expressly, by implication, inducement,
+ *     estoppel or otherwise. Any license under such intellectual property rights
+ *     must be expressed and approved by McAfee in writing.
+ *
+ */
+.mc-interactive-balloon{position:absolute;right:-50px;bottom:8px;box-shadow:rgba(0,0,0,.12) 0px 0px 10px;height:40px;width:40px;background:#1671ee;border-radius:20px;display:flex;justify-content:center;align-items:center}
+
+/*# sourceMappingURL=../sourceMap/chrome/css/interactive_balloon.css.map*/</style></template></div></body></html>

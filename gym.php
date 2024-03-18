@@ -52,7 +52,7 @@
               <h5 class="card-title">Muscle tree</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Nagala park,kolhapur</p>
               <p class="card-text">Providing a diverse selection of health and wellness options for individuals seeking a vibrant lifestyle.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <a href="muscle.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
               <h5 class="card-title">Ruggedian Fitness Multiplex</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
               <p class="card-text">City's biggest fitness hub with personalised group batches ,certified staff and various <br> zones.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <a href="rug.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
 
               <p class="card-text">World class fitness center. We provide you with the best fitness programs along with professional trainer and equipment.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <a href="gold.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@
               <h5 class="card-title">ABS Gym</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Sayaji Hotel, Kolhapur</p>
               <p class="card-text">World class fitness center. We provide you with the best fitness programs along with professional trainer and equipment.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <a href="abs.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
