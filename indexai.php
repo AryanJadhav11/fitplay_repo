@@ -35,7 +35,7 @@
     </style>
 
 <div class="mbr-section-btn">
-  <a class="btn btn-white " onclick="window.scrollTo({top: 2600,left: 0,behavior: 'smooth',});">Get Started</a>
+  <a class="btn btn-white " onclick="window.scrollTo({top: 800,left: 0,behavior: 'smooth',});">Get Started</a>
 </div>
 
        
@@ -43,7 +43,7 @@
     </div>
   </div>
 </section>
-<section class="people03 cid-u7irD0gNdT" id="team-1-u7irD0gNdT">
+<!-- <section class="people03 cid-u7irD0gNdT" id="team-1-u7irD0gNdT">
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<div class="col-12 content-head">
@@ -106,8 +106,8 @@
       </div>
 		</div>
 	</div>
-</section>
-<section class="gallery07 cid-u7irD0gIs5" id="gallery-14-u7irD0gIs5">
+</section> -->
+<!-- <section class="gallery07 cid-u7irD0gIs5" id="gallery-14-u7irD0gIs5">
   <div class="container-fluid gallery-wrapper">
     <div class="grid-container">
       <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
@@ -126,8 +126,8 @@
       </div>
     </div>
   </div>
-</section>
-<section class="features03 cid-u7irD0gKYG" id="features-7-u7irD0gKYG">
+</section> -->
+<!-- <section class="features03 cid-u7irD0gKYG" id="features-7-u7irD0gKYG">
     <div class="container">
     <div class="container-fluid">
         <div class="row">
@@ -195,7 +195,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- <section class="pricing02 cid-u7irD0gQxZ" id="product-list-8-u7irD0gQxZ">
     <div class="container-fluid">
         <div class="row justify-content-center">
