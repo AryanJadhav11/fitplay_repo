@@ -95,7 +95,6 @@ function getInitials($name) {
 
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -104,34 +103,35 @@ function getInitials($name) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise AI v0.01, ai.mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <meta name="description" content="FitPlay is the ultimate online platform for booking turfs, exploring gyms, and purchasing sports equipment. Say goodbye to manual turf bookings and hello to convenience!">
+  <link rel="shortcut icon" href="shopai/assets/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="Welcome to the ultimate destination for all your sports equipment needs. Find top-quality gear for every sport imaginable!">
 
-  <title>FitPlay Turf &amp; Gym</title>
-  <link rel="stylesheet" href="abtus/assets/web/abtus/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="abtus/assets/parallax/jarallax.css">
-  <link rel="stylesheet" href="abtus/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="abtus/assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="abtus/assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="abtus/assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="abtus/assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="abtus/assets/animatecss/animate.css">
-  <link rel="stylesheet" href="abtus/assets/theme/css/style.css">
+  <title>Ultimate Sports Gear</title>
+  <link rel="stylesheet" href="shopai/assets/web/shopai/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="shopai/assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="shopai/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="shopai/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="shopai/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="shopai/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="shopai/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="shopai/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="shopai/assets/theme/css/style.css">
+  <link rel="stylesheet" href="shopai/assets/theme/css/shopai.css">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
-  <link rel="preload" as="style" href="abtus/assets/mobirise/css/additional.css"><link rel="stylesheet" href="abtus/assets/mobirise/css/additional.css" type="text/css">
+  <link rel="preload" as="style" href="shopai/assets/mobirise/css/additional.css"><link rel="stylesheet" href="shopai/assets/mobirise/css/additional.css" type="text/css">
   
-  <link rel="stylesheet" href="abtus/assets/index.css">
+  
   <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
-
-  <style>:root{ --background: #FFF8E6; --dominant-color: #FFB703; --primary-color: #219EBC; --secondary-color: #ED8D39; --success-color: #20AC6B; --danger-color: #AE1E2C; --warning-color: #CC9900; --info-color: #0AA3C2; --background-text: #000000; --dominant-text: #000000; --primary-text: #FFFFFF; --secondary-text: #000000; --success-text: #FFFFFF; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #FFFFFF;}</style>
+  <style>:root{ --background: #EAF9E7; --dominant-color: #29BF12; --primary-color: #ABFF4F; --secondary-color: #F21B3F; --success-color: #3FDC93; --danger-color: #DD3E4D; --warning-color: #FFC61C; --info-color: #28D1F3; --background-text: #000000; --dominant-text: #FFFFFF; --primary-text: #000000; --secondary-text: #FFFFFF; --success-text: #000000; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #000000;}</style>
 </head>
+
 <body>
 
-
-<section class="menu menu2 cid-u7irD0fFHy" once="menu" id="menu-5-u7irD0fFHy">
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
+<section class="menu menu2 cid-u7iHraKbjA" once="menu" id="menu-5-u7iHraKbjA">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+    <div class="container">
+    <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="https://mobiri.se">
                         <img src="favicon_io/android-chrome-512x512.png" style="height: 4.3rem;">
@@ -140,22 +140,22 @@ function getInitials($name) {
                 <span class="navbar-caption-wrap">
                     <a class="navbar-caption text-black display-4" href="https://mobiri.se">FitPlay</a>
                 </span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-bs-toggle="collapse" data-target="#navbarSupportedContent"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                <li class="nav-item">
+           </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item">
             <a class="nav-link link text-black display-4" href="indexai.php">Home</a>
           </li>
           <li class="nav-item dropdown">
@@ -174,16 +174,15 @@ function getInitials($name) {
                     <li class="nav-item">
             <a class="nav-link link text-black display-4" href="contactu.php">Contact</a>
           </li>
-                    <li>
+          <li>
                         <?php
                             if (isset($_SESSION['user_data'])) {
                             echo '<li class="nav-item"><a class="nav-link link text-black display-4" href="mycart.php"><img src="proimg/cart_button.png" width="50px" height="40px"></a></li>';
                             }
                         ?>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav ml-auto">
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
                     <li class="dropdown pb-0" style="color: blue;">
                         <?php
                         if (isset($_SESSION['user_data'])) {
@@ -206,13 +205,14 @@ function getInitials($name) {
                         ?>
                     </li>
                 </ul>
-                <div class="navbar-buttons mbr-section-btn">
+        <div class="navbar-buttons mbr-section-btn">
           <a class="btn btn-primary display-4" href="https://mobiri.se">Explore Now</a>
         </div>
-            </div>
-        </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 </section>
+
  <!-- Login Modal -->
  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -265,19 +265,19 @@ function getInitials($name) {
  </div>
  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
  <!-- Login Modal End -->
+
 </body>
 
- <script src="abtus/assets/parallax/jarallax.js"></script>
-  <script src="abtus/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="abtus/assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="abtus/assets/scrollgallery/scroll-gallery.js"></script>
-  <script src="abtus/assets/masonry/masonry.pkgd.min.js"></script>
-  <script src="abtus/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="abtus/assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
 
-  <script src="abtus/assets/ytplayer/index.js"></script>
-  <script src="abtus/assets/theme/js/script.js"></script>
-  <script src="abtus/assets/formoid/formoid.min.js"></script>
+<script src="shopai/assets/parallax/jarallax.js"></script>
+  <script src="shopai/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="shopai/assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="shopai/assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+  <script src="shopai/assets/scrollgallery/scroll-gallery.js"></script>
+  <!-- <script src="shopai/assets/smoothscroll/smooth-scroll.js"></script> -->
+  <script src="shopai/assets/ytplayer/index.js"></script>
+  <script src="shopai/assets/theme/js/script.js"></script>
+  <script src="shopai/assets/formoid/formoid.min.js"></script>
   
   <script>
 

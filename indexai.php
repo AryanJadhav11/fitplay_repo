@@ -43,8 +43,92 @@
     </div>
   </div>
 </section>
-<!-- <section class="features03 cid-u7irD0gKYG" id="features-7-u7irD0gKYG">
-    <div >
+<section class="people03 cid-u7irD0gNdT" id="team-1-u7irD0gNdT">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12 content-head">
+				<div class="mbr-section-head mb-5">
+					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+						<strong>Fit Squad</strong>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="abtus/assets/images/photo-1509098681029-b45e9c845022.jpeg">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style display-5">
+							<strong>Aryan</strong></h6>
+						<p class="mbr-text mbr-fonts-style display-7">Chief Turf Booker</p>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="abtus/assets/images/photo-1676385901160-31e1b9e1c0c7.jpeg">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style display-5">
+							<strong>Om</strong></h6>
+						<p class="mbr-text mbr-fonts-style display-7">Gym Explorer</p>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="abtus/assets/images/photo-1629114112651-a8c8c27fb851.jpeg">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style display-5">
+							<strong>Yash</strong></h6>
+						<p class="mbr-text mbr-fonts-style display-7">Equipment Guru</p>
+					</div>
+				</div>
+			</div>
+      <div class="item features-image col-12 col-md-6 col-lg-3">
+        <div class="item-wrapper">
+          <div class="item-img mb-3">
+            <img src="abtus/assets/images/photo-1529139574466-a303027c1d8b.jpeg">
+          </div>
+          <div class="item-content align-left">
+            <h6 class="item-subtitle mbr-fonts-style display-5">
+              <strong>Amit</strong>
+            </h6>
+            <p class="mbr-text mbr-fonts-style display-7">Fitness Fashionista</p>
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+</section>
+<section class="gallery07 cid-u7irD0gIs5" id="gallery-14-u7irD0gIs5">
+  <div class="container-fluid gallery-wrapper">
+    <div class="grid-container">
+      <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
+        <div class="grid-item">
+          <img src="abtus/assets/images/photo-1486218119243-13883505764c.jpeg">
+        </div>
+        <div class="grid-item">
+          <img src="abtus/assets/images/photo-1579126038374-6064e9370f0f.jpeg">
+        </div>
+        <div class="grid-item">
+          <img src="abtus/assets/images/photo-1571902943202-507ec2618e8f.jpeg">
+        </div>
+        <div class="grid-item">
+          <img src="abtus/assets/images/photo-1546483875-ad9014c88eba.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="features03 cid-u7irD0gKYG" id="features-7-u7irD0gKYG">
+    <div class="container">
     <div class="container-fluid">
         <div class="row">
             <div class="item features-image col-12 col-md-6 col-lg-4 active">
@@ -110,7 +194,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section> -->
 <!-- <section class="pricing02 cid-u7irD0gQxZ" id="product-list-8-u7irD0gQxZ">
@@ -1050,7 +1133,6 @@
                     
         </div>
 </section>
-
 
   
 </body>
