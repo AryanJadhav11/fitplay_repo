@@ -451,7 +451,6 @@ ul.right_icon li img {
 /** banner section **/
 
 .banner_main {
-     background: url(../images/banner.jpg);
      padding: 97px 0px 0px 0px;
      background-size: 100% 100%;
      background-repeat: no-repeat;
@@ -474,7 +473,7 @@ position: absolute;
 }
 
 .text-bg h1 {
-     color: #2a2a2c;
+     color: #bbbbbb;
      font-size: 116px;
      line-height: 120px;
      padding-bottom: 50px;
@@ -482,7 +481,7 @@ position: absolute;
 }
 
 .text-bg p {
-     color: #2a2a2c;
+     color: #bbbbbb;
      line-height: 30px;
      font-size: 33px;
      margin-bottom: 50px;
@@ -612,7 +611,7 @@ position: absolute;
 .project .titlepage h2 {
      margin-bottom: 40px;
      padding-bottom: 10px;
-     border-bottom: #ffffff solid 5px;
+     border-bottom: #80a5dd solid 5px;
 }
 
 .project .titlepage p {
