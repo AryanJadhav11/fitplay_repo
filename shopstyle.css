@@ -252,7 +252,6 @@ ul.social_icon li {
 ul.social_icon li:last-child {
      padding-right: 0px;
 }
-
 ul.social_icon li a {
      color: #fff;
      width: 30px;
@@ -473,7 +472,7 @@ position: absolute;
 }
 
 .text-bg h1 {
-     color: #4f4f4f;
+     color: #bbbbbb;
      font-size: 116px;
      line-height: 120px;
      padding-bottom: 50px;
@@ -481,7 +480,7 @@ position: absolute;
 }
 
 .text-bg p {
-     color: #4f4f4f;
+     color: #bbbbbb;
      line-height: 30px;
      font-size: 33px;
      margin-bottom: 50px;
@@ -504,7 +503,6 @@ position: absolute;
 
 .ban_img figure {
      margin: 0;
-
 }
 
 .ban_img figure img {

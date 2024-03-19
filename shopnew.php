@@ -75,7 +75,7 @@ $respic=mysqli_fetch_assoc($quepro);
                   <div class="row">
                      <div class="col-md-4">
                         <ul class="conta_icon ">
-                           <li><a href="#"><img src="shoppnew/images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                           <li><a href="#"><img src="proimg/products/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
@@ -114,15 +114,15 @@ $respic=mysqli_fetch_assoc($quepro);
                   <div class="row d_flex">
                      <div class="col-md-4">
                         <ul class="conta_icon d_none1">
-                           <li><a href="#"><img src="shoppnew/images/email.png" alt="#"/> demo@gmail.com</a> </li>
+                           <li><a href="#"><img src="proimg/products/email.png" alt="#"/> demo@gmail.com</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
-                        <a class="logo" href="#"><img src="shoppnew/images/logo.png" alt="#"/></a>
+                        <a class="logo" href="#"><img src="proimg/products/logo.png" alt="#"/></a>
                      </div>
                      <div class="col-md-4">
                         <ul class="right_icon d_none1">
-                           <li><a href="#"><img src="shoppnew/images/shopping.png" alt="#"/></a> </li>
+                           <li><a href="#"><img src="proimg/products/shopping.png" alt="#"/></a> </li>
                            <a href="#" class="order">Order Now</a> 
                         </ul>
                      </div>
@@ -182,8 +182,8 @@ $respic=mysqli_fetch_assoc($quepro);
             <div class="row">
                <div class="col-md-8">
                   <div class="text-bg">
-                     <h1> <span class="blodark"> FitPlay Shop </span> <br>Gear Up To Fitness</h1>
-                     <p>A huge fashion collection for ever </p>
+                     <h1 style="color:#4b4b4b"> <span class="blodark"> FitPlay Shop </span> <br>Gear Up To Fitness</h1>
+                     <p style="color:#4b4b4b">A huge fashion collection for ever </p>
                      <a class="read_more" href="#">Shop now</a>
                   </div>
                </div>
@@ -240,13 +240,29 @@ $respic=mysqli_fetch_assoc($quepro);
          </div>
       </div>
       <!-- end six_box section -->
+      
       <!-- project section -->
+
+   <style>
+      .project_box {
+    overflow: hidden;
+    position: relative;
+}
+
+.project_box img {
+    transition: transform 0.3s ease;
+}
+
+.project_box:hover img {
+    transform: scale(1.3);
+}
+</style>
       <div id="project" class="project">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Featured Products</h2>
+                     <h2 style="color:#393939">Featured Products</h2>
                   </div>
                </div>
             </div>
@@ -254,81 +270,82 @@ $respic=mysqli_fetch_assoc($quepro);
             <div class="product_main">
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/shoes1.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
             
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/shoes2.png" alt="#"/></div>
-                     <h3 >Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/shoes3.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/shoes4.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/shoes5.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/tisat1.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/shoes1.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/tisat2.png" alt="#"/></div>
-                     <h3 >Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/shoes2.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/tisat3.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/stud1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/tisat4.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/stump-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/tisat5.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/waterbottle-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/mix1.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
-               
+            
+             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/mix2.png" alt="#"/></div>
-                     <h3 >Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/mix3.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/mix4.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
-               
+              
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="shoppnew/images/mix5.png" alt="#"/></div>
-                     <h3>Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                <div class="col-md-12">
@@ -344,6 +361,137 @@ $respic=mysqli_fetch_assoc($quepro);
          <img src="ONE.png" width="100%">
       </div>
 </section>   
+
+
+
+<!--product display start -->
+<div class="container">
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="lc-block text-center">
+                    <img class="img-fluid " src="proimg/shop_content2.png" width="400" height="400" loading="lazy">
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold" style="color:#393939">Unlock Your Potential: Shop Premium Sports Equipment Here</h2>
+
+                        <p class="lead" style="color:#393939"><br>Discover top-notch sports equipment to elevate your game. From expert guidance to competitive prices, we've got you covered. Shop online or visit us for an exceptional experience..</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex" >
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p >Convenient Shopping.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Competitive Pricing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Latest Trends.</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+        <div class="row mb-4 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 order-lg-1">
+                <div class="lc-block text-center"><img class="img-fluid" src="proimg/shop_content1.png" width="400" height="400" loading="lazy"></div><!-- /lc-block -->
+            </div><!-- /col -->
+            <div class="col-lg-6 p-lg-6">
+                <div class="lc-block mb-5">
+                    <div editable="rich">
+
+                        <h2 class="display-6 fw-bold" style="color:#393939">Gear Up for Greatness: Your Ultimate Sports Store</h2>
+
+                        <p class="lead"><br>Offer a diverse range of sports equipment, apparel, and accessories catering to different sports and activities.</p>
+                    </div>
+                </div><!-- /lc-block -->
+                <!-- /lc-block -->
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Quality Assurance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Return Policy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div class="d-inline-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="text-primary" viewBox="0 0 16 16" lc-helper="svg-icon">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="ms-3 align-self-center" editable="rich">
+                            <p>Customer Support.</p>
+                        </div>
+                    </div>
+                </div><!-- /lc-block -->
+            </div><!-- /col -->
+        </div>
+
+    </div>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- product display end -->
+
+<style>
+  .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
+</style>
+
+
       <!-- PRODUCT CARDS START -->
 <style>
   .fea {
@@ -591,6 +739,14 @@ $respic=mysqli_fetch_assoc($quepro);
     });
 </script>
 <!-- PRODUCT CARDS END -->
+   </div>
+  
+<section>
+      <div>
+         <img src="proimg/arivals_banner.png" width="100%">
+      </div>
+</section>   
+
       <!-- three_box section -->
       <div class="three_box">
          <div class="container">
@@ -616,7 +772,7 @@ $respic=mysqli_fetch_assoc($quepro);
             </div>
          </div>
       </div>
-   </div>
+   </div>  
       <!-- end three_box section -->
 
       <!--  footer -->
