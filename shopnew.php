@@ -177,7 +177,7 @@ $respic=mysqli_fetch_assoc($quepro);
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <section class="banner_main" style= "background-image: url('proimg/sport2_blur.png') ; ">
+      <section class="banner_main" style= "background-image: url('proimg/banner_sho.png') ; ">
          <div class="container">
             <div class="row">
                <div class="col-md-8">
@@ -189,7 +189,7 @@ $respic=mysqli_fetch_assoc($quepro);
                </div>
                <div class="col-md-4">
                   <div class="ban_img pt-6">
-                     <figure><img src="proimg/banner.png" alt="innerbanner" width="750px" height="750px"/></figure>
+                     <figure><img src="proimg/ban_img.png" alt="innerbanner" width="750px" height="750px"/></figure>
                   </div>
                </div>
             </div>

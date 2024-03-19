@@ -473,7 +473,7 @@ position: absolute;
 }
 
 .text-bg h1 {
-     color: #bbbbbb;
+     color: #4f4f4f;
      font-size: 116px;
      line-height: 120px;
      padding-bottom: 50px;
@@ -481,7 +481,7 @@ position: absolute;
 }
 
 .text-bg p {
-     color: #bbbbbb;
+     color: #4f4f4f;
      line-height: 30px;
      font-size: 33px;
      margin-bottom: 50px;
@@ -504,6 +504,7 @@ position: absolute;
 
 .ban_img figure {
      margin: 0;
+
 }
 
 .ban_img figure img {
