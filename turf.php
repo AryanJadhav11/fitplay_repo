@@ -162,17 +162,21 @@ $resimg=mysqli_fetch_assoc($que2);
                                     while ($res8 = mysqli_fetch_assoc($que2)) {
                                 ?>
                                         <li class="splide__slide col-sm-3 m-2">
-                                          
+                                        
                                             <div class="center">
                                                  <div class="article-card">
+                                                 <a href="turf_df.php?id=<?= $res8['id'] ?>">
                                                        <div class="content">
                                                             <h3 class="date"><b><?= strip_tags(substr($res8['place'], 0, 900)) ?></b></h3>
                                                             <h1 class="card-title"><b><?= ucfirst($res8['name']) ?></b></a></h1>
                                                         </div>
+                                                </a>
+                                                        <a href="turf_df.php?id=<?= $res8['id'] ?>">
                                                         <?php $img = $res8['image'] ?>
                                                         <img src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
                                                  </div>
                                             </div>
+                                        </a>
                                         </li>
                                 <?php
                                     }
@@ -536,7 +540,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <!-- card css start -->
 <style>
     .article-card {
-  width: 350px;
+  width: 280px;
   height: 220px;
   border-radius: 12px;
   overflow: hidden;
