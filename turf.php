@@ -1,4 +1,4 @@
-<?php include("header.php");?>
+ <?php include("header.php");?>
 
 
 
@@ -162,18 +162,16 @@ $resimg=mysqli_fetch_assoc($que2);
                                     while ($res8 = mysqli_fetch_assoc($que2)) {
                                 ?>
                                         <li class="splide__slide col-sm-3 m-2">
-                                            <div class="card bg-light text-dark imager-fluid">
-                                                
-                                                    <?php $img = $res8['image'] ?>
-                                                    <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
-                                                </a>
-                                                <div class="card-body" style="padding-left:10px;">
-                                                    <h5 class="card-title"><?= ucfirst($res8['name']) ?></a></h5>
-                                                    <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
-                                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                                                        </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
-                                                    <a href="turf_df.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
-                                                </div>
+                                          
+                                            <div class="center">
+                                                 <div class="article-card">
+                                                       <div class="content">
+                                                            <h3 class="date"><b><?= strip_tags(substr($res8['place'], 0, 900)) ?></b></h3>
+                                                            <h1 class="card-title"><b><?= ucfirst($res8['name']) ?></b></a></h1>
+                                                        </div>
+                                                        <?php $img = $res8['image'] ?>
+                                                        <img src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                                 </div>
                                             </div>
                                         </li>
                                 <?php
@@ -535,6 +533,59 @@ $resimg=mysqli_fetch_assoc($que2);
 </script>
 <!-- shop start -->
 
+<!-- card css start -->
+<style>
+    .article-card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all; 
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.article-card .date,
+.article-card .title {
+  margin: 0;
+}
+
+.article-card .date {
+  font-size: 16px;
+  color:white;
+  margin-bottom: 2px;
+  align-self:center;
+}
+
+.article-card .title {
+  font-size: 20px;
+  color: white;
+}
+
+</style>
+<!-- card css end -->
+
 <!-- shop end -->
 
 
@@ -545,6 +596,21 @@ $resimg=mysqli_fetch_assoc($que2);
 <?php include('footer.php') ?>
 <!-- End Footer -->
 
+<!-- important aahe te  -->
+  <!-- <div class="card bg-light text-dark imager-fluid">
+                                                
+  <?php $img = $res8['image'] ?>
+                                                    <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                                </a>
+                                                <div class="card-body" style="padding-left:10px;">
+                                                    <h5 class="card-title"><?= ucfirst($res8['name']) ?></a></h5>
+                                                    <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
+                                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                                        </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
+                                                    <a href="turf_df.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                                </div>
+                                            </div> -->
+<!-- delete nako karu varcha -->
 </body>
 
 </html>
