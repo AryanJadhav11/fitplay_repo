@@ -1,4 +1,4 @@
-<?php include("header.php");?>
+<?php include("headerai.php");?>
 <?php
 if (isset($_SESSION['user_data'])) {
     include('floating_icon.php');
@@ -593,3 +593,4 @@ if (isset($_POST['Add_To_Cart'])) {
     <!-- end -->
 </body>
 </html>
+

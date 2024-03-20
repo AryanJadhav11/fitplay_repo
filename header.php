@@ -264,7 +264,7 @@ function getInitials($name) {
                     <ul>
                         <li><a href="turf.php">Turfs</a></li>
                         <li><a href="gym.php">Gyms</a></li>
-                        <li><a href="shop.php">Shop</a></li>
+                        <li><a href="shopnew.php">Shop</a></li>
                        
                     </ul>
                 </li>
