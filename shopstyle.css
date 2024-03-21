@@ -30,20 +30,8 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
-* {
-     box-sizing: border-box !important;
-}
-
 html {
      scroll-behavior: smooth;
-}
-
-body {
-     color: #666666;
-     font-size: 14px;
-     font-family: 'Poppins', sans-serif;
-     line-height: 1.80857;
-     font-weight: normal;
 }
 
 a {
@@ -55,46 +43,6 @@ a {
      -ms-transition: all .3s ease-in-out;
      -o-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-     letter-spacing: 0;
-     font-weight: normal;
-     position: relative;
-     padding: 0 0 10px 0;
-     font-weight: normal;
-     line-height: normal;
-     color: #111111;
-     margin: 0
-}
-
-h1 {
-     font-size: 24px;
-}
-
-h2 {
-     font-size: 18px;
-}
-
-h3 {
-     font-size: 18px;
-}
-
-h4 {
-     font-size: 16px
-}
-
-h5 {
-     font-size: 14px
-}
-
-h6 {
-     font-size: 13px
 }
 
 *,
@@ -116,24 +64,6 @@ h6 a {
      opacity: 1
 }
 
-button:focus {
-     outline: none;
-}
-
-ul,
-li,
-ol {
-     margin: 0px;
-     padding: 0px;
-     list-style: none;
-}
-
-p {
-     margin: 0px;
-     font-weight: 500;
-     font-size: 15px;
-     line-height: 24px;
-}
 
 a {
      color: #222222;
@@ -558,14 +488,15 @@ position: absolute;
      background: url(../images/service_bg.jpg);
      background-size: 100% 100%;
      background-repeat: no-repeat;
+     align-items: center;
 }
 
 .bluedark_bg {
-     background: #0066ff;
+     background: #ffffff;
 }
 
 .yellow_bg {
-     background: #e0e0e0;
+     background: #ffffff;
 }
 
 .six_box .six_probpx {
@@ -1230,4 +1161,15 @@ margin: 0 15px 20px 15px;
         height: 44px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 

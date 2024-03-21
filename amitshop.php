@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<?php include('header.php'); ?>
+<html>
    <head>
 
       <!-- bootstrap css -->
@@ -115,7 +116,7 @@
     transform: scale(1.3);
 }
 </style>
-      <div id="project" class="project">
+      <div id="project" class="project pt-0">
          <div class="container">
             <div class="row">
                <div class="col-md-12">

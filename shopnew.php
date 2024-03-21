@@ -31,12 +31,6 @@ $respic=mysqli_fetch_assoc($quepro);
 <!DOCTYPE html>
 <html lang="en">
    <head>
-
-<style>
-
-
-</style>
-
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,143 +55,165 @@ $respic=mysqli_fetch_assoc($quepro);
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
       <script src="shoppnew/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="shoppnew/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]
+      <script src="shoppnew/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+      
    </head>
    <!-- body -->
    <body class="main-layout">
+      <style>
+         /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
+.marginii {
+     margin: 50px 0px 100px 0px;
+}
+.carousel-indicators li {
+     display: none;
+}
+.banner-main {
+     position: relative;
+     background-color: #007aff;
+     background-size: 100% 100%;
 
-      <!-- header -->
-      <header>
-         <!-- header inner -->
-         <!-- <div class="header">
-            <div class="header_top d_none1">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-4">
-                        <ul class="conta_icon ">
-                           <li><a href="#"><img src="proimg/products/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
-                        </ul>
-                     </div>
-                     <div class="col-md-4">
-                        <ul class="social_icon">
-                           <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-                              </a>
-                           </li>
-                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                           <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="col-md-4">
-                        <div class="se_fonr1">
-                           <form action="#" >
-                              <div class="select-box">
-                                 <label for="select-box1" class="label select-box1"><span class="label-desc">English</span> </label>
-                                 <select id="select-box1" class="select">
-                                    <option value="Choice 1">English</option>
-                                    <option value="Choice 1">Falkla</option>
-                                    <option value="Choice 2">Germa</option>
-                                    <option value="Choice 3">Neverl</option>
-                                 </select>
-                              </div>
-                           </form>
-                           <span class="time_o"> Open hour: 8.00 - 18.00</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="header_midil">
-               <div class="container">
-                  <div class="row d_flex">
-                     <div class="col-md-4">
-                        <ul class="conta_icon d_none1">
-                           <li><a href="#"><img src="proimg/products/email.png" alt="#"/> demo@gmail.com</a> </li>
-                        </ul>
-                     </div>
-                     <div class="col-md-4">
-                        <a class="logo" href="#"><img src="proimg/products/logo.png" alt="#"/></a>
-                     </div>
-                     <div class="col-md-4">
-                        <ul class="right_icon d_none1">
-                           <li><a href="#"><img src="proimg/products/shopping.png" alt="#"/></a> </li>
-                           <a href="#" class="order">Order Now</a> 
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="header_bottom">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
-                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                           <span class="navbar-toggler-icon"></span>
-                           </button>
-                           <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="products.html">Products</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="fashion.html">Fashion</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="news.html">News</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact Us</a>
-                                 </li>
-                              </ul>
+}
+.banner-main .carousel-caption {
+     text-align: left;
+     left: 0;
+     top: 16%;
+     position: relative;
+}
+.banner-main .carousel-caption h1 {
+     font-size: 65px;
+     line-height: 74px;
+     font-weight: bold;
+     color: #081b30;
+}
+.banner-main .carousel-caption p {
+     color: #ffffff;
+     padding: 9px 0px;
+     margin-bottom: 50px;
+}
+.color {
+     color: #fff;
+}
+
+.btn-primary:hover {
+     background: #007bff;
+     color: #000;
+}
+.img-box figure {
+     margin: 0;
+}
+.img-box figure img {
+     box-shadow: #081b30 0px 0px 0px 0px;
+}
+.layout_padding {
+     padding-top:  90px 0px;
+}
+.titlepage {
+     padding-bottom: 50px;
+}
+.titlepage h2 {
+     padding: 0px 0px 0px 0px;
+     font-size: 50px;
+     font-weight: bold;
+     color: #007aff;
+     line-height: 50px;
+     position: relative;
+     margin-bottom: 20px;
+}
+
+.titlepage span {
+     color: #141012;
+font-size: 17px;
+line-height: 31px;
+display: block;
+font-weight: normal;
+}
+.clothes_main{
+     width: 100%; 
+     float: left;
+     background-color: #081b30;
+     height: auto;
+     padding: 60px 0px;
+
+}
+      </style>
+      <section style="background-color:#007aff;" class="pb-0" >
+         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+               <li data-target="#main_slider" data-slide-to="1"></li>
+               <li data-target="#main_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1>Welcome to <strong class="color">FitPlay Shop</strong></h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button" style="background-color:rgb(54 151 255);">Buy Now</a>
+                              <a class="btn btn-lg btn-primary" href="about.html" role="button" style="background-color:rgb(54 151 255);">About </a>
                            </div>
-                        </nav>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
+                           </div>
+                        </div>
                      </div>
-                     <div class="col-md-4">
-                        <div class="search">
-                           <form action="/action_page.php">
-                              <input class="form_sea" type="text" placeholder="Search" name="search">
-                              <button type="submit" class="seach_icon"><i class="fa fa-search"></i></button>
-                           </form>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1>Welcome to <strong class="color">FitPlay Shop</strong></h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button" style="background-color:rgb(54 151 255);">Buy Now</a>
+                              <a class="btn btn-lg btn-primary" href="about.html" role="button" style="background-color:rgb(54 151 255);">About</a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box ">
+                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1>Welcome to <strong class="color">FitPlay Shop</strong></h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button" style="background-color:rgb(54 151 255);">Buy Now</a>
+                              <a class="btn btn-lg btn-primary" href="about.html" role="button" style="background-color:rgb(54 151 255);">About</a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
-      </header> -->
-      <!-- end header inner -->
-      <!-- end header -->
-      <!-- banner -->
-      <section class="banner_main" style= "background-image: url('proimg/banner_sho.png') ; ">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-8">
-                  <div class="text-bg">
-                     <h1 style="color:#4b4b4b"> <span class="blodark"> FitPlay Shop </span> <br>Gear Up To Fitness</h1>
-                     <p style="color:#4b4b4b">A huge fashion collection for ever </p>
-                     <a class="read_more" href="#">Shop now</a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="ban_img pt-6">
-                     <figure><img src="proimg/ban_img.png" alt="innerbanner" width="750px" height="750px"/></figure>
-                  </div>
-               </div>
-            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class='fa fa-angle-left'></i></a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class='fa fa-angle-right'></i>
+            </a>
          </div>
       </section>
-      <!-- end banner -->
+
       <!-- six_box section -->
-      <div class="six_box">
+      <div class="six_box pt-0">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-2 col-sm-4 pa_left">
@@ -254,15 +270,15 @@ $respic=mysqli_fetch_assoc($quepro);
 }
 
 .project_box:hover img {
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 </style>
       <div id="project" class="project">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2 style="color:#393939">Featured Products</h2>
+                  <div class="titlepage p-0">
+                     <h2 style="color:#393939; font-size: 30px;">Featured Products</h2>
                   </div>
                </div>
             </div>
@@ -356,11 +372,34 @@ $respic=mysqli_fetch_assoc($quepro);
          </div>
       </div>
       <!-- end project section -->
-   <section>
-      <div>
-         <img src="ONE.png" width="100%">
+
+      
+         <!-- three_box section -->
+         <div class="three_box pb-6 pt-0">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="gift_box">
+                     <i><img src="shoppnew/images/icon_mony.png"></i>
+                     <span>Money Back</span>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="gift_box">
+                     <i><img src="shoppnew/images/icon_gift.png"></i>
+                     <span>Special Gift</span>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="gift_box">
+                     <i><img src="shoppnew/images/icon_car.png"></i>
+                     <span>Free Shipping</span>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-</section>   
+      <!-- end three_box section -->
 
 
 
@@ -486,6 +525,12 @@ $respic=mysqli_fetch_assoc($quepro);
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <!-- product display end -->
+
+<section>
+      <div  class="p-2">
+         <img src="proimg/adss.png" width="100%">
+      </div>
+</section> 
 
 <style>
   .product-wrapper, .product-img{overflow: hidden;position: relative; width: 310px; height: 318px; background-color:#E1E1E1;}.mb-45{margin-bottom: 45px}.product-action{bottom: 0px;left: 0;opacity: 0;position: absolute;right: 0;text-align: center;transition: all 0.6s ease 0s}.product-wrapper{border-radius: 10px}.product-img >span{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);color: #333;display: inline-block;font-size: 12px;font-weight: 500;left: 20px;letter-spacing: 1px;padding: 3px 12px;position: absolute;text-align: center;text-transform: uppercase;top: 20px}.product-action-style{background-color: #fff;box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);display: inline-block;padding: 16px 2px 12px}.product-action-style >a{color: #979797;line-height: 1;padding: 0 21px;position: relative}.product-action-style >a.action-plus{font-size: 18px}.product-wrapper:hover .product-action{bottom: 20px;opacity: 1}
@@ -658,69 +703,68 @@ $respic=mysqli_fetch_assoc($quepro);
 </style>
 
 <div class="container-xl">
-	<div class="row">
-		<div class="col-md-12">
-			<h2 class="fea">Featured <b>Products</b></h2>
-			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-
-<div id="productCarousel" class="carousel slide" data-bs-ride="false">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="row">
-                <?php 
-                if($rowpro) {
-                    // Reset data seek pointer
-                    mysqli_data_seek($quepro, 0);
-                    $count = 0;
-                    while($respro = mysqli_fetch_assoc($quepro)) {
-                        if ($count % 4 == 0 && $count != 0) {
-                            echo '</div></div><div class="carousel-item"><div class="row">';
-                        }
-                ?>
-                <div class="col-md-3">
-                    <div class="thumb-wrapper">
-                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-                        <div class="img-box">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="fea">Featured <b>Products</b></h2>
+            <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
                             <?php 
-                            $imgSrc = "upload/{$respro['pic']}";
-                            
+                            if($rowpro) {
+                                // Reset data seek pointer
+                                mysqli_data_seek($quepro, 0);
+                                $count = 0;
+                                while($respro = mysqli_fetch_assoc($quepro)) {
+                                    if ($count % 4 == 0 && $count != 0) {
+                                        echo '</div></div><div class="carousel-item"><div class="row">';
+                                    }
                             ?>
-                            <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
-                        </div>
-                        <div class="thumb-content">
-                            <h4><?= ucfirst($respro['item_name']) ?></h4>
-                            <div class="star-rating">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                </ul>
+                            <div class="col-md-3">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <?php 
+                                        $imgSrc = "upload/{$respro['pic']}";
+                                        ?>
+                                        <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4><?= ucfirst($respro['item_name']) ?></h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="item-price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</p>
+                                        <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="item-price"><?= strip_tags(substr($respro['Price'], 0, 900)) ?> INR</p>
-                            <a href="productdetailsample.php?Order_id=<?= $respro['Order_id'] ?>" class="btn btn-primary">View Product</a>
+                            <?php
+                                    $count++;
+                                }
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
-                <?php
-                        $count++;
-                    }
-                }
-                ?>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -738,42 +782,164 @@ $respic=mysqli_fetch_assoc($quepro);
         });
     });
 </script>
-<!-- PRODUCT CARDS END -->
-   </div>
-  
-<section>
-      <div>
-         <img src="proimg/arivals_banner.png" width="100%">
-      </div>
-</section>   
 
-      <!-- three_box section -->
-      <div class="three_box">
-         <div class="container">
+<!-- PRODUCT CARDS END -->
+
+
+      <!--Our  Clients -->
+      <div id="plant" class="section_Clients layout_padding padding_bottom_0" >
+         <div class="container pt-3">
             <div class="row">
-               <div class="col-md-4">
-                  <div class="gift_box">
-                     <i><img src="shoppnew/images/icon_mony.png"></i>
-                     <span>Money Back</span>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="gift_box">
-                     <i><img src="shoppnew/images/icon_gift.png"></i>
-                     <span>Special Gift</span>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="gift_box">
-                     <i><img src="shoppnew/images/icon_car.png"></i>
-                     <span>Free Shipping</span>
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2 class="text-center p-0" style="color:#393939;"> Testmonial</h2>
+                     <span style="text-align: center;" class="pb-0">available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
                   </div>
                </div>
             </div>
          </div>
       </div>
-   </div>  
-      <!-- end three_box section -->
+            <div class="section Clients_2 layout_padding padding-top_0">
+               <div class="container">
+                  <div class="row p-0">
+                     <div class="col-sm-12">
+
+                        <div id="testimonial" class="carousel slide pb-0"  data-ride="carousel" style="background-color:#136af8;">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators ">
+    <li data-target="#testimonial" data-slide-to="0" class="active"></li>
+    <li data-target="#testimonial" data-slide-to="1"></li>
+    <li data-target="#testimonial" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner p-0">
+    <div class="carousel-item active">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
+                           </div>
+                        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
+                           </div>
+                        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
+                           </div>
+                        </div>
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#testimonial" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <style>
+      
+      .Clients{
+     width: 100%; 
+     float: left;
+}
+
+.section_Clients{
+     width: 100%;
+     float: left;
+}
+
+.section .Clients_2{ 
+     width: 100%; 
+     float: left; 
+}
+.john{ 
+     width: 100%; 
+     float: left;
+     background-color: #136af8;
+     height: auto;
+     background-size: 100%;
+     background-repeat: no-repeat;
+
+}
+
+.john_image {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.john_text {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 35px;
+    font-weight: 500;
+    line-height: 23px;
+
+}
+
+.lorem_ipsum_text{
+     color: #fff;
+     text-align: center;
+     width: 83%;
+     margin: 0 auto;
+     position: relative;
+     color: #fffcf4;
+     padding-top: 33px!important;
+
+}
+.icon_image{
+     width: 100%;
+     text-align: center;
+     margin: 0 auto;
+     position: relative;
+     top: 0;
+     display: block;
+     padding-bottom: 30px;
+     padding-top: 30px;
+}
+
+.contact_us{
+     width: 100%;
+     float: left;
+     padding: 0px;
+}
+</style>
+      <!-- end Our  Clients -->
+
 
       <!--  footer -->
       <footer style="width:100%;">
@@ -788,6 +954,20 @@ $respic=mysqli_fetch_assoc($quepro);
       <!-- sidebar -->
       <script src="shoppnew/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="shoppnew/js/custom.js"></script>
+
+
+            <!-- Javascript files-->
+            <script src="proimg/jss/jquery.min.js"></script>
+      <script src="proimg/jss/popper.min.js"></script>
+      <script src="proimg/jss/bootstrap.bundle.min.js"></script>
+      <script src="proimg/jss/jquery-3.0.0.min.js"></script>
+      <script src="proimg/jss/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="proimg/jss/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="proimg/jss/custom.js"></script>
+      <!-- javascript --> 
+      <script src="proimg/jss/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    </body>
 </html>
 
