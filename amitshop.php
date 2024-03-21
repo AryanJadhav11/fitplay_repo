@@ -1,74 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Sock</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
+
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/shop.min.css">
+      <link rel="stylesheet" href="proimg/css/shop.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/amitshop.css">
+      <link rel="stylesheet" href="proimg/css/amitshop.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/shopresponsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="proimg/css/shopresponsive.css">
+
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="proimg/css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- owl stylesheets --> 
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="proimg/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="proimg/css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
+
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- header -->
-      <header class="section">
-         <!-- header inner -->
-         <div class="header">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a> </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                     <div class="menu-area">
-                        <div class="limit-box">
-                           <nav class="main-menu">
-                              <ul class="menu-area-main">
-                                 <li> <a href="index.html">Home</a> </li>
-                                 <li> <a href="about.html">About</a> </li>
-                                 <li><a href="testmonial.html">Testmonial</a></li>
-                                 <li><a href="clients.html">Shop</a></li>
-                                 <li><a href="contact.html">Contact Us</a></li>
-                                 <li class="last"><a href="#"><img src="images/search_icon.png" alt="icon"/></a></li>
-                              </ul>
-                           </nav>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end header inner -->
-      </header>
-      <!-- end header -->
 
       <section >
          <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
@@ -91,7 +45,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box">
-                              <figure><img src="images/boksing-gloves.png" alt="img"/></figure>
+                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
                            </div>
                         </div>
                      </div>
@@ -110,7 +64,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box ">
-                              <figure><img src="images/boksing-gloves.png" alt="img"/></figure>
+                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
                            </div>
                         </div>
                      </div>
@@ -129,7 +83,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box">
-                              <figure><img src="images/boksing-gloves.png" alt="img"/></figure>
+                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
                            </div>
                         </div>
                      </div>
@@ -298,7 +252,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box">
-                              <figure><img src="images/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                              <figure><img src="proimg/imagess/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
                            </div>
                         </div>
                      </div>
@@ -318,7 +272,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box ">
-                              <figure><img src="images/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                              <figure><img src="proimg/imagess/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
                            </div>
                         </div>
                      </div>
@@ -338,7 +292,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box">
-                              <figure><img src="images/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                              <figure><img src="proimg/imagess/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
                            </div>
                         </div>
                      </div>
@@ -381,30 +335,30 @@
     <div class="carousel-item active">
       <div class="titlepage">
                            <div class="john">
-                              <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
                               <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
                               <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
-                              <div class="icon_image"><img src="images/icon-1.png"></div>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
                            </div>
                         </div>
     </div>
     <div class="carousel-item">
       <div class="titlepage">
                            <div class="john">
-                              <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
                               <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
                               <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
-                              <div class="icon_image"><img src="images/icon-1.png"></div>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
                            </div>
                         </div>
     </div>
     <div class="carousel-item">
       <div class="titlepage">
                            <div class="john">
-                              <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
                               <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
                               <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
-                              <div class="icon_image"><img src="images/icon-1.png"></div>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
                            </div>
                         </div>
     </div>
@@ -510,17 +464,17 @@
                   <div class="row">
                      <div class="col-sm-12 col-md-12 col-lg-4">
                        <div class="site_info">
-                          <span class="info_icon"><img src="images/map-icon.png" /></span>
+                          <span class="info_icon"><img src="proimg/imagess/map-icon.png" /></span>
                           <span style="margin-top: 10px;">No.123 Chalingt Gates, Supper market New York</span></div>
                      </div>
                      <div class="col-sm-12 col-md-12 col-lg-4">
                        <div class="site_info">
-                          <span class="info_icon"><img src="images/phone-icon.png" /></span>
+                          <span class="info_icon"><img src="proimg/imagess/phone-icon.png" /></span>
                           <span style="margin-top: 21px;">( +71 7986543234 )</span></div>
                      </div>
                      <div class="col-sm-12 col-md-12 col-lg-4">
                        <div class="site_info">
-                          <span class="info_icon"><img src="images/email-icon.png" /></span>
+                          <span class="info_icon"><img src="proimg/imagess/email-icon.png" /></span>
                           <span style="margin-top: 21px;">demo@gmail.com</span></div>
                      </div>
                      </div> 
@@ -549,16 +503,16 @@
       </div>
 
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <script src="proimg/jss/jquery.min.js"></script>
+      <script src="proimg/jss/popper.min.js"></script>
+      <script src="proimg/jss/bootstrap.bundle.min.js"></script>
+      <script src="proimg/jss/jquery-3.0.0.min.js"></script>
+      <script src="proimg/jss/plugin.js"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="proimg/jss/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="proimg/jss/custom.js"></script>
       <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
+      <script src="proimg/jss/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
       <script>
          $(document).ready(function(){
