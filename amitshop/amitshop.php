@@ -13,11 +13,11 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/shop.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/amitshop.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/shopresponsive.css">
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
@@ -34,11 +34,6 @@
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
       <!-- header -->
       <header class="section">
          <!-- header inner -->
@@ -74,6 +69,7 @@
          <!-- end header inner -->
       </header>
       <!-- end header -->
+
       <section >
          <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -147,73 +143,123 @@
             </a>
          </div>
       </section>
-      <!-- plant -->
-      <div id="plant" class="section  product">
+      <br>
+<br>
+<br>
+<!-- project start -->
+      <style>
+      .project_box {
+    overflow: hidden;
+    position: relative;
+}
+
+.project_box img {
+    transition: transform 0.3s ease;
+}
+
+.project_box:hover img {
+    transform: scale(1.3);
+}
+</style>
+      <div id="project" class="project">
          <div class="container">
             <div class="row">
-               <div class="col-md-12 ">
+               <div class="col-md-12">
                   <div class="titlepage">
-                     <h2><strong class="black"> Our</strong>  Products</h2>
-                     <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                     <h2 style="color:#393939">Featured Products</h2>
                   </div>
                </div>
+            </div>
+            <div class="row">
+            <div class="product_main">
+             
+                  <div class="project_box ">
+                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                  </div>
+            
+             
+                  <div class="project_box ">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                  </div>
+               
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+            
+                  <div class="project_box ">
+                     <div class="dark_white_bg" ><img  src="proimg/products/shoes1.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+                  <div class="project_box ">
+                     <div class="dark_white_bg" ><img  src="proimg/products/shoes2.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                  </div>
+               
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/stud1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+               
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/stump-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+               
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/waterbottle-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+               
+            
+                  <div class="project_box ">
+                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+            
+             
+                  <div class="project_box ">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                  </div>
+               
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+                  <div class="project_box">
+                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                  </div>
+              
+               <div class="col-md-12">
+                  <a class="read_more" href="#">See More</a>
+               </div>
+            </div>
             </div>
          </div>
       </div>
-         <div class="clothes_main section ">
-          <div class="container">
-            <div class="row">
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div class="sport_product">
-                     <figure><img src="images/basketball.png" alt="img"/></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/t-shirt.png" alt="img"/ ></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4> T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/game.png" alt="img"/></figure>
-                     <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
-    
-        
-       
-         
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div class="sport_product">
-                     <figure><img src="images/basketball.png" alt="img"/"></figure>
-                   <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/t-shirt.png" alt="img"/"></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="images/game.png" alt="img"/"></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
-             </div>
-            </div>
-           </div>
-      </div>
-      <!-- end plant -->
+      <!-- end project section -->
       <!--about -->
       <div class="section about ">
          <div class="container">

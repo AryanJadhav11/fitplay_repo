@@ -163,19 +163,16 @@ $resimg=mysqli_fetch_assoc($que2);
                                 ?>
                                         <li class="splide__slide col-sm-3 m-2">
                                         
-                                            <div class="center">
-                                                 <div class="article-card">
-                                                 <a href="turf_df.php?id=<?= $res8['id'] ?>">
-                                                       <div class="content">
-                                                            <h3 class="date"><b><?= strip_tags(substr($res8['place'], 0, 900)) ?></b></h3>
-                                                            <h1 class="card-title"><b><?= ucfirst($res8['name']) ?></b></a></h1>
-                                                        </div>
-                                                </a>
-                                                        <a href="turf_df.php?id=<?= $res8['id'] ?>">
-                                                        <?php $img = $res8['image'] ?>
-                                                        <img src="upload/<?= $img ?>" alt="" style="height:220px; width:100%; border-radius: 5px 5px 0px 0px;">
-                                                 </div>
+                                            <div class="cards-list">
+                                                <div class="card 1">
+                                                    <?php $img = $res8['image'] ?>
+                                                     <div class="card_image"> <img src="upload/<?= $img ?>" /> </div>
+                                                    <div class="card_title title-white">
+                                                    <p><?= ucfirst($res8['name']) ?></p>
+                                                </div>
                                             </div>
+
+</div>
                                         </a>
                                         </li>
                                 <?php
@@ -190,6 +187,69 @@ $resimg=mysqli_fetch_assoc($que2);
         </section>
     </div>
 </section>
+<style>
+    .cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-left:60px;
+  width: 300px;
+  height: 230px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+</style>
 
 
 <div class="container">
