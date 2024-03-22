@@ -110,7 +110,7 @@ function getInitials($name) {
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="style.css" rel="stylesheet">
+  <link href="proimg/header/headerstyle.css" rel="stylesheet">
 
   <!-- smaple -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
@@ -264,7 +264,7 @@ function getInitials($name) {
                     <ul>
                         <li><a href="turf.php">Turfs</a></li>
                         <li><a href="gym.php">Gyms</a></li>
-                        <li><a href="shop.php">Shop</a></li>
+                        <li><a href="shopnew.php">Shop</a></li>
                        
                     </ul>
                 </li>

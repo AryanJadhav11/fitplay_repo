@@ -128,17 +128,15 @@ function getInitials($name) {
 <body>
 
 
-<section class="menu menu2 cid-u7irD0fFHy" once="menu" id="menu-5-u7irD0fFHy">
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
+<section class="menu  cid-u7irD0fFHy"  once="menu" id="menu-5-u7irD0fFHy">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg" >
+        <div class="container-fluid" style="background-color:white;">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="https://mobiri.se">
                         <img src="favicon_io/android-chrome-512x512.png" style="height: 4.3rem;">
-                    </a>
                 </span>
                 <span class="navbar-caption-wrap">
-                    <a class="navbar-caption text-black display-4" href="https://mobiri.se">FitPlay</a>
+                    <a class="navbar-caption text-black display-4">FitPlay</a>
                 </span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -206,9 +204,7 @@ function getInitials($name) {
                         ?>
                     </li>
                 </ul>
-                <div class="navbar-buttons mbr-section-btn">
-          <a class="btn btn-primary display-4" href="https://mobiri.se">Explore Now</a>
-        </div>
+                
             </div>
         </div>
     </nav>

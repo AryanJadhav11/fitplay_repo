@@ -1,4 +1,4 @@
-<?php include("header.php");?>
+ <?php include("header.php");?>
 
 
 
@@ -162,19 +162,18 @@ $resimg=mysqli_fetch_assoc($que2);
                                     while ($res8 = mysqli_fetch_assoc($que2)) {
                                 ?>
                                         <li class="splide__slide col-sm-3 m-2">
-                                            <div class="card bg-light text-dark imager-fluid">
-                                                
+                                        
+                                            <div class="cards-list">
+                                                <div class="card 1">
                                                     <?php $img = $res8['image'] ?>
-                                                    <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
-                                                </a>
-                                                <div class="card-body" style="padding-left:10px;">
-                                                    <h5 class="card-title"><?= ucfirst($res8['name']) ?></a></h5>
-                                                    <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
-                                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                                                        </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
-                                                    <a href="turf_df.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                                     <div class="card_image"> <img src="upload/<?= $img ?>" /> </div>
+                                                    <div class="card_title title-white">
+                                                    <p><?= ucfirst($res8['name']) ?></p>
                                                 </div>
                                             </div>
+
+</div>
+                                        </a>
                                         </li>
                                 <?php
                                     }
@@ -188,6 +187,69 @@ $resimg=mysqli_fetch_assoc($que2);
         </section>
     </div>
 </section>
+<style>
+    .cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-left:60px;
+  width: 300px;
+  height: 230px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+</style>
 
 
 <div class="container">
@@ -541,6 +603,59 @@ $resimg=mysqli_fetch_assoc($que2);
 </script>
 <!-- shop start -->
 
+<!-- card css start -->
+<style>
+    .article-card {
+  width: 280px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all; 
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.article-card .date,
+.article-card .title {
+  margin: 0;
+}
+
+.article-card .date {
+  font-size: 16px;
+  color:white;
+  margin-bottom: 2px;
+  align-self:center;
+}
+
+.article-card .title {
+  font-size: 20px;
+  color: white;
+}
+
+</style>
+<!-- card css end -->
+
 <!-- shop end -->
 
 
@@ -551,6 +666,21 @@ $resimg=mysqli_fetch_assoc($que2);
 <?php include('footer.php') ?>
 <!-- End Footer -->
 
+<!-- important aahe te  -->
+  <!-- <div class="card bg-light text-dark imager-fluid">
+                                                
+  <?php $img = $res8['image'] ?>
+                                                    <img src="upload/<?= $img ?>" alt="" style="height:180px; width:100%; border-radius: 5px 5px 0px 0px;">
+                                                </a>
+                                                <div class="card-body" style="padding-left:10px;">
+                                                    <h5 class="card-title"><?= ucfirst($res8['name']) ?></a></h5>
+                                                    <p class="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;" class="bi bi-geo-alt-fill " viewBox="0 0 16 16">
+                                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                                        </svg><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
+                                                    <a href="turf_df.php?id=<?= $res8['id'] ?>" class="btn btn-primary">Book Now</a>
+                                                </div>
+                                            </div> -->
+<!-- delete nako karu varcha -->
 </body>
 
 </html>
