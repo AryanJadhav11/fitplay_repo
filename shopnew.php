@@ -213,6 +213,12 @@ font-weight: normal;
       </section>
 
       <!-- six_box section -->
+      <style>
+      .six_probpx:hover {
+    background-color: #add8e6; /* Light blue background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+}
+      </style>
       <div class="six_box pt-0">
          <div class="container-fluid">
             <div class="row">
@@ -375,6 +381,12 @@ font-weight: normal;
 
       
          <!-- three_box section -->
+         <style>
+            .gift_box:hover {
+    background-color: #add8e6; /* Light blue background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+}
+         </style>
          <div class="three_box pb-6 pt-0">
          <div class="container">
             <div class="row">
@@ -938,6 +950,8 @@ font-weight: normal;
      padding: 0px;
 }
 </style>
+
+
       <!-- end Our  Clients -->
 
 
