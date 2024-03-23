@@ -275,7 +275,7 @@ function getInitials($name) {
                 <li>
                 <?php
                 if (isset($_SESSION['user_data'])) {
-                  echo '<ul><li><a class="nav-link scrollto" href="mycart.php"><img src="proimg/cart_button.png" width="30px" height="30px"></a></li>';
+                  echo '<ul><li><a class="nav-link scrollto" href="sidebar.php"><img src="proimg/cart_button.png" width="30px" height="30px"></a></li>';
                   echo '</ul>';
                   } 
                   ?>                         

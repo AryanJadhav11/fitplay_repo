@@ -1,4 +1,4 @@
-<?php include('shopheaderai.php'); ?>
+<?php include('header.php'); ?>
 <?php include('floating_icon.php'); ?>
 <?php
 	$server = 'localhost';

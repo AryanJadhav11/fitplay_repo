@@ -1,4 +1,4 @@
-<?php include("headerai.php");?>
+<?php include("header.php");?>
 <?php
 if (isset($_SESSION['user_data'])) {
     include('floating_icon.php');
@@ -166,7 +166,7 @@ if (isset($_POST['Add_To_Cart'])) {
 	        				<?php
                   				  if(isset($_SESSION['user_data'])) {
                    				     echo '<button type="submit" name="Add_To_Cart" class="round-black-btn shop-button">Add to Cart</button>'; 
-                  				      echo '<a type="button" class="round-black-btn shop-button" href="mycart.php" style="text-decoration:none;">View Cart</a>';
+                  				      echo '<a type="button" class="round-black-btn shop-button" href="sidebar.php" style="text-decoration:none;">View Cart</a>';
                   				  } else {
                   				      echo '<button type="button" class="round-black-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Add to Cart</button>'; 
                    				     echo '<button type="button" class="round-black-btn" data-bs-toggle="modal" data-bs-target="#loginModal">View Cart</button>';
