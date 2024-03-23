@@ -345,7 +345,12 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
             </div><!-- /col -->
         </div>
     </div>
-
+<section>
+    <div >
+    <img src="one.png" width="100%">
+</div>
+</section>
+ 
 
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -369,10 +374,11 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 
             </div>
 
+
+
             <div class="col-xl-8 position-relative">
 
-                <img src="https://livecanvas.com/media/svg/fffuel/svg-shape-11.svg" width="256" height="256" srcset="" sizes="" alt="Made by fffuel.com" class="d-none d-xl-block position-absolute top-100 start-0 translate-middle mt-n5 wp-image-2412" loading="lazy">
-
+               
 
                 <div id="carouselTestimonialCards" class="carousel slide py-xl-4" data-bs-ride="carousel">
                     <div class="carousel-inner">

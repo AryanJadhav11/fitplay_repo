@@ -214,6 +214,12 @@ font-weight: normal;
       </section>
 
       <!-- six_box section -->
+      <style>
+      .six_probpx:hover {
+    background-color: #add8e6; /* Light blue background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+}
+      </style>
       <div class="six_box pt-0">
          <div class="container-fluid">
             <div class="row">
@@ -376,6 +382,12 @@ font-weight: normal;
 
       
          <!-- three_box section -->
+         <style>
+            .gift_box:hover {
+    background-color: #add8e6; /* Light blue background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+}
+         </style>
          <div class="three_box pb-6 pt-0">
          <div class="container">
             <div class="row">
@@ -787,204 +799,159 @@ font-weight: normal;
 <!-- PRODUCT CARDS END -->
 
 
-<!-- client Reviews -->
-<section style="background-color: white;color: black;">
-        <div class="container py-1 pt-0" style="background-color: white;color: black;">
-            <div class="row align-items-center py-2">
-                <div class="col-xl-4 mb-5 text-center text-xl-start">
-    
-                    <div class="lc-block mb-3">
-                        <div editable="rich">
-                            <h2 class="fw-bold display-6">Our Clients say...</h2>
+      <!--Our  Clients -->
+      <div id="plant" class="section_Clients layout_padding padding_bottom_0" >
+         <div class="container pt-3">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2 class="text-center p-0" style="color:#393939;"> Testmonial</h2>
+                     <span style="text-align: center;" class="pb-0">available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+            <div class="section Clients_2 layout_padding padding-top_0">
+               <div class="container">
+                  <div class="row p-0">
+                     <div class="col-sm-12">
+
+                        <div id="testimonial" class="carousel slide pb-0"  data-ride="carousel" style="background-color:#136af8;">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators ">
+    <li data-target="#testimonial" data-slide-to="0" class="active"></li>
+    <li data-target="#testimonial" data-slide-to="1"></li>
+    <li data-target="#testimonial" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner p-0">
+    <div class="carousel-item active">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
+                           </div>
                         </div>
-                    </div>
-                    <div class="lc-block mb-4">
-                        <div editable="rich">
-                            <p class="fw-light rfs-10">Customers are Awesome. Check what our clients are saying about us.</p>
+    </div>
+    <div class="carousel-item">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
+                           </div>
                         </div>
-                    </div>
-    
-                    
-    
-                </div>
-    
-                <div class="col-xl-8 position-relative">
-    
-                    <img src="https://livecanvas.com/media/svg/fffuel/svg-shape-11.svg" width="256" height="256" srcset="" sizes="" alt="Made by fffuel.com" class="d-none d-xl-block position-absolute top-100 start-0 translate-middle mt-n5 wp-image-2412" loading="lazy">
-    
-    
-                    <div id="carouselTestimonialCards" class="carousel slide py-xl-4" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-    
-                                <div class="row row-cols-1 row-cols-lg-2 g-4">
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=5" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">Leah H. Middaugh</p>
-    
-                                                            <p class="text-muted">Patient educator&nbsp;</p>
-    
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=7" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">James M. Collinsworth</p>
-    
-                                                            <p class="text-muted">Street Artist</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                            </div>
-    
-                            <div class="carousel-item">
-    
-                                <div class="row row-cols-1 row-cols-lg-2 g-4">
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=26" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">Amber E. Smith</p>
-    
-                                                            <p class="text-muted">Patient educator&nbsp;</p>
-    
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=3" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">Matthew N. Graham</p>
-    
-                                                            <p class="text-muted">Street Artist</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                            </div>
-    
-                            <div class="carousel-item">
-    
-                                <div class="row row-cols-1 row-cols-lg-2 g-4">
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=23" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">Leslie R. Oleary</p>
-    
-                                                            <p class="text-muted">Fashion designer</p>
-    
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=6" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">James C. Call</p>
-    
-                                                            <p class="text-muted">Street Artist</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                            </div>
+    </div>
+    <div class="carousel-item">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="proimg/imagess/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="proimg/imagess/icon-1.png"></div>
+                           </div>
                         </div>
-</section>
-<!-- client Reviews  End-->
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#testimonial" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <style>
+      
+      .Clients{
+     width: 100%; 
+     float: left;
+}
+
+.section_Clients{
+     width: 100%;
+     float: left;
+}
+
+.section .Clients_2{ 
+     width: 100%; 
+     float: left; 
+}
+.john{ 
+     width: 100%; 
+     float: left;
+     background-color: #136af8;
+     height: auto;
+     background-size: 100%;
+     background-repeat: no-repeat;
+
+}
+
+.john_image {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.john_text {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 35px;
+    font-weight: 500;
+    line-height: 23px;
+
+}
+
+.lorem_ipsum_text{
+     color: #fff;
+     text-align: center;
+     width: 83%;
+     margin: 0 auto;
+     position: relative;
+     color: #fffcf4;
+     padding-top: 33px!important;
+
+}
+.icon_image{
+     width: 100%;
+     text-align: center;
+     margin: 0 auto;
+     position: relative;
+     top: 0;
+     display: block;
+     padding-bottom: 30px;
+     padding-top: 30px;
+}
+
+.contact_us{
+     width: 100%;
+     float: left;
+     padding: 0px;
+}
+</style>
+      <!-- end Our  Clients -->
 
 
       <!--  footer -->
