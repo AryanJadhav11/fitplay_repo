@@ -1030,6 +1030,58 @@ style="fill:#FFFFFF;">
             </div>
         </div>
     </div>
+    <style>
+        /* Custom CSS for the table */
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #858585;
+            color: #fff;
+        }
+
+        .table tbody tr:nth-of-type(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        .inner-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .inner-table th, .inner-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .inner-table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .inner-table tbody tr:nth-of-type(even) {
+            background-color: #f8f9fa;
+        }
+
+        .inner-table tbody tr:hover {
+            background-color: #e2e6ea;
+        }
+    </style>
 </body>
 
 </html>
