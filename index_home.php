@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
     }
 }
-?>'
+?>
 <?php
 function getInitials($name) {
     $nameParts = explode(' ', $name);
@@ -71,7 +71,7 @@ function getInitials($name) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Home | FitPlay</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <!--  <link rel="stylesheet" id="picostrap-styles-css" href="https://cdn.livecanvas.com/media/css/library/bundle.css" media="all"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
@@ -82,7 +82,7 @@ function getInitials($name) {
    .avatar {
        width: 30px;
        height: 30px;
-       background-color: #007bff;
+       background-color: blue;
        color: #ffffff;
        font-size: 20px;
        font-weight: bold;
@@ -90,7 +90,7 @@ function getInitials($name) {
        display: flex;
        align-items: center;
        justify-content: center;
-       margin-bottom: 10px;
+       margin-bottom: 0px;
    }
    .c-item{
      height:480px;
@@ -133,33 +133,145 @@ function getInitials($name) {
          
        }
  </style>
+<style>
+    /* Navbar Styles */
+.navbar {
+  background-color: #144ecc; /* Change the background color */
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  color: black; /* Change the text color */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand img {
+  margin-right: 5px;
+}
+
+.navbar-brand:hover {
+  color: black; /* Change the hover text color */
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: black; /* Change the text color */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar a:hover {
+  color: blue; /* Change the hover text color */
+}
+
+/* Dropdown Styles */
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* Change the background color */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown ul li {
+  margin: 5px 0;
+}
+
+.dropdown ul li a {
+  color: black; /* Change the text color */
+  text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+  color: blue; /* Change the hover text color */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    justify-content: center;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+}
+</style>
+
 
 <body>
 
-<div class="d-flex justify-content-end align-items-center">
 
-<?php
-                if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data']['username'];
-                  $userInitials = getInitials($userName);
-              
-                  
-                  echo '<a href="#"><span>';
-                  echo '<div class="avatar">' . $userInitials . '</div>';
-                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
-              
-                  // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  
-                      echo '<li><a href="admin.php">Admin Panel</a></li>';
-                  }
-                  echo '</ul>';
-                  } 
-                  else {
-                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="text-decoration:none;color:white;">Sign Up</a></button>';
-                  echo'<span>  </span>';
-                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-                  }
-                  ?>
+<nav class="navbar bg-body-tertiary" style="padding: 20px;">
+  <div class="container-fluid">
+  <h1 class="logo" ><a href="index_home.php"><img src="favicon_io/favicon-32x32.png" ></span></a></h1>
+
+    <ul style="font-size: 1.2rem;">
+      <li><a class="nav-link scrollto" href="index_home.php"><b>Home</b></a></li>
+      <li class="dropdown">
+        <a href="#"><span><b>Services</b></span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+          <li><a href="turf.php" ><b>Turfs</b></a></li>
+          <li><a href="gym.php"><b>Gyms</b></a></li>
+          <li><a href="shopnew.php"><b>Shop</b></a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link scrollto" href="contactu.php"><b>Contact</b></a></li>
+      <li><a class="nav-link scrollto" href="register_venue.php"><b>Register Your Venue</b></a></li>
+      <!-- cart -->
+      <li>
+        <?php
+        if (isset($_SESSION['user_data'])) {
+          echo '<ul><li><a class="nav-link scrollto" href="sidebar.php"><img src="proimg/cart_button.png" width="30px" height="30px"></a></li>';
+          echo '</ul>';
+        } 
+        ?>                         
+      </li>
+      <li class="dropdown pb-0" style="color: blue;">
+        <?php
+        if (isset($_SESSION['user_data'])) {
+          $userName = $_SESSION['user_data']['username'];
+          $userInitials = getInitials($userName);
+          echo '<a href="#"><span>';
+          echo '<div class="avatar">' . $userInitials . '</div>';
+          echo '<ul><li><a href="profile1.php">View Profile</a></li>';
+          if ($_SESSION['user_data']['username'] == "sk") {  
+            echo '<li><a href="admin.php">Admin Panel</a></li>';
+          }
+          echo '</ul>';
+        } 
+        else {
+          echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
+          echo'<span>  </span>';
+          echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
+        }
+        ?>
+      </li>
+      <li><p></p></li>
+      <li><p></p></li>
+    </ul>
+  </div>
+</nav>
+
+
                   </div>
 
                   
@@ -409,7 +521,7 @@ function getInitials($name) {
                                             <div class="card-body">
                                                 <div class="lc-block mb-4">
                                                     <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                        <p><em class="rfs-8 text-muted"> "Absolutely loved using this platform! Booking a turf was seamless, and the turf quality was top-notch. Highly recommend it to all sports enthusiasts!".&nbsp;</em></p>
                                                     </div>
                                                 </div>
                                                 <div class="lc-block d-inline-flex">
@@ -419,9 +531,9 @@ function getInitials($name) {
                                                     <div class="lc-block">
                                                         <div editable="rich">
     
-                                                            <p class="h5">Leah H. Middaugh</p>
+                                                            <p class="h5">Rajesh Kumar</p>
     
-                                                            <p class="text-muted">Patient educator&nbsp;</p>
+                                                            <p class="text-muted">Football Coach&nbsp;</p>
     
                                                         </div>
                                                     </div>
@@ -434,7 +546,7 @@ function getInitials($name) {
                                             <div class="card-body">
                                                 <div class="lc-block mb-4">
                                                     <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                        <p><em class="rfs-8 text-muted">"Great experience with this platform! The booking process was straightforward, and the turf facilities were excellent. Will definitely use it again!"&nbsp;</em></p>
                                                     </div>
                                                 </div>
                                                 <div class="lc-block d-inline-flex">
@@ -444,9 +556,9 @@ function getInitials($name) {
                                                     <div class="lc-block">
                                                         <div editable="rich">
     
-                                                            <p class="h5">James M. Collinsworth</p>
+                                                            <p class="h5">Priya Singh</p>
     
-                                                            <p class="text-muted">Street Artist</p>
+                                                            <p class="text-muted">Former Player</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -465,7 +577,7 @@ function getInitials($name) {
                                             <div class="card-body">
                                                 <div class="lc-block mb-4">
                                                     <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                        <p><em class="rfs-8 text-muted"> "I'm impressed with the ease of booking and the variety of turfs available. The platform made organizing our sports event hassle-free. Kudos to the team!"&nbsp;</em></p>
                                                     </div>
                                                 </div>
                                                 <div class="lc-block d-inline-flex">
@@ -475,9 +587,9 @@ function getInitials($name) {
                                                     <div class="lc-block">
                                                         <div editable="rich">
     
-                                                            <p class="h5">Amber E. Smith</p>
+                                                            <p class="h5">Anand Sharma</p>
     
-                                                            <p class="text-muted">Patient educator&nbsp;</p>
+                                                            <p class="text-muted">Fitness Coach&nbsp;</p>
     
                                                         </div>
                                                     </div>
@@ -490,7 +602,7 @@ function getInitials($name) {
                                             <div class="card-body">
                                                 <div class="lc-block mb-4">
                                                     <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                        <p><em class="rfs-8 text-muted"> "This platform exceeded my expectations! The turfs were well-maintained, and the customer support was prompt and helpful. 5 stars from me!"&nbsp;</em></p>
                                                     </div>
                                                 </div>
                                                 <div class="lc-block d-inline-flex">
@@ -500,9 +612,9 @@ function getInitials($name) {
                                                     <div class="lc-block">
                                                         <div editable="rich">
     
-                                                            <p class="h5">Matthew N. Graham</p>
+                                                            <p class="h5">Neha Pate</p>
     
-                                                            <p class="text-muted">Street Artist</p>
+                                                            <p class="text-muted">Cricket Player</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -521,7 +633,7 @@ function getInitials($name) {
                                             <div class="card-body">
                                                 <div class="lc-block mb-4">
                                                     <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                        <p><em class="rfs-8 text-muted"> "Highly satisfied with the turf booking experience. The platform is user-friendly, and the turfs were perfect for our game. Will be a repeat customer for sure!"&nbsp;</em></p>
                                                     </div>
                                                 </div>
                                                 <div class="lc-block d-inline-flex">
@@ -531,9 +643,9 @@ function getInitials($name) {
                                                     <div class="lc-block">
                                                         <div editable="rich">
     
-                                                            <p class="h5">Leslie R. Oleary</p>
+                                                            <p class="h5">Amit Khanna</p>
     
-                                                            <p class="text-muted">Fashion designer</p>
+                                                            <p class="text-muted">Football Player</p>
     
                                                         </div>
                                                     </div>
@@ -541,30 +653,7 @@ function getInitials($name) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card p-3">
-                                            <div class="card-body">
-                                                <div class="lc-block mb-4">
-                                                    <div editable="rich">
-                                                        <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                    </div>
-                                                </div>
-                                                <div class="lc-block d-inline-flex">
-                                                    <div class="lc-block me-3" style="min-width:72px">
-                                                        <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=6" width="72" height="72">
-                                                    </div>
-                                                    <div class="lc-block">
-                                                        <div editable="rich">
-    
-                                                            <p class="h5">James C. Call</p>
-    
-                                                            <p class="text-muted">Street Artist</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
     
                             </div>
@@ -616,7 +705,7 @@ function getInitials($name) {
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
                                         <h3 class="fw-bold h1">20+ <br>Listed Turfs</h3>
-                                        <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
+                                        
 
                                     </div>
                                 </div>
@@ -634,7 +723,6 @@ function getInitials($name) {
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
                                         <h3 class="fw-bold h1">50+ <br>Transactions done</h3>
-                                        <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
 
                                     </div>
                                 </div>
@@ -654,7 +742,6 @@ function getInitials($name) {
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
                                         <h3 class="fw-bold h1">30+ <br>Users</h3>
-                                        <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
 
                                     </div>
                                 </div>
@@ -672,7 +759,6 @@ function getInitials($name) {
                                 <div class="lc-block ps-4">
                                     <div editable="rich">
                                         <h3 class="fw-bold h1">20+ <br>Products</h3>
-                                        <p class="rfs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;</p>
 
                                     </div>
                                 </div>
