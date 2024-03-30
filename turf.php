@@ -6,7 +6,7 @@
   <title>FitPlay-Turfs</title>
 </head>
 <body>
-<!-- video start -->
+
 
 <style>
   
@@ -191,7 +191,7 @@ body
                 <div class="col-lg-6 col-xl-5 text-center text-lg-start pt-lg-5 mt-xl-4">
                     <div class="lc-block mb-4">
                         <div editable="rich">
-                            <h1 class="fw-bold display-3">One More Time One More Game</h1>
+                            <h1 class="fw-bold display-3">More Game</h1>
                         </div>
                     </div>
 
