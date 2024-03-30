@@ -77,6 +77,8 @@ body
 .carousel .item h4 {
 	font-size: 18px;
 }
+
+
 .carousel .item h4, .carousel .item p, .carousel .item ul {
 	margin-bottom: 5px;
 }
