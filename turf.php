@@ -18,132 +18,7 @@ body
 {
   background:white;
 }
-</style>
-
- <div class="overflow-hidden">
-        <div class="container-fluid col-xxl-8" >
-            <div class="row flex-lg-nowrap align-items-center g-5">
-                <div class="order-lg-1 w-100">
-                    <img style="clip-path: polygon(25% 0%, 100% 0%, 100% 99%, 0% 100%);" src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="d-block mx-lg-auto img-fluid" alt="Photo by Milad Fakurian" loading="lazy" srcset="men_football.jpg">
-                </div>
-                <div class="col-lg-6 col-xl-5 text-center text-lg-start pt-lg-5 mt-xl-4">
-                    <div class="lc-block mb-4">
-                        <div editable="rich">
-                            <h1 class="fw-bold display-3">One More Time One More Game</h1>
-                        </div>
-                    </div>
-
-                    <div class="lc-block mb-5">
-                        <div editable="rich">
-                            <p class="rfs-8">Experience the ultimate in convenience and excitement with our online turf booking platform at FitPlay! Elevate your sports experience by effortlessly securing your playing field, right from the comfort of your fingertips. Unleash the joy of hassle-free reservations and score your spot to kick off convenience.</p>
-                        </div>
-                    </div>
-
-                    <div class="lc-block mb-6"><a class="btn btn-primary px-4 me-md-2 btn-lg" href="#" role="button">Get it now</a>
-                    </div>
-
-                    <div class="lc-block">
-                        <div editable="rich">
-                            <p class="fw-bold">Collaborations With:</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="lc-block col-3"><img class="img-fluid wp-image-975" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/motorola.svg" width="" height="300" srcset="" sizes="" alt=""></div>
-                        <div class="lc-block col-3"><img class="img-fluid wp-image-977" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/asus.svg" width="" height="300" srcset="" sizes="" alt=""></div>
-                        <div class="lc-block col-3"><img class="img-fluid wp-image-974" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/sony.svg" width="" height="300" srcset="" sizes="" alt=""></div>
-                        <div class="lc-block col-3"><img class="img-fluid wp-image-967" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/samsung-282297.svg" width="" height="300" srcset="" sizes="" alt=""></div>
-                    </div>
-                </div>
-
-            </div><!-- /lc-block -->
-        </div>
-    </div>
-
-
-
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<!-- video end -->
-
-<!-- carousel start -->
-  <!-- <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-
-  <div class="carousel-inner">
-
-    <div class="carousel-item active c-item">
-      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="..." style="height:100vh">
-      <div class="carousel-caption top-0 mt-4 ">
-        <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book Now</button>
-      </div>
-    </div>
-
-    <div class="carousel-item c-item">
-      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="..." style="height:100vh">
-      <div class="carousel-caption top-0 mt-4 ">
-        <p class="mt-5 fs-3 text-uppercase"> Experience the joy of hassle-free reservations for your soccer matches.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Kick Off Convenience</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Explore Top Turfs</button>
-      </div>
-    </div>
-
-    <div class="carousel-item c-item">
-      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="..." style="height:100vh">
-      <div class="carousel-caption top-0 mt-4 ">
-        <p class="mt-5 fs-3 text-uppercase">Our online turf booking platform lets you schedule your games at your convenience.</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Game On Anytime</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Kick Now</button>
-      </div>
-    </div>
-
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-    </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-
-
-
-  </div>
-</div> -->
-<!-- carousel end  -->
-
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "turf";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-$sql2="SELECT * FROM `grd` ORDER BY grd.pubdate DESC; ";
-$que2=mysqli_query($conn,$sql2);
-$row2=mysqli_num_rows($que2);
-$resimg=mysqli_fetch_assoc($que2);
-
-
-?>
-
-<!--card carousel to show turfs-->
-
-<!-- Add Splide CSS -->
-<!-- Add Splide CSS -->
-<!-- Add Splide CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
-
-
-<body class="py-5 pb-0">
-    <style>
-        /*card css */
+/*card css */
 .fea {
 	color: #000;
 	font-size: 26px;
@@ -305,8 +180,131 @@ $resimg=mysqli_fetch_assoc($que2);
         height: 100%; /* Ensure the card takes up the full height */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the card */
     }
-    </style>
-<div class="container">
+</style>
+
+ <div class="overflow-hidden">
+        <div class="container-fluid col-xxl-8" >
+            <div class="row flex-lg-nowrap align-items-center g-5">
+                <div class="order-lg-1 w-100">
+                    <img style="clip-path: polygon(25% 0%, 100% 0%, 100% 99%, 0% 100%);" src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NzV8fHB1cnBsZXxlbnwwfDB8fHwxNjQ3NDcxNjY4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="d-block mx-lg-auto img-fluid" alt="Photo by Milad Fakurian" loading="lazy" srcset="men_football.jpg">
+                </div>
+                <div class="col-lg-6 col-xl-5 text-center text-lg-start pt-lg-5 mt-xl-4">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h1 class="fw-bold display-3">One More Time One More Game</h1>
+                        </div>
+                    </div>
+
+                    <div class="lc-block mb-5">
+                        <div editable="rich">
+                            <p class="rfs-8">Experience the ultimate in convenience and excitement with our online turf booking platform at FitPlay! Elevate your sports experience by effortlessly securing your playing field, right from the comfort of your fingertips. Unleash the joy of hassle-free reservations and score your spot to kick off convenience.</p>
+                        </div>
+                    </div>
+
+                    <div class="lc-block mb-6"><a class="btn btn-primary px-4 me-md-2 btn-lg" href="#" role="button">Get it now</a>
+                    </div>
+
+                    <div class="lc-block">
+                        <div editable="rich">
+                            <p class="fw-bold">Collaborations With:</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="lc-block col-3"><img class="img-fluid wp-image-975" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/motorola.svg" width="" height="300" srcset="" sizes="" alt=""></div>
+                        <div class="lc-block col-3"><img class="img-fluid wp-image-977" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/asus.svg" width="" height="300" srcset="" sizes="" alt=""></div>
+                        <div class="lc-block col-3"><img class="img-fluid wp-image-974" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/sony.svg" width="" height="300" srcset="" sizes="" alt=""></div>
+                        <div class="lc-block col-3"><img class="img-fluid wp-image-967" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/samsung-282297.svg" width="" height="300" srcset="" sizes="" alt=""></div>
+                    </div>
+                </div>
+
+            </div><!-- /lc-block -->
+        </div>
+    </div>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!-- video end -->
+
+<!-- carousel start -->
+  <!-- <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel" style="margin-bottom:10px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active c-item">
+      <img src="footc1.jpeg" class="d-block w-100 c-img" alt="..." style="height:100vh">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase">Book your turf online effortlessly and secure your playing field.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Score Your Spot</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book Now</button>
+      </div>
+    </div>
+
+    <div class="carousel-item c-item">
+      <img src="full-shot-couch-training-kids.jpg" class="d-block w-100 c-img" alt="..." style="height:100vh">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase"> Experience the joy of hassle-free reservations for your soccer matches.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Kick Off Convenience</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Explore Top Turfs</button>
+      </div>
+    </div>
+
+    <div class="carousel-item c-item">
+      <img src="full-shot-women-playing-football.jpg" class="d-block w-100 c-img" alt="..." style="height:100vh">
+      <div class="carousel-caption top-0 mt-4 ">
+        <p class="mt-5 fs-3 text-uppercase">Our online turf booking platform lets you schedule your games at your convenience.</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Game On Anytime</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Kick Now</button>
+      </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+
+  </div>
+</div> -->
+<!-- carousel end  -->
+
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "turf";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+$sql2="SELECT * FROM `grd` ORDER BY grd.pubdate DESC; ";
+$que2=mysqli_query($conn,$sql2);
+$row2=mysqli_num_rows($que2);
+$resimg=mysqli_fetch_assoc($que2);
+
+
+?>
+
+<!--card carousel to show turfs-->
+
+<!-- Add Splide CSS -->
+<!-- Add Splide CSS -->
+<!-- Add Splide CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+
+
+<body class="py-5 pb-0">
+<div class="container-xl">
 	<div class="row">
 		<div class="col-md-12">
 			<h2 class="fea">Featured <b>Products</b></h2>
