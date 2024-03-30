@@ -146,7 +146,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <section class="pb-0">
     <div class="outer-container">
         <section class="m-100">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center mb-4">
                         <h2 class="explore-turfs-text">Explore Turfs</h2>
@@ -156,22 +156,24 @@ $resimg=mysqli_fetch_assoc($que2);
                             <ul class="splide__list" style="padding:10px; padding-left:7px;">
                                 <?php 
                                 if ($row2) {
-                                    // Reset data seek pointer
                                     mysqli_data_seek($que2, 0);
-
                                     while ($res8 = mysqli_fetch_assoc($que2)) {
                                 ?>
-                                        <li class="splide__slide col-sm-3 m-2">
-                                        
-                                            <div class="cards-list">
-                                                <div class="card 1">
-                                                    <?php $img = $res8['image'] ?>
-                                                     <div class="card_image"> <img src="upload/<?= $img ?>" /> </div>
-                                                    <div class="card_title title-white">
+                                        <li class="splide__slide col-sm-3 m-2" style="width:100%">
+                                        <a href="turf_df.php?id=<?= $res8['id'] ?>">
+                                            <div class="turf-list">
+                                                <div class="turf 1">
+                                                <?php $img = $res8['image'] ?>
+                                                     <div class="turf_image"> <img src="upload/<?= $img ?>" /> </div>
+                                                    <div class="turf_title title-white">
                                                     <p><?= ucfirst($res8['name']) ?></p>
                                                 </div>
+                                                <div class="turf_place">
+                                                <p style=""><?= strip_tags(substr($res8['place'], 0, 900)) ?></p>
+                                                        </div>
+                                                
                                             </div>
-
+                                        </a>
 </div>
                                         </a>
                                         </li>
@@ -188,16 +190,17 @@ $resimg=mysqli_fetch_assoc($que2);
     </div>
 </section>
 <style>
-    .cards-list {
+    .turf-list {
   z-index: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin:20px;
 }
 
-.card {
-  margin-left:60px;
+.turf {
+  margin-left:30px;
   width: 300px;
   height: 230px;
   border-radius: 40px;
@@ -206,30 +209,42 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
   transition: 0.4s;
 }
 
-.card .card_image {
+.turf .turf_image {
   width: inherit;
   height: inherit;
   border-radius: 40px;
 }
 
-.card .card_image img {
+.turf .turf_image img {
   width: inherit;
   height: inherit;
   border-radius: 40px;
   object-fit: cover;
 }
 
-.card .card_title {
-  text-align: center;
+.turf .turf_title {
+  text-align: left;
   border-radius: 0px 0px 40px 40px;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
   margin-top: -80px;
+  margin-left: 30px;
+  margin-bottom:10px;
   height: 40px;
 }
+.turf .turf_place{
+    text-align: left;
+  border-radius: 0px 0px 40px 40px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  margin-left: 30px;
+  margin-bottom:10px;
+  height: 20px;
+}
 
-.card:hover {
+.turf:hover {
   transform: scale(0.9, 0.9);
   box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
     -5px -5px 30px 15px rgba(0,0,0,0.22);
