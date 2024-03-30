@@ -1,10 +1,10 @@
 
-<body style="background-color; color:#034f84;">
+<body style="">
 <section class="pb-0">
 <footer id="footer">
-<div class="footer-top" style="background-color:#E5E1DA;">
-  <div class="container" style="background-color:#E5E1DA; color:#034f84;">
-    <div class="row" style="background-color:#E5E1DA;">
+<div class="footer-top" >
+  <div class="container" >
+    <div class="row" >
 
       <div class="col-lg-3 col-md-6 footer-contact">
         <h2 style="color:black;">Fit<span style="color:#034f84;">Play.</span></h2>
