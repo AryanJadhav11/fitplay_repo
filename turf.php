@@ -123,7 +123,7 @@ body
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "turf";
+$dbname = "turfm";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $sql2="SELECT * FROM `grd` ORDER BY grd.pubdate DESC; ";
