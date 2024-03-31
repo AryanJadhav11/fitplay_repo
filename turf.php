@@ -182,6 +182,8 @@ body
         height: 100%; /* Ensure the card takes up the full height */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the card */
     }
+
+    
 </style>
 
  <div class="overflow-hidden">
@@ -306,10 +308,10 @@ $resimg=mysqli_fetch_assoc($que2);
 
 
 <body class="py-5 pb-0">
-<div class="container-xl">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="fea">Featured <b>Products</b></h2>
+			<h2 class="fea">Listed <b>Turfs</b></h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
 
 <div id="productCarousel" class="carousel slide" data-bs-ride="false">
@@ -334,9 +336,9 @@ $resimg=mysqli_fetch_assoc($que2);
                             $imgSrc = "upload/{$row2['image']}";
                             
                             ?>
-                            <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
+                            <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px;" alt="Product Image">
                         </div>
-                        <div class="thumb-content">
+                        <div class="thumb-content pt-3">
                             <h4><?= ucfirst($row2['name']) ?></h4>
                             <div class="star-rating">
                                 <ul class="list-inline">
@@ -345,7 +347,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                                 </svg><?= ucfirst($row2['place']) ?>
                                 </ul>
                             </div>
-                            <p class="item-price">₹<?= strip_tags(substr($row2['price'], 0, 900)) ?> INR</p>
+                            <h3 class="item-price">₹<?= strip_tags(substr($row2['price'], 0, 900)) ?> INR</h3>
                             <a href="turf_df.php?id=<?= $row2['id'] ?>" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
