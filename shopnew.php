@@ -715,7 +715,7 @@ font-weight: normal;
     }
 </style>
 
-<div class="container-xl">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <h2 class="fea">Featured <b>Products</b></h2>
@@ -740,7 +740,7 @@ font-weight: normal;
                                         <?php 
                                         $imgSrc = "upload/{$respro['pic']}";
                                         ?>
-                                        <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px; object-fit: contain;" alt="Product Image">
+                                        <img src="<?= $imgSrc ?>" class="img-fluid" style="height: 200px;" alt="Product Image">
                                     </div>
                                     <div class="thumb-content">
                                         <h4><?= ucfirst($respro['item_name']) ?></h4>
