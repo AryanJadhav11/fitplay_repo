@@ -171,15 +171,15 @@ font-weight: normal;
                      <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="carousel-caption ">
-                              <h1>Welcome to <strong class="color">FitPlay Shop</strong></h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <h1>Where Quality  <strong class="color">Meets the Game.</strong></h1>
+                              <p>Unleash power and precision with our elite tennis racket. Engineered for champions, ready for your winning shot.</p>
                               <a class="btn btn-lg btn-primary" href="#" role="button" style="background-color:rgb(54 151 255);">Buy Now</a>
                               <a class="btn btn-lg btn-primary" href="about.html" role="button" style="background-color:rgb(54 151 255);">About</a>
                            </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box ">
-                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
+                              <figure><img src="proimg/imagess/racket.png" alt="img"/></figure>
                            </div>
                         </div>
                      </div>
@@ -190,15 +190,15 @@ font-weight: normal;
                      <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="carousel-caption ">
-                              <h1>Welcome to <strong class="color">FitPlay Shop</strong></h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <h1>Gear Up for<strong class="color">Greatness.</strong></h1>
+                              <p>Experience superior agility and support with our top-of-the-line tennis shoes. Dominate the court with confidence and style.</p>
                               <a class="btn btn-lg btn-primary" href="#" role="button" style="background-color:rgb(54 151 255);">Buy Now</a>
                               <a class="btn btn-lg btn-primary" href="about.html" role="button" style="background-color:rgb(54 151 255);">About</a>
                            </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box">
-                              <figure><img src="proimg/imagess/boksing-gloves.png" alt="img"/></figure>
+                              <figure><img src="proimg/imagess/shoessss.png" alt="img"/></figure>
                            </div>
                         </div>
                      </div>
