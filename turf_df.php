@@ -226,11 +226,11 @@ $end_time_12hr = date("h:i A", strtotime($row9['end']));
     </style>
 </head>
 
-<body>
+<body class="pt-5">
     <div class="container">
         <div class="turf-container">
             <div class="turf-image-container">
-                <?php $imgi=$row9['image']?><img src="upload/<?= $imgi ?>" alt="Turf Image" class="turf-image">
+                <?php $imgi=$row9['image']?><img src="upload/<?= $imgi ?>" width="600px;" height="449.99px;" alt="Turf Image" class="turf-image">
             </div>
             <div class="turf-details">
                 <h1 class="turf-title"><?= ucfirst($row9['name']) ?></h1>

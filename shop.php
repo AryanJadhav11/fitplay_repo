@@ -48,7 +48,7 @@ $respic=mysqli_fetch_assoc($quepro);
 
 </head>
 
-<body style="background-color:#C2F0FC;color:#034f84;">
+<body style="background-color: #f8f9fa">
 
 <!-- just new design start -->
 <!-- <section class="block mt-5"> 
