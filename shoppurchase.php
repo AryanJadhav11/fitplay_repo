@@ -130,6 +130,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $insertSql = "INSERT INTO `shopp`(`user_id`, `name`, `email`, `address` VALUES ('$user_id','$fname','$mail','$address')";
                 echo "<script>alert('purchase done')</script>";
 
+                if ($coni->query($insertSql) === TRUE){
+                    
+                }
                 // if ($coni->query($insertSql) === TRUE) {
                 //     // Send email notification only when the booking is successful
                 //     $to = 'aryanjadhav686@gmail.com';
@@ -258,6 +261,24 @@ document.getElementById('payeButton').addEventListener('click', function (e) {
 });
 </script>
 
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				<div class="icon-box">
+					<i class="material-icons">&#xE876;</i>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body text-center">
+				<h4>Great!</h4>	
+				<p>Turf has been listed succssfully !</p>
+				<a href="admin_turf.php"><button class="btn btn-success"><span>Go Back</span> <i class="material-icons">&#xE5C8;</i></button></a>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

@@ -5,8 +5,8 @@
 <head>
   <title>FitPlay-Turfs</title>
 </head>
-<body>
-<!-- video start -->
+<body style="background-color: #f8f9fa">
+
 
 <style>
   
@@ -205,7 +205,7 @@ body
                         </div>
                     </div>
 
-                    <div class="lc-block mb-6"><a class="btn btn-primary px-4 me-md-2 btn-lg" href="#" role="button">Get it now</a>
+                    <div class="lc-block mb-6"><a class="btn btn-primary px-4 me-md-2 btn-lg" href="#tuu" role="button">Explore Turfs</a>
                     </div>
 
                     <div class="lc-block">
@@ -311,7 +311,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="fea">Listed <b>Turfs</b></h2>
+			<h2 class="fea">Featured <b>Products</b></h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
 
 <div id="productCarousel" class="carousel slide" data-bs-ride="false">
@@ -481,7 +481,7 @@ $resimg=mysqli_fetch_assoc($que2);
                 </div><!-- /lc-block -->
             </div><!-- /col -->
         </div>
-    </div>
+    </div></div></div></div></div>
 <section>
     <div >
     <img src="one.png" width="100%">
