@@ -149,8 +149,7 @@ $phone=$_POST['userNum'];
               to transform your life: state-of-the-art amenities, a variety of classes tailored to your fitness needs, and the world’s 
               best personal trainers. Browse the weekly class schedules for group workouts ranging from martial arts-inspired cardio 
               classes to carefully paced foundational yoga sessions.Take advantage of our innovative digital tools to take your fitness 
-               further, no matter your fitness level. Whatever you need, you’ll find it here, with help from experts who will be with you ever
-               y step of the way and a community of members who will inspire and support you. Come in today and experience change with Gold’s Gym              </p>
+               further, no matter your fitness level.</p>
             </div>
 
             <hr />
