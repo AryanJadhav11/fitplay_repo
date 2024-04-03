@@ -208,7 +208,7 @@ body
                     <div class="lc-block mb-6"><a class="btn btn-primary px-4 me-md-2 btn-lg" href="#tuu" role="button">Explore Turfs</a>
                     </div>
 
-                    <div class="lc-block">
+                    <!-- <div class="lc-block">
                         <div editable="rich">
                             <p class="fw-bold">Collaborations With:</p>
                         </div>
@@ -218,7 +218,7 @@ body
                         <div class="lc-block col-3"><img class="img-fluid wp-image-977" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/asus.svg" width="" height="300" srcset="" sizes="" alt=""></div>
                         <div class="lc-block col-3"><img class="img-fluid wp-image-974" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/sony.svg" width="" height="300" srcset="" sizes="" alt=""></div>
                         <div class="lc-block col-3"><img class="img-fluid wp-image-967" src="https://lclibrary.b-cdn.net/starters/wp-content/uploads/sites/15/2021/11/samsung-282297.svg" width="" height="300" srcset="" sizes="" alt=""></div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div><!-- /lc-block -->
