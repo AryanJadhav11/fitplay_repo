@@ -524,22 +524,22 @@ $resimg=mysqli_fetch_assoc($que2);
                             <div class="row row-cols-1 row-cols-lg-2 g-4">
                                 <div class="col">
                                     <div class="card p-3">
-                                        <div class="card-body">
+                                        <div class="card-body" style="height:330px ;" >
                                             <div class="lc-block mb-4">
                                                 <div editable="rich">
-                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                    <p><em class="rfs-8 text-muted">Effortless turf booking, diverse gym choices, and premium fitness gear in the shop. A complete fitness solution in one platform. Highly recommend for fitness enthusiasts!</em></p>
                                                 </div>
                                             </div>
-                                            <div class="lc-block d-inline-flex">
-                                                <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=5" width="72" height="72">
+                                            <div class="lc-block d-inline-flex" style="align-self:bottom;">
+                                                <div class="lc-block me-3" style="min-width:72px;">
+                                                    <img class="img-fluid rounded-circle " src="./sankya1.jpg" width="72" height="72">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
 
-                                                        <p class="h5">Leah H. Middaugh</p>
+                                                        <p class="h5">Sanskar Sankpal</p>
 
-                                                        <p class="text-muted">Patient educator&nbsp;</p>
+                                                        <p class="text-muted">Fitness Lover</p>
 
                                                     </div>
                                                 </div>
@@ -549,22 +549,22 @@ $resimg=mysqli_fetch_assoc($que2);
                                 </div>
                                 <div class="col">
                                     <div class="card p-3">
-                                        <div class="card-body">
+                                        <div class="card-body" style="height:330px ;">
                                             <div class="lc-block mb-4">
                                                 <div editable="rich">
-                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                    <p><em class="rfs-8 text-muted"> Smooth booking process, excellent gym options, and top-quality fitness products. Convenient and user-friendly interface. Great experience overall!</em></p>
                                                 </div>
                                             </div>
                                             <div class="lc-block d-inline-flex">
                                                 <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=7" width="72" height="72">
+                                                    <img class="img-fluid rounded-circle " src="./parth.jpg" width="72" height="72">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
 
-                                                        <p class="h5">James M. Collinsworth</p>
+                                                        <p class="h5">Parth Chavan</p>
 
-                                                        <p class="text-muted">Street Artist</p>
+                                                        <p class="text-muted">Football Enthusiastic</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -580,22 +580,22 @@ $resimg=mysqli_fetch_assoc($que2);
                             <div class="row row-cols-1 row-cols-lg-2 g-4">
                                 <div class="col">
                                     <div class="card p-3">
-                                        <div class="card-body">
+                                        <div class="card-body" style="height:330px ;">
                                             <div class="lc-block mb-4">
                                                 <div editable="rich">
-                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                    <p><em class="rfs-8 text-muted">Seamless turf reservations, comprehensive gym listings, and a shop with premium fitness essentials. Perfect for those serious about fitness. 5 stars!</em></p>
                                                 </div>
                                             </div>
                                             <div class="lc-block d-inline-flex">
                                                 <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=26" width="72" height="72">
+                                                    <img class="img-fluid " src="./anuj.jpg" style="width:72; height:100;">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
 
-                                                        <p class="h5">Amber E. Smith</p>
+                                                        <p class="h5">Anuj Samang</p>
 
-                                                        <p class="text-muted">Patient educator&nbsp;</p>
+                                                        <p class="text-muted">Professional Player</p>
 
                                                     </div>
                                                 </div>
@@ -605,22 +605,22 @@ $resimg=mysqli_fetch_assoc($que2);
                                 </div>
                                 <div class="col">
                                     <div class="card p-3">
-                                        <div class="card-body">
+                                        <div class="card-body" style="height:330px ;">
                                             <div class="lc-block mb-4">
                                                 <div editable="rich">
-                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
+                                                    <p><em class="rfs-8 text-muted">Easy turf bookings, extensive gym options, and a shop with high-value fitness gear. Exceptional service and convenience. Highly satisfied with my experience.</em></p>
                                                 </div>
                                             </div>
                                             <div class="lc-block d-inline-flex">
                                                 <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=3" width="72" height="72">
+                                                    <img class="img-fluid rounded-circle " src="./adya.jpg" width="72" height="72">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
 
-                                                        <p class="h5">Matthew N. Graham</p>
+                                                        <p class="h5">Aditya Deshmuk</p>
 
-                                                        <p class="text-muted">Street Artist</p>
+                                                        <p class="text-muted">Football Enthusiastic</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -631,61 +631,6 @@ $resimg=mysqli_fetch_assoc($que2);
 
                         </div>
 
-                        <div class="carousel-item">
-
-                            <div class="row row-cols-1 row-cols-lg-2 g-4">
-                                <div class="col">
-                                    <div class="card p-3">
-                                        <div class="card-body">
-                                            <div class="lc-block mb-4">
-                                                <div editable="rich">
-                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                </div>
-                                            </div>
-                                            <div class="lc-block d-inline-flex">
-                                                <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=23" width="72" height="72">
-                                                </div>
-                                                <div class="lc-block">
-                                                    <div editable="rich">
-
-                                                        <p class="h5">Leslie R. Oleary</p>
-
-                                                        <p class="text-muted">Fashion designer</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card p-3">
-                                        <div class="card-body">
-                                            <div class="lc-block mb-4">
-                                                <div editable="rich">
-                                                    <p><em class="rfs-8 text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et metus id ligula malesuada placerat sit amet quis enim. Aliquam erat volutpat. In pellentesque scelerisque auctor.&nbsp;</em></p>
-                                                </div>
-                                            </div>
-                                            <div class="lc-block d-inline-flex">
-                                                <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="https://i.pravatar.cc/96?img=6" width="72" height="72">
-                                                </div>
-                                                <div class="lc-block">
-                                                    <div editable="rich">
-
-                                                        <p class="h5">James C. Call</p>
-
-                                                        <p class="text-muted">Street Artist</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
 
 

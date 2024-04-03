@@ -206,15 +206,16 @@
             <input type="text" class="form-control" name="userLastname" id="userLastname">
           </div>
           
-          <div class="col-12 d-flex justify-content-center pt-4">
-            <input type="submit" name="submit" value="send" class="btn btn-primary">
+          
+        </div><div class="col-12 d-flex justify-content-center pt-4">
+            <input type="submit" name="submit" value="submit" class="btn btn-primary">
           </div>
-        </div>
       </div>
     </div>
     <!-- form body end -->
   </div>
 </form>
+
 <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -222,15 +223,18 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-if(isset($_POST['submit'])){
-  $name1=$_POST['userFirstname'];
-  $surname1=$_POST['userLastname'];
-  $fullname= $name1." ".$surname1;
-
-$email1=$_POST['userMail'];
-$phone1=$_POST['userNum'];
-
 //Load Composer's autoloader
+
+if(isset($_POST['submit'])){
+  $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+
+  $name1=isset($_POST['userFirstname']) ? $_POST['userFirstname'] : '';
+  $surname1=isset($_POST['userLastname']) ? $_POST['userLastmane'] : '';
+  $fullname= $name1." ".$surname1;
+  $email1=isset($_POST['userMail']) ? $_POST['userMail'] : '';
+  $phone1=isset($_POST['userNum']) ? $_POST['userNum'] : '';
+
+
 require 'PHPmailer/Exception.php';
 require 'PHPmailer/PHPMailer.php';
 require 'PHPmailer/SMTP.php';
@@ -244,9 +248,10 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'omrandive1006@gmail.com';                     //SMTP username
-    $mail->Password   = 'epng vczx wxgz wiez';                               //SMTP password
+    $mail->Password   = 'epngvczxwxgzwiez';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
     //Recipients
     $mail->setFrom('omrandive1006@gmail.com', 'FitPlay Gyms');
@@ -257,12 +262,15 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'this is to enquire about gym';
-    $mail->Body = "Sender Mail- $email1 <br> Sender Phone Number- $phone1  <br> Sender Name- $fullname <br> ";
+    $mail->Body = 'Sender Mail-  aksugfasgklashdgflkagskhlfgaljd';
 
     $mail->send();
-} catch (Exception $e) {
+
+    echo 'Message has been sent';
+  } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
 }
 ?>
 </section>
