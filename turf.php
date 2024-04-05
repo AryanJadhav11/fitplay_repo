@@ -576,7 +576,6 @@ $resimg=mysqli_fetch_assoc($que2);
                         </div>
 
                         <div class="carousel-item">
-
                             <div class="row row-cols-1 row-cols-lg-2 g-4">
                                 <div class="col">
                                     <div class="card p-3">
@@ -628,10 +627,9 @@ $resimg=mysqli_fetch_assoc($que2);
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
+                    
 
 
 
