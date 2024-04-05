@@ -62,7 +62,7 @@
             <div class="card-body">
               <h5 class="card-title">Ruggedian Fitness Multiplex</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
-              <p class="card-text">City's biggest fitness hub with personalised group batches ,certified staff and various <br> zones.</p>
+              <p class="card-text">City's biggest fitness hub with personalised group batches ,certified staff and various zones.</p>
               <a href="rug.php" class="btn btn-primary">View More</a>
             </div>
           </div>
@@ -109,7 +109,7 @@
             <div class="card-body">
               <h5 class="card-title">Ruggedian Fitness Multiplex</h5>
               <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
-              <p class="card-text">City's biggest fitness hub with personalised group batches ,certified staff and various <br> zones.</p>
+              <p class="card-text">City's biggest fitness hub with personalised group batches ,certified staff and various zones.</p>
               <a href="#" class="btn btn-primary">View More</a>
             </div>
           </div>

@@ -2,28 +2,6 @@
 <?php include("gympageheader.php");
 
 ?>
-
-
-<?php
-  if (isset($_POST['submit'])){
-$name=$_POST['userFirstname'];
-$phone=$_POST['userNum'];
-
- $to = 'aryanjadhav686@gmail.com';
- $subject = 'New Gym enquiry';
- $message = "New gym enquiry by $name about $plan contact them $phone";
- $result = smtp_mailer($to, $subject, $message);
-  }
-  if($result)
-  {
-    echo'<script>console.log("sucess")</script>';
-  }
-  else{
-    echo'<script>console.log("sucess no")</script>';
-
-  }
-?>
-
 <body>
 <!-- content -->
 <section class="pt-5 pb-0">
@@ -159,7 +137,7 @@ $phone=$_POST['userNum'];
 <hr>
  <!-- form -->
 <section>
-<form method="post" id="packageForm">
+<form method="POST" id="packageForm" action="">
   <div class="container">
     <!-- form head -->
     <div class="form_head">
@@ -220,23 +198,81 @@ $phone=$_POST['userNum'];
             <input type="tel" class="form-control" id="userNum" name="userNum">
           </div>
           <div class="col-md-6">
-            <label for="userFirstName" class="form-label">First Name.</label>
-            <input type="text" class="form-control" name="userFirstName" id="userFirstName">
+            <label for="userFirstname" class="form-label">First Name.</label>
+            <input type="text" class="form-control" name="userFirstname" id="userFirstname">
           </div>
           <div class="col-md-6">
             <label for="userLastname" class="form-label">Last Name.</label>
             <input type="text" class="form-control" name="userLastname" id="userLastname">
           </div>
           
-          <div class="col-12 d-flex justify-content-center pt-4">
-            <button type="submit" name="submit" class="btn btn-primary">Send Mail</button>
+          
+        </div><div class="col-12 d-flex justify-content-center pt-4">
+            <input type="submit" name="submit" value="submit" class="btn btn-primary">
           </div>
-        </div>
       </div>
     </div>
     <!-- form body end -->
   </div>
 </form>
+
+<?php
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+
+if(isset($_POST['submit'])){
+  $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+
+  $name1=isset($_POST['userFirstname']) ? $_POST['userFirstname'] : '';
+  $surname1=isset($_POST['userLastname']) ? $_POST['userLastmane'] : '';
+  $fullname= $name1." ".$surname1;
+  $email1=isset($_POST['userMail']) ? $_POST['userMail'] : '';
+  $phone1=isset($_POST['userNum']) ? $_POST['userNum'] : '';
+
+
+require 'PHPmailer/Exception.php';
+require 'PHPmailer/PHPMailer.php';
+require 'PHPmailer/SMTP.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'omrandive1006@gmail.com';                     //SMTP username
+    $mail->Password   = 'epngvczxwxgzwiez';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
+    //Recipients
+    $mail->setFrom('omrandive1006@gmail.com', 'FitPlay Gyms');
+    $mail->addAddress('omrandive1055@gmail.com', 'forge');     //Add a recipient
+
+
+   
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'this is to enquire about gym';
+    $mail->Body = 'Sender Mail-  aksugfasgklashdgflkagskhlfgaljd';
+
+    $mail->send();
+
+    echo 'Message has been sent';
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+}
+?>
 </section>
 
 

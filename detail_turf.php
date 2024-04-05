@@ -72,7 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($paymentSuccess) {
             $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
             $insertSql = "INSERT INTO booking (userid, turfname, date, time, userName, userEmail) 
-                            VALUES ('$user_id', '$name', '$date', '$timeSlot', '$userName', '$userEmail')";
+            VALUES ('$user_id', '$name', '$date', '$timeSlot', '$userName', '$userEmail')";
+
+
 
 if ($coni->query($insertSql) === TRUE) {
     // Generate a unique 5-digit entry ID
@@ -250,6 +252,7 @@ $coni->close();
 			</div>
 		</div>
 	</div>
+
 	<script>
     var startTime = "<?= date('H:i', strtotime($row9['start'])) ?>";
     var endTime = "<?= date('H:i', strtotime($row9['end'])) ?>";
