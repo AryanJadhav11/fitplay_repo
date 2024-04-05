@@ -741,7 +741,49 @@ $resimg=mysqli_fetch_assoc($que2);
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
+ <!-- moodel start -->
+ <div class="mobile-modal">
+  <div class="mobile-modal-content">
+    <h2>Mobile Device Detected</h2>
+    <p>Sorry, this website cannot be displayed properly on mobile devices.</p>
+    <button class="ok-button">OK</button>
+  </div>
+  <style>
+     /* Media query for mobile devices */
+  @media only screen and (max-width: 600px) {
+    /* Styling for the modal */
+    .mobile-modal {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      text-align: center;
+    }
 
+    .mobile-modal-content {
+      background-color: #fff;
+      max-width: 80%;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .ok-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+}
+  </style>
+  <!-- modal end -->
+</div>
    <!-- footer start -->
 <?php include('footer.php') ?>
 <!-- End Footer -->
