@@ -439,14 +439,16 @@ $result = mysqli_query($coni, $sql);
                                 $tid = $row['boid'];
                                 $tname = $row['turfname'];
                                 $towner = $row['date'];
-                                $pubdate = $row['time'];
+                                $pubdate = $row['startTime'];
+                                $pubdate2= $row['endTime'];
                                 $pl = $row['userName'];
+                                $concatenatedVar = $pubdate . ' - ' . $pubdate2;
 
                                 echo '<tr>
                                         <td scope="row">' . $tid . '</td>
                                         <td>' . $tname . '</td>
                                         <td>' . $towner . '</td>
-                                        <td>' . $pubdate . '</td>
+                                        <td>' . $concatenatedVar . '</td>
                                         <td>' . $pl . '</td>
                                         <td>
                                         <a href="?deleteid=' . $tid . '" class="text text-dark" style="color:black;">

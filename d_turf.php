@@ -1,9 +1,14 @@
-<?php include('header.php') ?>
-<?php
-include('smtp/PHPMailerAutoload.php');
+<?php include('header.php') ;
+$server = 'localhost';
+$user = 'root';
+$db = 'turf';
+$pass = '';
 
+$coni = mysqli_connect($server, $user, $pass, $db);
 
-
+if (!$coni) {
+    die(mysqli_error($coni));
+}
 function smtp_mailer($to, $subject, $message) {
     $mail = new PHPMailer();
     $mail->IsSMTP();
@@ -30,70 +35,62 @@ function smtp_mailer($to, $subject, $message) {
         return 'Sent';
     }
 }
-
-$server = 'localhost';
-$user = 'root';
-$db = 'turf';
-$pass = '';
-
-$coni = mysqli_connect($server, $user, $pass, $db);
-
-if (!$coni) {
-    die(mysqli_error($coni));
-}
-
-if(isset($_GET['id'])) {
-   $blid=$_GET['id'];
-   $sql9="SELECT * FROM `grd` WHERE id='$blid';";
-   $res9=mysqli_query($coni,$sql9);
-   $row9=mysqli_fetch_assoc($res9);
-}
-
 $response = array();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['razorpay_payment_id']) && !empty($_POST['razorpay_payment_id'])) {
-    $name = isset($_POST['turfname']) ? $_POST['turfname'] : ''; 
-    $date = isset($_POST['date']) ? $_POST['date'] : '';
-    $price = isset($_POST['price']) ? $_POST['price'] : '';
-    $timeSlot = isset($_POST['timeSlot']) ? $_POST['timeSlot'] : '';
-    $userName = isset($_POST['userName']) ? $_POST['userName'] : '';
-    $userEmail = isset($_POST['userEmail']) ? $_POST['userEmail'] : '';
+    // Check if payment is successful
+    $paymentSuccessful = true; // Replace this with your payment verification logic
 
-    $insertSql = "INSERT INTO booking (turfname, date, startTime, endTime, userEmail, userName) 
-                  VALUES ('$name', '$date', '$timeSlot', '$timeSlot', '$userEmail', '$userName')";
+    if ($paymentSuccessful) {
+        // Retrieve the current user's ID from the session data
+        $userId = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
 
-    if ($coni->query($insertSql) === TRUE) {
-        // Send confirmation email
-        $to = $userEmail;
-        $subject = "Booking Confirmation";
-        $message = "Your booking for $name on $date at $timeSlot has been confirmed.";
-        $mail_result = smtp_mailer($to, $subject, $message);
+        $turfname = isset($_POST['turfname']) ? $_POST['turfname'] : ''; 
+        $date = isset($_POST['date']) ? $_POST['date'] : '';
+        $startTime = isset($_POST['startTime']) ? $_POST['startTime'] : '';
+        $endTime = isset($_POST['endTime']) ? $_POST['endTime'] : '';
+        $userName = isset($_POST['userName']) ? $_POST['userName'] : '';
+        $userEmail = isset($_POST['userEmail']) ? $_POST['userEmail'] : '';
 
-        $ownerEmailSql = "SELECT email FROM turf_owner WHERE venue_name = '$name'";
-        $ownerResult = mysqli_query($coni, $ownerEmailSql);
-        $ownerRow = mysqli_fetch_assoc($ownerResult);
-        $ownerEmail = $ownerRow['email'];
+        // Insert data into the booking table
+        $insertSql = "INSERT INTO booking (userId, turfname, date, startTime, endTime, userEmail, userName) 
+                      VALUES ('$userId', '$turfname', '$date', '$startTime', '$endTime', '$userEmail', '$userName')";
 
-        // Send notification email to turf owner
-        $to = $ownerEmail;
-        $subject = "New Booking for $name";
-        $message = "Hey Turf Owner, there's a new booking for $name on $date at $timeSlot.";
-        $mail_result = smtp_mailer($to, $subject, $message);
+        if ($coni->query($insertSql) === TRUE) {
+            // Data inserted successfully
+            $response['success'] = true;
+            $response['message'] = 'Booking successful.';
 
-        $to = "aryanjadhav686@gmail.com";
-        $subject = "New Booking for $name";
-        $message = "Hey FitPlay, there's a new booking for $name on $date at $timeSlot.";
-        $mail_result = smtp_mailer($to, $subject, $message);
-        
+            // Send email notifications
+            $to = 'aryanjadhav686@gmail.com'; // Change to your recipient email address
+            $subject = 'New Booking';
+            $message = "New booking by $userName on $date from $startTime to $endTime for turf $turfname.";
+            $emailResult = smtp_mailer($to, $subject, $message);
 
-        // Redirect user to another page after successful booking
+            if ($emailResult === 'Sent') {
+                $response['email_status'] = 'Email sent successfully.';
+            } else {
+                $response['email_status'] = 'Failed to send email.';
+            }
+        } else {
+            // Failed to insert data
+            $response['success'] = false;
+            $response['error'] = mysqli_error($coni);
+        }
     } else {
-        
-
-       
+        // Payment failed
+        $response['success'] = false;
+        $response['error'] = 'Payment failed. Please try again.';
     }
 }
+
+$coni->close();
+
+// Output JSON response
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -202,14 +199,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['razorpay_payment_id'])
 											<input type="email" id="userEmail" class="form-control" placeholder="Enter Your Email" name="userEmail" required>
 										</div>
 									</div>
+
+                                    <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
+
 									
 								</div>
 								<div class="row">
 								<input type="hidden" id="timeSlot" name="timeSlot" value="">
 <div class="form-group" id="timeSlotButtons" style="margin:10px;">
 	</div>
-    <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
-
 								<div class="form-btn">
 									<button button  id="payButton" type="submit" value="Submit" class="btn btn-primary btn-block" style="width: 100%;">Proceed to Payment</button>
 								</div>
@@ -220,6 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['razorpay_payment_id'])
 			</div>
 		</div>
 	</div>
+
 	<script>
     var startTime = "<?= date('H:i', strtotime($row9['start'])) ?>";
     var endTime = "<?= date('H:i', strtotime($row9['end'])) ?>";
@@ -299,23 +298,18 @@ timeSlotButtonsContainer.appendChild(button);
             }
 
             var options = {
-                "key": "rzp_live_GTGlhqoi4rsmHV",
+                "key": "rzp_live_GL8N1VxLpxd9SM",
                 "amount": "1" * 100,
                 "currency": "INR",
                 "name": "<?= ucfirst($row9['name']) ?>",
                 "description": "Booking for <?= ucfirst($row9['name']) ?>",
                 "image": "logo.png",
                 "handler": function(response) {
-    if (response.razorpay_payment_id) {
-        // If payment is successful, set a hidden input field with payment ID
-        document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
-        // Then submit the form
-        document.getElementById('bookingForm').submit();
-    } else {
-        // If payment fails, handle accordingly (e.g., show error message)
-        alert('Payment failed. Please try again.');
-    }
-},
+                    document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+
+                // Submit the form
+                document.getElementById('bookingForm').submit();
+                },
                 "prefill": {
                     "name": document.getElementById('userName').value,
                     "email": document.getElementById('userEmail').value
