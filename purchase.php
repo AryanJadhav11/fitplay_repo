@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 // Database connectivity
 $con = mysqli_connect("localhost", "root", "", "fitplay_users");

@@ -181,7 +181,7 @@
                     }
                     </style>
             <div class="pt-2">
-                 <a href="shopcheckout.php"><button type="" class="btn btn-primary btn-block " style="width: 100%; color: #000000; background-color: #54AAF2; text-transform: uppercase;font-weight: bold;">Checkout</button></a>
+                 <a href="payment_shop.php"><button type="" class="btn btn-primary btn-block " style="width: 100%; color: #000000; background-color: #54AAF2; text-transform: uppercase;font-weight: bold;">Checkout</button></a>
             </div>
                     
                     </div>     

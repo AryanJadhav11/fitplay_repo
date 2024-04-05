@@ -4,7 +4,7 @@
   <!-- script for fixed navbar -->
   <?php
 include('smtp/PHPMailerAutoload.php');
-include('header.php');
+
 function smtp_mailer($to, $subject, $message) {
     $mail = new PHPMailer();
     $mail->IsSMTP();
@@ -35,7 +35,7 @@ function smtp_mailer($to, $subject, $message) {
 // Database connection
 $server = 'localhost';
 $user = 'root';
-$db = 'turf';
+$db = 'fitplay_users';
 $pass = '';
 
 $coni = mysqli_connect($server, $user, $pass, $db);
