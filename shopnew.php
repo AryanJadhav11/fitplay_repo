@@ -996,7 +996,49 @@ font-weight: normal;
                         </div>
    </section>
       <!-- end Our  Clients -->
-<h1>hello yash sutta </h1>
+      <!-- moodel start -->
+      <div class="mobile-modal">
+  <div class="mobile-modal-content">
+    <h2>Mobile Device Detected</h2>
+    <p>Sorry, this website cannot be displayed properly on mobile devices.</p>
+    <button class="ok-button">OK</button>
+  </div>
+  <style>
+     /* Media query for mobile devices */
+  @media only screen and (max-width: 600px) {
+    /* Styling for the modal */
+    .mobile-modal {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .mobile-modal-content {
+      background-color: #fff;
+      max-width: 80%;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .ok-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+}
+  </style>
+  <!-- modal end -->
+</div>
 
       <!--  footer -->
       <footer style="width:100%;">
