@@ -1,12 +1,9 @@
- <?php include("header.php");?>
-
-
 
 <head>
   <title>FitPlay-Turfs</title>
 </head>
-<body style="background-color: #f8f9fa">
-
+<body style="background-color:white">
+<?php include("header.php");?>
 
 <style>
   
@@ -307,7 +304,7 @@ $resimg=mysqli_fetch_assoc($que2);
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
 
-<body class="py-5 pb-0">
+<body class="py-5 pb-0" style="background-color: #f8f9fa;">
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -328,7 +325,7 @@ $resimg=mysqli_fetch_assoc($que2);
                             echo '</div></div><div class="carousel-item"><div class="row">';
                         }
                 ?>
-                <div class="col-md-3">
+                <div class="col-md-3 p-5">
                     <div class="thumb-wrapper">
                         <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
                         <div class="img-box">
@@ -456,15 +453,15 @@ $resimg=mysqli_fetch_assoc($que2);
 	</ol>
 	-->
 
-                        <div class="w-100 px-3 text-center mt-4">
-                            <a class="carousel-control-prev position-relative d-inline me-4" href="#carouselLogos" data-bs-slide="prev">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <div class="w-100 px-3 text-center mt-4 ">
+                            <a class="carousel-control-prev position-relative d-inline me-4 p-1" href="#carouselLogos" data-bs-slide="prev">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
                                 </svg>
                                 <span class="visually-hidden">Previous</span>
                             </a>
-                            <a class="carousel-control-next position-relative d-inline" href="#carouselLogos" data-bs-slide="next">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <a class="carousel-control-next position-relative d-inline me-4 p-1" href="#carouselLogos" data-bs-slide="next">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
                                 </svg>
                                 <span class="visually-hidden">Next</span>
@@ -532,7 +529,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                             </div>
                                             <div class="lc-block d-inline-flex" style="align-self:bottom;">
                                                 <div class="lc-block me-3" style="min-width:72px;">
-                                                    <img class="img-fluid rounded-circle " src="./sankya1.jpg" width="72" height="72">
+                                                    <img class="img-fluid rounded-circle " src="./sankya1.jpg" width="72px" height="72px">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
@@ -557,7 +554,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                             </div>
                                             <div class="lc-block d-inline-flex">
                                                 <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="./parth.jpg" width="72" height="72">
+                                                    <img class="img-fluid rounded-circle " src="./parth.jpg"width="72px" height="72px">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
@@ -612,7 +609,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                             </div>
                                             <div class="lc-block d-inline-flex">
                                                 <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid rounded-circle " src="./adya.jpg" width="72" height="72">
+                                                    <img class="img-fluid rounded-circle " src="./adya.jpg"width="72px" height="72px">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
@@ -634,14 +631,14 @@ $resimg=mysqli_fetch_assoc($que2);
 
 
                     <div class="w-100 px-3 text-center mt-4">
-                        <a class="carousel-control-prev position-relative d-inline me-4" href="#carouselTestimonialCards" data-bs-slide="prev">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <a class="carousel-control-prev position-relative d-inline me-4 p-2" href="#carouselTestimonialCards" data-bs-slide="prev">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M11.354 1.726a.5.5 0 0 1 0 .708L5.707 8l5.727 5.726a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
                             </svg>
                             <span class="visually-hidden">Previous</span>
                         </a>
-                        <a class="carousel-control-next position-relative d-inline" href="#carouselTestimonialCards" data-bs-slide="next">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <a class="carousel-control-next position-relative d-inline me-4 p-2" href="#carouselTestimonialCards" data-bs-slide="next">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
                                 <path fill-rule="evenodd" d="M4.726 1.726a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.726 2.354a.5.5 0 0 1 0-.708z"></path>
                             </svg>
                             <span class="visually-hidden">Next</span>
