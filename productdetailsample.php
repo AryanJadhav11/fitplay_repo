@@ -1,4 +1,74 @@
-<?php include("header.php");?>
+<!-- Php for login modal and database -->
+<?php
+
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$showerr = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $err = "";
+
+    // Check if the keys are set before using them
+    $form_username = isset($_POST["uname"]) ? $_POST["uname"] : "";
+    $form_password = isset($_POST["password"]) ? $_POST["password"] : "";
+
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("SELECT * FROM `users` WHERE username=? AND password=?");
+    $stmt->bind_param("ss", $form_username, $form_password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+
+    $num = $result->num_rows;
+
+    if ($num) {
+        $re = $result->fetch_assoc();
+        $user_data = array(
+            'user_id' => $re['id'],
+            'firstname' => $re['firstname'],
+            'lastname' => $re['lastname'],
+            'username' => $re['username'],
+            'email' => $re['email'],
+        );
+        $_SESSION['user_data'] = $user_data;
+
+        // Redirect to turf.php after successful login
+        header('Location:turf.php');
+        exit();
+    } else {
+        $showerr = "Invalid Email / Password";
+        $_SESSION['error'] = "Invalid Email / Password";
+       
+    }
+}
+?>
+<?php
+function getInitials($name) {
+    $nameParts = explode(' ', $name);
+    $initials = '';
+
+    foreach ($nameParts as $part) {
+        $initials .= strtoupper(substr($part, 0, 1));
+    }
+    return $initials;
+}
+?>
+
+
+
 <?php
 if (isset($_SESSION['user_data'])) {
     include('floating_icon.php');
@@ -44,12 +114,45 @@ if (isset($_GET['Order_id'])) {
 
 <head>
     <title>FitPlay - Product_Detail</title>
+	<link rel="icon" type="image/png" href="favicon_io/favicon.ico">
+	
     <!-- cdn links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body class="py-6">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="all.css">
+  </head>
+  <body class="py-6">
+		<div class="wrapper d-flex align-items-stretch" style="height:100%;" >
+			<nav id="sidebar" class="active"style="background-color:#1a85df;" >
+				<h1><a href="index.html" class="logo">F<span style="color:#005500;">P.</a></h1>
+        <ul class="list-unstyled components mb-5" style="color:black;">
+          <li class="active">
+            <a href="#"><span class="fa fa-home"></span> Home</a>
+          </li>
+          <li>
+              <a href="#"><span class="fa fa-user"></span> About</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-cogs"></span> Services</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+          </li>
+          
+        </ul>
+
+    	</nav>
+
+        <!-- Page Content  -->
+
 
 <?php
 // Start the session if it's not started already
@@ -73,7 +176,22 @@ if (isset($_POST['Add_To_Cart'])) {
 
     // Check if the insertion was successful
     if ($result) {
-        echo "Item added to cart successfully!";
+        echo '<!-- Hidden alert modal -->
+		<div id="alertModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+					<h4 class="text-center">
+					<img src="proimg/like.gif" alt="Like" class="mr-2"> <!-- Assuming you want to display the like image -->
+					<span id="alertMessage"></span> <!-- Your message goes here -->
+				</h4>
+					</div>
+					<div class="modal-footer justify-content-center"> <!-- Centering the footer -->
+						<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button> <!-- Adding the OK button -->
+					</div>
+				</div>
+			</div>
+		</div>';
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -95,7 +213,7 @@ if (isset($_POST['Add_To_Cart'])) {
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"><div class="pd-wrap">
 		
 	<form method="POST">
-	<div class="container">
+	<div class="container " style="margin-left:335px;">
 	        <div class="heading-section">
 	            <h2>Product Details</h2>
 	        </div>
@@ -166,7 +284,7 @@ if (isset($_POST['Add_To_Cart'])) {
 	        				<?php
                   				  if(isset($_SESSION['user_data'])) {
                    				     echo '<button type="submit" name="Add_To_Cart" class="round-black-btn shop-button">Add to Cart</button>'; 
-                  				      echo '<a type="button" class="round-black-btn shop-button" href="sidebar.php" style="text-decoration:none;">View Cart</a>';
+                  				      echo '<a type="button" class="round-black-btn shop-button" href="mycart.php" style="text-decoration:none;">View Cart</a>';
                   				  } else {
                   				      echo '<button type="button" class="round-black-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Add to Cart</button>'; 
                    				     echo '<button type="button" class="round-black-btn" data-bs-toggle="modal" data-bs-target="#loginModal">View Cart</button>';
@@ -590,7 +708,22 @@ if (isset($_POST['Add_To_Cart'])) {
             });
 		});
 </script>
-    <!-- end -->
+ <!-- end -->
+	</div>
 </body>
 </html>
 
+<!-- css for alert message  -->
+<script>
+	// Function to display custom alert message
+function showAlert(message) {
+    // Set the alert message
+    document.getElementById("alertMessage").innerHTML = message;
+    // Show the alert modal
+    $("#alertModal").modal("show");
+}
+
+// Example usage:
+// Call showAlert function with your message
+showAlert("Item added to cart successfully!");
+</script>

@@ -4,25 +4,6 @@
 ?>
 
 
-<?php
-  if (isset($_POST['submit'])){
-$name=$_POST['userFirstname'];
-$phone=$_POST['userNum'];
-
- $to = 'aryanjadhav686@gmail.com';
- $subject = 'New Gym enquiry';
- $message = "New gym enquiry by $name about $plan contact them $phone";
- $result = smtp_mailer($to, $subject, $message);
-  }
-  if($result)
-  {
-    echo'<script>console.log("sucess")</script>';
-  }
-  else{
-    echo'<script>console.log("sucess no")</script>';
-
-  }
-?>
 
 <body>
   <!-- content -->
@@ -258,6 +239,90 @@ Providing a diverse selection of health and wellness options for individuals see
         <!-- form body end -->
       </div>
     </form>
+    <?php
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+
+if(isset($_POST['submit'])){
+  $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+
+  $name1=isset($_POST['userFirstname']) ? $_POST['userFirstname'] : '';
+  $surname1=isset($_POST['userLastname']) ? $_POST['userLastmane'] : '';
+  $fullname= $name1." ".$surname1;
+  $email1=isset($_POST['userMail']) ? $_POST['userMail'] : '';
+  $phone1=isset($_POST['userNum']) ? $_POST['userNum'] : '';
+
+
+require 'PHPmailer/Exception.php';
+require 'PHPmailer/PHPMailer.php';
+require 'PHPmailer/SMTP.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'omrandive1006@gmail.com';                     //SMTP username
+    $mail->Password   = 'epngvczxwxgzwiez';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
+    //Recipients
+    $mail->setFrom($email1, 'FitPlay Gyms');
+    $mail->addAddress('omrandive1055@gmail.com', 'Muscle Tree Gym');     //Add a recipient
+
+
+   
+    //Content
+    // $mail->isHTML(true);                                  //Set email format to HTML
+    // $mail->Subject = 'This is to enquire about gym';
+    // $mail->Body = 'Sender Mail-  aksugfasgklashdgflkagskhlfgaljd';
+// 
+$mail->isHTML(true); // Set email format to HTML
+
+// Email Subject
+$mail->Subject = 'Inquiry about Gym Membership';
+
+// Email Body
+$body = '<p>Dear FORGE FITNESS CLUB,</p>';
+$body .= '<p>This is an inquiry about gym membership. Below are the details:</p>';
+$body .= '<ul>';
+$body .= '<li><strong>Sender Name:</strong> ' . $fullname . '</li>';
+$body .= '<li><strong>Email:</strong> ' . $email1 . '</li>';
+$body .= '<li><strong>Phone Number:</strong> ' . $phone1 . '</li>';
+$body .= '<li><strong>Selected Package:</strong> ' . $_POST['package'] . '</li>'; // Assuming the package name is submitted in the form
+$body .= '</ul>';
+$body .= '<p>Please contact the sender at <strong>' . $email1 . '</strong> or <strong>' . $phone1 . '</strong> to discuss further.</p>';
+$body .= '<p>Thank you for considering FitPlay Gym!</p>';
+$body .= '<p>Best regards,<br>FitPlay Team</p>';
+$body .= '<hr>'; // Optional: Add a horizontal line for visual separation
+$body .= '<p><strong>FitPlay Overview:</strong></p>';
+$body .= '<p>FitPlay Gym offers state-of-the-art fitness facilities, an Online Turf booking platform, Online Gym exploring Platform, our fitness and sports equipment shop, and more to help you achieve your fitness goals.</p>';
+$body .= '<p><strong>Address:</strong></p>';
+$body .= '<p>P67Q+G8R, Warna Colony, Kolhapur, Maharashtra 416003</p>';
+
+$mail->Body = $body;
+
+
+// 
+    $mail->send();
+
+    echo 'Message has been sent';
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+}
+?>
   </section>
 
 
@@ -279,17 +344,7 @@ Providing a diverse selection of health and wellness options for individuals see
         });
       });
 
-      document.getElementById('packageForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
 
-        // Get the selected package
-        var selectedPackage = document.querySelector('input[name="package"]:checked');
-        if (!selectedPackage) {
-          alert("Please select a package.");
-          return;
-        }
-
-      });
     });
 
   </script>

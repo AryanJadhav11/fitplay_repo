@@ -137,7 +137,7 @@
 <hr>
  <!-- form -->
 <section>
-<form method="POST" id="packageForm" action="">
+<form method="POST" id="packageForm" onsubmit="console.log('submitted')">
   <div class="container">
     <!-- form head -->
     <div class="form_head">
@@ -206,14 +206,14 @@
             <input type="text" class="form-control" name="userLastname" id="userLastname">
           </div>
           
-          
-        </div><div class="col-12 d-flex justify-content-center pt-4">
+          </div><div class="col-12 d-flex justify-content-center pt-4">
             <input type="submit" name="submit" value="submit" class="btn btn-primary">
           </div>
+       
       </div>
     </div>
     <!-- form body end -->
-  </div>
+  </div> 
 </form>
 
 <?php
@@ -254,16 +254,43 @@ try {
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
     //Recipients
-    $mail->setFrom('omrandive1006@gmail.com', 'FitPlay Gyms');
+    $mail->setFrom($email1, 'FitPlay Gyms');
     $mail->addAddress('omrandive1055@gmail.com', 'forge');     //Add a recipient
 
 
    
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'this is to enquire about gym';
-    $mail->Body = 'Sender Mail-  aksugfasgklashdgflkagskhlfgaljd';
+    // $mail->isHTML(true);                                  //Set email format to HTML
+    // $mail->Subject = 'This is to enquire about gym';
+    // $mail->Body = 'Sender Mail-  aksugfasgklashdgflkagskhlfgaljd';
+// 
+$mail->isHTML(true); // Set email format to HTML
 
+// Email Subject
+$mail->Subject = 'Inquiry about Gym Membership';
+
+// Email Body
+$body = '<p>Dear FORGE FITNESS CLUB,</p>';
+$body .= '<p>This is an inquiry about gym membership. Below are the details:</p>';
+$body .= '<ul>';
+$body .= '<li><strong>Sender Name:</strong> ' . $fullname . '</li>';
+$body .= '<li><strong>Email:</strong> ' . $email1 . '</li>';
+$body .= '<li><strong>Phone Number:</strong> ' . $phone1 . '</li>';
+$body .= '<li><strong>Selected Package:</strong> ' . $_POST['package'] . '</li>'; // Assuming the package name is submitted in the form
+$body .= '</ul>';
+$body .= '<p>Please contact the sender at <strong>' . $email1 . '</strong> or <strong>' . $phone1 . '</strong> to discuss further.</p>';
+$body .= '<p>Thank you for considering FitPlay Gym!</p>';
+$body .= '<p>Best regards,<br>FitPlay Team</p>';
+$body .= '<hr>'; // Optional: Add a horizontal line for visual separation
+$body .= '<p><strong>FitPlay Overview:</strong></p>';
+$body .= '<p>FitPlay Gym offers state-of-the-art fitness facilities, an Online Turf booking platform, Online Gym exploring Platform, our fitness and sports equipment shop, and more to help you achieve your fitness goals.</p>';
+$body .= '<p><strong>Address:</strong></p>';
+$body .= '<p>P67Q+G8R, Warna Colony, Kolhapur, Maharashtra 416003</p>';
+
+$mail->Body = $body;
+
+
+// 
     $mail->send();
 
     echo 'Message has been sent';
@@ -294,17 +321,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.getElementById('packageForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Get the selected package
-        var selectedPackage = document.querySelector('input[name="package"]:checked');
-        if (!selectedPackage) {
-            alert("Please select a package.");
-            return;
-        }
-
-    });
 });
 
 </script>

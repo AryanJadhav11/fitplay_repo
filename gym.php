@@ -1,7 +1,7 @@
 <?php include('gymheader.php') ?> 
 
 <head>
-  <title>FitPlay-Gym</title>
+  <title>FitPlay-Gym</title> </head>
 <body>
 
   <!-- ======= Hero Section ======= -->
