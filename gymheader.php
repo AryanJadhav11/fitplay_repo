@@ -296,7 +296,7 @@ function getInitials($name) {
       align-items: center;
       height: 75vh;
       width: 100%;
-      background-image: url(GYm/assets/img/weights.avif);
+      background-image: url(GYm/assets/img/ftp1.jpg);
       background-size: 100% auto;
       background-position: center;
       background-attachment: fixed;

@@ -270,7 +270,7 @@ $mail->isHTML(true); // Set email format to HTML
 $mail->Subject = 'Inquiry about Gym Membership';
 
 // Email Body
-$body = '<p>Hello,</p>';
+$body = '<p>Dear FORGE FITNESS CLUB,</p>';
 $body .= '<p>This is an inquiry about gym membership. Below are the details:</p>';
 $body .= '<ul>';
 $body .= '<li><strong>Sender Name:</strong> ' . $fullname . '</li>';
@@ -278,16 +278,17 @@ $body .= '<li><strong>Email:</strong> ' . $email1 . '</li>';
 $body .= '<li><strong>Phone Number:</strong> ' . $phone1 . '</li>';
 $body .= '<li><strong>Selected Package:</strong> ' . $_POST['package'] . '</li>'; // Assuming the package name is submitted in the form
 $body .= '</ul>';
-$body .= '<p>Please get in touch with the sender as soon as possible.</p>';
-$body .= '<p>Thank you.</p>';
-$body .= '<p><strong>FitPlay:</strong></p>';
-$body .= '<p>FitPlay Gym offers state-of-the-art fitness facilities, Online Turf booking platform, Online Gyms exploring Platform, Our fitness and sports equipments shop, and more to help you achieve your fitness goals.</p>';
+$body .= '<p>Please contact the sender at <strong>' . $email1 . '</strong> or <strong>' . $phone1 . '</strong> to discuss further.</p>';
+$body .= '<p>Thank you for considering FitPlay Gym!</p>';
+$body .= '<p>Best regards,<br>FitPlay Team</p>';
+$body .= '<hr>'; // Optional: Add a horizontal line for visual separation
+$body .= '<p><strong>FitPlay Overview:</strong></p>';
+$body .= '<p>FitPlay Gym offers state-of-the-art fitness facilities, an Online Turf booking platform, Online Gym exploring Platform, our fitness and sports equipment shop, and more to help you achieve your fitness goals.</p>';
 $body .= '<p><strong>Address:</strong></p>';
 $body .= '<p>P67Q+G8R, Warna Colony, Kolhapur, Maharashtra 416003</p>';
-$body .= '<p>Please get in touch with the sender as soon as possible.</p>';
-$body .= '<p>Thank you.</p>';
 
 $mail->Body = $body;
+
 
 // 
     $mail->send();
