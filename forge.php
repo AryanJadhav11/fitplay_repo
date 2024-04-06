@@ -137,7 +137,7 @@
 <hr>
  <!-- form -->
 <section>
-<form method="POST" id="packageForm" action="">
+<form method="POST" id="packageForm" onsubmit="console.log('submitted')">
   <div class="container">
     <!-- form head -->
     <div class="form_head">
@@ -207,13 +207,13 @@
           </div>
           
           
-        </div><div class="col-12 d-flex justify-content-center pt-4">
-            <input type="submit" name="submit" value="submit" class="btn btn-primary">
-          </div>
+       
       </div>
     </div>
     <!-- form body end -->
-  </div>
+  </div> </div><div class="col-12 d-flex justify-content-center pt-4">
+            <input type="submit" name="submit" value="submit" class="btn btn-primary">
+          </div>
 </form>
 
 <?php
@@ -294,17 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.getElementById('packageForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Get the selected package
-        var selectedPackage = document.querySelector('input[name="package"]:checked');
-        if (!selectedPackage) {
-            alert("Please select a package.");
-            return;
-        }
-
-    });
 });
 
 </script>
