@@ -62,7 +62,17 @@ $phone=$_POST['userNum'];
               <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mt4.jpg" alt="Thumbnail gold" />
             </a>
           </div>
-          <div class="container m-0 p-0" style="background-color:rgb(30,34,38); height:200px; width:100%;">
+          <style>
+    /* Style for the scrollable div */
+    .scrollable-div {
+        width: 200px; /* Adjust width as needed */
+        height: 200px; /* Adjust height as needed */
+        overflow: auto; /* This enables the scroll bar */
+        border: 1px solid #ccc; /* Just for visual clarity */
+        padding: 10px; /* Adjust padding as needed */
+    }
+</style>
+          <div class="container m-0 p-0 scrollable-div"style="background-color:rgb(30,34,38); height:200px; width:100%;">
             <div class="features_head m-0 p-0 d-flex justify-content-center align-items-center"
               style="background-color:rgb(19,20,21); height: 50px; width:100%;">
               <h3>Features</h3>

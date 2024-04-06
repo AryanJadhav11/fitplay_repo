@@ -887,6 +887,57 @@ function getInitials($name) {
 
     <p class="m-4 small text-center text-muted"> Developed By Team FitPlay</a>
     </p>
+<!-- moodel start -->
+<div class="mobile-modal">
+<div class="mobile-modal-content">
+    <h2>Website is Under Construction</h2>
+    <img src="52530.jpg" alt="Mobile Image" style="max-width: 100%; height: 50%;margin:10px;">
+    <p>Sorry, this website is under construction and be available on mobile devices soon...</p>
+</div>
+</div>
+  
+  <style>
+     /* Media query for mobile devices */
+  @media only screen and (max-width: 600px) {
+    /* Styling for the modal */
+    .mobile-modal {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .mobile-modal-content {
+      background-color: #fff;
+      max-width: 80%;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .ok-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+}
+  </style>
+  <script>
+    function openModal() {
+    document.querySelector('.mobile-modal').style.display = 'block';
+    // Disable background interaction
+    document.body.style.pointerEvents = 'none';
+  }
+  </script>
+  <!-- modal end -->
 
 
 

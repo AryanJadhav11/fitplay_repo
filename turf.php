@@ -747,7 +747,6 @@ $resimg=mysqli_fetch_assoc($que2);
     <h2>Website is Under Construction</h2>
     <img src="52530.jpg" alt="Mobile Image" style="max-width: 100%; height: 50%;margin:10px;">
     <p>Sorry, this website is under construction and be available on mobile devices soon...</p>
-    <button class="ok-button">OK</button>
   </div>
   <style>
      /* Media query for mobile devices */
