@@ -213,6 +213,7 @@ function getInitials($name) {
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Services
                               </a>
+                             
                               <ul class="dropdown-menu dropdown-menu-lg-end" style="background-color: #424242;" aria-labelledby="navbarDropdown">
                                    <li><a class="nav-link" href="turf.php">Turf</a></li>
                                   <li><a class="nav-link" href="gym.php">Gym</a></li>
@@ -222,6 +223,9 @@ function getInitials($name) {
                          </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactu.php">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mybookings.php">My Bookings</a>
                         </li>
 
                         

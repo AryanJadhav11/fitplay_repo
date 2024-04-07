@@ -24,7 +24,7 @@ $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['us
 // }
 
 // Fetch items from the order_his table for the specific user
-$sql = "SELECT * FROM `booking` WHERE `userid` = '$user_id'";
+$sql = "SELECT * FROM `booking` WHERE `user_id` = '$user_id'";
 $result = mysqli_query($conme, $sql);
 
 if ($result === false) {
@@ -35,17 +35,7 @@ $rowCount = mysqli_num_rows($result);
 ?>
 <?php 
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "turf";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 function getInitials($name) {
     $nameParts = explode(" ", $name);
@@ -292,29 +282,31 @@ table.table .avatar {
                 <tbody>
                 <?php
 $sql = "SELECT * FROM `booking` ORDER BY boid DESC";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conme, $sql);
 
 if ($result === false) {
-    die("Query failed: " . mysqli_error($conn));
+    die("Query failed: " . mysqli_error($conme));
 }
 
 $rowCount = mysqli_num_rows($result);
 
 if ($rowCount > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $tid = $row['boid'];
+        $tid = $row['user_id'];
         $tname = $row['turfname'];
         $tdate = $row['date'];
-       $time=$row['time'];
+       $times=$row['startTime'];
+       $timee=$row['endTime'];
         $usermail=$row['userEmail'];
         $username=$row['userName'];
+        $combinedTime = $times . ' to ' . $timee;
 
 
         echo '<tr>
                 <td scope="row">' . $tid . '</td>
                 <td>' . $tname . '</td>
                 <td>' . $tdate . '</td>
-                <td>' . $time . '</td>
+                <td>' . $combinedTime . '</td>
                
                 <td>' . $usermail . '</td>
                 <td>' . $username . '</td>
