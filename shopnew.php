@@ -965,19 +965,23 @@ font-weight: normal;
 
    </section>
       <!-- end Our  Clients -->
-      <!-- moodel start -->
-      <div class="mobile-modal">
+<!-- moodel start -->
+<div class="mobile-modal">
   <div class="mobile-modal-content">
-    <h2>Mobile Device Detected</h2>
-    <p>Sorry, this website cannot be displayed properly on mobile devices.</p>
-    <button class="ok-button">OK</button>
+    <h2>Website is Under Construction</h2>
+    <img src="52530.jpg" alt="Mobile Image" style="max-width: 100%; height: 50%;margin:10px;">
+    <p>Sorry, this website is under construction and be available on mobile devices soon...</p>
   </div>
   <style>
-     /* Media query for mobile devices */
+  /* This will apply by default, hiding the modal on larger screens */
+  .mobile-modal {
+    display: none;
+  }
+
+  /* This media query targets screens with a max-width of 600px */
   @media only screen and (max-width: 600px) {
-    /* Styling for the modal */
     .mobile-modal {
-      display: block;
+      display: block; /* Show the modal on small screens */
       position: fixed;
       top: 0;
       left: 0;
@@ -990,23 +994,15 @@ font-weight: normal;
 
     .mobile-modal-content {
       background-color: #fff;
-      max-width: 80%;
       margin: 10% auto;
       padding: 20px;
       border-radius: 8px;
+      max-width: 80%;
     }
-    .ok-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-}
-  </style>
+  }
+</style>
   <!-- modal end -->
+
 </div>
 
       <!--  footer -->

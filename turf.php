@@ -584,7 +584,7 @@ $resimg=mysqli_fetch_assoc($que2);
                                             </div>
                                             <div class="lc-block d-inline-flex">
                                                 <div class="lc-block me-3" style="min-width:72px">
-                                                    <img class="img-fluid " src="./anuj.jpg" style="width:72; height:100;">
+                                                    <img class="img-fluid rounded-circle " src="./anuj.jpg" style="width:72; height:100;">
                                                 </div>
                                                 <div class="lc-block">
                                                     <div editable="rich">
@@ -746,11 +746,15 @@ $resimg=mysqli_fetch_assoc($que2);
     <p>Sorry, this website is under construction and be available on mobile devices soon...</p>
   </div>
   <style>
-     /* Media query for mobile devices */
+  /* This will apply by default, hiding the modal on larger screens */
+  .mobile-modal {
+    display: none;
+  }
+
+  /* This media query targets screens with a max-width of 600px */
   @media only screen and (max-width: 600px) {
-    /* Styling for the modal */
     .mobile-modal {
-      display: block;
+      display: block; /* Show the modal on small screens */
       position: fixed;
       top: 0;
       left: 0;
@@ -763,22 +767,14 @@ $resimg=mysqli_fetch_assoc($que2);
 
     .mobile-modal-content {
       background-color: #fff;
-      max-width: 80%;
       margin: 10% auto;
       padding: 20px;
       border-radius: 8px;
+      max-width: 80%;
     }
-    .ok-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-}
-  </style>
+  }
+</style>
+
   <!-- modal end -->
 </div>
    <!-- footer start -->

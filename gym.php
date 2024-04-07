@@ -222,6 +222,45 @@
 </section>
       <script src="assets/js/main.js"></script>
 
+   <!-- moodel start -->
+ <div class="mobile-modal">
+  <div class="mobile-modal-content">
+    <h2>Website is Under Construction</h2>
+    <img src="52530.jpg" alt="Mobile Image" style="max-width: 100%; height: 50%;margin:10px;">
+    <p>Sorry, this website is under construction and be available on mobile devices soon...</p>
+  </div>
+  <style>
+  /* This will apply by default, hiding the modal on larger screens */
+  .mobile-modal {
+    display: none;
+  }
+
+  /* This media query targets screens with a max-width of 600px */
+  @media only screen and (max-width: 600px) {
+    .mobile-modal {
+      display: block; /* Show the modal on small screens */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .mobile-modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+  }
+</style>
+
+  <!-- modal end -->
+
 </body>
 
 </html>
