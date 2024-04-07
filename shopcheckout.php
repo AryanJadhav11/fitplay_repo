@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php session_start(); ?>
 <?php include('floating_icon.php'); ?>
 <?php
 // Database connection
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['razorpay_payment_id'])
         }
 
         // Redirect to thank you page
-        header("Location: thank_you.php");
+        header("Location:");
         exit;
     } else {
         // Error occurred while inserting purchase information
@@ -128,11 +128,43 @@ $coni->close();
             margin-top: 20px;
         }      
     </style>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="all.css">
 </head>
 
 <body class="py-6">  
+<div class="wrapper d-flex align-items-stretch" style="height:100%;" >
+			<nav id="sidebar" class="active"style="background-color:#1a85df;" >
+				<h1><a href="index.html" class="logo">F<span style="color:#005500;">P.</a></h1>
+        <ul class="list-unstyled components mb-5" style="color:black;">
+          <li class="active">
+            <a href="#"><span class="fa fa-home"></span> Home</a>
+          </li>
+          <li>
+              <a href="#"><span class="fa fa-user"></span> About</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-cogs"></span> Services</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+          </li>
+          
+        </ul>
+
+    	</nav>
+
+        <!-- Page Content  -->
+
+
     <!-- Purchase form container -->
-    <div class="container Purchase-container">
+    <div class="container Purchase-container pt-5">
         <!-- Purchase form -->
         <form id="purchaseForm" method="post">
 
@@ -167,7 +199,7 @@ $coni->close();
                             $item_name = $row['item_name'];
                             $price = $row['price'];
                             $quantity = $row['quantity'];
-                            echo '<input type="text" id="itemid" name="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">' ;
+                            echo '<input type="hidden" id="itemid" name="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">' ;
                         }
                     }
                 ?>
@@ -221,6 +253,6 @@ $coni->close();
     });
 </script>
 
-
+</div>
 </body>
 </html>

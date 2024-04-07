@@ -1,5 +1,6 @@
-<?php include('header.php'); ?>
+<?php session_start(); ?>
 <?php include('floating_icon.php'); ?>
+
 <?php
 	$server = 'localhost';
 	$user = 'root';
@@ -24,9 +25,48 @@
 	$rowCount = mysqli_num_rows($result);
 ?>
 
-<head>
-    <title>FitPlay - Cart</title>
- </head>
+
+
+<html lang="en">
+  <head>
+  <title>FitPlay - Cart</title>
+  <link rel="icon" type="image/png" href="favicon_io/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="all.css">
+  </head>
+  <body>
+		<div class="wrapper d-flex align-items-stretch" style="height:100%;" >
+			<nav id="sidebar" class="active"style="background-color:#1a85df;" >
+				<h1><a href="index.html" class="logo">F<span style="color:#005500;">P.</a></h1>
+        <ul class="list-unstyled components mb-5" style="color:black;">
+          <li class="active">
+            <a href="#"><span class="fa fa-home"></span> Home</a>
+          </li>
+          <li>
+              <a href="#"><span class="fa fa-user"></span> About</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-cogs"></span> Services</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+          </li>
+          
+        </ul>
+
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
 
 <body class="py-6">
     <div class="container">
@@ -111,7 +151,7 @@
                         <td>' . $total . '</td>
                         <td>
                             <a href="del_product.php?deleteid=' . $iid . '" class="text text-light">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32" color="red">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" color="red">
                                     <path d="M 13 3 L 13 4 L 4 4 L 4 6 L 6 6 L 6 28 L 26 28 L 26 6 L 28 6 L 28 4 L 19 4 L 19 3 L 13 3 z M 8 6 L 24 6 L 24 26 L 8 26 L 8 6 z M 11 9 L 11 23 L 13 23 L 13 9 L 11 9 z M 19 9 L 19 23 L 21 23 L 21 9 L 19 9 z"></path>
                                 </svg>
                             </a>
@@ -143,7 +183,7 @@
                     }
                     </style>
             <div class="pt-2">
-                 <a href="payment_shop.php"><button type="" class="btn btn-primary btn-block " style="width: 100%; color: #000000; background-color: #54AAF2; text-transform: uppercase;font-weight: bold;">Checkout</button></a>
+                 <a href="shopcheckout.php"><button type="" class="btn btn-primary btn-block " style="width: 100%; color: #000000; background-color: #54AAF2; text-transform: uppercase;font-weight: bold;">Checkout</button></a>
             </div>
                     
                     </div>     
@@ -152,5 +192,19 @@
         </div>
     </div>
 
-</body>
+
+
+
+
+
+       
+       </div>
+		</div>
+
+    <script src="sidebar_js/bootstrap.min.js"></script>
+    <script src="sidebar_js/popper.js"></script>
+    <script src="sidebar_js/jquery.min.js"></script>
+    <script src="sidebar_js/main.js"></script>
+
+  </body>
 </html>

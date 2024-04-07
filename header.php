@@ -88,6 +88,11 @@ function getInitials($name) {
 <script src="path/to/bootstrap.min.js"></script>
 
 
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="proimg/css/bootstrapp.min.css">
+      <!-- style & Responsive css -->
+      <link rel="stylesheet" href="proimg/css/shopstyle.css">
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -196,7 +201,7 @@ function getInitials($name) {
     }
 
     body{
-      background:#f3f5f8;
+      background:white;
       overflow-x:hidden;
     }
         .star-container {
