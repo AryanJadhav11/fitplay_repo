@@ -86,7 +86,7 @@ At Fitplay, we make turf booking a breeze. Our user-friendly platform streamline
         
         img {
             max-width: 100%;
-            border-bottom: 4px solid rgb(255, 0, 0);
+            border-bottom: 4px solid rgb(13, 110, 253);
         }
         h2 {
             margin: 10px 0;
