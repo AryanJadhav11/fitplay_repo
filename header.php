@@ -263,10 +263,10 @@ function getInitials($name) {
         <nav id="navbar" class="navbar">
             <ul>
               
-                <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
+                <li><a class="nav-link scrollto" href="Home.php">Home</a></li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
                 <li><a class="nav-link scrollto" href="turf.php">Turf</a></li>
-                <li><a class="nav-link scrollto" href="shopnew.php">Shop</a></li>
+                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
                 <li><a class="nav-link scrollto" href="gym.php">Gym</a></li>
                 <li><a class="nav-link scrollto" href="register_venue.php">Register Your Venue</a></li>
                 
