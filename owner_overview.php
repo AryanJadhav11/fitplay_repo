@@ -13,7 +13,78 @@ if(!$coni)
 }
 $turf_owner_data = $_SESSION['owner_data'];
 $turfn = $turf_owner_data['turf'];
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Get start and end dates from the form
+  $start_date = $_POST['start-date'];
+  $end_date = $_POST['end-date'];
+  $turfn = $turf_owner_data['turf']; // Assuming you have a form field for turf name
+
+  // Process the dates and generate the PDF report
+  generatePDFReport($start_date, $end_date, $turfn, $server, $user, $pass, $db);
+}
+
+// Function to generate PDF report
+function generatePDFReport($start_date, $end_date, $turfn, $server, $user, $pass, $db) {
+  // Include the TCPDF library
+  require_once('TCPDF-main/tcpdf.php');
+
+  // Create new PDF document
+  $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+  // Set document information
+  $pdf->SetCreator(PDF_CREATOR);
+  $pdf->SetAuthor('FitPlay');
+  $pdf->SetTitle('Booking Report');
+  $pdf->SetSubject('Booking Report');
+  $pdf->SetKeywords('TCPDF, PDF, booking, report');
+
+  // Add a page
+  $pdf->AddPage();
+
+  // Set some content to the PDF
+  $html = '<h1>Booking Report</h1>';
+  $html .= '<p>Start Date: ' . $start_date . '</p>';
+  $html .= '<p>End Date: ' . $end_date . '</p>';
+
+  // Fetch records from the database based on the provided dates and turf name
+  $coni=mysqli_connect($server,$user,$pass,$db);
+  $sql = "SELECT * FROM booking WHERE turfname = '$turfn' AND date BETWEEN '$start_date' AND '$end_date'";
+  $result = $coni->query($sql);
+
+  // Display fetched records in the PDF
+  if ($result->num_rows > 0) {
+      $html .= '<h2>Booking Details</h2>';
+      $html .= '<table>';
+      $html .= '<tr><th>Date</th><th>Start Time</th><th>End Time</th><th>User Mail</th><th>User</th></tr>';
+      while ($row = $result->fetch_assoc()) {
+          $html .= '<tr><td>' . $row['date'] . '</td><td>' . $row['startTime'] . '</td><td>' . $row['endTime'] .'</td><td>'. $row['userEmail'] .'</td><td>'. $row['userName'] . '</td></tr>';
+      }
+      $html .= '</table>';
+  } else {
+      $html .= '<p>No bookings found for the selected turf and dates.</p>';
+  }
+
+  // Output the HTML content
+  $pdf->writeHTML($html, true, false, true, false, '');
+
+  // Close and output PDF document
+  $pdf->Output('booking_report.pdf', 'I');
+  exit;
+}
 ?>
+
+
+<?php
+// Database connection
+
+
+
+?>
+
+
+
 <html lang="en">
    <head>
       <meta charset="utf-8">
@@ -1246,17 +1317,35 @@ echo '<span class="h2 font-weight-bold mb-0">' . $tub_row . '</span>';
                         
                     </span>
                     </div>
+                    <div class="container">
+   
                     <div class="col-auto">
                       <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
                         <i class="fas fa-chart-bar"></i>
                       </div>
+                      
                     </div>
                   </div>
                  
                 </div>
               </div>
-            </div>
-            
+            </div> <h2 class="mt-5">Download booking report</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <div class="form-group date-selection mb-5 text-white">
+            <label for="start-date">Start Date:</label>
+            <input type="date" class="form-control" id="start-date" name="start-date">
+        </div>
+        <div class="form-group mb-5 text-white">
+            <label for="end-date">End Date:</label>
+            <input type="date" class="form-control" id="end-date" name="end-date">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+          
+ 
+  
                   
                 </div>
               </div>
@@ -1270,7 +1359,14 @@ echo '<span class="h2 font-weight-bold mb-0">' . $tub_row . '</span>';
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" rel="stylesheet">
-  
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
 </body>
 
 

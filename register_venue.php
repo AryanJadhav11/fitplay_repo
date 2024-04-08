@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page if not logged in
+    header("Location: signup.php");
+    exit;
+}
 include('smtp/PHPMailerAutoload.php');
 
 function smtp_mailer($to, $subject, $message) {

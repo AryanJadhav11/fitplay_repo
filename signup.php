@@ -22,6 +22,15 @@ function validateUsername($username)
     return preg_match('/^[a-zA-Z]+$/', $username);
 }
 
+function validatePassword($password)
+{
+    // Validate password length and pattern
+    if (strlen($password) === 8 && preg_match('/[A-Z]/', $password) && preg_match('/[^a-zA-Z0-9]/', $password)) {
+        return true;
+    }
+    return false;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $err = "";
 
@@ -46,20 +55,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($numrows > 0) {
         $showerr = "Account already exists";
     } else {
-        if (validateUsername($username)) {
+        if (validateUsername($username) ) {
             if ($password == $cpassword) {
-                $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
-              VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
-                $result = mysqli_query($conn, $sql);
-                if ($result) {
-                    // Successfully inserted, set session and redirect
-                    $user_data = array($firstname, $lastname, $username, $email);
-                    $_SESSION['user_data'] = $user_data;
-                    header("Location: turf.php");
-                    exit();
+                if (validatePassword($password)) {
+                    $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `email`, `password`)
+                  VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+                    $result = mysqli_query($conn, $sql);
+                    if ($result) {
+                        // Successfully inserted, set session and redirect
+                        $user_data = array($firstname, $lastname, $username, $email);
+                        $_SESSION['user_data'] = $user_data;
+                        header("Location: turf.php");
+                        exit();
+                    } else {
+                        $showerr = "Error: " . $sql . "<br>" . $conn->error;
+                    }
                 } else {
-                    $showerr = "Error: " . $sql . "<br>" . $conn->error;
-                    
+                    $showerr = "Password must be 8 characters long, contain at least one uppercase letter, and one symbol.";
                 }
             } else {
                 $showerr = "Passwords do not match";
@@ -70,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 
 
