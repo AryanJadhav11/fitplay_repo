@@ -405,22 +405,14 @@ function getInitials($name) {
 
   <header id="header" class="d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
-    <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png"><span style="color: #cfcfcf"> Fit</span><span style="color: #27952E">Play</span></a></h1>
+    <h1 class="logo"><a href="index.html"><img src="favicon_io/favicon-32x32.png"></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
             
-                <li><a class="nav-link scrollto" href="shop.php">Shop</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">Gyms</a></li>
-                        <li><a href="turf.php">Turfs</a></li>
-                       
-                    </ul>
-                </li>
+                <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
+                <li><a href="shopnew.php">Shop</a></li>
+                <li><a href="turf.php">Turfs</a></li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
-                <li><a class="nav-link scrollto" href="mycart.php">My Cart</a></li>
                 <li class="dropdown" style="color: blue;">
                 <?php
                 if (isset($_SESSION['user_data'])) {

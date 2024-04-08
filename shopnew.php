@@ -991,7 +991,9 @@ font-weight: normal;
       z-index: 9999;
       text-align: center;
     }
-
+    body{
+        overflow:hidden;
+    }
     .mobile-modal-content {
       background-color: #fff;
       margin: 10% auto;

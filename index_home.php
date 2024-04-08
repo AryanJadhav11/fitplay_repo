@@ -226,25 +226,20 @@ function getInitials($name) {
 
     <ul style="font-size: 1.2rem;">
       <li><a class="nav-link scrollto" href="index_home.php"><b>Home</b></a></li>
-      <li class="dropdown">
-        <a href="#"><span><b>Services</b></span> <i class="bi bi-chevron-down"></i></a>
-        <ul>
           <li><a href="turf.php" ><b>Turfs</b></a></li>
           <li><a href="gym.php"><b>Gyms</b></a></li>
           <li><a href="shopnew.php"><b>Shop</b></a></li>
-        </ul>
-      </li>
       <li><a class="nav-link scrollto" href="contactu.php"><b>Contact</b></a></li>
       <li><a class="nav-link scrollto" href="register_venue.php"><b>Register Your Venue</b></a></li>
       <!-- cart -->
-      <li>
+      <!-- <li>
         <?php
         if (isset($_SESSION['user_data'])) {
           echo '<ul><li><a class="nav-link scrollto" href="sidebar.php"><img src="proimg/cart_button.png" width="30px" height="30px"></a></li>';
           echo '</ul>';
         } 
         ?>                         
-      </li>
+      </li> -->
       <li class="dropdown pb-0" style="color: blue;">
         <?php
         if (isset($_SESSION['user_data'])) {
