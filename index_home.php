@@ -913,6 +913,20 @@ function getInitials($name) {
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 9999;
       text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    body{
+        overflow:hidden;
+        
+    }
+    .disabled-overlay {
+        position: fixed; /* Fixed position to cover the entire viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999; /* Ensure it's on top of everything else */
+        pointer-events: auto; /* Allow pointer events to pass through */
     }
 
     .mobile-modal-content {
@@ -931,6 +945,18 @@ function getInitials($name) {
       border-radius: 4px;
       cursor: pointer;
     }
+    .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9998; /* Below modal */
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+        .modal-open .overlay {
+            pointer-events: auto; /* Disable clicks on overlay when modal is open */
+        }
 }
   </style>
   <script>
@@ -940,6 +966,7 @@ function getInitials($name) {
     document.body.style.pointerEvents = 'none';
   }
   </script>
+  <div class="overlay"></div>
   <!-- modal end -->
 
 
