@@ -56,13 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['razorpay_payment_id'])
     $date = isset($_POST['date']) ? $_POST['date'] : '';
     $price = isset($_POST['price']) ? $_POST['price'] : '';
     $timeSlot = isset($_POST['timeSlot']) ? $_POST['timeSlot'] : '';
+    $price = isset($_POST['price']) ? $_POST['price'] : '';
     $userName = isset($_POST['userName']) ? $_POST['userName'] : '';
     $userEmail = isset($_POST['userEmail']) ? $_POST['userEmail'] : '';
     $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : null;
 
 
-    $insertSql = "INSERT INTO booking (user_id, turfname, date, startTime, endTime, userEmail, userName) 
-                  VALUES ('$user_id', '$name', '$date', '$timeSlot', '$timeSlot', '$userEmail', '$userName')";
+    $insertSql = "INSERT INTO booking (user_id, turfname, date, startTime, endTime, price, userEmail, userName) 
+                  VALUES ('$user_id', '$name', '$date', '$timeSlot', '$timeSlot', '$price', '$userEmail', '$userName')";
 
     if ($coni->query($insertSql) === TRUE) {
         // Send confirmation email

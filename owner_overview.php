@@ -32,43 +32,55 @@ function generatePDFReport($start_date, $end_date, $turfn, $server, $user, $pass
 
   // Create new PDF document
   $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-
+  
   // Set document information
   $pdf->SetCreator(PDF_CREATOR);
   $pdf->SetAuthor('FitPlay');
   $pdf->SetTitle('Booking Report');
   $pdf->SetSubject('Booking Report');
   $pdf->SetKeywords('TCPDF, PDF, booking, report');
-
+  
   // Add a page
   $pdf->AddPage();
-
+  
   // Set some content to the PDF
   $html = '<h1>Booking Report</h1>';
   $html .= '<p>Start Date: ' . $start_date . '</p>';
   $html .= '<p>End Date: ' . $end_date . '</p>';
-
+  
   // Fetch records from the database based on the provided dates and turf name
-  $coni=mysqli_connect($server,$user,$pass,$db);
+  $coni = mysqli_connect($server, $user, $pass, $db);
   $sql = "SELECT * FROM booking WHERE turfname = '$turfn' AND date BETWEEN '$start_date' AND '$end_date'";
+  $sqlr = "SELECT SUM(price) AS revenue
+          FROM booking
+          WHERE turfname='$turfn' AND date >= '$start_date' AND date <= '$end_date';";
   $result = $coni->query($sql);
-
+  $resultr = $coni->query($sqlr);
+  
   // Display fetched records in the PDF
   if ($result->num_rows > 0) {
       $html .= '<h2>Booking Details</h2>';
       $html .= '<table>';
       $html .= '<tr><th>Date</th><th>Start Time</th><th>End Time</th><th>User Mail</th><th>User</th></tr>';
+  
       while ($row = $result->fetch_assoc()) {
           $html .= '<tr><td>' . $row['date'] . '</td><td>' . $row['startTime'] . '</td><td>' . $row['endTime'] .'</td><td>'. $row['userEmail'] .'</td><td>'. $row['userName'] . '</td></tr>';
       }
       $html .= '</table>';
+  
+      // Display revenue
+      if ($resultr && $rowr = $resultr->fetch_assoc()) {
+          $html .= '<p>Total Revenue from '. $start_date .' to '. $end_date .': Rupees ' . $rowr['revenue'] . '</p>';
+      } else {
+          $html .= '<p>No revenue data found for the selected turf and dates.</p>';
+      }
   } else {
       $html .= '<p>No bookings found for the selected turf and dates.</p>';
   }
-
+  
   // Output the HTML content
   $pdf->writeHTML($html, true, false, true, false, '');
-
+  
   // Close and output PDF document
   $pdf->Output('booking_report.pdf', 'I');
   exit;
