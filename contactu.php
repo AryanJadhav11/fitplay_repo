@@ -266,15 +266,9 @@ if ($conn->connect_error) {
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="turf.php">Turf</a></li>
-                        <li><a href="shop.php">Shop</a></li>
-                        <li><a href="gym.php">Gyms</a></li>
-                       
-                    </ul>
-                </li>
+                        <li><a href="turf.php"><span>Turf</span></a></li>
+                        <li><a href="shopnew.php"><span>Shop</span></a></li>
+                        <li><a href="gym.php"><span>Gyms</span></a></li>
                 <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
                 
                 <li class="dropdown" style="color: blue;">

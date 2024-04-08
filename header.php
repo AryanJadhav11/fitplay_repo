@@ -264,16 +264,10 @@ function getInitials($name) {
             <ul>
               
                 <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="turf.php">Turfs</a></li>
-                        <li><a href="gym.php">Gyms</a></li>
-                        <li><a href="shopnew.php">Shop</a></li>
-                       
-                    </ul>
-                </li>
                 <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
+                <li><a class="nav-link scrollto" href="turf.php">Turf</a></li>
+                <li><a class="nav-link scrollto" href="shopnew.php">Shop</a></li>
+                <li><a class="nav-link scrollto" href="gym.php">Gym</a></li>
                 <li><a class="nav-link scrollto" href="register_venue.php">Register Your Venue</a></li>
                 
                 <!-- cart -->

@@ -132,19 +132,22 @@ if (isset($_GET['Order_id'])) {
 				<h1><a href="index.html" class="logo">F<span style="color:#005500;">P.</a></h1>
         <ul class="list-unstyled components mb-5" style="color:black;">
           <li class="active">
-            <a href="#"><span class="fa fa-home"></span> Home</a>
+            <a href="index_home.php"><span class="fa fa-home"></span> Home</a>
           </li>
           <li>
               <a href="#"><span class="fa fa-user"></span> About</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+            <a href="mycart.php"><span class="fa fa-shopping-cart"></span> Cart</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-cogs"></span> Services</a>
+            <a href="gym.php"><span class="fa fa-child"></span> Gym</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+            <a href="turf.php"><span class="fa fa-futbol-o"></span> Turfs</a>
+          </li>
+		  <li>
+            <a href="contactu.php"><span class="fa fa-paper-plane"></span> Contacts</a>
           </li>
           
         </ul>
@@ -727,3 +730,41 @@ function showAlert(message) {
 // Call showAlert function with your message
 showAlert("Item added to cart successfully!");
 </script>
+<!-- moodel start -->
+<div class="mobile-modal">
+  <div class="mobile-modal-content">
+    <h2>Website is Under Construction</h2>
+    <img src="52530.jpg" alt="Mobile Image" style="max-width: 100%; height: 50%;margin:10px;">
+    <p>Sorry, this website is under construction and be available on mobile devices soon...</p>
+  </div>
+  <style>
+  /* This will apply by default, hiding the modal on larger screens */
+  .mobile-modal {
+    display: none;
+  }
+
+  /* This media query targets screens with a max-width of 600px */
+  @media only screen and (max-width: 600px) {
+    .mobile-modal {
+      display: block; /* Show the modal on small screens */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .mobile-modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+  }
+</style>
+
+  <!-- modal end -->

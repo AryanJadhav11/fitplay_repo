@@ -1042,7 +1042,7 @@ $(document).ready(function () {
                     <a class="nav-link" href="turf.php">Turfs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shop.php">Shop</a>
+                    <a class="nav-link" href="shopnew.php">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gym.php">Gym</a>

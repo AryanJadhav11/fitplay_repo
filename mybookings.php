@@ -1,4 +1,10 @@
 <?php
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page if not logged in
+    header("Location: signup.php");
+    exit;
+}
+include('header.php');
 session_start();
 
 $server = 'localhost';
@@ -37,16 +43,6 @@ $rowCount = mysqli_num_rows($result);
 // Database connection
 
 
-function getInitials($name) {
-    $nameParts = explode(" ", $name);
-    $initials = '';
-
-    foreach ($nameParts as $part) {
-        $initials .= strtoupper(substr($part, 0, 1));
-    }
-
-    return $initials;
-}
 
 ?>
 <!DOCTYPE html>
@@ -200,60 +196,6 @@ table.table .avatar {
 
 
   </style>
-<header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">Fit<span style="color: green">Play.</span></a></h1>
-        <nav id="navbar" class="navbar">
-            <ul>
-                
-                <li class="dropdown">
-                    <a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">Gyms</a></li>
-                        <li><a href="turf.php">Turf</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto" href="contactu.php">Contact</a></li>
-                <li>
-                <?php 
-
-                $count=0;
-                if(isset($_SESSION['user_data']))
-      {
-        $count=count($_SESSION['user_data']);
-      }
-                
-                ?>
-               
-                </li>
-
-                <li class="dropdown" style="color: blue;">
-<?php
-                if (isset($_SESSION['user_data'])) {
-                  $userName = $_SESSION['user_data']['username'];
-                  $userInitials = getInitials($userName);
-              
-                  echo '<a href="#"><span>';
-                  echo '<div class="avatar">' . $userInitials . '</div>';
-                  echo '<ul><li><a href="user_profile.php">View Profile</a></li>';
-              
-                  // Now you can directly access 'Rolee' without additional checks
-                  if ($_SESSION['user_data']['username'] == "sk") {  // Assuming 'Rolee' is at index 4
-                      echo '<li><a href="admin.php">Admin Panel</a></li>';
-                  }
-                  echo '</ul>';
-              } 
-              else {
-                  echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php" style="color:white;">Sign Up</a></button>';
-                  echo'<span>  </span>';
-                  echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-              }
-?>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
 
 <body>
@@ -281,7 +223,7 @@ table.table .avatar {
                 </thead>
                 <tbody>
                 <?php
-$sql = "SELECT * FROM `booking` ORDER BY boid DESC";
+$sql = "SELECT * FROM `booking` WHERE user_id='$user_id'";
 $result = mysqli_query($conme, $sql);
 
 if ($result === false) {

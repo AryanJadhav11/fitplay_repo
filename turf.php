@@ -764,6 +764,9 @@ $resimg=mysqli_fetch_assoc($que2);
       z-index: 9999;
       text-align: center;
     }
+    body{
+        overflow:hidden;
+    }
 
     .mobile-modal-content {
       background-color: #fff;
