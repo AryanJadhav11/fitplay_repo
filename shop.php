@@ -295,81 +295,81 @@ font-weight: normal;
             <div class="product_main">
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
-                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p1.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Li-Ning New XP-70-IV <br>₹1,632</h3>
                   </div>
             
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p2.png" alt="#"/></div>
                      <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p3.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p4.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p5.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/shoes1.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p6.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/shoes2.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p7.png" alt="#"/></div>
                      <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/stud1-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p8.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/stump-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p9.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/waterbottle-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p10.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p11.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
             
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p12.png" alt="#"/></div>
                      <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p13.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p14.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <div class="dark_white_bg" ><img  src="proimg/products/p15.png" alt="#"/></div>
                      <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
