@@ -261,7 +261,8 @@ table.table .avatar {
                     <th>Email</th>
                     <th>Phone Number</th>
                     <th>Location Link</th>
-                    <th>Action</th>
+                    <th>Approve</th>
+                    <th>Reject</th>
                 </tr>
                 </thead>'
                 
@@ -284,6 +285,12 @@ table.table .avatar {
                             <input type='submit' name='approve' value='Approve Request'>
                         </form>
                     </td>
+                    <td>
+                    <form action='cancel_request.php' method='post'>
+                        <input type='hidden' name='id' value='{$row['id']}'>
+                        <input type='submit' name='cancel' value='Reject Request'>
+                    </form>
+                </td>
                 </tr>
                 ";
         }
