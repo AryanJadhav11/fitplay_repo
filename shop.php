@@ -302,38 +302,38 @@ font-weight: normal;
              
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p2.png" alt="#"/></div>
-                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939" >Sborter Protective Knee Pads <br>₹498</h3>
                   </div>
                
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p3.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Apole Star Hockey Sticks for Men  <br>₹569</h3>
                   </div>
               
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p4.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Nivia Dominator 3.0 Football <br>₹1999</h3>
                   </div>
               
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p5.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Nivia Web Football Goal Keep Gloves <br>₹1504</h3>
                   </div>
               
             
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p6.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Plaeto Unisex Adult Slam Multiplay Sports Shoes <br>₹1899</h3>
                   </div>
               
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p7.png" alt="#"/></div>
-                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939" ></h3>
                   </div>
                
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p8.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Nivia Ambition Football Stud <br>₹899</h3>
                   </div>
                
                   <div class="project_box">
@@ -355,12 +355,12 @@ font-weight: normal;
              
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p12.png" alt="#"/></div>
-                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939" > ₹498 </h3>
                   </div>
                
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p13.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">  ₹665</h3>
                   </div>
               
                   <div class="project_box">
