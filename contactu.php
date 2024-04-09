@@ -265,10 +265,11 @@ if ($conn->connect_error) {
         <h1 class="logo"><a href="turf.php">Fit<span style="color: green">Play.</span></a></h1>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="index_home.php">Home</a></li>
+                <li><a class="nav-link scrollto" href="home.php">Home</a></li>
                         <li><a href="turf.php"><span>Turf</span></a></li>
                         <li><a href="shopnew.php"><span>Shop</span></a></li>
                         <li><a href="gym.php"><span>Gyms</span></a></li>
+                
                 <li><a class="nav-link scrollto" href="registervenue.php">Register Your Venue</a></li>
                 
                 <li class="dropdown" style="color: blue;">

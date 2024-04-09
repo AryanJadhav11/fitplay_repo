@@ -10,7 +10,7 @@
     <aside class="col-lg-6 py-0">
     <div class="border rounded-4 mb-3 d-flex justify-content-center" style="height:60vh; width:100%; position: relative;">
         <!-- Main Image -->
-            <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 img-fluid fit" src="./GYm/assets/img/forgelogo.jpeg" alt="Main Image" />
+            <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 img-fluid fit" src="./GYm/assets/img/mmalogo.jpeg" alt="Main Image" />
         <!-- Previous Button -->
         <a id="prevButton" class="prev" onclick="changeImage(-1)" style="position: absolute; color:white; text-decoration:none; top: 50%; left: 10px; transform: translateY(-50%); z-index: 1;">&#10094;</a>
         <!-- Next Button -->
@@ -20,20 +20,20 @@
     <!-- Thumbnail Images -->
     <div class="d-flex justify-content-center mb-3">
         <!-- Thumbnail Links -->
-        <a onclick="changeMainImage('./GYm/assets/img/forgelogo.jpeg'); return false;">
-            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forgelogo.jpeg" alt="Thumbnail 1" />
+        <a onclick="changeMainImage('./GYm/assets/img/mmalogo.jpeg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mmalogo.jpeg" alt="Thumbnail 1" />
         </a>
-        <a onclick="changeMainImage('./GYm/assets/img/forge1.jpeg'); return false;">
-            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge1.jpeg" alt="Thumbnail 2" />
+        <a onclick="changeMainImage('./GYm/assets/img/mma.jpg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mma.jpg" alt="Thumbnail 2" />
         </a>
-        <a onclick="changeMainImage('./GYm/assets/img/forge2.jpeg'); return false;">
-            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge2.jpeg" alt="Thumbnail 2" />
+        <a onclick="changeMainImage('./GYm/assets/img/mma2.jpg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mma2.jpg" alt="Thumbnail 2" />
         </a>
-        <a  onclick="changeMainImage('./GYm/assets/img/forge3.jpeg'); return false;">
-            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge3.jpeg" alt="Thumbnail 2" />
+        <a  onclick="changeMainImage('./GYm/assets/img/mma3.jpg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mma3.jpg" alt="Thumbnail 2" />
         </a>
-        <a  onclick="changeMainImage('./GYm/assets/img/forge4.jpeg'); return false;">
-            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/forge4.jpeg" alt="Thumbnail 2" />
+        <a  onclick="changeMainImage('./GYm/assets/img/mma4.jpg'); return false;">
+            <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mma4.jpg" alt="Thumbnail 2" />
         </a>
     </div>
     <div class="container m-0 p-0" style="background-color:rgb(30,34,38); height:200px; width:100%;">
@@ -43,15 +43,15 @@
       <div class="features-body">
         <div class="row" style="gap:1pxpx;">
           <div class="col-lg-6">
-            <h5>1) World class premium equipments</h5>
+            <h5>1) Premium equipments</h5>
           </div>
           <div class="col-lg-6">
-            <h5>2) Personalized Fitness <br> Guidence</h5>
+            <h5>2) Custom Nutritional Plans</h5>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <h5>3) Personal Lockers</h5>
+            <h5>3) Cafeteria</h5>
           </div>
           <div class="col-lg-6">
             <h5>4) Certified Trainers</h5>
@@ -59,10 +59,10 @@
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <h5>5) Batch wise Training</h5>
+            <h5>5) Steam Baths</h5>
           </div>
           <div class="col-lg-6">
-            <h5>6) Special Women's Batches</h5>
+            <h5>6) Special Women's Trainers</h5>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
 </aside>
 <script>
     var currentImageIndex = 0;
-    var images = ['./GYm/assets/img/forgelogo.jpeg', './GYm/assets/img/forge1.jpeg', './GYm/assets/img/forge2.jpeg', './GYm/assets/img/forge3.jpeg', './GYm/assets/img/forge4.jpeg'];
+    var images = ['./GYm/assets/img/mmalogo.jpeg', './GYm/assets/img/mma.jpg', './GYm/assets/img/mma2.jpg', './GYm/assets/img/mma3.jpg', './GYm/assets/img/mma4.jpg'];
 
     function changeMainImage(imageSrc) {
         document.getElementById('mainImage').src = imageSrc;
@@ -108,16 +108,14 @@
             <div>
                 <div class="gymname">  
                     <h2 class="title ">
-                    <b>Forge Fitness Club Kolhapur</b>
+                    <b>MMA Matrix Gym Kolhapur</b>
                     </h2> 
             
                 </div>
             </div>
                 <br>
             <div class="gymdese"> <p style="font-size:19px; font-family:'Arial';">
-              The Forge Fitness Club, Kolhapur is stocked with world-class equipment from leading manufacturers such as Life Fitness and Hammer Strength. We are focused on giving our members the best value for their money. That means equipment and workout space that is clean, safe, comfortable, and close to home.. 
-               We provides the top quality cardio, free weight, and strength training that need to get the shape at an affordable price.
-                </p>
+            MMA Matrix Gym Kolhapur is one f the leading businesses in the Martial Arts Training Centres. Also known for Gyms, Women Gyms, Fitness Centres, Martial Arts Training Centres, Personal Gym Trainers, Personal Gym Trainers for Women, Men Gyms, Steam Bath Services and much more.Mma Matrix Gym is one of the best martial art training centres in Kolhapur. It has many beginners and advanced courses for the students.
             </div>
          
           <hr />
@@ -125,8 +123,7 @@
           
         </div>
           <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.943762714696!2d74.2431299!3d16.7296576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10122281fb59f%3A0x617ecc9e50dfdeb2!2sThe%20Forge%20Fitness%20Club%2C%20Kolhapur%20%7C%20Best%20Gym%20in%20Kolhapur%20%7C%20Fitness%20centre%20in%20Kolhapur!5e0!3m2!1sen!2sin!4v1709967587601!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.6643469236014!2d74.23845567514937!3d16.693671684080016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc101baec9c65ad%3A0x3dbefb158db24d0!2sMMA%20MATRIX%20GYM%20KOLHAPUR!5e0!3m2!1sen!2sin!4v1712643965927!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div>
     </main>
     </div>
   </div>
@@ -156,7 +153,7 @@
           <div class="card text-center mb-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title" style="color:white;">1 Month Plan</h5>
-                <p class="card-text" style="color:white;">1500/Mo</p>
+                <p class="card-text" style="color:white;">4000/Mo</p>
                 <label for="package1">SELECT</label>
                 <input id="package1" type="radio" id="plan1" name="package" value="1 Month Plan">
             </div>
@@ -164,7 +161,7 @@
           <div class="card text-center mb-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title" style="color:white;">3 Months Plan</h5>
-                <p class="card-text" style="color:white;">4500/3 Mo</p>
+                <p class="card-text" style="color:white;">10,000/3 Mo</p>
                 <label for="package2">SELECT</label>
                 <input id="package2" type="radio" id="plan2" name="package" value="3 Month Plan">            
             </div>
@@ -172,7 +169,7 @@
           <div class="card text-center mb-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title" style="color:white;">6 Months Plan</h5>
-                <p class="card-text" style="color:white;">7000/6 Mo</p>
+                <p class="card-text" style="color:white;">12,000/6 Mo</p>
                 <label for="package3">SELECT</label>
                 <input id="package3" type="radio" id="plan3" name="package" value="6 Month Plan">            
              </div>
@@ -180,7 +177,7 @@
           <div class="card text-center mb-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title" style="color:white;">1 Year Plan</h5>
-                <p class="card-text" style="color:white;">12,000/Year</p>
+                <p class="card-text" style="color:white;">18,000/Year</p>
                 <label for="package4">SELECT</label>
                 <input id="package4" type="radio" id="plan4" name="package" value="1 Year Plan">            
             </div>
@@ -255,10 +252,10 @@ try {
 
     //Recipients
     $mail->setFrom($email1, 'FitPlay Gyms');
-    $mail->addAddress('omrandive1055@gmail.com', 'forge');     //Add a recipient
+    $mail->addAddress('kolhapur@mmamatrix.org', 'MMA Matrix Gym Kolhapur');     //Add a recipient
 
 
-   
+
     //Content
     // $mail->isHTML(true);                                  //Set email format to HTML
     // $mail->Subject = 'This is to enquire about gym';
@@ -356,15 +353,11 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="col-lg-3 col-md-6 footer-links">
         <h4 style="color:white;">Our Services</h4>
         <ul>
-        <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="turf.php">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="turf.php">Book Turfs</a></li>
           <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="gym.php">Explore Gym</a></li>
           <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="shop.php">Shop Products</a></li> 
-          
         </ul>
       </div>
-
-
-
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Our Social Networks</h4>
         <p>Welcome to the heart of our vibrant community! Follow us on our social networks to stay connected with the latest in fitness trends, exciting events, exclusive promotions, and inspiring stories from our community members.</p>
@@ -375,10 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
           <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
-
-      </div>
-      
-      
+      </div>      
     </div>
   </div>
 </div>

@@ -132,7 +132,7 @@ if (isset($_GET['Order_id'])) {
 				<h1><a href="index.html" class="logo">F<span style="color:#005500;">P.</a></h1>
         <ul class="list-unstyled components mb-5" style="color:black;">
           <li class="active">
-            <a href="index_home.php"><span class="fa fa-home"></span> Home</a>
+            <a href="Home.php"><span class="fa fa-home"></span> Home</a>
           </li>
           <li>
               <a href="#"><span class="fa fa-user"></span> About</a>

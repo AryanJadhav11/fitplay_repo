@@ -997,19 +997,17 @@ $(document).ready(function () {
             <ul class="list-unstyled components">
                 <p>Admin Panel</p>
                 <li class="active">
-                    <a href="admin_turf.php" style="text-decoration:none;">Manage Turfs</a>
-                    
-                </li>
-                 
-                <li class="active">
-                    <a href="bookedturf.php" style="text-decoration:none;">Booking</a>
+                    <a href="admin_turf.php" style="text-decoration:none;" class="fa fa-cubes">     Manage Turfs</a>
                 </li>
                 <li class="active">
-                    <a href="requests.php" style="text-decoration:none;">Requests</a>
+                    <a href="bookedturf.php" style="text-decoration:none;" class="fa fa-calendar">   Booking</a>
+                </li>
+                <li class="active">
+                    <a href="requests.php" style="text-decoration:none;" class="fa fa-file">      Requests</a>
                 </li>
                 
                 <li class="active">
-                    <a href="add_product.php" style="text-decoration:none;">Add Product</a>
+                    <a href="add_product.php" style="text-decoration:none;" class="fa fa-plus">      Add Product</a>
                     
                 </li>
                
@@ -1187,12 +1185,12 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Products Listed</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Users</h5>
                       <?php
-                      $quep="SELECT Order_id from product_cards ORDER BY Order_id" ;
-                      $runp=mysqli_query($con,$quep);
-                      $product_row=mysqli_num_rows($runp);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$product_row.'</span>';
+                      $queu="SELECT id from users ORDER BY id" ;
+                      $runtu=mysqli_query($conn,$queu);
+                      $user_row=mysqli_num_rows($runtu);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
 
                       ?>
                     </div>
@@ -1206,17 +1204,17 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                 </div>
               </div>
             </div>
-            <!-- <div class="col-xl-3 col-lg-6" style="margin-left:px;margin-top:23px;">
+            <div class="col-xl-3 col-lg-6" style="margin-left:423px;margin-top:23px;">
               <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Users</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Products Listed</h5>
                       <?php
-                      $queu="SELECT id from users ORDER BY id" ;
-                      $runtu=mysqli_query($conn,$queu);
-                      $user_row=mysqli_num_rows($runtu);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
+                      $quep="SELECT Order_id from order_manager ORDER BY Order_id" ;
+                      $runp=mysqli_query($con,$quep);
+                      $product_row=mysqli_num_rows($runp);
+                      echo '<span class="h2 font-weight-bold mb-0">'.$product_row.'</span>';
 
                       ?>
                     </div>
@@ -1229,7 +1227,7 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                   
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>

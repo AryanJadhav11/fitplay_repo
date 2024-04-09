@@ -388,10 +388,9 @@ $mail->Body = $body;
             <div class="col-lg-3 col-md-6 footer-links">
               <h4 style="color:white;">Our Services</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Book Turfs</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Explore Gym</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="#">Shop Products</a></li>
-
+              <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="turf.php">Book Turfs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="gym.php">Explore Gym</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a style="color:white;" href="shop.php">Shop Products</a></li> 
               </ul>
             </div>
 
