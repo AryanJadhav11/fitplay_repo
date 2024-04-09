@@ -116,24 +116,24 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="GYm/assets/img/goldsgym.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/f31.jpeg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Gold's Gym</h5>
-              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
+              <h5 class="card-title">F3 Gym</h5>
+              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Ruikar Colony,kolhapur</p>
 
-              <p class="card-text">World class fitness center. We provide you with the best fitness programs along with professional trainer and equipment.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <p class="card-text">First Functional Studio in West Maharashtra, F3 is a fitness center providing modern training concepts to people of kolhapur.</p>
+              <a href="f3.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="GYm/assets/img/absgym.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/fit1.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">ABS Gym</h5>
-              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Sayaji Hotel, Kolhapur</p>
-              <p class="card-text">World class fitness center. We provide you with the best fitness programs along with professional trainer and equipment.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <h5 class="card-title">FITNESS. GURU.</h5>
+              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park, Kolhapur</p>
+              <p class="card-text">Your premier gym with top-notch equipment and expert trainers, dedicated to helping you achieve your fitness goals.</p>
+              <a href="fitness.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>

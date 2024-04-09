@@ -14,7 +14,7 @@
             style="height:60vh; width:100%; position: relative;">
             <!-- Main Image -->
             <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 img-fluid fit"
-              src="./GYm/assets/img/abslogo.png" alt="Main Image" />
+              src="./GYm/assets/img/f3icon.jpeg" alt="Main Image" />
             <!-- Previous Button -->
             <a id="prevButton" class="prev" onclick="changeImage(-1)"
               style="position: absolute; color:white; text-decoration:none; top: 50%; left: 10px; transform: translateY(-50%); z-index: 1;">&#10094;</a>
@@ -26,20 +26,20 @@
           <!-- Thumbnail Images -->
           <div class="d-flex justify-content-center mb-3">
             <!-- Thumbnail Links -->
-            <a onclick="changeMainImage('./GYm/assets/img/abslogo.png'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/abslogo.png" alt="Thumbnail 1" />
+            <a onclick="changeMainImage('./GYm/assets/img/f3icon.jpeg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/f3icon.jpeg" alt="Thumbnail 1" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/abs1.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/abs1.jpg" alt="Thumbnail 2" />
+            <a onclick="changeMainImage('./GYm/assets/img/f31.jpeg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/f31.jpeg" alt="Thumbnail 2" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/abs2.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/abs2.jpg" alt="Thumbnail 3" />
+            <a onclick="changeMainImage('./GYm/assets/img/f32.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/f32.jpg" alt="Thumbnail 3" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/abs3.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/abs3.jpg" alt="Thumbnail 4" />
+            <a onclick="changeMainImage('./GYm/assets/img/f33.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/f33.jpg" alt="Thumbnail 4" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/abs4.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/abs4.jpg" alt="Thumbnail gold" />
+            <a onclick="changeMainImage('./GYm/assets/img/f34.jpeg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/f34.jpeg" alt="Thumbnail gold" />
             </a>
           </div>
           <div class="container m-0 p-0" style="background-color:rgb(30,34,38); height:200px; width:100%;">
@@ -83,7 +83,7 @@
         </aside>
         <script>
           var currentImageIndex = 0;
-          var images = ['./GYm/assets/img/abslogo.png', './GYm/assets/img/abs1.jpg', './GYm/assets/img/abs2.jpg', './GYm/assets/img/abs3.jpg', './GYm/assets/img/abs4.jpg'];
+          var images = ['./GYm/assets/img/f3icon.jpeg', './GYm/assets/img/f31.jpeg', './GYm/assets/img/f32.jpg', './GYm/assets/img/f33.jpg', './GYm/assets/img/f34.jpeg'];
 
           function changeMainImage(imageSrc) {
             document.getElementById('mainImage').src = imageSrc;
@@ -117,7 +117,7 @@
             <div>
               <div class="gymname">
                 <h2 class="title ">
-                  <b>ABS Fitness Kolhapur</b>
+                  <b>Functional Frame & Fitness</b>
                 </h2>
 
               </div>
@@ -125,8 +125,7 @@
             <br>
             <div class="gymdese">
               <p style="font-size:19px; font-family:'Arial';">
-              Wellness Clubs in Kolhapur. Only gym in Kolhapur with 15,000-20,000 sq ft Five Star amenities along with Infinity swimming pool & 5 different Studios.Embrace the strength within you and conquer every workout.Let your gym sessions be a journey of self-discovery and empowerment.Repeat these affirmations
-Kolhapurkar’s most Luxurious gym with the best amenities Come and join us to experience the results for yourself!
+              F3 Gym is a fitness center providing modern training concepts to people of kolhapur. Its gym floor with functional studio workout forms and accurate nutritional guidance from experts is been helping people to achieve their fitness goals.Fitness Club providing exceptional features for individuals on their fitness journey.
 </p>
             </div>
 
@@ -135,10 +134,10 @@ Kolhapurkar’s most Luxurious gym with the best amenities Come and join us to e
 
           </div>
           <div class="container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1174.8995457888902!2d74.25020225267583!3d16.70388486247149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc100464d7778a3%3A0xa61d51979e5a533d!2sABS%20Fitness%20%26%20Wellness%20Club%20(%20DYP%20Wellness%20Pvt%20.%20Ltd%20)!5e0!3m2!1sen!2sin!4v1710787541060!5m2!1sen!2sin" 
-             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1142.3497200812053!2d74.25268265775567!3d16.707472121190108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1004f5f3f4471%3A0x8fb42ff2523d21d3!2sFunctional%20Frame%20%26%20Fitness%20(F3%20Gym)%20%7C%20Best%20Functional%20Gym%20in%20Kolhapur!5e0!3m2!1sen!2sin!4v1712649756913!5m2!1sen!2sin" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-        </main>  
+        </main>   
       </div>
     </div>
 
@@ -265,7 +264,7 @@ try {
 
     //Recipients
     $mail->setFrom($email1, 'FitPlay Gyms');
-    $mail->addAddress('smiles@absfitness.in', 'ABS Fitness Kolhapur');     //Add a recipient smiles@absfitness.in
+    $mail->addAddress('f3gymkop@outlook.com', 'F3 Gym');     //Add a recipient f3gymkop@outlook.com
 
 
    
@@ -280,7 +279,7 @@ $mail->isHTML(true); // Set email format to HTML
 $mail->Subject = 'Inquiry about Gym Membership';
 
 // Email Body
-$body = '<p>Dear ABS Fitness Kolhapur,</p>';
+$body = '<p>Dear F3 Gym,</p>';
 $body .= '<p>This is an inquiry about gym membership. Below are the details:</p>';
 $body .= '<ul>';
 $body .= '<li><strong>Sender Name:</strong> ' . $fullname . '</li>';
