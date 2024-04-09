@@ -4,6 +4,7 @@
 ?>
 
 
+
 <body>
   <!-- content -->
   <section class="pt-5   pb-0">
@@ -14,7 +15,7 @@
             style="height:60vh; width:100%; position: relative;">
             <!-- Main Image -->
             <img id="mainImage" style="width: 100%; height: 100%; margin: auto;" class="rounded-4 img-fluid fit"
-              src="./GYm/assets/img/fitlogo.jpg" alt="Main Image" />
+              src="./GYm/assets/img/mtlogo.jpg" alt="Main Image" />
             <!-- Previous Button -->
             <a id="prevButton" class="prev" onclick="changeImage(-1)"
               style="position: absolute; color:white; text-decoration:none; top: 50%; left: 10px; transform: translateY(-50%); z-index: 1;">&#10094;</a>
@@ -26,20 +27,20 @@
           <!-- Thumbnail Images -->
           <div class="d-flex justify-content-center mb-3">
             <!-- Thumbnail Links -->
-            <a onclick="changeMainImage('./GYm/assets/img/fitlogo.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/fitlogo.jpg" alt="Thumbnail 1" />
+            <a onclick="changeMainImage('./GYm/assets/img/mtlogo.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mtlogo.jpg" alt="Thumbnail 1" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/fit1.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/fit1.jpg" alt="Thumbnail 2" />
+            <a onclick="changeMainImage('./GYm/assets/img/mt1.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mt1.jpg" alt="Thumbnail 2" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/fit2.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/fit2.jpg" alt="Thumbnail 3" />
+            <a onclick="changeMainImage('./GYm/assets/img/mt2.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mt2.jpg" alt="Thumbnail 3" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/fit3.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/fit3.jpg" alt="Thumbnail 4" />
+            <a onclick="changeMainImage('./GYm/assets/img/mt3.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mt3.jpg" alt="Thumbnail 4" />
             </a>
-            <a onclick="changeMainImage('./GYm/assets/img/fit4.jpg'); return false;">
-              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/fit4.jpg" alt="Thumbnail gold" />
+            <a onclick="changeMainImage('./GYm/assets/img/mt4.jpg'); return false;">
+              <img width="60" height="50" class="rounded-2" src="./GYm/assets/img/mt4.jpg" alt="Thumbnail gold" />
             </a>
           </div>
           <div class="container m-0 p-0" style="background-color:rgb(30,34,38); height:200px; width:100%;">
@@ -50,15 +51,15 @@
             <div class="features-body p-4">
               <div class="row">
                 <div class="col-lg-6">
-                  <h5>1) Premium equipments</h5>
+                  <h5>1) World class premium equipments</h5>
                 </div>
                 <div class="col-lg-6">
-                  <h5>2)Zumba and Functional Training</h5>
+                  <h5>2)Zumba and Functional batches</h5>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <h5>3) Swimming pool</h5>
+                  <h5>3)Recreational activities</h5>
                 </div>
                 <div class="col-lg-6">
                   <h5>4) Certified Trainers</h5>
@@ -66,10 +67,10 @@
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <h5>5) Personal dietitian</h5>
+                  <h5>5)Advanced modern Tools</h5>
                 </div>
                 <div class="col-lg-6">
-                  <h5>6) Marathon, bike rallys,<br>mountain climing,etc</h5>
+                  <h5>6) Special Women's Batches</h5>
                 </div>
               </div>
             </div>
@@ -83,7 +84,7 @@
         </aside>
         <script>
           var currentImageIndex = 0;
-          var images = ['./GYm/assets/img/fitlogo.jpg', './GYm/assets/img/fit1.jpg', './GYm/assets/img/fit2.jpg', './GYm/assets/img/fit3.jpg', './GYm/assets/img/fit4.jpg'];
+          var images = ['./GYm/assets/img/mtlogo.jpg', './GYm/assets/img/mt1.jpg', './GYm/assets/img/mt2.jpg', './GYm/assets/img/mt3.jpg', './GYm/assets/img/mt4.jpg'];
 
           function changeMainImage(imageSrc) {
             document.getElementById('mainImage').src = imageSrc;
@@ -117,7 +118,7 @@
             <div>
               <div class="gymname">
                 <h2 class="title ">
-                  <b>FITNESS. GURU.</b>
+                  <b>Muscle Tree Gym</b>
                 </h2>
 
               </div>
@@ -125,7 +126,14 @@
             <br>
             <div class="gymdese">
               <p style="font-size:19px; font-family:'Arial';">
-              Fitness Guru is your premier fitness destination, offering top-notch equipment and expert trainers. Our personalized workouts, group classes, and supportive community are tailored to help you achieve your fitness goals. From weight loss to muscle gain, we're here to guide and motivate you every step of the way. Join us today and transform your health and wellness journey with Fitness Guru!</p>
+                Highly trained fitness trainers dedicated to your overall fitness training for everyone who wants to
+                live a healthy and energetic lifestyle.We have equipped the gym with latest and best in class machines,
+                so your workout is most effective.Our personal trainers are ready to take up the challenge with you, and
+                help you achieve your health goals.Achieve the physical transformation you've always dreamed of
+                Providing a diverse selection of health and wellness options for individuals seeking a vibrant
+                lifestyle.
+
+              </p>
             </div>
 
             <hr />
@@ -133,19 +141,22 @@
 
           </div>
           <div class="container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.0591566934681!2d74.2367939914322!3d16.71260701063764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10067b300736d%3A0x98c30c38d51b8236!2sDr%20Bapuji%20Salunkhe%20Auditorium!5e0!3m2!1sen!2sin!4v1712655658673!5m2!1sen!2sin" 
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6333.721243800102!2d74.2343888600812!3d16.709111578824796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc101f4e17a7db7%3A0xb4a12b2cf743e8bc!2sMUSCLE%20TREE%20GYM!5e0!3m2!1sen!2sin!4v1710786639108!5m2!1sen!2sin"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-        </main>   
+        </main>
       </div>
     </div>
+
 
   </section>
 
   <hr>
   <!-- form -->
   <section>
-  <form method="post" id="packageForm">
+    <form method="post" id="packageForm">
       <div class="container">
         <!-- form head -->
         <div class="form_head">
@@ -177,18 +188,18 @@
                       <div class="pricing-price-row">
                         <div class="pricing-price-wrapper">
                           <div class="pricing-price">
-                            <div class="pricing-cost">3000₹</div>
+                            <div class="pricing-cost">1300₹</div>
                           </div>
                         </div>
                       </div>
                       <div class="pricing-row-title">
                         <div class="pricing_row_title">Monthly</div>
                       </div>
-                      <figure class="pricing-row">Certified Trainers</figure>
-                      <figure class="pricing-row">Diet plans</figure>
-                      <figure class="pricing-row"><span>Zumba, yoga batches</span></figure>
-                      <figure class="pricing-row">Changing room</figure>
                       <figure class="pricing-row">Steam Room</figure>
+                      <figure class="pricing-row"><span>Cafe</span></figure>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row">Changing room</figure>
                       <br><br>
                       <div class="pricing-footer">
                         <div class="gem-button-container gem-button-position-center">
@@ -204,18 +215,18 @@
                       <div class="pricing-price-row">
                         <div class="pricing-price-wrapper">
                           <div class="pricing-price">
-                            <div class="pricing-cost">7500₹</div>
+                            <div class="pricing-cost">1300₹</div>
                           </div>
                         </div>
                       </div>
                       <div class="pricing-row-title">
-                        <div class="pricing_row_title">3 Monthly</div>
+                        <div class="pricing_row_title">Monthly</div>
                       </div>
-                      <figure class="pricing-row">Certified Trainers</figure>
-                      <figure class="pricing-row">Diet plans</figure>
-                      <figure class="pricing-row"><span>Zumba, yoga batches</span></figure>
-                      <figure class="pricing-row">Changing room</figure>
                       <figure class="pricing-row">Steam Room</figure>
+                      <figure class="pricing-row"><span>Cafe</span></figure>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row">Changing room</figure>
                       <br><br>
                       <div class="pricing-footer">
                         <div class="gem-button-container gem-button-position-center">
@@ -231,18 +242,18 @@
                       <div class="pricing-price-row">
                         <div class="pricing-price-wrapper">
                           <div class="pricing-price">
-                            <div class="pricing-cost">9500₹</div>
+                            <div class="pricing-cost">1300₹</div>
                           </div>
                         </div>
                       </div>
                       <div class="pricing-row-title">
-                        <div class="pricing_row_title">6 Monthly</div>
+                        <div class="pricing_row_title">Monthly</div>
                       </div>
-                      <figure class="pricing-row">Certified Trainers</figure>
-                      <figure class="pricing-row">Diet plans</figure>
-                      <figure class="pricing-row"><span>Zumba, yoga batches</span></figure>
-                      <figure class="pricing-row">Changing room</figure>
                       <figure class="pricing-row">Steam Room</figure>
+                      <figure class="pricing-row"><span>Cafe</span></figure>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row">Changing room</figure>
                       <br><br>
                       <div class="pricing-footer">
                         <div class="gem-button-container gem-button-position-center">
@@ -258,18 +269,18 @@
                       <div class="pricing-price-row">
                         <div class="pricing-price-wrapper">
                           <div class="pricing-price">
-                            <div class="pricing-cost">14,000₹</div>
+                            <div class="pricing-cost">1300₹</div>
                           </div>
                         </div>
                       </div>
                       <div class="pricing-row-title">
-                        <div class="pricing_row_title">Yearly</div>
+                        <div class="pricing_row_title">Monthly</div>
                       </div>
-                      <figure class="pricing-row">Certified Trainers</figure>
-                      <figure class="pricing-row">Diet plans</figure>
-                      <figure class="pricing-row"><span>Zumba, yoga batches</span></figure>
-                      <figure class="pricing-row">Changing room</figure>
                       <figure class="pricing-row">Steam Room</figure>
+                      <figure class="pricing-row"><span>Cafe</span></figure>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row">Changing room</figure>
                       <br><br>
                       <div class="pricing-footer">
                         <div class="gem-button-container gem-button-position-center">
@@ -285,7 +296,6 @@
               </div>
             </div>
           </div>
-          <br><br>
           <div class="form-info container" style="width:100%; height:30vh; background-color:rgb(33,37,41);">
             <div class="row g-3">
               <div class="col-md-6">
@@ -313,7 +323,8 @@
         </div>
         <!-- form body end -->
       </div>
-    </form><?php
+    </form>
+    <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -351,7 +362,7 @@ try {
 
     //Recipients
     $mail->setFrom($email1, 'FitPlay Gyms');
-    $mail->addAddress('omrandive1055@gmail.com', 'FITNESS. GURU.');     //Add a recipient f3gymkop@outlook.com
+    $mail->addAddress('omrandive1055@gmail.com', 'Muscle Tree Gym');     //Add a recipient info@muscletreegym.com
 
 
    
@@ -366,7 +377,7 @@ $mail->isHTML(true); // Set email format to HTML
 $mail->Subject = 'Inquiry about Gym Membership';
 
 // Email Body
-$body = '<p>Dear FITNESS. GURU.,</p>';
+$body = '<p>Dear Muscle Tree Gym,</p>';
 $body .= '<p>This is an inquiry about gym membership. Below are the details:</p>';
 $body .= '<ul>';
 $body .= '<li><strong>Sender Name:</strong> ' . $fullname . '</li>';
@@ -416,8 +427,9 @@ $mail->Body = $body;
           }
         });
       });
+
+
     });
 
   </script>
-
-<?php include("gym_foot.php")?>
+  <?php include("gym_foot.php")?>

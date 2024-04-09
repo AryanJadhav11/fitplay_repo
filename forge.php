@@ -138,84 +138,175 @@
  <!-- form -->
 <section>
 <form method="POST" id="packageForm" onsubmit="console.log('submitted')">
-  <div class="container">
-    <!-- form head -->
-    <div class="form_head">
-      <div class="d-flex justify-content-center align-items-center" style="background-color:rgb(19,20,21); height:70px; width:100%;">
-        <h3>Book Now!</h3>
-      </div>
-    </div>
-<!-- form head end -->
-  <!-- form body -->
-    <div class="form_body" style="border:5px solid rgb(19,20,21);">
-      <div class="packages" style="height: auto;">
-        <div class="selectpackage d-flex justify-content-center align-items-center pt-5"  >
-            <h4>Select Package :</h4>
-        </div>
-        <div class="packs pt-5">
-          <div class="card text-center mb-3" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white;">1 Month Plan</h5>
-                <!-- <p class="card-text" style="color:white;">2000/Mo</p> -->
-                <label for="package1">SELECT</label>
-                <input id="package1" type="radio" id="plan1" name="package" value="1 Month Plan">
-            </div>
-          </div>
-          <div class="card text-center mb-3" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white;">3 Months Plan</h5>
-                <!-- <p class="card-text" style="color:white;">4500/3 Mo</p> -->
-                <label for="package2">SELECT</label>
-                <input id="package2" type="radio" id="plan2" name="package" value="3 Month Plan">            
-            </div>
-          </div>
-          <div class="card text-center mb-3" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white;">6 Months Plan</h5>
-                <!-- <p class="card-text" style="color:white;">10,000/6 Mo</p> -->
-                <label for="package3">SELECT</label>
-                <input id="package3" type="radio" id="plan3" name="package" value="6 Month Plan">            
-             </div>
-          </div>
-          <div class="card text-center mb-3" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title" style="color:white;">1 Year Plan</h5>
-                <!-- <p class="card-text" style="color:white;">13,000/Year</p> -->
-                <label for="package4">SELECT</label>
-                <input id="package4" type="radio" id="plan4" name="package" value="1 Year Plan">            
-            </div>
+<form method="post" id="packageForm">
+      <div class="container">
+        <!-- form head -->
+        <div class="form_head">
+          <div class="d-flex justify-content-center align-items-center"
+            style="background-color:rgb(19,20,21); height:70px; width:100%;">
+            <h3>Book Now!</h3>
           </div>
         </div>
-      </div>
-      <div class="form-info container" style="width:100%; height:30vh; background-color:rgb(33,37,41);">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="userMail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="userMail"  name="userMail">
-          </div>
-          <div class="col-md-6">
-            <label for="userNum" class="form-label">Phone No.</label>
-            <input type="tel" class="form-control" id="userNum" name="userNum">
-          </div>
-          <div class="col-md-6">
-            <label for="userFirstname" class="form-label">First Name.</label>
-            <input type="text" class="form-control" name="userFirstname" id="userFirstname">
-          </div>
-          <div class="col-md-6">
-            <label for="userLastname" class="form-label">Last Name.</label>
-            <input type="text" class="form-control" name="userLastname" id="userLastname">
-          </div>
-          
-          </div><div class="col-12 d-flex justify-content-center pt-4">
-            <input type="submit" name="submit" value="submit" class="btn btn-primary">
-          </div>
-       
-      </div>
-    </div>
-    <!-- form body end -->
-  </div> 
-</form>
+        <!-- form head end -->
+        <!-- form body -->
+        <div class="form_body" style="border:5px solid rgb(19,20,21);">
+          <div class="" style="height: auto;">
 
+            <div>
+              <div class="margin-body">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="wpb_text_column wpb_content_element ">
+                      <div class="wpb_wrapper">
+                        <div class="title-h1 text-center"><span><span class="light">SELECT </span> PACKAGE</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-3 col-md-3 pricing-column-wrapper card">
+                    <div class="pricing-column">
+                      <div class="pricing-price-row">
+                        <div class="pricing-price-wrapper">
+                          <div class="pricing-price">
+                            <div class="pricing-cost">2000₹</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricing-row-title">
+                        <div class="pricing_row_title">Monthly</div>
+                      </div>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row"><span>Personal Lockers</span></figure>
+                      <figure class="pricing-row">Changing room</figure>
+                      <figure class="pricing-row">Steam Room</figure>
+                      <br><br>
+                      <div class="pricing-footer">
+                        <div class="gem-button-container gem-button-position-center">
+                          <figure style="text-align:center;"><label for="package1">SELECT</label>
+                            <input class="gem-button gem-green" id="package1" type="radio" id="plan1" name="package" value="1 Month Plan">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-md-3 pricing-column-wrapper card">
+                    <div class="pricing-column">
+                      <div class="pricing-price-row">
+                        <div class="pricing-price-wrapper">
+                          <div class="pricing-price">
+                            <div class="pricing-cost">4500₹</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricing-row-title">
+                        <div class="pricing_row_title">3 Monthly</div>
+                      </div>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row"><span>Personal Lockers</span></figure>
+                      <figure class="pricing-row">Changing room</figure>
+                      <figure class="pricing-row">Steam Room</figure>
+                      <br><br>
+                      <div class="pricing-footer">
+                        <div class="gem-button-container gem-button-position-center">
+                          <figure style="text-align:center;"><label for="package2">SELECT</label>
+                            <input class="gem-button gem-green" id="package2" type="radio" id="plan2" name="package" value="3 Month Plan">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-md-3 pricing-column-wrapper card">
+                    <div class="pricing-column">
+                      <div class="pricing-price-row">
+                        <div class="pricing-price-wrapper">
+                          <div class="pricing-price">
+                            <div class="pricing-cost">7000₹</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricing-row-title">
+                        <div class="pricing_row_title">6 Monthly</div>
+                      </div>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row"><span>Personal Lockers</span></figure>
+                      <figure class="pricing-row">Changing room</figure>
+                      <figure class="pricing-row">Steam Room</figure>
+                      <br><br>
+                      <div class="pricing-footer">
+                        <div class="gem-button-container gem-button-position-center">
+                          <figure style="text-align:center;"><label for="package3">SELECT</label>
+                            <input class="gem-button gem-green" id="package3" type="radio" id="plan3" name="package" value="6 Month Plan">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-md-3 pricing-column-wrapper card">
+                    <div class="pricing-column">
+                      <div class="pricing-price-row">
+                        <div class="pricing-price-wrapper">
+                          <div class="pricing-price">
+                            <div class="pricing-cost">13,000₹</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pricing-row-title">
+                        <div class="pricing_row_title">Yearly</div>
+                      </div>
+                      <figure class="pricing-row">Nutritional plans</figure>
+                      <figure class="pricing-row">Diet plans</figure>
+                      <figure class="pricing-row"><span>Personal Lockers</span></figure>
+                      <figure class="pricing-row">Changing room</figure>
+                      <figure class="pricing-row">Steam Room</figure>
+                      <br><br>
+                      <div class="pricing-footer">
+                        <div class="gem-button-container gem-button-position-center">
+                          <figure style="text-align:center;"><label for="package4">SELECT</label>
+                            <input class="gem-button gem-green" id="package4" type="radio" id="plan4" name="package" value="1 year Plan">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <div class="form-info container" style="width:100%; height:30vh; background-color:rgb(33,37,41);">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="userMail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userMail" name="userMail">
+              </div>
+              <div class="col-md-6">
+                <label for="userNum" class="form-label">Phone No.</label>
+                <input type="tel" class="form-control" id="userNum" name="userNum">
+              </div>
+              <div class="col-md-6">
+                <label for="userFirstName" class="form-label">First Name.</label>
+                <input type="text" class="form-control" name="userFirstName" id="userFirstName">
+              </div>
+              <div class="col-md-6">
+                <label for="userLastname" class="form-label">Last Name.</label>
+                <input type="text" class="form-control" name="userLastname" id="userLastname">
+              </div>
+
+              <div class="col-12 d-flex justify-content-center pt-4">
+                <button type="submit" name="submit" class="btn btn-primary">Send Mail</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- form body end -->
+      </div>
+    </form>
 <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -294,5 +385,26 @@ $mail->Body = $body;
 }
 ?>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var radioButtons = document.querySelectorAll('input[type="radio"]');
+
+      radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener('change', function () {
+          document.querySelectorAll('.card').forEach(function (card) {
+            card.classList.remove('selected-package');
+          });
+
+          // Add the border to the selected class
+          if (this.checked) {
+            this.closest('.card').classList.add('selected-package');
+          }
+        });
+      });
+
+
+    });
+
+  </script>
 
 <?php include("gym_foot.php")?>

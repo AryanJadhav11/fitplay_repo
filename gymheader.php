@@ -508,3 +508,4 @@ function getInitials($name) {
 </head>
   <!-- script for fixed navbar -->
   <script src="GYm/assets/js/main.js"></script>
+ 
