@@ -105,12 +105,12 @@
         </div>
         <div class="col-lg-3 gym-cards">
           <div class="card" style="width: 18rem;">
-            <img src="GYm/assets/img/ruggedian.jpg" height="180px" class="card-img-top" alt="...">
+            <img src="GYm/assets/img/mma.jpg" height="180px" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Ruggedian Fitness Multiplex</h5>
-              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Tarabai park,kolhapur</p>
-              <p class="card-text">City's biggest fitness hub with personalised group batches ,certified staff and various zones.</p>
-              <a href="#" class="btn btn-primary">View More</a>
+              <h5 class="card-title">MMA MATRIX GYM</h5>
+              <p class="card-text"><i class="bi bi-geo-alt-fill"></i>Rajarampuri, kolhapur</p>
+              <p class="card-text">Mma Matrix Gym is one of the best martial art training centres. It has beginners and advanced courses for the students.</p>
+              <a href="mma.php" class="btn btn-primary">View More</a>
             </div>
           </div>
         </div>
