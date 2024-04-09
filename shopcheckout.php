@@ -135,7 +135,7 @@ $coni->close();
 		<link rel="stylesheet" href="all.css">
 </head>
 
-<body class="py-6">  
+<body class="py-6" style="background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);">
 <div class="wrapper d-flex align-items-stretch" style="height:100%;" >
 			<nav id="sidebar" class="active"style="background-color:#1a85df;" >
 				<h1><a href="index.html" class="logo">F<span style="color:#005500;">P.</a></h1>
@@ -164,52 +164,137 @@ $coni->close();
 
 
     <!-- Purchase form container -->
-    <div class="container Purchase-container pt-5">
-        <!-- Purchase form -->
-        <form id="purchaseForm" method="post">
+    <style>
+        /* CSS for card styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa; /* Set the background color */
+        }
 
-            <div class="form-group">
-                <label for="amount">Payable Amount:</label>
-                <input type="text" id="amount" name="amount" value="<?php echo $grandTotal; ?>" class="form-control" readonly>
+        .card-container {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            overflow: hidden; /* Prevent shadow from being cut off */
+            background-color: #fff; /* Set the background color of the card */
+            width: 80%; /* Set the width of the card */
+            max-width: 600px; /* Adjust the maximum width of the card */
+            padding: 20px;
+        }
+
+        /* CSS for image styling */
+        .join-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* CSS for form styling */
+        .purchase-form {
+            padding: 20px;
+        }
+    </style>
+
+
+    <style>
+        /* CSS for card styling */
+        .card-container {
+            margin-top: 20px; /* Adjust margin as needed */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            overflow: hidden; /* Prevent shadow from being cut off */
+        }
+
+        /* CSS for image styling */
+        .image-container {
+            width: 300px; /* Set width to 300 pixels */
+            height: 300px; /* Set height to 300 pixels */
+            border-radius: 10px 0 0 10px; /* Rounded corners for left side */
+            overflow: hidden; /* Prevent image from overflowing */
+        }
+
+        .join-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover entire container */
+        }
+
+        /* CSS for form styling */
+        .form-container {
+            padding: 20px;
+            border-radius: 0 10px 10px 0; /* Rounded corners for right side */
+        }
+    </style>
+
+
+
+    <!----------------------- Main Container -------------------------->
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+<!----------------------- Login Container -------------------------->
+
+   <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+<!--------------------------- Left Box ----------------------------->
+
+<div class="col-md-8 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: ;">
+           
+            <img src="proimg/payill.jpg" class="img-fluid" >
+       
+           
+       </div> 
+
+<!-------------------- ------ Right Box ---------------------------->
+
+
+   <div class="col-md-4 right-box">
+      <div class="row align-items-center">
+            <div class="header-text mb-4">
+                 <h2 class="px-3">Hello!</h2>
+                 <p class="px-3">We are happy to have you with us.</p>
             </div>
-
-            <div class="form-group">
-                <label for="fname">Your Name:</label>
-                <input type="text" id="fname" name="fname" class="form-control" placeholder="Enter Your Name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Your Address:</label>
-                <input type="address" id="address" class="form-control" placeholder="Enter Your Address" name="address" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter Your Email" name="email" required>
-            </div>
-
-            <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
-
-            <div>
-                <?php 
-                    if ($rowCount > 0) {
-                        mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $iid = $row['item_id'];
-                            $item_name = $row['item_name'];
-                            $price = $row['price'];
-                            $quantity = $row['quantity'];
-                            echo '<input type="hidden" id="itemid" name="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">' ;
-                        }
-                    }
-                ?>
-            </div>
-
-            <div class="pt-3">
-                <button id="payButton" type="button" class="btn btn-primary btn-block" style="width: 100%;">Proceed to Payment</button>
-            </div>
-        </form>
-    </div>
+            <form id="purchaseForm" method="post" class="purchase-form">
+                        <div class="form-group">
+                            <label for="amount">Payable Amount:</label>
+                            <input type="text" id="amount" name="amount" value="<?php echo $grandTotal; ?>" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="fname">Your Name:</label>
+                            <input type="text" id="fname" name="fname" class="form-control" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Your Address:</label>
+                            <input type="address" id="address" class="form-control" placeholder="Enter Your Address" name="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter Your Email" name="email" required>
+                        </div>
+                        <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id" value="">
+                        <div>
+                            <?php 
+                                if ($rowCount > 0) {
+                                    mysqli_data_seek($result, 0); // Reset the result pointer to the beginning
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $iid = $row['item_id'];
+                                        $item_name = $row['item_name'];
+                                        $price = $row['price'];
+                                        $quantity = $row['quantity'];
+                                        echo '<input type="hidden" id="itemid" name="itemid[]" value="' . $iid . ' - ' . $item_name . ' - ' . $price . ' - ' . $quantity . '">' ;
+                                    }
+                                }
+                            ?>
+                        </div>
+                        <div class="pt-3">
+                            <button id="payButton" type="button" class="btn btn-primary btn-block" style="width: 100%;">Proceed to Payment</button>
+                        </div>
+                   </form>
+        
+      </div>
+   </div> 
 
     <script>
     document.getElementById('payButton').addEventListener('click', function (e) {
@@ -256,3 +341,5 @@ $coni->close();
 </div>
 </body>
 </html>
+
+

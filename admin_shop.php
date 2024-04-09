@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -13,30 +12,53 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-?>
+$showalert=false;
+$login=false;
+$showerr=false;
 
-<?php
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{ 
+	$err="";
+	$username=$_POST["uname"];
+	//$email=$_POST["nmail"];
+	$password=$_POST["password"];
 
-//database connectivity testing//
-$con = mysqli_connect("localhost", "root", "", "fitplay_users");
-?>
+    
+	
+	
+	
+		$sql="Select * from `users` where username='$username' AND password='$password';";
+		$result=mysqli_query($conn,$sql);
+		$num=mysqli_num_rows($result);
+		
+		if($num)  
+		{
+           
+			$re=mysqli_fetch_assoc($result); // fetch user details 
+            $user_data=array($re['firsitemname'],$re['lasitemname'],$re['username'],$re['email']); // store username and email of logged in user in an array
+            $_SESSION['user_data']=$user_data; // set session for that user 
+			header("location: turf.php");
 
-
-<?php 
-
-$server='localhost';
-$user='root';
-$db='turf';
-$pass='';
-
-$coni=mysqli_connect($server,$user,$pass,$db);
-
-if(!$coni)
-{
- die(mysqli_error($coni));
+		}
+		else
+		{
+			$showerr="Invalid Email / Password";
+            $_SESSION['error']="Invalid Email / Password";
+            
+		}
+		
+	
 }
 
+
+
+$conp = new mysqli($servername, $username, $password, $dbname);
+$sqlpro="SELECT * FROM `product_cards` ORDER BY product_cards.pubdate DESC; ";
+$quepro=mysqli_query($conp,$sqlpro);
+$rowpro=mysqli_num_rows($quepro);
+$respic=mysqli_fetch_assoc($quepro);
 ?>
+
 
 <?php
    
@@ -52,25 +74,30 @@ function getInitials($name) {
   return $initials;
 }
 ?>
-<html lang="en">
-   <head>
+
+
+
+
+
+
+
+<head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <title>Turf Admin - Dashboard</title>
-      <!-- admin card -->
-      <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/cards/card-1/assets/css/card-1.css">
+      <title>Add Turf</title>
       <!-- Custom fonts for this template-->
       <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
       <!-- Custom styles for this template-->
-      <link href="vendor/css/sb-admin-2.css" rel="stylesheet">
+      <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
 
-      <style>
+      <link href="vendor/css/sb-admin-2.css" rel="stylesheet">
+   </head>
+
+   <style>
      .avatar {
         width: 30px;
         height: 30px;
@@ -969,22 +996,47 @@ a.article:hover {
     }
 }
 </style>
-
-
-
-
-
-  </style>
-  <script>
+<script>
 $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
         });
         </script>
-   </head>
-   
-   <body>
+<script>
+$(document).ready(function(){
+	// Activate tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	// Select/Deselect checkboxes
+	var checkbox = $('table tbody input[type="checkbox"]');
+	$("#selectAll").click(function(){
+		if(this.checked){
+			checkbox.each(function(){
+				this.checked = true;                        
+			});
+		} else{
+			checkbox.each(function(){
+				this.checked = false;                        
+			});
+		} 
+	});
+	checkbox.click(function(){
+		if(!this.checked){
+			$("#selectAll").prop("checked", false);
+		}
+	});
+});
+</script>
+
+
+
+  </style>
+    </style>
+
+    
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <body id="page-top">
       <!-- Page Wrapper -->
       <div id="wrapper">
@@ -1015,232 +1067,60 @@ $(document).ready(function () {
                 <li class="active">
                     <a href="admin_pannel.php" style="text-decoration:none;" class="fa fa-cubes">     Shop Orders</a>
                 </li>
+               
                 
 
             
         </nav>
-         <!-- End of Sidebar -->
-         <!-- Content Wrapper -->
-         <div id="content-wrapper" class="d-flex flex-column">
-            <!-- Main Content -->
-            <div id="content">
-               <!-- Topbar -->
-               <div id="content">
 
-<nav class="navbar navbar-expand-lg navbar-light " style="background:#d8ebfe;">
-    <div class="container-fluid">
+    <link rel="stylesheet" href="tablestyle.css">
 
-    <a href="home.php"> <button type="button" id="sidebarCollapse" class="btn btn-info">
-            
-            <span>Back to home</span>
-        </button></a>
-        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-align-justify"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="turf.php">Turfs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shop.php">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gym.php">Gym</a>
-                </li>
-                <?php
-if (isset($_SESSION['user_data'])) {
-// If the user is logged in, display username and "View Profile"
-$userName = $_SESSION['user_data']['username']; // Assuming username is at index 2
-$userInitials = getInitials($userName); // Replace getInitials with your actual function
-
-
-echo '<div style="display: flex; align-items: center;"><h6 style="color:white; font-weight:700;"></h6><div class="avatar" style="margin-left: 3px;"><a href="user_profile.php" style="color:white; text-decoration:none;">' . $userInitials . '</a></div></div>';
-
-} else {
-// If the user is not logged in, display login button
-echo '<button type="button" class="btn btn-primary ms-1 ml-3"><a href="signup.php"  style="color:white; text-decoration:none;">Sign Up</a></button>';
-echo '<span>    </span>';
-echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>';
-}
-?>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Content Wrapper -->
-<div id="content-wrapper" class="d-flex flex-column">
-<!-- Main Content -->
-<div id="content">
-   <!-- Topbar -->
-      <!-- Sidebar Toggle (Topbar) -->
-      <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
-      <!-- Topbar Navbar -->
-      <ul class="navbar-nav ml-auto" >
-         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-         <li class="nav-item dropdown no-arrow d-sm-none">
-            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-search fa-fw"></i> </a>
-            <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow +animated--grow-in" aria-labelledby="searchDropdown">
-               
-            </div>
-         </li>
-         <!-- Nav Item - User Information -->
-         
-            </span><!-- <img class="img-profile rounded-circle" src="vendor/img/undraw_profile.svg"> -->
-            <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-               <a class="dropdown-item" href="#"> <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile </a>
-               <a class="dropdown-item" href="#"> <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings </a>
-               <div class="dropdown-divider"></div>
-               <a class="dropdown-item" 
-                  href="logout.php"> <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout </a>
-            </div>
-         </li>
-      </ul>
-   </nav>
-<!-- Card 1 - Bootstrap Brain Component -->
-<body class="bg-default">
-  <div class="main-content">
-    <div class="header  pb-8 pt-5 pt-md-8" style="background-color:#106eea;">
-      <div class="container-fluid">
-        <h2 class="mb-5 text-white">Statistics Overview</h2>
-        <div class="header-body">
-          <div class="row">
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Total Users</h5>
-                      <span class="h2 font-weight-bold mb-0"> 
-
-                      <?php
-                      $que="SELECT id from users ORDER BY id" ;
-                      $run=mysqli_query($conn,$que);
-                      $user_row=mysqli_num_rows($run);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
-
-                      ?>
-                        
-                    </span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                      </div>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Turfs Listed</h5>
-                      <?php
-                      $queq="SELECT id from grd ORDER BY id" ;
-                      $runt=mysqli_query($coni,$queq);
-                      $turf_row=mysqli_num_rows($runt);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$turf_row.'</span>';
-
-                      ?>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                        <i class="fas fa-chart-pie"></i>
-                      </div>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Turf Owners</h5>
-                      <?php
-                      $queqto="SELECT id from turf_owner ORDER BY id" ;
-                      $runtto=mysqli_query($coni,$queqto);
-                      $turf_row_ow=mysqli_num_rows($runtto);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$turf_row_ow.'</span>';
-
-                      ?>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                        <i class="fas fa-chart-pie"></i>
-                      </div>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Users</h5>
-                      <?php
-                      $queu="SELECT id from users ORDER BY id" ;
-                      $runtu=mysqli_query($conn,$queu);
-                      $user_row=mysqli_num_rows($runtu);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
-
-                      ?>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                        <i class="fas fa-users"></i>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6" style="margin-left:423px;margin-top:23px;">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Products Listed</h5>
-                      <?php
-                      $quep="SELECT Order_id from order_manager ORDER BY Order_id" ;
-                      $runp=mysqli_query($con,$quep);
-                      $product_row=mysqli_num_rows($runp);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$product_row.'</span>';
-
-                      ?>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                        <i class="fas fa-percent"></i>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Chart 1 - Bootstrap Brain Component -->
-
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.1/css/all.min.css" rel="stylesheet">
-  
-</body>
-</html>
+<div id="content" class="p-2 p-md-2 pt-2 mt-2">
+       
+       <!-- Product Table Column -->
+       <div class="row">
+           <div class="col-md-8">
+           <div class="border bg-light rounded p-4">
+           <h2 class="heading-section">All Products</h2><hr>
+               <!-- Product Table -->
+               <div class="table-wrap">
+                   <table class="table">
+                       <thead class="thead-dark">
+                       <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Order Id</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">About</th>
+                        <th scope="col">Publish Data</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                       </thead>
+                       <tbody>
+                       <?php
+                // Retrieve data from product_cards table
+                $query = "SELECT * FROM `product_cards`";
+                $result = mysqli_query($conn, $query);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                    echo "<td><img src='" . $row['pic'] . "' style='width:80px; height:80px;'></td>";
+                    echo "<td>" . $row['Order_id'] . "</td>";
+                    echo "<td>" . $row['item_name'] . "</td>";
+                    echo "<td>" . $row['Price'] . "</td>";
+                    echo "<td>" . $row['Quantity'] . "</td>";
+                    echo "<td><p style='margin: 0;'>" . $row['about'] . "</p></td>";
+                    echo "<td>" . $row['pubdate'] . "</td>";
+                    echo '<td class="pt-4">
+                    <a href="delete_row.php?deleteid=' . $row['Order_id'] . '" class="text text-light">
+                        <button class="btn" style="color:blue; border-color:blue; background-color:white;">Delete</button>
+                    </a>
+                </td>';
+                    echo "</tr>";
+                }
+                ?>
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+                   </div>
