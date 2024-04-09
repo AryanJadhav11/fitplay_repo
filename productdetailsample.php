@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_data'] = $user_data;
 
         // Redirect to turf.php after successful login
-        header('Location:turf.php');
+        header('Location:index_home.php');
         exit();
     } else {
         $showerr = "Invalid Email / Password";
@@ -222,11 +222,89 @@ if (isset($_POST['Add_To_Cart'])) {
 	        </div>
 	        <div class="row">
 	        	<div class="col-md-6">
-	        		<div id="slider" class="owl-carousel product-slider">
-						<div class="item"><?php $imgip = $row9pp['pic'] ?>
-						<img src="upload/<?= $imgip ?>" width="350px" height="450px">
-						</div>
-					</div>
+				<div id="slider" class="owl-carousel product-slider">
+    <?php
+    $imgip = $row9pp['pic'];
+    if (!empty($imgip) && file_exists("upload/$imgip")) {
+        echo '<div class="item">';
+        echo "<img src='upload/$imgip' alt='Product Image' width='350px' height='450px'>";
+        echo '</div>';
+    } else {
+        echo '<div class="item">';
+        echo "<img src='proimg/no-image.png' alt='Default Image' width='350px' height='450px'>";
+        echo '</div>';
+    }
+    ?>
+
+    <?php
+    $imgip = $row9pp['pic1'];
+    if (!empty($imgip) && file_exists("upload/$imgip")) {
+        echo '<div class="item">';
+        echo "<img src='upload/$imgip' alt='Product Image' width='350px' height='450px'>";
+        echo '</div>';
+    } else {
+        echo '<div class="item">';
+        echo "<img src='proimg/no-image.png' alt='Default Image' width='350px' height='450px'>";
+        echo '</div>';
+    }
+    ?>
+
+    <?php
+    $imgip = $row9pp['pic2'];
+    if (!empty($imgip) && file_exists("upload/$imgip")) {
+        echo '<div class="item">';
+        echo "<img src='upload/$imgip' alt='Product Image' width='350px' height='450px'>";
+        echo '</div>';
+    } else {
+        echo '<div class="item">';
+        echo "<img src='proimg/no-image.png' alt='Default Image' width='350px' height='450px'>";
+        echo '</div>';
+    }
+    ?>
+</div>
+
+<div id="thumb" class="owl-carousel product-thumb pt-5">
+    <?php
+    $imgip = $row9pp['pic'];
+    if (!empty($imgip) && file_exists("upload/$imgip")) {
+        echo '<div class="item px-3">';
+        echo "<img src='upload/$imgip' alt='Product Image' width='350px' height='450px'>";
+        echo '</div>';
+    } else {
+        echo '<div class="item px-3">';
+        echo "<img src='proimg/no-image.png' alt='Default Image' width='350px' height='450px'>";
+        echo '</div>';
+    }
+    ?>
+
+    <?php
+    $imgip = $row9pp['pic1'];
+    if (!empty($imgip) && file_exists("upload/$imgip")) {
+        echo '<div class="item px-3">';
+        echo "<img src='upload/$imgip' alt='Product Image' width='350px' height='450px'>";
+        echo '</div>';
+    } else {
+        echo '<div class="item px-3">';
+        echo "<img src='proimg/no-image.png' alt='Default Image' width='350px' height='450px'>";
+        echo '</div>';
+    }
+    ?>
+
+    <?php
+    $imgip = $row9pp['pic2'];
+    if (!empty($imgip) && file_exists("upload/$imgip")) {
+        echo '<div class="item px-3">';
+        echo "<img src='upload/$imgip' alt='Product Image' width='350px' height='450px'>";
+        echo '</div>';
+    } else {
+        echo '<div class="item px-3">';
+        echo "<img src='proimg/no-image.png' alt='Default Image' width='350px' height='450px'>";
+        echo '</div>';
+    }
+    ?>
+</div>
+
+
 	        	</div>
 	        	<div class="col-md-6">
 	        		<div class="product-dtl">
@@ -250,6 +328,17 @@ if (isset($_POST['Add_To_Cart'])) {
 		        			<div class="product-price-discount"><span>₹ <?= ucfirst($row9pp['Price']) ?></span><span class="line-through">₹1999</span></div>
 		        		</div>
 	        			<p><?= $row9pp['about'] ?></p>
+
+						<!-- <div class="row">
+	        				<div class="col-md-6">
+	        					<label for="size"><b>Size</b></label>
+								<select id="size" name="size" class="form-control">
+									<option>S</option>
+									<option>M</option>
+									<option>L</option>
+									<option>XL</option>
+								</select>
+	        				</div> -->
 				
 						<!-- size and color -->
 						<!-- <div class="row">
@@ -305,8 +394,14 @@ if (isset($_POST['Add_To_Cart'])) {
 				  	<li class="nav-item">
 				    	<a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
 				  	</li>
-				  	<li class="nav-item">
-				    	<a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews (0)</a>
+				  	<li class="nav-item"><?php
+                      $quep="SELECT id from review ORDER BY id" ;
+                      $runp=mysqli_query($conn,$quep);
+                      $review_row=mysqli_num_rows($runp);
+                     
+
+                      ?>
+				    	<a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews <?php echo"($review_row)"; ?></a>
 				  	</li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
@@ -316,7 +411,7 @@ if (isset($_POST['Add_To_Cart'])) {
 				  	<div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
 				  		<div class="review-heading">REVIEWS</div>
 				  		<p class="mb-20">There are no reviews yet.</p>
-				  		<form class="review-form">
+				  		<form class="review-form" method="post">
 		        			<div class="form-group">
 			        			<label>Your rating</label>
 			        			<div class="reviews-counter">
@@ -336,21 +431,21 @@ if (isset($_POST['Add_To_Cart'])) {
 							</div>
 		        			<div class="form-group">
 			        			<label>Your message</label>
-			        			<textarea class="form-control" rows="10"></textarea>
+			        			<textarea class="form-control" name="message"  id="message" rows="10"></textarea>
 			        		</div>
 			        		<div class="row">
 				        		<div class="col-md-6">
 				        			<div class="form-group">
-					        			<input type="text" name="" class="form-control" placeholder="Name*">
+					        			<input type="text" name="name" id="name"  class="form-control" placeholder="Name*">
 					        		</div>
 					        	</div>
 				        		<div class="col-md-6">
 				        			<div class="form-group">
-					        			<input type="text" name="" class="form-control" placeholder="Email Id*">
+					        			<input type="text" name="email" id="email" class="form-control" placeholder="Email Id*">
 					        		</div>
 					        	</div>
 					        </div>
-					        <button class="round-black-btn">Submit Review</button>
+					        <button type="submit" id="subb" name="subb" class="round-black-btn">Submit Review</button>
 			        	</form>
 				  	</div>
 				</div>
@@ -360,6 +455,35 @@ if (isset($_POST['Add_To_Cart'])) {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="	sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<?php 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['subb'])) {
+    $uid = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
+    // Retrieve form data
+    $rating = $_POST["rate"];
+    $message = $_POST["message"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+
+    // Prepare and bind SQL statement
+    $sqlREV = "INSERT INTO `review` (`id`, `username`, `content`, `email`) VALUES (?, ?, ?, ?)";
+
+    // Prepare statement
+    $stmt = $conn->prepare($sqlREV);
+
+    // Bind parameters
+    $stmt->bind_param("isss", $uid, $name, $message, $email);
+
+    // Execute the statement
+    if ($stmt->execute() === TRUE) {
+        echo "Review submitted successfully";
+    } else {
+        echo "Error: " . $conn->error;
+    }
+}
+?>
+
+
 
   <style>
     .pd-wrap {
@@ -766,5 +890,88 @@ showAlert("Item added to cart successfully!");
     }
   }
 </style>
+<script>
+    $(document).ready(function() {
+		    var slider = $("#slider");
+		    var thumb = $("#thumb");
+		    var slidesPerPage = 4; //globaly define number of elements per page
+		    var syncedSecondary = true;
+		    slider.owlCarousel({
+		        items: 1,
+		        slideSpeed: 2000,
+		        nav: false,
+		        autoplay: false, 
+		        dots: false,
+		        loop: true,
+		        responsiveRefreshRate: 200
+		    }).on('changed.owl.carousel', syncPosition);
+		    thumb
+		        .on('initialized.owl.carousel', function() {
+		            thumb.find(".owl-item").eq(0).addClass("current");
+		        })
+		        .owlCarousel({
+		            items: slidesPerPage,
+		            dots: false,
+		            nav: true,
+		            item: 4,
+		            smartSpeed: 200,
+		            slideSpeed: 500,
+		            slideBy: slidesPerPage, 
+		        	navText: ['<svg width="18px" height="18px" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="25px" height="25px" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+		            responsiveRefreshRate: 100
+		        }).on('changed.owl.carousel', syncPosition2);
+		    function syncPosition(el) {
+		        var count = el.item.count - 1;
+		        var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+		        if (current < 0) {
+		            current = count;
+		        }
+		        if (current > count) {
+		            current = 0;
+		        }
+		        thumb
+		            .find(".owl-item")
+		            .removeClass("current")
+		            .eq(current)
+		            .addClass("current");
+		        var onscreen = thumb.find('.owl-item.active').length - 1;
+		        var start = thumb.find('.owl-item.active').first().index();
+		        var end = thumb.find('.owl-item.active').last().index();
+		        if (current > end) {
+		            thumb.data('owl.carousel').to(current, 100, true);
+		        }
+		        if (current < start) {
+		            thumb.data('owl.carousel').to(current - onscreen, 100, true);
+		        }
+		    }
+		    function syncPosition2(el) {
+		        if (syncedSecondary) {
+		            var number = el.item.index;
+		            slider.data('owl.carousel').to(number, 100, true);
+		        }
+		    }
+		    thumb.on("click", ".owl-item", function(e) {
+		        e.preventDefault();
+		        var number = $(this).index();
+		        slider.data('owl.carousel').to(number, 300, true);
+		    });
+
+
+            $(".qtyminus").on("click",function(){
+                var now = $(".qty").val();
+                if ($.isNumeric(now)){
+                    if (parseInt(now) -1> 0)
+                    { now--;}
+                    $(".qty").val(now);
+                }
+            })            
+            $(".qtyplus").on("click",function(){
+                var now = $(".qty").val();
+                if ($.isNumeric(now)){
+                    $(".qty").val(parseInt(now)+1);
+                }
+            });
+		});
+</script>
 
   <!-- modal end -->

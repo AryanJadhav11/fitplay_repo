@@ -222,7 +222,7 @@ font-weight: normal;
     transition: background-color 0.3s ease; /* Smooth transition for the color change */
 }
       </style> -->
-      <div class="six_box pt-2">
+      <div class="six_box pt-0">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-2 col-sm-4 pa_left">
@@ -282,7 +282,7 @@ font-weight: normal;
     transform: scale(1.1);
 }
 </style>
-      <div id="project" class="project pt-2">
+      <div id="project" class="project">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -295,82 +295,82 @@ font-weight: normal;
             <div class="product_main">
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p1.png" alt="#"/></div>
-                     <h3 style="color:#393939" >Li-Ning New XP-70-IV <br>₹1,632</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
             
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p2.png" alt="#"/></div>
-                     <h3 style="color:#393939" >Sborter Protective Knee Pads <br>₹498</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p3.png" alt="#"/></div>
-                     <h3 style="color:#393939">Apole Star Hockey Sticks for Men  <br>₹569</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p4.png" alt="#"/></div>
-                     <h3 style="color:#393939">Nivia Dominator 3.0 Football <br>₹1999</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p5.png" alt="#"/></div>
-                     <h3 style="color:#393939">Nivia Web Football Goal Keep Gloves <br>₹1504</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p6.png" alt="#"/></div>
-                     <h3 style="color:#393939">Plaeto Unisex Adult Slam Multiplay Sports Shoes <br>₹1899</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/shoes1.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p7.png" alt="#"/></div>
-                     <h3 style="color:#393939" >OFF LIMITS Men's STUSSYY Big and Tall Running Shoes <br>₹499</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/shoes2.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p8.png" alt="#"/></div>
-                     <h3 style="color:#393939">Nivia Ambition Football Stud <br>₹899</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/stud1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p9.png" alt="#"/></div>
-                     <h3 style="color:#393939">Cockatoo Premium Cricket Wicket <br>₹459</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/stump-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p10.png" alt="#"/></div>
-                     <h3 style="color:#393939">MILTON Aqua 1000 Stainless Steel Water Bottle  <br>₹344</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/waterbottle-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
                
             
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p11.png" alt="#"/></div>
-                     <h3 style="color:#393939">Cosco Slamdunker Basketball Size 7 Professional Basket Ball  <br>₹789</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/kneepad1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
             
              
                   <div class="project_box ">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p12.png" alt="#"/></div>
-                     <h3 style="color:#393939" >KARBD Cricket Ball Leather <br> ₹899 </h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product1-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939" >Short Openwork Cardigan $120.00</h3>
                   </div>
                
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p13.png" alt="#"/></div>
-                     <h3 style="color:#393939">Boldfit Gym Ball for Exercise Anti Burst Exercise Ball <br>₹596</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product2-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p14.png" alt="#"/></div>
-                     <h3 style="color:#393939">DSC 1500212 Guard Cricket Helmet Small (Navy) <br>₹1118</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product3-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                   <div class="project_box">
-                     <div class="dark_white_bg" ><img  src="proimg/products/p15.png" alt="#"/></div>
-                     <h3 style="color:#393939">Positivity Sports India Cricket Jersey <br>₹359</h3>
+                     <div class="dark_white_bg" ><img  src="proimg/products/product4-removebg-preview.png" alt="#"/></div>
+                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
                   </div>
               
                <div class="col-md-12">

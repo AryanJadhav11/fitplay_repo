@@ -28,25 +28,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    // $cid=$_POST['cate_id'];
 
 
-    // image upload 
-    $filename=$_FILES['pic']['name'];
-    $tmpname=$_FILES['pic']['tmp_name'];
-    $size=$_FILES['pic']['size'];
-    $destination="upload/".$filename;
-    if($size<=20000000)
-    {
-      move_uploaded_file($tmpname, $destination);
-      $sqlipro = "INSERT INTO `product_cards`(`item_name`, `pic`, `about`, `Price`) VALUES ('$itemname', '$filename','$about','$price')";
-       $respro = mysqli_query($con, $sqlipro);
-        if ($respro) {
-      $showsucpro="U just launched product";
-       
+// image upload 
+$filename=$_FILES['pic']['name'];
+$tmpname=$_FILES['pic']['tmp_name'];
+$size=$_FILES['pic']['size'];
+$destination="upload/".$filename;
+
+$filename1=$_FILES['pic1']['name'];
+$tmpname1=$_FILES['pic1']['tmp_name'];
+$size1=$_FILES['pic1']['size'];
+$destination1="upload/".$filename1;
+
+$filename2=$_FILES['pic2']['name'];
+$tmpname2=$_FILES['pic2']['tmp_name'];
+$size2=$_FILES['pic2']['size'];
+$destination2="upload/".$filename2;
+
+// Check if the file size is within limit
+if($size<=20000000 && $size1<=20000000 && $size2<=20000000) {
+    // Upload files
+    move_uploaded_file($tmpname, $destination);
+    move_uploaded_file($tmpname1, $destination1);
+    move_uploaded_file($tmpname2, $destination2);
+
+    // Perform database insertions
+    $sqlipro = "INSERT INTO `product_cards`(`item_name`, `pic`, `pic1`, `pic2`, `about`, `Price`) 
+                VALUES ('$itemname', '$filename', '$filename1', '$filename2', '$about', '$price')";
+    $respro = mysqli_query($con, $sqlipro);
+    
+    if ($respro) {
+        $showsucpro="You just launched a product!";
     } else {
-        $showerrr="Something went wrong,sorry buddy";
+        $showerrr="Something went wrong, sorry buddy";
     }
+} else {
+    $showerrr = "File size limit exceeded.";
+}
     }
 
-}
+
 
 ?>
 
@@ -451,6 +471,16 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
   <div class="mb-3">
   <label >Add Product Photo</label>
    <input type="file" name="pic" class="form-control">
+
+  </div>
+  <div class="mb-3">
+  <label >Add Product Photo</label>
+   <input type="file" name="pic1" class="form-control">
+
+  </div>
+  <div class="mb-3">
+  <label >Add Product Photo</label>
+   <input type="file" name="pic2" class="form-control">
 
   </div>
   

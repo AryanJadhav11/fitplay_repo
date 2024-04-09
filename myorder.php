@@ -1,99 +1,124 @@
+<?php
+session_start();
 
-<?php include('floating_icon.php'); ?>
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fitplay_users";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Assuming you have a user ID stored in the session, adjust this according to your authentication mechanism
+$user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : null;
+
+// Fetch orders for the specific user from the buy_items table
+$sql = "SELECT * FROM `buy_items` WHERE `user_ids` = '$user_id'";
+$result = $conn->query($sql);
+
+if(isset($_SESSION['user_data']['user_id'])){ 
+if ($result->num_rows > 0) {
+    // Initialize grand total
+    $grandTotal = 0;
+
+    // Output data of each row
+    while ($row = $result->fetch_assoc()) {
+        $img = ''; // You can fetch the image from somewhere
+        $iid = $row['item_ids'];
+        $item_name = $row['item_names'];
+        $price = $row['prices'];
+        $quantity = $row['quantitys'];
+
+        // Calculate total price for the current order
+        $totalPrice = $price * $quantity;
+
+        // Increment grand total
+        $grandTotal += $totalPrice;
+?>
+        <div class="container">
+            <div class="heading">
+                <div class="odetails-1">
+                    <p><b>Order</b></p>
+                    <p>#<?= $user_id ?></p>
+                </div>
+                <div class="odetails-2">
+                    <!-- <p>Order Placed:</p> -->
+                </div>
+                <button><i class="fa-solid fa-location-crosshairs"></i>
+                    <p>TRACK ORDER</p>
+                </button>
+            </div>
+            <hr>
+            <div class="card-container">
+                <div class="card">
+                    <div class="img">
+                        <img src="upload/<?= $img ?>" alt="">
+                    </div>
+                    <div class="parent">
+                        <div class="content">
+                            <div class="details-1">
+                                <h3><?= $item_name ?></h3>
+                                <p>By FitPlay</p>
+                            </div>
+                            <div class="details-2">
+                                <h3><b>₹ <?= $price ?></b></h3>
+                            </div>
+                        </div>
+                        <div class="status">
+                            <div class="sec1">
+                                <p>Status</p>
+                                <h2>In Transit</h2>
+                            </div>
+                            <div class="sec2">
+                                <p>Delivery Expected</p>
+                                <h3>In in 4 to 5 Days</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="card-bottom"><a href="cancel_order.php?item_ids=<?= urlencode($iid) ?>">
+
+            <button onclick="cancelOrder(<?php echo $iid; ?>)">✖ CANCEL ORDER</button></a>
+                <!-- <button>✖ CANCEL ORDER</button> -->
+                <h1>₹<?php echo $grandTotal; ?></h1>
+            </div>
+        </div>
+<?php
+    }
+} else {
+    echo "No orders found for this user.";
+}
+$conn->close();
+}
+?>
+<script>
+    function cancelOrder(itemId) {
+        // Confirm with the user before cancelling the order
+        if (confirm("Are you sure you want to cancel this order?")) {
+            // Redirect to cancel_order.php with the item_id as a parameter
+            window.location.href = "cancel_order.php?item_id=" + itemId;
+        }
+    }
+</script>
+
+
+
+
+
 <body class="py-6">
     <style>
         
     </style>
-<header>
-  <h1>My Orders</h1>
-  <p>View all of your pending orders here.</p>
-</header>
-<div class="container">
-  <div class="heading">
-    <div class="odetails-1">
-      <p><b>Order</b></p>
-      <p>#R86F854G7665</p>
-    </div>
-    <div class="odetails-2">
-      <p>Order Placed: Mon 12Th Jan 22</p>
-    </div>
 
-    <button><i class="fa-solid fa-location-crosshairs"></i>
-      <p>TRACK ORDER</p>
-    </button>
-  </div>
 
-  <hr>
 
-  <!-- <div class="card-container">
-    <div class="card">
-      <div class="img">
-        <img src="https://www.maxpixel.net/static/photo/1x/Shoes-Nike-Jordan-1-Fashion-Sneakers-Jordan-5418992.jpg" alt="Nike Air Jordan 1">
-      </div>
-      <div class="parent">
-        <div class="content">
-          <div class="details-1">
-            <h1>NIKE AIR JORDAN 1 HIGH RETRO SPORTS SHOES</h1>
-            <p>By NIKE</p>
-          </div>
-          <div class="details-2">
-            <p>Size: 10</p>
-            <p>Qty: 1</p>
-            <p><b>₹13,995</b></p>
-          </div>
-        </div>
-        <div class="status">
-          <div class="sec1">
-            <p>Status</p>
-            <h2>In-Transit</h2>
-          </div>
-          <div class="sec2">
-            <p>Delivery Expected By</p>
-            <h3>17 January 2022</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-  </div> -->
-
-  <div class="card-container">
-    <div class="card">
-      <div class="img">
-        <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_383,c_limit/dd682b9b-c58c-4bd2-985f-c715116d4a0b/air-max-intrlk-shoes-clCM4d.png" alt="Nike Air Jordan 1">
-      </div>
-      <div class="parent">
-        <div class="content">
-          <div class="details-1">
-            <h1>Nike Air Max INTRLK</h1>
-            <p>By NIKE</p>
-          </div>
-          <div class="details-2">
-            <p>Size: 9</p>
-            <p>Qty: 1</p>
-            <p><b>₹9,695</b></p>
-          </div>
-        </div>
-        <div class="status">
-          <div class="sec1">
-            <p>Status</p>
-            <h2>In-Transit</h2>
-          </div>
-          <div class="sec2">
-            <p>Delivery Expected By</p>
-            <h3>17 January 2022</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-  </div>
-
-  <div class="card-bottom">
-    <button>✖ CANCEL ORDER</button>
-    <h1>₹23,690</h1>
-  </div>
-</div>
 </body>
 </html>
 <style>
