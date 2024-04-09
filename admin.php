@@ -1026,7 +1026,7 @@ $(document).ready(function () {
 <nav class="navbar navbar-expand-lg navbar-light " style="background:#d8ebfe;">
     <div class="container-fluid">
 
-    <a href="index_home.php"> <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <a href="home.php"> <button type="button" id="sidebarCollapse" class="btn btn-info">
             
             <span>Back to home</span>
         </button></a>
@@ -1040,7 +1040,7 @@ $(document).ready(function () {
                     <a class="nav-link" href="turf.php">Turfs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shopnew.php">Shop</a>
+                    <a class="nav-link" href="shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gym.php">Gym</a>
