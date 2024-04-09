@@ -328,7 +328,7 @@ font-weight: normal;
               
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p7.png" alt="#"/></div>
-                     <h3 style="color:#393939" ></h3>
+                     <h3 style="color:#393939" >OFF LIMITS Men's STUSSYY Big and Tall Running Shoes <br>₹499</h3>
                   </div>
                
                   <div class="project_box">
@@ -338,39 +338,39 @@ font-weight: normal;
                
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p9.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Cockatoo Premium Cricket Wicket <br>₹459</h3>
                   </div>
                
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p10.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">MILTON Aqua 1000 Stainless Steel Water Bottle  <br>₹344</h3>
                   </div>
                
             
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p11.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Cosco Slamdunker Basketball Size 7 Professional Basket Ball  <br>₹789</h3>
                   </div>
             
              
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="proimg/products/p12.png" alt="#"/></div>
-                     <h3 style="color:#393939" > ₹498 </h3>
+                     <h3 style="color:#393939" >KARBD Cricket Ball Leather <br> ₹899 </h3>
                   </div>
                
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p13.png" alt="#"/></div>
-                     <h3 style="color:#393939">  ₹665</h3>
+                     <h3 style="color:#393939">Boldfit Gym Ball for Exercise Anti Burst Exercise Ball <br>₹596</h3>
                   </div>
               
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p14.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">DSC 1500212 Guard Cricket Helmet Small (Navy) <br>₹1118</h3>
                   </div>
               
                   <div class="project_box">
                      <div class="dark_white_bg" ><img  src="proimg/products/p15.png" alt="#"/></div>
-                     <h3 style="color:#393939">Short Openwork Cardigan $120.00</h3>
+                     <h3 style="color:#393939">Positivity Sports India Cricket Jersey <br>₹359</h3>
                   </div>
               
                <div class="col-md-12">
