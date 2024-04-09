@@ -55,25 +55,44 @@ At Fitplay, we make turf booking a breeze. Our user-friendly platform streamline
   
 </div>
 
-<div class="bg-light py-5">
-  <div class="container py-5">
-    <div class="row mb-4">
+<!-- mentor start -->
+<div class="bg-light">
+  <div class="container">
+    <div class="row">
       <div class="col-lg-5">
         <h2 class="display-4 font-weight-light">MENTOR</h2>
         <p class="font-italic text-muted"></p>
       </div>
     </div>
 
-    <div class="row">
-      <!-- Team item-->
-      <div class="col-lg-12 col-sm-6 mb-5">
+  <div>
+  <div class="container-center">
     <div class="card">
         <img src="https://awsimages.detik.net.id/community/media/visual/2023/08/13/cristiano-ronaldo-1_169.jpeg?w=1200" alt="CR7">
-        <h1>MUJAVAR</h1>
-        <h5>HOD OF COMPUTER DEPARTMENT</h5>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reprehenderit ipsum exercitationem recusandae consequuntur ab maiores incidunt odio numquam!</h4>
+        <h2>Mr. S. A. Mujawar</h2>
+        <h4>HOD OF COMPUTER DEPARTMENT</h4>
+        <h4></h4>
     </div>
-      </div>
+</div>
+    <style>
+      .container-center {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Ensures text inside the card is centered */
+}
+
+.card {
+  margin: 80px; /* Additional centering for good measure */
+  width: 50%; /* Or whatever width you prefer */
+}
+
+.card img {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Keeps the aspect ratio of the image */
+}
+    </style>
+  </div>
       <!-- End-->
     <style>
         .card {
@@ -139,6 +158,7 @@ At Fitplay, we make turf booking a breeze. Our user-friendly platform streamline
     </div>
   </div>
 </div>
+<!--  -->
 <?php include('footer.php') ?>
 
 </body>
