@@ -482,9 +482,11 @@ if ($rowCount > 0) {
         $tid = $row['boid'];
         $tname = $row['turfname'];
         $tdate = $row['date'];
-       $time=$row['time'];
+       $time1=$row['startTime'];
+       $time2=$row['endTime'];
         $usermail=$row['userEmail'];
         $username=$row['userName'];
+        $time=$time1.' to '. $time2;
 
 
         echo '<tr>
