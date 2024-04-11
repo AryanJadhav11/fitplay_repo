@@ -136,7 +136,7 @@ function getInitials($name) {
 <style>
     /* Navbar Styles */
 .navbar {
-  background-color: #144ecc; /* Change the background color */
+  background-color:; /* Change the background color */
   padding: 10px 0;
 }
 
@@ -220,8 +220,8 @@ function getInitials($name) {
 <body>
 
 
-<nav class="navbar bg-body-tertiary" style="padding: 20px;">
-  <div class="container-fluid">
+<nav class="navbar bg-body-tertiary" style="margin: 20px; margin-left: 300px; margin-right: 300px; background-color: white;">
+  <div class="container-fluid" style=" background-color: white;">
   <h1 class="logo" ><a href="home.php"><img src="favicon_io/favicon-32x32.png" ></span></a></h1>
 
     <ul style="font-size: 1.2rem;">
