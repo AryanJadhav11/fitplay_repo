@@ -299,7 +299,7 @@
               </div>
 
               <div class="col-12 d-flex justify-content-center pt-4">
-                <button type="submit" name="submit" class="btn btn-primary">Send Mail</button>
+                <button type="subforge" name="subforge" class="btn btn-primary">Send Mail</button>
               </div>
             </div>
           </div>
@@ -316,7 +316,7 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 
-if(isset($_POST['submit'])){
+if(isset($_POST['subforge'])){
   $user_id = isset($_SESSION['user_data']['user_id']) ? $_SESSION['user_data']['user_id'] : 0;
 
   $name1=isset($_POST['userFirstname']) ? $_POST['userFirstname'] : '';
