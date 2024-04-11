@@ -471,7 +471,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['subb'])) {
     $stmt = $conn->prepare($sqlREV);
 
     // Bind parameters
-    $stmt->bind_param("isss", $uid, $name, $message, $email);
+    $stmt->bind_param( $uid, $name, $message, $email);
 
     // Execute the statement
     if ($stmt->execute() === TRUE) {

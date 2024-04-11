@@ -162,25 +162,30 @@ $(document).ready(function(){
             </div>
 
             <ul class="list-unstyled components">
-                <p>Admin Panel</p>
+
                 <li class="active">
                     <a href="admin.php" style="text-decoration:none;">OverView</a>
                     
                 </li>
                 <li class="active">
-                    <a href="bookedturf.php" style="text-decoration:none;">Bookings</a>
+                    <a href="admin_turf.php" style="text-decoration:none;" class="fa fa-cubes">Manage Turfs</a>
                     
                 </li>
                 <li class="active">
-                    <a href="admin_turf.php" style="text-decoration:none;">Manage Turfs</a>
+                    <a href="bookedturf.php" style="text-decoration:none;" class="fa fa-calendar">Bookings</a>
                     
-                </li>
-                <li class="active">
-                    <a href="requests.php" style="text-decoration:none;">Requests</a>
                 </li>
                 
                 <li class="active">
-                    <a href="add_product.php" style="text-decoration:none;">Add Product</a>
+                    <a href="requests.php" style="text-decoration:none;" class="fa fa-file">Requests</a>
+                </li>
+                
+                <li class="active">
+                    <a href="add_product.php" style="text-decoration:none;" class="fa fa-plus">Add Product</a>
+                    
+                </li>
+                <li class="active">
+                    <a href="add_product.php" style="text-decoration:none;" class="fa fa-cubes">Shop orders</a>
                     
                 </li>
                
