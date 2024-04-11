@@ -44,8 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
         $_SESSION['user_data'] = $user_data;
 
-        // Redirect to turf.php after successful login
-        header('Location:turf.php');
+        // Redirect to home.php after successful login
+        header('Location:home.php');
         exit();
     } else {
         $showerr = "Invalid Email / Password";
@@ -222,10 +222,10 @@ function getInitials($name) {
 
 <nav class="navbar bg-body-tertiary" style="padding: 20px;">
   <div class="container-fluid">
-  <h1 class="logo" ><a href="index_home.php"><img src="favicon_io/favicon-32x32.png" ></span></a></h1>
+  <h1 class="logo" ><a href="home.php"><img src="favicon_io/favicon-32x32.png" ></span></a></h1>
 
     <ul style="font-size: 1.2rem;">
-      <li><a class="nav-link scrollto" href="index_home.php"><b>Home</b></a></li>
+      <li><a class="nav-link scrollto" href="home.php"><b>Home</b></a></li>
           <li><a href="turf.php" ><b>Turfs</b></a></li>
           <li><a href="gym.php"><b>Gyms</b></a></li>
           <li><a href="shop.php"><b>Shop</b></a></li>
@@ -265,7 +265,58 @@ function getInitials($name) {
     </ul>
   </div>
 </nav>
+ <!-- Login Modal -->
+ <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
 
+ <div class="modal fade" id="chloginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-1">Welcome Back to Fitplay.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="jlo98"></button>
+      </div>
+      <div class="modal-body p-5 pt-0">
+        <form  method="post">
+        <div class="form-outline mb-4">
+                  <input type="text" id="uname"  name="uname" class="form-control" required autocomplete="off" />
+                  <label class="form-label" for="form3Example1">User Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" class="form-control" required autocomplete="off"/>
+                  <label class="form-label" for="form3Example1">Password</label>
+                </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" fdprocessedid="99b3eo">Log In</button>
+          <span>Dont have an account?</span> <a href="signup.php"> Sign up for free!</a>
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
+ <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <!-- Login Modal End -->
 
                   </div>
 
@@ -319,7 +370,7 @@ function getInitials($name) {
 
                     <div class="lc-block d-grid gap-3 d-md-block mb-5 mb-lg-8">
                         <a href="turf.php"><button class="btn btn-primary btn-lg me-md-3" type="button">Explore Turfs</button></a>
-                        <a href="turf.php"> <button class="btn btn-outline-primary btn-lg" type="button">Explore Gyms</button></a>
+                        <a href="gym.php"> <button class="btn btn-outline-primary btn-lg" type="button">Explore Gyms</button></a>
                     </div><!-- /lc-block -->
 
                     <div class="lc-block py-4 d-flex align-items-center">

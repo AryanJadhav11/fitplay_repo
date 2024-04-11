@@ -47,7 +47,7 @@
         
          
         // Redirect to turf.php after successful login
-        header("location: turf.php");
+        header("location: home.php");
         exit();
     } else {
         $showerr = "Invalid Email / Password";

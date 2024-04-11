@@ -45,8 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
         $_SESSION['user_data'] = $user_data;
 
-        // Redirect to turf.php after successful login
-        header('Location:turf.php');
+        // Redirect to home.php after successful login
+        header('Location:home.php');
         exit();
     } else {
         $showerr = "Invalid Email / Password";
