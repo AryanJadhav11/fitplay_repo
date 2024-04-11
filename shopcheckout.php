@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['razorpay_payment_id'])
     $gtotal = isset($_POST['amount']) ? $_POST['amount'] : '';
 
     // Save purchase information to database
-    $insertOrderSql = "INSERT INTO `order_manager`(`user_id`, `Username`, `Full_Name`, `Phone_No`, `Address`, `Total`, `date`) 
+    $insertOrderSql = "INSERT INTO `order_manager`(`user_id`, `Username`, `Full_Name`, `Phone_No`, `Address`, `Total`, `date`,`email`) 
     VALUES ('$user_id', '$userEmail', '$name', '457424537', '$address', '$gtotal', NOW())";
 
     if ($coni->query($insertOrderSql) === TRUE) {
