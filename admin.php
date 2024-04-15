@@ -1108,34 +1108,7 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
         <h2 class="mb-5 text-white">Statistics Overview</h2>
         <div class="header-body">
           <div class="row">
-            <div class="col-xl-3 col-lg-6">
-              <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Total Users</h5>
-                      <span class="h2 font-weight-bold mb-0"> 
 
-                      <?php
-                      $que="SELECT id from users ORDER BY id" ;
-                      $run=mysqli_query($conn,$que);
-                      $user_row=mysqli_num_rows($run);
-                      echo '<span class="h2 font-weight-bold mb-0">'.$user_row.'</span>';
-
-                      ?>
-                        
-                    </span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                      </div>
-                    </div>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
             <div class="col-xl-3 col-lg-6">
               <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
@@ -1152,8 +1125,7 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                        <i class="fas fa-chart-pie"></i>
-                      </div>
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwklEQVR4nO2UzQ3CMAyFv7IAhT2yEPSOmKDXHrsHNygT5NoJuNMLi6BERrJQf5KICgn6pBdZieMXx05gwV/AAOVMNE6gAlqgDmAb6eti+8EbAahSfN1gVVoFkCUIrGTvK47VAjrtG7DvCbAFrkAj9jsK2Tt5RX2nzIEOeAg7mRvLrooROAJntXYCDp8WuMwpkAN3dUXOXscI6C4aKvJGCtyIPVTkyS7aJbZpJgf7/kMrR2gjfb2ACfxb6gT6z27Bj+MJytlxGKqnNaMAAAAASUVORK5CYII=">                      </div>
                     </div>
                   </div>
                  
@@ -1176,8 +1148,7 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                        <i class="fas fa-chart-pie"></i>
-                      </div>
+                      <i class="bi bi-person-vcard"></i>                      </div>
                     </div>
                   </div>
                  
@@ -1208,14 +1179,14 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6" style="margin-left:423px;margin-top:23px;">
+            <div class="col-xl-3 col-lg-6" >
               <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Products Listed</h5>
                       <?php
-                      $quep="SELECT Order_id from order_manager ORDER BY Order_id" ;
+                      $quep="SELECT Order_id from product_cards ORDER BY Order_id" ;
                       $runp=mysqli_query($con,$quep);
                       $product_row=mysqli_num_rows($runp);
                       echo '<span class="h2 font-weight-bold mb-0">'.$product_row.'</span>';
@@ -1224,8 +1195,9 @@ echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                        <i class="fas fa-percent"></i>
-                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+</svg>                      </div>
                     </div>
                   </div>
                   

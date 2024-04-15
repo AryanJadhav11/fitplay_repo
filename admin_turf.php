@@ -485,7 +485,7 @@ a:focus {
                         <th>Launch Date</th>
                         <th>Address</th>
                         <th>Del</th>
-                        <th>Edit</th>
+                        <!-- <th>Edit</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -518,11 +518,7 @@ a:focus {
                                                 <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                                             </a>
                                         </td>
-                                        <td>
-                                            <a href="edit_turf.php?editid=' . $tid . '" class="edit" data-toggle="modal">
-                                                <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
-                                            </a>
-                                        </td>
+                                        
                                     </tr>';
                             }
                         } else {
