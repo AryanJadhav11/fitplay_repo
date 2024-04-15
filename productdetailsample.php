@@ -1,4 +1,6 @@
 <!-- Php for login modal and database -->
+
+<h1>amit</h1>
 <?php
 
 session_start();
